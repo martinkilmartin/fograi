@@ -6,7 +6,7 @@ import { Headline } from 'src/types'
 import { Alert } from '@components/Alert'
 
 const Headlines = (): JSX.Element => {
-  const [headlines, setHeadlines] = useState<Headline[] | null>(null)
+  const [headlines, setHeadlines] = useState<Headline[]>()
 
   useEffect(() => {
     fetchHeadlines()
@@ -17,17 +17,20 @@ const Headlines = (): JSX.Element => {
     let { data: headlines, error } = await supabase
       .from('headlines')
       .select('*')
+      .order('created_at', { ascending: false })
     if (error) console.error(error)
     if (headlines) {
       setHeadlines(headlines)
     }
   }
+
   return (
     <div>
-        {headlines &&
-          headlines.map((headline) => (
-            <Alert key={headline.id} text={headline.headline} />
-          ))}
+      {!headlines && <Alert text="Loading news . . ." />}
+      {headlines &&
+        headlines.map((headline) => (
+          <Alert key={headline.id} text={headline.headline} />
+        ))}
     </div>
   )
 }
