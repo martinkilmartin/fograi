@@ -29,7 +29,14 @@ const Headlines = (): JSX.Element => {
       {!headlines && <Alert text="Loading news . . ." />}
       {headlines &&
         headlines.map((headline) => (
-          <Alert key={headline.id} text={headline.headline} />
+          <div key={headline.id} className="shadow-lg card">
+            <a href={headline.link} target="_blank" rel="noreferrer">
+              <div className="card-body">
+                <h2 className="text-center card-title">{headline.headline}</h2>
+                <p className="text-lg text-center">{headline.source}</p>
+              </div>
+            </a>
+          </div>
         ))}
     </div>
   )
