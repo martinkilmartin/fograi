@@ -1,6 +1,6 @@
 {
-    "name": "Sionnach Solutions a.k.a. Sionnach Buí",
-    "short_name": "Sionnach Solutions",
+    "name": "fógraí",
+    "short_name": "fógraí",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -8,13 +8,13 @@
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png",
-            "sizes": "512x512",
+            "src": "/android-chrome-256x256.png",
+            "sizes": "256x256",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png",
-            "sizes": "512x512",
+            "src": "/android-chrome-256x256.png",
+            "sizes": "256x256",
             "type": "image/png",
             "purpose": "any maskable"
         }
