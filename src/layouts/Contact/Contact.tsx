@@ -46,7 +46,7 @@ const Contact = ({
     }
   }
   return (
-    <div className="justify-center max-w-full shadow-2xl card bg-base-100 hero-content">
+    <div className="justify-center max-w-full shadow-2xl card hero-content">
       {result && <Alert color="success" text={CONTACT_SUCCESS} />}
       {error && <Alert color="error" text={CONTACT_FAILURE} />}
       <div className="card-body">

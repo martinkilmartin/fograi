@@ -33,17 +33,17 @@ const Headlines = (): JSX.Element => {
       )}
       {headlines &&
         headlines.map((headline) => (
-          <div key={headline.id} className="card lg:card-side bordered">
+          <div key={headline.id} className="my-2 bg-base-200 card lg:card-side bordered">
             <div className="card-body">
               <Badge text={headline.section} color="primary" size="lg" />
               <h2 className="text-center card-title">{headline.headline}</h2>
-              <p className="text-lg text-center">
+              <p className="text-lg text-center text-primary">
                 <a
                   href={NewsSources[headline.source].url}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {NewsSources[headline.source].name}
+                  <b>{NewsSources[headline.source].name}</b>
                 </a>
               </p>
               <div className="justify-center card-actions ">

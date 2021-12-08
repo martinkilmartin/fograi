@@ -13,9 +13,9 @@ const Hero = ({
   heading,
   description,
 }: Props): JSX.Element => (
-  <div className="min-h-6 hero bg-base-200">
-    {bgImageData && (
-      <div className="flex-col hero-content lg:flex-row-reverse">
+  <div className="hero">
+    <div className="flex-col hero-content lg:flex-row-reverse">
+      {bgImageData && (
         <Image
           className="max-w-sm rounded-lg shadow-2xl"
           src={bgImageData.src}
@@ -23,12 +23,12 @@ const Hero = ({
           height={bgImageData.height}
           width={bgImageData.width}
         />
-        <div>
-          {heading && <h1 className="mb-5 text-5xl font-bold">{heading}</h1>}
-          {description && <p className="mb-5">{description}</p>}
-        </div>
+      )}
+      <div>
+        {heading && <h1 className="mb-5 text-5xl font-bold">{heading}</h1>}
+        {description && <p className="mb-5">{description}</p>}
       </div>
-    )}
+    </div>
   </div>
 )
 
