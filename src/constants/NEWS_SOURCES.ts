@@ -25,4 +25,8 @@ export const NewsSources: NewsSource = {
     name: 'TheJournal.ie',
     url: 'https://www.thejournal.ie/',
   },
+  IE_JOE: {
+    name: 'Joe.ie',
+    url: 'https://www.joe.ie/',
+  },
 }
