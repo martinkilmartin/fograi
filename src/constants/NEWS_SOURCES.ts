@@ -29,4 +29,8 @@ export const NewsSources: NewsSource = {
     name: 'Joe.ie',
     url: 'https://www.joe.ie/',
   },
+  IE_SUNW: {
+    name: 'Sunday World',
+    url: 'https://www.sundayworld.com/',
+  },
 }
