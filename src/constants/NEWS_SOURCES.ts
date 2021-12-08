@@ -17,4 +17,8 @@ export const NewsSources: NewsSource = {
     name: 'Tuairisc',
     url: 'https://tuairisc.ie/',
   },
+  IE_FARM: {
+    name: 'Irish Farmers Journal',
+    url: 'https://farmersjournal.ie/',
+  },
 }
