@@ -33,4 +33,8 @@ export const NewsSources: NewsSource = {
     name: 'Sunday World',
     url: 'https://www.sundayworld.com/',
   },
+  IE_RTE: {
+    name: 'RTÉ',
+    url: 'https://www.rte.ie/',
+  },
 }
