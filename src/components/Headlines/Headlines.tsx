@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react'
 import { supabase } from '@services/supabase'
 import { NewsSources } from '@constants/NEWS_SOURCES'
 import { Headline } from 'src/types'
-
-import { Alert } from '@components/Alert'
+import { Badge } from '@components/Badge'
 
 const Headlines = (): JSX.Element => {
   const [headlines, setHeadlines] = useState<Headline[]>()
@@ -13,8 +12,7 @@ const Headlines = (): JSX.Element => {
   }, [])
 
   const fetchHeadlines = async () => {
-    // eslint-disable-next-line prefer-const
-    let { data: headlines, error } = await supabase
+    const { data: headlines, error } = await supabase
       .from('headlines')
       .select('*')
       .order('created_at', { ascending: false })
@@ -26,14 +24,25 @@ const Headlines = (): JSX.Element => {
 
   return (
     <div>
-      {!headlines && <Alert text="Loading news . . ." />}
+      {!headlines && (
+        <div className="min-h-screen text-center">
+          <button className="btn btn-lg btn-primary loading">
+            Loading news . . .
+          </button>
+        </div>
+      )}
       {headlines &&
         headlines.map((headline) => (
           <div key={headline.id} className="card lg:card-side bordered">
             <div className="card-body">
+              <Badge text={headline.section} color="primary" size="lg" />
               <h2 className="text-center card-title">{headline.headline}</h2>
               <p className="text-lg text-center">
-                <a href={NewsSources[headline.source].url} target="_blank" rel="noreferrer">
+                <a
+                  href={NewsSources[headline.source].url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {NewsSources[headline.source].name}
                 </a>
               </p>
