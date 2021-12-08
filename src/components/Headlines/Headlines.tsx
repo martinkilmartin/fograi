@@ -43,7 +43,7 @@ const Headlines = (): JSX.Element => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <b>{NewsSources[headline.source].name}</b>
+                  <b><i>{NewsSources[headline.source].name}</i></b>
                 </a>
               </p>
               <div className="justify-center card-actions ">
