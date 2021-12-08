@@ -18,7 +18,7 @@ class MyDocument extends Document {
 
   render(): JSX.Element {
     return (
-      <Html data-theme="garden" lang="en">
+      <Html data-theme="cupcake" lang="en">
         <Head />
         <body className="bg-base-100">
           <Main />
