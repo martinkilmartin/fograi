@@ -36,7 +36,7 @@ const Headlines = (): JSX.Element => {
           <div key={headline.id} className="my-2 bg-base-200 card lg:card-side bordered">
             <div className="card-body">
               <Badge text={headline.section} color="primary" size="lg" />
-              <h2 className="text-center card-title">{headline.headline}</h2>
+              <h2 className="mt-3 text-3xl text-center card-title">{headline.headline}</h2>
               <p className="text-lg text-center">
                 <a
                   href={NewsSources[headline.source].url}
