@@ -41,4 +41,8 @@ export const NewsSources: NewsSource = {
     name: 'The Business Post',
     url: 'https://www.businesspost.ie/',
   },
+  IE_TECC: {
+    name: 'Tech Central',
+    url: 'https://www.techcentral.ie/',
+  },
 }
