@@ -37,4 +37,8 @@ export const NewsSources: NewsSource = {
     name: 'RTÉ',
     url: 'https://www.rte.ie/',
   },
+  IE_BIZP: {
+    name: 'The Business Post',
+    url: 'https://www.businesspost.ie/',
+  },
 }
