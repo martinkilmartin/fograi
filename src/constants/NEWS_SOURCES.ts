@@ -46,7 +46,7 @@ export const NewsSources: NewsSource = {
     url: 'https://www.techcentral.ie/',
   },
   IE_MIRR: {
-    name: 'Tech Central',
+    name: 'Irish Mirror',
     url: 'https://www.irishmirror.ie/',
   },
 }
