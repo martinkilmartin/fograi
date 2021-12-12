@@ -53,4 +53,8 @@ export const NewsSources: NewsSource = {
     name: 'The Irish Post',
     url: 'https://www.irishpost.com/',
   },
+  IE_NEWS: {
+    name: 'The Irish News',
+    url: 'https://www.irishnews.com/',
+  },
 }
