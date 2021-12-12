@@ -57,4 +57,8 @@ export const NewsSources: NewsSource = {
     name: 'The Irish News',
     url: 'https://www.irishnews.com/',
   },
+  IE_CNTR: {
+    name: 'Irish Central',
+    url: 'https://www.irishcentral.com/',
+  },
 }
