@@ -73,4 +73,8 @@ export const NewsSources: NewsSource = {
     name: 'The 42',
     url: 'https://www.the42.ie/',
   },
+  IE_SJOE: {
+    name: 'Sports Joe',
+    url: 'https://www.sportsjoe.ie/',
+  },
 }
