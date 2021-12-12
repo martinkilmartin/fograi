@@ -46,6 +46,10 @@ const Headlines = (): JSX.Element => {
     document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
   }
 
+  const clickToCopy = (link: string) => {
+    navigator.clipboard.writeText(link)
+  }
+
   return (
     <div>
       {headlines.length === 0 && (
@@ -95,7 +99,16 @@ const Headlines = (): JSX.Element => {
                   Read in new tab
                 </button>
               </div>
-              <p className="absolute bottom-0 right-0 my-2 mr-2" onClick={() => backToTop()}>
+              <p
+                className="absolute bottom-0 left-0 my-2 ml-2"
+                onClick={() => clickToCopy(headline.link)}
+              >
+                <b>Copy link 🔗</b>
+              </p>
+              <p
+                className="absolute bottom-0 right-0 my-2 mr-2"
+                onClick={() => backToTop()}
+              >
                 <b>Back to top ⬆</b>
               </p>
             </div>
