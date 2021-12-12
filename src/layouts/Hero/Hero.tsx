@@ -25,7 +25,7 @@ const Hero = ({
         />
       )}
       <div>
-        {heading && <h1 className="mb-5 text-5xl font-bold">{heading}</h1>}
+        {heading && <h1 className="mb-5 text-5xl font-bold text-center">{heading}</h1>}
         {description && <p className="mb-5">{description}</p>}
       </div>
     </div>
