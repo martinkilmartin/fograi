@@ -41,6 +41,11 @@ const Headlines = (): JSX.Element => {
     }
   }
 
+  const backToTop = () => {
+    document.body.scrollTop = 0 // For Safari
+    document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
+  }
+
   return (
     <div>
       {headlines.length === 0 && (
@@ -90,6 +95,9 @@ const Headlines = (): JSX.Element => {
                   Read in new tab
                 </button>
               </div>
+              <p className="absolute bottom-0 right-0 my-2 mr-2" onClick={() => backToTop()}>
+                <b>Back to top ⬆</b>
+              </p>
             </div>
           </div>
         ))}
