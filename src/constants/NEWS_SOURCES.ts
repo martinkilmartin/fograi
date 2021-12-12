@@ -61,4 +61,12 @@ export const NewsSources: NewsSource = {
     name: 'Irish Central',
     url: 'https://www.irishcentral.com/',
   },
+  IE_WRLD: {
+    name: 'The Irish World',
+    url: 'https://www.theirishworld.com/',
+  },
+  IE_ECHO: {
+    name: 'The Irish Echo',
+    url: 'https://www.irishecho.com/',
+  },
 }
