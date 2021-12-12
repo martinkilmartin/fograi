@@ -112,6 +112,24 @@ const Headlines = (): JSX.Element => {
           </p>
         </div>
       )}
+      {headlines && headlines.length === total && total > 1 && (
+        <div className="text-center">
+          <h1 className="text-3xl">
+            <a
+              href="https://newsbrandsireland.ie/journalismmatters/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              #journalismmatters
+            </a>
+          </h1>
+          <p>
+            <b>
+              <i>🇮🇪 Sin é. Ar aghaidh le do lae. 🦊</i>
+            </b>
+          </p>
+        </div>
+      )}
     </div>
   )
 }
