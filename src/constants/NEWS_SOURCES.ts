@@ -49,4 +49,8 @@ export const NewsSources: NewsSource = {
     name: 'Irish Mirror',
     url: 'https://www.irishmirror.ie/',
   },
+  IE_POST: {
+    name: 'The Irish Post',
+    url: 'https://www.irishpost.com/',
+  },
 }
