@@ -21,7 +21,7 @@ const About = ({ title }: Props): JSX.Element => (
         #journalismmatters
       </a>
     </h3>
-    <div className="flex flex-col mx-auto">
+    <div className="flex flex-col mx-auto my-2">
       <p>
         This is simply a listing of the main headline of {SOURCES_SIZE} (and
         growing) Irish online news sources.
