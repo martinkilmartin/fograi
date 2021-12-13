@@ -9,7 +9,6 @@ const Sources = ({ title }: Props): JSX.Element => (
     <h2 className="w-full mb-4 text-3xl font-extrabold leading-9">{title}</h2>
     <div className="flex flex-col mx-auto">
       {Array.from(NewsSources.keys())
-        .sort(() => Math.random() - 0.5)
         .map((key, index) => (
           <p key={index}>
             <a
