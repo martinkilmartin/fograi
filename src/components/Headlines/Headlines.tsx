@@ -72,12 +72,12 @@ const Headlines = (): JSX.Element => {
               </h2>
               <p className="text-lg text-center">
                 <a
-                  href={NewsSources[headline.source].url}
+                  href={NewsSources.get(headline.source)?.url}
                   target="_blank"
                   rel="noreferrer"
                 >
                   <b>
-                    <i>{NewsSources[headline.source].name}</i>
+                    <i>{NewsSources.get(headline.source)?.name}</i>
                   </b>
                 </a>
               </p>

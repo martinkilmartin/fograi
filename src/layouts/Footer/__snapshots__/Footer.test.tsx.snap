@@ -11,13 +11,13 @@ exports[`Footer displays copyright with current year and brand 1`] = `
       <span
         className="text-xl opacity-100 footer-title"
       >
-        About
+        Info
       </span>
       <a
         className="text-lg link link-hover"
         href="/about"
       >
-        About Us
+        About
       </a>
       <a
         className="text-lg link link-hover"
