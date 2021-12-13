@@ -77,4 +77,8 @@ export const NewsSources: NewsSource = {
     name: 'Sports Joe',
     url: 'https://www.sportsjoe.ie/',
   },
+  IE_ENTR: {
+    name: 'entertainment.ie',
+    url: 'https://entertainment.ie/',
+  },
 }
