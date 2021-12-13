@@ -1,10 +1,18 @@
 export const FOOTER_LINKS = [
   {
-    title: 'Company',
+    title: 'Info',
     urls: [
+      {
+        path: '/about',
+        text: 'About',
+      },
       {
         path: '/contact',
         text: 'Contact',
+      },
+      {
+        path: '/sources',
+        text: 'Sources',
       },
     ],
   },
