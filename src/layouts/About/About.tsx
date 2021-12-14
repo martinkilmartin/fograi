@@ -25,17 +25,17 @@ const About = ({ title }: Props): JSX.Element => (
         <b>{SOURCES_SIZE}</b> Irish online news sources.
       </p>
       <p>
+        <a className="link link-primary" href="/contact">
+          Contact us
+        </a>{' '}
+        with any enquiries, removals, additions or corrections.
+      </p>
+      <p>
         See{' '}
         <a className="link link-primary" href="/sources">
           sources
         </a>{' '}
         for the full list of sources of headlines.
-      </p>
-      <p>
-        <a className="link link-primary" href="/contact">
-          Contact us
-        </a>{' '}
-        with any enquiries, removals, additions or corrections.
       </p>
     </div>
   </div>
