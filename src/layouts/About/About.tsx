@@ -7,11 +7,9 @@ type Props = {
 const SOURCES_SIZE = Array.from(NewsSources).length
 
 const About = ({ title }: Props): JSX.Element => (
-  <div className="px-4">
-    <h2 className="w-full mb-4 text-3xl font-extrabold leading-9 text-center">
-      {title}
-    </h2>
-    <h3 className="text-3xl text-center">
+  <div className="px-4 text-center">
+    <h2 className="w-full mb-4 text-3xl font-extrabold leading-9">{title}</h2>
+    <h3 className="text-3xl">
       <a
         className="link link-primary"
         href="https://newsbrandsireland.ie/journalismmatters/"
@@ -31,7 +29,9 @@ const About = ({ title }: Props): JSX.Element => (
         <a className="link link-primary" href="/sources">
           sources
         </a>{' '}
-        for the full list of sources of headlines.{' '}
+        for the full list of sources of headlines.
+      </p>
+      <p>
         <a className="link link-primary" href="/contact">
           Contact us
         </a>{' '}

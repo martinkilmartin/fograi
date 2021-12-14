@@ -260,4 +260,46 @@ export const NewsSources = new Map<string, NewsSource>([
       url: 'https://www.siliconrepublic.com/',
     },
   ],
+  [
+    'IE_CONT',
+    {
+      name: 'Connaught Telegraph',
+      url: 'https://www.con-telegraph.ie/',
+    },
+  ],
+  [
+    'IE_CTRB',
+    {
+      name: 'Connaught Tribune',
+      url: 'https://connachttribune.ie/',
+    },
+  ],
+  [
+    'IE_LNEX',
+    {
+      name: 'Leinster Express',
+      url: 'https://www.leinsterexpress.ie/',
+    },
+  ],
+  [
+    'IE_LNLD',
+    {
+      name: 'Leinster Leader',
+      url: 'https://www.leinsterleader.ie/',
+    },
+  ],
+  [
+    'IE_MUNX',
+    {
+      name: 'The Munster Express',
+      url: 'https://www.munster-express.ie/',
+    },
+  ],
+  [
+    'IE_WSTR',
+    {
+      name: 'Western Ppeople',
+      url: 'https://westernpeople.ie/',
+    },
+  ],
 ])
