@@ -169,4 +169,11 @@ export const NewsSources = new Map<string, NewsSource>([
       url: 'https://www.agriland.ie/',
     },
   ],
+  [
+    'IE_BLLS',
+    {
+      name: 'BALLS.ie',
+      url: 'https://www.balls.ie/',
+    },
+  ],
 ])
