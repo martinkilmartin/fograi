@@ -298,8 +298,15 @@ export const NewsSources = new Map<string, NewsSource>([
   [
     'IE_WSTR',
     {
-      name: 'Western Ppeople',
+      name: 'Western People',
       url: 'https://westernpeople.ie/',
+    },
+  ],
+  [
+    'IE_IMPR',
+    {
+      name: 'The Impartial Reporter',
+      url: 'https://www.impartialreporter.com/',
     },
   ],
 ])

@@ -11,7 +11,7 @@ exports[`Footer displays copyright with current year and brand 1`] = `
       <span
         className="text-xl opacity-100 footer-title"
       >
-        Info
+        Eolas
       </span>
       <a
         className="text-lg link link-hover"
