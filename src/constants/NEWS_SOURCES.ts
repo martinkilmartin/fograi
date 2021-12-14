@@ -176,4 +176,25 @@ export const NewsSources = new Map<string, NewsSource>([
       url: 'https://www.balls.ie/',
     },
   ],
+  [
+    'IE_OTBS',
+    {
+      name: 'Off The Ball Sports',
+      url: 'https://www.otbsports.com/',
+    },
+  ],
+  [
+    'IE_PNDT',
+    {
+      name: 'Pundit Arena',
+      url: 'https://punditarena.com/',
+    },
+  ],
+  [
+    'IE_FELD',
+    {
+      name: 'The Irish Field',
+      url: 'https://www.theirishfield.ie/',
+    },
+  ],
 ])
