@@ -309,4 +309,46 @@ export const NewsSources = new Map<string, NewsSource>([
       url: 'https://www.impartialreporter.com/',
     },
   ],
+  [
+    'IE_AADV',
+    {
+      name: 'Athlone Advertiser',
+      url: 'https://www.advertiser.ie/athlone',
+    },
+  ],
+  [
+    'IE_GADV',
+    {
+      name: 'Galway Advertiser',
+      url: 'https://www.advertiser.ie/galway',
+    },
+  ],
+  [
+    'IE_BLFT',
+    {
+      name: 'Belfast Telegraph',
+      url: 'https://www.belfasttelegraph.co.uk/',
+    },
+  ],
+  [
+    'IE_CLWN',
+    {
+      name: 'Carlow Nationalist',
+      url: 'https://carlow-nationalist.ie/',
+    },
+  ],
+  [
+    'IE_KDRN',
+    {
+      name: 'Kildare Nationalist',
+      url: 'https://kildare-nationalist.ie/',
+    },
+  ],
+  [
+    'IE_LISN',
+    {
+      name: 'Laois Nationalist',
+      url: 'https://laois-nationalist.ie/',
+    },
+  ],
 ])
