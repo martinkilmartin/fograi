@@ -197,4 +197,53 @@ export const NewsSources = new Map<string, NewsSource>([
       url: 'https://www.theirishfield.ie/',
     },
   ],
+  [
+    'IE_HOTP',
+    {
+      name: 'Hot Press',
+      url: 'https://www.hotpress.com/',
+    },
+  ],
+  [
+    'IE_BUZZ',
+    {
+      name: 'Buzz',
+      url: 'https://www.buzz.ie/',
+    },
+  ],
+  [
+    'IE_EVOK',
+    {
+      name: 'EVOKE',
+      url: 'https://evoke.ie/',
+    },
+  ],
+  [
+    'IE_HER',
+    {
+      name: 'Her',
+      url: 'https://www.her.ie/',
+    },
+  ],
+  [
+    'IE_IMG',
+    {
+      name: 'Image',
+      url: 'https://www.image.ie/',
+    },
+  ],
+  [
+    'IE_RSVP',
+    {
+      name: 'RSVP Live',
+      url: 'https://www.rsvplive.ie/',
+    },
+  ],
+  [
+    'IE_TG4',
+    {
+      name: 'Nuacht TG4',
+      url: 'https://www.tg4.ie/ga/brandai-eile/nuacht',
+    },
+  ],
 ])
