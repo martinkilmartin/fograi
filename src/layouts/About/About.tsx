@@ -21,8 +21,8 @@ const About = ({ title }: Props): JSX.Element => (
     </h3>
     <div className="flex flex-col mx-auto my-2">
       <p>
-        This is simply a listing of the main headline of {SOURCES_SIZE} (and
-        growing) Irish online news sources.
+        This website continually lists the main headline of{' '}
+        <b>{SOURCES_SIZE}</b> Irish online news sources.
       </p>
       <p>
         See{' '}
@@ -35,7 +35,7 @@ const About = ({ title }: Props): JSX.Element => (
         <a className="link link-primary" href="/contact">
           Contact us
         </a>{' '}
-        with an enquiry.
+        with any enquiries, removals, additions or corrections.
       </p>
     </div>
   </div>
