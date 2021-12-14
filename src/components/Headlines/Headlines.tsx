@@ -60,60 +60,86 @@ const Headlines = (): JSX.Element => {
         </div>
       )}
       {headlines &&
-        headlines.map((headline) => (
-          <div
-            key={headline.id}
-            className="my-2 bg-base-200 card lg:card-side bordered"
-          >
-            <div className="card-body">
-              <Badge text={headline.section} color="primary" size="lg" />
-              <h2 className="mt-3 text-3xl text-center card-title">
-                {headline.headline}
-              </h2>
-              <p className="text-lg text-center">
-                <a
-                  href={NewsSources.get(headline.source)?.url}
-                  target="_blank"
-                  rel="noreferrer"
+        headlines.map((headline) => {
+          const DATE = new Date(headline.created_at)
+            .toISOString()
+            .substring(0, 10)
+          const HOUR = new Date(headline.created_at)
+            .toISOString()
+            .substring(11, 14)
+          let DATE_MINUTE: number | string = parseInt(
+            new Date(headline.created_at).toLocaleString('en-IE', {
+              timeZone: 'UTC',
+              minute: 'numeric',
+            })
+          )
+          if (DATE_MINUTE < 16) {
+            DATE_MINUTE = '00'
+          } else if (DATE_MINUTE < 31) {
+            DATE_MINUTE = 15
+          } else if (DATE_MINUTE < 45) {
+            DATE_MINUTE = 30
+          } else {
+            DATE_MINUTE = 45
+          }
+          return (
+            <div
+              key={headline.id}
+              className="my-2 bg-base-200 card lg:card-side bordered"
+            >
+              <div className="card-body">
+                <p className="absolute top-0 left-0 ml-2">
+                  <b>℮{`${DATE} ${HOUR}${DATE_MINUTE}`}</b>
+                </p>
+                <Badge text={headline.section} color="primary" size="lg" />
+                <h2 className="mt-3 text-3xl text-center card-title">
+                  {headline.headline}
+                </h2>
+                <p className="text-lg text-center">
+                  <a
+                    href={NewsSources.get(headline.source)?.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <b>
+                      <i>{NewsSources.get(headline.source)?.name}</i>
+                    </b>
+                  </a>
+                </p>
+                <div className="justify-center card-actions ">
+                  <button
+                    className="btn btn-primary"
+                    onClick={() => {
+                      window.location.href = headline.link
+                    }}
+                  >
+                    Read in this tab
+                  </button>
+                  <button
+                    className="btn btn-secondary"
+                    onClick={() => {
+                      window.open(headline.link, '_blank')
+                    }}
+                  >
+                    Read in new tab
+                  </button>
+                </div>
+                <p
+                  className="absolute bottom-0 left-0 my-2 ml-2"
+                  onClick={() => clickToCopy(headline.link)}
                 >
-                  <b>
-                    <i>{NewsSources.get(headline.source)?.name}</i>
-                  </b>
-                </a>
-              </p>
-              <div className="justify-center card-actions ">
-                <button
-                  className="btn btn-primary"
-                  onClick={() => {
-                    window.location.href = headline.link
-                  }}
+                  <b>Copy link 🔗</b>
+                </p>
+                <p
+                  className="absolute bottom-0 right-0 my-2 mr-2"
+                  onClick={() => backToTop()}
                 >
-                  Read in this tab
-                </button>
-                <button
-                  className="btn btn-secondary"
-                  onClick={() => {
-                    window.open(headline.link, '_blank')
-                  }}
-                >
-                  Read in new tab
-                </button>
+                  <b>Back to top ⬆</b>
+                </p>
               </div>
-              <p
-                className="absolute bottom-0 left-0 my-2 ml-2"
-                onClick={() => clickToCopy(headline.link)}
-              >
-                <b>Copy link 🔗</b>
-              </p>
-              <p
-                className="absolute bottom-0 right-0 my-2 mr-2"
-                onClick={() => backToTop()}
-              >
-                <b>Back to top ⬆</b>
-              </p>
             </div>
-          </div>
-        ))}
+          )
+        })}
       {headlines && headlines.length < total && (
         <div className="text-center">
           <button
