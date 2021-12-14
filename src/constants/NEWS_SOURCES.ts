@@ -141,4 +141,32 @@ export const NewsSources = new Map<string, NewsSource>([
       url: 'https://entertainment.ie/',
     },
   ],
+  [
+    'IE_BRKN',
+    {
+      name: 'breakingnews.ie',
+      url: 'https://www.breakingnews.ie/',
+    },
+  ],
+  [
+    'IE_VLGE',
+    {
+      name: 'Village Magazine',
+      url: 'https://villagemagazine.ie/',
+    },
+  ],
+  [
+    'IE_NOTE',
+    {
+      name: 'Noteworthy',
+      url: 'https://www.noteworthy.ie/',
+    },
+  ],
+  [
+    'IE_AGRI',
+    {
+      name: 'Agriland',
+      url: 'https://www.agriland.ie/',
+    },
+  ],
 ])
