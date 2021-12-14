@@ -246,4 +246,18 @@ export const NewsSources = new Map<string, NewsSource>([
       url: 'https://www.tg4.ie/ga/brandai-eile/nuacht',
     },
   ],
+  [
+    'IE_NTLK',
+    {
+      name: 'newstalk',
+      url: 'https://www.newstalk.com/',
+    },
+  ],
+  [
+    'IE_SLCN',
+    {
+      name: 'Siliconrepublic.com',
+      url: 'https://www.siliconrepublic.com/',
+    },
+  ],
 ])

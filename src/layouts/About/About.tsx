@@ -31,7 +31,11 @@ const About = ({ title }: Props): JSX.Element => (
         <a className="link link-primary" href="/sources">
           sources
         </a>{' '}
-        for the full list of sources of headlines.
+        for the full list of sources of headlines.{' '}
+        <a className="link link-primary" href="/contact">
+          Contact us
+        </a>{' '}
+        with an enquiry.
       </p>
     </div>
   </div>
