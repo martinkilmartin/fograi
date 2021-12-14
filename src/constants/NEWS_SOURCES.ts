@@ -351,4 +351,102 @@ export const NewsSources = new Map<string, NewsSource>([
       url: 'https://laois-nationalist.ie/',
     },
   ],
+  [
+    'IE_CLWL',
+    {
+      name: 'Carlow Live',
+      url: 'https://www.carlowlive.ie/',
+    },
+  ],
+  [
+    'IE_CLRL',
+    {
+      name: 'Clare Live',
+      url: 'https://www.clarelive.ie/',
+    },
+  ],
+  [
+    'IE_DRYN',
+    {
+      name: 'Derry Now',
+      url: 'https://www.derrynow.com/',
+    },
+  ],
+  [
+    'IE_DNGL',
+    {
+      name: 'Donegal Live',
+      url: 'https://www.donegallive.ie/',
+    },
+  ],
+  [
+    'IE_DLKD',
+    {
+      name: 'Dundalk Democrat',
+      url: 'https://www.dundalkdemocrat.ie/',
+    },
+  ],
+  [
+    'IE_KLDN',
+    {
+      name: 'Kildare Now',
+      url: 'https://www.kildarenow.com/',
+    },
+  ],
+  [
+    'IE_KILP',
+    {
+      name: 'Kilkenny People',
+      url: 'https://www.kilkennypeople.ie/',
+    },
+  ],
+  [
+    'IE_LTRO',
+    {
+      name: 'Leitrim Observer',
+      url: 'https://www.leitrimobserver.ie/',
+    },
+  ],
+  [
+    'IE_LIML',
+    {
+      name: 'Limerick Leader',
+      url: 'https://www.limerickleader.ie/',
+    },
+  ],
+  [
+    'IE_LNGL',
+    {
+      name: 'Longford Leader',
+      url: 'https://www.longfordleader.ie/',
+    },
+  ],
+  [
+    'IE_NNGL',
+    {
+      name: 'Nenagh Live',
+      url: 'https://www.nenaghlive.ie/',
+    },
+  ],
+  [
+    'IE_OFYE',
+    {
+      name: 'Offaly Express',
+      url: 'https://www.offalyexpress.ie/',
+    },
+  ],
+  [
+    'IE_TIPL',
+    {
+      name: 'Tipperary Live',
+      url: 'https://www.tipperarylive.ie/',
+    },
+  ],
+  [
+    'IE_WTRL',
+    {
+      name: 'Waterford Live',
+      url: 'https://www.waterfordlive.ie/',
+    },
+  ],
 ])
