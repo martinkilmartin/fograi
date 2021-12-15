@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '@services/supabase'
+import diffDisplay from '@lib/time-format'
+import { numberFormat } from '@lib/number-format'
 import { NewsSources } from '@constants/NEWS_SOURCES'
 import { Headline } from 'src/types'
 import { Badge } from '@components/Badge'
@@ -62,34 +64,14 @@ const Headlines = (): JSX.Element => {
       {headlines &&
         headlines.map((headline) => {
           const DATE = new Date(headline.created_at)
-            .toISOString()
-            .substring(0, 10)
-          const HOUR = new Date(headline.created_at)
-            .toISOString()
-            .substring(11, 14)
-          let DATE_MINUTE: number | string = parseInt(
-            new Date(headline.created_at).toLocaleString('en-IE', {
-              timeZone: 'UTC',
-              minute: 'numeric',
-            })
-          )
-          if (DATE_MINUTE < 16) {
-            DATE_MINUTE = '00'
-          } else if (DATE_MINUTE < 31) {
-            DATE_MINUTE = 15
-          } else if (DATE_MINUTE < 45) {
-            DATE_MINUTE = 30
-          } else {
-            DATE_MINUTE = 45
-          }
           return (
             <div
               key={headline.id}
               className="my-2 bg-base-200 card lg:card-side bordered"
             >
               <div className="card-body">
-                <p className="absolute top-0 left-0 ml-2">
-                  <b>℮{`${DATE} ${HOUR}${DATE_MINUTE}`}</b>
+                <p className="absolute top-0 right-0 mt-2 mr-2">
+                  <b>{diffDisplay(DATE)} ⏱</b>
                 </p>
                 <Badge text={headline.section} color="primary" size="lg" />
                 <h2 className="mt-3 text-3xl text-center card-title">
@@ -152,9 +134,9 @@ const Headlines = (): JSX.Element => {
           </button>
           <p>
             <b>
-              <i>{`Loaded ${headlines.length} of ${total}. ${
-                total - headlines.length
-              } remaining.`}</i>
+              <i>{`Loaded ${numberFormat(headlines.length)} of ${numberFormat(
+                total
+              )}. ${numberFormat(total - headlines.length)} remaining.`}</i>
             </b>
           </p>
         </div>
