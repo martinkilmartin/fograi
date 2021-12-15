@@ -1,3 +1,12 @@
+import {
+  SECOND,
+  MINUTE,
+  HOUR,
+  DAY,
+  MONTH,
+  YEAR,
+} from '@constants/MILLISECOND_TIME'
+
 const rtf = new Intl.RelativeTimeFormat('en', {
   localeMatcher: 'best fit',
   numeric: 'always',
@@ -12,18 +21,18 @@ const diffDate = (date: Date): number => {
 const diffAmount = (
   diff: number
 ): [number, 'second' | 'minute' | 'hour' | 'day' | 'month' | 'year'] => {
-  if (diff < -31_536_000_000) {
-    return [diff / 31_536_000_000, 'year']
-  } else if (diff < -2_592_000_000) {
-    return [diff / 2_592_000_000, 'month']
-  } else if (diff < -86_400_000) {
-    return [diff / 86_400_000, 'day']
-  } else if (diff < -3_600_000) {
-    return [diff / 3_600_000, 'hour']
-  } else if (diff < -60_000) {
-    return [diff / 60_000, 'minute']
+  if (diff < -YEAR) {
+    return [diff / YEAR, 'year']
+  } else if (diff < -MONTH) {
+    return [diff / MONTH, 'month']
+  } else if (diff < -DAY) {
+    return [diff / DAY, 'day']
+  } else if (diff < -HOUR) {
+    return [diff / HOUR, 'hour']
+  } else if (diff < -MINUTE) {
+    return [diff / MINUTE, 'minute']
   } else {
-    return [diff / 1000, 'second']
+    return [diff / SECOND, 'second']
   }
 }
 
