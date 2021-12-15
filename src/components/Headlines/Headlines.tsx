@@ -77,7 +77,7 @@ const Headlines = (): JSX.Element => {
                 <h2 className="mt-3 text-3xl text-center card-title">
                   {headline.headline}
                 </h2>
-                <p className="text-xl text-center">
+                <p className="text-2xl text-center">
                   <a
                     href={NewsSources.get(headline.source)?.url}
                     target="_blank"
