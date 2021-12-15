@@ -71,7 +71,7 @@ const Headlines = (): JSX.Element => {
             >
               <div className="card-body">
                 <p className="absolute top-0 right-0 mt-2 mr-2">
-                  <b>{diffDisplay(DATE)} ⏱</b>
+                  <b>⏱ {diffDisplay(DATE)}</b>
                 </p>
                 <Badge text={headline.section} color="primary" size="lg" />
                 <h2 className="mt-3 text-3xl text-center card-title">
