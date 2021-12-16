@@ -449,4 +449,242 @@ export const NewsSources = new Map<string, NewsSource>([
       url: 'https://www.waterfordlive.ie/',
     },
   ],
+  [
+    'IE_CLRC',
+    {
+      name: 'Clare Champion',
+      url: 'https://clarechampion.ie/',
+    },
+  ],
+  [
+    'IE_COLC',
+    {
+      name: 'Coleraine Chronicle',
+      url: 'https://www.colerainechronicle.co.uk/',
+    },
+  ],
+  [
+    'IE_CRKB',
+    {
+      name: 'Cork Beo',
+      url: 'https://www.corkbeo.ie/',
+    },
+  ],
+  [
+    'IE_CRKI',
+    {
+      name: 'Cork Independent',
+      url: 'https://www.corkindependent.com/',
+    },
+  ],
+  [
+    'IE_DLDY',
+    {
+      name: 'Donegal Daily',
+      url: 'https://www.donegaldaily.com/',
+    },
+  ],
+  [
+    'IE_DLNW',
+    {
+      name: 'Donegal News',
+      url: 'https://donegalnews.com/',
+    },
+  ],
+  [
+    'IE_DERJ',
+    {
+      name: 'Derry Journal',
+      url: 'https://www.derryjournal.com/',
+    },
+  ],
+  [
+    'IE_DINQ',
+    {
+      name: 'Dublin Inquirer',
+      url: 'https://dublininquirer.com/',
+    },
+  ],
+  [
+    'IE_DLIV',
+    {
+      name: 'Dublin Live',
+      url: 'https://www.dublinlive.ie/',
+    },
+  ],
+  [
+    'IE_DNEW',
+    {
+      name: 'Dublin News',
+      url: 'https://www.dublinnews.com/',
+    },
+  ],
+  [
+    'IE_DNPP',
+    {
+      name: 'Dublin People',
+      url: 'https://dublinpeople.com/',
+    },
+  ],
+  [
+    'IE_FERH',
+    {
+      name: 'Fermanagh Herald',
+      url: 'https://fermanaghherald.com/',
+    },
+  ],
+  [
+    'IE_ECHL',
+    {
+      name: 'Echo Live',
+      url: 'https://www.echolive.ie/',
+    },
+  ],
+  [
+    'IE_EXTR',
+    {
+      name: 'Extra.ie',
+      url: 'https://extra.ie/',
+    },
+  ],
+  [
+    'IE_GDLY',
+    {
+      name: 'Galway Daily',
+      url: 'https://www.galwaydaily.com/',
+    },
+  ],
+  [
+    'IE_IOWI',
+    {
+      name: 'Inishowen Independent',
+      url: 'http://inishowenindo.ie/',
+    },
+  ],
+  [
+    'IE_KLRT',
+    {
+      name: 'Killarney Today',
+      url: 'https://www.killarneytoday.com/',
+    },
+  ],
+  [
+    'IE_LIMP',
+    {
+      name: 'Limerick Post',
+      url: 'https://www.limerickpost.ie/',
+    },
+  ],
+  [
+    'IE_MYNW',
+    {
+      name: 'Mayo News',
+      url: 'https://www.mayonews.ie/',
+    },
+  ],
+  [
+    'IE_MTHC',
+    {
+      name: 'Meath Chronicle',
+      url: 'https://www.meathchronicle.ie/',
+    },
+  ],
+  [
+    'IE_NNGG',
+    {
+      name: 'Nenagh Guardian',
+      url: 'https://www.nenaghguardian.ie/',
+    },
+  ],
+  [
+    'IE_NSTD',
+    {
+      name: 'Northern Standard',
+      url: 'https://northernstandard.ie/',
+    },
+  ],
+  [
+    'IE_OFFI',
+    {
+      name: 'Offaly Independent',
+      url: 'https://www.offalyindependent.ie/',
+    },
+  ],
+  [
+    'IE_ROSH',
+    {
+      name: 'Roscommon Herald',
+      url: 'https://roscommonherald.ie/',
+    },
+  ],
+  [
+    'IE_SLGW',
+    {
+      name: 'Sligo Weekender',
+      url: 'http://sligoweekender.ie/',
+    },
+  ],
+  [
+    'IE_ANGC',
+    {
+      name: 'The Anglo Celt',
+      url: 'https://www.anglocelt.ie/',
+    },
+  ],
+  [
+    'IE_AVNP',
+    {
+      name: 'The Avondhu Press',
+      url: 'https://avondhupress.ie/',
+    },
+  ],
+  [
+    'IE_CLRE',
+    {
+      name: 'The Clare Echo',
+      url: 'https://www.clareecho.ie/',
+    },
+  ],
+  [
+    'IE_TMHD',
+    {
+      name: 'The Tuam Herald',
+      url: 'https://www.tuamherald.ie/',
+    },
+  ],
+  [
+    'IE_TYRC',
+    {
+      name: 'Tyrone Courier',
+      url: 'https://www.tyronecourier.co.uk/',
+    },
+  ],
+  [
+    'IE_WTRL',
+    {
+      name: 'Waterford Live',
+      url: 'https://www.waterfordlive.ie/',
+    },
+  ],
+  [
+    'IE_WTRN',
+    {
+      name: 'Waterford News & Star',
+      url: 'https://waterford-news.ie/',
+    },
+  ],
+  [
+    'IE_WSTX',
+    {
+      name: 'Westmeath Examiner',
+      url: 'https://www.westmeathexaminer.ie/',
+    },
+  ],
+  [
+    'IE_WSTI',
+    {
+      name: 'Westmeath Independent',
+      url: 'https://www.westmeathindependent.ie/',
+    },
+  ],
 ])
