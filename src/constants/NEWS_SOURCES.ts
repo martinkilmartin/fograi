@@ -660,13 +660,6 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
-    'IE_WTRL',
-    {
-      name: 'Waterford Live',
-      url: 'https://www.waterfordlive.ie/',
-    },
-  ],
-  [
     'IE_WTRN',
     {
       name: 'Waterford News & Star',
