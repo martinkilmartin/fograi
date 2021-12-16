@@ -548,6 +548,13 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_GBEO',
+    {
+      name: 'Galway Beo',
+      url: 'https://www.galwaybeo.ie/',
+    },
+  ],
+  [
     'IE_GDLY',
     {
       name: 'Galway Daily',
