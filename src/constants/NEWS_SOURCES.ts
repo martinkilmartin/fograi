@@ -10,6 +10,14 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_AADV',
+    {
+      name: 'Athlone Adevertiser',
+      url: 'https://www.advertiser.ie/athlone',
+      est: 1970,
+    },
+  ],
+  [
     'IE_BLLS',
     {
       name: 'BALLS.ie',
@@ -399,6 +407,14 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Longford Leader',
       url: 'https://www.longfordleader.ie/',
       est: 1897,
+    },
+  ],
+  [
+    'IE_MADV',
+    {
+      name: 'Mayo Adevertiser',
+      url: 'https://www.advertiser.ie/mayo',
+      est: 1970,
     },
   ],
   [
