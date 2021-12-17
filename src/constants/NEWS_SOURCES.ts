@@ -26,6 +26,14 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_BEAT',
+    {
+      name: 'Beat 102 103',
+      url: 'https://www.beat102103.com/',
+      est: 2003,
+    },
+  ],
+  [
     'IE_BLFT',
     {
       name: 'Belfast Telegraph',
@@ -58,11 +66,27 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_CLFM',
+    {
+      name: 'Clare FM',
+      url: 'https://www.clare.fm/',
+      est: 1989,
+    },
+  ],
+  [
     'IE_CLRL',
     {
       name: 'Clare Live',
       url: 'https://www.clarelive.ie/',
       est: 2001,
+    },
+  ],
+  [
+    'IE_CLHT',
+    {
+      name: 'Classic Hits',
+      url: 'https://www.classichits.ie/',
+      est: 2009,
     },
   ],
   [
@@ -170,11 +194,27 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_98FM',
+    {
+      name: "Dublin's 98FM",
+      url: 'https://www.98fm.com/',
+      est: 1989,
+    },
+  ],
+  [
     'IE_DLKD',
     {
       name: 'Dundalk Democrat',
       url: 'https://www.dundalkdemocrat.ie/',
       est: 1849,
+    },
+  ],
+  [
+    'IE_ESTC',
+    {
+      name: 'East Coast FM',
+      url: 'https://www.eastcoast.fm/',
+      est: 1989,
     },
   ],
   [
@@ -218,6 +258,22 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_F104',
+    {
+      name: 'FM104',
+      url: 'https://www.fm104.ie/',
+      est: 1989,
+    },
+  ],
+  [
+    'IE_GBFM',
+    {
+      name: 'Galway Bay FM',
+      url: 'https://galwaybayfm.ie/',
+      est: 1989,
+    },
+  ],
+  [
     'IE_GADV',
     {
       name: 'Galway Advertiser',
@@ -250,6 +306,14 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_HIRD',
+    {
+      name: 'Highland Radio',
+      url: 'https://www.highlandradio.com/',
+      est: 1990,
+    },
+  ],
+  [
     'IE_HOTP',
     {
       name: 'Hot Press',
@@ -271,6 +335,14 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Inishowen Independent',
       url: 'http://inishowenindo.ie/',
       est: 2007,
+    },
+  ],
+  [
+    'IE_IRAD',
+    {
+      name: 'iRadio',
+      url: 'https://www.iradio.ie/',
+      est: 2011,
     },
   ],
   [
@@ -319,6 +391,22 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Joe.ie',
       url: 'https://www.joe.ie/',
       est: 2010,
+    },
+  ],
+  [
+    'IE_KCLR',
+    {
+      name: 'KCLR 96FM',
+      url: 'https://kclr96fm.com/',
+      est: 2004,
+    },
+  ],
+  [
+    'IE_KFMR',
+    {
+      name: 'Kfm',
+      url: 'https://www.kfmradio.com/',
+      est: 2004,
     },
   ],
   [
@@ -402,6 +490,22 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_95FM',
+    {
+      name: 'Live 95',
+      url: 'https://www.live95fm.ie/"',
+      est: 1997,
+    },
+  ],
+  [
+    'IE_LMFM',
+    {
+      name: 'LMFM',
+      url: 'https://www.lmfm.ie/"',
+      est: 1989,
+    },
+  ],
+  [
     'IE_LNGL',
     {
       name: 'Longford Leader',
@@ -434,6 +538,22 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_M103',
+    {
+      name: 'Midlands 103',
+      url: 'https://www.midlands103.com/',
+      est: 1990,
+    },
+  ],
+  [
+    'IE_MIDW',
+    {
+      name: 'MidWest Radio',
+      url: 'https://midwestradio.ie/',
+      est: 1979,
+    },
+  ],
+  [
     'IE_NNGG',
     {
       name: 'Nenagh Guardian',
@@ -458,6 +578,14 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_NSND',
+    {
+      name: 'Northern Sound',
+      url: 'https://www.northernsound.ie/',
+      est: 1989,
+    },
+  ],
+  [
     'IE_NSTD',
     {
       name: 'Northern Standard',
@@ -471,6 +599,14 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Noteworthy',
       url: 'https://www.noteworthy.ie/',
       est: 2019,
+    },
+  ],
+  [
+    'IE_OCEN',
+    {
+      name: 'Ocean FM',
+      url: 'https://www.oceanfm.ie/',
+      est: 2004,
     },
   ],
   [
@@ -506,6 +642,30 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_NOVA',
+    {
+      name: 'Radio Nova',
+      url: 'https://www.nova.ie/',
+      est: 2010,
+    },
+  ],
+  [
+    'IE_RKER',
+    {
+      name: 'Radio Kerry',
+      url: 'https://www.radiokerry.ie/',
+      est: 1990,
+    },
+  ],
+  [
+    'IE_RDFM',
+    {
+      name: "Cork's RedFM",
+      url: 'https://redfm.ie',
+      est: 2002,
+    },
+  ],
+  [
     'IE_ROSH',
     {
       name: 'Roscommon Herald',
@@ -530,6 +690,14 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_SNNS',
+    {
+      name: 'Shannonside FM',
+      url: 'https://www.shannonside.ie/',
+      est: 1989,
+    },
+  ],
+  [
     'IE_SLCN',
     {
       name: 'Siliconrepublic.com',
@@ -543,6 +711,30 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Sligo Weekender',
       url: 'http://sligoweekender.ie/',
       est: 1983,
+    },
+  ],
+  [
+    'IE_SERD',
+    {
+      name: 'South East Radio',
+      url: 'https://www.southeastradio.ie/',
+      est: 1989,
+    },
+  ],
+  [
+    'IE_SPIN',
+    {
+      name: 'SPIN 1038',
+      url: 'https://www.spin1038.com/',
+      est: 2002,
+    },
+  ],
+  [
+    'IE_SPRT',
+    {
+      name: 'Spirit Radio',
+      url: 'https://www.spiritradio.ie/',
+      est: 2011,
     },
   ],
   [
@@ -791,6 +983,14 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Western People',
       url: 'https://westernpeople.ie/',
       est: 1883,
+    },
+  ],
+  [
+    'IE_WLFM',
+    {
+      name: 'WLR FM',
+      url: 'https://www.wlrfm.com/',
+      est: 1989,
     },
   ],
 ])
