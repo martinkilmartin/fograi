@@ -42,6 +42,14 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_BZPL',
+    {
+      name: 'Biz Plus',
+      url: 'https://bizplus.ie/',
+      est: 1998,
+    },
+  ],
+  [
     'IE_BRKN',
     {
       name: 'breakingnews.ie',
@@ -119,6 +127,14 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Cork Independent',
       url: 'https://www.corkindependent.com/',
       est: 2005,
+    },
+  ],
+  [
+    'IE_RDFM',
+    {
+      name: "Cork's RedFM",
+      url: 'https://redfm.ie',
+      est: 2002,
     },
   ],
   [
@@ -218,19 +234,27 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
-    'IE_ENTR',
-    {
-      name: 'entertainment.ie',
-      url: 'https://entertainment.ie/',
-      est: 1997,
-    },
-  ],
-  [
     'IE_ECHL',
     {
       name: 'Echo Live',
       url: 'https://www.echolive.ie/',
       est: 1892,
+    },
+  ],
+  [
+    'IE_ENGI',
+    {
+      name: 'Engineers Ireland',
+      url: 'https://www.engineersireland.ie/Engineers-Journal/News',
+      est: 1835,
+    },
+  ],
+  [
+    'IE_ENTR',
+    {
+      name: 'entertainment.ie',
+      url: 'https://entertainment.ie/',
+      est: 1997,
     },
   ],
   [
@@ -255,6 +279,14 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Fermanagh Herald',
       url: 'https://fermanaghherald.com/',
       est: 1902,
+    },
+  ],
+  [
+    'IE_FLT',
+    {
+      name: 'Fleet Transport',
+      url: 'https://fleet.ie/',
+      est: 2003,
     },
   ],
   [
@@ -298,11 +330,27 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_GCN',
+    {
+      name: 'Gay Community News',
+      url: 'https://gcn.ie/',
+      est: 1988,
+    },
+  ],
+  [
     'IE_HER',
     {
       name: 'Her',
       url: 'https://www.her.ie/',
       est: 2012,
+    },
+  ],
+  [
+    'IE_HGV',
+    {
+      name: 'HGV Ireland',
+      url: 'https://www.hgvireland.com/',
+      est: 2007,
     },
   ],
   [
@@ -319,6 +367,14 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Hot Press',
       url: 'https://www.hotpress.com/',
       est: 1977,
+    },
+  ],
+  [
+    'IE_HSHM',
+    {
+      name: 'House And Home',
+      url: 'https://www.houseandhome.ie/',
+      est: 2001,
     },
   ],
   [
@@ -346,11 +402,27 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_BOX',
+    {
+      name: 'Irish Boxing',
+      url: 'https://www.irish-boxing.com/',
+      est: 2001,
+    },
+  ],
+  [
     'IE_CNTR',
     {
       name: 'IrishCentral',
       url: 'https://www.irishcentral.com/',
       est: 2009,
+    },
+  ],
+  [
+    'IE_CTRM',
+    {
+      name: 'Irish Country Magazine',
+      url: 'https://irishcountrymagazine.ie/',
+      est: 2012,
     },
   ],
   [
@@ -375,6 +447,22 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Irish Independent',
       url: 'https://www.independent.ie/',
       est: 1905,
+    },
+  ],
+  [
+    'IE_LEGL',
+    {
+      name: 'Irish Legal News',
+      url: 'https://www.irishlegal.com/',
+      est: 2015,
+    },
+  ],
+  [
+    'IE_IMT',
+    {
+      name: 'Irish Medical Times',
+      url: 'https://www.imt.ie/',
+      est: 1967,
     },
   ],
   [
@@ -447,6 +535,14 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Laois Nationalist',
       url: 'https://laois-nationalist.ie/',
       est: 1883,
+    },
+  ],
+  [
+    'IE_LAW',
+    {
+      name: 'Law Society Gazette',
+      url: 'https://www.lawsociety.ie/gazette',
+      est: 1907,
     },
   ],
   [
@@ -538,6 +634,14 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_MIE_MRSTTHC',
+    {
+      name: 'Merrion Street',
+      url: 'https://merrionstreet.ie/',
+      est: 2007,
+    },
+  ],
+  [
     'IE_M103',
     {
       name: 'Midlands 103',
@@ -551,6 +655,14 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'MidWest Radio',
       url: 'https://midwestradio.ie/',
       est: 1979,
+    },
+  ],
+  [
+    'IE_MTLY',
+    {
+      name: 'Motley',
+      url: 'https://motley.ie/',
+      est: 2006,
     },
   ],
   [
@@ -658,11 +770,11 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
-    'IE_RDFM',
+    'IE_RLCT',
     {
-      name: "Cork's RedFM",
-      url: 'https://redfm.ie',
-      est: 2002,
+      name: 'RollerCoaster.ie',
+      url: 'https://rollercoaster.ie/',
+      est: 2000,
     },
   ],
   [
@@ -810,6 +922,14 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_GLSS',
+    {
+      name: 'The Gloss',
+      url: 'https://thegloss.ie/',
+      est: 2006,
+    },
+  ],
+  [
     'IE_IMPR',
     {
       name: 'The Impartial Reporter',
@@ -890,6 +1010,14 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_TN2',
+    {
+      name: 'TN2 Magazine',
+      url: 'https://www.tn2magazine.ie/',
+      est: 2012,
+    },
+  ],
+  [
     'IE_TMHD',
     {
       name: 'The Tuam Herald',
@@ -922,6 +1050,14 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_TRTY',
+    {
+      name: 'Trinity News',
+      url: 'https://trinitynews.ie/',
+      est: 1953,
+    },
+  ],
+  [
     'IE_TRSC',
     {
       name: 'Tuairisc',
@@ -935,6 +1071,30 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Tyrone Courier',
       url: 'https://www.tyronecourier.co.uk/',
       est: 1880,
+    },
+  ],
+  [
+    'IE_UCEX',
+    {
+      name: 'University Express',
+      url: 'https://uccexpress.ie/',
+      est: 1997,
+    },
+  ],
+  [
+    'IE_UNOB',
+    {
+      name: 'University Observer',
+      url: 'https://universityobserver.ie/',
+      est: 1994,
+    },
+  ],
+  [
+    'IE_UNIT',
+    {
+      name: 'University Times',
+      url: 'https://universitytimes.ie/',
+      est: 2009,
     },
   ],
   [
@@ -991,6 +1151,14 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'WLR FM',
       url: 'https://www.wlrfm.com/',
       est: 1989,
+    },
+  ],
+  [
+    'IE_WW',
+    {
+      name: 'Womans Way',
+      url: 'https://www.womansway.ie/',
+      est: 1963,
     },
   ],
 ])
