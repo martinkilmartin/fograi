@@ -37,7 +37,7 @@ const About = ({ title }: Props): JSX.Element => (
         </a>{' '}
         for the full list of sources of headlines.
       </p>
-      <p>This is an experimental website 👩‍🔬 and is liable to stop updating 📴 or go offline ⚰ at any moment . . . 👻</p>
+      <p>This is an experimental website 👩‍🔬 and is liable to stop updating 📴 or go offline 🪦 at any moment . . . 👻</p>
     </div>
   </div>
 )
