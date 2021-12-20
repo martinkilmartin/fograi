@@ -22,7 +22,7 @@ const About = ({ title }: Props): JSX.Element => (
     <div className="flex flex-col mx-auto my-2">
       <p>
         This website continually lists the main headline of{' '}
-        <b>{SOURCES_SIZE}</b> Irish online news sources.
+        <b>{SOURCES_SIZE}</b> 🇮🇪 Irish online news sources.
       </p>
       <p>
         <a className="link link-primary" href="/contact">
@@ -37,6 +37,7 @@ const About = ({ title }: Props): JSX.Element => (
         </a>{' '}
         for the full list of sources of headlines.
       </p>
+      <p>This is an experimental website 👩‍🔬 and is liable to stop updating 📴 or go offline ⚰ at any moment . . . 👻</p>
     </div>
   </div>
 )
