@@ -714,6 +714,14 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_TG4',
+    {
+      name: 'Nuacht TG4',
+      url: 'https://www.tg4.ie/ga/brandai-eile/nuacht',
+      est: 1996,
+    },
+  ],
+  [
     'IE_OCEN',
     {
       name: 'Ocean FM',
@@ -922,6 +930,14 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_CRKM',
+    {
+      name: 'The Corkman',
+      url: 'https://www.independent.ie/regionals/corkman/',
+      est: 2000,
+    },
+  ],
+  [
     'IE_GLSS',
     {
       name: 'The Gloss',
@@ -986,6 +1002,14 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_KRYM',
+    {
+      name: 'The Kerryman',
+      url: 'https://www.independent.ie/regionals/kerryman/',
+      est: 1904,
+    },
+  ],
+  [
     'IE_JRNL',
     {
       name: 'TheJournal.ie',
@@ -1010,11 +1034,11 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
-    'IE_TN2',
+    'IE_SLGC',
     {
-      name: 'TN2 Magazine',
-      url: 'https://www.tn2magazine.ie/',
-      est: 2012,
+      name: 'The Sligo Champion',
+      url: 'https://www.independent.ie/regionals/sligochampion',
+      est: 1836,
     },
   ],
   [
@@ -1026,6 +1050,22 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_WXFP',
+    {
+      name: 'The Wexford People',
+      url: 'https://www.independent.ie/regionals/wexford/',
+      est: 1853,
+    },
+  ],
+  [
+    'IE_WKWP',
+    {
+      name: 'The Wicklow People',
+      url: 'https://www.independent.ie/regionals/wicklow/',
+      est: 1882,
+    },
+  ],
+  [
     'IE_42',
     {
       name: 'The 42',
@@ -1034,19 +1074,19 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
-    'IE_TG4',
-    {
-      name: 'Nuacht TG4',
-      url: 'https://www.tg4.ie/ga/brandai-eile/nuacht',
-      est: 1996,
-    },
-  ],
-  [
     'IE_TIPL',
     {
       name: 'Tipperary Live',
       url: 'https://www.tipperarylive.ie/',
       est: 2019,
+    },
+  ],
+  [
+    'IE_TN2',
+    {
+      name: 'TN2 Magazine',
+      url: 'https://www.tn2magazine.ie/',
+      est: 2012,
     },
   ],
   [
