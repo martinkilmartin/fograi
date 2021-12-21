@@ -27,6 +27,15 @@ const Sources = ({ title }: Props): JSX.Element => (
             <p>
               <i>Estb.&nbsp;{NewsSources.get(key)?.est}</i>
             </p>
+            {NewsSources.get(key)?.emos?.length && (
+              <div className="btn-group self-center">
+                {NewsSources.get(key)?.emos?.map((emo, index) => (
+                  <h3 className="text-3xl" key={index}>
+                    {emo}
+                  </h3>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       ))}
