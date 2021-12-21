@@ -1,7 +1,7 @@
 export const APP_TITLE = 'fógraí'
 export const BASE_URL = 'fogr.ai'
 export const BRAND = 'Fógraí'
-export const TAG_LINE = '🇮🇪 Headlines'
+export const TAG_LINE = '🇮🇪'
 export const HERO_IMG = '@img/bg/classifieds-browse.webp'
 export const ABOUT_TITLE = '🥸 About'
 export const CONTACT_TITLE = 'Send us a message'
