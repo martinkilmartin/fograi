@@ -8,6 +8,6 @@ test('Copyright displays current year and brand', () => {
   expect(tree).toMatchSnapshot()
   const copyrightInstance = copyrightRenderer.root
   expect(copyrightInstance.findByType('p').children[0]).toEqual(
-    `© ${new Date().getFullYear()} ${BRAND}`
+    `© ${new Date().getFullYear()} 🇮🇪 ${BRAND} 🇨🇦`
   )
 })

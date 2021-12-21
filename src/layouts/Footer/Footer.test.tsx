@@ -11,6 +11,6 @@ test('Footer displays copyright with current year and brand', () => {
     className: 'p-10 footer bg-primary text-primary-content footer-center',
   })
   expect(footerElement.findByType('p').children[0]).toEqual(
-    `© ${new Date().getFullYear()} ${BRAND}`
+    `© ${new Date().getFullYear()} 🇮🇪 ${BRAND} 🇨🇦`
   )
 })
