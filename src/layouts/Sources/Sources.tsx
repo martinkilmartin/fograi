@@ -10,11 +10,11 @@ const Sources = ({ title }: Props): JSX.Element => (
     <div className="flex flex-wrap">
       {Array.from(NewsSources.keys()).map((key, index) => (
         <div
-          className="w-full lg:w-1/2 xl:w-1/3 mb-4 card text-center shadow-2xl"
+          className="w-full mb-4 text-center shadow-2xl lg:w-1/2 xl:w-1/3 card"
           key={index}
         >
           <div className="card-body">
-            <h2 className="card-title text-3xl">
+            <h2 className="text-3xl card-title">
               <a
                 className="link link-primary"
                 href={NewsSources.get(key)?.url}
@@ -31,10 +31,13 @@ const Sources = ({ title }: Props): JSX.Element => (
                 Estb.&nbsp;<b>{NewsSources.get(key)?.est}</b>
               </i>
             </p>
+            {NewsSources.get(key)?.about && (
+              <p>{NewsSources.get(key)?.about}</p>
+            )}
             {NewsSources.get(key)?.emos?.length && (
-              <div className="btn-group self-center">
+              <div className="self-center btn-group">
                 {NewsSources.get(key)?.emos?.map((emo, index) => (
-                  <h3 className="text-2xl mx-1" key={index}>
+                  <h3 className="mx-1 text-2xl" key={index}>
                     {emo}
                   </h3>
                 ))}

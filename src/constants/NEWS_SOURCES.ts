@@ -18,6 +18,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Athlone Adevertiser',
       url: 'https://www.advertiser.ie/athlone',
       est: 1970,
+      about:
+        'A free newspaper distributed throughout Athlone & Westmeath each Thursday.',
       emos: ['📰', '🇮🇪'],
     },
   ],
@@ -38,6 +40,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Beat 102 103',
       url: 'https://www.beat102103.com/',
       est: 2003,
+      about:
+        'Multi-platform radio station for entertaining & informing young adults in the South East.',
       emos: ['📻', '🇮🇪'],
     },
   ],
@@ -47,6 +51,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Belfast Telegraph',
       url: 'https://www.belfasttelegraph.co.uk/',
       est: 1870,
+      about:
+        'Latest news, sport and business from Belfast and throughout Northern Ireland plus, opinion, entertainment and lifestyle coverage.',
       emos: ['📰', '🇮🇪'],
     },
   ],
@@ -56,6 +62,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Biz Plus',
       url: 'https://bizplus.ie/',
       est: 1998,
+      about:
+        'Monthly business magazine focused  on the activities of Irish companies or companies based in Ireland.',
       emos: ['💻', '🧑‍💼'],
     },
   ],
