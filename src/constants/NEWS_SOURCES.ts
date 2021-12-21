@@ -7,6 +7,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Agriland',
       url: 'https://www.agriland.ie/',
       est: 2012,
+      about:
+        'Online resource all the information, news and services required by people involved in the agricultural and farming sectors in Ireland.',
     },
   ],
   [
@@ -23,6 +25,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'BALLS.ie',
       url: 'https://www.balls.ie/',
       est: 2010,
+      about:
+        'Covering every sport from Hurling to American Football, from Curling to Downhill Skiing, bringing what is happening right now, in video, gif, image or tweet form.',
     },
   ],
   [
