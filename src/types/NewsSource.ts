@@ -3,4 +3,5 @@ export type NewsSource = {
   url: string
   est: number
   about?: string
+  emos: string[]
 }

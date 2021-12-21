@@ -9,6 +9,7 @@ export const NewsSources = new Map<string, NewsSource>([
       est: 2012,
       about:
         'Online resource all the information, news and services required by people involved in the agricultural and farming sectors in Ireland.',
+      emos: ['💻', '🌱'],
     },
   ],
   [
@@ -17,6 +18,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Athlone Adevertiser',
       url: 'https://www.advertiser.ie/athlone',
       est: 1970,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -27,6 +29,7 @@ export const NewsSources = new Map<string, NewsSource>([
       est: 2010,
       about:
         'Covering every sport from Hurling to American Football, from Curling to Downhill Skiing, bringing what is happening right now, in video, gif, image or tweet form.',
+      emos: ['💻', '⚽'],
     },
   ],
   [
@@ -35,6 +38,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Beat 102 103',
       url: 'https://www.beat102103.com/',
       est: 2003,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -43,6 +47,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Belfast Telegraph',
       url: 'https://www.belfasttelegraph.co.uk/',
       est: 1870,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -51,6 +56,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Biz Plus',
       url: 'https://bizplus.ie/',
       est: 1998,
+      emos: ['💻', '🧑‍💼'],
     },
   ],
   [
@@ -59,6 +65,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'breakingnews.ie',
       url: 'https://www.breakingnews.ie/',
       est: 2001,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -67,6 +74,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Buzz',
       url: 'https://www.buzz.ie/',
       est: 2016,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -75,6 +83,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Carlow Live',
       url: 'https://www.carlowlive.ie/',
       est: 2018,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -83,6 +92,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Clare FM',
       url: 'https://www.clare.fm/',
       est: 1989,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -91,6 +101,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Clare Live',
       url: 'https://www.clarelive.ie/',
       est: 2001,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -99,6 +110,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Classic Hits',
       url: 'https://www.classichits.ie/',
       est: 2009,
+      emos: ['📻', '🎭'],
     },
   ],
   [
@@ -107,6 +119,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Coleraine Chronicle',
       url: 'https://www.colerainechronicle.co.uk/',
       est: 1844,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -115,6 +128,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Connacht Tribune',
       url: 'https://connachttribune.ie/',
       est: 1925,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -123,6 +137,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Cork Beo',
       url: 'https://www.corkbeo.ie/',
       est: 2019,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -131,6 +146,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Cork Independent',
       url: 'https://www.corkindependent.com/',
       est: 2005,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -139,6 +155,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: "Cork's RedFM",
       url: 'https://redfm.ie',
       est: 2002,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -147,6 +164,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Derry Journal',
       url: 'https://www.derryjournal.com/',
       est: 1772,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -155,6 +173,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Derry Now',
       url: 'https://www.derrynow.com/',
       est: 2014,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -163,6 +182,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Donegal Daily',
       url: 'https://www.donegaldaily.com/',
       est: 2011,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -171,6 +191,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Donegal Live',
       url: 'https://www.donegallive.ie/',
       est: 2010,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -179,6 +200,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Donegal News',
       url: 'https://donegalnews.com/',
       est: 1903,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -187,6 +209,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Dublin Inquirer',
       url: 'https://dublininquirer.com/',
       est: 2015,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -195,6 +218,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Dublin Live',
       url: 'https://www.dublinlive.ie/',
       est: 2016,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -203,6 +227,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Dublin News',
       url: 'https://www.dublinnews.com/',
       est: 1858,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -211,6 +236,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Dublin People',
       url: 'https://dublinpeople.com/',
       est: 2001,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -219,6 +245,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: "Dublin's 98FM",
       url: 'https://www.98fm.com/',
       est: 1989,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -227,6 +254,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Dundalk Democrat',
       url: 'https://www.dundalkdemocrat.ie/',
       est: 1849,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -235,6 +263,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'East Coast FM',
       url: 'https://www.eastcoast.fm/',
       est: 1989,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -243,6 +272,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Echo Live',
       url: 'https://www.echolive.ie/',
       est: 1892,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -251,6 +281,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Engineers Ireland',
       url: 'https://www.engineersireland.ie/Engineers-Journal/News',
       est: 1835,
+      emos: ['📰', '🧑‍💻'],
     },
   ],
   [
@@ -259,6 +290,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'entertainment.ie',
       url: 'https://entertainment.ie/',
       est: 1997,
+      emos: ['💻', '🎭'],
     },
   ],
   [
@@ -267,6 +299,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'EVOKE',
       url: 'https://evoke.ie/',
       est: 2014,
+      emos: ['💻', '👭'],
     },
   ],
   [
@@ -275,6 +308,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Extra.ie',
       url: 'https://extra.ie/',
       est: 2016,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -283,6 +317,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Fermanagh Herald',
       url: 'https://fermanaghherald.com/',
       est: 1902,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -291,6 +326,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Fleet Transport',
       url: 'https://fleet.ie/',
       est: 2003,
+      emos: ['💻', '🚛'],
     },
   ],
   [
@@ -299,6 +335,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'FM104',
       url: 'https://www.fm104.ie/',
       est: 1989,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -307,6 +344,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Galway Bay FM',
       url: 'https://galwaybayfm.ie/',
       est: 1989,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -315,6 +353,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Galway Advertiser',
       url: 'https://www.advertiser.ie/galway',
       est: 1970,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -323,6 +362,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Galway Beo',
       url: 'https://www.galwaybeo.ie/',
       est: 2021,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -331,6 +371,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Galway Daily',
       url: 'https://www.galwaydaily.com/',
       est: 2018,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -339,6 +380,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Gay Community News',
       url: 'https://gcn.ie/',
       est: 1988,
+      emos: ['📰', '🏳️‍🌈'],
     },
   ],
   [
@@ -347,6 +389,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Her',
       url: 'https://www.her.ie/',
       est: 2012,
+      emos: ['💻', '👭'],
     },
   ],
   [
@@ -355,6 +398,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'HGV Ireland',
       url: 'https://www.hgvireland.com/',
       est: 2007,
+      emos: ['💻', '🚛'],
     },
   ],
   [
@@ -363,6 +407,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Highland Radio',
       url: 'https://www.highlandradio.com/',
       est: 1990,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -371,6 +416,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Hot Press',
       url: 'https://www.hotpress.com/',
       est: 1977,
+      emos: ['📰', '🎭'],
     },
   ],
   [
@@ -379,6 +425,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'House And Home',
       url: 'https://www.houseandhome.ie/',
       est: 2001,
+      emos: ['💻', '🏡'],
     },
   ],
   [
@@ -387,6 +434,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Image',
       url: 'https://www.image.ie/',
       est: 1975,
+      emos: ['📰', '👚'],
     },
   ],
   [
@@ -395,6 +443,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Inishowen Independent',
       url: 'http://inishowenindo.ie/',
       est: 2007,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -403,6 +452,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'iRadio',
       url: 'https://www.iradio.ie/',
       est: 2011,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -411,6 +461,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Irish Boxing',
       url: 'https://www.irish-boxing.com/',
       est: 2001,
+      emos: ['💻', '🥊'],
     },
   ],
   [
@@ -419,6 +470,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'IrishCentral',
       url: 'https://www.irishcentral.com/',
       est: 2009,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -427,6 +479,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Irish Country Magazine',
       url: 'https://irishcountrymagazine.ie/',
       est: 2012,
+      emos: ['💻', '🏡'],
     },
   ],
   [
@@ -435,6 +488,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Irish Examiner',
       url: 'https://www.irishexaminer.com/',
       est: 1841,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -443,6 +497,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Irish Farmers Journal',
       url: 'https://farmersjournal.ie/',
       est: 1948,
+      emos: ['📰', '🌱'],
     },
   ],
   [
@@ -451,6 +506,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Irish Independent',
       url: 'https://www.independent.ie/',
       est: 1905,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -459,6 +515,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Irish Legal News',
       url: 'https://www.irishlegal.com/',
       est: 2015,
+      emos: ['💻', '🧑‍⚖️'],
     },
   ],
   [
@@ -467,6 +524,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Irish Medical Times',
       url: 'https://www.imt.ie/',
       est: 1967,
+      emos: ['📰', '🧑‍⚕️'],
     },
   ],
   [
@@ -475,6 +533,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Irish Mirror',
       url: 'https://www.irishmirror.ie/',
       est: 1997,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -483,6 +542,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Joe.ie',
       url: 'https://www.joe.ie/',
       est: 2010,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -491,6 +551,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'KCLR 96FM',
       url: 'https://kclr96fm.com/',
       est: 2004,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -499,6 +560,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Kfm',
       url: 'https://www.kfmradio.com/',
       est: 2004,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -507,6 +569,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Kildare Nationalist',
       url: 'https://kildare-nationalist.ie/',
       est: 1883,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -515,6 +578,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Kildare Now',
       url: 'https://www.kildarenow.com/',
       est: 2015,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -523,6 +587,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Kilkenny People',
       url: 'https://www.kilkennypeople.ie/',
       est: 1893,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -531,6 +596,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Killarney Today',
       url: 'https://www.killarneytoday.com/',
       est: 2014,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -539,6 +605,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Laois Nationalist',
       url: 'https://laois-nationalist.ie/',
       est: 1883,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -547,6 +614,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Law Society Gazette',
       url: 'https://www.lawsociety.ie/gazette',
       est: 1907,
+      emos: ['📰', '🧑‍⚖️'],
     },
   ],
   [
@@ -555,6 +623,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Leinster Express',
       url: 'https://www.leinsterexpress.ie/',
       est: 1831,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -563,6 +632,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Leinster Leader',
       url: 'https://www.leinsterleader.ie/',
       est: 1880,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -571,6 +641,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Leitrim Observer',
       url: 'https://www.leitrimobserver.ie/',
       est: 1889,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -579,6 +650,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Limerick Leader',
       url: 'https://www.limerickleader.ie/',
       est: 1889,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -587,6 +659,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Limerick Post',
       url: 'https://www.limerickpost.ie/',
       est: 1986,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -595,6 +668,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Live 95',
       url: 'https://www.live95fm.ie/"',
       est: 1997,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -603,6 +677,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'LMFM',
       url: 'https://www.lmfm.ie/"',
       est: 1989,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -611,6 +686,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Longford Leader',
       url: 'https://www.longfordleader.ie/',
       est: 1897,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -619,6 +695,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Mayo Adevertiser',
       url: 'https://www.advertiser.ie/mayo',
       est: 1970,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -627,6 +704,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Mayo News',
       url: 'https://www.mayonews.ie/',
       est: 1892,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -635,6 +713,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Meath Chronicle',
       url: 'https://www.meathchronicle.ie/',
       est: 2007,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -643,6 +722,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Merrion Street',
       url: 'https://merrionstreet.ie/',
       est: 2007,
+      emos: ['💻', '🃏'],
     },
   ],
   [
@@ -651,6 +731,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Midlands 103',
       url: 'https://www.midlands103.com/',
       est: 1990,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -659,6 +740,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'MidWest Radio',
       url: 'https://midwestradio.ie/',
       est: 1979,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -667,6 +749,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Motley',
       url: 'https://motley.ie/',
       est: 2006,
+      emos: ['💻', '🧑‍🎓'],
     },
   ],
   [
@@ -675,6 +758,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Nenagh Guardian',
       url: 'https://www.nenaghguardian.ie/',
       est: 2003,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -683,6 +767,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Nenagh Live',
       url: 'https://www.nenaghlive.ie/',
       est: 2021,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -691,6 +776,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'newstalk',
       url: 'https://www.newstalk.com/',
       est: 2002,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -699,6 +785,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Northern Sound',
       url: 'https://www.northernsound.ie/',
       est: 1989,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -707,6 +794,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Northern Standard',
       url: 'https://northernstandard.ie/',
       est: 1839,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -715,6 +803,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Noteworthy',
       url: 'https://www.noteworthy.ie/',
       est: 2019,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -723,6 +812,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Nuacht TG4',
       url: 'https://www.tg4.ie/ga/brandai-eile/nuacht',
       est: 1996,
+      emos: ['📺', '🇮🇪'],
     },
   ],
   [
@@ -731,6 +821,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Ocean FM',
       url: 'https://www.oceanfm.ie/',
       est: 2004,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -739,6 +830,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Offaly Express',
       url: 'https://www.offalyexpress.ie/',
       est: 1984,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -747,6 +839,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Offaly Independent',
       url: 'https://www.offalyindependent.ie/',
       est: 1894,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -755,6 +848,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Off The Ball Sports',
       url: 'https://www.otbsports.com/',
       est: 2002,
+      emos: ['📻', '⚽'],
     },
   ],
   [
@@ -763,6 +857,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Pundit Arena',
       url: 'https://punditarena.com/',
       est: 2013,
+      emos: ['💻', '⚽'],
     },
   ],
   [
@@ -771,6 +866,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Radio Nova',
       url: 'https://www.nova.ie/',
       est: 2010,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -779,6 +875,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Radio Kerry',
       url: 'https://www.radiokerry.ie/',
       est: 1990,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -787,6 +884,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'RollerCoaster.ie',
       url: 'https://rollercoaster.ie/',
       est: 2000,
+      emos: ['💻', '🤰'],
     },
   ],
   [
@@ -795,6 +893,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Roscommon Herald',
       url: 'https://roscommonherald.ie/',
       est: 2000,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -803,6 +902,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'RSVP Live',
       url: 'https://www.rsvplive.ie/',
       est: 2017,
+      emos: ['💻', '📸'],
     },
   ],
   [
@@ -811,6 +911,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'RTÉ',
       url: 'https://www.rte.ie/',
       est: 1926,
+      emos: ['📺', '🇮🇪'],
     },
   ],
   [
@@ -819,6 +920,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Shannonside FM',
       url: 'https://www.shannonside.ie/',
       est: 1989,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -827,6 +929,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Siliconrepublic.com',
       url: 'https://www.siliconrepublic.com/',
       est: 2001,
+      emos: ['💻', '🧮'],
     },
   ],
   [
@@ -835,6 +938,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Sligo Weekender',
       url: 'http://sligoweekender.ie/',
       est: 1983,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -843,6 +947,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'South East Radio',
       url: 'https://www.southeastradio.ie/',
       est: 1989,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -851,6 +956,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'SPIN 1038',
       url: 'https://www.spin1038.com/',
       est: 2002,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -859,6 +965,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Spirit Radio',
       url: 'https://www.spiritradio.ie/',
       est: 2011,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -867,6 +974,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Sports Joe',
       url: 'https://www.sportsjoe.ie/',
       est: 2014,
+      emos: ['💻', '⚽'],
     },
   ],
   [
@@ -875,6 +983,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Sunday World',
       url: 'https://www.sundayworld.com/',
       est: 1973,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -883,6 +992,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Tech Central',
       url: 'https://www.techcentral.ie/',
       est: 1984,
+      emos: ['📰', '🧮'],
     },
   ],
   [
@@ -891,6 +1001,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Anglo Celt',
       url: 'https://www.anglocelt.ie/',
       est: 1846,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -899,6 +1010,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Avondhu Press',
       url: 'https://avondhupress.ie/',
       est: 2001,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -907,6 +1019,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Business Post',
       url: 'https://www.businesspost.ie/',
       est: 1989,
+      emos: ['📰', '🧑‍💼'],
     },
   ],
   [
@@ -915,6 +1028,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Clare Champion',
       url: 'https://clarechampion.ie/',
       est: 1903,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -923,6 +1037,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Clare Echo',
       url: 'https://www.clareecho.ie/',
       est: 2017,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -931,6 +1046,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Connaught Telegraph',
       url: 'https://www.con-telegraph.ie/',
       est: 1828,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -939,6 +1055,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Corkman',
       url: 'https://www.independent.ie/regionals/corkman/',
       est: 2000,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -947,6 +1064,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Gloss',
       url: 'https://thegloss.ie/',
       est: 2006,
+      emos: ['💻', '👚'],
     },
   ],
   [
@@ -955,6 +1073,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Impartial Reporter',
       url: 'https://www.impartialreporter.com/',
       est: 1825,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -963,6 +1082,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Irish Echo',
       url: 'https://www.irishecho.com/',
       est: 1928,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -971,6 +1091,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Irish Field',
       url: 'https://www.theirishfield.ie/',
       est: 1870,
+      emos: ['📰', '🏇'],
     },
   ],
   [
@@ -979,6 +1100,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Irish News',
       url: 'https://www.irishnews.com/',
       est: 1891,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -987,6 +1109,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Irish Post',
       url: 'https://www.irishpost.com/',
       est: 1970,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -995,6 +1118,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Irish Times',
       url: 'https://www.irishtimes.com/',
       est: 1859,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -1003,6 +1127,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Irish World',
       url: 'https://www.theirishworld.com/',
       est: 1987,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -1011,6 +1136,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Kerryman',
       url: 'https://www.independent.ie/regionals/kerryman/',
       est: 1904,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -1019,6 +1145,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'TheJournal.ie',
       url: 'https://www.thejournal.ie/',
       est: 2010,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -1027,6 +1154,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Munster Express',
       url: 'https://www.munster-express.ie/',
       est: 1860,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -1035,6 +1163,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Nationalist',
       url: 'https://carlow-nationalist.ie/',
       est: 1883,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -1043,6 +1172,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Sligo Champion',
       url: 'https://www.independent.ie/regionals/sligochampion',
       est: 1836,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -1051,6 +1181,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Tuam Herald',
       url: 'https://www.tuamherald.ie/',
       est: 1837,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -1059,6 +1190,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Wexford People',
       url: 'https://www.independent.ie/regionals/wexford/',
       est: 1853,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -1067,6 +1199,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The Wicklow People',
       url: 'https://www.independent.ie/regionals/wicklow/',
       est: 1882,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -1075,6 +1208,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'The 42',
       url: 'https://www.the42.ie/',
       est: 2010,
+      emos: ['💻', '⚽'],
     },
   ],
   [
@@ -1083,6 +1217,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Tipperary Live',
       url: 'https://www.tipperarylive.ie/',
       est: 2019,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -1091,6 +1226,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'TN2 Magazine',
       url: 'https://www.tn2magazine.ie/',
       est: 2012,
+      emos: ['💻', '🧑‍🎓'],
     },
   ],
   [
@@ -1099,6 +1235,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Trinity News',
       url: 'https://trinitynews.ie/',
       est: 1953,
+      emos: ['📰', '🧑‍🎓'],
     },
   ],
   [
@@ -1107,6 +1244,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Tuairisc',
       url: 'https://tuairisc.ie/',
       est: 2014,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -1115,6 +1253,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Tyrone Courier',
       url: 'https://www.tyronecourier.co.uk/',
       est: 1880,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -1123,6 +1262,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'University Express',
       url: 'https://uccexpress.ie/',
       est: 1997,
+      emos: ['💻', '🧑‍🎓'],
     },
   ],
   [
@@ -1131,6 +1271,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'University Observer',
       url: 'https://universityobserver.ie/',
       est: 1994,
+      emos: ['📰', '🧑‍🎓'],
     },
   ],
   [
@@ -1139,6 +1280,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'University Times',
       url: 'https://universitytimes.ie/',
       est: 2009,
+      emos: ['💻', '🧑‍🎓'],
     },
   ],
   [
@@ -1147,6 +1289,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Village Magazine',
       url: 'https://villagemagazine.ie/',
       est: 2004,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -1155,6 +1298,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Waterford Live',
       url: 'https://www.waterfordlive.ie/',
       est: 2018,
+      emos: ['💻', '🇮🇪'],
     },
   ],
   [
@@ -1163,6 +1307,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Waterford News & Star',
       url: 'https://waterford-news.ie/',
       est: 1848,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -1171,6 +1316,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Westmeath Examiner',
       url: 'https://www.westmeathexaminer.ie/',
       est: 1882,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -1179,6 +1325,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Westmeath Independent',
       url: 'https://www.westmeathindependent.ie/',
       est: 1846,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -1187,6 +1334,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Western People',
       url: 'https://westernpeople.ie/',
       est: 1883,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
@@ -1195,6 +1343,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'WLR FM',
       url: 'https://www.wlrfm.com/',
       est: 1989,
+      emos: ['📻', '🇮🇪'],
     },
   ],
   [
@@ -1203,6 +1352,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Womans Way',
       url: 'https://www.womansway.ie/',
       est: 1963,
+      emos: ['📰', '👭'],
     },
   ],
 ])
