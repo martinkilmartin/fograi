@@ -8,7 +8,7 @@ export const NewsSources = new Map<string, NewsSource>([
       url: 'https://www.agriland.ie/',
       est: 2012,
       about:
-        'Online resource all the information, news and services required by people involved in the agricultural and farming sectors in Ireland.',
+        'Online resource covering all the information, news and services required by people involved in the agricultural and farming sectors in Ireland.',
       emos: ['💻', '🌱'],
     },
   ],
@@ -147,6 +147,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Connacht Tribune',
       url: 'https://connachttribune.ie/',
       est: 1925,
+      about: 'Galway news, sport, entertainment, property & arts.',
       emos: ['📰', '🇮🇪'],
     },
   ],
@@ -156,6 +157,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Cork Beo',
       url: 'https://www.corkbeo.ie/',
       est: 2019,
+      about:
+        'Cork Beo is a voice for the Cork region; telling stories, amplifying concerns &  championing causes.',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -165,6 +168,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Cork Independent',
       url: 'https://www.corkindependent.com/',
       est: 2005,
+      about: 'Free newspaper bringing everything needed to know in Cork.',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -183,6 +187,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Derry Journal',
       url: 'https://www.derryjournal.com/',
       est: 1772,
+      about:
+        'Giving the information needed to understand the world, hold power to account and expose injustice. Committed to giving a voice to those who struggle to be heard as well as those whose profession is crafting an argument.',
       emos: ['📰', '🇮🇪'],
     },
   ],
@@ -201,6 +207,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Donegal Daily',
       url: 'https://www.donegaldaily.com/',
       est: 2011,
+      about: 'News as it happens across Donegal.',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -210,15 +217,19 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Donegal Live',
       url: 'https://www.donegallive.ie/',
       est: 2010,
+      about:
+        'Latest Donegal news, sport, business, death notices, entertainment, motoring & jobs.',
       emos: ['💻', '🇮🇪'],
     },
   ],
   [
     'IE_DLNW',
     {
-      name: 'Donegal News',
+      name: 'Donegal News / Derry People',
       url: 'https://donegalnews.com/',
       est: 1903,
+      about:
+        'Originally covering Derry, at the beginning of World War II, took on more of a Donegal focus.',
       emos: ['📰', '🇮🇪'],
     },
   ],
@@ -228,6 +239,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Dublin Inquirer',
       url: 'https://dublininquirer.com/',
       est: 2015,
+      about:
+        "Reader-supported newspaper serving Ireland's capital. In-depth, original reporting about the issues that shape Dublin.",
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -237,6 +250,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Dublin Live',
       url: 'https://www.dublinlive.ie/',
       est: 2016,
+      about:
+        'In-depth news and information about Dublin. Focused on the issues that matter to the people of the capital.',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -246,6 +261,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Dublin News',
       url: 'https://www.dublinnews.com/',
       est: 1858,
+      about:
+        'Reporting the news from Dublin City & County. International news headlines, articles from the business world and a major section on European news supplement the local and national roundup.',
       emos: ['📰', '🇮🇪'],
     },
   ],
@@ -255,6 +272,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Dublin People',
       url: 'https://dublinpeople.com/',
       est: 2001,
+      about:
+        "Three weekly titles serving Dublin: Northside People East, Northside People West & Southside People. Distributed throughout Dublin's suburbs to homes, pick-up points and businesses.",
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -264,6 +283,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: "Dublin's 98FM",
       url: 'https://www.98fm.com/',
       est: 1989,
+      about:
+        'Wide variety of music from the 90s, 00s and today. Also offers the latest Dublin news and sport.',
       emos: ['📻', '🇮🇪'],
     },
   ],
