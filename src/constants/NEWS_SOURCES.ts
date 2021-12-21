@@ -73,6 +73,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'breakingnews.ie',
       url: 'https://www.breakingnews.ie/',
       est: 2001,
+      about:
+        'Breaking news website providing up to the minute news and sports reports, with e-mail news releases following breaking stories throughout the day.',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -82,6 +84,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Buzz',
       url: 'https://www.buzz.ie/',
       est: 2016,
+      about:
+        'Breaking the latest trending stories that are happening in the world right now covering all things movies, TV, music, games, tech and sport.',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -91,6 +95,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Carlow Live',
       url: 'https://www.carlowlive.ie/',
       est: 2018,
+      about:
+        'The latest news, events, business, death notices and more from Carlow 24/7.',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -100,6 +106,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Clare FM',
       url: 'https://www.clare.fm/',
       est: 1989,
+      about:
+        'Providing the people of Co Clare with a comprehensive Radio Service that reflects their individual communities as a whole.',
       emos: ['📻', '🇮🇪'],
     },
   ],
@@ -118,6 +126,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Classic Hits',
       url: 'https://www.classichits.ie/',
       est: 2009,
+      about: "Ireland's Classic Hits - The Home of 80's & 90's.",
       emos: ['📻', '🎭'],
     },
   ],
@@ -127,6 +136,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Coleraine Chronicle',
       url: 'https://www.colerainechronicle.co.uk/',
       est: 1844,
+      about:
+        'Extensive coverage of Causeway Coast, serving Ballycastle, Ballymoney, Bushmills, Coleraine, Limavady, Moyle, Portrush and Portstewart.',
       emos: ['📰', '🇮🇪'],
     },
   ],
