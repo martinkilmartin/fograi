@@ -4,7 +4,8 @@ const EmojiFy = (term: string): string => {
 }
 
 const EMOJIS = {
-  BABYNAMES: '👶',
+  BABYNAMES: '👶 ㊗',
+  BEAUTYSTYLE: '💄 👚',
   COVID: '🦠 💉',
   COVID19: '🦠 💉',
   CORONAVIRUS: '🦠 💉',
@@ -18,7 +19,7 @@ const EMOJIS = {
   SOCCER: '⚽',
   BOXING: '🥊',
   ENTERTAINMENT: '🎭',
-  ALERT: '⚠',
+  ALERT: '⚠ ‼',
   QUIZ: '⁉',
   HEALTH: '🧑‍⚕️',
   BUSINESS: '💼',
@@ -38,7 +39,7 @@ const EMOJIS = {
   GOLF: '⛳',
   LIFESTYLE: '🧜‍♂️',
   NORTHERNIRELAND: '🇬🇧',
-  NORTHERNIRELANDPREMIUM: '🇬🇧',
+  NORTHERNIRELANDPREMIUM: '🇬🇧 💷',
   CELEBRITY: '🧜',
   CRIMECOURTS: '🦹 🧑‍⚖️',
   CRIMELAW: '🦹 👮',

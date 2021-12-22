@@ -758,7 +758,7 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
-    'IE_MIE_MRSTTHC',
+    'IE_MRST',
     {
       name: 'Merrion Street',
       url: 'https://merrionstreet.ie/',
