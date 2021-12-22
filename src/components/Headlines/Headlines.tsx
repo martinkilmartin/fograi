@@ -5,6 +5,7 @@ import { numberFormat } from '@lib/number-format'
 import { NewsSources } from '@constants/NEWS_SOURCES'
 import { Headline } from 'src/types'
 import { Badge } from '@components/Badge'
+import EmojiFy from '@lib/emojis'
 
 const MAX_QUERY = 24
 
@@ -70,6 +71,9 @@ const Headlines = (): JSX.Element => {
               className="my-2 bg-base-200 card lg:card-side bordered"
             >
               <div className="card-body">
+                <p className="absolute top-0 left-0 mt-2 ml-2 text-3xl">
+                  {EmojiFy(headline.section)}
+                </p>
                 <p className="absolute top-0 right-0 mt-2 mr-2">
                   <b>⏱ {diffDisplay(DATE)}</b>
                 </p>
@@ -77,7 +81,7 @@ const Headlines = (): JSX.Element => {
                 <h2 className="mt-3 text-3xl text-center card-title">
                   {headline.headline}
                 </h2>
-                <p className="text-2xl mb-3 text-center">
+                <p className="mb-3 text-2xl text-center">
                   <a
                     href={NewsSources.get(headline.source)?.url}
                     target="_blank"

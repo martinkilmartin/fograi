@@ -303,6 +303,7 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'East Coast FM',
       url: 'https://www.eastcoast.fm/',
       est: 1989,
+      about: "Wicklow's Radio Station",
       emos: ['📻', '🇮🇪'],
     },
   ],
