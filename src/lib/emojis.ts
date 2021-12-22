@@ -38,6 +38,7 @@ const EMOJIS = {
   CULTURE: '🧐 🧛',
   DERRYNEWS: '📰 🧱',
   DRINK: '🍻 🍷',
+  EMERGENCYSERVICES: '🚑 🚒',
   ENTERTAINMENT: '🎭 🤹',
   FILM: '🎬 📽',
   FILMS: '🎬 📽🎶',
