@@ -53,6 +53,7 @@ const EMOJIS = {
   HOUSES: '🏘',
   HOUSING: '🏘',
   IMPORTANT: '‼ ‼',
+  INCIDENT: '💁',
   IRELAND: '🇮🇪 ☘',
   IRISHNEWS: '🇮🇪 ☘',
   LOCALNEWS: '🇮🇪 📢',
