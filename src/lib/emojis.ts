@@ -42,6 +42,7 @@ const EMOJIS = {
   CORKNEWS: '📰 🍾',
   COVID: '🦠 💉',
   COVID19: '🦠 💉',
+  COVIDTESTING: '🦠 🧪',
   CRASH: '💥 🚨',
   CRICKET: '🏏',
   CRIMECOURTS: '🦹 🧑‍⚖️',
