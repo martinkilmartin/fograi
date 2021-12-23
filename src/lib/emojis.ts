@@ -96,6 +96,7 @@ const EMOJIS = {
   NORTHERNIRELAND: '🇬🇧 🍊',
   NORTHERNIRELANDPREMIUM: '🇬🇧 🥭',
   NUACHT: '📰 🍀',
+  OMICRON: '🦠 💉',
   PERSONALFINANCE: '💶 💸',
   PHOTO: '📷 🖼',
   PIC: '📷 🖼',
