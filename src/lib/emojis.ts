@@ -1,9 +1,9 @@
 const EmojiFy = (term: string): string => {
   term = term
-    .replaceAll(' ', '')
-    .replaceAll('-', '')
-    .replaceAll('&', '')
-    .replaceAll('?', '')
+    .replaceAll(/\s/g, '')
+    .replaceAll(/-/g, '')
+    .replaceAll(/&/g, '')
+    .replaceAll(/\?/g, '')
   return EMOJIS[term as keyof typeof EMOJIS] ?? ''
 }
 
@@ -14,12 +14,14 @@ const EMOJIS = {
   BASKETBALL: '🏀',
   BEAUTYSTYLE: '💄 👚',
   BEEF: '🦬 🐂',
-  BOXING: '🥊',
+  BOXING: '🥊 🥊',
   BREAKINGNEWS: '🗣 💬',
+  BREXIT: '🇬🇧 🇪🇺',
   BUSINESS: '💼 🏢',
   CARBONBUDGETS: '🌫 🤑',
   CELEBRITY: '🧜 🧟',
   CELEBS: '🧜 🧟',
+  CHARITY: '⏳ 💶',
   CHRISTMASINLIMERICK: '🎄 🏰',
   CHRISTMASINMAYO: '🎄 🥈',
   CHRISTMASINNENAGH: '🎄 🏰',
@@ -36,13 +38,14 @@ const EMOJIS = {
   CRIMELAW: '🦹 👮',
   CRIME: '🦹 🦸',
   CULTURE: '🧐 🧛',
-  DEATHANNOUNCED: '🗿 🪦',
-  DEATHNOTICE: '🗿 🪦',
+  DEATHANNOUNCED: '🪦 🗿',
+  DEATHNOTICE: '🪦 🗿',
   DERRYNEWS: '📰 🧱',
+  DINOSAUR: '🦕 🦖',
   DISPUTESOLVER: '🤬 😤',
   DRAMA: '🤯',
   DRINK: '🍻 🍷',
-  DUBLINAIRPORT: '🛫 🛬',
+  DUBLINAIRPORT: '🛬 🛫',
   EMERGENCYSERVICES: '🚑 🚒',
   ENTERTAINMENT: '🎭 🤹',
   FILM: '🎬 📽',
@@ -63,8 +66,10 @@ const EMOJIS = {
   IRELAND: '🇮🇪 ☘',
   IRELANDAM: '🇮🇪 🌅',
   IRISHNEWS: '🇮🇪 ☘',
+  KNOCKAIRPORT: '🛬 🛐',
   LOCALNEWS: '🇮🇪 📢',
   LIFESTYLE: '🧜‍♂️ 🧋',
+  LIVING: '🔱 🧑‍🤝‍🧑',
   MACHINERY: '🚜 🚁',
   MAYO: '📰 🥈',
   MAYOGAA: '📰 🥈',
@@ -82,15 +87,18 @@ const EMOJIS = {
   NORTHERNIRELANDPREMIUM: '🇬🇧 🥭',
   NUACHT: '📰 🍀',
   PERSONALFINANCE: '💶 💸',
-  PIC: '📷 🖼',
   PHOTO: '📷 🖼',
+  PIC: '📷 🖼',
   PICTURE: '📷 🖼',
   PICTURES: '📸 🖼',
+  PLANNING: '🪧 🏗',
+  PLANNINGPERMISSION: '🪧 🏗',
   QUIZ: '⁉',
   REVEALED: '🙈 🪆',
   ROSE: '🌹 🏵',
   ROSEOFTRALEE: '🌹 🏵',
   RUGBY: '🏉',
+  SHANNONAIRPORT: '✈ 🏢',
   SHEEP: '🐑',
   SOCCER: '⚽ 🥅',
   SPORT: '🤼 🤸',
