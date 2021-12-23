@@ -5,4 +5,5 @@ export type Headline = {
   section: string
   headline: string
   link: string
+  emos: string
 }

@@ -5,7 +5,6 @@ import { numberFormat } from '@lib/number-format'
 import { NewsSources } from '@constants/NEWS_SOURCES'
 import { Headline } from 'src/types'
 import { Badge } from '@components/Badge'
-import EmojiFy from '@lib/emojis'
 
 const MAX_QUERY = 24
 
@@ -80,7 +79,7 @@ const Headlines = (): JSX.Element => {
             >
               <div className="card-body">
                 <p className="absolute top-0 left-0 mt-2 ml-2 text-3xl">
-                  {EmojiFy(headline.section)}
+                  {headline.emos}
                 </p>
                 <p className="absolute top-0 right-0 mt-2 mr-2">
                   <b>⏱ {diffDisplay(DATE)}</b>
