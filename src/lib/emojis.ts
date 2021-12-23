@@ -60,6 +60,7 @@ const EMOJIS = {
   CRIME: '🦹 🦸',
   CULTURE: '🧐 🧛',
   DARTS: '🎯 🍺',
+  DATA: '🗂 🔒',
   DEATHANNOUNCED: '🪦 🗿',
   DEATHNOTICE: '🪦 🗿',
   DERRYNEWS: '📰 🧱',
