@@ -162,6 +162,7 @@ const EMOJIS = {
   THEFT: '🦹‍♂️ 🏦',
   TORCHED: '🔥 🧯',
   TRAFFIC: '🚦 🚗',
+  TRAVEL: '🛩 🚀',
   TRIBUTE: '🖖 🥂',
   ULSTER: '💅 ❌',
   VIDEO: '📹 🎞',
