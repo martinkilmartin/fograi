@@ -98,6 +98,7 @@ const EMOJIS = {
   IRELANDAM: '🇮🇪 🌅',
   IRISHNEWS: '🇮🇪 ☘',
   IRELANDPREMIUM: '🇮🇪 🍀',
+  FARMING: '👩‍🌾 🧑‍🌾',
   FLYTIPPING: '🪰 🗑',
   JOBS: '👷‍♀️ 👨‍🏫',
   KNOCKAIRPORT: '🛬 🛐',
