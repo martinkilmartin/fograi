@@ -22,6 +22,9 @@ const Headlines = (): JSX.Element => {
   }, [])
 
   const fetchHeadlines = async () => {
+    const CURRENT_TOTAL = total
+    await fetchHeadlineCount()
+    if (total > CURRENT_TOTAL) await setRange(range + (total - CURRENT_TOTAL))
     const { data: newHeadlines, error } = await supabase
       .from('headlines')
       .select('*')
@@ -38,9 +41,13 @@ const Headlines = (): JSX.Element => {
     const { count, error } = await supabase
       .from('headlines')
       .select('*', { count: 'exact' })
-    if (error) console.error(error)
+    if (error) {
+      console.error(error)
+      return
+    }
     if (count) {
       setTotal(count)
+      return
     }
   }
 
