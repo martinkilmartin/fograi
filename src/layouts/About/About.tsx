@@ -45,6 +45,15 @@ const About = ({ title }: Props): JSX.Element => (
         This is an experimental website and is liable to stop updating 📴 or go
         offline 🪦 at any moment . . . 👻
       </p>
+      <h3 className="mt-3 text-2xl">🔮 🧱 ⛓ 🪄 🤑 🤯 🪙 💸</h3>
+      <p className="mt-1">
+        Future development may include permanent storage of headlines on a
+        globally distributed proof-of-work blockchain such as{' '}
+        <a href="https://ethereumclassic.org/" target="_blank" rel="noreferrer">
+          Ethereum Classic
+        </a>
+        .
+      </p>
     </div>
   </div>
 )
