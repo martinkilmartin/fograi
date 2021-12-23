@@ -10,9 +10,12 @@ const EmojiFy = (term: string): string => {
 }
 
 const EMOJIS = {
+  ACTIVITY: '🤸 🤼',
+  ACTIVITYEVENTS: '🤸 🎟',
   ALERT: '⚠ ‼',
   BABYNAMES: '👶 ㊗',
-  BARBER: '💈',
+  BANNED: '⛔ 🚫',
+  BARBER: '💈 ✂',
   BARBERSHOP: '💈',
   BASEBALL: '⚾',
   BASKETBALL: '🏀 ⛹',
@@ -22,6 +25,7 @@ const EMOJIS = {
   BREAKINGNEWS: '🗣 💬',
   BREXIT: '🇬🇧 🇪🇺',
   BUSINESS: '💼 🏢',
+  CAFRE: '🏫 🌱',
   CAP: '🕊 📜',
   CARBONBUDGET: '🌫 🤑',
   CARBONBUDGETS: '🌫 🤑',
@@ -112,6 +116,7 @@ const EMOJIS = {
   MULTIMEDIA: '📼 📀',
   MUNSTER: '👑👑👑',
   MUSIC: '🧑‍🎤 🎶',
+  MUSICNEWS: '🎶 📰',
   MOVIE: '🎬 📽',
   MOVIES: '🎬 📽',
   MOVIENEWS: '🎬 📽',
@@ -155,6 +160,7 @@ const EMOJIS = {
   TENNIS: '🎾',
   THEFT: '🦹‍♂️ 🏦',
   TORCHED: '🔥 🧯',
+  TRAFFIC: '🚦 🚗',
   TRIBUTE: '🖖 🥂',
   ULSTER: '💅 ❌',
   VIDEO: '📹 🎞',
