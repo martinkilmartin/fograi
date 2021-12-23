@@ -313,7 +313,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Echo Live',
       url: 'https://www.echolive.ie/',
       est: 1892,
-      about: 'Serving the people of Cork by faithfully, factually and fairly reporting the daily news and standing up for the citizens. Dedicated to the interests of the people of Cork City and County. Extensive coverage in stories and pictures of the good news and the bad news as it affects Cork people. Argues and advocates Cork\'s case on every issue.',
+      about:
+        "Serving the people of Cork by faithfully, factually and fairly reporting the daily news and standing up for the citizens. Dedicated to the interests of the people of Cork City and County. Extensive coverage in stories and pictures of the good news and the bad news as it affects Cork people. Argues and advocates Cork's case on every issue.",
       emos: ['📰', '🇮🇪'],
     },
   ],
@@ -343,6 +344,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'EVOKE',
       url: 'https://evoke.ie/',
       est: 2014,
+      about:
+        'Website for Irish females with the latest news, showbiz, fashion, beauty, entertainment, and celebrity gossip.',
       emos: ['💻', '👭'],
     },
   ],
@@ -352,6 +355,8 @@ export const NewsSources = new Map<string, NewsSource>([
       name: 'Extra.ie',
       url: 'https://extra.ie/',
       est: 2016,
+      about:
+        "Giving the inside track on all of Ireland's top news stories. All the latest news from Ireland and the world. News With A Little Extra.",
       emos: ['💻', '🇮🇪'],
     },
   ],
