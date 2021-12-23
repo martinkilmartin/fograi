@@ -66,6 +66,7 @@ const EMOJIS = {
   IRELAND: '🇮🇪 ☘',
   IRELANDAM: '🇮🇪 🌅',
   IRISHNEWS: '🇮🇪 ☘',
+  IRELANDPREMIUM: '🇮🇪 🍀',
   KNOCKAIRPORT: '🛬 🛐',
   LOCALNEWS: '🇮🇪 📢',
   LIFESTYLE: '🧜‍♂️ 🧋',
