@@ -10,8 +10,9 @@ const EmojiFy = (term: string): string => {
 }
 
 const EMOJIS = {
+  ACTIVITIES: '🤸 🤼',
+  ACTIVITIESEVENTS: '🤸 🎟',
   ACTIVITY: '🤸 🤼',
-  ACTIVITYEVENTS: '🤸 🎟',
   ALERT: '⚠ ‼',
   BABYNAMES: '👶 ㊗',
   BANNED: '⛔ 🚫',

@@ -10,6 +10,7 @@ import EmojiFy from '@lib/emojis'
 const MAX_QUERY = 24
 
 const Headlines = (): JSX.Element => {
+  const [fetching, setFetching] = useState(false)
   const [total, setTotal] = useState<number>(0)
   const [headlines, setHeadlines] = useState<Headline[]>([])
   const [range, setRange] = useState<number>(0)
@@ -22,9 +23,7 @@ const Headlines = (): JSX.Element => {
   }, [])
 
   const fetchHeadlines = async () => {
-    const CURRENT_TOTAL = total
-    await fetchHeadlineCount()
-    if (total > CURRENT_TOTAL) await setRange(range + (total - CURRENT_TOTAL))
+    setFetching(true)
     const { data: newHeadlines, error } = await supabase
       .from('headlines')
       .select('*')
@@ -35,20 +34,22 @@ const Headlines = (): JSX.Element => {
       setHeadlines([...headlines, ...newHeadlines])
       setRange(range + MAX_QUERY)
     }
+    setFetching(false)
+  }
+
+  const fetchMoreHeadlines = async () => {
+    const CURRENT_TOTAL = total
+    await fetchHeadlineCount()
+    if (total > CURRENT_TOTAL) setRange(range + (total - CURRENT_TOTAL))
+    fetchHeadlines()
   }
 
   const fetchHeadlineCount = async () => {
     const { count, error } = await supabase
       .from('headlines')
       .select('*', { count: 'exact' })
-    if (error) {
-      console.error(error)
-      return
-    }
-    if (count) {
-      setTotal(count)
-      return
-    }
+    if (error) console.error(error)
+    if (count) setTotal(count)
   }
 
   const backToTop = () => {
@@ -65,7 +66,7 @@ const Headlines = (): JSX.Element => {
       {headlines.length === 0 && (
         <div className="min-h-screen text-center">
           <button className="btn btn-lg btn-primary loading">
-            Loading news . . .
+            Loading Headlines . . .
           </button>
         </div>
       )}
@@ -135,14 +136,21 @@ const Headlines = (): JSX.Element => {
         })}
       {headlines && headlines.length < total && (
         <div className="text-center">
-          <button
-            className="btn btn-primary"
-            onClick={() => {
-              fetchHeadlines()
-            }}
-          >
-            {`Load ${MAX_QUERY} More`}
-          </button>
+          {!fetching && (
+            <button
+              className="btn btn-primary"
+              onClick={() => {
+                fetchMoreHeadlines()
+              }}
+            >
+              {`Load ${MAX_QUERY} More`}
+            </button>
+          )}
+          {fetching && (
+            <button className="btn btn-lg btn-primary loading">
+              Loading more headlines . . .
+            </button>
+          )}
           <p>
             <b>
               <i>{`Loaded ${numberFormat(headlines.length)} of ${numberFormat(
