@@ -68,6 +68,7 @@ const EMOJIS = {
   HORSERACING: '🏇 🎠',
   HOUSES: '🏡 🏘',
   HOUSING: '🏡 🏘',
+  HURLING: '🏑 🏒',
   IMPORTANT: '‼ ‼',
   INCIDENT: '💁 〰',
   IRELAND: '🇮🇪 ☘',
