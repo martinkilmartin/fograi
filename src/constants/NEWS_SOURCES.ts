@@ -1180,21 +1180,21 @@ export const NewsSources = new Map<string, NewsSource>([
     },
   ],
   [
-    'IE_KRYM',
-    {
-      name: 'The Kerryman',
-      url: 'https://www.independent.ie/regionals/kerryman/',
-      est: 1904,
-      emos: ['📰', '🇮🇪'],
-    },
-  ],
-  [
     'IE_JRNL',
     {
       name: 'TheJournal.ie',
       url: 'https://www.thejournal.ie/',
       est: 2010,
       emos: ['💻', '🇮🇪'],
+    },
+  ],
+  [
+    'IE_KRYM',
+    {
+      name: 'The Kerryman',
+      url: 'https://www.independent.ie/regionals/kerryman/',
+      est: 1904,
+      emos: ['📰', '🇮🇪'],
     },
   ],
   [
