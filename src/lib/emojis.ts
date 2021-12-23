@@ -18,6 +18,7 @@ const EMOJIS = {
   BREAKINGNEWS: '🗣 💬',
   BREXIT: '🇬🇧 🇪🇺',
   BUSINESS: '💼 🏢',
+  CARBONBUDGET: '🌫 🤑',
   CARBONBUDGETS: '🌫 🤑',
   CELEBRITY: '🧜 🧟',
   CELEBS: '🧜 🧟',
