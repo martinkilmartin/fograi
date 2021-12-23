@@ -4,6 +4,8 @@ const EmojiFy = (term: string): string => {
     .replaceAll(/-/g, '')
     .replaceAll(/&/g, '')
     .replaceAll(/\?/g, '')
+    .replaceAll(/’/g, '')
+    .replaceAll(/'/g, '')
   return EMOJIS[term as keyof typeof EMOJIS] ?? ''
 }
 
@@ -18,6 +20,7 @@ const EMOJIS = {
   BREAKINGNEWS: '🗣 💬',
   BREXIT: '🇬🇧 🇪🇺',
   BUSINESS: '💼 🏢',
+  CAP: '🕊 📜',
   CARBONBUDGET: '🌫 🤑',
   CARBONBUDGETS: '🌫 🤑',
   CELEBRITY: '🧜 🧟',
@@ -49,6 +52,8 @@ const EMOJIS = {
   DERRYGAA: '🏐 🧱',
   DINOSAUR: '🦕 🦖',
   DISPUTESOLVER: '🤬 😤',
+  DONUT: '🍩',
+  DONUTS: '🍩 🍩',
   DRAMA: '🤯 🎭',
   DRINK: '🍻 🍷',
   DUBLINAIRPORT: '🛬 🛫',
@@ -58,8 +63,8 @@ const EMOJIS = {
   FILM: '🎬 📽',
   FILMS: '🎬 📽🎶',
   FOOD: '🍲 🍱',
-  FOOTBALL: '⚽',
-  GAA: '🏐',
+  FOOTBALL: '⚽ 🤸',
+  GAA: '🏐 🤾',
   GOLF: '🏌 ⛳',
   HEALTH: '🧑‍⚕️ ⚕',
   HOME: '🏠 🏡',
@@ -93,6 +98,7 @@ const EMOJIS = {
   MOVIENEWS: '🎬 📽',
   NATIONALNEWS: '🇮🇪 ☘',
   NEWS: '📰 📢',
+  NEWYEARSEVE: '🎉 🕛',
   NORTHERNIRELAND: '🇬🇧 🍊',
   NORTHERNIRELANDNEWS: '🇬🇧 🍊',
   NORTHERNIRELANDPREMIUM: '🇬🇧 🥭',
@@ -114,8 +120,11 @@ const EMOJIS = {
   SHEEP: '🐑',
   SOCCER: '⚽ 🥅',
   SPORT: '🤼 🤸',
+  STUDENT: '🧑‍🎓 🧑‍🏫',
+  STUDENTS: '🧑‍🎓👨‍🎓👩‍🎓',
   TENNIS: '🎾',
   THEFT: '🦹‍♂️ 🏦',
+  TORCHED: '🔥 🧯',
   TRIBUTE: '🖖 🥂',
   ULSTER: '💅 ❌',
   VIDEO: '📹 🎞',
