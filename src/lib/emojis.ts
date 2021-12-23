@@ -94,6 +94,7 @@ const EMOJIS = {
   NATIONALNEWS: '🇮🇪 ☘',
   NEWS: '📰 📢',
   NORTHERNIRELAND: '🇬🇧 🍊',
+  NORTHERNIRELANDNEWS: '🇬🇧 🍊',
   NORTHERNIRELANDPREMIUM: '🇬🇧 🥭',
   NUACHT: '📰 🍀',
   OMICRON: '🦠 💉',
