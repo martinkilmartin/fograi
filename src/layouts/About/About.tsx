@@ -49,7 +49,12 @@ const About = ({ title }: Props): JSX.Element => (
       <p className="mt-1">
         Future development may include permanent storage of headlines on a
         globally distributed proof-of-work blockchain such as{' '}
-        <a href="https://ethereumclassic.org/" target="_blank" rel="noreferrer">
+        <a
+          className="link link-primary"
+          href="https://ethereumclassic.org/"
+          target="_blank"
+          rel="noreferrer"
+        >
           Ethereum Classic
         </a>
         .
