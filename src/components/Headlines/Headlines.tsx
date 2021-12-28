@@ -24,7 +24,7 @@ const Headlines = (): JSX.Element => {
   const fetchHeadlines = async () => {
     setFetching(true)
     const { data: newHeadlines, error } = await supabase
-      .from('headlines')
+      .from('ie-headlines')
       .select('*')
       .order('created_at', { ascending: false })
       .range(range, range + (MAX_QUERY - 1))
@@ -45,7 +45,7 @@ const Headlines = (): JSX.Element => {
 
   const fetchHeadlineCount = async () => {
     const { count, error } = await supabase
-      .from('headlines')
+      .from('ie-headlines')
       .select('*', { count: 'exact' })
     if (error) console.error(error)
     if (count) setTotal(count)
