@@ -38,7 +38,8 @@ export const CANewsSources = new Map<string, NewsSource>([
       name: 'The Globe And Mail',
       url: 'https://www.theglobeandmail.com/',
       est: 1844,
-      about: 'Engaging Canadians through coverage of news, politics, business, investing and lifestyle topics.',
+      about:
+        'Engaging Canadians through coverage of news, politics, business, investing and lifestyle topics.',
       emos: ['📰', '🇨🇦'],
     },
   ],
@@ -1481,7 +1482,19 @@ export const INNewsSources = new Map<string, NewsSource>([
       url: 'https://www.thehindu.com/',
       est: 1878,
       about:
-        "Breaking News & Latest News from India and the World. Politics, Sports, Business, Arts and Entertainment.",
+        'Breaking News & Latest News from India and the World. Politics, Sports, Business, Arts and Entertainment.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IN_HST',
+    {
+      name: 'Hindustan Times',
+      url: 'https://www.hindustantimes.com/',
+      est: 1924,
+      about:
+        'Comprehensive news portal covers all the latest developments on a real-time basis in the fields of politics, sports, business, lifestyle, entertainment and even local city issues, offering a complete perspective of the world.',
       emos: ['📰', '🇮🇳'],
       langs: ['en'],
     },
