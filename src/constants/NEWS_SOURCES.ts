@@ -1454,4 +1454,16 @@ export const INNewsSources = new Map<string, NewsSource>([
       langs: ['en', 'hi'],
     },
   ],
+  [
+    'IN_THND',
+    {
+      name: 'The Hindu',
+      url: 'https://www.thehindu.com/',
+      est: 1878,
+      about:
+        "Breaking News & Latest News from India and the World. Politics, Sports, Business, Arts and Entertainment.",
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
 ])
