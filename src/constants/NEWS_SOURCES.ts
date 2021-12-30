@@ -32,6 +32,16 @@ export const CANewsSources = new Map<string, NewsSource>([
       emos: ['📰', '🇨🇦'],
     },
   ],
+  [
+    'CA_TGAM',
+    {
+      name: 'The Globe And Mail',
+      url: 'https://www.theglobeandmail.com/',
+      est: 1844,
+      about: 'Engaging Canadians through coverage of news, politics, business, investing and lifestyle topics.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
 ])
 
 export const IENewsSources = new Map<string, NewsSource>([
