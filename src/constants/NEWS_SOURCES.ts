@@ -43,6 +43,17 @@ export const CANewsSources = new Map<string, NewsSource>([
       emos: ['📰', '🇨🇦'],
     },
   ],
+  [
+    'CA_LPRS',
+    {
+      name: 'La Presse',
+      url: 'https://www.lapresse.ca/',
+      est: 1884,
+      about:
+        'Sa mission est de produire une information de qualité accessible gratuitement au plus grand nombre.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
 ])
 
 export const IENewsSources = new Map<string, NewsSource>([
