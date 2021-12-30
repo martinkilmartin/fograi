@@ -2,13 +2,21 @@ import { useState, useEffect } from 'react'
 import { supabase } from '@services/supabase'
 import diffDisplay from '@lib/time-format'
 import { numberFormat } from '@lib/number-format'
-import { NewsSources } from '@constants/NEWS_SOURCES'
+import {
+  CANewsSources,
+  IENewsSources,
+  INNewsSources,
+} from '@constants/NEWS_SOURCES'
 import { Headline } from 'src/types'
 import { Badge } from '@components/Badge'
 
 const MAX_QUERY = 24
 
-const Headlines = (): JSX.Element => {
+type Props = {
+  country?: 'ca' | 'ie' | 'in'
+}
+
+const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
   const [fetching, setFetching] = useState(false)
   const [total, setTotal] = useState<number>(0)
   const [headlines, setHeadlines] = useState<Headline[]>([])
@@ -24,7 +32,7 @@ const Headlines = (): JSX.Element => {
   const fetchHeadlines = async () => {
     setFetching(true)
     const { data: newHeadlines, error } = await supabase
-      .from('ie-headlines')
+      .from(`${country}-headlines`)
       .select('*')
       .order('created_at', { ascending: false })
       .range(range, range + (MAX_QUERY - 1))
@@ -45,7 +53,7 @@ const Headlines = (): JSX.Element => {
 
   const fetchHeadlineCount = async () => {
     const { count, error } = await supabase
-      .from('ie-headlines')
+      .from(`${country}-headlines`)
       .select('*', { count: 'exact' })
     if (error) console.error(error)
     if (count) setTotal(count)
@@ -72,6 +80,18 @@ const Headlines = (): JSX.Element => {
       {headlines &&
         headlines.map((headline) => {
           const DATE = new Date(headline.created_at)
+          let sourceURL
+          let sourceName
+          if (country === 'ca') {
+            sourceURL = CANewsSources.get(headline.source)?.url
+            sourceName = CANewsSources.get(headline.source)?.name
+          } else if (country === 'ie') {
+            sourceURL = IENewsSources.get(headline.source)?.url
+            sourceName = IENewsSources.get(headline.source)?.name
+          } else if (country === 'in') {
+            sourceURL = INNewsSources.get(headline.source)?.url
+            sourceName = INNewsSources.get(headline.source)?.name
+          }
           return (
             <div
               key={headline.id}
@@ -89,13 +109,9 @@ const Headlines = (): JSX.Element => {
                   {headline.headline}
                 </h2>
                 <p className="mb-3 text-2xl text-center">
-                  <a
-                    href={NewsSources.get(headline.source)?.url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href={sourceURL} target="_blank" rel="noreferrer">
                     <b>
-                      <i>{NewsSources.get(headline.source)?.name}</i>
+                      <i>{sourceName}</i>
                     </b>
                   </a>
                 </p>

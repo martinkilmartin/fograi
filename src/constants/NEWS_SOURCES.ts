@@ -1,6 +1,30 @@
 import { NewsSource } from 'src/types/NewsSource'
 
-export const NewsSources = new Map<string, NewsSource>([
+export const CANewsSources = new Map<string, NewsSource>([
+  [
+    'CA_LDVR',
+    {
+      name: 'Le Devoir',
+      url: 'https://www.ledevoir.com/',
+      est: 1910,
+      about:
+        'Quotidien indépendant au Québec. Obtenir les toutes dernières actualités.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_QCTO',
+    {
+      name: 'The Quebec Chronicle Telegraph',
+      url: 'https://www.qctonline.com/',
+      est: 1764,
+      about: 'The first and oldest newspaper in North America.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+])
+
+export const IENewsSources = new Map<string, NewsSource>([
   [
     'IE_AGRI',
     {
@@ -1402,6 +1426,19 @@ export const NewsSources = new Map<string, NewsSource>([
       url: 'https://www.womansway.ie/',
       est: 1963,
       emos: ['📰', '👭'],
+    },
+  ],
+])
+
+export const INNewsSources = new Map<string, NewsSource>([
+  [
+    'IN_BYSC',
+    {
+      name: 'Bombay Samachar',
+      url: 'https://bombaysamachar.com/',
+      est: 1822,
+      about: 'The oldest continuously published newspaper in India.',
+      emos: ['📰', '🇮🇳'],
     },
   ],
 ])
