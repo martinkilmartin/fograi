@@ -5,6 +5,7 @@ type Props = {
   bgImageAlt?: string
   heading?: string
   description?: string
+  links?: string[][]
 }
 
 const Hero = ({
@@ -12,6 +13,7 @@ const Hero = ({
   bgImageAlt,
   heading,
   description,
+  links,
 }: Props): JSX.Element => (
   <div className="hero">
     <div className="flex-col hero-content lg:flex-row-reverse">
@@ -25,8 +27,19 @@ const Hero = ({
         />
       )}
       <div>
-        {heading && <h1 className="mb-5 text-5xl font-bold text-center">{heading}</h1>}
+        {heading && (
+          <h1 className="mb-5 text-5xl font-bold text-center">{heading}</h1>
+        )}
         {description && <p className="mb-5">{description}</p>}
+        {links && (
+          <h1 className="mb-5 text-5xl font-bold text-center">
+            {links.map((link, index) => (
+              <a  className="mx-4" href={`/${link[0]}`} key={index}>
+                {link[1]}
+              </a>
+            ))}
+          </h1>
+        )}
       </div>
     </div>
   </div>

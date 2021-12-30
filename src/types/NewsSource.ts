@@ -4,4 +4,5 @@ export type NewsSource = {
   est: number
   about?: string
   emos: string[]
+  langs?: string[]
 }

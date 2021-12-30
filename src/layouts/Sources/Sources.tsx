@@ -1,4 +1,8 @@
-import { CANewsSources, IENewsSources, INNewsSources } from '@constants/NEWS_SOURCES'
+import {
+  CANewsSources,
+  IENewsSources,
+  INNewsSources,
+} from '@constants/NEWS_SOURCES'
 
 type Props = {
   title: string
@@ -6,15 +10,23 @@ type Props = {
 
 const Sources = ({ title }: Props): JSX.Element => (
   <div className="px-4 text-center">
-    <h1 className="w-full mb-4 text-4xl font-extrabold leading-9">{title}</h1>
+    <h1 className="w-full mb-4 text-5xl font-extrabold leading-9">{title}</h1>
+    <h2 className="w-full mb-4 text-4xl font-extrabold leading-9">
+      <a className="mx-4" href="#ca">🇨🇦</a>
+      <a className="mx-4" href="#ie">🇮🇪</a>
+      <a className="mx-4" href="#in">🇮🇳</a>
+    </h2>
     <div className="flex flex-wrap">
-    {Array.from(CANewsSources.keys()).map((key, index) => (
+      <h3 className="w-full text-3xl" id="ca">
+        🇨🇦
+      </h3>
+      {Array.from(CANewsSources.keys()).map((key, index) => (
         <div
           className="w-full mb-4 text-center shadow-2xl lg:w-1/2 xl:w-1/3 card"
           key={index}
         >
           <div className="card-body">
-            <h2 className="text-3xl card-title">
+            <h3 className="text-3xl card-title">
               <a
                 className="link link-primary"
                 href={CANewsSources.get(key)?.url}
@@ -25,7 +37,7 @@ const Sources = ({ title }: Props): JSX.Element => (
                   <b>{CANewsSources.get(key)?.name}</b>
                 </i>
               </a>
-            </h2>
+            </h3>
             <p>
               <i>
                 Estb.&nbsp;<b>{CANewsSources.get(key)?.est}</b>
@@ -46,13 +58,16 @@ const Sources = ({ title }: Props): JSX.Element => (
           </div>
         </div>
       ))}
+      <h3 className="w-full text-3xl" id="ie">
+        🇮🇪
+      </h3>
       {Array.from(IENewsSources.keys()).map((key, index) => (
         <div
           className="w-full mb-4 text-center shadow-2xl lg:w-1/2 xl:w-1/3 card"
           key={index}
         >
           <div className="card-body">
-            <h2 className="text-3xl card-title">
+            <h3 className="text-3xl card-title">
               <a
                 className="link link-primary"
                 href={IENewsSources.get(key)?.url}
@@ -63,7 +78,7 @@ const Sources = ({ title }: Props): JSX.Element => (
                   <b>{IENewsSources.get(key)?.name}</b>
                 </i>
               </a>
-            </h2>
+            </h3>
             <p>
               <i>
                 Estb.&nbsp;<b>{IENewsSources.get(key)?.est}</b>
@@ -84,13 +99,16 @@ const Sources = ({ title }: Props): JSX.Element => (
           </div>
         </div>
       ))}
+      <h3 className="w-full text-3xl" id="in">
+        🇮🇳
+      </h3>
       {Array.from(INNewsSources.keys()).map((key, index) => (
         <div
           className="w-full mb-4 text-center shadow-2xl lg:w-1/2 xl:w-1/3 card"
           key={index}
         >
           <div className="card-body">
-            <h2 className="text-3xl card-title">
+            <h3 className="text-3xl card-title">
               <a
                 className="link link-primary"
                 href={INNewsSources.get(key)?.url}
@@ -101,7 +119,7 @@ const Sources = ({ title }: Props): JSX.Element => (
                   <b>{INNewsSources.get(key)?.name}</b>
                 </i>
               </a>
-            </h2>
+            </h3>
             <p>
               <i>
                 Estb.&nbsp;<b>{INNewsSources.get(key)?.est}</b>

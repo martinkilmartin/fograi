@@ -1439,6 +1439,19 @@ export const INNewsSources = new Map<string, NewsSource>([
       est: 1822,
       about: 'The oldest continuously published newspaper in India.',
       emos: ['📰', '🇮🇳'],
+      langs: ['en', 'gu'],
+    },
+  ],
+  [
+    'IN_TPNR',
+    {
+      name: 'The Pioneer',
+      url: 'https://www.dailypioneer.com/',
+      est: 1864,
+      about:
+        "Brings today's news in English, breaking news from India and around the World. Sports, Business, Health, Fitness, Bollywood, Entertainment and Opinions.",
+      emos: ['📰', '🇮🇳'],
+      langs: ['en', 'hi'],
     },
   ],
 ])

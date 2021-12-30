@@ -7,7 +7,13 @@ import { Headlines } from '@components/Headlines'
 const HomePage = (): JSX.Element => (
   <Container>
     <Page title={APP_TITLE} heading="🇮🇳">
-      <Hero heading="🇮🇳" />
+      <Hero
+        links={[
+          ['ca', '🇨🇦'],
+          ['in', '🇮🇳'],
+          ['ie', '🇮🇪'],
+        ]}
+      />
       <Headlines country="in" />
     </Page>
   </Container>
