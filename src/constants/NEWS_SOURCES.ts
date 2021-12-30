@@ -1510,4 +1510,16 @@ export const INNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'IN_IXPR',
+    {
+      name: 'The Indian Express',
+      url: 'https://indianexpress.com/',
+      est: 1932,
+      about:
+        'The latest news from India and around the world. Breaking News, current headlines, live news, latest news on elections, business, sports, world, and entertainment.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
 ])
