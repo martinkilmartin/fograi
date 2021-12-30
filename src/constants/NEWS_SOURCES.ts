@@ -22,6 +22,16 @@ export const CANewsSources = new Map<string, NewsSource>([
       emos: ['📰', '🇨🇦'],
     },
   ],
+  [
+    'CA_TRTS',
+    {
+      name: 'Toronto Star',
+      url: 'https://www.thestar.com/',
+      est: 1892,
+      about: 'Publishes ongoing news and information to a global audience.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
 ])
 
 export const IENewsSources = new Map<string, NewsSource>([
