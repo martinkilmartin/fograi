@@ -65,6 +65,17 @@ export const CANewsSources = new Map<string, NewsSource>([
       emos: ['📰', '🇨🇦'],
     },
   ],
+  [
+    'CA_MTGZ',
+    {
+      name: 'Montreal Gazette',
+      url: 'https://montrealgazette.com/',
+      est: 1778,
+      about:
+        'Read latest national and international breaking news, updates, headlines, events & more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
 ])
 
 export const IENewsSources = new Map<string, NewsSource>([
@@ -1529,6 +1540,18 @@ export const INNewsSources = new Map<string, NewsSource>([
       est: 1932,
       about:
         'The latest news from India and around the world. Breaking News, current headlines, live news, latest news on elections, business, sports, world, and entertainment.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IN_DHRL',
+    {
+      name: 'Deccan Herald',
+      url: 'https://www.deccanherald.com/',
+      est: 1948,
+      about:
+        'Latest News Headlines from India & around the World. Sports, Business, Fitness, Entertainment, Opinions.',
       emos: ['📰', '🇮🇳'],
       langs: ['en'],
     },
