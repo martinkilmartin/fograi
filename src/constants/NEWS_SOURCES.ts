@@ -76,6 +76,17 @@ export const CANewsSources = new Map<string, NewsSource>([
       emos: ['📰', '🇨🇦'],
     },
   ],
+  [
+    'CA_VSUN',
+    {
+      name: 'Vancouver Sun',
+      url: 'https://vancouversun.com/',
+      est: 1912,
+      about:
+        'Read latest national and international breaking news, updates, headlines, events & more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
 ])
 
 export const IENewsSources = new Map<string, NewsSource>([
