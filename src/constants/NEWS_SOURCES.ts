@@ -54,6 +54,17 @@ export const CANewsSources = new Map<string, NewsSource>([
       emos: ['📰', '🇨🇦'],
     },
   ],
+  [
+    'CA_JMTL',
+    {
+      name: 'Le Journal de Montréal',
+      url: 'https://www.journaldemontreal.com/',
+      est: 1964,
+      about:
+        'Des nouvelles accessibles et complètes : sports, politique, spectacles, argent et judiciaire. Soyez toujours bien informé avec le Journal de Montréal.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
 ])
 
 export const IENewsSources = new Map<string, NewsSource>([
