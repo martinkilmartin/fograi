@@ -1556,4 +1556,16 @@ export const INNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'IN_TLGP',
+    {
+      name: 'The Telegraph',
+      url: 'https://www.telegraphindia.com/',
+      est: 1982,
+      about:
+        'Latest News on Politics, Business, Sports, Bollywood, Technology, and Science.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
 ])
