@@ -499,6 +499,15 @@ export const IENewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_GLFE',
+    {
+      name: 'Gaelic Life',
+      url: 'https://www.gaeliclife.com/',
+      est: 2007,
+      emos: ['🏐', '🇮🇪'],
+    },
+  ],
+  [
     'IE_GBFM',
     {
       name: 'Galway Bay FM',
