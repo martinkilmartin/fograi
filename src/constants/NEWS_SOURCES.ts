@@ -1616,7 +1616,7 @@ export const INNewsSources = new Map<string, NewsSource>([
   [
     'IN_DNCH',
     {
-      name: 'Daily News & Analysis',
+      name: 'Deccan Chronicle',
       url: 'https://www.deccanchronicle.com/',
       est: 1938,
       about:
