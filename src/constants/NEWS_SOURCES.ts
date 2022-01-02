@@ -109,6 +109,17 @@ export const CANewsSources = new Map<string, NewsSource>([
       emos: ['📰', '🇨🇦'],
     },
   ],
+  [
+    'CA_CLHD',
+    {
+      name: 'Calgary Herald',
+      url: 'https://calgaryherald.com/',
+      est: 1883,
+      about:
+        'Read latest breaking news, updates, and headlines on national and international events & more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
 ])
 
 export const IENewsSources = new Map<string, NewsSource>([
