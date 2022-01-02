@@ -931,6 +931,17 @@ export const IENewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IE_NLTR',
+    {
+      name: 'The News Letter',
+      url: 'https://www.newsletter.co.uk/',
+      est: 1737,
+      about:
+        "The world's oldest English-language daily newspaper still in publication. A Belfast perspective on news, sport, what's on, lifestyle and more,.",
+      emos: ['💻', '🇬🇧'],
+    },
+  ],
+  [
     'IE_NTLK',
     {
       name: 'newstalk',
