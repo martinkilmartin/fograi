@@ -87,6 +87,28 @@ export const CANewsSources = new Map<string, NewsSource>([
       emos: ['📰', '🇨🇦'],
     },
   ],
+  [
+    'CA_TPRV',
+    {
+      name: 'The Province',
+      url: 'https://theprovince.com/',
+      est: 1898,
+      about:
+        'Latest breaking news, updates, and headlines on national and international events & more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_NPST',
+    {
+      name: 'National Post',
+      url: 'https://nationalpost.com/',
+      est: 1998,
+      about:
+        'Latest breaking news, updates, and headlines offering information on national and international events & more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
 ])
 
 export const IENewsSources = new Map<string, NewsSource>([
@@ -1575,6 +1597,30 @@ export const INNewsSources = new Map<string, NewsSource>([
       est: 1982,
       about:
         'Latest News on Politics, Business, Sports, Bollywood, Technology, and Science.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IN_DNA',
+    {
+      name: 'Daily News & Analysis',
+      url: 'https://www.dnaindia.com/',
+      est: 2005,
+      about:
+        'Covers all latest and breaking news on Politics, Business, Sports, Bollywood, technology & health from India & the world.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IN_DNCH',
+    {
+      name: 'Daily News & Analysis',
+      url: 'https://www.deccanchronicle.com/',
+      est: 1938,
+      about:
+        'Brings the latest news, views, analysis and images from India and the world.',
       emos: ['📰', '🇮🇳'],
       langs: ['en'],
     },
