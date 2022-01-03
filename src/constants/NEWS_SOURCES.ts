@@ -1823,4 +1823,16 @@ export const INNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'IN_BIZS',
+    {
+      name: 'Business Standard',
+      url: 'https://www.business-standard.com',
+      est: 1975,
+      about:
+        'Latest stock share market news, financial news, economy news, company news, politics news, India news, breaking news, Indian economy news.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
 ])
