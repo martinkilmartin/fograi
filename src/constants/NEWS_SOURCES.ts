@@ -1659,11 +1659,23 @@ export const INNewsSources = new Map<string, NewsSource>([
   [
     'IN_NVHT',
     {
-      name: 'Deccan Chronicle',
+      name: 'The Navhind Times',
       url: 'https://www.navhindtimes.in/',
       est: 1963,
       about:
-        'Reporting, commentaries and features on political and economic affairs. Covers both North Goa and South Goa comprehensively. Information and articles addressed to various sections of society, including discerning readers (PANORAMA), cultural enthusiasts (BUZZ), businessmen and consumers (B & C) Women (ZEST), youth and children (KURIOCITY). ',
+        'Reporting, commentaries and features on political and economic affairs. Covers both North Goa and South Goa comprehensively. Information and articles addressed to various sections of society, including discerning readers (PANORAMA), cultural enthusiasts (BUZZ), businessmen and consumers (B & C) Women (ZEST), youth and children (KURIOCITY).',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IN_AAGE',
+    {
+      name: 'The Asian Age',
+      url: 'https://www.asianage.com/',
+      est: 1994,
+      about:
+        'The only Indian newspaper with an international edition (London). Shows what is happening, and the reasons behind it.',
       emos: ['📰', '🇮🇳'],
       langs: ['en'],
     },
