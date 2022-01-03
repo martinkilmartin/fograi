@@ -1907,4 +1907,28 @@ export const INNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'IN_GSMC',
+    {
+      name: 'ગુજરાત સમાચાર',
+      url: 'https://www.gujaratsamachar.com/',
+      est: 1932,
+      about:
+        'News from Ahmedabad, Baroda, Bhavnagar, Bhuj, Gandhinagar, Kheda-Anand, North Gujarat, Rajkot & Surat. Aims to cover each and every segment of the society not with standing their cast, religion, economic status and give due emphasis to all the adverse viewpoints.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['gu'],
+    },
+  ],
+  [
+    'IN_TRBI',
+    {
+      name: 'The Tribune',
+      url: 'https://www.tribuneindia.com/',
+      est: 1881,
+      about:
+        'Publishes news and views without bias or prejudice. Restraint and moderation, rather than agitational language and partisanship, are hallmarks of the paper.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
 ])
