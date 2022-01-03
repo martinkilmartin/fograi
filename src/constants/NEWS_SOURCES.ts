@@ -120,6 +120,149 @@ export const CANewsSources = new Map<string, NewsSource>([
       emos: ['📰', '🇨🇦'],
     },
   ],
+  [
+    'CA_OTCZ',
+    {
+      name: 'Ottawa Citizen',
+      url: 'https://ottawacitizen.com/',
+      est: 1845,
+      about:
+        'Read latest breaking news, updates, and headlines on national and international events & more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_EDJL',
+    {
+      name: 'Edmonton Journal',
+      url: 'https://edmontonjournal.com/',
+      est: 1903,
+      about:
+        'Read latest breaking news, updates, and headlines on national and international events & more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_TSUN',
+    {
+      name: 'Toronto Sun',
+      url: 'https://torontosun.com/',
+      est: 1971,
+      about:
+        'Read latest breaking news, updates, and headlines on national and international events & more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_LSOL',
+    {
+      name: 'Le Soleil',
+      url: 'https://www.lesoleil.com/',
+      est: 1896,
+      about:
+        "Actualités, Chroniques, Affaires, Arts, Le Mag, Sports, Hockey junior, Opinions, Protégez-Vous, Nos recommandations, Jeunesse, Maison, Auto, Balados, ULaval Nouvelles, La Vitrine, ZONE, Je m'abonne, Événements Le Soleil.",
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_SPEC',
+    {
+      name: 'The Hamilton Spectator',
+      url: 'https://www.thespec.com/',
+      est: 1846,
+      about:
+        'Daily breaking news, local stories, life, opinion, voices from the community, events and more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_TCOL',
+    {
+      name: 'The Times Colonist',
+      url: 'https://www.timescolonist.com/',
+      est: 1858,
+      about:
+        "Chronicled the history of Victoria and Vancouver Island from the gold rush days of the 1850s to Victoria's present status. Lively blend of local news and informed commentary.",
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_LFRP',
+    {
+      name: 'The London Free Press',
+      url: 'https://lfpress.com/',
+      est: 1849,
+      about:
+        'Read latest breaking news, updates, and headlines on national and international events & more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_WNST',
+    {
+      name: 'Windsor Star',
+      url: 'https://windsorstar.com/',
+      est: 1888,
+      about:
+        'Read latest breaking news, updates, and headlines on national and international events & more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_EDSN',
+    {
+      name: 'Edmonton Sun',
+      url: 'https://edmontonsun.com/',
+      est: 1978,
+      about:
+        'Read latest breaking news, updates, and headlines on national and international events & more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_TREC',
+    {
+      name: 'Waterloo Region Record',
+      url: 'https://www.therecord.com',
+      est: 1878,
+      about:
+        'Daily breaking news, local stories, life, opinion, voices from the community, events and more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_SPHX',
+    {
+      name: 'The StarPhoenix',
+      url: 'https://thestarphoenix.com/',
+      est: 1902,
+      about:
+        'Read latest breaking news, updates, and headlines on national and international events & more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_CSUN',
+    {
+      name: 'Calgary Sun',
+      url: 'https://calgarysun.com/',
+      est: 1980,
+      about:
+        'Read latest breaking news, updates, and headlines on national and international events & more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_RLPT',
+    {
+      name: 'Regina Leader-Post',
+      url: 'https://leaderpost.com/',
+      est: 1883,
+      about:
+        'Read latest breaking news, updates, and headlines on national and international events & more.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
 ])
 
 export const IENewsSources = new Map<string, NewsSource>([
