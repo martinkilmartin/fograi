@@ -1835,4 +1835,76 @@ export const INNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'IN_HBIZ',
+    {
+      name: 'हिंदी बिजनेस स्टैंडर्ड',
+      url: 'https://hindi.business-standard.com/',
+      est: 1975,
+      about:
+        'पढ़ें आज की ताजा ख़बरें, खेल सुर्खियां, व्यापार, बाजार विश्लेषण और राजनीति के समाचार.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['hi'],
+    },
+  ],
+  [
+    'IN_ECOT',
+    {
+      name: 'The Economic Times',
+      url: 'https://economictimes.indiatimes.com/',
+      est: 1961,
+      about:
+        'Latest Business news and updates on Finance, share market, IPO, economy.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IN_TIMS',
+    {
+      name: 'India Times',
+      url: 'https://www.indiatimes.com/',
+      est: 1998,
+      about:
+        'Brings news, articles, stories and videos on entertainment, latest lifestyle, culture and new technologies emerging worldwide.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IN_FEXP',
+    {
+      name: 'Financial Express',
+      url: 'https://www.financialexpress.com/',
+      est: 1961,
+      about:
+        'Latest business news and finance news, share market updates, live stock market news, IPO update, banking and insurance sector updates.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IN_NIEX',
+    {
+      name: 'The New Indian Express',
+      url: 'https://www.newindianexpress.com/',
+      est: 1932,
+      about:
+        'Incorporates national and international themes and sections on developmental issues, society, politics, literature, arts, cinema, travel, lifestyle, sports, business, finance, new-age living, self-development and entertainment.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IN_MINT',
+    {
+      name: 'Mint',
+      url: 'https://www.livemint.com/',
+      est: 2007,
+      about:
+        'Latest Business News headlines, LIVE share market news and updates, financial, economic and banking news from India & across the World.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
 ])
