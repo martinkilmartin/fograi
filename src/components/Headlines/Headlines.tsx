@@ -116,7 +116,7 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
                   <b>⏱ {diffDisplay(DATE)}</b>
                 </p>
                 <Badge text={headline.section} color="primary" size="lg" />
-                <h2 className="mt-3 text-3xl text-center card-title">
+                <h2 className="mt-3 text-3xl text-center card-title justify-center">
                   {headline.headline}
                 </h2>
                 <p className="mb-3 text-2xl text-center">
