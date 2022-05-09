@@ -21,6 +21,7 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
   const [total, setTotal] = useState<number>(0)
   const [headlines, setHeadlines] = useState<Headline[]>([])
   const [range, setRange] = useState<number>(0)
+  const [newer, setNewer] = useState<number>(0)
 
   useEffect(() => {
     fetchHeadlineCount()
@@ -38,7 +39,12 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
       .range(range, range + (MAX_QUERY - 1))
     if (error) console.error(error)
     if (newHeadlines) {
-      setHeadlines([...headlines, ...newHeadlines])
+      const mergedHeadlines = [...headlines, ...newHeadlines]
+      setHeadlines([
+        ...new Map(
+          mergedHeadlines.map((item: Headline) => [item['id'], item])
+        ).values(),
+      ])
       setRange(range + MAX_QUERY)
     }
     setFetching(false)
@@ -47,7 +53,12 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
   const fetchMoreHeadlines = async () => {
     const CURRENT_TOTAL = total
     await fetchHeadlineCount()
-    if (total > CURRENT_TOTAL) setRange(range + (total - CURRENT_TOTAL))
+    if (total > CURRENT_TOTAL) {
+      setRange(range + (total - CURRENT_TOTAL))
+      setNewer(total - CURRENT_TOTAL)
+    } else {
+      setNewer(0)
+    }
     fetchHeadlines()
   }
 
@@ -168,9 +179,12 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
           )}
           <p>
             <b>
-              <i>{`Loaded ${numberFormat(headlines.length)} of ${numberFormat(
-                total
-              )}. ${numberFormat(total - headlines.length)} remaining.`}</i>
+              <i>
+                {`Loaded ${numberFormat(headlines.length)} of ${numberFormat(
+                  total
+                )}. ${numberFormat(total - headlines.length)} remaining.`}{' '}
+                {newer ? newer + ' newer headline(s).' : ''}
+              </i>
             </b>
           </p>
         </div>
