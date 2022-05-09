@@ -53,12 +53,7 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
   const fetchMoreHeadlines = async () => {
     const CURRENT_TOTAL = total
     await fetchHeadlineCount()
-    if (total > CURRENT_TOTAL) {
-      setRange(range + (total - CURRENT_TOTAL))
-      setNewer(total - CURRENT_TOTAL)
-    } else {
-      setNewer(0)
-    }
+    if (total > CURRENT_TOTAL) setRange(range + (total - CURRENT_TOTAL))
     fetchHeadlines()
   }
 
@@ -67,7 +62,10 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
       .from(`${country}-headlines`)
       .select('*', { count: 'exact' })
     if (error) console.error(error)
-    if (count) setTotal(count)
+    if (count) {
+      if (total > 0) setNewer(count - total)
+      setTotal(count)
+    }
   }
 
   const backToTop = () => {
