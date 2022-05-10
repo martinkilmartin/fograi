@@ -63,7 +63,7 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
       .select('*', { count: 'exact' })
     if (error) console.error(error)
     if (count) {
-      if (total > 0) setNewer(count - total)
+      if (total > 0) setNewer(newer + (count - total))
       setTotal(count)
     }
   }
