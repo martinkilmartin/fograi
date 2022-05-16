@@ -36,9 +36,9 @@ const HeadlineCard = ({
   }
   const twShare =
     'https://twitter.com/intent/tweet?text=' +
-    headline.headline +
+    headline.emos + ' ' + headline.headline +
     '&url=' +
-    headline.link
+    headline.link + '&hashtags=' + headline.section
   return (
     <div
       key={headline.id}
