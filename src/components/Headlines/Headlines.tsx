@@ -1,15 +1,8 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '@services/supabase'
-import diffDisplay from '@lib/time-format'
 import { numberFormat } from '@lib/number-format'
-import {
-  CANewsSources,
-  IENewsSources,
-  INNewsSources,
-} from '@constants/NEWS_SOURCES'
 import { Headline } from 'src/types'
 import { HeadlineCard } from '@components/Card'
-import { Badge } from '@components/Badge'
 
 const MAX_QUERY = 24
 
