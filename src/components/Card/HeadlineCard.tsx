@@ -36,21 +36,25 @@ const HeadlineCard = ({
   }
   const twShare =
     'https://twitter.com/intent/tweet?text=' +
-    headline.emos + ' ' + headline.headline +
+    headline.emos +
+    ' ' +
+    headline.headline +
     '&url=' +
-    headline.link + '&hashtags=' + headline.section
+    headline.link +
+    '&hashtags=' +
+    headline.section
   return (
     <div
       key={headline.id}
       className="my-2 bg-base-200 card lg:card-side bordered"
     >
       <div className="card-body">
-        2
-        <p className="absolute top-0 left-0 mt-2 ml-2 text-3xl">
+        <p className="absolute top-0 left-0 mt-2 ml-2">
           <a
             className="btn btn-lg btn-circle glass"
             href={twShare}
-            target="_blank" rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             <TwitterLogo />
           </a>
@@ -58,8 +62,11 @@ const HeadlineCard = ({
         <p className="absolute top-0 right-0 mt-2 mr-2">
           <b>⏱ {diffDisplay(DATE)}</b>
         </p>
-        <Badge text={headline.emos} color="primary" size="lg" />
-        <Badge text={headline.section} color="primary" size="lg" />
+        <Badge
+          text={headline.emos + ' ' + headline.section}
+          color="primary"
+          size="lg"
+        />
         <h2 className="justify-center mt-3 text-3xl text-center card-title">
           {headline.headline}
         </h2>

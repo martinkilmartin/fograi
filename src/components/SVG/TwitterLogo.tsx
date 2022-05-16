@@ -1,8 +1,8 @@
 import { SVG } from '../../types'
 
 const TwitterLogo = ({
-  width = 48,
-  height = 48,
+  width = 36,
+  height = 36,
   fillColors = ['#03A9F4'],
 }: SVG): JSX.Element => {
   return (
