@@ -6,7 +6,7 @@ import {
 } from '@constants/NEWS_SOURCES'
 import { Headline } from 'src/types'
 import { Badge } from '@components/Badge'
-import { TwitterLogo } from '@components/SVG'
+import { TwitterLogo, RedditLogo } from '@components/SVG'
 
 type Props = {
   country?: 'ca' | 'ie' | 'in'
@@ -34,6 +34,13 @@ const HeadlineCard = ({
     sourceURL = INNewsSources.get(headline.source)?.url
     sourceName = INNewsSources.get(headline.source)?.name
   }
+  const redditShare =
+    'https://www.reddit.com/submit?url=' +
+    headline.link +
+    '&title=' +
+    headline.emos +
+    ' ' +
+    headline.headline
   const twShare =
     'https://twitter.com/intent/tweet?text=' +
     headline.emos +
@@ -51,12 +58,20 @@ const HeadlineCard = ({
       <div className="card-body">
         <p className="absolute top-0 left-0 mt-2 ml-2">
           <a
-            className="btn btn-lg btn-circle glass"
+            className="btn btn-circle glass"
             href={twShare}
             target="_blank"
             rel="noreferrer"
           >
             <TwitterLogo />
+          </a>{' '}
+          <a
+            className="btn btn-circle glass"
+            href={redditShare}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <RedditLogo />
           </a>
         </p>
         <p className="absolute top-0 right-0 mt-2 mr-2">
