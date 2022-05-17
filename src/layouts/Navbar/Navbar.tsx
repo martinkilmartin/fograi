@@ -1,4 +1,5 @@
 import { ThemeToggle } from '@components/ThemeToggle'
+import type { StaticImageData } from 'next/image'
 
 type Props = {
   logo?: StaticImageData
