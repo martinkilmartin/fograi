@@ -63,6 +63,7 @@ const HeadlineCard = ({
             target="_blank"
             rel="noreferrer"
           >
+            <span className="sr-only">Post on Twitter</span>
             <TwitterLogo />
           </a>{' '}
           <a
@@ -71,6 +72,7 @@ const HeadlineCard = ({
             target="_blank"
             rel="noreferrer"
           >
+            <span className="sr-only">Post on Reddit</span>
             <RedditLogo />
           </a>
         </p>
