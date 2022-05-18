@@ -1,7 +1,6 @@
 module.exports = {
   mode: 'jit',
-  purge: ['./src/{layouts,pages,components}/**/*.{j,t}s*'],
-  darkMode: 'media',
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       screens: {
