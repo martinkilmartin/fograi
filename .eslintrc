@@ -44,7 +44,10 @@
       {
         "allow": ["warn", "error"]
       }
-    ]
+    ],
+    // https://github.com/vercel/next.js/pull/32139
+    // False positive fix for ip-limit lib
+    "@next/next/no-server-import-in-page": "off"
   },
   "settings": {
     "react": {
