@@ -50,6 +50,9 @@ const HeadlineCard = ({
     headline.link +
     '&hashtags=' +
     headline.section
+      .split(' ')
+      .map((tag) => tag[0].toUpperCase() + tag.substring(1).toLowerCase())
+      .join(',')
   return (
     <div
       key={headline.id}
