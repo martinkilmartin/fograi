@@ -317,13 +317,24 @@ export const CANewsSources = new Map<string, NewsSource>([
     },
   ],
   [
-    'CA_KRTM',
+    'CA_BJST',
     {
-      name: 'The Korean Times Daily',
-      url: 'https://www.koreatimes.net/',
-      est: 1971,
+      name: 'Bejsment',
+      url: 'https://bejsment.com/',
+      est: 2011,
       about:
-        'A 6-day Korean print newspaper, a Weekly magazine, a Well-being section, and both Korean and English language websites.',
+        'News website of Polish newspaper Wiadomości published in Ontario.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_RXWN',
+    {
+      name: 'The Russian Express Weekly Newspaper',
+      url: 'https://russianexpress.net',
+      est: 2002,
+      about:
+        'Toronto community weekly newspaper.',
       emos: ['📰', '🇨🇦'],
     },
   ],
