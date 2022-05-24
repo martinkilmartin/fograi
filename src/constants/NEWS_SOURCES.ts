@@ -280,8 +280,39 @@ export const CANewsSources = new Map<string, NewsSource>([
       name: 'CanIndia News',
       url: 'https://www.canindia.com/',
       est: 1999,
+      about: 'Representing the viewpoint of South Asians in Canada.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_TCJN',
+    {
+      name: 'The Canadian Jewish News',
+      url: 'https://thecjn.ca/',
+      est: 1960,
       about:
-        'Representing the viewpoint of South Asians in Canada.',
+        'Producing content that matters to the diverse community of Jews in Canada, through articles, podcasts and events.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_CORR',
+    {
+      name: 'Corriere Canadese',
+      url: 'https://www.corriere.ca/',
+      est: 1954,
+      about: 'Il quotidiano italiano in Canada.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_HRZN',
+    {
+      name: 'Horizon Weekly',
+      url: 'https://horizonweekly.ca',
+      est: 1979,
+      about:
+        "The official publication of Canada's Armenian Revolutionary Federation (ARF) Central Committee.",
       emos: ['📰', '🇨🇦'],
     },
   ],
