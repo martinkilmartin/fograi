@@ -83,6 +83,7 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
       {headlines &&
         headlines.map((headline) => (
           <HeadlineCard
+            country={country}
             key={headline.id}
             headline={headline}
             backToTop={backToTop}
