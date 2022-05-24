@@ -274,6 +274,17 @@ export const CANewsSources = new Map<string, NewsSource>([
       emos: ['📰', '🇨🇦'],
     },
   ],
+  [
+    'CA_NIND',
+    {
+      name: 'CanIndia News',
+      url: 'https://www.canindia.com/',
+      est: 1999,
+      about:
+        'Representing the viewpoint of South Asians in Canada.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
 ])
 
 export const IENewsSources = new Map<string, NewsSource>([
