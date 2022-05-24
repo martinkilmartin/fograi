@@ -316,6 +316,17 @@ export const CANewsSources = new Map<string, NewsSource>([
       emos: ['📰', '🇨🇦'],
     },
   ],
+  [
+    'CA_KRTM',
+    {
+      name: 'The Korean Times Daily',
+      url: 'https://www.koreatimes.net/',
+      est: 1971,
+      about:
+        'A 6-day Korean print newspaper, a Weekly magazine, a Well-being section, and both Korean and English language websites.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
 ])
 
 export const IENewsSources = new Map<string, NewsSource>([
