@@ -263,6 +263,17 @@ export const CANewsSources = new Map<string, NewsSource>([
       emos: ['📰', '🇨🇦'],
     },
   ],
+  [
+    'CA_LCDS',
+    {
+      name: 'Le Courrier du Sud',
+      url: 'https://www.lecourrierdusud.ca/',
+      est: 1947,
+      about:
+        'Le Courrier du Sud, propriété de Gravité Media, est distribué gratuitement chaque semaine.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
 ])
 
 export const IENewsSources = new Map<string, NewsSource>([
