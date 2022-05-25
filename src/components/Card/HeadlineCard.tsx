@@ -3,6 +3,7 @@ import {
   CANewsSources,
   IENewsSources,
   INNewsSources,
+  USNewsSources,
 } from '@constants/NEWS_SOURCES'
 import { Headline } from 'src/types'
 import { Badge } from '@components/Badge'
@@ -33,6 +34,9 @@ const HeadlineCard = ({
   } else if (country === 'in') {
     sourceURL = INNewsSources.get(headline.source)?.url
     sourceName = INNewsSources.get(headline.source)?.name
+  } else if (country === 'us') {
+    sourceURL = USNewsSources.get(headline.source)?.url
+    sourceName = USNewsSources.get(headline.source)?.name
   }
   const redditShare =
     'https://www.reddit.com/submit?url=' +
