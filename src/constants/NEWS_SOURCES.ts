@@ -349,6 +349,28 @@ export const CANewsSources = new Map<string, NewsSource>([
       emos: ['📰', '🇨🇦'],
     },
   ],
+  [
+    'CA_SLMT',
+    {
+      name: 'Salam Toronto',
+      url: 'https://salamtoronto.ca/',
+      est: 2000,
+      about:
+        'The first Persian-English bilingual weekly publication in Canada.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_BNGT',
+    {
+      name: 'Bengali Times',
+      url: 'https://www.thebengalitimes.com/',
+      est: 2008,
+      about:
+        'The first and most popular Bengali online newspaper in Canada.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
 ])
 
 export const IENewsSources = new Map<string, NewsSource>([
