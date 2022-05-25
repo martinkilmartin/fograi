@@ -15,7 +15,7 @@ const HomePage = (): JSX.Element => (
           ['us', '🇺🇸'],
         ]}
       />
-      <Headlines country="ca" />
+      <Headlines country="us" />
     </Page>
   </Container>
 )
