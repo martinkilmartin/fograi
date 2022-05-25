@@ -317,6 +317,17 @@ export const CANewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'CA_KRTM',
+    {
+      name: 'The Korea Times Daily',
+      url: 'https://www.koreatimes.net/',
+      est: 1971,
+      about:
+        'The first and longest-running Korean language daily newspaper in Canada.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
     'CA_BJST',
     {
       name: 'Bejsment',
