@@ -344,8 +344,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       name: 'The Russian Express Weekly Newspaper',
       url: 'https://russianexpress.net',
       est: 2002,
-      about:
-        'Toronto community weekly newspaper.',
+      about: 'Toronto community weekly newspaper.',
       emos: ['📰', '🇨🇦'],
     },
   ],
@@ -366,8 +365,50 @@ export const CANewsSources = new Map<string, NewsSource>([
       name: 'Bengali Times',
       url: 'https://www.thebengalitimes.com/',
       est: 2008,
+      about: 'The first and most popular Bengali online newspaper in Canada.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_TCST',
+    {
+      name: 'The Coast',
+      url: 'https://www.thecoast.ca/',
+      est: 1993,
+      about: 'The Coast is essential media for Kjipuktuk/Halifax.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_STRT',
+    {
+      name: 'The Georgia Straight',
+      url: 'https://www.straight.com/',
+      est: 1967,
       about:
-        'The first and most popular Bengali online newspaper in Canada.',
+        'No other city publication knows more about Vancouver than the Georgia Straight.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_STRT',
+    {
+      name: 'The Grapevine',
+      url: 'https://grapevinepublishing.ca/',
+      est: 2004,
+      about:
+        'The Grapevine is a community-driven arts and culture publisher serving the Annapolis Valley.',
+      emos: ['📰', '🇨🇦'],
+    },
+  ],
+  [
+    'CA_NWMG',
+    {
+      name: 'NOW Magazine',
+      url: 'https://nowtoronto.com/',
+      est: 1981,
+      about:
+        'Toronto street magazine for alternative news, entertainment, events, and food.',
       emos: ['📰', '🇨🇦'],
     },
   ],
