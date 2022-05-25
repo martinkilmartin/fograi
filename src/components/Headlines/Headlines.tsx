@@ -7,7 +7,7 @@ import { HeadlineCard } from '@components/Card'
 const MAX_QUERY = 24
 
 type Props = {
-  country?: 'ca' | 'ie' | 'in'
+  country?: 'ca' | 'ie' | 'in' | 'us'
 }
 
 const Headlines = ({ country = 'ie' }: Props): JSX.Element => {

@@ -12,6 +12,7 @@ const HomePage = (): JSX.Element => (
           ['ie', '🇮🇪'],
           ['ca', '🇨🇦'],
           ['in', '🇮🇳'],
+          ['us', '🇺🇸'],
         ]}
       />
       <Headlines country="ca" />

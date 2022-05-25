@@ -2,6 +2,7 @@ import {
   CANewsSources,
   IENewsSources,
   INNewsSources,
+  USNewsSources,
 } from '@constants/NEWS_SOURCES'
 
 type Props = {
@@ -11,6 +12,7 @@ type Props = {
 const CA_SOURCES_SIZE = Array.from(CANewsSources).length
 const IE_SOURCES_SIZE = Array.from(IENewsSources).length
 const IN_SOURCES_SIZE = Array.from(INNewsSources).length
+const US_SOURCES_SIZE = Array.from(USNewsSources).length
 
 const About = ({ title }: Props): JSX.Element => (
   <div className="px-4 text-center">
@@ -29,9 +31,9 @@ const About = ({ title }: Props): JSX.Element => (
       <h3 className="mt-3 text-2xl">🇨🇦 🕵 🦸‍♀️ 🇮🇪 🦹‍♀️ 🧟‍♀️ 🇮🇳</h3>
       <p className="mt-1">
         This website continually lists the main headline of{' '}
-        <b>{CA_SOURCES_SIZE}</b> Canadian,{' '}
-        <b>{IE_SOURCES_SIZE}</b> Irish and <b>{IN_SOURCES_SIZE}</b> Indian
-        online news sources.
+        <b>{CA_SOURCES_SIZE}</b> Canadian, <b>{IE_SOURCES_SIZE}</b> Irish,{' '}
+        <b>{IN_SOURCES_SIZE}</b> Indian and <b>{US_SOURCES_SIZE}</b>
+        USA online news sources.
       </p>
       <h3 className="mt-3 text-2xl">📝 📧 📨 📩 📤 📥</h3>
       <p className="mt-1">

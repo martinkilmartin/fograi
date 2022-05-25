@@ -9,7 +9,7 @@ import { Badge } from '@components/Badge'
 import { TwitterLogo, RedditLogo } from '@components/SVG'
 
 type Props = {
-  country?: 'ca' | 'ie' | 'in'
+  country?: 'ca' | 'ie' | 'in' | 'us' 
   headline: Headline
   backToTop: () => void
   clickToCopy: (link: string) => void
@@ -51,7 +51,9 @@ const HeadlineCard = ({
     '&hashtags=' +
     headline.section
       .split(' ')
-      .map((tag) => tag[0].toUpperCase() + tag.substring(1).toLowerCase())
+      .map((tag) =>
+        tag[0] ? tag[0].toUpperCase() + tag.substring(1).toLowerCase() : ''
+      )
       .join(',')
   return (
     <div

@@ -2081,3 +2081,147 @@ export const INNewsSources = new Map<string, NewsSource>([
     },
   ],
 ])
+
+export const USNewsSources = new Map<string, NewsSource>([
+  [
+    'US_ATDY',
+    {
+      name: 'USA Today',
+      url: 'https://usatoday.com/',
+      est: 1982,
+      about:
+        'Provides up-to-date coverage of US and international news, weather, entertainment, finance, and more.',
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_WSJ',
+    {
+      name: 'The Wall Street Journal',
+      url: 'https://www.wsj.com/',
+      est: 1889,
+      about:
+        'Chronicling the rise of industries in America and around the world',
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_NYT',
+    {
+      name: 'The New York Times',
+      url: 'https://www.nytimes.com/',
+      est: 1851,
+      about:
+        'Live news, investigations, opinion, photos and video by the journalists of The New York Times from more than 150 countries around the world.',
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_LAT',
+    {
+      name: 'Los Angeles Times',
+      url: 'https://www.latimes.com/',
+      est: 1881,
+      about:
+        'The L.A. Times is a leading source of breaking news, entertainment, sports, politics, and more for Southern California and the world.',
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_NYP',
+    {
+      name: 'New York Post',
+      url: 'https://nypost.com/',
+      est: 1801,
+      about:
+        'Breaking news, photos, and videos about New York, sports, business, entertainment, opinion, real estate, culture, fashion, and more.',
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_MRCY',
+    {
+      name: 'The Mercury News',
+      url: 'https://www.mercurynews.com/',
+      est: 1851,
+      about:
+        'Source of breaking news, local news, sports, business, entertainment, lifestyle and opinion for Silicon Valley, San Francisco Bay Area and beyond.',
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_CHGT',
+    {
+      name: 'Chicago Tribune',
+      url: 'https://www.chicagotribune.com/',
+      est: 1847,
+      about:
+        'Source of news and information in the Chicago area and the largest news organization in the Midwest.',
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_HSTC',
+    {
+      name: 'Houston Chronicle',
+      url: 'https://www.houstonchronicle.com/',
+      est: 1901,
+      about: 'Latest news on Houston, Texas, the United States and the world.',
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_PHIQ',
+    {
+      name: 'The Philadelphia Inquirer',
+      url: 'https://www.houstonchronicle.com/',
+      est: 1829,
+      about: 'Front-row seat to the Greater Philadelphia region.',
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_NWDY',
+    {
+      name: 'Newsday',
+      url: 'https://www.newsday.com/',
+      est: 1940,
+      about:
+        'Breaking News, data & opinions in business, sports, entertainment, travel, lifestyle, plus much more.',
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_DNVP',
+    {
+      name: 'The Denver Post',
+      url: 'https://www.denverpost.com/',
+      est: 1892,
+      about:
+        'Latest Denver news, top Colorado news and local breaking news, including sports, weather, traffic, business, politics, photos and video.',
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_STRT',
+    {
+      name: 'Star Tribune',
+      url: 'https://www.startribune.com/',
+      est: 1867,
+      about: 'News, photos and videos from the Twin Cities and beyond.',
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+])
