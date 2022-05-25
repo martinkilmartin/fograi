@@ -32,8 +32,8 @@ const About = ({ title }: Props): JSX.Element => (
       <p className="mt-1">
         This website continually lists the main headline of{' '}
         <b>{CA_SOURCES_SIZE}</b> Canadian, <b>{IE_SOURCES_SIZE}</b> Irish,{' '}
-        <b>{IN_SOURCES_SIZE}</b> Indian and <b>{US_SOURCES_SIZE}</b>
-        USA online news sources.
+        <b>{IN_SOURCES_SIZE}</b> Indian and <b>{US_SOURCES_SIZE}</b> USA online
+        news sources.
       </p>
       <h3 className="mt-3 text-2xl">📝 📧 📨 📩 📤 📥</h3>
       <p className="mt-1">
