@@ -6,11 +6,10 @@ import {
   USNewsSources,
 } from '@constants/NEWS_SOURCES'
 import { Headline } from 'src/types'
-import { Badge } from '@components/Badge'
 import { TwitterLogo, RedditLogo } from '@components/SVG'
 
 type Props = {
-  country?: 'ca' | 'ie' | 'in' | 'us' 
+  country?: 'ca' | 'ie' | 'in' | 'us'
   headline: Headline
   backToTop: () => void
   clickToCopy: (link: string) => void
@@ -66,73 +65,41 @@ const HeadlineCard = ({
     >
       <div className="card-body">
         <p className="absolute top-0 left-0 mt-2 ml-2">
-          <a
-            className="btn btn-circle glass"
-            href={twShare}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="sr-only">Post on Twitter</span>
-            <TwitterLogo />
-          </a>{' '}
-          <a
-            className="btn btn-circle glass"
-            href={redditShare}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="sr-only">Post on Reddit</span>
-            <RedditLogo />
-          </a>
+          <b>{headline.section}</b>
         </p>
         <p className="absolute top-0 right-0 mt-2 mr-2">
           <b>⏱ {diffDisplay(DATE)}</b>
         </p>
-        <Badge
-          text={headline.emos + ' ' + headline.section}
-          color="primary"
-          size="lg"
-        />
-        <h2 className="justify-center mt-3 text-3xl text-center card-title">
-          {headline.headline}
-        </h2>
-        <p className="mb-3 text-2xl text-center">
+        <p className="text-2xl text-center">
           <a href={sourceURL} target="_blank" rel="noreferrer">
             <b>
               <i>{sourceName}</i>
             </b>
           </a>
         </p>
-        <div className="justify-center card-actions ">
-          <button
-            className="btn btn-primary"
-            onClick={() => {
-              window.location.href = headline.link
-            }}
+        <h2 className="justify-center text-3xl text-center card-title">
+          <a
+            className="link link-primary"
+            href={headline.link}
+            target="_blank"
+            rel="noreferrer"
           >
-            Read in this tab
-          </button>
-          <button
-            className="btn btn-secondary"
-            onClick={() => {
-              window.open(headline.link, '_blank')
-            }}
-          >
-            Read in new tab
-          </button>
+            {headline.headline}&nbsp;&#xe164;
+          </a>
+        </h2>
+
+        <div className="grid grid-cols-4 gap-4">
+          <b onClick={() => clickToCopy(headline.link)}>Copy link 🔗</b>
+          <a className="btn  btn-secondary gap-2" href={twShare} target="_blank" rel="noreferrer">
+            <TwitterLogo />
+            &nbsp;Share on Twitter
+          </a>
+          <a className="btn  btn-secondary gap-2" href={redditShare} target="_blank" rel="noreferrer">
+            <RedditLogo />
+            &nbsp;Share on Reddit
+          </a>
+          <b onClick={() => backToTop()}>Back to top ⬆</b>
         </div>
-        <p
-          className="absolute bottom-0 left-0 my-2 ml-2"
-          onClick={() => clickToCopy(headline.link)}
-        >
-          <b>Copy link 🔗</b>
-        </p>
-        <p
-          className="absolute bottom-0 right-0 my-2 mr-2"
-          onClick={() => backToTop()}
-        >
-          <b>Back to top ⬆</b>
-        </p>
       </div>
     </div>
   )
