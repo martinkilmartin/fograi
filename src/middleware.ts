@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-
-import { HTTP_451, HTTP_418 } from '@constants/CONTENT'
-import { ALLOWED_COUNTRY, BLOCKED_COUNTRY } from '@constants/GEO_LOCK'
+import { ALLOWED_COUNTRY } from '@constants/GEO_LOCK'
 import { ipRateLimit } from '@lib/ip-rate-limit'
 
 export async function middleware(req: NextRequest): Promise<Response> {
@@ -12,18 +10,9 @@ export async function middleware(req: NextRequest): Promise<Response> {
     const res = await ipRateLimit(req)
     if (res.status !== 200) return res
     return NextResponse.next()
-  } else if (BLOCKED_COUNTRY.includes(country)) {
-    return new Response(
-      JSON.stringify({
-        error: HTTP_451,
-      }),
-      {
-        status: 451,
-      }
-    )
   } else {
-    return new Response(JSON.stringify({ error: HTTP_418 }), {
-      status: 418,
-    })
+    req.nextUrl.searchParams.set('from', req.nextUrl.pathname)
+    req.nextUrl.pathname = '/'
+    return NextResponse.redirect(req.nextUrl)
   }
 }
