@@ -1,16 +1,33 @@
 import type { AppProps } from 'next/app'
-import { useEffect } from 'react'
+import { createTheme, NextUIProvider } from '@nextui-org/react'
+import { ThemeProvider } from 'next-themes'
 
-const ThemeChange = require('theme-change')
-const { themeChange } = ThemeChange
+const lightTheme = createTheme({
+  type: 'light',
+  theme: {},
+})
 
-import 'tailwindcss/tailwind.css'
+const darkTheme = createTheme({
+  type: 'dark',
+  theme: {},
+})
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-  useEffect(() => {
-    themeChange(false)
-  }, [])
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider
+      defaultTheme="system"
+      attribute="class"
+      value={{
+        light: lightTheme.className,
+        dark: darkTheme.className,
+      }}
+    >
+      {' '}
+      <NextUIProvider>
+        <Component {...pageProps} />
+      </NextUIProvider>
+    </ThemeProvider>
+  )
 }
 
 export default MyApp

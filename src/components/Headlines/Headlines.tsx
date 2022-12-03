@@ -3,6 +3,14 @@ import { supabase } from '@services/supabase'
 import { numberFormat } from '@lib/number-format'
 import { Headline } from 'src/types'
 import { HeadlineCard } from '@components/Card'
+import {
+  Button,
+  Container,
+  Grid,
+  Loading,
+  Spacer,
+  Text,
+} from '@nextui-org/react'
 
 const MAX_QUERY = 24
 
@@ -72,52 +80,82 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
   }
 
   return (
-    <div>
+    <Container>
       {headlines.length === 0 && (
-        <div className="min-h-screen text-center">
-          <button className="btn btn-lg btn-primary loading">
-            Loading Headlines . . .
-          </button>
-        </div>
+        <Grid.Container gap={2} justify="center">
+          <Grid>
+            <Loading type="default" />
+          </Grid>
+          <Grid>
+            <Loading type="points" />
+          </Grid>
+          <Grid>
+            <Loading type="spinner" size="lg" />
+          </Grid>
+          <Grid>
+            <Loading type="points-opacity" />
+          </Grid>
+          <Grid>
+            <Loading type="gradient" />
+          </Grid>
+        </Grid.Container>
       )}
       {headlines &&
         headlines.map((headline) => (
-          <HeadlineCard
-            country={country}
-            key={headline.id}
-            headline={headline}
-            backToTop={backToTop}
-            clickToCopy={clickToCopy}
-          />
+          <>
+            <HeadlineCard
+              country={country}
+              key={headline.id}
+              headline={headline}
+              backToTop={backToTop}
+              clickToCopy={clickToCopy}
+            />
+            <Spacer y={1} />
+          </>
         ))}
       {headlines && headlines.length < total && (
-        <div className="text-center">
+        <Grid.Container gap={2} justify="center">
           {!fetching && (
-            <button
-              className="btn btn-primary"
-              onClick={() => {
-                fetchMoreHeadlines()
-              }}
-            >
-              {`Load ${MAX_QUERY} More`}
-            </button>
+            <Grid.Container gap={2} justify="center">
+              <Button
+                onClick={() => {
+                  fetchMoreHeadlines()
+                }}
+              >
+                {`Load ${MAX_QUERY} More`}
+              </Button>
+            </Grid.Container>
           )}
           {fetching && (
-            <button className="btn btn-lg btn-primary loading">
-              Loading more headlines . . .
-            </button>
+            <Grid.Container gap={2} justify="center">
+              <Grid>
+                <Loading type="default" />
+              </Grid>
+              <Grid>
+                <Loading type="points" />
+              </Grid>
+              <Grid>
+                <Loading type="spinner" size="lg" />
+              </Grid>
+              <Grid>
+                <Loading type="points-opacity" />
+              </Grid>
+              <Grid>
+                <Loading type="gradient" />
+              </Grid>
+            </Grid.Container>
           )}
-          <p>
-            <b>
+          <Grid>
+            <Text weight="bold">
               <i>
                 {`Loaded ${numberFormat(headlines.length)} of ${numberFormat(
                   total
                 )}. ${numberFormat(total - headlines.length)} remaining.`}{' '}
                 {newer ? newer + ' newer headline(s).' : ''}
               </i>
-            </b>
-          </p>
-        </div>
+            </Text>
+          </Grid>
+        </Grid.Container>
       )}
       {headlines && headlines.length === total && total > 1 && (
         <div className="text-center">
@@ -137,7 +175,7 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
           </p>
         </div>
       )}
-    </div>
+    </Container>
   )
 }
 

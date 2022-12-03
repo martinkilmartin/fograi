@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import type { StaticImageData } from 'next/image'
+import Link from 'next/link'
 
 type Props = {
   bgImageData?: StaticImageData
@@ -35,9 +36,9 @@ const Hero = ({
         {links && (
           <h1 className="mb-5 text-5xl font-bold text-center">
             {links.map((link, index) => (
-              <a className="mx-4" href={`/${link[0]}`} key={index}>
+              <Link className="mx-4" href={`/${link[0]}`} key={index}>
                 {link[1]}
-              </a>
+              </Link>
             ))}
           </h1>
         )}

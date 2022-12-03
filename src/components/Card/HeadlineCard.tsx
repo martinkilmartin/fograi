@@ -1,3 +1,4 @@
+import { Button, Card, Col, Grid, Row, Spacer, Text } from '@nextui-org/react'
 import diffDisplay from '@lib/time-format'
 import {
   CANewsSources,
@@ -15,27 +16,27 @@ type Props = {
   clickToCopy: (link: string) => void
 }
 
-const HeadlineCard = ({
-  country = 'ie',
-  headline,
-  backToTop,
-  clickToCopy,
-}: Props): JSX.Element => {
+const HeadlineCard = ({ country = 'ie', headline }: Props): JSX.Element => {
   const DATE = new Date(headline.created_at)
   let sourceURL
   let sourceName
+  let flag
   if (country === 'ca') {
     sourceURL = CANewsSources.get(headline.source)?.url
     sourceName = CANewsSources.get(headline.source)?.name
+    flag = '🇨🇦'
   } else if (country === 'ie') {
     sourceURL = IENewsSources.get(headline.source)?.url
     sourceName = IENewsSources.get(headline.source)?.name
+    flag = '🇮🇪'
   } else if (country === 'in') {
     sourceURL = INNewsSources.get(headline.source)?.url
     sourceName = INNewsSources.get(headline.source)?.name
+    flag = '🇮🇳'
   } else if (country === 'us') {
     sourceURL = USNewsSources.get(headline.source)?.url
     sourceName = USNewsSources.get(headline.source)?.name
+    flag = '🇺🇸'
   }
   const redditShare =
     'https://www.reddit.com/submit?url=' +
@@ -59,49 +60,52 @@ const HeadlineCard = ({
       )
       .join(',')
   return (
-    <div
-      key={headline.id}
-      className="my-2 bg-base-200 card lg:card-side bordered"
-    >
-      <div className="card-body">
-        <p className="absolute top-0 left-0 mt-2 ml-2">
-          <b>{headline.section}</b>
-        </p>
-        <p className="absolute top-0 right-0 mt-2 mr-2">
-          <b>⏱ {diffDisplay(DATE)}</b>
-        </p>
-        <p className="text-2xl text-center">
+    <Card>
+      <Card.Header>
+        <Text size={12} weight="bold" transform="uppercase">
+          {flag}&nbsp;{headline.section}
+        </Text>
+        <Text
+          size={12}
+          weight="bold"
+          transform="uppercase"
+          css={{ position: 'absolute', right: 7 }}
+        >
+          ⏱ {diffDisplay(DATE)}
+        </Text>
+      </Card.Header>
+      <Card.Body css={{ py: '$2' }}>
+        <Row justify="center" align="center">
           <a href={sourceURL} target="_blank" rel="noreferrer">
-            <b>
+            <Text size="$lg" weight={'bold'} color="#242424">
               <i>{sourceName}</i>
-            </b>
+            </Text>
           </a>
-        </p>
-        <h2 className="justify-center text-3xl text-center card-title">
-          <a
-            className="link link-primary"
-            href={headline.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {headline.headline}&nbsp;&#xe164;
-          </a>
-        </h2>
-
-        <div className="grid grid-cols-4 gap-4">
-          <b onClick={() => clickToCopy(headline.link)}>Copy link 🔗</b>
-          <a className="btn  btn-secondary gap-2" href={twShare} target="_blank" rel="noreferrer">
-            <TwitterLogo />
-            &nbsp;Share on Twitter
-          </a>
-          <a className="btn  btn-secondary gap-2" href={redditShare} target="_blank" rel="noreferrer">
-            <RedditLogo />
-            &nbsp;Share on Reddit
-          </a>
-          <b onClick={() => backToTop()}>Back to top ⬆</b>
-        </div>
-      </div>
-    </div>
+        </Row>
+        <Row justify="center" align="center">
+          <Text h2>
+            <a href={headline.link} target="_blank" rel="noreferrer">
+              {headline.headline}&nbsp;↗
+            </a>
+          </Text>
+        </Row>
+      </Card.Body>
+      <Card.Footer>
+        <Grid.Container gap={2} justify="center">
+          <Button.Group>
+            <a href={twShare} target="_blank" rel="noreferrer">
+              <TwitterLogo />
+              &nbsp;Share on Twitter
+            </a>
+            <Spacer x={2} />
+            <a href={redditShare} target="_blank" rel="noreferrer">
+              <RedditLogo />
+              &nbsp;Share on Reddit
+            </a>
+          </Button.Group>
+        </Grid.Container>
+      </Card.Footer>
+    </Card>
   )
 }
 

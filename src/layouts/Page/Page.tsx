@@ -1,9 +1,8 @@
 import { ReactNode } from 'react'
 
-import { Container } from '@layouts/Container'
+import { Container, Grid } from '@nextui-org/react'
 import { HTMLHead } from '@components/HTMLHead'
-import { Navbar } from '@layouts/Navbar'
-import logo from '@img/fograi-transparent.webp'
+import { MyNavbar } from '@components/MyNavbar'
 import { Footer } from '@layouts/Footer'
 
 type Props = {
@@ -15,8 +14,8 @@ type Props = {
 const Page = ({ title, heading, children }: Props): JSX.Element => (
   <Container>
     <HTMLHead title={title} description={heading} />
-    <Navbar logo={logo} />
-    {children}
+    <MyNavbar />
+    <Grid.Container justify="center">{children}</Grid.Container>
     <Footer />
   </Container>
 )

@@ -11,8 +11,6 @@ export async function middleware(req: NextRequest): Promise<Response> {
     if (res.status !== 200) return res
     return NextResponse.next()
   } else {
-    req.nextUrl.searchParams.set('from', req.nextUrl.pathname)
-    req.nextUrl.pathname = '/'
-    return NextResponse.redirect(req.nextUrl)
+    return NextResponse.next()
   }
 }
