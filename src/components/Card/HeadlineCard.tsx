@@ -1,4 +1,4 @@
-import { Button, Card, Col, Grid, Row, Spacer, Text } from '@nextui-org/react'
+import { Button, Card, Grid, Row, Spacer, Text } from '@nextui-org/react'
 import diffDisplay from '@lib/time-format'
 import {
   CANewsSources,
