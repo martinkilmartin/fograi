@@ -80,7 +80,7 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
   }
 
   return (
-    <Container>
+    <Container md>
       {headlines.length === 0 && (
         <Grid.Container gap={2} justify="center">
           <Grid>
