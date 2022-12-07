@@ -6,7 +6,7 @@ export default function MyNavbar(): JSX.Element {
   const { isDark, type } = useTheme()
   return (
     <>
-      <Navbar isBordered={isDark} variant="sticky">
+      <Navbar isBordered={isDark} variant="static">
         <Navbar.Brand>
           <Navbar.Toggle aria-label="toggle navigation" showIn="sm" />
           <Text b color="inherit" hideIn="xs">
