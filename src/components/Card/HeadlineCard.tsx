@@ -66,10 +66,10 @@ const HeadlineCard = ({ country = 'ie', headline }: Props): JSX.Element => {
           {flag}&nbsp;{headline.section.split(' ')[0]}
         </Text>
         <Text
-          size={12}
+          size="$md"
           weight="bold"
           transform="uppercase"
-          css={{ position: 'absolute', right: 7 }}
+          css={{ position: 'absolute', right: 8 }}
         >
           ⏱ {diffDisplay(DATE)}
         </Text>
