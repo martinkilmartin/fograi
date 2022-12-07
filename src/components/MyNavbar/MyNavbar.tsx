@@ -52,6 +52,8 @@ export default function MyNavbar(): JSX.Element {
             >
               Ireland
             </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
             <Link
               color="inherit"
               css={{
@@ -61,6 +63,8 @@ export default function MyNavbar(): JSX.Element {
             >
               India
             </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
             <Link
               color="inherit"
               css={{
@@ -70,6 +74,8 @@ export default function MyNavbar(): JSX.Element {
             >
               Canada
             </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
             <Link
               color="inherit"
               css={{
