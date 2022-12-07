@@ -175,6 +175,15 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
           </p>
         </div>
       )}
+
+      <Button
+        auto
+        ghost
+        onClick={() => backToTop()}
+        css={{ position: 'fixed', bottom: '20px', right: '30px' }}
+      >
+        Top
+      </Button>
     </Container>
   )
 }

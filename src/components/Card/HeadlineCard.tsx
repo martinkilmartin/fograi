@@ -62,7 +62,7 @@ const HeadlineCard = ({ country = 'ie', headline }: Props): JSX.Element => {
   return (
     <Card>
       <Card.Header>
-        <Text size={12} weight="bold" transform="uppercase">
+        <Text size="$md" weight="bold" transform="uppercase">
           {flag}&nbsp;{headline.section}
         </Text>
         <Text

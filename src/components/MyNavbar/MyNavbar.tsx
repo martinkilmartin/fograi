@@ -1,9 +1,8 @@
-import { Navbar, Text, Switch, useTheme } from '@nextui-org/react'
+import { Link, Navbar, Text, Switch, useTheme } from '@nextui-org/react'
 import { useTheme as useNextTheme } from 'next-themes'
 
 export default function MyNavbar(): JSX.Element {
   const { setTheme } = useNextTheme()
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { isDark, type } = useTheme()
   return (
     <>
@@ -14,7 +13,7 @@ export default function MyNavbar(): JSX.Element {
             📢&nbsp;fógr.aí
           </Text>
         </Navbar.Brand>
-        {/* <Navbar.Content enableCursorHighlight hideIn="sm" variant="underline">
+        <Navbar.Content enableCursorHighlight hideIn="sm" variant="underline">
           <Link href="/ie">
             <Navbar.Link>Ireland</Navbar.Link>
           </Link>
@@ -27,7 +26,7 @@ export default function MyNavbar(): JSX.Element {
           <Link href="/us">
             <Navbar.Link>USA</Navbar.Link>
           </Link>
-        </Navbar.Content> */}
+        </Navbar.Content>
         <Navbar.Content>
           <Navbar.Item>
             <Switch
@@ -41,7 +40,7 @@ export default function MyNavbar(): JSX.Element {
             ></Switch>
           </Navbar.Item>
         </Navbar.Content>{' '}
-        {/* <Navbar.Collapse>
+        <Navbar.Collapse>
           <Navbar.CollapseItem>
             <Link
               color="inherit"
@@ -80,7 +79,7 @@ export default function MyNavbar(): JSX.Element {
               USA
             </Link>
           </Navbar.CollapseItem>
-        </Navbar.Collapse> */}
+        </Navbar.Collapse>
       </Navbar>
     </>
   )
