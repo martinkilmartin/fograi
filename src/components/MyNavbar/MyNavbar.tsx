@@ -3,6 +3,7 @@ import { useTheme as useNextTheme } from 'next-themes'
 
 export default function MyNavbar(): JSX.Element {
   const { setTheme } = useNextTheme()
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { isDark, type } = useTheme()
   return (
     <>
