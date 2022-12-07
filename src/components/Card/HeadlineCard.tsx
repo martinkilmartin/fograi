@@ -63,7 +63,7 @@ const HeadlineCard = ({ country = 'ie', headline }: Props): JSX.Element => {
     <Card>
       <Card.Header>
         <Text size="$md" weight="bold" transform="uppercase">
-          {flag}&nbsp;{headline.section}
+          {flag}&nbsp;{headline.section.split(' ')[0]}
         </Text>
         <Text
           size={12}
