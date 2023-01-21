@@ -24,6 +24,9 @@ export default function MyNavbar(): JSX.Element {
           <Link href="/ca">
             <Navbar.Link>Canada</Navbar.Link>
           </Link>
+          <Link href="/uk">
+            <Navbar.Link>UK</Navbar.Link>
+          </Link>
           <Link href="/us">
             <Navbar.Link>USA</Navbar.Link>
           </Link>
