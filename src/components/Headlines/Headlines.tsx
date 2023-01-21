@@ -15,7 +15,7 @@ import {
 const MAX_QUERY = 24
 
 type Props = {
-  country?: 'ca' | 'ie' | 'in' | 'us'
+  country?: 'ca' | 'ie' | 'in' | 'uk' | 'us'
 }
 
 const Headlines = ({ country = 'ie' }: Props): JSX.Element => {

@@ -2082,6 +2082,117 @@ export const INNewsSources = new Map<string, NewsSource>([
   ],
 ])
 
+export const UKNewsSources = new Map<string, NewsSource>([
+  [
+    'UK_MIRR',
+    {
+      name: 'The Mirror',
+      url: 'https://www.mirror.co.uk/',
+      est: 1903,
+      about:
+        'Latest news, sport, celebrity gossip, TV, politics and lifestyle. Big stories with a big heart, always with you in mind.',
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'UK_TEL',
+    {
+      name: 'The Telegraph',
+      url: 'https://www.telegraph.co.uk/',
+      est: 1855,
+      about:
+        'Latest news, business, sport, comment, lifestyle and culture from the Daily Telegraph and Sunday Telegraph newspapers and video from Telegraph TV.',
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'UK_TIME',
+    {
+      name: 'The Times',
+      url: 'https://www.thetimes.co.uk/',
+      est: 1785,
+      about:
+        'News and opinion from The Times & The Sunday Times.',
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'UK_MEN',
+    {
+      name: 'Manchester Evening News',
+      url: 'https://www.manchestereveningnews.co.uk/',
+      est: 1868,
+      about:
+        'Covering central and Greater Manchester, including news from Oldham, Rochdale and Glossop.',
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'UK_INDP',
+    {
+      name: 'The Independent',
+      url: 'https://www.independent.co.uk',
+      est: 1986,
+      about:
+        'The latest breaking news, comment and features from The Independent.',
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'UK_PJ',
+    {
+      name: 'The Press and Journal',
+      url: 'https://www.pressandjournal.co.uk/',
+      est: 1748,
+      about:
+        'The trusted voice of the north and north-east of Scotland for generations.',
+      emos: ['📰', '🏴󠁧󠁢󠁳󠁣󠁴󠁿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'UK_ECOM',
+    {
+      name: 'The Economist',
+      url: 'https://www.economist.com/',
+      est: 1843,
+      about:
+        'Authoritative global news and analysis. Offering fair-minded, fact-checked coverage of world politics, economics, business, science and tech, culture and more.',
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'UK_KENT',
+    {
+      name: 'Kentish Express',
+      url: 'https://www.kentonline.co.uk/',
+      est: 1855,
+      about:
+        'Latest live breaking news, sport, business and what\'s on in Kent and Medway.',
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'UK_OXM',
+    {
+      name: 'Oxford Mail',
+      url: 'https://www.oxfordmail.co.uk/',
+      est: 1928,
+      about:
+        'Latest news, sport and events across Oxfordshire.',
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
+])
+
 export const USNewsSources = new Map<string, NewsSource>([
   [
     'US_ATDY',
@@ -2238,8 +2349,8 @@ export const USNewsSources = new Map<string, NewsSource>([
   [
     'US_FOX',
     {
-      name: 'FOX (World)',
-      url: 'https://edition.cnn.com/',
+      name: 'FOX News (World)',
+      url: 'https://www.foxnews.com/world',
       est: 1996,
       about: 'Latest world news and world video.',
       emos: ['📺', '🇺🇸'],

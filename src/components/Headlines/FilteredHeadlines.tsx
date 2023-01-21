@@ -7,7 +7,7 @@ import { HeadlineCard } from '@components/Card'
 const MAX_QUERY = 24
 
 type Props = {
-  country?: 'ca' | 'ie' | 'in' | 'us'
+  country?: 'ca' | 'ie' | 'in' | 'uk' | 'us'
 }
 
 const FilteredHeadlines = ({ country = 'ie' }: Props): JSX.Element => {

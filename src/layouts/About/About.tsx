@@ -2,6 +2,7 @@ import {
   CANewsSources,
   IENewsSources,
   INNewsSources,
+  UKNewsSources,
   USNewsSources,
 } from '@constants/NEWS_SOURCES'
 
@@ -12,6 +13,7 @@ type Props = {
 const CA_SOURCES_SIZE = Array.from(CANewsSources).length
 const IE_SOURCES_SIZE = Array.from(IENewsSources).length
 const IN_SOURCES_SIZE = Array.from(INNewsSources).length
+const UK_SOURCES_SIZE = Array.from(UKNewsSources).length
 const US_SOURCES_SIZE = Array.from(USNewsSources).length
 
 const About = ({ title }: Props): JSX.Element => (
@@ -28,12 +30,12 @@ const About = ({ title }: Props): JSX.Element => (
       </a>
     </h2>
     <div className="flex flex-col mx-auto my-2">
-      <h3 className="mt-3 text-2xl">🇨🇦 🕵 🦸‍♀️ 🇮🇪 🦹‍♀️ 🧟‍♀️ 🇮🇳</h3>
+      <h3 className="mt-3 text-2xl">🇨🇦 🕵 🇮🇪 🦹‍♀️ 🇮🇳 🦸‍♀️ 🇬🇧 🧟‍♀️ 🇺🇸</h3>
       <p className="mt-1">
         This website continually lists the main headline of{' '}
-        <b>{CA_SOURCES_SIZE}</b> Canadian, <b>{IE_SOURCES_SIZE}</b> Irish,{' '}
-        <b>{IN_SOURCES_SIZE}</b> Indian and <b>{US_SOURCES_SIZE}</b> USA online
-        news sources.
+        <b>{CA_SOURCES_SIZE}</b> Canadian, <b>{IE_SOURCES_SIZE}</b> Irish,{' '} <b>
+          {UK_SOURCES_SIZE}</b> UK, <b>{US_SOURCES_SIZE}</b> USA online and <b>{IN_SOURCES_SIZE}</b> Indian <b>
+          news sources. </b>
       </p>
       <h3 className="mt-3 text-2xl">📝 📧 📨 📩 📤 📥</h3>
       <p className="mt-1">

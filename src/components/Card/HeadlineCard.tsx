@@ -4,13 +4,14 @@ import {
   CANewsSources,
   IENewsSources,
   INNewsSources,
+  UKNewsSources,
   USNewsSources,
 } from '@constants/NEWS_SOURCES'
 import { Headline } from 'src/types'
 import { TwitterLogo, RedditLogo } from '@components/SVG'
 
 type Props = {
-  country?: 'ca' | 'ie' | 'in' | 'us'
+  country?: 'ca' | 'ie' | 'in' | 'uk' | 'us'
   headline: Headline
   backToTop: () => void
   clickToCopy: (link: string) => void
@@ -33,6 +34,10 @@ const HeadlineCard = ({ country = 'ie', headline }: Props): JSX.Element => {
     sourceURL = INNewsSources.get(headline.source)?.url
     sourceName = INNewsSources.get(headline.source)?.name
     flag = '🇮🇳'
+  } else if (country === 'uk') {
+    sourceURL = UKNewsSources.get(headline.source)?.url
+    sourceName = UKNewsSources.get(headline.source)?.name
+    flag = '🇬🇧'
   } else if (country === 'us') {
     sourceURL = USNewsSources.get(headline.source)?.url
     sourceName = USNewsSources.get(headline.source)?.name
