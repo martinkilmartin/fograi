@@ -2230,7 +2230,7 @@ export const USNewsSources = new Map<string, NewsSource>([
       name: 'CNN (International)',
       url: 'https://edition.cnn.com/',
       est: 1980,
-      about: 'Breaking News, US News, World News and Video.',
+      about: 'Breaking US and World News and Video.',
       emos: ['📺', '🇺🇸'],
       langs: ['en'],
     },
