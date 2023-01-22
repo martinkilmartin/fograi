@@ -84,6 +84,17 @@ export default function MyNavbar(): JSX.Element {
               css={{
                 minWidth: '100%',
               }}
+              href="/uk"
+            >
+              UK
+            </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Link
+              color="inherit"
+              css={{
+                minWidth: '100%',
+              }}
               href="/us"
             >
               USA
