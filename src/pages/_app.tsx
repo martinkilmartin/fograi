@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app'
 import { createTheme, NextUIProvider } from '@nextui-org/react'
 import { ThemeProvider } from 'next-themes'
+import { SSRProvider } from '@react-aria/ssr';
 
 const lightTheme = createTheme({
   type: 'light',
@@ -14,19 +15,20 @@ const darkTheme = createTheme({
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
-    <ThemeProvider
-      defaultTheme="system"
-      attribute="class"
-      value={{
-        light: lightTheme.className,
-        dark: darkTheme.className,
-      }}
-    >
-      {' '}
-      <NextUIProvider>
-        <Component {...pageProps} />
-      </NextUIProvider>
-    </ThemeProvider>
+    <SSRProvider>
+      <ThemeProvider
+        defaultTheme="system"
+        attribute="class"
+        value={{
+          light: lightTheme.className,
+          dark: darkTheme.className,
+        }}
+      >
+        {' '}
+        <NextUIProvider>
+          <Component {...pageProps} />
+        </NextUIProvider>
+      </ThemeProvider></SSRProvider>
   )
 }
 
