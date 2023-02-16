@@ -87,6 +87,13 @@ const HeadlineCard = ({ country = 'ie', headline }: Props): JSX.Element => {
             </Text>
           </a>
         </Row>
+        {headline.img_src && <Card.Image
+          src={headline.img_src}
+          width="100%"
+          height={340}
+          objectFit="cover"
+          alt={headline.img_alt}
+        />}
         <Row justify="center" align="center">
           <Text h2>
             <a href={headline.link} target="_blank" rel="noreferrer">

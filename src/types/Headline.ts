@@ -6,4 +6,8 @@ export type Headline = {
   headline: string
   link: string
   emos: string
+  img_src?: string
+  img_alt?: string
+  author?: string
+  published?: string
 }
