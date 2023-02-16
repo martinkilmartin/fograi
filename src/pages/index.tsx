@@ -56,7 +56,4 @@ export const getServerSideProps: GetServerSideProps<{ headlines: Array<Headline>
   return {
     props: { headlines },
   }
-
-
-
 }

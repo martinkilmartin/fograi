@@ -82,7 +82,7 @@ const HeadlineCard = ({ country = 'ie', headline }: Props): JSX.Element => {
       <Card.Body css={{ py: '$2' }}>
         <Row justify="center" align="center">
           <a href={sourceURL} target="_blank" rel="noreferrer">
-            <Text size="$xl" weight={'bold'} color="#242424">
+            <Text h3>
               <i>{sourceName}</i>
             </Text>
           </a>
