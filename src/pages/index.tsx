@@ -50,8 +50,6 @@ export const getServerSideProps: GetServerSideProps<{ headlines: Array<Headline>
     .range(0, 2);
   bucket = [...bucket, ...data as Array<Headline>];
   const headlines: Array<Headline> = bucket;
-  console.error(new Date(headlines[0].created_at).getMilliseconds());
-  console.error(new Date(headlines[0].created_at));
   headlines.sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
   return {
     props: { headlines },
