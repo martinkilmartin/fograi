@@ -100,19 +100,21 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
           </Grid>
         </Grid.Container>
       )}
-      {headlines &&
-        headlines.map((headline) => (
-          <>
-            <HeadlineCard
-              country={country}
-              key={headline.id}
-              headline={headline}
-              backToTop={backToTop}
-              clickToCopy={clickToCopy}
-            />
-            <Spacer y={1} />
-          </>
-        ))}
+      <Grid.Container gap={2} justify="center">
+        {headlines &&
+          headlines.map((headline, index) => (
+            <Grid xs={12} md={6} lg={4} xl={3} key={index}>
+              <HeadlineCard
+                country={country}
+                key={headline.id}
+                headline={headline}
+                backToTop={backToTop}
+                clickToCopy={clickToCopy}
+              />
+              <Spacer y={1} />
+            </Grid>
+          ))}
+      </Grid.Container>
       {headlines && headlines.length < total && (
         <Grid.Container gap={2} justify="center">
           {!fetching && (

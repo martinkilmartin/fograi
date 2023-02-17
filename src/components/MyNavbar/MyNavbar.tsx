@@ -11,7 +11,7 @@ export default function MyNavbar(): JSX.Element {
         <Navbar.Brand>
           <Navbar.Toggle aria-label="toggle navigation" showIn="sm" />
           <Text b color="inherit" hideIn="xs">
-            📢&nbsp;fógr.aí
+            <Link href="/">📢&nbsp;fógr.aí</Link>
           </Text>
         </Navbar.Brand>
         <Navbar.Content enableCursorHighlight hideIn="sm" variant="underline">

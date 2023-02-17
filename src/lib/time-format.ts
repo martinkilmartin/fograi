@@ -10,7 +10,7 @@ import {
 const rtf = new Intl.RelativeTimeFormat('en', {
   localeMatcher: 'best fit',
   numeric: 'always',
-  style: 'short',
+  style: 'long',
 })
 
 const diffDate = (date: Date): number => {

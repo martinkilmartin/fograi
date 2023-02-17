@@ -32,19 +32,22 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
           </Grid>
         </Grid.Container>
       )}
-      {headlines &&
-        headlines.map((headline) => (
-          <>
-            <HeadlineCard
-              country={headline.source.substring(0, 2).toLowerCase() as 'ca' | 'ie' | 'in' | 'uk' | 'us'}
-              key={headline.id}
-              headline={headline}
-              backToTop={backToTop}
-              clickToCopy={clickToCopy}
-            />
-            <Spacer y={1} />
-          </>
-        ))}
+      <Grid.Container gap={2} justify="center">
+        {headlines &&
+          headlines.map((headline, index) => (
+            <Grid xs={12} md={6} lg={4} xl={3} key={index}>
+              <HeadlineCard
+                country={headline.source.substring(0, 2).toLowerCase() as 'ca' | 'ie' | 'in' | 'uk' | 'us'}
+                key={headline.id}
+                headline={headline}
+                backToTop={backToTop}
+                clickToCopy={clickToCopy}
+              />
+              <Spacer y={1} />
+            </Grid>
+          ))
+        }
+      </Grid.Container>
       <Button
         auto
         size="xs"
@@ -54,7 +57,7 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
       >
         Top
       </Button>
-    </Container>
+    </Container >
   )
 }
 
