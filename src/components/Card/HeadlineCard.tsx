@@ -27,7 +27,9 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           }}
         />}
         <Row justify="center" align="center">
-          <Text h2>
+          <Text h2 css={{
+            textGradient: "35deg, $blue900 -20%, $purple900 50%",
+          }}>
             <a href={headline.link} target="_blank" rel="noreferrer">
               {headline.headline}&nbsp;↗
             </a>
@@ -38,7 +40,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         <Text
           css={{ position: 'absolute', right: 8 }}
         >
-        {diffDisplay(DATE)}
+          {diffDisplay(DATE)}
         </Text>
       </Card.Footer>
     </Card>
