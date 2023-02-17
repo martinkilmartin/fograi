@@ -62,15 +62,6 @@ const FilteredHeadlines = ({ country = 'ie' }: Props): JSX.Element => {
     }
   }
 
-  const backToTop = () => {
-    document.body.scrollTop = 0 // For Safari
-    document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
-  }
-
-  const clickToCopy = (link: string) => {
-    navigator.clipboard.writeText(link)
-  }
-
   return (
     <div>
       {headlines.length === 0 && (
