@@ -101,6 +101,8 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
           headlines.map((headline, index) => (
             <Grid xs={12} md={6} lg={4} xl={3} key={index}>
               <HeadlineCard
+                header={index % 3 === 0}
+                bgImage={index % 2 === 0}
                 country={country}
                 key={headline.id}
                 headline={headline}
