@@ -56,7 +56,7 @@ const HeadlineCard = ({ header = false, bgImage = false, headline }: Props): JSX
           alt={headline.img_alt ?? ""}
         />}
         <Row justify="center" align="center">
-          <a href={headline.link} target="_blank" rel="noreferrer">
+          <a href={headline.link} target="_blank" rel="noreferrer" style={{ overflow: 'auto' }}>
             <Text h2 color="primary">
               {headline.headline}&nbsp;↗
             </Text>
