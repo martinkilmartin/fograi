@@ -75,10 +75,6 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
     document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
   }
 
-  const clickToCopy = (link: string) => {
-    navigator.clipboard.writeText(link)
-  }
-
   return (
     <Container lg css={{ paddingLeft: '0px', paddingRight: '0px' }}>
       {headlines.length === 0 && (
@@ -108,8 +104,6 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
                 country={country}
                 key={headline.id}
                 headline={headline}
-                backToTop={backToTop}
-                clickToCopy={clickToCopy}
               />
               <Spacer y={1} />
             </Grid>

@@ -48,7 +48,7 @@ export const getServerSideProps: GetServerSideProps<{ headlines: Array<Headline>
     .select('*')
     .order('created_at', { ascending: false })
     .range(0, 2);
-  bucket = [...bucket, ...data as Array<Headline>];
+  bucket = [...bucket, ...data as Array<Headline>].slice(0, 12);
   const headlines: Array<Headline> = bucket;
   headlines.sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
   return {

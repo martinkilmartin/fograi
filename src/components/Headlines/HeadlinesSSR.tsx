@@ -19,10 +19,6 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
     document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
   }
 
-  const clickToCopy = (link: string) => {
-    navigator.clipboard.writeText(link)
-  }
-
   return (
     <Container lg css={{ paddingLeft: '0px', paddingRight: '0px' }}>
       {headlines.length === 0 && (
@@ -35,13 +31,13 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
       <Grid.Container gap={2} justify="center">
         {headlines &&
           headlines.map((headline, index) => (
-            <Grid xs={12} md={6} lg={4} key={index}>
+            <Grid xs={12} sm={6} md={4} lg={3} key={index}>
               <HeadlineCard
+                header={index % 3 === 0}
+                bgImage={index % 2 === 0}
                 country={headline.source.substring(0, 2).toLowerCase() as 'ca' | 'ie' | 'in' | 'uk' | 'us'}
                 key={headline.id}
                 headline={headline}
-                backToTop={backToTop}
-                clickToCopy={clickToCopy}
               />
               <Spacer y={1} />
             </Grid>
