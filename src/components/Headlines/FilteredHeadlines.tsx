@@ -86,8 +86,6 @@ const FilteredHeadlines = ({ country = 'ie' }: Props): JSX.Element => {
             country={country}
             key={headline.id}
             headline={headline}
-            backToTop={backToTop}
-            clickToCopy={clickToCopy}
           />
         ))}
       {headlines && headlines.length < total && (
