@@ -1,4 +1,4 @@
-import { Button, Card, Col, Row, Text } from '@nextui-org/react'
+import { Card, Col, Text } from '@nextui-org/react'
 
 const HeadlineCard = (): JSX.Element => {
 

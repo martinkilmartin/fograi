@@ -1,16 +1,8 @@
 
 import Image from 'next/image'
-import { Button, Card, Grid, Row, Spacer, Text } from '@nextui-org/react'
+import { Card, Row, Text } from '@nextui-org/react'
 import diffDisplay from '@lib/time-format'
-import {
-  CANewsSources,
-  IENewsSources,
-  INNewsSources,
-  UKNewsSources,
-  USNewsSources,
-} from '@constants/NEWS_SOURCES'
 import { Headline } from 'src/types'
-import { TwitterLogo, RedditLogo } from '@components/SVG'
 
 type Props = {
   country?: 'ca' | 'ie' | 'in' | 'uk' | 'us'
