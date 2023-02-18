@@ -32,6 +32,9 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
   return (
     <Card isHoverable>
       <Card.Header style={{ backgroundColor: theme?.colors.primaryLightActive.value, }}>
+        <Text size="$xl" weight="bold" transform="uppercase">
+          {flag}&nbsp;
+        </Text>
         <a href={sourceURL} target="_blank" rel="noreferrer">
           <Image src={`/img/ns/${headline.source}.${suffix}`} width={300} height={32} style={{
             maxWidth: '33%',
@@ -70,9 +73,7 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
         </a>
       </Card.Body>
       <Card.Footer style={{ backgroundColor: theme?.colors.neutralBorder.value, }}>
-        <Text size="$xl" weight="bold" transform="uppercase">
-          {flag}
-        </Text>
+
       </Card.Footer>
     </Card>
   )
