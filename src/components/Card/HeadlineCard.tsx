@@ -28,11 +28,14 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
   return (
     <Card>
       <Card.Header>
-        <Row justify="center" align="center">
-          <a href={sourceURL} target="_blank" rel="noreferrer">
-            <Image src={`/img/ns/${headline.source}.svg`} width={300} height={100} alt={sourceName ?? ""} />
-          </a>
-        </Row>
+        <a href={sourceURL} target="_blank" rel="noreferrer">
+          <Image src={`/img/ns/${headline.source}.svg`} width={120} height={32} alt={sourceName ?? ""} />
+        </a>
+        <Text
+          css={{ position: 'absolute', right: 8 }}
+        >
+          {diffDisplay(DATE)}
+        </Text>
       </Card.Header>
       <Card.Body css={{ py: '$2' }}>
         {(headline.img_src && bgImage) && <Image
@@ -62,11 +65,6 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
       <Card.Footer>
         <Text size="$xl" weight="bold" transform="uppercase">
           {flag}
-        </Text>
-        <Text
-          css={{ position: 'absolute', right: 8 }}
-        >
-          {diffDisplay(DATE)}
         </Text>
       </Card.Footer>
     </Card>
