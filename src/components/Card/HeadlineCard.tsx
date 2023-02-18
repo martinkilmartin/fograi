@@ -39,7 +39,7 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
   else if (country === 'us') flag = '🇺🇸'
   return (
     <Card isHoverable>
-      <Card.Header style={{ backgroundColor: theme?.colors.primaryLightActive.value, }}>
+      <Card.Header style={{ backgroundColor: theme?.colors.neutralLightHover.value, }}>
         <Text size="$xl" weight="bold" transform="uppercase">
           {flag}&nbsp;
         </Text>
@@ -80,7 +80,7 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
           </Row>
         </a>
       </Card.Body>
-      <Card.Footer style={{ backgroundColor: theme?.colors.primaryLight.value, }}>
+      <Card.Footer style={{ backgroundColor: theme?.colors.neutralLight.value, }}>
         <Grid.Container justify="center">
           <Grid xs={4} justify="center">
             <Image
