@@ -16,7 +16,7 @@ type Props = {
 
 const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
   const { theme } = useTheme();
-  const [suffix, setSuffix] = useState<string>('png')
+  const [suffix, setSuffix] = useState<string>('svg')
 
   const DATE = new Date(headline.created_at)
   const country = headline.source.substring(0, 2).toLowerCase()
@@ -39,7 +39,7 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
           <Image src={`/img/ns/${headline.source}.${suffix}`} width={300} height={32} style={{
             maxWidth: '33%',
             height: 'auto',
-          }} alt={sourceName ?? ""} onError={() => setSuffix('svg')} />
+          }} alt={sourceName ?? ""} onError={() => setSuffix('png')} />
         </a>
         <Text
           css={{ position: 'absolute', right: 8 }}
