@@ -1,11 +1,15 @@
 
 import Image from 'next/image'
-import { Card, Row, Text, useTheme } from '@nextui-org/react'
+import { Button, Card, Grid, Row, Text, useTheme } from '@nextui-org/react'
 import diffDisplay from '@lib/time-format'
 import { Headline } from 'src/types'
 
 import { AllNewsSources } from '@constants/NEWS_SOURCES'
 import { useState } from 'react'
+
+import comments from '../../../public/img/ic/comments.svg'
+import heart from '../../../public/img/ic/heart.svg'
+import share from '../../../public/img/ic/share.svg'
 
 type Props = {
   header?: boolean
@@ -36,7 +40,7 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
           {flag}&nbsp;
         </Text>
         <a href={sourceURL} target="_blank" rel="noreferrer">
-          <Image src={`/img/ns/${headline.source}.${suffix}`} width={300} height={32} style={{
+          <Image src={`/img/ns/${headline.source}.${suffix}`} width={300} height={64} style={{
             maxWidth: '33%',
             height: 'auto',
           }} alt={sourceName ?? ""} onError={() => setSuffix('png')} />
@@ -72,8 +76,30 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
           </Row>
         </a>
       </Card.Body>
-      <Card.Footer style={{ backgroundColor: theme?.colors.neutralBorder.value, }}>
-
+      <Card.Footer style={{ backgroundColor: theme?.colors.primaryLight.value, }}>
+        <Grid.Container justify="center">
+          <Grid xs={4} justify="center">
+            <Image
+              src={heart}
+              alt="Like"
+              height={32}
+            />
+          </Grid>
+          <Grid xs={4} justify="center">
+            <Image
+              src={comments}
+              alt="Comment"
+              height={32}
+            />
+          </Grid>
+          <Grid xs={4} justify="center">
+            <Image
+              src={share}
+              alt="Share"
+              height={32}
+            />
+          </Grid>
+        </Grid.Container>
       </Card.Footer>
     </Card>
   )
