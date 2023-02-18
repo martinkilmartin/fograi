@@ -7,9 +7,11 @@ import { Headline } from 'src/types'
 import { AllNewsSources } from '@constants/NEWS_SOURCES'
 import { useState } from 'react'
 
-import comments from '../../../public/img/ic/comments.svg'
-import heart from '../../../public/img/ic/heart.svg'
-import share from '../../../public/img/ic/share.svg'
+import bookmarkImg from '../../../public/img/ic/bookmark.svg'
+import bookmarkedImg from '../../../public/img/ic/bookmarked.svg'
+import likeImg from '../../../public/img/ic/like.svg'
+import likedImg from '../../../public/img/ic/liked.svg'
+import shareImg from '../../../public/img/ic/share.svg'
 
 type Props = {
   header?: boolean
@@ -21,6 +23,8 @@ type Props = {
 const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
   const { theme } = useTheme();
   const [suffix, setSuffix] = useState<string>('svg')
+  const [liked, setLiked] = useState<boolean>(false)
+  const [bookmarked, setBookmarked] = useState<boolean>(false)
 
   const DATE = new Date(headline.created_at)
   const country = headline.source.substring(0, 2).toLowerCase()
@@ -80,21 +84,23 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
         <Grid.Container justify="center">
           <Grid xs={4} justify="center">
             <Image
-              src={heart}
-              alt="Like"
+              src={liked ? likedImg : likeImg}
+              alt={liked ? "Remove like" : "Like"}
               height={32}
+              onClick={() => setLiked(!liked)}
             />
           </Grid>
           <Grid xs={4} justify="center">
             <Image
-              src={comments}
-              alt="Comment"
+              src={bookmarked ? bookmarkedImg : bookmarkImg}
+              alt={bookmarked ? "Remove Bookmark" : "Bookmark"}
               height={32}
+              onClick={() => setBookmarked(!bookmarked)}
             />
           </Grid>
           <Grid xs={4} justify="center">
             <Image
-              src={share}
+              src={shareImg}
               alt="Share"
               height={32}
             />
