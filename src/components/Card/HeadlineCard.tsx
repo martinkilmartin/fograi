@@ -5,7 +5,7 @@ import diffDisplay from '@lib/time-format'
 import { Headline } from 'src/types'
 
 import { AllNewsSources } from '@constants/NEWS_SOURCES'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 type Props = {
   header?: boolean
