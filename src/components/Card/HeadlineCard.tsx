@@ -5,6 +5,7 @@ import diffDisplay from '@lib/time-format'
 import { Headline } from 'src/types'
 
 import { AllNewsSources } from '@constants/NEWS_SOURCES'
+import { useState, useEffect } from 'react'
 
 type Props = {
   header?: boolean
@@ -14,6 +15,8 @@ type Props = {
 }
 
 const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
+  const [suffix, setSuffix] = useState<string>('svg')
+
   const DATE = new Date(headline.created_at)
   const country = headline.source.substring(0, 2).toLowerCase()
   let flag
@@ -29,7 +32,10 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
     <Card>
       <Card.Header>
         <a href={sourceURL} target="_blank" rel="noreferrer">
-          <Image src={`/img/ns/${headline.source}.svg`} width={120} height={32} alt={sourceName ?? ""} />
+          <Image src={`/img/ns/${headline.source}.${suffix}`} width={300} height={32} style={{
+            maxWidth: '33%',
+            height: 'auto',
+          }} alt={sourceName ?? ""} onError={() => setSuffix('png')} />
         </a>
         <Text
           css={{ position: 'absolute', right: 8 }}
