@@ -34,7 +34,7 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
         <Text
           css={{ position: 'absolute', right: 8 }}
         >
-          {diffDisplay(DATE)}
+          <b>{diffDisplay(DATE)}</b>
         </Text>
       </Card.Header>
       <Card.Body css={{ py: '$2' }}>
