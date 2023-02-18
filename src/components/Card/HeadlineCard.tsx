@@ -13,7 +13,7 @@ type Props = {
   headline: Headline
 }
 
-const HeadlineCard = ({ header = false, bgImage = false, headline }: Props): JSX.Element => {
+const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
   const DATE = new Date(headline.created_at)
   const country = headline.source.substring(0, 2).toLowerCase()
   let flag
@@ -27,17 +27,13 @@ const HeadlineCard = ({ header = false, bgImage = false, headline }: Props): JSX
   else if (country === 'us') flag = '🇺🇸'
   return (
     <Card>
-      {header && <Card.Header>
+      <Card.Header>
         <Row justify="center" align="center">
           <a href={sourceURL} target="_blank" rel="noreferrer">
-            <Text h3 css={{
-              textGradient: "45deg, $blue600 -20%, $pink600 50%",
-            }}>
-              <i>{sourceName}</i>
-            </Text>
+            <Image src={`/img/ns/${headline.source}.svg`} width={300} height={100} alt={sourceName ?? ""} />
           </a>
         </Row>
-      </Card.Header>}
+      </Card.Header>
       <Card.Body css={{ py: '$2' }}>
         {(headline.img_src && bgImage) && <Image
           alt={headline.img_alt ?? ""}
