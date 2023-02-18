@@ -1,6 +1,6 @@
 
 import Image from 'next/image'
-import { Button, Card, Grid, Row, Text, useTheme } from '@nextui-org/react'
+import { Card, Grid, Row, Text, useTheme } from '@nextui-org/react'
 import diffDisplay from '@lib/time-format'
 import { Headline } from 'src/types'
 
