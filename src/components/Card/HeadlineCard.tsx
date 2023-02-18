@@ -1,6 +1,6 @@
 
 import Image from 'next/image'
-import { Card, Row, Text } from '@nextui-org/react'
+import { Card, Row, Text, useTheme } from '@nextui-org/react'
 import diffDisplay from '@lib/time-format'
 import { Headline } from 'src/types'
 
@@ -15,7 +15,8 @@ type Props = {
 }
 
 const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
-  const [suffix, setSuffix] = useState<string>('svg')
+  const { theme } = useTheme();
+  const [suffix, setSuffix] = useState<string>('png')
 
   const DATE = new Date(headline.created_at)
   const country = headline.source.substring(0, 2).toLowerCase()
@@ -29,13 +30,13 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
   else if (country === 'uk') flag = '🇬🇧'
   else if (country === 'us') flag = '🇺🇸'
   return (
-    <Card>
-      <Card.Header>
+    <Card isHoverable>
+      <Card.Header style={{ backgroundColor: theme?.colors.primaryLightActive.value, }}>
         <a href={sourceURL} target="_blank" rel="noreferrer">
           <Image src={`/img/ns/${headline.source}.${suffix}`} width={300} height={32} style={{
             maxWidth: '33%',
             height: 'auto',
-          }} alt={sourceName ?? ""} onError={() => setSuffix('png')} />
+          }} alt={sourceName ?? ""} onError={() => setSuffix('svg')} />
         </a>
         <Text
           css={{ position: 'absolute', right: 8 }}
@@ -44,31 +45,31 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
         </Text>
       </Card.Header>
       <Card.Body css={{ py: '$2' }}>
-        {(headline.img_src && bgImage) && <Image
-          alt={headline.img_alt ?? ""}
-          src={headline.img_src}
-          fill
-          style={{
-            objectFit: 'cover',
-            opacity: 0.33
-          }}
-        />}
-        {(headline.img_src && !bgImage) && <Card.Image
-          src={headline.img_src}
-          objectFit="cover"
-          width="100%"
-          height={140}
-          alt={headline.img_alt ?? ""}
-        />}
-        <Row justify="center" align="center">
-          <a href={headline.link} target="_blank" rel="noreferrer" style={{ overflow: 'auto' }}>
+        <a href={headline.link} target="_blank" rel="noreferrer" style={{ overflow: 'auto' }}>
+          {(headline.img_src && bgImage) && <Image
+            alt={headline.img_alt ?? ""}
+            src={headline.img_src}
+            fill
+            style={{
+              objectFit: 'cover',
+              opacity: 0.33
+            }}
+          />}
+          {(headline.img_src && !bgImage) && <Card.Image
+            src={headline.img_src}
+            objectFit="cover"
+            width="100%"
+            height={140}
+            alt={headline.img_alt ?? ""}
+          />}
+          <Row justify="center" align="center">
             <Text h2 color="primary">
               {headline.headline}&nbsp;↗
             </Text>
-          </a>
-        </Row>
+          </Row>
+        </a>
       </Card.Body>
-      <Card.Footer>
+      <Card.Footer style={{ backgroundColor: theme?.colors.neutralBorder.value, }}>
         <Text size="$xl" weight="bold" transform="uppercase">
           {flag}
         </Text>
