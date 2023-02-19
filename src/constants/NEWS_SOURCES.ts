@@ -1138,7 +1138,7 @@ export const IENewsSources = new Map<string, NewsSource>([
     'IE_95FM',
     {
       name: 'Live 95',
-      url: 'https://www.live95fm.ie/"',
+      url: 'https://www.live95fm.ie/',
       est: 1997,
       emos: ['📻', '🇮🇪'],
     },
@@ -1147,7 +1147,7 @@ export const IENewsSources = new Map<string, NewsSource>([
     'IE_LMFM',
     {
       name: 'LMFM',
-      url: 'https://www.lmfm.ie/"',
+      url: 'https://www.lmfm.ie/',
       est: 1989,
       emos: ['📻', '🇮🇪'],
     },
@@ -2962,7 +2962,7 @@ export const AllNewsSources = new Map<string, NewsSource>([
     'IE_BZPL',
     {
       name: 'Biz Plus',
-      url: 'https://bizplus.ie/',
+      url: 'https://businessplus.ie/',
       est: 1998,
       about:
         'Monthly business magazine focused  on the activities of Irish companies or companies based in Ireland.',
@@ -3626,7 +3626,7 @@ export const AllNewsSources = new Map<string, NewsSource>([
     'IE_95FM',
     {
       name: 'Live 95',
-      url: 'https://www.live95fm.ie/"',
+      url: 'https://www.live95fm.ie/',
       est: 1997,
       emos: ['📻', '🇮🇪'],
     },
@@ -3635,7 +3635,7 @@ export const AllNewsSources = new Map<string, NewsSource>([
     'IE_LMFM',
     {
       name: 'LMFM',
-      url: 'https://www.lmfm.ie/"',
+      url: 'https://www.lmfm.ie/',
       est: 1989,
       emos: ['📻', '🇮🇪'],
     },
