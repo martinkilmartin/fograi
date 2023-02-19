@@ -2293,7 +2293,7 @@ export const USNewsSources = new Map<string, NewsSource>([
     'US_PHIQ',
     {
       name: 'The Philadelphia Inquirer',
-      url: 'https://www.houstonchronicle.com/',
+      url: 'https://www.inquirer.com/',
       est: 1829,
       about: 'Front-row seat to the Greater Philadelphia region.',
       emos: ['📰', '🇺🇸'],
@@ -4772,7 +4772,7 @@ export const AllNewsSources = new Map<string, NewsSource>([
     'US_PHIQ',
     {
       name: 'The Philadelphia Inquirer',
-      url: 'https://www.houstonchronicle.com/',
+      url: 'https://www.inquirer.com/',
       est: 1829,
       about: 'Front-row seat to the Greater Philadelphia region.',
       emos: ['📰', '🇺🇸'],
