@@ -74,7 +74,7 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
             alt={headline.img_alt ?? ""}
           />}
           <Row justify="center" align="center">
-            <Text h2 color="primary">
+            <Text h3 color="primary">
               {headline.headline}&nbsp;↗
             </Text>
           </Row>
