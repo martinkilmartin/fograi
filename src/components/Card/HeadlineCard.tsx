@@ -12,6 +12,7 @@ import bookmarkedImg from '../../../public/img/ic/bookmarked.svg'
 import likeImg from '../../../public/img/ic/like.svg'
 import likedImg from '../../../public/img/ic/liked.svg'
 import shareImg from '../../../public/img/ic/share.svg'
+import transPix from '../../../public/img/trans-pixel.png'
 
 type Props = {
   header?: boolean
@@ -23,9 +24,9 @@ type Props = {
 const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
   const { theme } = useTheme();
   const [suffix, setSuffix] = useState<string>('svg')
+  const [leadImgErr, setLeadImgErr] = useState<boolean>(false)
   const [liked, setLiked] = useState<boolean>(false)
   const [bookmarked, setBookmarked] = useState<boolean>(false)
-
   const DATE = new Date(headline.created_at)
   const country = headline.source.substring(0, 2).toLowerCase()
   let flag
@@ -59,19 +60,20 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
         <a href={headline.link} target="_blank" rel="noreferrer" style={{ overflow: 'auto' }}>
           {(headline.img_src && bgImage) && <Image
             alt={headline.img_alt ?? ""}
-            src={headline.img_src}
+            src={leadImgErr ? transPix : headline.img_src}
             fill
             style={{
               objectFit: 'cover',
               opacity: 0.33
             }}
+            onError={() => setLeadImgErr(true)} 
           />}
           {(headline.img_src && !bgImage) && <Card.Image
             src={headline.img_src}
             objectFit="cover"
             width="100%"
-            height={140}
             alt={headline.img_alt ?? ""}
+            onError={() => setLeadImgErr(true)} 
           />}
           <Row justify="center" align="center">
             <Text h3 color="primary">
