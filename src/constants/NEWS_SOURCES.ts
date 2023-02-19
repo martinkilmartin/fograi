@@ -3817,7 +3817,7 @@ export const AllNewsSources = new Map<string, NewsSource>([
     'IE_OTBS',
     {
       name: 'Off The Ball Sports',
-      url: 'https://www.otbsports.com/',
+      url: 'https://www.offtheball.com/',
       est: 2002,
       emos: ['📻', '⚽'],
     },

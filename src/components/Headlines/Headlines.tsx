@@ -80,19 +80,7 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
       {headlines.length === 0 && (
         <Grid.Container gap={2} justify="center">
           <Grid>
-            <Loading type="default" />
-          </Grid>
-          <Grid>
-            <Loading type="points" />
-          </Grid>
-          <Grid>
             <Loading type="spinner" size="lg" />
-          </Grid>
-          <Grid>
-            <Loading type="points-opacity" />
-          </Grid>
-          <Grid>
-            <Loading type="gradient" />
           </Grid>
         </Grid.Container>
       )}
@@ -126,19 +114,7 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
           {fetching && (
             <Grid.Container gap={2} justify="center">
               <Grid>
-                <Loading type="default" />
-              </Grid>
-              <Grid>
-                <Loading type="points" />
-              </Grid>
-              <Grid>
                 <Loading type="spinner" size="lg" />
-              </Grid>
-              <Grid>
-                <Loading type="points-opacity" />
-              </Grid>
-              <Grid>
-                <Loading type="gradient" />
               </Grid>
             </Grid.Container>
           )}
@@ -175,7 +151,6 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
 
       <Button
         auto
-        size="xs"
         ghost
         onClick={() => backToTop()}
         css={{ position: 'fixed', bottom: '20px', right: '10px' }}

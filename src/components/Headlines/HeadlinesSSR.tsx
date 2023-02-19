@@ -45,7 +45,6 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
       </Grid.Container>
       <Button
         auto
-        size="xs"
         ghost
         onClick={() => backToTop()}
         css={{ position: 'fixed', bottom: '20px', right: '10px' }}
