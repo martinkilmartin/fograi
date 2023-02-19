@@ -66,14 +66,14 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
               objectFit: 'cover',
               opacity: 0.33
             }}
-            onError={() => setLeadImgErr(true)} 
+            onError={() => setLeadImgErr(true)}
           />}
           {(headline.img_src && !bgImage) && <Card.Image
-            src={headline.img_src}
+            src={leadImgErr ? '../../../public/img/trans-pixel.png' : headline.img_src}
             objectFit="cover"
             width="100%"
             alt={headline.img_alt ?? ""}
-            onError={() => setLeadImgErr(true)} 
+            onError={() => setLeadImgErr(true)}
           />}
           <Row justify="center" align="center">
             <Text h3 color="primary">
