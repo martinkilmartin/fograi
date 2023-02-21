@@ -2206,6 +2206,18 @@ export const NZNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'NZ_ODT',
+    {
+      name: 'Otago Daily Times',
+      url: 'https://www.odt.co.nz',
+      est: 1861,
+      about:
+        'New Zealand\'s oldest daily newspaper. Strong local Otago news coverage combined with national and international news.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
 ])
 
 export const OZNewsSources = new Map<string, NewsSource>([
@@ -2217,6 +2229,30 @@ export const OZNewsSources = new Map<string, NewsSource>([
       est: 1951,
       about:
         'Reports the latest news from business, finance, investment and politics, updated in real time. Independent, award-winning journalism. Essential reading for the business and investor community.',
+      emos: ['📰', '🇦🇺'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'OZ_DCN',
+    {
+      name: 'Daily Cargo News',
+      url: 'https://www.thedcn.com.au/',
+      est: 1891,
+      about:
+        'Provides the latest news covering the Australian shipping, trade, transport and maritime logistics industries. First published in 1891 as Daily Commercial News (DCN).',
+      emos: ['📰', '🇦🇺'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'OZ_TGL',
+    {
+      name: 'Green Left',
+      url: 'https://www.greenleft.org.au/',
+      est: 1991,
+      about:
+        'Expose the lies, hypocrisy and bias of the billionaire class and their media. Help the organising efforts of all those actively resisting the increasingly authoritarian rule of the corporate rich.',
       emos: ['📰', '🇦🇺'],
       langs: ['en'],
     },
@@ -4728,6 +4764,18 @@ export const AllNewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'NZ_ODT',
+    {
+      name: 'Otago Daily Times',
+      url: 'https://www.odt.co.nz',
+      est: 1861,
+      about:
+        'New Zealand\'s oldest daily newspaper. Strong local Otago news coverage combined with national and international news.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
     'OZ_AFR',
     {
       name: 'Australian Financial Review',
@@ -4735,6 +4783,30 @@ export const AllNewsSources = new Map<string, NewsSource>([
       est: 1951,
       about:
         'Reports the latest news from business, finance, investment and politics, updated in real time. Independent, award-winning journalism. Essential reading for the business and investor community.',
+      emos: ['📰', '🇦🇺'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'OZ_DCN',
+    {
+      name: 'Daily Cargo News',
+      url: 'https://www.thedcn.com.au/',
+      est: 1891,
+      about:
+        'Provides the latest news covering the Australian shipping, trade, transport and maritime logistics industries. First published in 1891 as Daily Commercial News (DCN).',
+      emos: ['📰', '🇦🇺'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'OZ_TGL',
+    {
+      name: 'Green Left',
+      url: 'https://www.greenleft.org.au/',
+      est: 1991,
+      about:
+        'Expose the lies, hypocrisy and bias of the billionaire class and their media. Help the organising efforts of all those actively resisting the increasingly authoritarian rule of the corporate rich.',
       emos: ['📰', '🇦🇺'],
       langs: ['en'],
     },
