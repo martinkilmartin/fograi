@@ -19,13 +19,13 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
   const [newHeadlines, setNewHeadlines] = useState<Headline[]>(headlines)
 
   const fetchMoreHeadlines = async (period = "24", all = "") => {
-    backToTop()
     setFetching(true)
     const { data } = await supabase
       .from(`last_${period}_hours${all}`)
       .select('*')
     setNewHeadlines([...data as Array<Headline>]);
     setFetching(false)
+    backToTop()
   }
 
   const backToTop = () => {
