@@ -1,4 +1,4 @@
-import { Link, Navbar, Text, Switch, useTheme } from '@nextui-org/react'
+import { Link, Navbar, Text, Switch, useTheme, Avatar } from '@nextui-org/react'
 import { useTheme as useNextTheme } from 'next-themes'
 
 export default function MyNavbar(): JSX.Element {
@@ -16,25 +16,60 @@ export default function MyNavbar(): JSX.Element {
         </Navbar.Brand>
         <Navbar.Content enableCursorHighlight hideIn="sm" variant="underline">
           <Link href="/oz">
-            <Navbar.Link>Australia</Navbar.Link>
+            <Navbar.Link>
+              <Avatar size="sm"
+                bordered
+                rounded
+                text="🇦🇺" />
+            </Navbar.Link>
           </Link>
           <Link href="/ca">
-            <Navbar.Link>Canada</Navbar.Link>
+            <Navbar.Link>
+              <Avatar size="sm"
+                bordered
+                rounded
+                text="🇨🇦" />
+            </Navbar.Link>
           </Link>
           <Link href="/in">
-            <Navbar.Link>India</Navbar.Link>
+            <Navbar.Link>
+              <Avatar size="sm"
+                bordered
+                rounded
+                text="🇮🇳" />
+            </Navbar.Link>
           </Link>
           <Link href="/ie">
-            <Navbar.Link>Ireland</Navbar.Link>
+            <Navbar.Link>
+              <Avatar size="sm"
+                bordered
+                rounded
+                text="🇮🇪" />
+            </Navbar.Link>
           </Link>
           <Link href="/nz">
-            <Navbar.Link>New Zealand</Navbar.Link>
+            <Navbar.Link>
+              <Avatar size="sm"
+                bordered
+                rounded
+                text="🇳🇿" />
+            </Navbar.Link>
           </Link>
           <Link href="/uk">
-            <Navbar.Link>UK</Navbar.Link>
+            <Navbar.Link>
+              <Avatar size="sm"
+                bordered
+                rounded
+                text="🇬🇧" />
+            </Navbar.Link>
           </Link>
           <Link href="/us">
-            <Navbar.Link>USA</Navbar.Link>
+            <Navbar.Link>
+              <Avatar size="sm"
+                bordered
+                rounded
+                text="🇺🇸" />
+            </Navbar.Link>
           </Link>
         </Navbar.Content>
         <Navbar.Content>
