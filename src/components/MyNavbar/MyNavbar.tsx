@@ -92,6 +92,17 @@ export default function MyNavbar(): JSX.Element {
               css={{
                 minWidth: '100%',
               }}
+              href="/"
+            >
+              Homepage
+            </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Link
+              color="inherit"
+              css={{
+                minWidth: '100%',
+              }}
               href="/oz"
             >
               Australia
