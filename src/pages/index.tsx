@@ -18,51 +18,10 @@ const HomePage = ({ headlines }: InferGetServerSidePropsType<typeof getServerSid
 export default HomePage
 
 export const getServerSideProps: GetServerSideProps<{ headlines: Array<Headline> }> = async () => {
-  let bucket: Array<Headline> = [];
-  var { data } = await supabase
-    .from(`ca-headlines`)
+  const { data } = await supabase
+    .from(`last_24_hours`)
     .select('*')
-    .order('created_at', { ascending: false })
-    .range(0, 2);
-  bucket = [...data as Array<Headline>];
-  var { data } = await supabase
-    .from(`ie-headlines`)
-    .select('*')
-    .order('created_at', { ascending: false })
-    .range(0, 2);
-  bucket = [...bucket, ...data as Array<Headline>];
-  var { data } = await supabase
-    .from(`in-headlines`)
-    .select('*')
-    .order('created_at', { ascending: false })
-    .range(0, 2);
-  bucket = [...bucket, ...data as Array<Headline>];
-  var { data } = await supabase
-    .from(`nz-headlines`)
-    .select('*')
-    .order('created_at', { ascending: false })
-    .range(0, 2);
-  bucket = [...bucket, ...data as Array<Headline>];
-  var { data } = await supabase
-    .from(`oz-headlines`)
-    .select('*')
-    .order('created_at', { ascending: false })
-    .range(0, 2);
-  bucket = [...bucket, ...data as Array<Headline>];
-  var { data } = await supabase
-    .from(`uk-headlines`)
-    .select('*')
-    .order('created_at', { ascending: false })
-    .range(0, 2);
-  bucket = [...bucket, ...data as Array<Headline>];
-  var { data } = await supabase
-    .from(`us-headlines`)
-    .select('*')
-    .order('created_at', { ascending: false })
-    .range(0, 2);
-  bucket = [...bucket, ...data as Array<Headline>];
-  const headlines: Array<Headline> = bucket;
-  headlines.sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
+  const headlines: Array<Headline> = [...data as Array<Headline>];
   return {
     props: { headlines },
   }
