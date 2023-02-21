@@ -38,6 +38,18 @@ export const getServerSideProps: GetServerSideProps<{ headlines: Array<Headline>
     .range(0, 2);
   bucket = [...bucket, ...data as Array<Headline>];
   var { data } = await supabase
+    .from(`nz-headlines`)
+    .select('*')
+    .order('created_at', { ascending: false })
+    .range(0, 2);
+  bucket = [...bucket, ...data as Array<Headline>];
+  var { data } = await supabase
+    .from(`oz-headlines`)
+    .select('*')
+    .order('created_at', { ascending: false })
+    .range(0, 2);
+  bucket = [...bucket, ...data as Array<Headline>];
+  var { data } = await supabase
     .from(`uk-headlines`)
     .select('*')
     .order('created_at', { ascending: false })
@@ -48,7 +60,7 @@ export const getServerSideProps: GetServerSideProps<{ headlines: Array<Headline>
     .select('*')
     .order('created_at', { ascending: false })
     .range(0, 2);
-  bucket = [...bucket, ...data as Array<Headline>].slice(0, 12);
+  bucket = [...bucket, ...data as Array<Headline>];
   const headlines: Array<Headline> = bucket;
   headlines.sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))
   return {

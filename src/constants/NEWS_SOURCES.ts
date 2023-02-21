@@ -2193,6 +2193,36 @@ export const UKNewsSources = new Map<string, NewsSource>([
   ],
 ])
 
+export const NZNewsSources = new Map<string, NewsSource>([
+  [
+    'NZ_HRLD',
+    {
+      name: 'The New Zealand Herald',
+      url: 'https://www.nzherald.co.nz/',
+      est: 1863,
+      about:
+        'Latest breaking news articles, photos, video, blogs, reviews, analysis, opinion and reader comment from New Zealand and around the World.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+])
+
+export const OZNewsSources = new Map<string, NewsSource>([
+  [
+    'OZ_AFR',
+    {
+      name: 'Australian Financial Review',
+      url: 'https://www.afr.com/',
+      est: 1951,
+      about:
+        'Reports the latest news from business, finance, investment and politics, updated in real time. Independent, award-winning journalism. Essential reading for the business and investor community.',
+      emos: ['📰', '🇦🇺'],
+      langs: ['en'],
+    },
+  ],
+])
+
 export const USNewsSources = new Map<string, NewsSource>([
   [
     'US_ATDY',
@@ -4682,6 +4712,30 @@ export const AllNewsSources = new Map<string, NewsSource>([
       about:
         'Provides up-to-date coverage of US and international news, weather, entertainment, finance, and more.',
       emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_HRLD',
+    {
+      name: 'The New Zealand Herald',
+      url: 'https://www.nzherald.co.nz/',
+      est: 1863,
+      about:
+        'Latest breaking news articles, photos, video, blogs, reviews, analysis, opinion and reader comment from New Zealand and around the World.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'OZ_AFR',
+    {
+      name: 'Australian Financial Review',
+      url: 'https://www.afr.com/',
+      est: 1951,
+      about:
+        'Reports the latest news from business, finance, investment and politics, updated in real time. Independent, award-winning journalism. Essential reading for the business and investor community.',
+      emos: ['📰', '🇦🇺'],
       langs: ['en'],
     },
   ],

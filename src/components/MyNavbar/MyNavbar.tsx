@@ -15,14 +15,20 @@ export default function MyNavbar(): JSX.Element {
           </Text>
         </Navbar.Brand>
         <Navbar.Content enableCursorHighlight hideIn="sm" variant="underline">
-          <Link href="/ie">
-            <Navbar.Link>Ireland</Navbar.Link>
+          <Link href="/oz">
+            <Navbar.Link>Australia</Navbar.Link>
+          </Link>
+          <Link href="/ca">
+            <Navbar.Link>Canada</Navbar.Link>
           </Link>
           <Link href="/in">
             <Navbar.Link>India</Navbar.Link>
           </Link>
-          <Link href="/ca">
-            <Navbar.Link>Canada</Navbar.Link>
+          <Link href="/ie">
+            <Navbar.Link>Ireland</Navbar.Link>
+          </Link>
+          <Link href="/nz">
+            <Navbar.Link>New Zealand</Navbar.Link>
           </Link>
           <Link href="/uk">
             <Navbar.Link>UK</Navbar.Link>
@@ -51,9 +57,20 @@ export default function MyNavbar(): JSX.Element {
               css={{
                 minWidth: '100%',
               }}
-              href="/ie"
+              href="/oz"
             >
-              Ireland
+              Australia
+            </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Link
+              color="inherit"
+              css={{
+                minWidth: '100%',
+              }}
+              href="/ca"
+            >
+              Canada
             </Link>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>
@@ -73,9 +90,20 @@ export default function MyNavbar(): JSX.Element {
               css={{
                 minWidth: '100%',
               }}
-              href="/ca"
+              href="/ie"
             >
-              Canada
+              Ireland
+            </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Link
+              color="inherit"
+              css={{
+                minWidth: '100%',
+              }}
+              href="/nz"
+            >
+              New Zealand
             </Link>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>

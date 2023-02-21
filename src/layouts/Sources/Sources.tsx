@@ -2,6 +2,8 @@ import {
   CANewsSources,
   IENewsSources,
   INNewsSources,
+  NZNewsSources,
+  OZNewsSources,
   UKNewsSources,
   USNewsSources
 } from '@constants/NEWS_SOURCES'
@@ -14,13 +16,56 @@ const Sources = ({ title }: Props): JSX.Element => (
   <div className="px-4 text-center">
     <h1 className="w-full mb-4 text-5xl font-extrabold leading-9">{title}</h1>
     <h2 className="w-full mb-4 text-4xl font-extrabold leading-9">
+      <a className="mx-4" href="#oz">🇦🇺</a>
       <a className="mx-4" href="#ca">🇨🇦</a>
-      <a className="mx-4" href="#ie">🇮🇪</a>
       <a className="mx-4" href="#in">🇮🇳</a>
+      <a className="mx-4" href="#ie">🇮🇪</a>
+      <a className="mx-4" href="#nz">🇳🇿</a>
       <a className="mx-4" href="#uk">🇬🇧</a>
       <a className="mx-4" href="#us">🇺🇸</a>
     </h2>
     <div className="flex flex-wrap">
+      <h3 className="w-full text-3xl" id="oz">
+      🇦🇺
+      </h3>
+      {Array.from(OZNewsSources.keys()).map((key, index) => (
+        <div
+          className="w-full mb-4 text-center shadow-2xl lg:w-1/2 xl:w-1/3 card"
+          key={index}
+        >
+          <div className="card-body">
+            <h3 className="text-3xl card-title">
+              <a
+                className="link link-primary"
+                href={OZNewsSources.get(key)?.url}
+                target={'_blank'}
+                rel="noreferrer"
+              >
+                <i>
+                  <b>{OZNewsSources.get(key)?.name}</b>
+                </i>
+              </a>
+            </h3>
+            <p>
+              <i>
+                Estb.&nbsp;<b>{OZNewsSources.get(key)?.est}</b>
+              </i>
+            </p>
+            {OZNewsSources.get(key)?.about && (
+              <p>{OZNewsSources.get(key)?.about}</p>
+            )}
+            {OZNewsSources.get(key)?.emos?.length && (
+              <div className="self-center btn-group">
+                {OZNewsSources.get(key)?.emos?.map((emo, index) => (
+                  <h3 className="mx-1 text-2xl" key={index}>
+                    {emo}
+                  </h3>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
       <h3 className="w-full text-3xl" id="ca">
         🇨🇦
       </h3>
@@ -53,6 +98,47 @@ const Sources = ({ title }: Props): JSX.Element => (
             {CANewsSources.get(key)?.emos?.length && (
               <div className="self-center btn-group">
                 {CANewsSources.get(key)?.emos?.map((emo, index) => (
+                  <h3 className="mx-1 text-2xl" key={index}>
+                    {emo}
+                  </h3>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+      <h3 className="w-full text-3xl" id="in">
+        🇮🇳
+      </h3>
+      {Array.from(INNewsSources.keys()).map((key, index) => (
+        <div
+          className="w-full mb-4 text-center shadow-2xl lg:w-1/2 xl:w-1/3 card"
+          key={index}
+        >
+          <div className="card-body">
+            <h3 className="text-3xl card-title">
+              <a
+                className="link link-primary"
+                href={INNewsSources.get(key)?.url}
+                target={'_blank'}
+                rel="noreferrer"
+              >
+                <i>
+                  <b>{INNewsSources.get(key)?.name}</b>
+                </i>
+              </a>
+            </h3>
+            <p>
+              <i>
+                Estb.&nbsp;<b>{INNewsSources.get(key)?.est}</b>
+              </i>
+            </p>
+            {INNewsSources.get(key)?.about && (
+              <p>{INNewsSources.get(key)?.about}</p>
+            )}
+            {INNewsSources.get(key)?.emos?.length && (
+              <div className="self-center btn-group">
+                {INNewsSources.get(key)?.emos?.map((emo, index) => (
                   <h3 className="mx-1 text-2xl" key={index}>
                     {emo}
                   </h3>
@@ -103,10 +189,10 @@ const Sources = ({ title }: Props): JSX.Element => (
           </div>
         </div>
       ))}
-      <h3 className="w-full text-3xl" id="in">
-        🇮🇳
+      <h3 className="w-full text-3xl" id="nz">
+      🇳🇿
       </h3>
-      {Array.from(INNewsSources.keys()).map((key, index) => (
+      {Array.from(NZNewsSources.keys()).map((key, index) => (
         <div
           className="w-full mb-4 text-center shadow-2xl lg:w-1/2 xl:w-1/3 card"
           key={index}
@@ -115,26 +201,26 @@ const Sources = ({ title }: Props): JSX.Element => (
             <h3 className="text-3xl card-title">
               <a
                 className="link link-primary"
-                href={INNewsSources.get(key)?.url}
+                href={NZNewsSources.get(key)?.url}
                 target={'_blank'}
                 rel="noreferrer"
               >
                 <i>
-                  <b>{INNewsSources.get(key)?.name}</b>
+                  <b>{NZNewsSources.get(key)?.name}</b>
                 </i>
               </a>
             </h3>
             <p>
               <i>
-                Estb.&nbsp;<b>{INNewsSources.get(key)?.est}</b>
+                Estb.&nbsp;<b>{NZNewsSources.get(key)?.est}</b>
               </i>
             </p>
-            {INNewsSources.get(key)?.about && (
-              <p>{INNewsSources.get(key)?.about}</p>
+            {NZNewsSources.get(key)?.about && (
+              <p>{NZNewsSources.get(key)?.about}</p>
             )}
-            {INNewsSources.get(key)?.emos?.length && (
+            {NZNewsSources.get(key)?.emos?.length && (
               <div className="self-center btn-group">
-                {INNewsSources.get(key)?.emos?.map((emo, index) => (
+                {NZNewsSources.get(key)?.emos?.map((emo, index) => (
                   <h3 className="mx-1 text-2xl" key={index}>
                     {emo}
                   </h3>

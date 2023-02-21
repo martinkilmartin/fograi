@@ -17,7 +17,7 @@ import transPix from '../../../public/img/trans-pixel.png'
 type Props = {
   header?: boolean
   bgImage?: boolean
-  country?: 'ca' | 'ie' | 'in' | 'uk' | 'us'
+  country?: 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us'
   headline: Headline
 }
 
@@ -36,6 +36,8 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
   if (country === 'ca') flag = '🇨🇦'
   else if (country === 'ie') flag = '🇮🇪'
   else if (country === 'in') flag = '🇮🇳'
+  else if (country === 'nz') flag = '🇳🇿'
+  else if (country === 'oz') flag = '🇦🇺'
   else if (country === 'uk') flag = '🇬🇧'
   else if (country === 'us') flag = '🇺🇸'
   return (

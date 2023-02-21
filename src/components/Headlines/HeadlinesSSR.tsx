@@ -34,7 +34,7 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
             <Grid xs={12} sm={6} md={4} lg={3} key={index}>
               <HeadlineCard
                 bgImage={index % 2 === 0}
-                country={headline.source.substring(0, 2).toLowerCase() as 'ca' | 'ie' | 'in' | 'uk' | 'us'}
+                country={headline.source.substring(0, 2).toLowerCase() as 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us'}
                 key={headline.id}
                 headline={headline}
               />
