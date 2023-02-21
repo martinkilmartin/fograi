@@ -1,4 +1,5 @@
 import { Headline } from 'src/types'
+import { supabase } from '@services/supabase'
 import { HeadlineCard } from '@components/Card'
 import {
   Button,
@@ -7,12 +8,25 @@ import {
   Loading,
   Spacer,
 } from '@nextui-org/react'
+import { useState } from 'react'
 
 type Props = {
   headlines: Array<Headline>
 }
 
 const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
+  const [fetching, setFetching] = useState(false)
+  const [newHeadlines, setNewHeadlines] = useState<Headline[]>(headlines)
+
+  const fetchMoreHeadlines = async (period = "24", all = "") => {
+    backToTop()
+    setFetching(true)
+    const { data } = await supabase
+      .from(`last_${period}_hours${all}`)
+      .select('*')
+    setNewHeadlines([...data as Array<Headline>]);
+    setFetching(false)
+  }
 
   const backToTop = () => {
     document.body.scrollTop = 0 // For Safari
@@ -21,7 +35,7 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
 
   return (
     <Container lg css={{ paddingLeft: '0px', paddingRight: '0px' }}>
-      {headlines.length === 0 && (
+      {newHeadlines.length === 0 && (
         <Grid.Container gap={2} justify="center">
           <Grid>
             <Loading type="spinner" size="lg" />
@@ -29,8 +43,8 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
         </Grid.Container>
       )}
       <Grid.Container gap={2} justify="center">
-        {headlines &&
-          headlines.map((headline, index) => (
+        {newHeadlines &&
+          newHeadlines.map((headline, index) => (
             <Grid xs={12} sm={6} md={4} lg={3} key={index}>
               <HeadlineCard
                 bgImage={index % 2 === 0}
@@ -43,13 +57,51 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
           ))
         }
       </Grid.Container>
+      {!fetching && <Grid.Container gap={2} justify="center">
+        <Button.Group color="warning" size='xs'>
+          <Button
+            onClick={() => {
+              fetchMoreHeadlines("1", "_all")
+            }}
+          >1h
+          </Button>
+          <Button
+            onClick={() => {
+              fetchMoreHeadlines("2", "_all")
+            }}
+          >2h
+          </Button>
+        </Button.Group>
+        <Button.Group color="success" size='xs'>
+          <Button
+            onClick={() => {
+              fetchMoreHeadlines()
+            }}
+          >⛲
+          </Button>
+        </Button.Group>
+        <Button.Group color="error" size='xs'>
+          <Button
+            onClick={() => {
+              fetchMoreHeadlines("12", "_all")
+            }}
+          >12h
+          </Button>
+          <Button
+            onClick={() => {
+              fetchMoreHeadlines("24", "_all")
+            }}
+          >24h
+          </Button>
+        </Button.Group>
+      </Grid.Container>}
       <Button
         auto
         ghost
         onClick={() => backToTop()}
         css={{ position: 'fixed', bottom: '20px', right: '10px' }}
       >
-        Top
+        Top ({newHeadlines.length})
       </Button>
     </Container >
   )

@@ -1,4 +1,3 @@
-/* eslint-disable no-var */
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import { supabase } from '@services/supabase'
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT'
