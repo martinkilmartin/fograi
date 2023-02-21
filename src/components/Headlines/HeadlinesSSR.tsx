@@ -25,7 +25,6 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
       .select('*')
     setNewHeadlines([...data as Array<Headline>]);
     setFetching(false)
-    backToTop()
   }
 
   const backToTop = () => {
@@ -35,7 +34,7 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
 
   return (
     <Container lg css={{ paddingLeft: '0px', paddingRight: '0px' }}>
-      {newHeadlines.length === 0 && (
+      {(newHeadlines.length === 0 || fetching) && (
         <Grid.Container gap={2} justify="center">
           <Grid>
             <Loading type="spinner" size="lg" />
@@ -95,6 +94,13 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
           </Button>
         </Button.Group>
       </Grid.Container>}
+      {fetching && (
+        <Grid.Container gap={2} justify="center">
+          <Grid>
+            <Loading type="spinner" size="lg" />
+          </Grid>
+        </Grid.Container>
+      )}
       <Button
         auto
         ghost
