@@ -37,7 +37,7 @@ const About = ({ title }: Props): JSX.Element => (
       <h3 className="mt-3 text-2xl">🇦🇺 🇨🇦 🇮🇳 🇮🇪 🇳🇿 🇬🇧 🇺🇸</h3>
       <p className="mt-1">
         This website continually lists the main headline of{' '}
-        <b>{OZ_SOURCES_SIZE}</b> Australian, <b>{CA_SOURCES_SIZE}</b> Canadian, <b>{IN_SOURCES_SIZE}</b> Indian, <b>{IE_SOURCES_SIZE}</b> Irish, {NZ_SOURCES_SIZE} New Zealand, <b>
+        <b>{OZ_SOURCES_SIZE}</b> Australian, <b>{CA_SOURCES_SIZE}</b> Canadian, <b>{IN_SOURCES_SIZE}</b> Indian, <b>{IE_SOURCES_SIZE}</b> Irish, <b>{NZ_SOURCES_SIZE}</b> New Zealand, <b>
           {UK_SOURCES_SIZE}</b> UK and <b>{US_SOURCES_SIZE}</b> USA online news sources.
       </p>
       <h3 className="mt-3 text-2xl">📝 📧 📨 📩 📤 📥</h3>
