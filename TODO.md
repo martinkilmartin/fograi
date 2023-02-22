@@ -15,3 +15,10 @@
 
 * share feature
 
+* max out urls; one per:
+  * country
+    * region
+  * news source
+  * category
+  * language
+
