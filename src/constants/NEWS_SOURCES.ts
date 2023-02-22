@@ -2218,6 +2218,126 @@ export const NZNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'NZ_HBT',
+    {
+      name: 'Hawke’s Bay Today',
+      url: 'https://www.nzherald.co.nz/hawkes-bay-today',
+      est: 1999,
+      about:
+        'Latest Napier, Hasting and Hawkes Bay news including local news, business, sport, lifestyle, entertainment and more.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_AGO',
+    {
+      name: 'Ashburton Guardian',
+      url: 'https://www.guardianonline.co.nz/',
+      est: 1879,
+      about:
+        'News, online, all the time.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_BOPT',
+    {
+      name: 'Bay of Plenty Times ',
+      url: 'https://www.nzherald.co.nz/bay-of-plenty-times',
+      est: 1872,
+      about:
+        'Latest Tauranga and Bay of Plenty news including local news, business, sport, lifestyle, entertainment and more.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_TGH',
+    {
+      name: 'The Gisborne Herald',
+      url: 'https://www.gisborneherald.co.nz/',
+      est: 1874,
+      about:
+        'Daily evening newspaper for Gisborne and its environs',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_TNA',
+    {
+      name: 'The Northern Advocate',
+      url: 'https://www.nzherald.co.nz/northern-advocate',
+      est: 1902,
+      about:
+        'Local and regional news from the Northland region, including Whangarei, far north and Kaipara.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_OM',
+    {
+      name: 'Oamaru Mail',
+      url: 'https://www.oamarumail.co.nz/',
+      est: 1876,
+      about:
+        'Voice of the North Otago community for more than 130 years. A vibrant newspaper which reflects the interests of its population, from the arts and sport to local issues, tourism and farming.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_WTA',
+    {
+      name: 'Wairarapa Times-Age',
+      url: 'https://times-age.co.nz/',
+      est: 1878,
+      about:
+        'Wairarapa\'s source of local news',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_WC',
+    {
+      name: 'Whanganui Chronicle',
+      url: 'https://www.nzherald.co.nz/whanganui-chronicle/',
+      est: 1856,
+      about:
+        'Local and regional news from the Whanganui region.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_RDP',
+    {
+      name: 'Rotorua Daily Post',
+      url: 'https://www.nzherald.co.nz/rotorua-daily-post',
+      est: 1885,
+      about:
+        'Local and regional news from the Rotorua region, including Rotorua, Whakatane and Taupo.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_GMS',
+    {
+      name: 'Greymouth Star',
+      url: 'https://www.greystar.co.nz/',
+      est: 1866,
+      about:
+        'Daily evening (Monday-Saturday) newspaper circulating throughout the West Coast.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
 ])
 
 export const OZNewsSources = new Map<string, NewsSource>([
@@ -4771,6 +4891,126 @@ export const AllNewsSources = new Map<string, NewsSource>([
       est: 1861,
       about:
         'New Zealand\'s oldest daily newspaper. Strong local Otago news coverage combined with national and international news.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_HBT',
+    {
+      name: 'Hawke’s Bay Today',
+      url: 'https://www.nzherald.co.nz/hawkes-bay-today',
+      est: 1999,
+      about:
+        'Latest Napier, Hasting and Hawkes Bay news including local news, business, sport, lifestyle, entertainment and more.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_AGO',
+    {
+      name: 'Ashburton Guardian',
+      url: 'https://www.guardianonline.co.nz/',
+      est: 1879,
+      about:
+        'News, online, all the time.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_BOPT',
+    {
+      name: 'Bay of Plenty Times ',
+      url: 'https://www.nzherald.co.nz/bay-of-plenty-times',
+      est: 1872,
+      about:
+        'Latest Tauranga and Bay of Plenty news including local news, business, sport, lifestyle, entertainment and more.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_TGH',
+    {
+      name: 'The Gisborne Herald',
+      url: 'https://www.gisborneherald.co.nz/',
+      est: 1874,
+      about:
+        'Daily evening newspaper for Gisborne and its environs',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_TNA',
+    {
+      name: 'The Northern Advocate',
+      url: 'https://www.nzherald.co.nz/northern-advocate',
+      est: 1902,
+      about:
+        'Local and regional news from the Northland region, including Whangarei, far north and Kaipara.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_OM',
+    {
+      name: 'Oamaru Mail',
+      url: 'https://www.oamarumail.co.nz/',
+      est: 1876,
+      about:
+        'Voice of the North Otago community for more than 130 years. A vibrant newspaper which reflects the interests of its population, from the arts and sport to local issues, tourism and farming.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_WTA',
+    {
+      name: 'Wairarapa Times-Age',
+      url: 'https://times-age.co.nz/',
+      est: 1878,
+      about:
+        'Wairarapa\'s source of local news',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_WC',
+    {
+      name: 'Whanganui Chronicle',
+      url: 'https://www.nzherald.co.nz/whanganui-chronicle/',
+      est: 1856,
+      about:
+        'Local and regional news from the Whanganui region.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_RDP',
+    {
+      name: 'Rotorua Daily Post',
+      url: 'https://www.nzherald.co.nz/rotorua-daily-post',
+      est: 1885,
+      about:
+        'Local and regional news from the Rotorua region, including Rotorua, Whakatane and Taupo.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NZ_GMS',
+    {
+      name: 'Greymouth Star',
+      url: 'https://www.greystar.co.nz/',
+      est: 1866,
+      about:
+        'Daily evening (Monday-Saturday) newspaper circulating throughout the West Coast.',
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
     },
