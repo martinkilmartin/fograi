@@ -1,5 +1,4 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
-import { supabase } from '@services/supabase'
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT'
 import { Container } from '@layouts/Container'
 import { Page } from '@layouts/Page'
@@ -16,11 +15,15 @@ const HomePage = ({ headlines }: InferGetServerSidePropsType<typeof getServerSid
 
 export default HomePage
 
-export const getServerSideProps: GetServerSideProps<{ headlines: Array<Headline> }> = async () => {
-  const { data } = await supabase
-    .from(`last_24_hours`)
-    .select('*')
-  const headlines: Array<Headline> = [...data as Array<Headline>];
+export const getServerSideProps: GetServerSideProps<{ headlines: Array<Headline> }> = async ({ req, res }) => {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
+  const host = req.headers.host
+  const apiRs = await fetch(`http://${host}/api`);
+  const data = await apiRs.json();
+  const headlines: Array<Headline> = data.headlines;
   return {
     props: { headlines },
   }
