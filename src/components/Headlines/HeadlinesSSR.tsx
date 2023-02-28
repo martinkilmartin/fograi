@@ -82,7 +82,7 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
         onClick={() => backToTop()}
         css={{ position: 'fixed', bottom: '20px', right: '10px' }}
       >
-        Top ({newHeadlines.length})
+        Top
       </Button>
     </Container >
   )
