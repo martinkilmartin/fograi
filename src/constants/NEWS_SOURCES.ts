@@ -339,7 +339,7 @@ export const CANewsSources = new Map<string, NewsSource>([
     },
   ],
   [
-    'CA_RXWN',
+    'CA_RSEX',
     {
       name: 'The Russian Express Weekly Newspaper',
       url: 'https://russianexpress.net',
@@ -3016,7 +3016,7 @@ export const AllNewsSources = new Map<string, NewsSource>([
     },
   ],
   [
-    'CA_RXWN',
+    'CA_RSEX',
     {
       name: 'The Russian Express Weekly Newspaper',
       url: 'https://russianexpress.net',

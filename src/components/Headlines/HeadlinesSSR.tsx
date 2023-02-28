@@ -1,5 +1,4 @@
 import { Headline } from 'src/types'
-import { supabase } from '@services/supabase'
 import { HeadlineCard } from '@components/Card'
 import {
   Button,
@@ -9,6 +8,7 @@ import {
   Spacer,
 } from '@nextui-org/react'
 import { useState } from 'react'
+import { pagination } from '@lib/getHeadlines'
 
 type Props = {
   headlines: Array<Headline>
@@ -18,13 +18,16 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
   const [fetching, setFetching] = useState(false)
   const [newHeadlines, setNewHeadlines] = useState<Headline[]>(headlines)
 
-  const fetchMoreHeadlines = async (period = "24", all = "") => {
-    setFetching(true)
-    const { data } = await supabase
-      .from(`last_${period}_hours${all}`)
-      .select('*')
-    setNewHeadlines([...data as Array<Headline>]);
-    setFetching(false)
+  const fetchMoreHeadlines = async () => {
+    setFetching(true);
+    const { data } = await pagination(newHeadlines.length, 8);
+    const mergedHeadlines = [...newHeadlines, ...data]
+    setNewHeadlines([
+      ...new Map(
+        mergedHeadlines.map((item: Headline) => [item['id'], item])
+      ).values(),
+    ])
+    setFetching(false);
   }
 
   const backToTop = () => {
@@ -57,40 +60,12 @@ const HeadlinesSSR = ({ headlines }: Props): JSX.Element => {
         }
       </Grid.Container>
       {!fetching && <Grid.Container gap={2} justify="center">
-        <Button.Group color="warning" size='xs'>
-          <Button
-            onClick={() => {
-              fetchMoreHeadlines("1", "_all")
-            }}
-          >1h
-          </Button>
-          <Button
-            onClick={() => {
-              fetchMoreHeadlines("2", "_all")
-            }}
-          >2h
-          </Button>
-        </Button.Group>
-        <Button.Group color="success" size='xs'>
+        <Button.Group color="success">
           <Button
             onClick={() => {
               fetchMoreHeadlines()
             }}
-          >⛲
-          </Button>
-        </Button.Group>
-        <Button.Group color="error" size='xs'>
-          <Button
-            onClick={() => {
-              fetchMoreHeadlines("12", "_all")
-            }}
-          >12h
-          </Button>
-          <Button
-            onClick={() => {
-              fetchMoreHeadlines("24", "_all")
-            }}
-          >24h
+          >{newHeadlines.length}
           </Button>
         </Button.Group>
       </Grid.Container>}

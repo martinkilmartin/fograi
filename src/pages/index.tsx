@@ -21,7 +21,7 @@ export const getServerSideProps: GetServerSideProps<{ headlines: Array<Headline>
     'public, s-maxage=10, stale-while-revalidate=59'
   )
   const host = req.headers.host
-  const apiRs = await fetch(`https://${host}/api`);
+  const apiRs = await fetch(`http://${host}/api/headlines`);
   const data = await apiRs.json();
   const headlines: Array<Headline> = data.headlines;
   return {
