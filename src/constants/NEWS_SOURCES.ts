@@ -1629,7 +1629,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'West Cork People',
       url: 'https://westcorkpeople.ie/',
       est: 2005,
-      about: 'West Cork\'s Free Newspaper.',
+      about: 'Monthly community paper distributed all over West Cork.',
       emos: ['💻', '🇮🇪'],
     },
   ],
