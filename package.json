@@ -24,6 +24,7 @@
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-query": "^3.39.3",
     "sendpulse-api": "^1.1.5",
     "sharp": "^0.30.4",
     "theme-change": "^2.0.2",
