@@ -1,5 +1,4 @@
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT'
-import { Container } from '@layouts/Container'
 import { Page } from '@layouts/Page'
 import React, { useEffect, useRef, useCallback } from "react";
 import { useHeadlines } from "../hooks/useHeadlines";
