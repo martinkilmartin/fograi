@@ -49,9 +49,8 @@ const HomePage: React.FC = () => {
   const allHeadlines = data?.pages.flatMap((page) => page);
   return (
     <Page title={APP_TITLE} heading={TAG_LINE}>
-      {allHeadlines && <HeadlineList headlines={allHeadlines} loading={isLoading} />}
+      <HeadlineList headlines={allHeadlines} loading={isLoading} fetching={isFetching} error={error} />
       <div ref={loadMoreRef} />
-      {error && <div>Error: {error.message}</div>}
     </Page>
   );
 };
