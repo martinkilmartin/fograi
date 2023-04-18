@@ -1,5 +1,6 @@
 import React from "react";
 import {
+    Button,
     Grid,
     Loading,
 } from '@nextui-org/react'
@@ -21,6 +22,11 @@ const LoadingSpinner: React.FC = () => (<Grid.Container gap={2} justify="center"
 </Grid.Container>)
 
 export const HeadlineList: React.FC<HeadlineListProps> = ({ headlines, loading, fetching, error }) => {
+
+    const backToTop = () => {
+        document.body.scrollTop = 0 // For Safari
+        document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
+    }
     if (loading) {
         return <LoadingSpinner />
     }
@@ -39,6 +45,14 @@ export const HeadlineList: React.FC<HeadlineListProps> = ({ headlines, loading, 
             ))}
         </ul>
             {fetching && <LoadingSpinner />}
+            <Button
+                auto
+                ghost
+                onClick={() => backToTop()}
+                css={{ position: 'fixed', bottom: '20px', right: '10px' }}
+            >
+                Top
+            </Button>
         </>
     }
 };
