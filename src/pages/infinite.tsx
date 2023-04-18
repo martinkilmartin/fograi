@@ -1,5 +1,5 @@
 // pages/index.tsx
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 import { useHeadlines } from "../hooks/useHeadlines";
 import { HeadlineList } from "../components/Headlines/HeadlineList";
 
@@ -16,22 +16,33 @@ const IndexPage: React.FC = () => {
         hasNextPage,
     } = useHeadlines(0, LIMIT);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (
-                window.innerHeight + document.documentElement.scrollTop !==
-                document.documentElement.offsetHeight ||
-                isFetching ||
-                !hasNextPage
-            ) {
-                return;
-            }
-            fetchNextPage();
-        };
+    const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [isFetching, hasNextPage, fetchNextPage]);
+    const handleObserver = useCallback(
+        (entries: IntersectionObserverEntry[]) => {
+            const first = entries[0];
+            if (first.isIntersecting && hasNextPage && !isFetching) {
+                fetchNextPage();
+            }
+        },
+        [isFetching, hasNextPage, fetchNextPage]
+    );
+
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(handleObserver);
+        const currentRef = loadMoreRef.current;
+
+        if (currentRef) {
+            observer.observe(currentRef);
+        }
+        return () => {
+            if (currentRef) {
+                observer.unobserve(currentRef);
+            }
+        };
+    }, [handleObserver]);
+
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -47,7 +58,7 @@ const IndexPage: React.FC = () => {
         <div>
             <h1>Headlines</h1>
             {allHeadlines && <HeadlineList headlines={allHeadlines} />}
-            {isFetching && <div>Loading more headlines...</div>}
+            <div ref={loadMoreRef}>{isFetching && <div>Loading more headlines...</div>}</div>
         </div>
     );
 };
