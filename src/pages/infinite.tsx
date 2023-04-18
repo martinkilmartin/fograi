@@ -30,7 +30,9 @@ const IndexPage: React.FC = () => {
 
 
     useEffect(() => {
-        const observer = new IntersectionObserver(handleObserver);
+        const observer = new IntersectionObserver(handleObserver, {
+            rootMargin: "400px", // Adjust this value to trigger loading sooner
+        });
         const currentRef = loadMoreRef.current;
 
         if (currentRef) {
