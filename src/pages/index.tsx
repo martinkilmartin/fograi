@@ -1,30 +1,66 @@
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT'
 import { Container } from '@layouts/Container'
 import { Page } from '@layouts/Page'
-import { HeadlinesSSR } from '@components/Headlines'
-import { Headline } from 'src/types'
+import React, { useEffect, useRef, useCallback } from "react";
+import { useHeadlines } from "../hooks/useHeadlines";
+import { HeadlineList } from "../components/Headlines/HeadlineList";
 
-const HomePage = ({ headlines }: InferGetServerSidePropsType<typeof getServerSideProps>): JSX.Element => (
-  <Container>
+const LIMIT = 6;
+
+const HomePage: React.FC = () => {
+  const {
+    data,
+    error,
+    isLoading,
+    isFetching,
+    fetchNextPage,
+    hasNextPage,
+  } = useHeadlines(0, LIMIT);
+
+  const loadMoreRef = useRef<HTMLDivElement | null>(null);
+
+  const handleObserver = useCallback(
+    (entries: IntersectionObserverEntry[]) => {
+      const first = entries[0];
+      if (first.isIntersecting && hasNextPage && !isFetching) {
+        fetchNextPage();
+      }
+    },
+    [isFetching, hasNextPage, fetchNextPage]
+  );
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleObserver, {
+      rootMargin: "400px", // Adjust this value to trigger loading sooner
+    });
+    const currentRef = loadMoreRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [handleObserver]);
+
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  const allHeadlines = data?.pages.flatMap((page) => page);
+  return (<Container>
     <Page title={APP_TITLE} heading={TAG_LINE}>
-      <HeadlinesSSR headlines={headlines} />
+      {allHeadlines && <HeadlineList headlines={allHeadlines} />}
     </Page>
-  </Container>
-);
+  </Container>);
+};
 
 export default HomePage
-
-export const getServerSideProps: GetServerSideProps<{ headlines: Array<Headline> }> = async ({ req, res }) => {
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
-  )
-  const host = req.headers.host
-  const apiRs = await fetch(`http://${host}/api/headlines`);
-  const data = await apiRs.json();
-  const headlines: Array<Headline> = data.headlines;
-  return {
-    props: { headlines },
-  }
-}
