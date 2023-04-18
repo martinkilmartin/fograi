@@ -51,7 +51,7 @@ export const HeadlineList: React.FC<HeadlineListProps> = ({ headlines, loading, 
                 onClick={() => backToTop()}
                 css={{ position: 'fixed', bottom: '20px', right: '10px' }}
             >
-                Top
+                Top ({headlines?.length})
             </Button>
         </>
     }
