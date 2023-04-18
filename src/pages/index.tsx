@@ -47,18 +47,12 @@ const HomePage: React.FC = () => {
   }, [handleObserver]);
 
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
-
   const allHeadlines = data?.pages.flatMap((page) => page);
   return (<Container>
     <Page title={APP_TITLE} heading={TAG_LINE}>
-      {allHeadlines && <HeadlineList headlines={allHeadlines} />}
+      {allHeadlines && <HeadlineList headlines={allHeadlines} loading={isLoading} />}
+      <div ref={loadMoreRef} />
+      {error && <div>Error: {error.message}</div>}
     </Page>
   </Container>);
 };

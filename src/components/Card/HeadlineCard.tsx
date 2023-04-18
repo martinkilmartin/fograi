@@ -42,22 +42,36 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
   else if (country === 'us') flag = '🇺🇸'
   return (
     <Card isHoverable variant="bordered">
-      <Card.Header style={{ backgroundColor: theme?.colors.neutralLightHover.value, }}>
-        <Text size="$3xl" weight="bold" transform="uppercase">
-          {flag}&nbsp;&nbsp;
-        </Text>
-        <a href={sourceURL} target="_blank" rel="noreferrer">
-          <Image src={`/img/ns/${headline.source}.${suffix}`} width={300} height={64} style={{
-            maxWidth: '33%',
-            height: 'auto',
-            maxHeight: '2rem',
-          }} alt={sourceName ?? ""} onError={() => setSuffix('png')} />
-        </a>
-        <Text
-          css={{ position: 'absolute', right: 8 }}
+      <Card.Header style={{ backgroundColor: theme?.colors.neutralLightHover.value }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: "100%",
+          }}
         >
-          <b>{diffDisplay(DATE)}</b>
-        </Text>
+          <Text size="$3xl" weight="bold" transform="uppercase">
+            {flag}&nbsp;&nbsp;
+          </Text>
+          <div style={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
+            <a href={sourceURL} target="_blank" rel="noreferrer">
+              <Image
+                src={`/img/ns/${headline.source}.${suffix}`}
+                width={300}
+                height={64}
+                style={{
+                  maxHeight: "$3xl",
+                }}
+                alt={sourceName ?? ""}
+                onError={() => setSuffix("png")}
+              />
+            </a>
+          </div>
+          <Text>
+            <b>{diffDisplay(DATE)}</b>
+          </Text>
+        </div>
       </Card.Header>
       <Card.Body css={{ py: '$2' }}>
         <a href={headline.link} target="_blank" rel="noreferrer" style={{ overflow: 'auto' }}>
