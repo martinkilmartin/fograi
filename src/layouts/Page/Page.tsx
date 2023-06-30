@@ -12,7 +12,7 @@ type Props = {
 }
 
 const Page = ({ title, heading, children }: Props): JSX.Element => (
-  <Container xl>
+  <Container xl style={{ padding: '0' }}>
     <HTMLHead title={title} description={heading} />
     <MyNavbar />
     <Grid.Container justify="center">{children}</Grid.Container>
