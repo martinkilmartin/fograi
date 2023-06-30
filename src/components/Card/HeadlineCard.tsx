@@ -41,7 +41,7 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
   else if (country === 'uk') flag = '🇬🇧'
   else if (country === 'us') flag = '🇺🇸'
   return (
-    <Card isHoverable variant="bordered">
+    <Card isHoverable variant="bordered" style={{ borderRadius: '0' }}>
       <Card.Header style={{ backgroundColor: theme?.colors.neutralLightHover.value }}>
         <div
           style={{
@@ -99,7 +99,7 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
           </Row>
         </a>
       </Card.Body>
-      <Card.Footer style={{ backgroundColor: theme?.colors.neutralLight.value, }}>
+      <Card.Footer style={{ backgroundColor: theme?.colors.neutralLight.value, borderRadius: '0' }}>
         <Grid.Container justify="center">
           <Grid xs={4} justify="center">
             <Image
