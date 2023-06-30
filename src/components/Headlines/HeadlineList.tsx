@@ -83,13 +83,13 @@ export const HeadlineList: React.FC<HeadlineListProps> = ({ headlines, loading, 
         return <div>No headlines!</div>
     }
     else {
-        return <><ul style={{ margin: '0' }}>
+        return <><Grid.Container gap={2} justify="center" style={{ padding: '0' }}>
             {headlines?.map((headline) => (
-                <li key={headline.id}>
+                <Grid xs={12} md={6} lg={4} xl={3} key={headline.id}>
                     <HeadlineCard headline={headline} country={headline.source.substring(0, 2).toLowerCase() as 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us'} />
-                </li>
+                </Grid>
             ))}
-        </ul>
+        </Grid.Container>
             {fetching && <LoadingSpinner />}
             <Button
                 auto
@@ -98,7 +98,6 @@ export const HeadlineList: React.FC<HeadlineListProps> = ({ headlines, loading, 
                 css={{ position: 'fixed', bottom: '20px', right: '10px' }}
             >
                 Top ({headlines?.length})
-            </Button>
-        </>
+            </Button></>
     }
 };
