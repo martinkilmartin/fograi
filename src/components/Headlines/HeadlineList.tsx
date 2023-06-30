@@ -37,7 +37,7 @@ export const HeadlineList: React.FC<HeadlineListProps> = ({ headlines, loading, 
         return <div>No headlines!</div>
     }
     else {
-        return <><ul>
+        return <><ul style={{ margin: '0' }}>
             {headlines?.map((headline) => (
                 <li key={headline.id}>
                     <HeadlineCard headline={headline} key={headline.id} country={headline.source.substring(0, 2).toLowerCase() as 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us'} />
