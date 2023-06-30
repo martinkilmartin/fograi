@@ -3,10 +3,10 @@ import {
     Button,
     Grid,
     Loading,
-} from '@nextui-org/react'
+} from '@nextui-org/react';
+import { HeadlineCard } from '@components/Card';
 import { Headline } from "../../types/Headline";
 
-import { HeadlineCard } from '@components/Card'
 
 interface HeadlineListProps {
     headlines: Headline[] | undefined;
@@ -19,11 +19,10 @@ const LoadingSpinner: React.FC = () => (<Grid.Container gap={2} justify="center"
     <Grid>
         <Loading type="spinner" size="lg" />
     </Grid>
-</Grid.Container>)
+</Grid.Container>);
 
 const LoadingGrid = () => {
     const cells = new Array(6).fill(0);
-
     return (
         <div className="loading-grid">
             {cells.map((cell, index) => (
@@ -87,7 +86,7 @@ export const HeadlineList: React.FC<HeadlineListProps> = ({ headlines, loading, 
         return <><ul style={{ margin: '0' }}>
             {headlines?.map((headline) => (
                 <li key={headline.id}>
-                    <HeadlineCard headline={headline} key={headline.id} country={headline.source.substring(0, 2).toLowerCase() as 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us'} />
+                    <HeadlineCard headline={headline} country={headline.source.substring(0, 2).toLowerCase() as 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us'} />
                 </li>
             ))}
         </ul>

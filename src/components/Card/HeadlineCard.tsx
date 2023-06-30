@@ -1,11 +1,10 @@
-
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Card, Grid, Row, Text, useTheme } from '@nextui-org/react'
 import diffDisplay from '@lib/time-format'
 import { Headline } from 'src/types'
 
 import { AllNewsSources } from '@constants/NEWS_SOURCES'
-import { useState } from 'react'
 
 import bookmarkImg from '../../../public/img/ic/bookmark.svg'
 import bookmarkedImg from '../../../public/img/ic/bookmarked.svg'
@@ -26,7 +25,7 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
   const [suffix, setSuffix] = useState<string>('svg')
   const [leadImgErr, setLeadImgErr] = useState<boolean>(false)
   const [liked, setLiked] = useState<boolean>(false)
-  const [bookmarked, setBookmarked] = useState<boolean>(false)
+  const [copied, setCopied] = useState<boolean>(false)
   const DATE = new Date(headline.created_at)
   const country = headline.source.substring(0, 2).toLowerCase()
   let flag
@@ -40,6 +39,46 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
   else if (country === 'oz') flag = '🇦🇺'
   else if (country === 'uk') flag = '🇬🇧'
   else if (country === 'us') flag = '🇺🇸'
+
+  useEffect(() => {
+    const likedPosts = JSON.parse(localStorage.getItem('likedPosts') || '[]')
+    setLiked(likedPosts.includes(headline.id))
+  }, [headline.id])
+
+  const toggleLike = () => {
+    const likedPosts = JSON.parse(localStorage.getItem('likedPosts') || '[]')
+    if (likedPosts.includes(headline.id)) {
+      const index = likedPosts.indexOf(headline.id)
+      likedPosts.splice(index, 1)
+    } else {
+      likedPosts.push(headline.id)
+    }
+    localStorage.setItem('likedPosts', JSON.stringify(likedPosts))
+    setLiked(!liked)
+  }
+
+  const copyToClipboard = async () => {
+    if (navigator.clipboard) {
+      await navigator.clipboard.writeText(headline.link);
+      setCopied(true);
+      alert('The link has been copied to your clipboard. You can add paste it to your bookmarks: ' + headline.link);
+    } else {
+      setCopied(false);
+      alert('Sorry, copying to clipboard is not supported in your browser. You can manually copy the link: ' + headline.link);
+    }
+  }
+
+  const share = async () => {
+    if (navigator.share) {
+      await navigator.share({
+        title: headline.headline,
+        url: headline.link
+      })
+    } else {
+      alert(`The Web Share API is not supported by your browser: ${window.navigator.userAgent}.`)
+    }
+  }
+
   return (
     <Card isHoverable variant="bordered" style={{ borderRadius: '0' }}>
       <Card.Header style={{ backgroundColor: theme?.colors.neutralLightHover.value }}>
@@ -102,19 +141,20 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
       <Card.Footer style={{ backgroundColor: theme?.colors.neutralLight.value, borderRadius: '0' }}>
         <Grid.Container justify="center">
           <Grid xs={4} justify="center">
-            <Image
-              src={liked ? likedImg : likeImg}
-              alt={liked ? "Remove like" : "Like"}
-              height={32}
-              onClick={() => setLiked(!liked)}
-            />
+            <div
+              onClick={toggleLike}>
+              <Image
+                src={liked ? likedImg : likeImg}
+                alt={liked ? "Remove like" : "Like"}
+                height={32}
+              /></div>
           </Grid>
           <Grid xs={4} justify="center">
             <Image
-              src={bookmarked ? bookmarkedImg : bookmarkImg}
-              alt={bookmarked ? "Remove Bookmark" : "Bookmark"}
+              src={copied ? bookmarkedImg : bookmarkImg}
+              alt={copied ? "Remove Bookmark" : "Bookmark"}
               height={32}
-              onClick={() => setBookmarked(!bookmarked)}
+              onClick={copyToClipboard}
             />
           </Grid>
           <Grid xs={4} justify="center">
@@ -122,6 +162,7 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
               src={shareImg}
               alt="Share"
               height={32}
+              onClick={share}
             />
           </Grid>
         </Grid.Container>

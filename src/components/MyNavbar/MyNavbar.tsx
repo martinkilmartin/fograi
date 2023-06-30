@@ -1,5 +1,6 @@
 import { Link, Navbar, Text, Switch, useTheme, Avatar } from '@nextui-org/react'
 import { useTheme as useNextTheme } from 'next-themes'
+import HeadlineLogoFilled from "../SVG/HeadineLogoFilled"
 
 export default function MyNavbar(): JSX.Element {
   const { setTheme } = useNextTheme()
@@ -10,8 +11,9 @@ export default function MyNavbar(): JSX.Element {
       <Navbar isBordered={isDark} shouldHideOnScroll variant="sticky">
         <Navbar.Brand>
           <Navbar.Toggle aria-label="toggle navigation" showIn="sm" />
+          <HeadlineLogoFilled />
           <Text b color="inherit" hideIn="xs">
-            <Link href="/">📢&nbsp;fógr.aí</Link>
+            <Link href="/">fógr.aí</Link>
           </Text>
         </Navbar.Brand>
         <Navbar.Content enableCursorHighlight hideIn="sm" variant="underline">
