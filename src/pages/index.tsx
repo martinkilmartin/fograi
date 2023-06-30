@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleObserver, {
-      rootMargin: "400px", // Adjust this value to trigger loading sooner
+      rootMargin: "50%",
     });
     const currentRef = loadMoreRef.current;
 

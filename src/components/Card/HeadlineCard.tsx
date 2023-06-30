@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { Card, Grid, Row, Text, useTheme } from '@nextui-org/react'
+import { Badge, Card, Grid, Row, Text, useTheme } from '@nextui-org/react'
 import diffDisplay from '@lib/time-format'
 import { Headline } from 'src/types'
 
@@ -93,7 +93,7 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
           <Text size="$3xl" weight="bold" transform="uppercase">
             {flag}&nbsp;&nbsp;
           </Text>
-          <div style={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
+          <div style={{ flexGrow: 1, display: "flex", justifyContent: "center", marginRight: "10px" }}>
             <a href={sourceURL} target="_blank" rel="noreferrer">
               <Image
                 src={`/img/ns/${headline.source}.${suffix}`}
@@ -107,9 +107,9 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
               />
             </a>
           </div>
-          <Text>
+          <Badge color="primary" variant="bordered">
             <b>{diffDisplay(DATE)}</b>
-          </Text>
+          </Badge>
         </div>
       </Card.Header>
       <Card.Body css={{ py: '$2' }}>

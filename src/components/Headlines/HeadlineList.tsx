@@ -1,5 +1,6 @@
 import React from "react";
 import {
+    Badge,
     Button,
     Grid,
     Loading,
@@ -91,13 +92,16 @@ export const HeadlineList: React.FC<HeadlineListProps> = ({ headlines, loading, 
             ))}
         </Grid.Container>
             {fetching && <LoadingSpinner />}
+            <Badge aria-label="The number of headlines loaded" variant="bordered" css={{ position: 'fixed', bottom: '20px', left: '10px' }}>{headlines?.length}</Badge>
             <Button
+                aria-label="Back to top"
                 auto
                 ghost
                 onClick={() => backToTop()}
                 css={{ position: 'fixed', bottom: '20px', right: '10px' }}
+                icon={'⬆️'}
             >
-                Top ({headlines?.length})
-            </Button></>
+            </Button>
+        </>
     }
 };
