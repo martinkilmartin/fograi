@@ -92,7 +92,7 @@ export const HeadlineList: React.FC<HeadlineListProps> = ({ headlines, loading, 
             ))}
         </Grid.Container>
             {fetching && <LoadingSpinner />}
-            <Badge aria-label="The number of headlines loaded" variant="bordered" css={{ position: 'fixed', bottom: '20px', left: '10px' }}>{headlines?.length}</Badge>
+            <Badge aria-label="The number of headlines loaded" variant="bordered" css={{ position: 'fixed', bottom: '20px', left: '10px' }}>{fetching ? <Loading type="gradient" size="xs"/> : headlines?.length}</Badge>
             <Button
                 aria-label="Back to top"
                 auto
