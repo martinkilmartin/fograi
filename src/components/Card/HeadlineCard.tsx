@@ -91,12 +91,12 @@ const HeadlineCard = ({ bgImage = false, headline, idx }: Props): JSX.Element =>
             width: "100%",
           }}
         >
-          <Text size="$3xl" weight="bold" transform="uppercase">
-            {flag}&nbsp;&nbsp;
-          </Text>
           {idx && <Badge color="primary" variant="bordered">
             <b>{'#' + idx}</b>
           </Badge>}
+          <Text size="$3xl" weight="bold" transform="uppercase">
+            &nbsp;{flag}&nbsp;
+          </Text>
           <div style={{ flexGrow: 1, display: "flex", justifyContent: "center", marginRight: "10px" }}>
             <a href={sourceURL} target="_blank" rel="noreferrer">
               <Image
