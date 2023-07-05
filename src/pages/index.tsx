@@ -45,7 +45,7 @@ const HomePage: React.FC = () => {
         hasNextPage &&
         loadMoreRef.current &&
         window.innerHeight + window.scrollY >=
-        loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight
+        (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) * 0.8
       ) {
         fetchNextPage();
       }
