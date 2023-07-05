@@ -18,9 +18,11 @@ type Props = {
   bgImage?: boolean
   country?: 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us'
   headline: Headline
+  idx?: number
+  total?: number
 }
 
-const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
+const HeadlineCard = ({ bgImage = false, headline, idx, total }: Props): JSX.Element => {
   const { theme } = useTheme();
   const [suffix, setSuffix] = useState<string>('svg')
   const [leadImgErr, setLeadImgErr] = useState<boolean>(false)
@@ -93,6 +95,9 @@ const HeadlineCard = ({ bgImage = false, headline }: Props): JSX.Element => {
           <Text size="$3xl" weight="bold" transform="uppercase">
             {flag}&nbsp;&nbsp;
           </Text>
+          {idx && total && <Badge color="primary" variant="bordered">
+            <b>{idx + '/' + total}</b>
+          </Badge>}
           <div style={{ flexGrow: 1, display: "flex", justifyContent: "center", marginRight: "10px" }}>
             <a href={sourceURL} target="_blank" rel="noreferrer">
               <Image

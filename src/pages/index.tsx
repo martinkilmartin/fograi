@@ -1,58 +1,76 @@
-import { APP_TITLE, TAG_LINE } from '@constants/CONTENT'
-import { Page } from '@layouts/Page'
-import React, { useEffect, useRef, useCallback } from "react";
-import { useHeadlines } from "../hooks/useHeadlines";
-import { HeadlineList } from "../components/Headlines/HeadlineList";
-
-const LIMIT = 6;
+import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
+import { Page } from '@layouts/Page';
+import React, { useEffect, useRef } from 'react';
+import { useInfiniteQuery } from 'react-query';
+import { useMediaQuery } from 'react-responsive';
+import { getHeadlines } from '@lib/getHeadlines';
+import { HeadlineList } from '../components/Headlines/HeadlineList';
+import { Headline } from '../types';
 
 const HomePage: React.FC = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
+  const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
+
+  let limit: number;
+
+  if (isMobile) {
+    limit = 3;
+  } else if (isTablet) {
+    limit = 6;
+  } else {
+    limit = 12;
+  }
+
   const {
     data,
-    error,
-    isLoading,
-    isFetching,
     fetchNextPage,
     hasNextPage,
-  } = useHeadlines(0, LIMIT);
+    isFetchingNextPage,
+    status,
+  } = useInfiniteQuery<Headline[], Error>(
+    'headlines',
+    ({ pageParam = null }) => getHeadlines(pageParam, limit),
+    {
+      getNextPageParam: (lastPage, _pages) =>
+        lastPage[lastPage.length - 1]?.created_at,
+    }
+  );
 
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
-  const handleObserver = useCallback(
-    (entries: IntersectionObserverEntry[]) => {
-      const first = entries[0];
-      if (first.isIntersecting && hasNextPage && !isFetching) {
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        !isFetchingNextPage &&
+        hasNextPage &&
+        loadMoreRef.current &&
+        window.innerHeight + window.scrollY >=
+        loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight
+      ) {
         fetchNextPage();
       }
-    },
-    [isFetching, hasNextPage, fetchNextPage]
-  );
-
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(handleObserver, {
-      rootMargin: "50%",
-    });
-    const currentRef = loadMoreRef.current;
-
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
     };
-  }, [handleObserver]);
 
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
 
   const allHeadlines = data?.pages.flatMap((page) => page);
+
   return (
     <Page title={APP_TITLE} heading={TAG_LINE}>
-      <HeadlineList headlines={allHeadlines} loading={isLoading} fetching={isFetching} error={error} />
+      <HeadlineList
+        headlines={allHeadlines}
+        loading={status === 'loading'}
+        fetching={isFetchingNextPage}
+        error={status === 'error' ? new Error() : null}
+      />
       <div ref={loadMoreRef} />
     </Page>
   );
 };
 
-export default HomePage
+export default HomePage;

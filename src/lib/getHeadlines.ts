@@ -14,3 +14,19 @@ export async function pagination(offset = 0, limit = 8) {
     const headlines: Array<Headline> = [...data as Array<Headline>];
     return { data: headlines };
 }
+
+export async function getHeadlines(lastSeen: string | null = null, limit = 8): Promise<Headline[]> {
+    try {
+        const { data, error } = await supabase.rpc('get_paginated_results', {
+            page_size: limit,
+            last_seen: lastSeen
+        });
+
+        if (error) throw error;
+
+        return data || [];
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
+}

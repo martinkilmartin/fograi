@@ -85,9 +85,9 @@ export const HeadlineList: React.FC<HeadlineListProps> = ({ headlines, loading, 
     }
     else {
         return <><Grid.Container gap={2} justify="center" style={{ padding: '0' }}>
-            {headlines?.map((headline) => (
+            {headlines?.map((headline, idx) => (
                 <Grid xs={12} md={6} lg={4} xl={3} key={headline.id}>
-                    <HeadlineCard headline={headline} country={headline.source.substring(0, 2).toLowerCase() as 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us'} />
+                    <HeadlineCard headline={headline} country={headline.source.substring(0, 2).toLowerCase() as 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us'} idx={idx + 1} total={headlines.length} />
                 </Grid>
             ))}
         </Grid.Container>
