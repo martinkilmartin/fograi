@@ -11,7 +11,7 @@ type Props = {
 }
 
 const Page = ({ title, heading, children }: Props): JSX.Element => (
-  <Container xl style={{ padding: '0', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+  <Container xl style={{ padding: '0', display: 'flex', flexDirection: 'column', minHeight: '100dvh' }}>
     <HTMLHead title={title} description={heading} />
     <MyNavbar />
     <Grid.Container justify="center" style={{ flex: '1 0 auto' }}>{children}</Grid.Container>
