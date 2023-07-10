@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Badge, Card, Grid, Row, Text, useTheme } from '@nextui-org/react'
 import diffDisplay from '@lib/time-format'
 import { Headline } from 'src/types'
-
+import { flags } from '@constants/FLAGS'
 import { AllNewsSources } from '@constants/NEWS_SOURCES'
 
 import bookmarkImg from '../../../public/img/ic/bookmark.svg'
@@ -30,17 +30,10 @@ const HeadlineCard = ({ bgImage = false, headline, idx, total }: Props): JSX.Ele
   const [copied, setCopied] = useState<boolean>(false)
   const DATE = new Date(headline.created_at)
   const country = headline.source.substring(0, 2).toLowerCase()
-  let flag
 
   const sourceURL = AllNewsSources.get(headline.source)?.url
   const sourceName = AllNewsSources.get(headline.source)?.name
-  if (country === 'ca') flag = '🇨🇦'
-  else if (country === 'ie') flag = '🇮🇪'
-  else if (country === 'in') flag = '🇮🇳'
-  else if (country === 'nz') flag = '🇳🇿'
-  else if (country === 'oz') flag = '🇦🇺'
-  else if (country === 'uk') flag = '🇬🇧'
-  else if (country === 'us') flag = '🇺🇸'
+  const flag = flags.get(country)
 
   useEffect(() => {
     const likedPosts = JSON.parse(localStorage.getItem('likedPosts') || '[]')
