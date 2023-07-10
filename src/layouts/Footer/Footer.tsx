@@ -12,7 +12,6 @@ const Footer = (): JSX.Element => (
     <style jsx>{`
         footer {
           width: 100%;
-          position: fixed;
           bottom: 0;
           background: #f8f9fa;
           padding: 10px 0;
