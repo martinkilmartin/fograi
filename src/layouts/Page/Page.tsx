@@ -1,5 +1,4 @@
 import { ReactNode } from 'react'
-
 import { Container, Grid } from '@nextui-org/react'
 import { HTMLHead } from '@components/HTMLHead'
 import { MyNavbar } from '@components/MyNavbar'
@@ -12,10 +11,10 @@ type Props = {
 }
 
 const Page = ({ title, heading, children }: Props): JSX.Element => (
-  <Container xl style={{ padding: '0' }}>
+  <Container xl style={{ padding: '0', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
     <HTMLHead title={title} description={heading} />
     <MyNavbar />
-    <Grid.Container justify="center">{children}</Grid.Container>
+    <Grid.Container justify="center" style={{ flex: '1 0 auto' }}>{children}</Grid.Container>
     <Footer />
   </Container>
 )
