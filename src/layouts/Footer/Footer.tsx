@@ -4,11 +4,21 @@ import { Copyright } from '@components/Copyright'
 import { FOOTER_LINKS } from '@constants/FOOTER_LINKS'
 
 const Footer = (): JSX.Element => (
-  <footer className="p-10 footer bg-primary text-primary-content footer-center">
+  <footer>
     <FooterLinks links={FOOTER_LINKS} />
     <div>
       <Copyright />
     </div>
+    <style jsx>{`
+        footer {
+          width: 100%;
+          position: fixed;
+          bottom: 0;
+          background: #f8f9fa;
+          padding: 10px 0;
+          text-align: center;
+        }
+      `}</style>
   </footer>
 )
 
