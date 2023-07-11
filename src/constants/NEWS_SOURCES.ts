@@ -10,6 +10,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Quotidien indépendant au Québec. Obtenir les toutes dernières actualités.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_LDVR.svg',
     },
   ],
   [
@@ -20,6 +21,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       est: 1764,
       about: 'The first and oldest newspaper in North America.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_QCTO.png',
     },
   ],
   [
@@ -30,6 +32,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       est: 1892,
       about: 'Publishes ongoing news and information to a global audience.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_TRTS.svg',
     },
   ],
   [
@@ -41,6 +44,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Engaging Canadians through coverage of news, politics, business, investing and lifestyle topics.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_TGAM.svg',
     },
   ],
   [
@@ -52,6 +56,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Sa mission est de produire une information de qualité accessible gratuitement au plus grand nombre.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_LPRS.svg',
     },
   ],
   [
@@ -63,6 +68,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Des nouvelles accessibles et complètes : sports, politique, spectacles, argent et judiciaire. Soyez toujours bien informé avec le Journal de Montréal.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_JMTL.svg',
     },
   ],
   [
@@ -74,6 +80,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Read latest national and international breaking news, updates, headlines, events & more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_MTGZ.svg',
     },
   ],
   [
@@ -85,6 +92,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Read latest national and international breaking news, updates, headlines, events & more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_VSUN.svg',
     },
   ],
   [
@@ -96,6 +104,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Latest breaking news, updates, and headlines on national and international events & more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_TPRV.svg',
     },
   ],
   [
@@ -107,6 +116,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Latest breaking news, updates, and headlines offering information on national and international events & more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_NPST.svg',
     },
   ],
   [
@@ -118,6 +128,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Read latest breaking news, updates, and headlines on national and international events & more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_CLHD.svg',
     },
   ],
   [
@@ -129,6 +140,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Read latest breaking news, updates, and headlines on national and international events & more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_OTCZ.svg',
     },
   ],
   [
@@ -140,6 +152,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Read latest breaking news, updates, and headlines on national and international events & more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_EDJL.svg',
     },
   ],
   [
@@ -151,6 +164,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Read latest breaking news, updates, and headlines on national and international events & more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_TSUN.svg',
     },
   ],
   [
@@ -162,10 +176,11 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         "Actualités, Chroniques, Affaires, Arts, Le Mag, Sports, Hockey junior, Opinions, Protégez-Vous, Nos recommandations, Jeunesse, Maison, Auto, Balados, ULaval Nouvelles, La Vitrine, ZONE, Je m'abonne, Événements Le Soleil.",
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_LSOL.svg',
     },
   ],
   [
-    'CA_SPEC',
+  'CA_SPEC',
     {
       name: 'The Hamilton Spectator',
       url: 'https://www.thespec.com/',
@@ -173,6 +188,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Daily breaking news, local stories, life, opinion, voices from the community, events and more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_SPEC.svg',
     },
   ],
   [
@@ -184,6 +200,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         "Chronicled the history of Victoria and Vancouver Island from the gold rush days of the 1850s to Victoria's present status. Lively blend of local news and informed commentary.",
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_TCOL.svg',
     },
   ],
   [
@@ -195,6 +212,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Read latest breaking news, updates, and headlines on national and international events & more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_LFRP.svg',
     },
   ],
   [
@@ -206,6 +224,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Read latest breaking news, updates, and headlines on national and international events & more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_WNST.svg',
     },
   ],
   [
@@ -217,6 +236,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Read latest breaking news, updates, and headlines on national and international events & more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_EDSN.svg',
     },
   ],
   [
@@ -228,6 +248,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Daily breaking news, local stories, life, opinion, voices from the community, events and more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_TREC.svg',
     },
   ],
   [
@@ -239,6 +260,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Read latest breaking news, updates, and headlines on national and international events & more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_SPHX.svg',
     },
   ],
   [
@@ -250,6 +272,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Read latest breaking news, updates, and headlines on national and international events & more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_CSUN.svg',
     },
   ],
   [
@@ -261,6 +284,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Read latest breaking news, updates, and headlines on national and international events & more.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_RLPT.svg',
     },
   ],
   [
@@ -272,6 +296,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Le Courrier du Sud, propriété de Gravité Media, est distribué gratuitement chaque semaine.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_LCDS.svg',
     },
   ],
   [
@@ -282,6 +307,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       est: 1999,
       about: 'Representing the viewpoint of South Asians in Canada.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_NIND.png',
     },
   ],
   [
@@ -293,6 +319,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Producing content that matters to the diverse community of Jews in Canada, through articles, podcasts and events.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_TCJN.png',
     },
   ],
   [
@@ -303,6 +330,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       est: 1954,
       about: 'Il quotidiano italiano in Canada.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_CORR.png',
     },
   ],
   [
@@ -314,6 +342,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         "The official publication of Canada's Armenian Revolutionary Federation (ARF) Central Committee.",
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_HRZN.png',
     },
   ],
   [
@@ -325,6 +354,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'The first and longest-running Korean language daily newspaper in Canada.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_KRTM.png',
     },
   ],
   [
@@ -336,6 +366,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'News website of Polish newspaper Wiadomości published in Ontario.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_BJST.png',
     },
   ],
   [
@@ -346,6 +377,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       est: 2002,
       about: 'Toronto community weekly newspaper.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_RSEX.png',
     },
   ],
   [
@@ -357,6 +389,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'The first Persian-English bilingual weekly publication in Canada.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_SLMT.png',
     },
   ],
   [
@@ -367,6 +400,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       est: 2008,
       about: 'The first and most popular Bengali online newspaper in Canada.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_BNGT.png',
     },
   ],
   [
@@ -377,6 +411,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       est: 1993,
       about: 'The Coast is essential media for Kjipuktuk/Halifax.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_TCST.png',
     },
   ],
   [
@@ -388,6 +423,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'No other city publication knows more about Vancouver than the Georgia Straight.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_STRT.png',
     },
   ],
   [
@@ -399,6 +435,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'The Grapevine is a community-driven arts and culture publisher serving the Annapolis Valley.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_GRPV.png',
     },
   ],
   [
@@ -410,9 +447,10 @@ export const CANewsSources = new Map<string, NewsSource>([
       about:
         'Toronto street magazine for alternative news, entertainment, events, and food.',
       emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_NWMG.svg',
     },
   ],
-])
+]);
 
 export const IENewsSources = new Map<string, NewsSource>([
   [
