@@ -1,106 +1,125 @@
-import { useState, useEffect } from 'react'
-import Image from 'next/image'
-import { Badge, Card, Grid, Row, Text, useTheme } from '@nextui-org/react'
-import diffDisplay from '@lib/time-format'
-import { Headline } from 'src/types'
-import { flags } from '@constants/FLAGS'
-import { AllNewsSources } from '@constants/NEWS_SOURCES'
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { Badge, Card, Grid, Row, Text, useTheme } from '@nextui-org/react';
+import diffDisplay from '@lib/time-format';
+import { Headline } from 'src/types';
+import { flags } from '@constants/FLAGS';
+import { AllNewsSources } from '@constants/NEWS_SOURCES';
 
-import bookmarkImg from '../../../public/img/ic/bookmark.svg'
-import bookmarkedImg from '../../../public/img/ic/bookmarked.svg'
-import likeImg from '../../../public/img/ic/like.svg'
-import likedImg from '../../../public/img/ic/liked.svg'
-import shareImg from '../../../public/img/ic/share.svg'
-import transPix from '../../../public/img/trans-pixel.png'
+import bookmarkImg from '../../../public/img/ic/bookmark.svg';
+import bookmarkedImg from '../../../public/img/ic/bookmarked.svg';
+import likeImg from '../../../public/img/ic/like.svg';
+import likedImg from '../../../public/img/ic/liked.svg';
+import shareImg from '../../../public/img/ic/share.svg';
+import transPix from '../../../public/img/trans-pixel.png';
 
 type Props = {
-  header?: boolean
-  bgImage?: boolean
-  country?: 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us'
-  headline: Headline
-  idx?: number
-}
+  header?: boolean;
+  bgImage?: boolean;
+  country?: 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us';
+  headline: Headline;
+  idx?: number;
+};
 
-const HeadlineCard = ({ bgImage = false, headline, idx }: Props): JSX.Element => {
+const HeadlineCard = ({
+  bgImage = false,
+  headline,
+  idx,
+}: Props): JSX.Element => {
   const { theme } = useTheme();
-  const [suffix, setSuffix] = useState<string>('svg')
-  const [leadImgErr, setLeadImgErr] = useState<boolean>(false)
-  const [liked, setLiked] = useState<boolean>(false)
-  const [copied, setCopied] = useState<boolean>(false)
-  const DATE = new Date(headline.created_at)
-  const country = headline.source.substring(0, 2).toLowerCase()
+  const [suffix, setSuffix] = useState<string>('svg');
+  const [leadImgErr, setLeadImgErr] = useState<boolean>(false);
+  const [liked, setLiked] = useState<boolean>(false);
+  const [copied, setCopied] = useState<boolean>(false);
+  const DATE = new Date(headline.created_at);
+  const country = headline.source.substring(0, 2).toLowerCase();
 
-  const sourceURL = AllNewsSources.get(headline.source)?.url
-  const sourceName = AllNewsSources.get(headline.source)?.name
-  const flag = flags.get(country)
+  const sourceURL = AllNewsSources.get(headline.source)?.url;
+  const sourceName = AllNewsSources.get(headline.source)?.name;
+  const flag = flags.get(country);
 
   useEffect(() => {
-    const likedPosts = JSON.parse(localStorage.getItem('likedPosts') || '[]')
-    setLiked(likedPosts.includes(headline.id))
-  }, [headline.id])
+    const likedPosts = JSON.parse(localStorage.getItem('likedPosts') || '[]');
+    setLiked(likedPosts.includes(headline.id));
+  }, [headline.id]);
 
   const toggleLike = () => {
-    const likedPosts = JSON.parse(localStorage.getItem('likedPosts') || '[]')
+    const likedPosts = JSON.parse(localStorage.getItem('likedPosts') || '[]');
     if (likedPosts.includes(headline.id)) {
-      const index = likedPosts.indexOf(headline.id)
-      likedPosts.splice(index, 1)
+      const index = likedPosts.indexOf(headline.id);
+      likedPosts.splice(index, 1);
     } else {
-      likedPosts.push(headline.id)
+      likedPosts.push(headline.id);
     }
-    localStorage.setItem('likedPosts', JSON.stringify(likedPosts))
-    setLiked(!liked)
-  }
+    localStorage.setItem('likedPosts', JSON.stringify(likedPosts));
+    setLiked(!liked);
+  };
 
   const copyToClipboard = async () => {
     if (navigator.clipboard) {
       await navigator.clipboard.writeText(headline.link);
       setCopied(true);
-      alert('The link has been copied to your clipboard. You can add paste it to your bookmarks: ' + headline.link);
+      alert(
+        'The link has been copied to your clipboard. You can add paste it to your bookmarks: ' +
+          headline.link
+      );
     } else {
       setCopied(false);
-      alert('Sorry, copying to clipboard is not supported in your browser. You can manually copy the link: ' + headline.link);
+      alert(
+        'Sorry, copying to clipboard is not supported in your browser. You can manually copy the link: ' +
+          headline.link
+      );
     }
-  }
+  };
 
   const share = async () => {
     if (navigator.share) {
       await navigator.share({
         title: headline.headline,
-        url: headline.link
-      })
+        url: headline.link,
+      });
     } else {
-      alert(`The Web Share API is not supported by your browser: ${window.navigator.userAgent}.`)
+      alert(
+        `The Web Share API is not supported by your browser: ${window.navigator.userAgent}.`
+      );
     }
-  }
+  };
 
   return (
     <Card isHoverable variant="bordered" style={{ borderRadius: '0' }}>
-      <Card.Header style={{ backgroundColor: theme?.colors.neutralLightHover.value }}>
+      <Card.Header
+        style={{ backgroundColor: theme?.colors.neutralLightHover.value }}
+      >
         <div
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            width: "100%",
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            width: '100%',
           }}
         >
-          {idx && <Badge color="primary" variant="bordered">
-            <b>{'#' + idx}</b>
-          </Badge>}
+          {idx && <b>{'#' + idx}</b>}
           <Text size="$3xl" weight="bold" transform="uppercase">
             &nbsp;{flag}&nbsp;
           </Text>
-          <div style={{ flexGrow: 1, display: "flex", justifyContent: "center", marginRight: "10px" }}>
+          <div
+            style={{
+              flexGrow: 1,
+              display: 'flex',
+              justifyContent: 'center',
+              marginRight: '10px',
+            }}
+          >
             <a href={sourceURL} target="_blank" rel="noreferrer">
               <Image
                 src={`/img/ns/${headline.source}.${suffix}`}
                 width={300}
                 height={64}
                 style={{
-                  maxHeight: "$3xl",
+                  maxHeight: '$3xl',
                 }}
-                alt={sourceName ?? ""}
-                onError={() => setSuffix("png")}
+                alt={sourceName ?? ''}
+                onError={() => setSuffix('png')}
               />
             </a>
           </div>
@@ -110,24 +129,37 @@ const HeadlineCard = ({ bgImage = false, headline, idx }: Props): JSX.Element =>
         </div>
       </Card.Header>
       <Card.Body css={{ py: '$2' }}>
-        <a href={headline.link} target="_blank" rel="noreferrer" style={{ overflow: 'auto' }}>
-          {(headline.img_src && bgImage) && <Image
-            alt={headline.img_alt ?? ""}
-            src={leadImgErr ? transPix : headline.img_src}
-            fill
-            style={{
-              objectFit: 'cover',
-              opacity: 0.33
-            }}
-            onError={() => setLeadImgErr(true)}
-          />}
-          {(headline.img_src && !bgImage) && <Card.Image
-            src={leadImgErr ? '../../../public/img/trans-pixel.png' : headline.img_src}
-            objectFit="cover"
-            width="100%"
-            alt={headline.img_alt ?? ""}
-            onError={() => setLeadImgErr(true)}
-          />}
+        <a
+          href={headline.link}
+          target="_blank"
+          rel="noreferrer"
+          style={{ overflow: 'auto' }}
+        >
+          {headline.img_src && bgImage && (
+            <Image
+              alt={headline.img_alt ?? ''}
+              src={leadImgErr ? transPix : headline.img_src}
+              fill
+              style={{
+                objectFit: 'cover',
+                opacity: 0.33,
+              }}
+              onError={() => setLeadImgErr(true)}
+            />
+          )}
+          {headline.img_src && !bgImage && (
+            <Card.Image
+              src={
+                leadImgErr
+                  ? '../../../public/img/trans-pixel.png'
+                  : headline.img_src
+              }
+              objectFit="cover"
+              width="100%"
+              alt={headline.img_alt ?? ''}
+              onError={() => setLeadImgErr(true)}
+            />
+          )}
           <Row justify="center" align="center">
             <Text h3 color="primary">
               {headline.headline}&nbsp;↗
@@ -135,37 +167,37 @@ const HeadlineCard = ({ bgImage = false, headline, idx }: Props): JSX.Element =>
           </Row>
         </a>
       </Card.Body>
-      <Card.Footer style={{ backgroundColor: theme?.colors.neutralLight.value, borderRadius: '0' }}>
+      <Card.Footer
+        style={{
+          backgroundColor: theme?.colors.neutralLight.value,
+          borderRadius: '0',
+        }}
+      >
         <Grid.Container justify="center">
           <Grid xs={4} justify="center">
-            <div
-              onClick={toggleLike}>
+            <div onClick={toggleLike}>
               <Image
                 src={liked ? likedImg : likeImg}
-                alt={liked ? "Remove like" : "Like"}
+                alt={liked ? 'Remove like' : 'Like'}
                 height={32}
-              /></div>
+              />
+            </div>
           </Grid>
           <Grid xs={4} justify="center">
             <Image
               src={copied ? bookmarkedImg : bookmarkImg}
-              alt={copied ? "Remove Bookmark" : "Bookmark"}
+              alt={copied ? 'Remove Bookmark' : 'Bookmark'}
               height={32}
               onClick={copyToClipboard}
             />
           </Grid>
           <Grid xs={4} justify="center">
-            <Image
-              src={shareImg}
-              alt="Share"
-              height={32}
-              onClick={share}
-            />
+            <Image src={shareImg} alt="Share" height={32} onClick={share} />
           </Grid>
         </Grid.Container>
       </Card.Footer>
     </Card>
-  )
-}
+  );
+};
 
-export default HeadlineCard
+export default HeadlineCard;
