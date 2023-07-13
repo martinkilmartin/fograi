@@ -1,5 +1,6 @@
 import { supabase } from '@services/supabase'
 import { Headline } from 'src/types'
+import { Countries } from 'src/types/countries';
 
 export async function getLast24() {
     const { data } = await supabase
@@ -31,7 +32,7 @@ export async function getHeadlines(lastSeen: string | null = null, limit = 8): P
     }
 }
 
-export async function getHeadlinesCountry(lastSeen: string | null = null, limit = 8, country): Promise<Headline[]> {
+export async function getHeadlinesCountry(lastSeen: string | null = null, limit = 8, country: Countries): Promise<Headline[]> {
     try {
         const { data, error } = await supabase.rpc('get_paginated_results', {
             page_size: limit,
