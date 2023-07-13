@@ -3,6 +3,7 @@ import { Badge, Button, Grid, Loading } from '@nextui-org/react';
 import { HeadlineCard } from '@components/Card';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { Headline } from '../../types/Headline';
+import { Countries } from 'src/types/countries';
 
 interface HeadlineListProps {
   headlines: Headline[] | undefined;
@@ -36,14 +37,7 @@ export const HeadlineList: React.FC<HeadlineListProps> = ({
               <HeadlineCard
                 headline={headline}
                 country={
-                  headline.source.substring(0, 2).toLowerCase() as
-                    | 'ca'
-                    | 'ie'
-                    | 'in'
-                    | 'nz'
-                    | 'oz'
-                    | 'uk'
-                    | 'us'
+                  headline.source.substring(0, 2).toLowerCase() as Countries
                 }
                 idx={idx + 1}
               />

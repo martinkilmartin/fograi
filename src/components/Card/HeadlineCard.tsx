@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Badge, Card, Grid, Row, Text, useTheme } from '@nextui-org/react';
 import diffDisplay from '@lib/time-format';
 import { Headline } from 'src/types';
+import { Countries } from 'src/types/countries';
 import { flags } from '@constants/FLAGS';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
 
@@ -16,7 +17,7 @@ import transPix from '../../../public/img/trans-pixel.png';
 type Props = {
   header?: boolean;
   bgImage?: boolean;
-  country?: 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us';
+  country?: Countries;
   headline: Headline;
   idx?: number;
 };

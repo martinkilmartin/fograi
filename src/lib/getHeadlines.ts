@@ -30,3 +30,20 @@ export async function getHeadlines(lastSeen: string | null = null, limit = 8): P
         return [];
     }
 }
+
+export async function getHeadlinesCountry(lastSeen: string | null = null, limit = 8, country): Promise<Headline[]> {
+    try {
+        const { data, error } = await supabase.rpc('get_paginated_results', {
+            page_size: limit,
+            country: country,
+            last_seen: lastSeen
+        });
+
+        if (error) throw error;
+
+        return data || [];
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
+}

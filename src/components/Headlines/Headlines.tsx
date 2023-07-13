@@ -11,11 +11,12 @@ import {
   Spacer,
   Text,
 } from '@nextui-org/react'
+import { Countries } from 'src/types/countries'
 
 const MAX_QUERY = 24
 
 type Props = {
-  country?: 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us'
+  country?: Countries
 }
 
 const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
@@ -90,7 +91,7 @@ const Headlines = ({ country = 'ie' }: Props): JSX.Element => {
             <Grid xs={12} md={6} lg={4} xl={3} key={index}>
               <HeadlineCard
                 bgImage={index % 2 === 0}
-                country={headline.source.substring(0, 2).toLowerCase() as 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us'}
+                country={headline.source.substring(0, 2).toLowerCase() as Countries}
                 key={headline.id}
                 headline={headline}
               />

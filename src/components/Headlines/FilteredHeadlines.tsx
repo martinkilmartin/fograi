@@ -1,66 +1,67 @@
-import { useState, useEffect } from 'react'
-import { supabase } from '@services/supabase'
-import { numberFormat } from '@lib/number-format'
-import { Headline } from 'src/types'
-import { HeadlineCard } from '@components/Card'
+import { useState, useEffect } from 'react';
+import { supabase } from '@services/supabase';
+import { numberFormat } from '@lib/number-format';
+import { Headline } from 'src/types';
+import { HeadlineCard } from '@components/Card';
+import { Countries } from 'src/types/countries';
 
-const MAX_QUERY = 24
+const MAX_QUERY = 24;
 
 type Props = {
-  country?: 'ca' | 'ie' | 'in' | 'uk' | 'us'
-}
+  country?: Countries;
+};
 
 const FilteredHeadlines = ({ country = 'ie' }: Props): JSX.Element => {
-  const [fetching, setFetching] = useState(false)
-  const [total, setTotal] = useState<number>(0)
-  const [headlines, setHeadlines] = useState<Headline[]>([])
-  const [range, setRange] = useState<number>(0)
-  const [newer, setNewer] = useState<number>(0)
+  const [fetching, setFetching] = useState(false);
+  const [total, setTotal] = useState<number>(0);
+  const [headlines, setHeadlines] = useState<Headline[]>([]);
+  const [range, setRange] = useState<number>(0);
+  const [newer, setNewer] = useState<number>(0);
 
   useEffect(() => {
-    fetchHeadlineCount()
-  }, [])
+    fetchHeadlineCount();
+  }, []);
   useEffect(() => {
-    fetchHeadlines()
-  }, [])
+    fetchHeadlines();
+  }, []);
 
   const fetchHeadlines = async () => {
-    setFetching(true)
+    setFetching(true);
     const { data: newHeadlines, error } = await supabase
       .from(`${country}-headlines`)
       .select('*')
       .order('created_at', { ascending: false })
-      .range(range, range + (MAX_QUERY - 1))
-    if (error) console.error(error)
+      .range(range, range + (MAX_QUERY - 1));
+    if (error) console.error(error);
     if (newHeadlines) {
-      const mergedHeadlines = [...headlines, ...newHeadlines]
+      const mergedHeadlines = [...headlines, ...newHeadlines];
       setHeadlines([
         ...new Map(
           mergedHeadlines.map((item: Headline) => [item['id'], item])
         ).values(),
-      ])
-      setRange(range + MAX_QUERY)
+      ]);
+      setRange(range + MAX_QUERY);
     }
-    setFetching(false)
-  }
+    setFetching(false);
+  };
 
   const fetchMoreHeadlines = async () => {
-    const CURRENT_TOTAL = total
-    await fetchHeadlineCount()
-    if (total > CURRENT_TOTAL) setRange(range + (total - CURRENT_TOTAL))
-    fetchHeadlines()
-  }
+    const CURRENT_TOTAL = total;
+    await fetchHeadlineCount();
+    if (total > CURRENT_TOTAL) setRange(range + (total - CURRENT_TOTAL));
+    fetchHeadlines();
+  };
 
   const fetchHeadlineCount = async () => {
     const { count, error } = await supabase
       .from(`${country}-headlines`)
-      .select('*', { count: 'exact' })
-    if (error) console.error(error)
+      .select('*', { count: 'exact' });
+    if (error) console.error(error);
     if (count) {
-      if (total > 0) setNewer(newer + (count - total))
-      setTotal(count)
+      if (total > 0) setNewer(newer + (count - total));
+      setTotal(count);
     }
-  }
+  };
 
   return (
     <div>
@@ -85,7 +86,7 @@ const FilteredHeadlines = ({ country = 'ie' }: Props): JSX.Element => {
             <button
               className="btn btn-primary"
               onClick={() => {
-                fetchMoreHeadlines()
+                fetchMoreHeadlines();
               }}
             >
               {`Load ${MAX_QUERY} More`}
@@ -127,7 +128,7 @@ const FilteredHeadlines = ({ country = 'ie' }: Props): JSX.Element => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default FilteredHeadlines
+export default FilteredHeadlines;
