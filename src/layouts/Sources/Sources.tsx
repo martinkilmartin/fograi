@@ -12,19 +12,16 @@ const Sources = ({ title }: Props): JSX.Element => {
       <h1 style={{ textAlign: 'center' }}>
         {title}&nbsp;({AllNewsSources.size})
       </h1>
-      <Grid.Container gap={1} justify="center">
+      <Grid.Container gap={2} justify="center" style={{ padding: '0' }}>
         {Array.from(
           new Map(
             [...AllNewsSources.entries()].sort(() => Math.random() - 0.5)
           ).keys()
-        ).map((key, index) => {
+        ).map((key) => {
           return (
-            <SourceCard
-              key={key}
-              k={key}
-              index={index}
-              source={AllNewsSources.get(key)}
-            />
+            <Grid xs={12} md={6} lg={4} xl={3} key={key}>
+              <SourceCard key={key} k={key} source={AllNewsSources.get(key)} />
+            </Grid>
           );
         })}
       </Grid.Container>
