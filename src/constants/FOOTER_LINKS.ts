@@ -1,6 +1,6 @@
 export const FOOTER_LINKS = [
   {
-    title: 'Eolas',
+    title: 'Info',
     urls: [
       {
         path: '/about',
