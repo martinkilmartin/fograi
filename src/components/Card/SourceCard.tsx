@@ -61,6 +61,18 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
               </Grid>
             ))}
         </Grid.Container>
+        {source?.audio && (
+          <Grid.Container gap={2} justify="center" css={{ py: '$10' }}>
+            <iframe
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src={source?.audio}
+            ></iframe>
+          </Grid.Container>
+        )}
       </Card.Body>
       <Card.Footer>
         <Grid.Container gap={2} justify="center">
@@ -85,18 +97,6 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
               </Grid>
             ))}
         </Grid.Container>
-        {source?.audio && (
-          <Grid.Container gap={2} justify="center">
-            <iframe
-              width="100%"
-              height="166"
-              scrolling="no"
-              frameBorder="no"
-              allow="autoplay"
-              src={source?.audio}
-            ></iframe>
-          </Grid.Container>
-        )}
       </Card.Footer>
     </Card>
   );
