@@ -743,8 +743,28 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.clare.fm/',
       est: 1989,
       about:
-        'Providing the people of Co Clare with a comprehensive Radio Service that reflects their individual communities as a whole.',
+        "Clare FM has provides the people of County Clare with a comprehensive radio service, reflecting the unique identities of their diverse communities. The station offers a rich array of content that mirrors the interests, concerns, and spirit of Clare's residents.",
       emos: ['📻', '🇮🇪'],
+      langs: ['en'],
+      tags: [
+        'ClareFM',
+        'LocalRadio',
+        'CountyClare',
+        'CommunityRadio',
+        'ClareNews',
+        'IrishRadio'
+      ],
+      socials: {
+        email: 'info@clare.fm',
+        facebook: 'https://www.facebook.com/clarefmradio',
+        instagram: 'https://www.instagram.com/clarefmradio/',
+        soundcloud: 'https://soundcloud.com/clarefm',
+        twitter: 'https://twitter.com/ClareFM',
+        youtube: 'https://www.youtube.com/user/clarefmTV'
+      },
+      headerBG: "#fff",
+      primaryColor: "#5f7325",
+      audio: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1540623928&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
     },
   ],
   [

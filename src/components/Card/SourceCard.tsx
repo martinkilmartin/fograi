@@ -26,8 +26,7 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
     <Card isHoverable variant="bordered" style={{ borderRadius: '0' }}>
       <Card.Header
         style={{
-          backgroundColor:
-            source?.headerBG ?? theme?.colors.background.value
+          backgroundColor: source?.headerBG ?? theme?.colors.background.value,
         }}
       >
         <Row justify="center" align="center">
@@ -86,6 +85,18 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
               </Grid>
             ))}
         </Grid.Container>
+        {source?.audio && (
+          <Grid.Container gap={2} justify="center">
+            <iframe
+              width="100%"
+              height="166"
+              scrolling="no"
+              frameBorder="no"
+              allow="autoplay"
+              src={source?.audio}
+            ></iframe>
+          </Grid.Container>
+        )}
       </Card.Footer>
     </Card>
   );

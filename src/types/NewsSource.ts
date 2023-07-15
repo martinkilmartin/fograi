@@ -11,4 +11,5 @@ export type NewsSource = {
   headerBG?: string
   primaryColor?: string
   secondaryColor?: string
+  audio?: string
 }
