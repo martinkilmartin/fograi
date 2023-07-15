@@ -460,7 +460,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.agriland.ie/',
       est: 2012,
       about:
-        "Agriland is Ireland's leading digital news and services platform for the farming and agricultural sectors.Since its inception in 2012, it has continuously served as a vital resource for farming professionals and enthusiasts, offering in-depth coverage on industry news, weather reports, market trends, and innovative agricultural technologies.Agriland connects the Irish farming community with practical insights, expert advice, and a platform for discourse on issues that matter.",
+        "Agriland is Ireland's leading digital news and services platform for the farming and agricultural sectors. Serving as a vital resource for farming professionals and enthusiasts, offering in-depth coverage on industry news, weather reports, market trends, and innovative agricultural technologies.Agriland connects the Irish farming community with practical insights, expert advice, and a platform for discourse on issues that matter.",
       emos: ['🚜', '🌱', '🐄'],
       langs: ['en'],
       tags: [
@@ -499,7 +499,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.advertiser.ie/athlone',
       est: 1970,
       about:
-        "The Athlone Advertiser, established in 1970, is a renowned free newspaper distributed throughout Athlone & Westmeath every Thursday. As a trusted local news source, it offers comprehensive coverage of local events, politics, sports, arts, and community happenings. The Athlone Advertiser is dedicated to providing timely and accurate reporting, fostering informed discussions, and contributing to the vibrant community spirit of Athlone and Westmeath.",
+        "The Athlone Advertiser is a renowned free newspaper distributed throughout Athlone & Westmeath every Thursday. As a trusted local news source, it offers comprehensive coverage of local events, politics, sports, arts, and community happenings. The Athlone Advertiser is dedicated to providing timely and accurate reporting, fostering informed discussions, and contributing to the vibrant community spirit of Athlone and Westmeath.",
       emos: ['📰', '🇮🇪', '📍'],
       langs: ['en'],
       tags: [
@@ -528,7 +528,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.balls.ie/',
       est: 2010,
       about:
-        "Established in 2010, BALLS.ie is Ireland's premier online platform for sports enthusiasts, covering a vast range of sports from Hurling to American Football, and Curling to Downhill Skiing. BALLS.ie brings you real-time updates, engaging content in video, gif, image, and tweet form, and in-depth commentary on the games you love. Stay updated with BALLS.ie, where every sport has a story to tell.",
+        "BALLS.ie is Ireland's premier online platform for sports enthusiasts, covering a vast range of sports from Hurling to American Football, and Curling to Downhill Skiing. BALLS.ie brings you real-time updates, engaging content in video, gif, image, and tweet form, and in-depth commentary on the games you love. Stay updated with BALLS.ie, where every sport has a story to tell.",
       emos: ['💻', '⚽', '🏈', '🥌', '⛷'],
       langs: ['en'],
       tags: [
@@ -561,7 +561,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.beat102103.com/',
       est: 2003,
       about:
-        "Established in 2003, Beat 102 103 is a premier multi-platform radio station dedicated to entertaining and informing young adults in the South East of Ireland. From the latest music to engaging discussions on issues affecting the region's youth, Beat 102 103 provides an energetic mix of content that resonates with its listeners. Stay tuned with Beat 102 103, your pulse on the South East's vibrant youth culture.",
+        "Beat 102 103 is a premier multi-platform radio station dedicated to entertaining and informing young adults in the South East of Ireland. From the latest music to engaging discussions on issues affecting the region's youth, Beat 102 103 provides an energetic mix of content that resonates with its listeners. Stay tuned with Beat 102 103, your pulse on the South East's vibrant youth culture.",
       emos: ['📻', '🇮🇪', '🎵'],
       langs: ['en'],
       tags: [
@@ -626,7 +626,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://bizplus.ie/',
       est: 1998,
       about:
-        "Established in 1998, Biz Plus is a monthly business magazine dedicated to the activities of Irish companies and companies based in Ireland. With a sharp focus on the pulse of Ireland's business sector, Biz Plus delivers insightful analysis, industry news, interviews, and reports on a monthly basis. Biz Plus is your definitive guide to understanding and navigating the ever-evolving Irish business landscape.",
+        "Biz Plus is a monthly business magazine dedicated to the activities of Irish companies and companies based in Ireland. With a sharp focus on the pulse of Ireland's business sector, Biz Plus delivers insightful analysis, industry news, interviews, and reports on a monthly basis. Biz Plus is your definitive guide to understanding and navigating the ever-evolving Irish business landscape.",
       emos: ['💻', '🧑‍💼', '📈'],
       langs: ['en'],
       tags: [
@@ -657,7 +657,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.breakingnews.ie/',
       est: 2001,
       about:
-        "Breakingnews.ie, launched in 2001, is a leading news website delivering up-to-the-minute news and sports reports. With a focus on immediacy and accuracy, it provides email news releases throughout the day, ensuring readers are always in the know about the latest breaking stories. From domestic affairs to international events, sports to entertainment, breakingnews.ie is your trusted source for real-time news coverage.",
+        "Breakingnews.ie, is a leading news website delivering up-to-the-minute news and sports reports. With a focus on immediacy and accuracy, it provides email news releases throughout the day, ensuring readers are always in the know about the latest breaking stories. From domestic affairs to international events, sports to entertainment, breakingnews.ie is your trusted source for real-time news coverage.",
       emos: ['💻', '🇮🇪', '📈', '⚽'],
       langs: ['en'],
       tags: [
@@ -686,7 +686,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.buzz.ie/',
       est: 2016,
       about:
-        "Established in 2016, Buzz has emerged as a go-to source for the latest trending stories across the globe. With a special emphasis on movies, TV, music, games, tech, and sports, Buzz keeps its finger firmly on the pulse of popular culture. Offering comprehensive coverage and expert commentary, Buzz provides a unique lens on the world's trending topics.",
+        "Buzz has emerged as a go-to source for the latest trending stories across the globe. With a special emphasis on movies, TV, music, games, tech, and sports, Buzz keeps its finger firmly on the pulse of popular culture. Offering comprehensive coverage and expert commentary, Buzz provides a unique lens on the world's trending topics.",
       emos: ['💻', '🇮🇪', '🎥', '🎮', '🎵'],
       langs: ['en'],
       tags: [
@@ -717,7 +717,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.carlowlive.ie/',
       est: 2018,
       about:
-        "Launched in 2018, Carlow Live is a dedicated platform for all things Carlow. It provides round-the-clock coverage of the latest news, events, business updates, and death notices in the region. It's a must-visit resource for those interested in staying updated on matters in Carlow and its surroundings.",
+        "Carlow Live is a dedicated platform for all things Carlow. It provides round-the-clock coverage of the latest news, events, business updates, and death notices in the region. It's a must-visit resource for those interested in staying updated on matters in Carlow and its surroundings.",
       emos: ['💻', '🇮🇪'],
       langs: ['en'],
       tags: [
