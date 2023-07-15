@@ -501,7 +501,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'Agritech',
       ],
       socials: {
-        email: 'info@agriland.ie',
+        email: 'mailto:info@agriland.ie',
         facebook: 'https://www.facebook.com/AgrilandIreland',
         linkedin: 'https://www.linkedin.com/company/agriland-media-ltd-',
         twitter: 'https://twitter.com/AgrilandIreland',
@@ -535,7 +535,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'AthloneSports',
       ],
       socials: {
-        email: 'info@galwayadvertiser.ie',
+        email: 'mailto:info@galwayadvertiser.ie',
       },
       headerBG: "#d70909",
       primaryColor: "#d70909"
@@ -563,7 +563,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'SportsCommentary',
       ],
       socials: {
-        email: 'info@balls.ie', // Replace with actual email if different
+        email: 'mailto:info@balls.ie', // Replace with actual email if different
         facebook: 'https://www.facebook.com/ballsdotie',
         twitter: 'https://twitter.com/ballsdotie',
         youtube: 'https://www.youtube.com/c/Ballsdotie',
@@ -595,7 +595,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'RadioStation',
       ],
       socials: {
-        email: ' studio@beat102103.com',
+        email: 'mailto: studio@beat102103.com',
         instagram: 'https://www.instagram.com/beat102103/?hl=es',
         twitter: 'https://twitter.com/beat102103',
         tiktok: 'https://www.tiktok.com/@beat102103?lang=en',
@@ -630,7 +630,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'Opinion',
       ],
       socials: {
-        email: 'customersupport@belfasttelegraph.co.uk?body=BelfastTelegraph.co.uk&subject=BelfastTelegraph.co.uk',
+        email: 'mailto:customersupport@belfasttelegraph.co.uk?body=BelfastTelegraph.co.uk&subject=BelfastTelegraph.co.uk',
         facebook: 'https://www.facebook.com/belfasttelegraph',
         twitter: 'https://twitter.com/beltel/',
         instagram: 'https://www.instagram.com/belfasttelegraph/',
@@ -662,7 +662,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'IrishCompanies'
       ],
       socials: {
-        email: 'info@businessplus-ie.go-vip.net',
+        email: 'mailto:info@businessplus-ie.go-vip.net',
         facebook: 'https://www.facebook.com/businessplusmag/',
         twitter: 'https://twitter.com/businessplusmag',
         linkedin: 'https://ie.linkedin.com/company/business-plus-magazine',
@@ -691,7 +691,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'BreakingNewsIE'
       ],
       socials: {
-        email: 'desk@breakingnews.ie',
+        email: 'mailto:desk@breakingnews.ie',
         facebook: 'https://www.facebook.com/breakingnewsire',
         twitter: 'https://twitter.com/breakingnewsie',
         instagram: 'https://www.instagram.com/breakingnews.ie/',
@@ -722,7 +722,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'BuzzIE'
       ],
       socials: {
-        email: 'news@buzz.ie',
+        email: 'mailto:news@buzz.ie',
         facebook: 'https://www.facebook.com/buzzdotie',
         twitter: 'https://twitter.com/buzzdotie',
         instagram: 'https://www.instagram.com/buzz.ie/',
@@ -749,7 +749,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'CarlowUpdates'
       ],
       socials: {
-        email: 'news@carlowlive.ie',
+        email: 'mailto:news@carlowlive.ie',
         facebook: 'https://www.facebook.com/www.carlowlive.ie',
         twitter: 'https://twitter.com/Carlowlive1',
       },
@@ -776,7 +776,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'IrishRadio'
       ],
       socials: {
-        email: 'info@clare.fm',
+        email: 'mailto:info@clare.fm',
         facebook: 'https://www.facebook.com/clarefmradio',
         instagram: 'https://www.instagram.com/clarefmradio/',
         soundcloud: 'https://soundcloud.com/clarefm',
@@ -807,7 +807,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'IrishNews'
       ],
       socials: {
-        email: 'news@clarelive.ie',
+        email: 'mailto:news@clarelive.ie',
         twitter: 'https://twitter.com/ClareLiveNews',
         facebook: 'https://www.facebook.com/ClareLiveNews',
       },
@@ -835,7 +835,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'MusicRadio'
       ],
       socials: {
-        email: 'hello@classichits.ie',
+        email: 'mailto:hello@classichits.ie',
         facebook: 'https://www.facebook.com/ClassicHitsRadio',
         instagram: 'https://www.instagram.com/classichitsradio/',
         twitter: 'https://twitter.com/ClassicHitsRdio',
@@ -869,7 +869,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'PortstewartNews'
       ],
       socials: {
-        email: 'editor@thechronicle.uk.com',
+        email: 'mailto:editor@thechronicle.uk.com',
         facebook: 'https://en-gb.facebook.com/coleraine.chronicle/',
         twitter: 'https://twitter.com/colerainechron?lang=en',
         youtube: 'https://www.youtube.com/channel/UCJ8FeVvbQ6dcrcwnvu3o3QA/videos'
@@ -899,7 +899,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'IrishNews',
       ],
       socials: {
-        email: 'news@ctribune.ie',
+        email: 'mailto:news@ctribune.ie',
         facebook: 'https://www.facebook.com/ConnachtTribune',
         twitter: 'https://twitter.com/CTribune',
         youtube: 'https://www.youtube.com/@connachttribunegalwaycityt9972'
@@ -929,7 +929,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'CorkRegion'
       ],
       socials: {
-        email: 'news@corkbeo.ie',
+        email: 'mailto:news@corkbeo.ie',
         facebook: 'https://www.facebook.com/corkbeo',
         twitter: 'https://twitter.com/corkbeo',
         instagram: 'https://www.instagram.com/corkbeo/'
@@ -2378,7 +2378,7 @@ export const INNewsSources = new Map<string, NewsSource>([
         'TrustedNewsSource',
       ],
       socials: {
-        email: 'samachar.bombay@gmail.com',
+        email: 'mailto:samachar.bombay@gmail.com',
         facebook: 'https://www.facebook.com/Mumbaisamachar4u/',
         instagram: 'https://www.instagram.com/mumbaisamachar/',
         twitter: 'https://twitter.com/Msamachar4u',
@@ -2627,9 +2627,32 @@ export const UKNewsSources = new Map<string, NewsSource>([
       url: 'https://www.mirror.co.uk/',
       est: 1903,
       about:
-        'Latest news, sport, celebrity gossip, TV, politics and lifestyle. Big stories with a big heart, always with you in mind.',
+        "The Mirror is one of UK's most popular tabloids, providing a mix of latest news, sports updates, celebrity gossip, TV highlights, political analysis, and lifestyle pieces. With its unique style of storytelling, The Mirror not only brings the big stories to its readers but also keeps them at the heart of every narrative. Known for its comprehensive coverage and investigative journalism, The Mirror continues to be a go-to source for many readers across the UK.",
       emos: ['📰', '🇬🇧'],
       langs: ['en'],
+      tags: [
+        'TheMirror',
+        'UKNews',
+        'LocalNews',
+        'NationalNews',
+        'InternationalNews',
+        'Sports',
+        'CelebrityGossip',
+        'TVHighlights',
+        'Politics',
+        'Lifestyle',
+        'InvestigativeJournalism',
+      ],
+      socials: {
+        email: 'mailto:mirrornews@mirror.co.uk',
+        facebook: 'https://www.facebook.com/DailyMirror',
+        twitter: 'https://twitter.com/DailyMirror',
+        tiktok: 'https://www.tiktok.com/@dailymirror',
+        instagram: 'https://www.instagram.com/dailymirror'
+      },
+      headerBG: "#a92323",
+      primaryColor: "#e90e0e",
+      secondaryColor: "lightblue"
     },
   ],
   [
@@ -2736,9 +2759,28 @@ export const NZNewsSources = new Map<string, NewsSource>([
       url: 'https://www.nzherald.co.nz/',
       est: 1863,
       about:
-        'Latest breaking news articles, photos, video, blogs, reviews, analysis, opinion and reader comment from New Zealand and around the World.',
+        "The New Zealand Herald serves as an essential news source, bringing you the latest breaking news, in-depth analysis, opinions, and multimedia content from New Zealand and across the globe. With a wide variety of topics covered including politics, business, sports, entertainment, and more, it ensures that its readers are always up-to-date with the world around them.",
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
+      tags: [
+        'TheNewZealandHerald',
+        'NZNews',
+        'InternationalNews',
+        'Politics',
+        'BusinessNews',
+        'Sports',
+        'Entertainment',
+        'Opinion',
+      ],
+      socials: {
+        email: 'mailto:newsdesk@nzherald.co.nz?subject=Online enquiry - Contact the Newsroom',
+        facebook: 'https://www.facebook.com/nzherald.co.nz',
+        twitter: 'https://twitter.com/nzherald',
+        instagram: 'https://www.instagram.com/nzherald/',
+        youtube: 'https://www.youtube.com/@nzheraldtv'
+      },
+      headerBG: "#000",
+      primaryColor: "#ecac0c"
     },
   ],
   [
