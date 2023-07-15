@@ -594,8 +594,29 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.belfasttelegraph.co.uk/',
       est: 1870,
       about:
-        'Latest news, sport and business from Belfast and throughout Northern Ireland plus, opinion, entertainment and lifestyle coverage.',
-      emos: ['📰', '🇮🇪'],
+        "Since its inception in 1870, the Belfast Telegraph has been the leading source of news, sport, and business coverage in Belfast and throughout Northern Ireland. It offers a broad spectrum of content, from breaking news and in-depth opinion pieces to entertainment and lifestyle features. The Belfast Telegraph is your reliable source for comprehensive coverage of the events and issues that matter to Northern Ireland.",
+      emos: ['📰', '🇮🇪', '📈', '⚽', '🎭'],
+      langs: ['en'],
+      tags: [
+        'BelfastTelegraph',
+        'IrishNews',
+        'Belfast',
+        'NorthernIreland',
+        'SportsNews',
+        'BusinessNews',
+        'Entertainment',
+        'Lifestyle',
+        'Opinion',
+      ],
+      socials: {
+        email: 'customersupport@belfasttelegraph.co.uk?body=BelfastTelegraph.co.uk&subject=BelfastTelegraph.co.uk',
+        facebook: 'https://www.facebook.com/belfasttelegraph',
+        twitter: 'https://twitter.com/beltel/',
+        instagram: 'https://www.instagram.com/belfasttelegraph/',
+        linkedin: 'https://www.linkedin.com/company/belfast-telegraph/',
+      },
+      headerBG: "#fff",
+      primaryColor: "#000"
     },
   ],
   [
@@ -605,8 +626,28 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://bizplus.ie/',
       est: 1998,
       about:
-        'Monthly business magazine focused  on the activities of Irish companies or companies based in Ireland.',
-      emos: ['💻', '🧑‍💼'],
+        "Established in 1998, Biz Plus is a monthly business magazine dedicated to the activities of Irish companies and companies based in Ireland. With a sharp focus on the pulse of Ireland's business sector, Biz Plus delivers insightful analysis, industry news, interviews, and reports on a monthly basis. Biz Plus is your definitive guide to understanding and navigating the ever-evolving Irish business landscape.",
+      emos: ['💻', '🧑‍💼', '📈'],
+      langs: ['en'],
+      tags: [
+        'BizPlus',
+        'IrishBusiness',
+        'BusinessMagazine',
+        'CorporateNews',
+        'Economy',
+        'IndustryTrends',
+        'BusinessAnalysis',
+        'BusinessInsights',
+        'IrishCompanies'
+      ],
+      socials: {
+        email: 'info@businessplus-ie.go-vip.net',
+        facebook: 'https://www.facebook.com/businessplusmag/',
+        twitter: 'https://twitter.com/businessplusmag',
+        linkedin: 'https://ie.linkedin.com/company/business-plus-magazine',
+      },
+      headerBG: "#fff",
+      primaryColor: "#ff6900"
     },
   ],
   [
@@ -616,8 +657,26 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.breakingnews.ie/',
       est: 2001,
       about:
-        'Breaking news website providing up to the minute news and sports reports, with e-mail news releases following breaking stories throughout the day.',
-      emos: ['💻', '🇮🇪'],
+        "Breakingnews.ie, launched in 2001, is a leading news website delivering up-to-the-minute news and sports reports. With a focus on immediacy and accuracy, it provides email news releases throughout the day, ensuring readers are always in the know about the latest breaking stories. From domestic affairs to international events, sports to entertainment, breakingnews.ie is your trusted source for real-time news coverage.",
+      emos: ['💻', '🇮🇪', '📈', '⚽'],
+      langs: ['en'],
+      tags: [
+        'BreakingNews',
+        'IrishNews',
+        'RealTimeNews',
+        'SportsReports',
+        'CurrentAffairs',
+        'InternationalNews',
+        'BreakingNewsIE'
+      ],
+      socials: {
+        email: 'desk@breakingnews.ie',
+        facebook: 'https://www.facebook.com/breakingnewsire',
+        twitter: 'https://twitter.com/breakingnewsie',
+        instagram: 'https://www.instagram.com/breakingnews.ie/',
+      },
+      headerBG: "#fff",
+      primaryColor: "#EDA400"
     },
   ],
   [
@@ -627,8 +686,28 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.buzz.ie/',
       est: 2016,
       about:
-        'Breaking the latest trending stories that are happening in the world right now covering all things movies, TV, music, games, tech and sport.',
-      emos: ['💻', '🇮🇪'],
+        "Established in 2016, Buzz has emerged as a go-to source for the latest trending stories across the globe. With a special emphasis on movies, TV, music, games, tech, and sports, Buzz keeps its finger firmly on the pulse of popular culture. Offering comprehensive coverage and expert commentary, Buzz provides a unique lens on the world's trending topics.",
+      emos: ['💻', '🇮🇪', '🎥', '🎮', '🎵'],
+      langs: ['en'],
+      tags: [
+        'Buzz',
+        'TrendingNews',
+        'Movies',
+        'TV',
+        'Music',
+        'Games',
+        'Tech',
+        'Sport',
+        'BuzzIE'
+      ],
+      socials: {
+        email: 'news@buzz.ie',
+        facebook: 'https://www.facebook.com/buzzdotie',
+        twitter: 'https://twitter.com/buzzdotie',
+        instagram: 'https://www.instagram.com/buzz.ie/',
+      },
+      headerBG: "#fff",
+      primaryColor: "#DEA65D"
     },
   ],
   [
@@ -638,8 +717,23 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.carlowlive.ie/',
       est: 2018,
       about:
-        'The latest news, events, business, death notices and more from Carlow 24/7.',
+        "Launched in 2018, Carlow Live is a dedicated platform for all things Carlow. It provides round-the-clock coverage of the latest news, events, business updates, and death notices in the region. It's a must-visit resource for those interested in staying updated on matters in Carlow and its surroundings.",
       emos: ['💻', '🇮🇪'],
+      langs: ['en'],
+      tags: [
+        'CarlowLive',
+        'LocalNews',
+        'CarlowEvents',
+        'CarlowBusiness',
+        'CarlowUpdates'
+      ],
+      socials: {
+        email: 'news@carlowlive.ie',
+        facebook: 'https://www.facebook.com/www.carlowlive.ie',
+        twitter: 'https://twitter.com/Carlowlive1',
+      },
+      headerBG: "#fff",
+      primaryColor: "#9D9C9C"
     },
   ],
   [
