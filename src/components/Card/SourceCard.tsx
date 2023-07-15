@@ -1,8 +1,16 @@
 import { useState } from 'react';
-import { Card, Text, Link, Row, useTheme } from '@nextui-org/react';
+import { Grid, Card, Text, Link, Row, useTheme } from '@nextui-org/react';
 import { NewsSource } from 'src/types';
 import Image from 'next/image';
 import { flags } from '@constants/FLAGS';
+
+import facebookLogo from '../../../public/img/ic/facebook.svg';
+import instagramLogo from '../../../public/img/ic/instagram.svg';
+import linkedinLogo from '../../../public/img/ic/linkedin.svg';
+import pinterestLogo from '../../../public/img/ic/pinterest.svg';
+import snapchatLogo from '../../../public/img/ic/snapchat.svg';
+import twitterLogo from '../../../public/img/ic/twitter.svg';
+import youtubeLogo from '../../../public/img/ic/youtube.svg';
 
 type Props = {
   k: string;
@@ -42,6 +50,23 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
         </Row>
         <Text>{source?.about}</Text>
       </Card.Body>
+      <Card.Footer>
+        <Grid.Container gap={2} justify="center">
+          {source?.socials &&
+            Object.keys(source?.socials).map((key) => (
+              <Grid key={key}>
+                <Link href={source.socials?.[key]} target='_blank'>
+                  <Image
+                    src={`/img/ic/${key}.svg`}
+                    alt={`${key} Logo`}
+                    width={48}
+                    height={48}
+                  />
+                </Link>
+              </Grid>
+            ))}
+        </Grid.Container>
+      </Card.Footer>
     </Card>
   );
 };

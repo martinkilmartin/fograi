@@ -6,4 +6,6 @@ export type NewsSource = {
   logo?: string
   emos: string[]
   langs?: string[]
+  tags?: string[]
+  socials?: Record<string, string>
 }

@@ -1,4 +1,4 @@
-import { NewsSource } from 'src/types/NewsSource'
+import { NewsSource } from 'src/types/NewsSource';
 
 export const CANewsSources = new Map<string, NewsSource>([
   [
@@ -180,7 +180,7 @@ export const CANewsSources = new Map<string, NewsSource>([
     },
   ],
   [
-  'CA_SPEC',
+    'CA_SPEC',
     {
       name: 'The Hamilton Spectator',
       url: 'https://www.thespec.com/',
@@ -460,8 +460,34 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.agriland.ie/',
       est: 2012,
       about:
-        'Online resource covering all the information, news and services required by people involved in the agricultural and farming sectors in Ireland.',
-      emos: ['💻', '🌱'],
+        "Agriland is Ireland's leading digital news and services platform for the farming and agricultural sectors.Since its inception in 2012, it has continuously served as a vital resource for farming professionals and enthusiasts, offering in-depth coverage on industry news, weather reports, market trends, and innovative agricultural technologies.Agriland connects the Irish farming community with practical insights, expert advice, and a platform for discourse on issues that matter.",
+      emos: ['🚜', '🌱', '🐄'],
+      langs: ['en'],
+      tags: [
+        'IrishFarming',
+        'AgriNews',
+        'FarmAdvice',
+        'RuralAffairs',
+        'AgriSector',
+        'FarmTech',
+        'Agriland',
+        'AgriInnovation',
+        'FarmLife',
+        'Agribusiness',
+        'Farmers',
+        'SustainableFarming',
+        'RuralLife',
+        'AgrilandNews',
+        'Agritech',
+      ],
+      socials: {
+        facebook: 'https://www.facebook.com/AgrilandIreland',
+        linkedin: 'https://www.linkedin.com/company/agriland-media-ltd-',
+        twitter: 'https://twitter.com/AgrilandIreland',
+        youtube: 'https://www.youtube.com/user/AgrilandIreland',
+        instagram: 'https://www.instagram.com/agriland.ie/',
+        snapchat: 'https://www.snapchat.com/add/agriland'
+      },
     },
   ],
   [
@@ -1587,7 +1613,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'The Corkman',
       url: 'https://www.independent.ie/regionals/corkman/',
       est: 1841,
-      about: 'news, sports, entertainment, business, and lifestyle stories for County Cork and its surrounding areas',
+      about:
+        'news, sports, entertainment, business, and lifestyle stories for County Cork and its surrounding areas',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -1597,7 +1624,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Fingal Independent',
       url: 'https://www.independent.ie/regionals/dublin/fingal/',
       est: 1994,
-      about: 'Up-to-date local news, sports, entertainment, business, and lifestyle stories for the Fingal region and surrounding areas, keeping readers informed and engaged with their community.',
+      about:
+        'Up-to-date local news, sports, entertainment, business, and lifestyle stories for the Fingal region and surrounding areas, keeping readers informed and engaged with their community.',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -1607,7 +1635,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Gorey Guardian',
       url: 'https://www.independent.ie/regionals/wexford/gorey-news/',
       est: 1993,
-      about: 'Local Wexford Sport, Entertainment, Business & Lifestyle news for Gorey.',
+      about:
+        'Local Wexford Sport, Entertainment, Business & Lifestyle news for Gorey.',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -1627,7 +1656,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'The Southern Star',
       url: 'https://www.southernstar.ie/',
       est: 1889,
-      about: 'Weekly newspaper covering the areas of South, East, Mid and West Cork.',
+      about:
+        'Weekly newspaper covering the areas of South, East, Mid and West Cork.',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -1637,7 +1667,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Strabane Weekly News and Tyrone & Donegal Reporter',
       url: 'https://www.strabaneweekly.co.uk/',
       est: 2008,
-      about: 'Local news, sports, events, and other topics of interest to the communities of Strabane, Tyrone, and Donegal.',
+      about:
+        'Local news, sports, events, and other topics of interest to the communities of Strabane, Tyrone, and Donegal.',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -1647,7 +1678,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'The Tyrone Constitution',
       url: 'https://www.tyronecon.co.uk/',
       est: 1844,
-      about: 'The oldest newspaper in Tyrone with circulation around much of Tyrone and Fermanagh.',
+      about:
+        'The oldest newspaper in Tyrone with circulation around much of Tyrone and Fermanagh.',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -1677,7 +1709,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Inside Ireland',
       url: 'https://insideireland.ie/',
       est: 2008,
-      about: 'Not-for-profit news outlet covering local stories affecting communities in Ireland. Contributors come from all over Ireland and are hobbyist and professional journalists, chronicling stories from all four corners of the island',
+      about:
+        'Not-for-profit news outlet covering local stories affecting communities in Ireland. Contributors come from all over Ireland and are hobbyist and professional journalists, chronicling stories from all four corners of the island',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -1687,7 +1720,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Killarney Advertiser',
       url: 'https://killarneyadvertiser.ie/',
       est: 1973,
-      about: 'Latest local, business, sport, lifestyle, jobs & entertainment news from around Killarney.',
+      about:
+        'Latest local, business, sport, lifestyle, jobs & entertainment news from around Killarney.',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -1697,7 +1731,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'The Liberty',
       url: 'https://www.theliberty.ie/',
       est: 2011,
-      about: 'A local news website for the Liberties by TUDublin journalism students.',
+      about:
+        'A local news website for the Liberties by TUDublin journalism students.',
       emos: ['💻', '🇮🇪'],
     },
   ],
@@ -2018,7 +2053,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       emos: ['📰', '👭'],
     },
   ],
-])
+]);
 
 export const INNewsSources = new Map<string, NewsSource>([
   [
@@ -2260,7 +2295,7 @@ export const INNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
-])
+]);
 
 export const UKNewsSources = new Map<string, NewsSource>([
   [
@@ -2293,8 +2328,7 @@ export const UKNewsSources = new Map<string, NewsSource>([
       name: 'The Times',
       url: 'https://www.thetimes.co.uk/',
       est: 1785,
-      about:
-        'News and opinion from The Times & The Sunday Times.',
+      about: 'News and opinion from The Times & The Sunday Times.',
       emos: ['📰', '🇬🇧'],
       langs: ['en'],
     },
@@ -2354,7 +2388,7 @@ export const UKNewsSources = new Map<string, NewsSource>([
       url: 'https://www.kentonline.co.uk/',
       est: 1855,
       about:
-        'Latest live breaking news, sport, business and what\'s on in Kent and Medway.',
+        "Latest live breaking news, sport, business and what's on in Kent and Medway.",
       emos: ['📰', '🇬🇧'],
       langs: ['en'],
     },
@@ -2365,13 +2399,12 @@ export const UKNewsSources = new Map<string, NewsSource>([
       name: 'Oxford Mail',
       url: 'https://www.oxfordmail.co.uk/',
       est: 1928,
-      about:
-        'Latest news, sport and events across Oxfordshire.',
+      about: 'Latest news, sport and events across Oxfordshire.',
       emos: ['📰', '🇬🇧'],
       langs: ['en'],
     },
   ],
-])
+]);
 
 export const NZNewsSources = new Map<string, NewsSource>([
   [
@@ -2393,7 +2426,7 @@ export const NZNewsSources = new Map<string, NewsSource>([
       url: 'https://www.odt.co.nz',
       est: 1861,
       about:
-        'New Zealand\'s oldest daily newspaper. Strong local Otago news coverage combined with national and international news.',
+        "New Zealand's oldest daily newspaper. Strong local Otago news coverage combined with national and international news.",
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
     },
@@ -2416,8 +2449,7 @@ export const NZNewsSources = new Map<string, NewsSource>([
       name: 'Ashburton Guardian',
       url: 'https://www.guardianonline.co.nz/',
       est: 1879,
-      about:
-        'News, online, all the time.',
+      about: 'News, online, all the time.',
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
     },
@@ -2440,8 +2472,7 @@ export const NZNewsSources = new Map<string, NewsSource>([
       name: 'The Gisborne Herald',
       url: 'https://www.gisborneherald.co.nz/',
       est: 1874,
-      about:
-        'Daily evening newspaper for Gisborne and its environs',
+      about: 'Daily evening newspaper for Gisborne and its environs',
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
     },
@@ -2476,8 +2507,7 @@ export const NZNewsSources = new Map<string, NewsSource>([
       name: 'Wairarapa Times-Age',
       url: 'https://times-age.co.nz/',
       est: 1878,
-      about:
-        'Wairarapa\'s source of local news',
+      about: "Wairarapa's source of local news",
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
     },
@@ -2488,8 +2518,7 @@ export const NZNewsSources = new Map<string, NewsSource>([
       name: 'Whanganui Chronicle',
       url: 'https://www.nzherald.co.nz/whanganui-chronicle/',
       est: 1856,
-      about:
-        'Local and regional news from the Whanganui region.',
+      about: 'Local and regional news from the Whanganui region.',
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
     },
@@ -2518,7 +2547,7 @@ export const NZNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
-])
+]);
 
 export const OZNewsSources = new Map<string, NewsSource>([
   [
@@ -2557,7 +2586,7 @@ export const OZNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
-])
+]);
 
 export const USNewsSources = new Map<string, NewsSource>([
   [
@@ -2729,7 +2758,8 @@ export const USNewsSources = new Map<string, NewsSource>([
       name: 'The Arizona Republic',
       url: 'https://azcentral.com/',
       est: 1890,
-      about: 'Breaking news and in-depth coverage of sports, things to do, travel and opinions.',
+      about:
+        'Breaking news and in-depth coverage of sports, things to do, travel and opinions.',
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
     },
@@ -2740,7 +2770,8 @@ export const USNewsSources = new Map<string, NewsSource>([
       name: 'The Dallas Morning News',
       url: 'https://www.dallasnews.com/',
       est: 1885,
-      about: 'Breaking news, investigations, reviews and opinion on business, sports, arts, entertainment, food, real estate, crime and more.',
+      about:
+        'Breaking news, investigations, reviews and opinion on business, sports, arts, entertainment, food, real estate, crime and more.',
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
     },
@@ -2751,7 +2782,8 @@ export const USNewsSources = new Map<string, NewsSource>([
       name: 'The Plain Dealer',
       url: 'https://www.cleveland.com/',
       est: 1842,
-      about: 'The latest Cleveland, OH local news, sports news & US breaking news. View daily Northeast Ohio weather updates, watch videos and photos, join the discussion in forums.',
+      about:
+        'The latest Cleveland, OH local news, sports news & US breaking news. View daily Northeast Ohio weather updates, watch videos and photos, join the discussion in forums.',
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
     },
@@ -2773,7 +2805,8 @@ export const USNewsSources = new Map<string, NewsSource>([
       name: 'Detroit Free Press',
       url: 'https://eu.freep.com/',
       est: 1831,
-      about: 'News about Detroit, as well as headlines and stories from around Michigan.',
+      about:
+        'News about Detroit, as well as headlines and stories from around Michigan.',
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
     },
@@ -2806,7 +2839,8 @@ export const USNewsSources = new Map<string, NewsSource>([
       name: 'San Francisco Chronicle',
       url: 'https://www.sfchronicle.com/',
       est: 1865,
-      about: 'Bay Area and San Francisco breaking news, sports, tech, and food and wine coverage, plus enhanced coverage of Giants, 49ers and Warriors.',
+      about:
+        'Bay Area and San Francisco breaking news, sports, tech, and food and wine coverage, plus enhanced coverage of Giants, 49ers and Warriors.',
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
     },
@@ -2817,7 +2851,8 @@ export const USNewsSources = new Map<string, NewsSource>([
       name: 'The Boston Globe',
       url: 'https://www.bostonglobe.com/',
       est: 1872,
-      about: 'New England\'s best source for news, sports, opinion and entertainment. The Globe brings you breaking news, Spotlight Team investigations, year-round coverage of the Red Sox, Patriots, Celtics and Bruins, sharp editorials, stunning photography, and engaging arts, food and lifestyle journalism.',
+      about:
+        "New England's best source for news, sports, opinion and entertainment. The Globe brings you breaking news, Spotlight Team investigations, year-round coverage of the Red Sox, Patriots, Celtics and Bruins, sharp editorials, stunning photography, and engaging arts, food and lifestyle journalism.",
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
     },
@@ -2828,7 +2863,8 @@ export const USNewsSources = new Map<string, NewsSource>([
       name: 'St. Louis Post-Dispatch',
       url: 'https://www.stltoday.com/',
       est: 1878,
-      about: 'St. Louis City and County news, local weather, entertainment and events.',
+      about:
+        'St. Louis City and County news, local weather, entertainment and events.',
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
     },
@@ -2839,7 +2875,8 @@ export const USNewsSources = new Map<string, NewsSource>([
       name: 'St. Paul Pioneer Press',
       url: 'https://www.twincities.com/',
       est: 1849,
-      about: 'St. Paul news, crime, politics, education, business, sports, entertainment and things to do.',
+      about:
+        'St. Paul news, crime, politics, education, business, sports, entertainment and things to do.',
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
     },
@@ -2850,12 +2887,13 @@ export const USNewsSources = new Map<string, NewsSource>([
       name: 'The Rafu Shimpo',
       url: 'https://rafu.com/',
       est: 1903,
-      about: 'Japanese American newspaper, serving the community from Downtown Los Angeles since 1903.',
+      about:
+        'Japanese American newspaper, serving the community from Downtown Los Angeles since 1903.',
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
     },
   ],
-])
+]);
 
 export const AllNewsSources = new Map<string, NewsSource>([
   ...CANewsSources.entries(),
@@ -2865,4 +2903,4 @@ export const AllNewsSources = new Map<string, NewsSource>([
   ...NZNewsSources.entries(),
   ...OZNewsSources.entries(),
   ...USNewsSources.entries(),
-])
+]);
