@@ -27,7 +27,8 @@ export const CANewsSources = new Map<string, NewsSource>([
         facebook: 'http://www.facebook.com/ledevoir',
         twitter: 'https://twitter.com/LeDevoir',
         instagram: 'https://www.instagram.com/ledevoir/',
-        youtube: 'https://www.youtube.com/@ledevoir'
+        youtube: 'https://www.youtube.com/@ledevoir',
+        linkedin: 'https://www.linkedin.com/company/le-devoir/'
       },
       headerBG: "#fff",
       primaryColor: "#333"
@@ -39,9 +40,28 @@ export const CANewsSources = new Map<string, NewsSource>([
       name: 'The Quebec Chronicle Telegraph',
       url: 'https://www.qctonline.com/',
       est: 1764,
-      about: 'The first and oldest newspaper in North America.',
+      about:
+        "The Quebec Chronicle-Telegraph, distinguished as the oldest newspaper in North America, continues to be an authoritative source of news and information. Covering a broad array of topics, from politics, business, and culture to local events and lifestyle, it provides the Quebec community and beyond with valuable insights and engaging stories.",
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_QCTO.png',
+      langs: ['en', 'fr'],
+      tags: [
+        'QuebecChronicleTelegraph',
+        'News',
+        'QuebecNews',
+        'CanadaNews',
+        'Politics',
+        'Business',
+        'Culture',
+        'LocalEvents',
+      ],
+      socials: {
+        email: 'info@qctonline.com',
+        facebook: 'https://www.facebook.com/qctonline',
+        twitter: 'https://twitter.com/QCTonline',
+      },
+      headerBG: "#fff",
+      primaryColor: "#996600"
     },
   ],
   [
@@ -50,9 +70,29 @@ export const CANewsSources = new Map<string, NewsSource>([
       name: 'Toronto Star',
       url: 'https://www.thestar.com/',
       est: 1892,
-      about: 'Publishes ongoing news and information to a global audience.',
+      about:
+        "The Toronto Star, one of Canada's leading news platforms, consistently delivers insightful and relevant news to a global audience. With coverage that spans local events, national affairs, and international stories, it remains dedicated to upholding journalistic integrity while informing and engaging its readers.",
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_TRTS.svg',
+      langs: ['en'],
+      tags: [
+        'TorontoStar',
+        'News',
+        'CanadaNews',
+        'InternationalNews',
+        'LocalEvents',
+        'NationalAffairs',
+      ],
+      socials: {
+        email: 'city@thestar.ca',
+        facebook: 'https://www.facebook.com/torontostar',
+        twitter: 'https://twitter.com/torontostar',
+        youtube: 'https://www.youtube.com/TorontoStar',
+        instagram: 'https://www.instagram.com/thetorontostar/',
+        linkedin: 'https://www.linkedin.com/company/toronto-star/'
+      },
+      headerBG: "#fff",
+      primaryColor: "#0060df"
     },
   ],
   [
@@ -62,9 +102,32 @@ export const CANewsSources = new Map<string, NewsSource>([
       url: 'https://www.theglobeandmail.com/',
       est: 1844,
       about:
-        'Engaging Canadians through coverage of news, politics, business, investing and lifestyle topics.',
+        "The Globe And Mail, Canada's foremost news media company, continuously engages Canadians with comprehensive coverage on news, politics, business, investing, and lifestyle topics. Known for its in-depth analysis and high journalistic standards, it is an authoritative source for national and international news.",
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_TGAM.svg',
+      langs: ['en'],
+      tags: [
+        'TheGlobeAndMail',
+        'News',
+        'CanadaNews',
+        'InternationalNews',
+        'Politics',
+        'Business',
+        'Investing',
+        'Lifestyle'
+      ],
+      socials: {
+        email: 'newsroom@globeandmail.com',
+        facebook: 'https://www.facebook.com/theglobeandmail',
+        twitter: 'https://twitter.com/globeandmail',
+        instagram: 'https://instagram.com/globeandmail',
+        linkedin: 'https://www.linkedin.com/company/the-globe-and-mail',
+        youtube: 'https://www.youtube.com/user/TheGlobeandMail',
+        tiktok: 'https://www.tiktok.com/@globeandmail',
+        snapchat: 'https://story.snapchat.com/p/f9c37a38-b555-4c37-a97a-598423457108'
+      },
+      headerBG: "#da161f",
+      primaryColor: "#333"
     },
   ],
   [
