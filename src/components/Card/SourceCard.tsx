@@ -1,5 +1,13 @@
 import { useState } from 'react';
-import { Grid, Card, Text, Link, Row, useTheme } from '@nextui-org/react';
+import {
+  Badge,
+  Grid,
+  Card,
+  Text,
+  Link,
+  Row,
+  useTheme,
+} from '@nextui-org/react';
 import { NewsSource } from 'src/types';
 import Image from 'next/image';
 import { flags } from '@constants/FLAGS';
@@ -17,7 +25,10 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
   return (
     <Card isHoverable variant="bordered" style={{ borderRadius: '0' }}>
       <Card.Header
-        style={{ backgroundColor: theme?.colors.neutralLightHover.value }}
+        style={{
+          backgroundColor:
+            source?.headerBG ?? theme?.colors.background.value
+        }}
       >
         <Row justify="center" align="center">
           <Link href={source?.url} target="_blank">
@@ -41,6 +52,16 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
           </Text>
         </Row>
         <Text>{source?.about}</Text>
+        <Grid.Container justify="center">
+          {source?.tags &&
+            source?.tags.map((tag) => (
+              <Grid key={tag}>
+                <Badge css={{ backgroundColor: source.primaryColor }}>
+                  #{tag}
+                </Badge>
+              </Grid>
+            ))}
+        </Grid.Container>
       </Card.Body>
       <Card.Footer>
         <Grid.Container gap={2} justify="center">

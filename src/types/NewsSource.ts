@@ -8,4 +8,7 @@ export type NewsSource = {
   langs?: string[]
   tags?: string[]
   socials?: Record<string, string>
+  headerBG?: string
+  primaryColor?: string
+  secondaryColor?: string
 }

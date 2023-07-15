@@ -481,6 +481,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'Agritech',
       ],
       socials: {
+        email: 'info@agriland.ie',
         facebook: 'https://www.facebook.com/AgrilandIreland',
         linkedin: 'https://www.linkedin.com/company/agriland-media-ltd-',
         twitter: 'https://twitter.com/AgrilandIreland',
@@ -488,6 +489,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         instagram: 'https://www.instagram.com/agriland.ie/',
         snapchat: 'https://www.snapchat.com/add/agriland'
       },
+      headerBG: "#fff",
+      primaryColor: "#3a9948"
     },
   ],
   [
@@ -514,6 +517,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       socials: {
         email: 'info@galwayadvertiser.ie',
       },
+      headerBG: "#d70909",
+      primaryColor: "#d70909"
     },
   ],
   [
@@ -523,8 +528,30 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.balls.ie/',
       est: 2010,
       about:
-        'Covering every sport from Hurling to American Football, from Curling to Downhill Skiing, bringing what is happening right now, in video, gif, image or tweet form.',
-      emos: ['💻', '⚽'],
+        "Established in 2010, BALLS.ie is Ireland's premier online platform for sports enthusiasts, covering a vast range of sports from Hurling to American Football, and Curling to Downhill Skiing. BALLS.ie brings you real-time updates, engaging content in video, gif, image, and tweet form, and in-depth commentary on the games you love. Stay updated with BALLS.ie, where every sport has a story to tell.",
+      emos: ['💻', '⚽', '🏈', '🥌', '⛷'],
+      langs: ['en'],
+      tags: [
+        'BALLSie',
+        'IrishSports',
+        'SportsNews',
+        'Hurling',
+        'AmericanFootball',
+        'Curling',
+        'DownhillSkiing',
+        'SportsUpdates',
+        'SportsCommentary',
+      ],
+      socials: {
+        email: 'info@balls.ie', // Replace with actual email if different
+        facebook: 'https://www.facebook.com/ballsdotie',
+        twitter: 'https://twitter.com/ballsdotie',
+        youtube: 'https://www.youtube.com/c/Ballsdotie',
+        apple: 'https://apps.apple.com/app/id995175899',
+        android: 'https://play.google.com/store/apps/details?id=io.sq1.pplus.app.ballsie'
+      },
+      headerBG: "#fff",
+      primaryColor: "#17b9a4"
     },
   ],
   [
@@ -534,8 +561,30 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.beat102103.com/',
       est: 2003,
       about:
-        'Multi-platform radio station for entertaining & informing young adults in the South East.',
-      emos: ['📻', '🇮🇪'],
+        "Established in 2003, Beat 102 103 is a premier multi-platform radio station dedicated to entertaining and informing young adults in the South East of Ireland. From the latest music to engaging discussions on issues affecting the region's youth, Beat 102 103 provides an energetic mix of content that resonates with its listeners. Stay tuned with Beat 102 103, your pulse on the South East's vibrant youth culture.",
+      emos: ['📻', '🇮🇪', '🎵'],
+      langs: ['en'],
+      tags: [
+        'Beat102103',
+        'IrishRadio',
+        'SouthEastIreland',
+        'YouthCulture',
+        'Entertainment',
+        'News',
+        'Music',
+        'RadioStation',
+      ],
+      socials: {
+        email: ' studio@beat102103.com',
+        instagram: 'https://www.instagram.com/beat102103/?hl=es',
+        twitter: 'https://twitter.com/beat102103',
+        tiktok: 'https://www.tiktok.com/@beat102103?lang=en',
+        facebook: 'https://www.facebook.com/Beat102103/',
+        youtube: 'https://www.youtube.com/user/OfficialBeat102103',
+        soundcloud: 'https://soundcloud.com/beat102103'
+      },
+      headerBG: "#FF0000",
+      primaryColor: "#FF0000"
     },
   ],
   [
