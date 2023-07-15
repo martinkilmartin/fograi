@@ -8,9 +8,29 @@ export const CANewsSources = new Map<string, NewsSource>([
       url: 'https://www.ledevoir.com/',
       est: 1910,
       about:
-        'Quotidien indépendant au Québec. Obtenir les toutes dernières actualités.',
+        "Le Devoir est un journal quotidien indépendant basé au Québec. Il se consacre à fournir les actualités les plus récentes et pertinentes, couvrant une gamme diversifiée de sujets allant de la politique locale et internationale à la culture, l'éducation et bien plus encore. Le Devoir est reconnu pour son journalisme d'investigation approfondi et son engagement envers l'intégrité et la transparence.",
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_LDVR.svg',
+      langs: ['fr'],
+      tags: [
+        'LeDevoir',
+        'NouvellesQuébec',
+        'NouvellesCanada',
+        'JournalIndépendant',
+        'NouvellesLocales',
+        'NouvellesNationales',
+        'Culture',
+        'Éducation',
+        'JournalismeInvestigation',
+      ],
+      socials: {
+        facebook: 'http://www.facebook.com/ledevoir',
+        twitter: 'https://twitter.com/LeDevoir',
+        instagram: 'https://www.instagram.com/ledevoir/',
+        youtube: 'https://www.youtube.com/@ledevoir'
+      },
+      headerBG: "#fff",
+      primaryColor: "#333"
     },
   ],
   [
@@ -581,7 +601,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         tiktok: 'https://www.tiktok.com/@beat102103?lang=en',
         facebook: 'https://www.facebook.com/Beat102103/',
         youtube: 'https://www.youtube.com/user/OfficialBeat102103',
-        soundcloud: 'https://soundcloud.com/beat102103'
+        soundcloud: 'https://soundcloud.com/beat102103',
+        whatsapp: 'https://wa.me/3530851029103'
       },
       headerBG: "#FF0000",
       primaryColor: "#FF0000"
@@ -773,7 +794,25 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Clare Live',
       url: 'https://www.clarelive.ie/',
       est: 2001,
+      about:
+        "Clare Live is an online hub for all news and events in County Clare, Ireland, serving as a reliable source of information for residents and visitors alike. From local news updates to community events and lifestyle stories, Clare Live covers a wide range of topics to keep its readers informed and engaged.",
       emos: ['💻', '🇮🇪'],
+      langs: ['en'],
+      tags: [
+        'ClareLive',
+        'LocalNews',
+        'ClareEvents',
+        'ClareUpdates',
+        'CountyClare',
+        'IrishNews'
+      ],
+      socials: {
+        email: 'news@clarelive.ie',
+        twitter: 'https://twitter.com/ClareLiveNews',
+        facebook: 'https://www.facebook.com/ClareLiveNews',
+      },
+      headerBG: "#fff",
+      primaryColor: "#9D9C9C"
     },
   ],
   [
@@ -782,8 +821,28 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Classic Hits',
       url: 'https://www.classichits.ie/',
       est: 2009,
-      about: "Ireland's Classic Hits - The Home of 80's & 90's.",
+      about:
+        "Classic Hits is Ireland's premier radio station for the best of 80's and 90's music. As the go-to platform for fans of these iconic decades, it offers a rich assortment of music that transcends generations.",
       emos: ['📻', '🎭'],
+      langs: ['en'],
+      tags: [
+        'ClassicHits',
+        'RadioStation',
+        '80sMusic',
+        '90sMusic',
+        'ClassicMusic',
+        'IrishRadio',
+        'MusicRadio'
+      ],
+      socials: {
+        email: 'hello@classichits.ie',
+        facebook: 'https://www.facebook.com/ClassicHitsRadio',
+        instagram: 'https://www.instagram.com/classichitsradio/',
+        twitter: 'https://twitter.com/ClassicHitsRdio',
+        whatsapp: 'https://wa.me/3530871880008',
+      },
+      headerBG: "#59058d",
+      primaryColor: "#59058d"
     },
   ],
   [
@@ -793,8 +852,30 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.colerainechronicle.co.uk/',
       est: 1844,
       about:
-        'Extensive coverage of Causeway Coast, serving Ballycastle, Ballymoney, Bushmills, Coleraine, Limavady, Moyle, Portrush and Portstewart.',
-      emos: ['📰', '🇮🇪'],
+        "The Coleraine Chronicle is a centuries old, trusted news outlet, offering extensive coverage of the Causeway Coast region. It serves areas including Ballycastle, Ballymoney, Bushmills, Coleraine, Limavady, Moyle, Portrush, and Portstewart, providing comprehensive updates on local news, events, and issues that impact the community.",
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+      tags: [
+        'ColeraineChronicle',
+        'LocalNews',
+        'CausewayCoast',
+        'BallycastleNews',
+        'BallymoneyNews',
+        'BushmillsNews',
+        'ColeraineNews',
+        'LimavadyNews',
+        'MoyleNews',
+        'PortrushNews',
+        'PortstewartNews'
+      ],
+      socials: {
+        email: 'editor@thechronicle.uk.com',
+        facebook: 'https://en-gb.facebook.com/coleraine.chronicle/',
+        twitter: 'https://twitter.com/colerainechron?lang=en',
+        youtube: 'https://www.youtube.com/channel/UCJ8FeVvbQ6dcrcwnvu3o3QA/videos'
+      },
+      headerBG: "#fff",
+      primaryColor: "#D8002D"
     },
   ],
   [
@@ -803,8 +884,28 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Connacht Tribune',
       url: 'https://connachttribune.ie/',
       est: 1925,
-      about: 'Galway news, sport, entertainment, property & arts.',
+      about:
+        "The Connacht Tribune is a prominent source for Galway-centric news, spanning a range of topics from sports and entertainment to property and arts. It's a one-stop destination for readers seeking comprehensive coverage on matters affecting the vibrant communities of Galway and its surrounding regions.",
       emos: ['📰', '🇮🇪'],
+      langs: ['en'],
+      tags: [
+        'ConnachtTribune',
+        'GalwayNews',
+        'SportNews',
+        'Entertainment',
+        'PropertyNews',
+        'ArtsNews',
+        'LocalNews',
+        'IrishNews',
+      ],
+      socials: {
+        email: 'news@ctribune.ie',
+        facebook: 'https://www.facebook.com/ConnachtTribune',
+        twitter: 'https://twitter.com/CTribune',
+        youtube: 'https://www.youtube.com/@connachttribunegalwaycityt9972'
+      },
+      headerBG: "#a90c21",
+      primaryColor: "#a90c21;"
     },
   ],
   [
@@ -814,8 +915,27 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.corkbeo.ie/',
       est: 2019,
       about:
-        'Cork Beo is a voice for the Cork region; telling stories, amplifying concerns &  championing causes.',
+        "Cork Beo is a powerful digital voice for the Cork region. It strives to narrate impactful stories, amplify local concerns, and champion causes that matter to the Cork community. From breaking news and live updates to features and analyses, Cork Beo brings everything that's happening in Cork right to your screen.",
       emos: ['💻', '🇮🇪'],
+      langs: ['en'],
+      tags: [
+        'CorkBeo',
+        'CorkNews',
+        'LocalNews',
+        'IrishNews',
+        'DigitalMedia',
+        'CommunityNews',
+        'CorkStories',
+        'CorkRegion'
+      ],
+      socials: {
+        email: 'news@corkbeo.ie',
+        facebook: 'https://www.facebook.com/corkbeo',
+        twitter: 'https://twitter.com/corkbeo',
+        instagram: 'https://www.instagram.com/corkbeo/'
+      },
+      headerBG: "#d90000",
+      primaryColor: "#d90000"
     },
   ],
   [
@@ -2240,9 +2360,33 @@ export const INNewsSources = new Map<string, NewsSource>([
       name: 'Bombay Samachar',
       url: 'https://bombaysamachar.com/',
       est: 1822,
-      about: 'The oldest continuously published newspaper in India.',
+      about:
+        "The Bombay Samachar, now known as Mumbai Samachar, stands as the oldest continuously published newspaper in India. Published in both English and Gujarati, it covers a wide array of topics including local, national and international news, politics, business, entertainment, sports, and more. The newspaper's rich history and commitment to accurate journalism has made it a trusted news source among diverse readership across India and beyond.",
       emos: ['📰', '🇮🇳'],
       langs: ['en', 'gu'],
+      tags: [
+        'BombaySamachar',
+        'MumbaiSamachar',
+        'IndianNews',
+        'LocalNews',
+        'NationalNews',
+        'InternationalNews',
+        'Politics',
+        'Business',
+        'Entertainment',
+        'Sports',
+        'TrustedNewsSource',
+      ],
+      socials: {
+        email: 'samachar.bombay@gmail.com',
+        facebook: 'https://www.facebook.com/Mumbaisamachar4u/',
+        instagram: 'https://www.instagram.com/mumbaisamachar/',
+        twitter: 'https://twitter.com/Msamachar4u',
+        whatsapp: 'https://api.whatsapp.com/send?phone=7045430579',
+        youtube: 'https://www.youtube.com/@MumbaiSamachar4u'
+      },
+      headerBG: "#fff",
+      primaryColor: "#7c0000"
     },
   ],
   [
