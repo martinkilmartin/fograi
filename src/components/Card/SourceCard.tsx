@@ -47,7 +47,14 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
           {source?.socials &&
             Object.keys(source?.socials).map((key) => (
               <Grid key={key}>
-                <Link href={source.socials?.[key]} target='_blank'>
+                <Link
+                  href={
+                    key === 'email'
+                      ? `mailto:${source.socials?.[key]}`
+                      : source.socials?.[key]
+                  }
+                  target="_blank"
+                >
                   <Image
                     src={`/img/ic/${key}.svg`}
                     alt={`${key} Logo`}

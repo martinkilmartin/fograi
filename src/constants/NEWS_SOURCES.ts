@@ -491,14 +491,29 @@ export const IENewsSources = new Map<string, NewsSource>([
     },
   ],
   [
-    'IE_AADV',
-    {
-      name: 'Athlone Adevertiser',
+    'IE_AADV', {
+      name: 'Athlone Advertiser',
       url: 'https://www.advertiser.ie/athlone',
       est: 1970,
       about:
-        'A free newspaper distributed throughout Athlone & Westmeath each Thursday.',
-      emos: ['📰', '🇮🇪'],
+        "The Athlone Advertiser, established in 1970, is a renowned free newspaper distributed throughout Athlone & Westmeath every Thursday. As a trusted local news source, it offers comprehensive coverage of local events, politics, sports, arts, and community happenings. The Athlone Advertiser is dedicated to providing timely and accurate reporting, fostering informed discussions, and contributing to the vibrant community spirit of Athlone and Westmeath.",
+      emos: ['📰', '🇮🇪', '📍'],
+      langs: ['en'],
+      tags: [
+        'AthloneNews',
+        'LocalJournalism',
+        'WestmeathNews',
+        'IrishLocalNews',
+        'CommunityNews',
+        'AthloneAdvertiser',
+        'AthloneEvents',
+        'WestmeathEvents',
+        'AthloneArts',
+        'AthloneSports',
+      ],
+      socials: {
+        email: 'info@galwayadvertiser.ie',
+      },
     },
   ],
   [
