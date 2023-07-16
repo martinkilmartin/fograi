@@ -137,9 +137,27 @@ export const CANewsSources = new Map<string, NewsSource>([
       url: 'https://www.lapresse.ca/',
       est: 1884,
       about:
-        'Sa mission est de produire une information de qualité accessible gratuitement au plus grand nombre.',
+        "La Presse se dédie à la production d'information de qualité, accessible gratuitement à un large public. Comme l'un des journaux les plus influents au Canada, elle offre une variété de contenus couvrant l'actualité locale et mondiale, la politique, les arts, les sports et bien plus encore. Elle reste engagée envers l'intégrité journalistique, la rigueur éditoriale et l'innovation technologique.",
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_LPRS.svg',
+      langs: ['fr'],
+      tags: [
+        'LaPresse',
+        'NouvellesCanadiennes',
+        'PresseLocale',
+        'NouvellesMondiales',
+        'InformationGratuite',
+        'IntégritéJournalistique'
+      ],
+      socials: {
+        email: 'enquetes@lapresse.ca',
+        facebook: 'https://fr-ca.facebook.com/LaPresseFB/',
+        twitter: 'https://twitter.com/lp_lapresse',
+        linkedin: 'https://ca.linkedin.com/company/la-presse',
+        instagram: 'https://www.instagram.com/lp_lapresse/?hl=fr-ca'
+      },
+      headerBG: "#ED1C23",
+      primaryColor: "#ED1C23"
     },
   ],
   [
@@ -149,9 +167,31 @@ export const CANewsSources = new Map<string, NewsSource>([
       url: 'https://www.journaldemontreal.com/',
       est: 1964,
       about:
-        'Des nouvelles accessibles et complètes : sports, politique, spectacles, argent et judiciaire. Soyez toujours bien informé avec le Journal de Montréal.',
+        "Le Journal de Montréal est une publication de premier plan offrant des nouvelles complètes et accessibles dans divers domaines. Qu'il s'agisse de sports, de politique, de spectacles, de finance ou de judiciaire, ce journal assure une couverture approfondie pour garder son lectorat bien informé. L'accent est mis sur la présentation de l'information de manière claire et concise, ce qui le rend populaire parmi un large éventail de lecteurs.",
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_JMTL.svg',
+      langs: ['fr'],
+      tags: [
+        'LeJournalDeMontréal',
+        'NouvellesCanadiennes',
+        'InformationLocale',
+        'Sport',
+        'Politique',
+        'Spectacles',
+        'Finance',
+        'Juridique'
+      ],
+      socials: {
+        email: 'jdm.info@quebecormedia.com',
+        facebook: 'https://www.facebook.com/jdemontreal',
+        twitter: 'https://twitter.com/JdeMontreal',
+        instagram: 'https://www.instagram.com/jdemontreal/',
+        apple: 'https://apps.apple.com/ca/app/journal-de-montr%C3%A9al/id6444195089',
+        android: 'https://play.google.com/store/apps/details?id=com.quebecormedia.journaldemontreal',
+        linkedin: 'https://www.linkedin.com/company/jdemontreal/'
+      },
+      headerBG: "#E32402",
+      primaryColor: "#E32402"
     },
   ],
   [
@@ -161,10 +201,30 @@ export const CANewsSources = new Map<string, NewsSource>([
       url: 'https://montrealgazette.com/',
       est: 1778,
       about:
-        'Read latest national and international breaking news, updates, headlines, events & more.',
+        "The Montreal Gazette is a trusted source for both national and international news. Committed to delivering accurate, insightful, and up-to-date reporting, the newspaper covers a broad range of topics from breaking news, events, to in-depth features. As one of the oldest newspapers in Canada, the Montreal Gazette continues to keep its readers informed about important happenings both locally and globally.",
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_MTGZ.svg',
+      langs: ['en'],
+      tags: [
+        'MontrealGazette',
+        'CanadianNews',
+        'LocalNews',
+        'InternationalNews',
+        'BreakingNews',
+        'Events',
+        'Features'
+      ],
+      socials: {
+        facebook: 'https://www.facebook.com/montrealgazette/',
+        twitter: 'https://twitter.com/mtlgazette',
+        youtube: 'https://www.youtube.com/user/themontrealgazette',
+        instagram: 'https://www.instagram.com/montrealgazette/',
+        linkedin: 'https://www.linkedin.com/company/the-montreal-gazette/'
+      },
+      headerBG: "#fff",
+      primaryColor: "#016ea5"
     },
+
   ],
   [
     'CA_VSUN',
@@ -173,9 +233,29 @@ export const CANewsSources = new Map<string, NewsSource>([
       url: 'https://vancouversun.com/',
       est: 1912,
       about:
-        'Read latest national and international breaking news, updates, headlines, events & more.',
+        'Vancouver Sun brings the latest national and international news right at your fingertips. Offering comprehensive coverage on a variety of topics, including politics, business, entertainment, sports, and more, it ensures that its readers are always updated with events and happenings from around the globe.',
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_VSUN.svg',
+      langs: ['en'],
+      tags: [
+        'VancouverSun',
+        'CanadianNews',
+        'InternationalNews',
+        'NewsUpdates',
+        'BreakingNews',
+        'Entertainment',
+        'Sports',
+        'Politics',
+        'Business'
+      ],
+      socials: {
+        facebook: 'https://www.facebook.com/VancouverSun/',
+        twitter: 'https://twitter.com/VancouverSun',
+        youtube: 'https://www.youtube.com/user/VancouverSunOnline',
+        instagram: 'https://www.instagram.com/thevancouversun/'
+      },
+      headerBG: "#fff",
+      primaryColor: "#2f6450"
     },
   ],
   [
@@ -185,9 +265,27 @@ export const CANewsSources = new Map<string, NewsSource>([
       url: 'https://theprovince.com/',
       est: 1898,
       about:
-        'Latest breaking news, updates, and headlines on national and international events & more.',
+        'The Province is committed to bringing the latest breaking news, updates, and headlines from national and international events. Covering diverse topics such as politics, sports, entertainment, and business, it ensures that its readers are always informed and engaged.',
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_TPRV.svg',
+      langs: ['en'],
+      tags: [
+        'TheProvince',
+        'CanadianNews',
+        'InternationalNews',
+        'NewsUpdates',
+        'BreakingNews',
+        'Entertainment',
+        'Sports',
+        'Politics',
+        'Business'
+      ],
+      socials: {
+        facebook: 'https://www.facebook.com/TheProvince',
+        twitter: 'https://twitter.com/theprovince',
+      },
+      headerBG: "#0073AD",
+      primaryColor: "#0073AD"
     },
   ],
   [
@@ -2424,7 +2522,7 @@ export const INNewsSources = new Map<string, NewsSource>([
       url: 'https://bombaysamachar.com/',
       est: 1822,
       about:
-        "The Bombay Samachar, now known as Mumbai Samachar, stands as the oldest continuously published newspaper in India. Published in both English and Gujarati, it covers a wide array of topics including local, national and international news, politics, business, entertainment, sports, and more. The newspaper's rich history and commitment to accurate journalism has made it a trusted news source among diverse readership across India and beyond.",
+        "The Bombay Samachar, now known as Mumbai Samachar, stands as the oldest continuously published newspaper in India. Published in both English and Gujarati, it covers a wide array of topics including local, national and international news, politics, business, entertainment, sports, and more. The newspaper's rich history and commitment to accurate journalism has made it a trusted news source among diverse readership across India and beyond.\n\nબોમ્બે સમાચાર, હવે મુંબઈ સમાચાર તરીકે ઓળખાય છે, તે ભારતમાં સતત પ્રકાશિત થતી જણાવતી સૌથી જૂની અખબાર તરીકે ઉભી રહી છે. તે ઇંગ્લિશ અને ગુજરાતી બન્ને ભાષાઓમાં પ્રકાશિત થાય છે અને તે સ્થાનિક, રાષ્ટ્રીય અને આંતરરાષ્ટ્રીય સમાચાર, રાજકીય, વ્યાપાર, મનોરંજન, ખેલાડી વગેરે વિવિધ વિષયો પર કવરેજ આપે છે. અખબારની સમૃદ્ધ ઇતિહાસ અને યથાર્થ પત્રકારિતાની પ્રતિજ્ઞાને ભારત અને તેની પરાની વાચકો વચ્ચે વિશ્વસનીય સમાચાર સ્ત્રોત બની ગઈ છે.",
       emos: ['📰', '🇮🇳'],
       langs: ['en', 'gu'],
       tags: [

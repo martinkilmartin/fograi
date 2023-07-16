@@ -35,6 +35,7 @@ const HeadlineCard = ({
   const DATE = new Date(headline.created_at);
   const country = headline.source.substring(0, 2).toLowerCase();
 
+  const sourceHeaderBG = AllNewsSources.get(headline.source)?.headerBG;
   const sourceURL = AllNewsSources.get(headline.source)?.url;
   const sourceName = AllNewsSources.get(headline.source)?.name;
   const flag = flags.get(country);
@@ -89,7 +90,9 @@ const HeadlineCard = ({
   return (
     <Card isHoverable variant="bordered" style={{ borderRadius: '0' }}>
       <Card.Header
-        style={{ backgroundColor: theme?.colors.neutralLightHover.value }}
+        style={{
+          backgroundColor: sourceHeaderBG ?? theme?.colors.background.value,
+        }}
       >
         <div
           style={{
@@ -99,9 +102,8 @@ const HeadlineCard = ({
             width: '100%',
           }}
         >
-          {idx && <b>{'#' + idx}</b>}
-          <Text size="$3xl" weight="bold" transform="uppercase">
-            &nbsp;{flag}&nbsp;
+          <Text size="xl" weight="bold" transform="uppercase">
+            {'#' + idx}
           </Text>
           <div
             style={{
@@ -125,7 +127,9 @@ const HeadlineCard = ({
             </a>
           </div>
           <Badge color="primary" variant="bordered">
-            <b>{diffDisplay(DATE)}</b>
+            <b>
+              {flag}&nbsp;{diffDisplay(DATE)}
+            </b>
           </Badge>
         </div>
       </Card.Header>
