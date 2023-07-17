@@ -295,9 +295,30 @@ export const CANewsSources = new Map<string, NewsSource>([
       url: 'https://nationalpost.com/',
       est: 1998,
       about:
-        'Latest breaking news, updates, and headlines offering information on national and international events & more.',
+        "The National Post is a Canadian English-language newspaper that caters to a nationwide readership. Known for its fresh take on news, it covers national and international events, politics, sports, business, health, technology, and culture. The National Post has established itself as a leading voice in Canadian journalism, providing its readers with thought-provoking insights and comprehensive reportage.",
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_NPST.svg',
+      langs: ['en'],
+      tags: [
+        'NationalPost',
+        'CanadianNews',
+        'InternationalNews',
+        'Politics',
+        'Sports',
+        'Business',
+        'Health',
+        'Technology',
+        'Culture',
+      ],
+      socials: {
+        instagram: 'https://www.instagram.com/nationalpost/',
+        facebook: 'https://www.facebook.com/NationalPost/',
+        youtube: 'https://www.youtube.com/user/nationalpost',
+        twitter: 'https://twitter.com/nationalpost',
+        linkedin: 'https://www.linkedin.com/company/national-post-inc.'
+      },
+      headerBG: "#ffcd05",
+      primaryColor: "#333"
     },
   ],
   [
@@ -1278,13 +1299,31 @@ export const IENewsSources = new Map<string, NewsSource>([
   [
     'IE_EVOK',
     {
-      name: 'EVOKE',
-      url: 'https://evoke.ie/',
-      est: 2014,
-      about:
-        'Website for Irish females with the latest news, showbiz, fashion, beauty, entertainment, and celebrity gossip.',
-      emos: ['💻', '👭'],
-    },
+      "name": "EVOKE",
+      "url": "https://evoke.ie/",
+      "est": 2014,
+      "about": "EVOKE is a popular digital platform tailored for Irish women. It offers a comprehensive blend of the latest news, high-street fashion, beauty trends, and captivating entertainment and celebrity gossip. With a firm finger on the pulse of what's trending, EVOKE is the go-to destination for women seeking to stay updated and inspired.",
+      "emos": ['💻', '👭'],
+      "langs": ["en"],
+      "tags": [
+        "EVOKE",
+        "IrishNews",
+        "ShowbizNews",
+        "FashionUpdates",
+        "BeautyTrends",
+        "CelebrityGossip",
+        "EntertainmentNews",
+        "Women'sLifestyle"
+      ],
+      "socials": {
+        "email": "info@evoke.ie",
+        "instagram": "https://www.instagram.com/evokedotie/",
+        "facebook": "https://www.facebook.com/EVOKE.ie/"
+      },
+      "headerBG": "#fff",
+      "primaryColor": "#e2609c"
+    }
+
   ],
   [
     'IE_EXTR',
@@ -1561,11 +1600,29 @@ export const IENewsSources = new Map<string, NewsSource>([
   [
     'IE_KLDN',
     {
-      name: 'Kildare Now',
-      url: 'https://www.kildarenow.com/',
-      est: 2015,
-      emos: ['💻', '🇮🇪'],
-    },
+      "name": "Kildare Now",
+      "url": "https://www.kildarenow.com/",
+      "est": 2015,
+      "about": "Kildare Now is a leading digital news platform offering the latest news and updates from Kildare and beyond. This digital outlet covers a range of topics including local, national, and international news, sports, business, lifestyle, and culture. With its pulse on the heartbeat of the Kildare community, Kildare Now serves as a comprehensive and reliable news source for its readers.",
+      "emos": ['💻', '🇮🇪'],
+      "langs": ["en"],
+      "tags": [
+        "KildareNow",
+        "LocalNews",
+        "RegionalNews",
+        "IrishNews",
+        "CommunityNews",
+        "KildareNews"
+      ],
+      "socials": {
+        "email": "news@kildarenow.com",
+        "facebook": "https://www.facebook.com/KildareNow",
+        "twitter": "https://twitter.com/KildareNow",
+      },
+      "headerBG": "#fff",
+      "primaryColor": "#555"
+    }
+
   ],
   [
     'IE_KILP',
@@ -1606,11 +1663,29 @@ export const IENewsSources = new Map<string, NewsSource>([
   [
     'IE_LNEX',
     {
-      name: 'Leinster Express',
-      url: 'https://www.leinsterexpress.ie/',
-      est: 1831,
-      emos: ['📰', '🇮🇪'],
-    },
+      "name": "Leinster Express",
+      "url": "https://www.leinsterexpress.ie/",
+      "est": 1831,
+      "about": "Leinster Express, a regional newspaper, keeps the residents of Leinster informed about local events, sports, business news and more. Its extensive coverage spans news that affects the local community directly, keeping them abreast with the latest developments in their vicinity. A reliable source of news, it's a trusted companion to the people of Leinster.",
+      "emos": ['📰', '🇮🇪'],
+      "langs": ["en"],
+      "tags": [
+        "LeinsterExpress",
+        "LocalNews",
+        "RegionalNews",
+        "IrishNews",
+        "CommunityNews",
+        "LeinsterNews"
+      ],
+      "socials": {
+        "email": "news@leinsterexpress.ie",
+        "twitter": "https://twitter.com/Express_Sport",
+        "facebook": "https://www.facebook.com/LeinsterExpressSport",
+      },
+      "headerBG": "#fff",
+      "primaryColor": "#555"
+    }
+
   ],
   [
     'IE_LNLD',
@@ -2581,9 +2656,30 @@ export const INNewsSources = new Map<string, NewsSource>([
       url: 'https://www.hindustantimes.com/',
       est: 1924,
       about:
-        'Comprehensive news portal covers all the latest developments on a real-time basis in the fields of politics, sports, business, lifestyle, entertainment and even local city issues, offering a complete perspective of the world.',
+        "Hindustan Times, one of India's leading news sources, offers in-depth coverage across a wide range of topics including politics, sports, business, lifestyle, and entertainment. With its diligent reporting on local city issues as well as global developments, it provides a complete perspective of the world to its readers. The news portal strives to deliver real-time updates, ensuring its audience stays informed and engaged.",
       emos: ['📰', '🇮🇳'],
       langs: ['en'],
+      tags: [
+        'HindustanTimes',
+        'IndianNews',
+        'InternationalNews',
+        'Politics',
+        'Sports',
+        'Business',
+        'Lifestyle',
+        'Entertainment',
+        'LocalNews'
+      ],
+      socials: {
+        android: 'https://play.google.com/store/apps/details?id=com.ht.news',
+        apple: 'https://apps.apple.com/in/app/hindustan-times-news-updates/id1000991178',
+        facebook: 'https://www.facebook.com/hindustantimes',
+        linkedin: 'https://www.linkedin.com/company/hindustantimes',
+        instagram: 'https://www.instagram.com/hindustantimes/',
+        twitter: 'https://twitter.com/htTweets',
+      },
+      headerBG: "#011e29",
+      primaryColor: "#00b1cd"
     },
   ],
   [
