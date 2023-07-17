@@ -28,10 +28,10 @@ export const CANewsSources = new Map<string, NewsSource>([
         twitter: 'https://twitter.com/LeDevoir',
         instagram: 'https://www.instagram.com/ledevoir/',
         youtube: 'https://www.youtube.com/@ledevoir',
-        linkedin: 'https://www.linkedin.com/company/le-devoir/'
+        linkedin: 'https://www.linkedin.com/company/le-devoir/',
       },
-      headerBG: "#fff",
-      primaryColor: "#333"
+      headerBG: '#fff',
+      primaryColor: '#333',
     },
   ],
   [
@@ -41,7 +41,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       url: 'https://www.qctonline.com/',
       est: 1764,
       about:
-        "The Quebec Chronicle-Telegraph, distinguished as the oldest newspaper in North America, continues to be an authoritative source of news and information. Covering a broad array of topics, from politics, business, and culture to local events and lifestyle, it provides the Quebec community and beyond with valuable insights and engaging stories.",
+        'The Quebec Chronicle-Telegraph, distinguished as the oldest newspaper in North America, continues to be an authoritative source of news and information. Covering a broad array of topics, from politics, business, and culture to local events and lifestyle, it provides the Quebec community and beyond with valuable insights and engaging stories.',
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_QCTO.png',
       langs: ['en', 'fr'],
@@ -60,8 +60,8 @@ export const CANewsSources = new Map<string, NewsSource>([
         facebook: 'https://www.facebook.com/qctonline',
         twitter: 'https://twitter.com/QCTonline',
       },
-      headerBG: "#fff",
-      primaryColor: "#996600"
+      headerBG: '#fff',
+      primaryColor: '#996600',
     },
   ],
   [
@@ -89,10 +89,10 @@ export const CANewsSources = new Map<string, NewsSource>([
         twitter: 'https://twitter.com/torontostar',
         youtube: 'https://www.youtube.com/TorontoStar',
         instagram: 'https://www.instagram.com/thetorontostar/',
-        linkedin: 'https://www.linkedin.com/company/toronto-star/'
+        linkedin: 'https://www.linkedin.com/company/toronto-star/',
       },
-      headerBG: "#fff",
-      primaryColor: "#0060df"
+      headerBG: '#fff',
+      primaryColor: '#0060df',
     },
   ],
   [
@@ -114,7 +114,7 @@ export const CANewsSources = new Map<string, NewsSource>([
         'Politics',
         'Business',
         'Investing',
-        'Lifestyle'
+        'Lifestyle',
       ],
       socials: {
         email: 'newsroom@globeandmail.com',
@@ -124,10 +124,11 @@ export const CANewsSources = new Map<string, NewsSource>([
         linkedin: 'https://www.linkedin.com/company/the-globe-and-mail',
         youtube: 'https://www.youtube.com/user/TheGlobeandMail',
         tiktok: 'https://www.tiktok.com/@globeandmail',
-        snapchat: 'https://story.snapchat.com/p/f9c37a38-b555-4c37-a97a-598423457108'
+        snapchat:
+          'https://story.snapchat.com/p/f9c37a38-b555-4c37-a97a-598423457108',
       },
-      headerBG: "#da161f",
-      primaryColor: "#333"
+      headerBG: '#da161f',
+      primaryColor: '#333',
     },
   ],
   [
@@ -147,17 +148,17 @@ export const CANewsSources = new Map<string, NewsSource>([
         'PresseLocale',
         'NouvellesMondiales',
         'InformationGratuite',
-        'IntégritéJournalistique'
+        'IntégritéJournalistique',
       ],
       socials: {
         email: 'enquetes@lapresse.ca',
         facebook: 'https://fr-ca.facebook.com/LaPresseFB/',
         twitter: 'https://twitter.com/lp_lapresse',
         linkedin: 'https://ca.linkedin.com/company/la-presse',
-        instagram: 'https://www.instagram.com/lp_lapresse/?hl=fr-ca'
+        instagram: 'https://www.instagram.com/lp_lapresse/?hl=fr-ca',
       },
-      headerBG: "#ED1C23",
-      primaryColor: "#ED1C23"
+      headerBG: '#ED1C23',
+      primaryColor: '#ED1C23',
     },
   ],
   [
@@ -179,19 +180,21 @@ export const CANewsSources = new Map<string, NewsSource>([
         'Politique',
         'Spectacles',
         'Finance',
-        'Juridique'
+        'Juridique',
       ],
       socials: {
         email: 'jdm.info@quebecormedia.com',
         facebook: 'https://www.facebook.com/jdemontreal',
         twitter: 'https://twitter.com/JdeMontreal',
         instagram: 'https://www.instagram.com/jdemontreal/',
-        apple: 'https://apps.apple.com/ca/app/journal-de-montr%C3%A9al/id6444195089',
-        android: 'https://play.google.com/store/apps/details?id=com.quebecormedia.journaldemontreal',
-        linkedin: 'https://www.linkedin.com/company/jdemontreal/'
+        apple:
+          'https://apps.apple.com/ca/app/journal-de-montr%C3%A9al/id6444195089',
+        android:
+          'https://play.google.com/store/apps/details?id=com.quebecormedia.journaldemontreal',
+        linkedin: 'https://www.linkedin.com/company/jdemontreal/',
       },
-      headerBG: "#E32402",
-      primaryColor: "#E32402"
+      headerBG: '#E32402',
+      primaryColor: '#E32402',
     },
   ],
   [
@@ -201,7 +204,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       url: 'https://montrealgazette.com/',
       est: 1778,
       about:
-        "The Montreal Gazette is a trusted source for both national and international news. Committed to delivering accurate, insightful, and up-to-date reporting, the newspaper covers a broad range of topics from breaking news, events, to in-depth features. As one of the oldest newspapers in Canada, the Montreal Gazette continues to keep its readers informed about important happenings both locally and globally.",
+        'The Montreal Gazette is a trusted source for both national and international news. Committed to delivering accurate, insightful, and up-to-date reporting, the newspaper covers a broad range of topics from breaking news, events, to in-depth features. As one of the oldest newspapers in Canada, the Montreal Gazette continues to keep its readers informed about important happenings both locally and globally.',
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_MTGZ.svg',
       langs: ['en'],
@@ -212,19 +215,18 @@ export const CANewsSources = new Map<string, NewsSource>([
         'InternationalNews',
         'BreakingNews',
         'Events',
-        'Features'
+        'Features',
       ],
       socials: {
         facebook: 'https://www.facebook.com/montrealgazette/',
         twitter: 'https://twitter.com/mtlgazette',
         youtube: 'https://www.youtube.com/user/themontrealgazette',
         instagram: 'https://www.instagram.com/montrealgazette/',
-        linkedin: 'https://www.linkedin.com/company/the-montreal-gazette/'
+        linkedin: 'https://www.linkedin.com/company/the-montreal-gazette/',
       },
-      headerBG: "#fff",
-      primaryColor: "#016ea5"
+      headerBG: '#fff',
+      primaryColor: '#016ea5',
     },
-
   ],
   [
     'CA_VSUN',
@@ -246,16 +248,16 @@ export const CANewsSources = new Map<string, NewsSource>([
         'Entertainment',
         'Sports',
         'Politics',
-        'Business'
+        'Business',
       ],
       socials: {
         facebook: 'https://www.facebook.com/VancouverSun/',
         twitter: 'https://twitter.com/VancouverSun',
         youtube: 'https://www.youtube.com/user/VancouverSunOnline',
-        instagram: 'https://www.instagram.com/thevancouversun/'
+        instagram: 'https://www.instagram.com/thevancouversun/',
       },
-      headerBG: "#fff",
-      primaryColor: "#2f6450"
+      headerBG: '#fff',
+      primaryColor: '#2f6450',
     },
   ],
   [
@@ -278,14 +280,14 @@ export const CANewsSources = new Map<string, NewsSource>([
         'Entertainment',
         'Sports',
         'Politics',
-        'Business'
+        'Business',
       ],
       socials: {
         facebook: 'https://www.facebook.com/TheProvince',
         twitter: 'https://twitter.com/theprovince',
       },
-      headerBG: "#0073AD",
-      primaryColor: "#0073AD"
+      headerBG: '#0073AD',
+      primaryColor: '#0073AD',
     },
   ],
   [
@@ -295,7 +297,7 @@ export const CANewsSources = new Map<string, NewsSource>([
       url: 'https://nationalpost.com/',
       est: 1998,
       about:
-        "The National Post is a Canadian English-language newspaper that caters to a nationwide readership. Known for its fresh take on news, it covers national and international events, politics, sports, business, health, technology, and culture. The National Post has established itself as a leading voice in Canadian journalism, providing its readers with thought-provoking insights and comprehensive reportage.",
+        'The National Post is a Canadian English-language newspaper that caters to a nationwide readership. Known for its fresh take on news, it covers national and international events, politics, sports, business, health, technology, and culture. The National Post has established itself as a leading voice in Canadian journalism, providing its readers with thought-provoking insights and comprehensive reportage.',
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_NPST.svg',
       langs: ['en'],
@@ -315,10 +317,10 @@ export const CANewsSources = new Map<string, NewsSource>([
         facebook: 'https://www.facebook.com/NationalPost/',
         youtube: 'https://www.youtube.com/user/nationalpost',
         twitter: 'https://twitter.com/nationalpost',
-        linkedin: 'https://www.linkedin.com/company/national-post-inc.'
+        linkedin: 'https://www.linkedin.com/company/national-post-inc.',
       },
-      headerBG: "#ffcd05",
-      primaryColor: "#333"
+      headerBG: '#ffcd05',
+      primaryColor: '#333',
     },
   ],
   [
@@ -496,9 +498,28 @@ export const CANewsSources = new Map<string, NewsSource>([
       url: 'https://www.lecourrierdusud.ca/',
       est: 1947,
       about:
-        'Le Courrier du Sud, propriété de Gravité Media, est distribué gratuitement chaque semaine.',
+        "Le Courrier du Sud, appartenant à Gravité Media, est un journal hebdomadaire distribué gratuitement. Il offre une couverture complète de l'actualité locale et régionale dans la région de Longueuil, notamment les nouvelles de la communauté, la politique, les événements culturels, les sports et plus encore.",
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_LCDS.svg',
+      langs: ['fr'],
+      tags: [
+        'LeCourrierDuSud',
+        'ActualitéLocale',
+        'Longueuil',
+        'JournalHebdomadaire',
+        'GravitéMedia',
+        'NouvellesCommunauté',
+        'Politique',
+        'Culture',
+        'Sports',
+      ],
+      socials: {
+        email: 'redactioncd@gravitemedia.com',
+        facebook: 'https://www.facebook.com/lecourrierdusud/',
+        twitter: 'http://twitter.com/LeCourrierDuSud',
+      },
+      headerBG: '#fff',
+      primaryColor: '#d64c99',
     },
   ],
   [
@@ -507,9 +528,28 @@ export const CANewsSources = new Map<string, NewsSource>([
       name: 'CanIndia News',
       url: 'https://www.canindia.com/',
       est: 1999,
-      about: 'Representing the viewpoint of South Asians in Canada.',
+      about:
+        'CanIndia News provides a unique perspective, representing the viewpoint of the South Asian community in Canada. It covers a broad range of topics including current events, business, sports, and entertainment, with a special focus on issues and stories relevant to the South Asian diaspora. Through its insightful coverage, CanIndia News serves as a crucial link connecting the South Asian community with wider Canadian society.',
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_NIND.png',
+      langs: ['en'],
+      tags: [
+        'CanIndiaNews',
+        'SouthAsianNews',
+        'CanadianNews',
+        'DiasporaNews',
+        'CurrentEvents',
+        'BusinessNews',
+        'EntertainmentNews',
+      ],
+      socials: {
+        email: 'Info@CanIndia.com',
+        facebook: 'https://facebook.com/canindianews',
+        instagram: 'https://www.instagram.com/CanIndiaNews',
+        twitter: 'https://twitter.com/canindianews',
+      },
+      headerBG: '#dd3333',
+      primaryColor: '#dd3333',
     },
   ],
   [
@@ -566,9 +606,26 @@ export const CANewsSources = new Map<string, NewsSource>([
       url: 'https://bejsment.com/',
       est: 2011,
       about:
-        'News website of Polish newspaper Wiadomości published in Ontario.',
-      emos: ['📰', '🇨🇦'],
+        'Bejsment to cyfrowa platforma Wiadomości, wybitnej polskiej gazety wydawanej w Ontario, w Kanadzie. Dzięki silnej obecności w Internecie, pomaga ona diaspory polskiej w Kanadzie pozostać w kontakcie ze swoimi korzeniami i informować o swoim nowym domu. Bejsment pokrywa szeroki zakres tematów, od wiadomości i wydarzeń w polskiej społeczności, po aktualności z Polski i sprawy międzynarodowe.',
+      emos: ['📰', '🇨🇦', '🇵🇱'],
       logo: '/img/ns/CA_BJST.png',
+      langs: ['pl'],
+      tags: [
+        'Bejsment',
+        'Wiadomości',
+        'PolskieWiadomości',
+        'WiadomościKanada',
+        'WiadomościOntario',
+        'WiadomościMiędzynarodowe',
+        'WiadomościSpołeczności',
+      ],
+      socials: {
+        email: 'redakcja@bejsment.com',
+        facebook: 'https://pl-pl.facebook.com/Bejsment/',
+        twitter: 'https://twitter.com/BejsmentToronto',
+      },
+      headerBG: '#fff',
+      primaryColor: '#337ab7',
     },
   ],
   [
@@ -689,19 +746,20 @@ export const IENewsSources = new Map<string, NewsSource>([
         twitter: 'https://twitter.com/AgrilandIreland',
         youtube: 'https://www.youtube.com/user/AgrilandIreland',
         instagram: 'https://www.instagram.com/agriland.ie/',
-        snapchat: 'https://www.snapchat.com/add/agriland'
+        snapchat: 'https://www.snapchat.com/add/agriland',
       },
-      headerBG: "#fff",
-      primaryColor: "#3a9948"
+      headerBG: '#fff',
+      primaryColor: '#3a9948',
     },
   ],
   [
-    'IE_AADV', {
+    'IE_AADV',
+    {
       name: 'Athlone Advertiser',
       url: 'https://www.advertiser.ie/athlone',
       est: 1970,
       about:
-        "The Athlone Advertiser is a renowned free newspaper distributed throughout Athlone & Westmeath every Thursday. As a trusted local news source, it offers comprehensive coverage of local events, politics, sports, arts, and community happenings. The Athlone Advertiser is dedicated to providing timely and accurate reporting, fostering informed discussions, and contributing to the vibrant community spirit of Athlone and Westmeath.",
+        'The Athlone Advertiser is a renowned free newspaper distributed throughout Athlone & Westmeath every Thursday. As a trusted local news source, it offers comprehensive coverage of local events, politics, sports, arts, and community happenings. The Athlone Advertiser is dedicated to providing timely and accurate reporting, fostering informed discussions, and contributing to the vibrant community spirit of Athlone and Westmeath.',
       emos: ['📰', '🇮🇪', '📍'],
       langs: ['en'],
       tags: [
@@ -719,8 +777,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       socials: {
         email: 'mailto:info@galwayadvertiser.ie',
       },
-      headerBG: "#d70909",
-      primaryColor: "#d70909"
+      headerBG: '#d70909',
+      primaryColor: '#d70909',
     },
   ],
   [
@@ -750,10 +808,11 @@ export const IENewsSources = new Map<string, NewsSource>([
         twitter: 'https://twitter.com/ballsdotie',
         youtube: 'https://www.youtube.com/c/Ballsdotie',
         apple: 'https://apps.apple.com/app/id995175899',
-        android: 'https://play.google.com/store/apps/details?id=io.sq1.pplus.app.ballsie'
+        android:
+          'https://play.google.com/store/apps/details?id=io.sq1.pplus.app.ballsie',
       },
-      headerBG: "#fff",
-      primaryColor: "#17b9a4"
+      headerBG: '#fff',
+      primaryColor: '#17b9a4',
     },
   ],
   [
@@ -784,10 +843,10 @@ export const IENewsSources = new Map<string, NewsSource>([
         facebook: 'https://www.facebook.com/Beat102103/',
         youtube: 'https://www.youtube.com/user/OfficialBeat102103',
         soundcloud: 'https://soundcloud.com/beat102103',
-        whatsapp: 'https://wa.me/3530851029103'
+        whatsapp: 'https://wa.me/3530851029103',
       },
-      headerBG: "#FF0000",
-      primaryColor: "#FF0000"
+      headerBG: '#FF0000',
+      primaryColor: '#FF0000',
     },
   ],
   [
@@ -797,7 +856,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.belfasttelegraph.co.uk/',
       est: 1870,
       about:
-        "Since its inception in 1870, the Belfast Telegraph has been the leading source of news, sport, and business coverage in Belfast and throughout Northern Ireland. It offers a broad spectrum of content, from breaking news and in-depth opinion pieces to entertainment and lifestyle features. The Belfast Telegraph is your reliable source for comprehensive coverage of the events and issues that matter to Northern Ireland.",
+        'Since its inception in 1870, the Belfast Telegraph has been the leading source of news, sport, and business coverage in Belfast and throughout Northern Ireland. It offers a broad spectrum of content, from breaking news and in-depth opinion pieces to entertainment and lifestyle features. The Belfast Telegraph is your reliable source for comprehensive coverage of the events and issues that matter to Northern Ireland.',
       emos: ['📰', '🇮🇪', '📈', '⚽', '🎭'],
       langs: ['en'],
       tags: [
@@ -812,14 +871,15 @@ export const IENewsSources = new Map<string, NewsSource>([
         'Opinion',
       ],
       socials: {
-        email: 'mailto:customersupport@belfasttelegraph.co.uk?body=BelfastTelegraph.co.uk&subject=BelfastTelegraph.co.uk',
+        email:
+          'mailto:customersupport@belfasttelegraph.co.uk?body=BelfastTelegraph.co.uk&subject=BelfastTelegraph.co.uk',
         facebook: 'https://www.facebook.com/belfasttelegraph',
         twitter: 'https://twitter.com/beltel/',
         instagram: 'https://www.instagram.com/belfasttelegraph/',
         linkedin: 'https://www.linkedin.com/company/belfast-telegraph/',
       },
-      headerBG: "#fff",
-      primaryColor: "#000"
+      headerBG: '#fff',
+      primaryColor: '#000',
     },
   ],
   [
@@ -841,7 +901,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'IndustryTrends',
         'BusinessAnalysis',
         'BusinessInsights',
-        'IrishCompanies'
+        'IrishCompanies',
       ],
       socials: {
         email: 'mailto:info@businessplus-ie.go-vip.net',
@@ -849,8 +909,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         twitter: 'https://twitter.com/businessplusmag',
         linkedin: 'https://ie.linkedin.com/company/business-plus-magazine',
       },
-      headerBG: "#fff",
-      primaryColor: "#ff6900"
+      headerBG: '#fff',
+      primaryColor: '#ff6900',
     },
   ],
   [
@@ -860,7 +920,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.breakingnews.ie/',
       est: 2001,
       about:
-        "Breakingnews.ie, is a leading news website delivering up-to-the-minute news and sports reports. With a focus on immediacy and accuracy, it provides email news releases throughout the day, ensuring readers are always in the know about the latest breaking stories. From domestic affairs to international events, sports to entertainment, breakingnews.ie is your trusted source for real-time news coverage.",
+        'Breakingnews.ie, is a leading news website delivering up-to-the-minute news and sports reports. With a focus on immediacy and accuracy, it provides email news releases throughout the day, ensuring readers are always in the know about the latest breaking stories. From domestic affairs to international events, sports to entertainment, breakingnews.ie is your trusted source for real-time news coverage.',
       emos: ['💻', '🇮🇪', '📈', '⚽'],
       langs: ['en'],
       tags: [
@@ -870,7 +930,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'SportsReports',
         'CurrentAffairs',
         'InternationalNews',
-        'BreakingNewsIE'
+        'BreakingNewsIE',
       ],
       socials: {
         email: 'mailto:desk@breakingnews.ie',
@@ -878,8 +938,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         twitter: 'https://twitter.com/breakingnewsie',
         instagram: 'https://www.instagram.com/breakingnews.ie/',
       },
-      headerBG: "#fff",
-      primaryColor: "#EDA400"
+      headerBG: '#fff',
+      primaryColor: '#EDA400',
     },
   ],
   [
@@ -901,7 +961,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'Games',
         'Tech',
         'Sport',
-        'BuzzIE'
+        'BuzzIE',
       ],
       socials: {
         email: 'mailto:news@buzz.ie',
@@ -909,8 +969,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         twitter: 'https://twitter.com/buzzdotie',
         instagram: 'https://www.instagram.com/buzz.ie/',
       },
-      headerBG: "#fff",
-      primaryColor: "#DEA65D"
+      headerBG: '#fff',
+      primaryColor: '#DEA65D',
     },
   ],
   [
@@ -928,15 +988,15 @@ export const IENewsSources = new Map<string, NewsSource>([
         'LocalNews',
         'CarlowEvents',
         'CarlowBusiness',
-        'CarlowUpdates'
+        'CarlowUpdates',
       ],
       socials: {
         email: 'mailto:news@carlowlive.ie',
         facebook: 'https://www.facebook.com/www.carlowlive.ie',
         twitter: 'https://twitter.com/Carlowlive1',
       },
-      headerBG: "#fff",
-      primaryColor: "#9D9C9C"
+      headerBG: '#fff',
+      primaryColor: '#9D9C9C',
     },
   ],
   [
@@ -955,7 +1015,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'CountyClare',
         'CommunityRadio',
         'ClareNews',
-        'IrishRadio'
+        'IrishRadio',
       ],
       socials: {
         email: 'mailto:info@clare.fm',
@@ -963,11 +1023,12 @@ export const IENewsSources = new Map<string, NewsSource>([
         instagram: 'https://www.instagram.com/clarefmradio/',
         soundcloud: 'https://soundcloud.com/clarefm',
         twitter: 'https://twitter.com/ClareFM',
-        youtube: 'https://www.youtube.com/user/clarefmTV'
+        youtube: 'https://www.youtube.com/user/clarefmTV',
       },
-      headerBG: "#fff",
-      primaryColor: "#5f7325",
-      audio: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1540623928&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      headerBG: '#fff',
+      primaryColor: '#5f7325',
+      audio:
+        'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1540623928&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
     },
   ],
   [
@@ -977,7 +1038,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.clarelive.ie/',
       est: 2001,
       about:
-        "Clare Live is an online hub for all news and events in County Clare, Ireland, serving as a reliable source of information for residents and visitors alike. From local news updates to community events and lifestyle stories, Clare Live covers a wide range of topics to keep its readers informed and engaged.",
+        'Clare Live is an online hub for all news and events in County Clare, Ireland, serving as a reliable source of information for residents and visitors alike. From local news updates to community events and lifestyle stories, Clare Live covers a wide range of topics to keep its readers informed and engaged.',
       emos: ['💻', '🇮🇪'],
       langs: ['en'],
       tags: [
@@ -986,15 +1047,15 @@ export const IENewsSources = new Map<string, NewsSource>([
         'ClareEvents',
         'ClareUpdates',
         'CountyClare',
-        'IrishNews'
+        'IrishNews',
       ],
       socials: {
         email: 'mailto:news@clarelive.ie',
         twitter: 'https://twitter.com/ClareLiveNews',
         facebook: 'https://www.facebook.com/ClareLiveNews',
       },
-      headerBG: "#fff",
-      primaryColor: "#9D9C9C"
+      headerBG: '#fff',
+      primaryColor: '#9D9C9C',
     },
   ],
   [
@@ -1014,7 +1075,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         '90sMusic',
         'ClassicMusic',
         'IrishRadio',
-        'MusicRadio'
+        'MusicRadio',
       ],
       socials: {
         email: 'mailto:hello@classichits.ie',
@@ -1023,8 +1084,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         twitter: 'https://twitter.com/ClassicHitsRdio',
         whatsapp: 'https://wa.me/3530871880008',
       },
-      headerBG: "#59058d",
-      primaryColor: "#59058d"
+      headerBG: '#59058d',
+      primaryColor: '#59058d',
     },
   ],
   [
@@ -1034,7 +1095,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.colerainechronicle.co.uk/',
       est: 1844,
       about:
-        "The Coleraine Chronicle is a centuries old, trusted news outlet, offering extensive coverage of the Causeway Coast region. It serves areas including Ballycastle, Ballymoney, Bushmills, Coleraine, Limavady, Moyle, Portrush, and Portstewart, providing comprehensive updates on local news, events, and issues that impact the community.",
+        'The Coleraine Chronicle is a centuries old, trusted news outlet, offering extensive coverage of the Causeway Coast region. It serves areas including Ballycastle, Ballymoney, Bushmills, Coleraine, Limavady, Moyle, Portrush, and Portstewart, providing comprehensive updates on local news, events, and issues that impact the community.',
       emos: ['📰', '🇬🇧'],
       langs: ['en'],
       tags: [
@@ -1048,16 +1109,17 @@ export const IENewsSources = new Map<string, NewsSource>([
         'LimavadyNews',
         'MoyleNews',
         'PortrushNews',
-        'PortstewartNews'
+        'PortstewartNews',
       ],
       socials: {
         email: 'mailto:editor@thechronicle.uk.com',
         facebook: 'https://en-gb.facebook.com/coleraine.chronicle/',
         twitter: 'https://twitter.com/colerainechron?lang=en',
-        youtube: 'https://www.youtube.com/channel/UCJ8FeVvbQ6dcrcwnvu3o3QA/videos'
+        youtube:
+          'https://www.youtube.com/channel/UCJ8FeVvbQ6dcrcwnvu3o3QA/videos',
       },
-      headerBG: "#fff",
-      primaryColor: "#D8002D"
+      headerBG: '#fff',
+      primaryColor: '#D8002D',
     },
   ],
   [
@@ -1084,10 +1146,10 @@ export const IENewsSources = new Map<string, NewsSource>([
         email: 'mailto:news@ctribune.ie',
         facebook: 'https://www.facebook.com/ConnachtTribune',
         twitter: 'https://twitter.com/CTribune',
-        youtube: 'https://www.youtube.com/@connachttribunegalwaycityt9972'
+        youtube: 'https://www.youtube.com/@connachttribunegalwaycityt9972',
       },
-      headerBG: "#a90c21",
-      primaryColor: "#a90c21;"
+      headerBG: '#a90c21',
+      primaryColor: '#a90c21;',
     },
   ],
   [
@@ -1108,16 +1170,16 @@ export const IENewsSources = new Map<string, NewsSource>([
         'DigitalMedia',
         'CommunityNews',
         'CorkStories',
-        'CorkRegion'
+        'CorkRegion',
       ],
       socials: {
         email: 'mailto:news@corkbeo.ie',
         facebook: 'https://www.facebook.com/corkbeo',
         twitter: 'https://twitter.com/corkbeo',
-        instagram: 'https://www.instagram.com/corkbeo/'
+        instagram: 'https://www.instagram.com/corkbeo/',
       },
-      headerBG: "#d90000",
-      primaryColor: "#d90000"
+      headerBG: '#d90000',
+      primaryColor: '#d90000',
     },
   ],
   [
@@ -1299,31 +1361,31 @@ export const IENewsSources = new Map<string, NewsSource>([
   [
     'IE_EVOK',
     {
-      "name": "EVOKE",
-      "url": "https://evoke.ie/",
-      "est": 2014,
-      "about": "EVOKE is a popular digital platform tailored for Irish women. It offers a comprehensive blend of the latest news, high-street fashion, beauty trends, and captivating entertainment and celebrity gossip. With a firm finger on the pulse of what's trending, EVOKE is the go-to destination for women seeking to stay updated and inspired.",
-      "emos": ['💻', '👭'],
-      "langs": ["en"],
-      "tags": [
-        "EVOKE",
-        "IrishNews",
-        "ShowbizNews",
-        "FashionUpdates",
-        "BeautyTrends",
-        "CelebrityGossip",
-        "EntertainmentNews",
-        "Women'sLifestyle"
+      name: 'EVOKE',
+      url: 'https://evoke.ie/',
+      est: 2014,
+      about:
+        "EVOKE is a popular digital platform tailored for Irish women. It offers a comprehensive blend of the latest news, high-street fashion, beauty trends, and captivating entertainment and celebrity gossip. With a firm finger on the pulse of what's trending, EVOKE is the go-to destination for women seeking to stay updated and inspired.",
+      emos: ['💻', '👭'],
+      langs: ['en'],
+      tags: [
+        'EVOKE',
+        'IrishNews',
+        'ShowbizNews',
+        'FashionUpdates',
+        'BeautyTrends',
+        'CelebrityGossip',
+        'EntertainmentNews',
+        "Women'sLifestyle",
       ],
-      "socials": {
-        "email": "info@evoke.ie",
-        "instagram": "https://www.instagram.com/evokedotie/",
-        "facebook": "https://www.facebook.com/EVOKE.ie/"
+      socials: {
+        email: 'info@evoke.ie',
+        instagram: 'https://www.instagram.com/evokedotie/',
+        facebook: 'https://www.facebook.com/EVOKE.ie/',
       },
-      "headerBG": "#fff",
-      "primaryColor": "#e2609c"
-    }
-
+      headerBG: '#fff',
+      primaryColor: '#e2609c',
+    },
   ],
   [
     'IE_EXTR',
@@ -1600,29 +1662,29 @@ export const IENewsSources = new Map<string, NewsSource>([
   [
     'IE_KLDN',
     {
-      "name": "Kildare Now",
-      "url": "https://www.kildarenow.com/",
-      "est": 2015,
-      "about": "Kildare Now is a leading digital news platform offering the latest news and updates from Kildare and beyond. This digital outlet covers a range of topics including local, national, and international news, sports, business, lifestyle, and culture. With its pulse on the heartbeat of the Kildare community, Kildare Now serves as a comprehensive and reliable news source for its readers.",
-      "emos": ['💻', '🇮🇪'],
-      "langs": ["en"],
-      "tags": [
-        "KildareNow",
-        "LocalNews",
-        "RegionalNews",
-        "IrishNews",
-        "CommunityNews",
-        "KildareNews"
+      name: 'Kildare Now',
+      url: 'https://www.kildarenow.com/',
+      est: 2015,
+      about:
+        'Kildare Now is a leading digital news platform offering the latest news and updates from Kildare and beyond. This digital outlet covers a range of topics including local, national, and international news, sports, business, lifestyle, and culture. With its pulse on the heartbeat of the Kildare community, Kildare Now serves as a comprehensive and reliable news source for its readers.',
+      emos: ['💻', '🇮🇪'],
+      langs: ['en'],
+      tags: [
+        'KildareNow',
+        'LocalNews',
+        'RegionalNews',
+        'IrishNews',
+        'CommunityNews',
+        'KildareNews',
       ],
-      "socials": {
-        "email": "news@kildarenow.com",
-        "facebook": "https://www.facebook.com/KildareNow",
-        "twitter": "https://twitter.com/KildareNow",
+      socials: {
+        email: 'news@kildarenow.com',
+        facebook: 'https://www.facebook.com/KildareNow',
+        twitter: 'https://twitter.com/KildareNow',
       },
-      "headerBG": "#fff",
-      "primaryColor": "#555"
-    }
-
+      headerBG: '#fff',
+      primaryColor: '#555',
+    },
   ],
   [
     'IE_KILP',
@@ -1663,29 +1725,29 @@ export const IENewsSources = new Map<string, NewsSource>([
   [
     'IE_LNEX',
     {
-      "name": "Leinster Express",
-      "url": "https://www.leinsterexpress.ie/",
-      "est": 1831,
-      "about": "Leinster Express, a regional newspaper, keeps the residents of Leinster informed about local events, sports, business news and more. Its extensive coverage spans news that affects the local community directly, keeping them abreast with the latest developments in their vicinity. A reliable source of news, it's a trusted companion to the people of Leinster.",
-      "emos": ['📰', '🇮🇪'],
-      "langs": ["en"],
-      "tags": [
-        "LeinsterExpress",
-        "LocalNews",
-        "RegionalNews",
-        "IrishNews",
-        "CommunityNews",
-        "LeinsterNews"
+      name: 'Leinster Express',
+      url: 'https://www.leinsterexpress.ie/',
+      est: 1831,
+      about:
+        "Leinster Express, a regional newspaper, keeps the residents of Leinster informed about local events, sports, business news and more. Its extensive coverage spans news that affects the local community directly, keeping them abreast with the latest developments in their vicinity. A reliable source of news, it's a trusted companion to the people of Leinster.",
+      emos: ['📰', '🇮🇪'],
+      langs: ['en'],
+      tags: [
+        'LeinsterExpress',
+        'LocalNews',
+        'RegionalNews',
+        'IrishNews',
+        'CommunityNews',
+        'LeinsterNews',
       ],
-      "socials": {
-        "email": "news@leinsterexpress.ie",
-        "twitter": "https://twitter.com/Express_Sport",
-        "facebook": "https://www.facebook.com/LeinsterExpressSport",
+      socials: {
+        email: 'news@leinsterexpress.ie',
+        twitter: 'https://twitter.com/Express_Sport',
+        facebook: 'https://www.facebook.com/LeinsterExpressSport',
       },
-      "headerBG": "#fff",
-      "primaryColor": "#555"
-    }
-
+      headerBG: '#fff',
+      primaryColor: '#555',
+    },
   ],
   [
     'IE_LNLD',
@@ -2619,10 +2681,10 @@ export const INNewsSources = new Map<string, NewsSource>([
         instagram: 'https://www.instagram.com/mumbaisamachar/',
         twitter: 'https://twitter.com/Msamachar4u',
         whatsapp: 'https://api.whatsapp.com/send?phone=7045430579',
-        youtube: 'https://www.youtube.com/@MumbaiSamachar4u'
+        youtube: 'https://www.youtube.com/@MumbaiSamachar4u',
       },
-      headerBG: "#fff",
-      primaryColor: "#7c0000"
+      headerBG: '#fff',
+      primaryColor: '#7c0000',
     },
   ],
   [
@@ -2668,18 +2730,19 @@ export const INNewsSources = new Map<string, NewsSource>([
         'Business',
         'Lifestyle',
         'Entertainment',
-        'LocalNews'
+        'LocalNews',
       ],
       socials: {
         android: 'https://play.google.com/store/apps/details?id=com.ht.news',
-        apple: 'https://apps.apple.com/in/app/hindustan-times-news-updates/id1000991178',
+        apple:
+          'https://apps.apple.com/in/app/hindustan-times-news-updates/id1000991178',
         facebook: 'https://www.facebook.com/hindustantimes',
         linkedin: 'https://www.linkedin.com/company/hindustantimes',
         instagram: 'https://www.instagram.com/hindustantimes/',
         twitter: 'https://twitter.com/htTweets',
       },
-      headerBG: "#011e29",
-      primaryColor: "#00b1cd"
+      headerBG: '#011e29',
+      primaryColor: '#00b1cd',
     },
   ],
   [
@@ -2701,9 +2764,28 @@ export const INNewsSources = new Map<string, NewsSource>([
       url: 'https://www.deccanherald.com/',
       est: 1948,
       about:
-        'Latest News Headlines from India & around the World. Sports, Business, Fitness, Entertainment, Opinions.',
+        "Deccan Herald provides comprehensive coverage of the latest news from India and around the world. Its broad content portfolio includes categories like sports, business, fitness, entertainment, opinions, and more, catering to a diverse readership with a variety of interests. As one of India's leading English dailies, it is dedicated to delivering credible and accurate news content.",
       emos: ['📰', '🇮🇳'],
       langs: ['en'],
+      tags: [
+        'DeccanHerald',
+        'IndianNews',
+        'WorldNews',
+        'Sports',
+        'Business',
+        'Fitness',
+        'Entertainment',
+        'Opinions',
+      ],
+      socials: {
+        android: 'https://play.google.com/store/apps/details?id=com.tpml.dh',
+        apple: 'https://apps.apple.com/us/app/deccan-herald-news/id1511179557',
+        facebook: 'https://www.facebook.com/deccanherald/',
+        twitter: 'https://twitter.com/deccanherald',
+        instagram: 'https://www.instagram.com/deccanherald/',
+      },
+      headerBG: '#fff',
+      primaryColor: '#0087a8',
     },
   ],
   [
@@ -2821,9 +2903,32 @@ export const INNewsSources = new Map<string, NewsSource>([
       url: 'https://www.financialexpress.com/',
       est: 1961,
       about:
-        'Latest business news and finance news, share market updates, live stock market news, IPO update, banking and insurance sector updates.',
+        'Financial Express is a comprehensive source for business and finance news in India. The platform offers timely share market updates, live stock market news, IPO updates, banking, and insurance sector updates, amongst others. It serves as a trusted resource for financial professionals and those interested in the Indian and global economies.',
       emos: ['📰', '🇮🇳'],
       langs: ['en'],
+      tags: [
+        'FinancialExpress',
+        'BusinessNews',
+        'FinanceNews',
+        'StockMarketNews',
+        'BankingNews',
+        'InsuranceNews',
+        'IndianNews',
+      ],
+      socials: {
+        email: 'feedback@indianexpress.com',
+        facebook: 'https://www.facebook.com/thefinancialexpress',
+        twitter: 'https://twitter.com/FinancialXpress',
+        linkedin:
+          'https://www.linkedin.com/company/the-financial-express-india/',
+        android:
+          'https://play.google.com/store/apps/details?id=com.financialexpress.android',
+        apple:
+          'https://apps.apple.com/us/app/financial-express-for-iphone/id508738603',
+      },
+      headerBG: '#fff',
+      primaryColor: '#dc0505',
+      secondaryColor: '#003f74',
     },
   ],
   [
@@ -2905,11 +3010,11 @@ export const UKNewsSources = new Map<string, NewsSource>([
         facebook: 'https://www.facebook.com/DailyMirror',
         twitter: 'https://twitter.com/DailyMirror',
         tiktok: 'https://www.tiktok.com/@dailymirror',
-        instagram: 'https://www.instagram.com/dailymirror'
+        instagram: 'https://www.instagram.com/dailymirror',
       },
-      headerBG: "#a92323",
-      primaryColor: "#e90e0e",
-      secondaryColor: "lightblue"
+      headerBG: '#a92323',
+      primaryColor: '#e90e0e',
+      secondaryColor: 'lightblue',
     },
   ],
   [
@@ -3016,7 +3121,7 @@ export const NZNewsSources = new Map<string, NewsSource>([
       url: 'https://www.nzherald.co.nz/',
       est: 1863,
       about:
-        "The New Zealand Herald serves as an essential news source, bringing you the latest breaking news, in-depth analysis, opinions, and multimedia content from New Zealand and across the globe. With a wide variety of topics covered including politics, business, sports, entertainment, and more, it ensures that its readers are always up-to-date with the world around them.",
+        'The New Zealand Herald serves as an essential news source, bringing you the latest breaking news, in-depth analysis, opinions, and multimedia content from New Zealand and across the globe. With a wide variety of topics covered including politics, business, sports, entertainment, and more, it ensures that its readers are always up-to-date with the world around them.',
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
       tags: [
@@ -3030,14 +3135,15 @@ export const NZNewsSources = new Map<string, NewsSource>([
         'Opinion',
       ],
       socials: {
-        email: 'mailto:newsdesk@nzherald.co.nz?subject=Online enquiry - Contact the Newsroom',
+        email:
+          'mailto:newsdesk@nzherald.co.nz?subject=Online enquiry - Contact the Newsroom',
         facebook: 'https://www.facebook.com/nzherald.co.nz',
         twitter: 'https://twitter.com/nzherald',
         instagram: 'https://www.instagram.com/nzherald/',
-        youtube: 'https://www.youtube.com/@nzheraldtv'
+        youtube: 'https://www.youtube.com/@nzheraldtv',
       },
-      headerBG: "#fff",
-      primaryColor: "#ecac0c"
+      headerBG: '#fff',
+      primaryColor: '#ecac0c',
     },
   ],
   [
@@ -3438,9 +3544,28 @@ export const USNewsSources = new Map<string, NewsSource>([
       name: 'The Oregonian',
       url: 'https://www.oregonlive.com/',
       est: 1850,
-      about: 'Latest Oregon Local News, Sports News & US breaking News.',
+      about:
+        'The Oregonian provides comprehensive and timely coverage of news from Oregon and around the world. Readers can find up-to-date information on a wide array of topics including local news, sports, entertainment, business, and lifestyle. It also provides in-depth features and analyses on important issues affecting the community.',
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
+      tags: [
+        'TheOregonian',
+        'LocalNews',
+        'RegionalNews',
+        'USNews',
+        'CommunityNews',
+        'OregonNews',
+      ],
+      socials: {
+        facebook: 'https://www.facebook.com/theoregonian',
+        instagram: 'https://www.instagram.com/theoregonian/',
+        twitter: 'https://twitter.com/Oregonian',
+        youtube: 'https://www.youtube.com/user/oregoniannews/videos',
+        linkedin: 'https://www.linkedin.com/company/16195',
+        tiktok: 'https://www.tiktok.com/@theoregonian',
+      },
+      headerBG: '#000',
+      primaryColor: '#555',
     },
   ],
   [
@@ -3485,9 +3610,27 @@ export const USNewsSources = new Map<string, NewsSource>([
       url: 'https://www.stltoday.com/',
       est: 1878,
       about:
-        'St. Louis City and County news, local weather, entertainment and events.',
+        'The St. Louis Post-Dispatch offers comprehensive coverage of St. Louis City and County. From breaking news to local weather, entertainment, and events, the publication is a trusted source for all things related to St. Louis. It also provides insight on national and global news stories, placing them in the context of how they affect the St. Louis community.',
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
+      tags: [
+        'StLouisPostDispatch',
+        'LocalNews',
+        'RegionalNews',
+        'USNews',
+        'CommunityNews',
+        'StLouisNews',
+      ],
+      socials: {
+        facebook: 'https://www.facebook.com/STLPD',
+        twitter: 'https://twitter.com/stltoday',
+        linkedin: 'https://www.linkedin.com/company/st.-louis-post-dispatch/',
+        youtube: 'https://www.youtube.com/user/STLPostDispatch',
+        pinterest: 'https://www.pinterest.ca/stltoday/',
+        instagram: 'https://www.instagram.com/stltoday/',
+      },
+      headerBG: '#000',
+      primaryColor: '#2E589B',
     },
   ],
   [
