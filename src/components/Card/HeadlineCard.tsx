@@ -88,29 +88,43 @@ const HeadlineCard = ({
   };
 
   return (
-    <Card isHoverable variant="bordered" style={{ borderRadius: '0' }}>
-      <Card.Header
-        style={{
-          backgroundColor: sourceHeaderBG ?? theme?.colors.background.value,
-        }}
-      >
-        <div
+    <>
+      <Card isHoverable variant="bordered" style={{ borderRadius: '0' }}>
+        <Card.Header
           style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            width: '100%',
+            backgroundColor: theme?.colors.background.value,
           }}
         >
-          <Text size="xl" weight="bold" transform="uppercase">
-            {'#' + idx}
-          </Text>
           <div
             style={{
-              flexGrow: 1,
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              width: '100%',
+            }}
+          >
+            <Text size="xl" weight="bold" transform="uppercase">
+              {'#' + idx}
+            </Text>
+            <Badge color="primary" variant="bordered">
+              <b>
+                {flag}&nbsp;{diffDisplay(DATE)}
+              </b>
+            </Badge>
+          </div>
+        </Card.Header>
+        <hr />
+        <Card.Header
+          style={{
+            backgroundColor: sourceHeaderBG ?? theme?.colors.background.value,
+          }}
+        >
+          <div
+            style={{
               display: 'flex',
               justifyContent: 'center',
-              marginRight: '10px',
+              alignItems: 'center',
+              width: '100%',
             }}
           >
             <a href={sourceURL} target="_blank" rel="noreferrer">
@@ -126,82 +140,77 @@ const HeadlineCard = ({
               />
             </a>
           </div>
-          <Badge color="primary" variant="bordered">
-            <b>
-              {flag}&nbsp;{diffDisplay(DATE)}
-            </b>
-          </Badge>
-        </div>
-      </Card.Header>
-      <Card.Body css={{ py: '$2' }}>
-        <a
-          href={headline.link}
-          target="_blank"
-          rel="noreferrer"
-          style={{ overflow: 'auto' }}
-        >
-          {headline.img_src && bgImage && (
-            <Image
-              alt={headline.img_alt ?? ''}
-              src={leadImgErr ? transPix : headline.img_src}
-              fill
-              style={{
-                objectFit: 'cover',
-                opacity: 0.33,
-              }}
-              onError={() => setLeadImgErr(true)}
-            />
-          )}
-          {headline.img_src && !bgImage && (
-            <Card.Image
-              src={
-                leadImgErr
-                  ? '../../../public/img/trans-pixel.png'
-                  : headline.img_src
-              }
-              objectFit="cover"
-              width="100%"
-              alt={headline.img_alt ?? ''}
-              onError={() => setLeadImgErr(true)}
-            />
-          )}
-          <Row justify="center" align="center">
-            <Text h3 color="primary">
-              {headline.headline}&nbsp;↗
-            </Text>
-          </Row>
-        </a>
-      </Card.Body>
-      <Card.Footer
-        style={{
-          backgroundColor: theme?.colors.neutralLight.value,
-          borderRadius: '0',
-        }}
-      >
-        <Grid.Container justify="center">
-          <Grid xs={4} justify="center">
-            <div onClick={toggleLike}>
+        </Card.Header>
+        <Card.Body css={{ py: '$2' }}>
+          <a
+            href={headline.link}
+            target="_blank"
+            rel="noreferrer"
+            style={{ overflow: 'auto' }}
+          >
+            {headline.img_src && bgImage && (
               <Image
-                src={liked ? likedImg : likeImg}
-                alt={liked ? 'Remove like' : 'Like'}
-                height={32}
+                alt={headline.img_alt ?? ''}
+                src={leadImgErr ? transPix : headline.img_src}
+                fill
+                style={{
+                  objectFit: 'cover',
+                  opacity: 0.33,
+                }}
+                onError={() => setLeadImgErr(true)}
               />
-            </div>
-          </Grid>
-          <Grid xs={4} justify="center">
-            <Image
-              src={copied ? bookmarkedImg : bookmarkImg}
-              alt={copied ? 'Remove Bookmark' : 'Bookmark'}
-              height={32}
-              onClick={copyToClipboard}
-            />
-          </Grid>
-          <Grid xs={4} justify="center">
-            <Image src={shareImg} alt="Share" height={32} onClick={share} />
-          </Grid>
-        </Grid.Container>
-      </Card.Footer>
-    </Card>
+            )}
+            {headline.img_src && !bgImage && (
+              <Card.Image
+                src={
+                  leadImgErr
+                    ? '../../../public/img/trans-pixel.png'
+                    : headline.img_src
+                }
+                objectFit="cover"
+                width="100%"
+                alt={headline.img_alt ?? ''}
+                onError={() => setLeadImgErr(true)}
+              />
+            )}
+            <Row justify="center" align="center">
+              <Text h3 color="primary">
+                {headline.headline}&nbsp;↗
+              </Text>
+            </Row>
+          </a>
+        </Card.Body>
+        <Card.Footer
+          style={{
+            backgroundColor: theme?.colors.neutralLight.value,
+            borderRadius: '0',
+          }}
+        >
+          <Grid.Container justify="center">
+            <Grid xs={4} justify="center">
+              <div onClick={toggleLike}>
+                <Image
+                  src={liked ? likedImg : likeImg}
+                  alt={liked ? 'Remove like' : 'Like'}
+                  height={32}
+                />
+              </div>
+            </Grid>
+            <Grid xs={4} justify="center">
+              <Image
+                src={copied ? bookmarkedImg : bookmarkImg}
+                alt={copied ? 'Remove Bookmark' : 'Bookmark'}
+                height={32}
+                onClick={copyToClipboard}
+              />
+            </Grid>
+            <Grid xs={4} justify="center">
+              <Image src={shareImg} alt="Share" height={32} onClick={share} />
+            </Grid>
+          </Grid.Container>
+        </Card.Footer>
+      </Card>
+    </>
   );
 };
 

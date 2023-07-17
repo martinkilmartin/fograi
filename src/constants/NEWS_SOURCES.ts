@@ -2940,7 +2940,7 @@ export const NZNewsSources = new Map<string, NewsSource>([
         instagram: 'https://www.instagram.com/nzherald/',
         youtube: 'https://www.youtube.com/@nzheraldtv'
       },
-      headerBG: "#000",
+      headerBG: "#fff",
       primaryColor: "#ecac0c"
     },
   ],
