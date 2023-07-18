@@ -3869,7 +3869,7 @@ export const USNewsSources = new Map<string, NewsSource>([
       socials: {
         facebook: 'https://www.facebook.com/azcentral/',
         twitter: 'https://twitter.com/azcentral',
-        instgram: 'https://www.instagram.com/azcentral/',
+        instagram: 'https://www.instagram.com/azcentral/',
       },
       headerBG: '#fff',
       primaryColor: '#009BFF',
@@ -3934,9 +3934,28 @@ export const USNewsSources = new Map<string, NewsSource>([
       name: 'Chicago Sun-Times',
       url: 'https://chicago.suntimes.com/',
       est: 1948,
-      about: 'Chicago News, Sports, Politics, Entertainment, Weather and More.',
+      about:
+        'The Chicago Sun-Times covers various topics of interest including local news, sports, politics, entertainment, and weather. This platform provides an essential source of news and information to keep you updated on the happenings within Chicago and beyond. Its thorough news coverage, insightful opinions, and engaging content make it a go-to resource for many Chicagoans.',
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
+      tags: [
+        'ChicagoSunTimes',
+        'ChicagoNews',
+        'LocalNews',
+        'Sports',
+        'Politics',
+        'Entertainment',
+        'Weather',
+      ],
+      socials: {
+        email: 'mailto:customerservice@suntimes.com',
+        twitter: 'https://twitter.com/Suntimes',
+        facebook: 'https://www.facebook.com/thechicagosuntimes',
+        youtube: 'https://www.youtube.com/channel/UCvU3ALK4osa_RV4znIToB2Q',
+        instagram: 'https://www.instagram.com/chicagosuntimes/',
+      },
+      headerBG: '#fff',
+      primaryColor: '#A91D23',
     },
   ],
   [
