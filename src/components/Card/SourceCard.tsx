@@ -77,7 +77,12 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
         )}
       </Card.Body>
       <Card.Divider />
-      <Card.Footer>
+      <Card.Footer
+        style={{
+          backgroundColor: theme?.colors.accents0.value,
+          borderRadius: '0',
+        }}
+      >
         <Grid.Container gap={2} justify="center">
           {source?.socials &&
             Object.keys(source?.socials).map((key) => (
