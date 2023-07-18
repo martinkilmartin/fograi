@@ -2677,7 +2677,25 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'The 42',
       url: 'https://www.the42.ie/',
       est: 2010,
+      about:
+        'The 42 is a leading Irish sports news and analysis website, dedicated to providing comprehensive coverage of a wide range of sports, with a particular focus on football. As a trusted source of sports journalism in Ireland, The 42 delivers breaking news, in-depth features, expert analysis, and engaging opinion pieces that keep sports enthusiasts and football fans informed and entertained. With its team of experienced journalists and passionate contributors, The 42 offers a unique perspective on national and international sports events, including major tournaments, leagues, and competitions.',
       emos: ['💻', '⚽'],
+      langs: ['en'],
+      tags: [
+        'The42',
+        'SportsNews',
+        'Football',
+        'SportsAnalysis',
+        'SportsOpinion',
+      ],
+      socials: {
+        email: 'sport@the42.ie',
+        facebook: 'https://www.facebook.com/the42.ie',
+        twitter: 'https://twitter.com/the42_ie',
+        instagram: 'https://www.instagram.com/the42.ie',
+      },
+      headerBG: '#1d3b3c',
+      primaryColor: '#23612d;',
     },
   ],
   [

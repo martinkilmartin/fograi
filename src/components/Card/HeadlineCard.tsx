@@ -5,6 +5,7 @@ import diffDisplay from '@lib/time-format';
 import { Headline } from 'src/types';
 import { Countries } from 'src/types/countries';
 import { flags } from '@constants/FLAGS';
+import { countries } from '@constants/COUNTRIES';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
 
 import bookmarkImg from '../../../public/img/ic/bookmark.svg';
@@ -12,6 +13,7 @@ import bookmarkedImg from '../../../public/img/ic/bookmarked.svg';
 import likeImg from '../../../public/img/ic/like.svg';
 import likedImg from '../../../public/img/ic/liked.svg';
 import shareImg from '../../../public/img/ic/share.svg';
+import Link from 'next/link';
 
 type Props = {
   header?: boolean;
@@ -34,6 +36,7 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
   const sourceURL = AllNewsSources.get(headline.source)?.url;
   const sourceName = AllNewsSources.get(headline.source)?.name;
   const flag = flags.get(country);
+  const countryName = countries.get(country as Countries);
 
   useEffect(() => {
     const likedPosts = JSON.parse(localStorage.getItem('likedPosts') || '[]');
@@ -100,7 +103,11 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
           <Text size={18} weight="bold">
             {'#' + idx}
           </Text>
-          <Text size={28}>{flag}</Text>
+          <Text size={28} weight={'bold'}>
+            <Link href={'/' + country}>
+              {flag}&nbsp;&nbsp;{countryName}
+            </Link>
+          </Text>
           <Text size={18} weight="bold">
             {diffDisplay(DATE)}
           </Text>

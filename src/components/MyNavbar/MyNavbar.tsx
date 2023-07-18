@@ -37,53 +37,33 @@ export default function MyNavbar(): JSX.Element {
         </Navbar.Content>{' '}
         <Navbar.Collapse>
           <Navbar.CollapseItem>
-            <Grid.Container justify="center">
+            <Grid.Container justify="center" gap={2}>
               <Grid>
-                <Link
-                  color="inherit"
-                  css={{
-                    minWidth: '100%',
-                  }}
-                  href="/oz"
-                >
-                  <Text h1>🇦🇺</Text>
+                <Link href="/oz">
+                  <Text size={48}>Australia&nbsp;🇦🇺</Text>
                 </Link>
-                <Link
-                  color="inherit"
-                  css={{
-                    minWidth: '100%',
-                  }}
-                  href="/ca"
-                >
-                  <Text h1>🇨🇦</Text>
+              </Grid>
+              <Grid>
+                <Link href="/ca">
+                  <Text size={48}>Canada&nbsp;🇨🇦</Text>
                 </Link>
-                <Link
-                  color="inherit"
-                  css={{
-                    minWidth: '100%',
-                  }}
-                  href="/in"
-                >
-                  <Text h1>🇮🇳</Text>
+              </Grid>
+              <Grid>
+                <Link href="/in">
+                  <Text size={48}>India&nbsp;🇮🇳</Text>
                 </Link>
-                <Link
-                  color="inherit"
-                  css={{
-                    minWidth: '100%',
-                  }}
-                  href="/ie"
-                >
-                  <Text h1>🇮🇪</Text>
+              </Grid>
+              <Grid>
+                <Link href="/ie">
+                  <Text size={48}>Ireland&nbsp;🇮🇪</Text>
                 </Link>
-                <Link
-                  color="inherit"
-                  css={{
-                    minWidth: '100%',
-                  }}
-                  href="/nz"
-                >
-                  <Text h1>🇳🇿</Text>
+              </Grid>
+              <Grid>
+                <Link href="/nz">
+                  <Text size={48}>New&nbsp;Zealand&nbsp;🇳🇿</Text>
                 </Link>
+              </Grid>
+              <Grid>
                 <Link
                   color="inherit"
                   css={{
@@ -91,8 +71,10 @@ export default function MyNavbar(): JSX.Element {
                   }}
                   href="/uk"
                 >
-                  <Text h1>🇬🇧</Text>
+                  <Text size={48}>UK&nbsp;🇬🇧</Text>
                 </Link>
+              </Grid>
+              <Grid>
                 <Link
                   color="inherit"
                   css={{
@@ -100,7 +82,7 @@ export default function MyNavbar(): JSX.Element {
                   }}
                   href="/us"
                 >
-                  <Text h1>🇺🇸</Text>
+                  <Text size={48}>USA&nbsp;🇺🇸</Text>
                 </Link>
               </Grid>
             </Grid.Container>
