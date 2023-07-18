@@ -1825,7 +1825,27 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Limerick Leader',
       url: 'https://www.limerickleader.ie/',
       est: 1889,
+      about:
+        'Limerick Leader is a long-standing Irish newspaper that has been serving the Limerick community since 1889. With a rich history and deep roots in the local area, the newspaper provides comprehensive coverage of news, events, sports, politics, business, and more. Limerick Leader aims to keep the community informed about the latest happenings, offering in-depth reporting and insightful analysis. It is a trusted source of information, fostering a sense of community and providing a platform for discussions and debates.',
       emos: ['📰', '🇮🇪'],
+      langs: ['en'],
+      tags: [
+        'LimerickLeader',
+        'IrishNews',
+        'LocalNews',
+        'Community',
+        'Events',
+        'Sports',
+        'Politics',
+        'Business',
+      ],
+      socials: {
+        email: 'news@limerickleader.ie',
+        twitter: 'https://twitter.com/limerick_leader',
+        facebook: 'https://www.facebook.com/LimerickLeader',
+      },
+      headerBG: '#fff',
+      primaryColor: '#004A8D',
     },
   ],
   [
@@ -1891,7 +1911,29 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'LMFM',
       url: 'https://www.lmfm.ie/',
       est: 1989,
+      about:
+        'LMFM is a popular Irish radio station that has been broadcasting since 1989. With a focus on providing quality programming to the local community, LMFM covers a wide range of topics, including news, sports, entertainment, and more. The station keeps listeners informed and entertained with a mix of music, talk shows, interviews, and live events. LMFM is dedicated to serving the needs and interests of its audience, fostering a sense of community and providing a platform for local voices.',
       emos: ['📻', '🇮🇪'],
+      langs: ['en'],
+      tags: [
+        'LMFM',
+        'IrishRadio',
+        'LocalRadio',
+        'News',
+        'Sports',
+        'Entertainment',
+      ],
+      socials: {
+        email: '',
+        facebook: 'https://www.facebook.com/lmfmradiowireless/',
+        twitter: 'https://twitter.com/lmfmradio',
+        instagram: 'https://www.instagram.com/lmfm_radio958',
+        apple: 'https://apps.apple.com/ie/app/lmfm-radio/id469837802',
+        android:
+          'https://play.google.com/store/apps/details?id=com.thisisaim.lmfm&hl=en_GB',
+      },
+      headerBG: '#fff',
+      primaryColor: '#4049d0',
     },
   ],
   [
