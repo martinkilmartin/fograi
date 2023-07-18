@@ -1823,7 +1823,23 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Live 95',
       url: 'https://www.live95fm.ie/',
       est: 1997,
+      about:
+        'Live 95 is a popular Irish radio station that offers a vibrant mix of music, news, sports, and talk shows. With a diverse range of programming, Live 95 caters to the interests of its audience, providing entertainment, information, and engaging discussions. Tune in to stay up-to-date with the latest news, enjoy your favorite tunes, and join in the lively conversations on Live 95.',
       emos: ['📻', '🇮🇪'],
+      langs: ['en'],
+      tags: ['Live95', 'Radio', 'Music', 'News', 'Sports', 'TalkShows'],
+      socials: {
+        email: 'info@live95.ie',
+        facebook: 'https://www.facebook.com/Live95Wireless/',
+        twitter: 'https://twitter.com/Live95Limerick',
+        instagram: 'https://www.instagram.com/live95limerick/',
+        apple: 'https://apps.apple.com/ie/app/limericks-live-95fm/id463283739',
+        android:
+          'https://play.google.com/store/apps/details?id=com.thisisaim.live95fm',
+        linkedin: 'https://www.linkedin.com/company/live95',
+      },
+      headerBG: '#cb1d2e',
+      primaryColor: '#cb1d2e',
     },
   ],
   [
@@ -1877,7 +1893,27 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Merrion Street',
       url: 'https://merrionstreet.ie/',
       est: 2007,
+      about:
+        'Merrion Street is an online platform that serves as a central hub for the latest news, updates, and announcements from the Irish government. It provides valuable insights into government policies, initiatives, and activities, covering a wide range of topics such as politics, economy, healthcare, education, and more. Merrion Street aims to foster transparency and open communication by delivering reliable and timely information directly from the government sources. Stay informed about the latest developments and decisions shaping Ireland through the comprehensive coverage offered by Merrion Street.',
       emos: ['💻', '🃏'],
+      langs: ['en'],
+      tags: [
+        'MerrionStreet',
+        'IrishGovernment',
+        'News',
+        'Politics',
+        'Policies',
+        'Updates',
+      ],
+      socials: {
+        twitter: 'https://twitter.com/merrionstreet/',
+        facebook: 'https://www.facebook.com/merrionstreet',
+        flickr: 'https://www.flickr.com/photos/merrionstreet-ie/',
+        youtube: 'http://www.youtube.com/merrionstreet',
+        instagram: 'https://www.instagram.com/merrionstreet/',
+      },
+      headerBG: '#112888',
+      primaryColor: '#112888',
     },
   ],
   [
@@ -1994,7 +2030,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       ],
       socials: {
         podcast: 'https://www.tg4.ie/ga/brandai-eile/podchraoltai-tg4/',
-        email: 'eolas@tg4.ie',
+        email: 'mailto:eolas@tg4.ie',
         facebook: 'https://www.facebook.com/NuachtTG4/',
         twitter: 'https://twitter.com/NuachtTG4',
         instagram: 'https://www.instagram.com/nuacht.tg4/',

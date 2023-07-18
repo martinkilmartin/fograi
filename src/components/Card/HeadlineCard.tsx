@@ -12,7 +12,6 @@ import bookmarkedImg from '../../../public/img/ic/bookmarked.svg';
 import likeImg from '../../../public/img/ic/like.svg';
 import likedImg from '../../../public/img/ic/liked.svg';
 import shareImg from '../../../public/img/ic/share.svg';
-import transPix from '../../../public/img/trans-pixel.png';
 
 type Props = {
   header?: boolean;
@@ -22,11 +21,7 @@ type Props = {
   idx?: number;
 };
 
-const HeadlineCard = ({
-  bgImage = false,
-  headline,
-  idx,
-}: Props): JSX.Element => {
+const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
   const { theme } = useTheme();
   const [suffix, setSuffix] = useState<string>('svg');
   const [leadImgErr, setLeadImgErr] = useState<boolean>(false);
@@ -146,29 +141,21 @@ const HeadlineCard = ({
           rel="noreferrer"
           style={{ overflow: 'auto' }}
         >
-          {headline.img_src && bgImage && (
-            <Image
-              alt={headline.img_alt ?? ''}
-              src={leadImgErr ? transPix : headline.img_src}
-              fill
-              style={{
-                objectFit: 'cover',
-                opacity: 0.33,
-              }}
-              onError={() => setLeadImgErr(true)}
-            />
-          )}
-          {headline.img_src && !bgImage && (
+          {headline.img_src && (
             <Card.Image
-              src={
-                leadImgErr
-                  ? '../../../public/img/trans-pixel.png'
-                  : headline.img_src
-              }
+              src={leadImgErr ? '/img/no-image.png' : headline.img_src}
               objectFit="cover"
               width="100%"
               alt={headline.img_alt ?? ''}
               onError={() => setLeadImgErr(true)}
+            />
+          )}
+          {!headline.img_src && (
+            <Card.Image
+              src="/img/no-image.png"
+              objectFit="cover"
+              width="100%"
+              alt="No image for this story"
             />
           )}
           <Row justify="center" align="center">
