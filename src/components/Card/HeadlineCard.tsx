@@ -88,129 +88,128 @@ const HeadlineCard = ({
   };
 
   return (
-    <>
-      <Card isHoverable variant="bordered" style={{ borderRadius: '0' }}>
-        <Card.Header
+    <Card isHoverable variant="bordered" style={{ borderRadius: '0' }}>
+      <Card.Header
+        style={{
+          backgroundColor: theme?.colors.background.value,
+        }}
+      >
+        <div
           style={{
-            backgroundColor: theme?.colors.background.value,
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            width: '100%',
           }}
         >
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              width: '100%',
-            }}
-          >
-            <Text size="xl" weight="bold" transform="uppercase">
-              {'#' + idx}
-            </Text>
-            <Badge color="primary" variant="bordered">
-              <b>
-                {flag}&nbsp;{diffDisplay(DATE)}
-              </b>
-            </Badge>
-          </div>
-        </Card.Header>
-        <hr />
-        <Card.Header
+          <Text size="xl" weight="bold" transform="uppercase">
+            {'#' + idx}
+          </Text>
+          <Badge color="primary" variant="bordered">
+            <b>
+              {flag}&nbsp;{diffDisplay(DATE)}
+            </b>
+          </Badge>
+        </div>
+      </Card.Header>
+      <hr />
+      <Card.Header
+        style={{
+          backgroundColor: sourceHeaderBG ?? theme?.colors.background.value,
+        }}
+      >
+        <div
           style={{
-            backgroundColor: sourceHeaderBG ?? theme?.colors.background.value,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '100%',
           }}
         >
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              width: '100%',
-            }}
-          >
-            <a href={sourceURL} target="_blank" rel="noreferrer">
-              <Image
-                src={`/img/ns/${headline.source}.${suffix}`}
-                width={300}
-                height={64}
-                style={{
-                  maxHeight: '$3xl',
-                }}
-                alt={sourceName ?? ''}
-                onError={() => setSuffix('png')}
-              />
-            </a>
-          </div>
-        </Card.Header>
-        <Card.Body css={{ py: '$2' }}>
-          <a
-            href={headline.link}
-            target="_blank"
-            rel="noreferrer"
-            style={{ overflow: 'auto' }}
-          >
-            {headline.img_src && bgImage && (
-              <Image
-                alt={headline.img_alt ?? ''}
-                src={leadImgErr ? transPix : headline.img_src}
-                fill
-                style={{
-                  objectFit: 'cover',
-                  opacity: 0.33,
-                }}
-                onError={() => setLeadImgErr(true)}
-              />
-            )}
-            {headline.img_src && !bgImage && (
-              <Card.Image
-                src={
-                  leadImgErr
-                    ? '../../../public/img/trans-pixel.png'
-                    : headline.img_src
-                }
-                objectFit="cover"
-                width="100%"
-                alt={headline.img_alt ?? ''}
-                onError={() => setLeadImgErr(true)}
-              />
-            )}
-            <Row justify="center" align="center">
-              <Text h3 color="primary">
-                {headline.headline}&nbsp;↗
-              </Text>
-            </Row>
+          <a href={sourceURL} target="_blank" rel="noreferrer">
+            <Image
+              src={`/img/ns/${headline.source}.${suffix}`}
+              width={300}
+              height={64}
+              style={{
+                maxHeight: '$3xl',
+              }}
+              alt={sourceName ?? ''}
+              onError={() => setSuffix('png')}
+            />
           </a>
-        </Card.Body>
-        <Card.Divider />
-        <Card.Footer
-          style={{
-            borderRadius: '0',
-          }}
+        </div>
+      </Card.Header>
+      <Card.Body css={{ py: '$2' }}>
+        <a
+          href={headline.link}
+          target="_blank"
+          rel="noreferrer"
+          style={{ overflow: 'auto' }}
         >
-          <Grid.Container justify="center">
-            <Grid xs={4} justify="center">
-              <div onClick={toggleLike}>
-                <Image
-                  src={liked ? likedImg : likeImg}
-                  alt={liked ? 'Remove like' : 'Like'}
-                  height={32}
-                />
-              </div>
-            </Grid>
-            <Grid xs={4} justify="center">
+          {headline.img_src && bgImage && (
+            <Image
+              alt={headline.img_alt ?? ''}
+              src={leadImgErr ? transPix : headline.img_src}
+              fill
+              style={{
+                objectFit: 'cover',
+                opacity: 0.33,
+              }}
+              onError={() => setLeadImgErr(true)}
+            />
+          )}
+          {headline.img_src && !bgImage && (
+            <Card.Image
+              src={
+                leadImgErr
+                  ? '../../../public/img/trans-pixel.png'
+                  : headline.img_src
+              }
+              objectFit="cover"
+              width="100%"
+              alt={headline.img_alt ?? ''}
+              onError={() => setLeadImgErr(true)}
+            />
+          )}
+          <Row justify="center" align="center">
+            <Text h3 color="primary">
+              {headline.headline}&nbsp;↗
+            </Text>
+          </Row>
+        </a>
+      </Card.Body>
+      <Card.Divider />
+      <Card.Footer
+        style={{
+          backgroundColor: theme?.colors.accents0.value,
+          borderRadius: '0',
+        }}
+      >
+        <Grid.Container justify="center">
+          <Grid xs={4} justify="center">
+            <div onClick={toggleLike}>
               <Image
-                src={copied ? bookmarkedImg : bookmarkImg}
-                alt={copied ? 'Remove Bookmark' : 'Bookmark'}
+                src={liked ? likedImg : likeImg}
+                alt={liked ? 'Remove like' : 'Like'}
                 height={32}
-                onClick={copyToClipboard}
               />
-            </Grid>
-            <Grid xs={4} justify="center">
-              <Image src={shareImg} alt="Share" height={32} onClick={share} />
-            </Grid>
-          </Grid.Container>
-        </Card.Footer>
-      </Card>
-    </>
+            </div>
+          </Grid>
+          <Grid xs={4} justify="center">
+            <Image
+              src={copied ? bookmarkedImg : bookmarkImg}
+              alt={copied ? 'Remove Bookmark' : 'Bookmark'}
+              height={32}
+              onClick={copyToClipboard}
+            />
+          </Grid>
+          <Grid xs={4} justify="center">
+            <Image src={shareImg} alt="Share" height={32} onClick={share} />
+          </Grid>
+        </Grid.Container>
+      </Card.Footer>
+    </Card>
   );
 };
 
