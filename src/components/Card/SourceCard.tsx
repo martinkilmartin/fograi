@@ -35,7 +35,7 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
               src={`/img/ns/${k}.${suffix}`}
               onError={() => setSuffix('png')}
               alt={source?.name ?? ''}
-              width={300}
+              width={400}
               height={80}
             />
           </Link>
