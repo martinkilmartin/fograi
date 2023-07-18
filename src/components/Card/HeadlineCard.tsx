@@ -180,9 +180,9 @@ const HeadlineCard = ({
             </Row>
           </a>
         </Card.Body>
+        <Card.Divider />
         <Card.Footer
           style={{
-            backgroundColor: theme?.colors.neutralLight.value,
             borderRadius: '0',
           }}
         >

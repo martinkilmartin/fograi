@@ -41,7 +41,8 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
           </Link>
         </Row>
       </Card.Header>
-      <Card.Body css={{ py: '$10', backgroundColor: '#f6f6f6' }}>
+      <Card.Divider />
+      <Card.Body css={{ py: '$10' }}>
         <Row justify="space-between" align="center">
           <Text>
             <b>Established:</b> {source?.est}
@@ -51,6 +52,7 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
           </Text>
         </Row>
         <Text>{source?.about}</Text>
+        <Card.Divider />
         <Grid.Container justify="center">
           {source?.tags &&
             source?.tags.map((tag) => (
@@ -74,6 +76,7 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
           </Grid.Container>
         )}
       </Card.Body>
+      <Card.Divider />
       <Card.Footer>
         <Grid.Container gap={2} justify="center">
           {source?.socials &&
