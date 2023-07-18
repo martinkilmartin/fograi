@@ -47,12 +47,10 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
           <Badge isSquared color="primary" variant="bordered">
             Established in&nbsp;{source?.est}
           </Badge>
-          <Text size="$3xl" weight="bold" transform="uppercase">
-            &nbsp;{flag}&nbsp;
-          </Text>
+          <Text size={28}>&nbsp;{flag}&nbsp;</Text>
         </Row>
         <Text>{source?.about}</Text>
-        <Card.Divider />
+        <Card.Divider css={{ my: '$5' }} />
         <Grid.Container justify="center">
           {source?.tags &&
             source?.tags.map((tag) => (
