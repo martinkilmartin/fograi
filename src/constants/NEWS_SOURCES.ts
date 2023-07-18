@@ -3129,9 +3129,23 @@ export const INNewsSources = new Map<string, NewsSource>([
       url: 'https://www.asianage.com/',
       est: 1994,
       about:
-        'The only Indian newspaper with an international edition (London). Shows what is happening, and the reasons behind it.',
+        'The Asian Age is a prominent Indian newspaper that offers comprehensive coverage of national and international news. With its unique international edition based in London, The Asian Age provides valuable insights into global events and the underlying factors shaping them. The newspaper goes beyond just reporting the news; it delves into the reasons and context behind significant developments, offering readers a deeper understanding of current affairs.',
       emos: ['📰', '🇮🇳'],
       langs: ['en'],
+      tags: [
+        'TheAsianAge',
+        'IndianNewspaper',
+        'InternationalNews',
+        'India',
+        'World',
+      ],
+      socials: {
+        email: '',
+        facebook: 'https://www.facebook.com/Asian-Age-514897795345965/',
+        twitter: 'https://twitter.com/theasianagenews',
+      },
+      headerBG: '#fff',
+      primaryColor: '#CF0000',
     },
   ],
   [
