@@ -33,6 +33,8 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
   const country = headline.source.substring(0, 2).toLowerCase();
 
   const sourceHeaderBG = AllNewsSources.get(headline.source)?.headerBG;
+  const logoWidth = AllNewsSources.get(headline.source)?.logoWidth;
+  const logoHeight = AllNewsSources.get(headline.source)?.logoHeight;
   const sourceURL = AllNewsSources.get(headline.source)?.url;
   const sourceName = AllNewsSources.get(headline.source)?.name;
   const flag = flags.get(country);
@@ -130,8 +132,8 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
           <a href={sourceURL} target="_blank" rel="noreferrer">
             <Image
               src={`/img/ns/${headline.source}.${suffix}`}
-              width={300}
-              height={64}
+              width={logoWidth ?? 400}
+              height={logoHeight ?? 80}
               style={{
                 maxHeight: '$3xl',
               }}

@@ -1915,6 +1915,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         'LMFM is a popular Irish radio station that has been broadcasting since 1989. With a focus on providing quality programming to the local community, LMFM covers a wide range of topics, including news, sports, entertainment, and more. The station keeps listeners informed and entertained with a mix of music, talk shows, interviews, and live events. LMFM is dedicated to serving the needs and interests of its audience, fostering a sense of community and providing a platform for local voices.',
       emos: ['📻', '🇮🇪'],
       langs: ['en'],
+      logoWidth: 200,
+      logoHeight: 60,
       tags: [
         'LMFM',
         'IrishRadio',
@@ -1925,12 +1927,14 @@ export const IENewsSources = new Map<string, NewsSource>([
       ],
       socials: {
         email: '',
+        live: 'https://www.lmfm.ie/player/',
         facebook: 'https://www.facebook.com/lmfmradiowireless/',
         twitter: 'https://twitter.com/lmfmradio',
         instagram: 'https://www.instagram.com/lmfm_radio958',
         apple: 'https://apps.apple.com/ie/app/lmfm-radio/id469837802',
         android:
           'https://play.google.com/store/apps/details?id=com.thisisaim.lmfm&hl=en_GB',
+        whatsapp: 'https://wa.me/3530861800658',
       },
       headerBG: '#fff',
       primaryColor: '#4049d0',
@@ -4699,6 +4703,8 @@ export const USNewsSources = new Map<string, NewsSource>([
       description: [],
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
+      logoWidth: 400,
+      logoHeight: 29,
       tags: [
         'TheRafuShimpo',
         'News',

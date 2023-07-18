@@ -5,6 +5,8 @@ export type NewsSource = {
   about?: string;
   description?: string[];
   logo?: string;
+  logoWidth?: number;
+  logoHeight?: number;
   emos: string[];
   langs?: string[];
   tags?: string[];
