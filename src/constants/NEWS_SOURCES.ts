@@ -3559,15 +3559,30 @@ export const NZNewsSources = new Map<string, NewsSource>([
       url: 'https://www.odt.co.nz',
       est: 1861,
       about:
-        "New Zealand's oldest daily newspaper. Strong local Otago news coverage combined with national and international news.",
+        "Otago Daily Times is New Zealand's oldest daily newspaper, delivering a combination of strong local Otago news coverage along with national and international news. With a rich history dating back to 1861, Otago Daily Times has been a trusted source of news for generations, providing comprehensive and reliable information to its readers. It serves as a vital resource for the Otago region, offering in-depth reporting on local events, community issues, business, sports, entertainment, and more. In addition, it keeps its readers informed about national and international news, ensuring a well-rounded news experience.",
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
+      tags: [
+        'OtagoDailyTimes',
+        'NewZealandNews',
+        'LocalNews',
+        'NationalNews',
+        'InternationalNews',
+      ],
+      socials: {
+        video: 'https://www.odt.co.nz/video-home',
+        facebook: 'https://facebook.com/OtagoDailyTimes',
+        twitter: 'https://twitter.com/odtnews',
+        instagram: 'https://www.instagram.com/otagodailytimes/',
+      },
+      headerBG: '#fff',
+      primaryColor: '#1B65AE',
     },
   ],
   [
     'NZ_HBT',
     {
-      name: 'Hawke’s Bay Today',
+      name: "Hawke's Bay Today",
       url: 'https://www.nzherald.co.nz/hawkes-bay-today',
       est: 1999,
       about:
