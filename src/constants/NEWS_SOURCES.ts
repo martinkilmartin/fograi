@@ -1724,7 +1724,27 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Kilkenny People',
       url: 'https://www.kilkennypeople.ie/',
       est: 1893,
+      about:
+        'Kilkenny People is a long-standing Irish newspaper with a rich history and deep-rooted connection to the local community. Kilkenny People provides comprehensive coverage of news, events, and stories that matter to the people of Kilkenny. From local news and politics to sports, culture, and lifestyle, Kilkenny People aims to keep its readers informed and engaged with the latest happenings in the region. With a commitment to quality journalism and a strong focus on community-centric reporting, Kilkenny People remains a trusted source of news and information for the people of Kilkenny.',
       emos: ['📰', '🇮🇪'],
+      langs: ['en'],
+      tags: [
+        'KilkennyPeople',
+        'IrishNews',
+        'LocalNews',
+        'Community',
+        'Politics',
+        'Sports',
+        'Culture',
+        'Lifestyle',
+      ],
+      socials: {
+        email: 'news@kilkennypeople.ie',
+        twitter: 'https://twitter.com/KKPeopleNews',
+        facebook: 'https://www.facebook.com/kilkennypeople',
+      },
+      headerBG: '#fff',
+      primaryColor: '#ffbf00',
     },
   ],
   [
