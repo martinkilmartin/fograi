@@ -102,14 +102,13 @@ const HeadlineCard = ({
             width: '100%',
           }}
         >
-          <Text size="xl" weight="bold" transform="uppercase">
+          <Text size={24} weight="bold">
             {'#' + idx}
           </Text>
-          <Badge color="primary" variant="bordered">
-            <b>
-              {flag}&nbsp;{diffDisplay(DATE)}
-            </b>
-          </Badge>
+          <Text size={28}>{flag}</Text>
+          <Text size={24} weight="bold">
+            {diffDisplay(DATE)}
+          </Text>
         </div>
       </Card.Header>
       <hr />
