@@ -3095,8 +3095,8 @@ export const UKNewsSources = new Map<string, NewsSource>([
         'InDepthReporting',
       ],
       socials: {
-        email: 'mailto:care@thetimes.co.uk',
         podcast: 'https://www.thetimes.co.uk/podcasts',
+        email: 'mailto:care@thetimes.co.uk',
         facebook: 'https://www.facebook.com/timesandsundaytimes/',
         twitter: 'https://twitter.com/thetimes',
         instagram: 'https://www.instagram.com/thetimes/',
@@ -3195,6 +3195,7 @@ export const UKNewsSources = new Map<string, NewsSource>([
         'Lifestyle',
       ],
       socials: {
+        podcast: 'https://www.pressandjournal.co.uk/press-journal-podcasts/',
         email: 'mailto:editor@pressandjournal.co.uk',
         facebook: 'https://www.facebook.com/ThePressandJournal/',
         instagram: 'https://www.instagram.com/pressandjournal/',
@@ -3212,9 +3213,27 @@ export const UKNewsSources = new Map<string, NewsSource>([
       url: 'https://www.economist.com/',
       est: 1843,
       about:
-        'Authoritative global news and analysis. Offering fair-minded, fact-checked coverage of world politics, economics, business, science and tech, culture and more.',
+        'The Economist is renowned for its comprehensive global news and analysis. It provides authoritative, fair-minded, and fact-checked coverage on a wide range of topics, including world politics, economics, business, science and technology, culture, and more. By valuing clarity, brevity, and wit, The Economist remains a must-read publication for those who want to stay informed about world affairs.',
       emos: ['📰', '🇬🇧'],
       langs: ['en'],
+      tags: [
+        'TheEconomist',
+        'GlobalNews',
+        'WorldPolitics',
+        'Economics',
+        'Business',
+        'Science',
+        'Technology',
+        'Culture',
+        'UKNews',
+      ],
+      socials: {
+        email: 'mailto:',
+        facebook: '',
+        twitter: '',
+      },
+      headerBG: '#fff',
+      primaryColor: '#e62b24',
     },
   ],
   [
@@ -3224,9 +3243,25 @@ export const UKNewsSources = new Map<string, NewsSource>([
       url: 'https://www.kentonline.co.uk/',
       est: 1855,
       about:
-        "Latest live breaking news, sport, business and what's on in Kent and Medway.",
+        "Kentish Express is a trusted source of breaking news, sports, business, and local events in Kent and Medway. It offers a thorough coverage of the region's activities, making it a key resource for locals and anyone interested in Kentish affairs.",
       emos: ['📰', '🇬🇧'],
       langs: ['en'],
+      tags: [
+        'KentishExpress',
+        'UKNews',
+        'KentNews',
+        'MedwayNews',
+        'LocalNews',
+        'BusinessNews',
+        'SportsNews',
+      ],
+      socials: {
+        email: 'mailto:',
+        facebook: '',
+        twitter: '',
+      },
+      headerBG: '#266394',
+      primaryColor: '#FFDD00',
     },
   ],
   [
