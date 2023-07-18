@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Badge, Card, Grid, Row, Text, useTheme } from '@nextui-org/react';
+import { Card, Grid, Row, Text, useTheme } from '@nextui-org/react';
 import diffDisplay from '@lib/time-format';
 import { Headline } from 'src/types';
 import { Countries } from 'src/types/countries';
