@@ -44,7 +44,7 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
       <Card.Divider />
       <Card.Body css={{ py: '$10' }}>
         <Row justify="space-between" align="center">
-          <Badge enableShadow isSquared variant="bordered">
+          <Badge isSquared color="primary" variant="bordered">
             Established in&nbsp;{source?.est}
           </Badge>
           <Text size="$3xl" weight="bold" transform="uppercase">
