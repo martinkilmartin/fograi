@@ -4404,7 +4404,7 @@ export const USNewsSources = new Map<string, NewsSource>([
         twitter: 'https://twitter.com/chicagotribune',
         instagram: 'https://www.instagram.com/chicagotribune/',
         rss: 'https://www.chicagotribune.com/arcio/rss/category/news/',
-        linedin: 'https://www.linkedin.com/company/chicago-tribune-media/',
+        linkedin: 'https://www.linkedin.com/company/chicago-tribune-media/',
       },
       headerBG: '#fff',
       primaryColor: '#004E87',
