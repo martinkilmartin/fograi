@@ -3688,13 +3688,33 @@ export const NZNewsSources = new Map<string, NewsSource>([
   [
     'NZ_BOPT',
     {
-      name: 'Bay of Plenty Times ',
+      name: 'Bay of Plenty Times',
       url: 'https://www.nzherald.co.nz/bay-of-plenty-times',
       est: 1872,
       about:
-        'Latest Tauranga and Bay of Plenty news including local news, business, sport, lifestyle, entertainment and more.',
+        'The Bay of Plenty Times is a trusted source of news covering Tauranga and the wider Bay of Plenty region in New Zealand. With a focus on local news, business, sports, lifestyle, and entertainment, the newspaper provides comprehensive coverage that keeps residents informed and engaged with the happenings in their community. From breaking news to in-depth features, the Bay of Plenty Times delivers timely and relevant information that reflects the diverse interests and concerns of the region.',
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
+      tags: [
+        'BayOfPlentyTimes',
+        'TaurangaNews',
+        'BayOfPlentyNews',
+        'LocalNews',
+        'Business',
+        'Sports',
+        'Lifestyle',
+        'Entertainment',
+        'NewZealand',
+      ],
+      socials: {
+        email:
+          'mailto:newsdesk@nzherald.co.nz?subject=Online enquiry - Contact the Newsroom',
+        facebook: 'https://www.facebook.com/bayofplentytimes',
+        twitter: 'https://twitter.com/Bay_Times',
+        instagram: 'https://www.instagram.com/baytimes/',
+      },
+      headerBG: '#0063a4',
+      primaryColor: '#ecac0d',
     },
   ],
   [
@@ -3761,9 +3781,28 @@ export const NZNewsSources = new Map<string, NewsSource>([
       url: 'https://www.nzherald.co.nz/rotorua-daily-post',
       est: 1885,
       about:
-        'Local and regional news from the Rotorua region, including Rotorua, Whakatane and Taupo.',
+        'The Rotorua Daily Post is a trusted source of local and regional news from the Rotorua region in New Zealand. With coverage spanning Rotorua, Whakatane, and Taupo, the newspaper keeps residents and visitors informed about the latest news, events, and developments in the area. From community updates to sports, business, and entertainment, the Rotorua Daily Post provides comprehensive coverage that reflects the diverse interests and concerns of the local community.',
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
+      tags: [
+        'RotoruaDailyPost',
+        'LocalNews',
+        'RegionalNews',
+        'Rotorua',
+        'Whakatane',
+        'Taupo',
+        'NewZealand',
+      ],
+      socials: {
+        video: 'https://www.nzherald.co.nz/rotorua-daily-post/video/',
+        email: 'news@dailypost.co.nz',
+        facebook: 'https://www.facebook.com/RotoruaDailyPost',
+        twitter: 'https://twitter.com/TheDailyPost',
+        instagram: 'https://www.instagram.com/rotoruadailypost/',
+        rss: 'https://www.nzherald.co.nz/arc/outboundfeeds/rss/section/news/?outputType=xml&_website=rotorua-daily-post',
+      },
+      headerBG: '#8b080d',
+      primaryColor: '#8b080d',
     },
   ],
   [
