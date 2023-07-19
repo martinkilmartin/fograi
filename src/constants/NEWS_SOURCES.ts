@@ -789,6 +789,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       est: 2010,
       about:
         "BALLS.ie is Ireland's premier online platform for sports enthusiasts, covering a vast range of sports from Hurling to American Football, and Curling to Downhill Skiing. BALLS.ie brings you real-time updates, engaging content in video, gif, image, and tweet form, and in-depth commentary on the games you love. Stay updated with BALLS.ie, where every sport has a story to tell.",
+      logoWidth: 100,
+      logoHeight: 100,
       emos: ['💻', '⚽', '🏈', '🥌', '⛷'],
       langs: ['en'],
       tags: [
@@ -3038,9 +3040,29 @@ export const INNewsSources = new Map<string, NewsSource>([
       url: 'https://indianexpress.com/',
       est: 1932,
       about:
-        'The latest news from India and around the world. Breaking News, current headlines, live news, latest news on elections, business, sports, world, and entertainment.',
+        'The Indian Express brings you the latest news from India and around the world. With a focus on breaking news, current headlines, live news updates, and in-depth coverage, it provides comprehensive news coverage on a wide range of topics including elections, business, sports, world news, and entertainment.',
       emos: ['📰', '🇮🇳'],
       langs: ['en'],
+      tags: [
+        'TheIndianExpress',
+        'IndianNews',
+        'WorldNews',
+        'BreakingNews',
+        'Elections',
+        'Business',
+        'Sports',
+        'Entertainment',
+      ],
+      socials: {
+        email: 'mailto:feedback@indianexpress.com',
+        facebook: 'https://www.facebook.com/indianexpress',
+        twitter: 'https://twitter.com/IndianExpress',
+        youtube: 'https://www.youtube.com/@indianexpress',
+        instagram: 'https://www.instagram.com/indianexpress/',
+        linkedin: 'https://www.linkedin.com/company/indian-express/',
+      },
+      headerBG: '#fff',
+      primaryColor: '#D70000',
     },
   ],
   [
