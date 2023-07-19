@@ -3758,9 +3758,19 @@ export const NZNewsSources = new Map<string, NewsSource>([
       name: 'Wairarapa Times-Age',
       url: 'https://times-age.co.nz/',
       est: 1878,
-      about: "Wairarapa's source of local news",
+      about:
+        'The Wairarapa Times-Age is the leading source of local news for the Wairarapa region in New Zealand. It provides comprehensive coverage of the latest news, events, and developments in the community, keeping residents informed about the issues that matter to them. From local news stories to features on arts, culture, sports, and more, the Wairarapa Times-Age covers a wide range of topics that are of interest and importance to the residents of the Wairarapa region.',
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
+      tags: ['WairarapaTimesAge', 'WairarapaNews', 'LocalNews', 'NewZealand'],
+      socials: {
+        email: 'news@age.co.nz',
+        facebook: 'https://www.facebook.com/WairarapaTimesAge/',
+        twitter: 'https://twitter.com/WairarapaTA',
+        instagram: 'https://www.instagram.com/wairarapatimesage/',
+      },
+      headerBG: '#fff',
+      primaryColor: '#232D35',
     },
   ],
   [
