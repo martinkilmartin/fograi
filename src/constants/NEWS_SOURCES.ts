@@ -803,7 +803,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'SportsCommentary',
       ],
       socials: {
-        email: 'mailto:info@balls.ie', // Replace with actual email if different
+        email: 'mailto:info@balls.ie',
         facebook: 'https://www.facebook.com/ballsdotie',
         twitter: 'https://twitter.com/ballsdotie',
         youtube: 'https://www.youtube.com/c/Ballsdotie',
@@ -1617,12 +1617,12 @@ export const IENewsSources = new Map<string, NewsSource>([
         podcast:
           'https://www.farmersjournal.ie/catch-up-on-the-latest-irish-farmers-journal-podcasts-650230',
         video: 'https://www.farmersjournal.ie/video.php',
+        email: 'mailto:info@farmersjournal.ie',
         facebook: 'https://www.facebook.com/IrishFarmersJournal',
         twitter: 'https://twitter.com/farmersjournal',
         instagram: 'https://www.instagram.com/farmersjournal/',
         youtube: 'https://www.youtube.com/@IrishFarmersJournal',
         linkedin: 'https://www.linkedin.com/company/farmers-journal/',
-        email: 'mailto:info@farmersjournal.ie',
       },
       headerBG: '#da2128',
       primaryColor: '#ad9963',
@@ -1739,7 +1739,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'Lifestyle',
       ],
       socials: {
-        email: 'news@kilkennypeople.ie',
+        email: 'mailto:news@kilkennypeople.ie',
         twitter: 'https://twitter.com/KKPeopleNews',
         facebook: 'https://www.facebook.com/kilkennypeople',
       },
@@ -1840,7 +1840,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'Business',
       ],
       socials: {
-        email: 'news@limerickleader.ie',
+        email: 'mailto:news@limerickleader.ie',
         twitter: 'https://twitter.com/limerick_leader',
         facebook: 'https://www.facebook.com/LimerickLeader',
       },
@@ -1869,7 +1869,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'Entertainment',
       ],
       socials: {
-        email: 'news@limerickpost.ie',
+        email: 'mailto:news@limerickpost.ie',
         facebook: 'https://www.facebook.com/LimerickPostNews',
         instagram: 'https://www.instagram.com/limerickpost/',
         linkedin: 'http://www.linkedin.com/company/limerick-post-newspaper',
@@ -1892,7 +1892,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       langs: ['en'],
       tags: ['Live95', 'Radio', 'Music', 'News', 'Sports', 'TalkShows'],
       socials: {
-        email: 'info@live95.ie',
+        email: 'mailto:info@live95.ie',
         facebook: 'https://www.facebook.com/Live95Wireless/',
         twitter: 'https://twitter.com/Live95Limerick',
         instagram: 'https://www.instagram.com/live95limerick/',
@@ -1926,7 +1926,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'Entertainment',
       ],
       socials: {
-        email: '',
+        email: 'mailto:info@lmfm.ie',
         live: 'https://www.lmfm.ie/player/',
         facebook: 'https://www.facebook.com/lmfmradiowireless/',
         twitter: 'https://twitter.com/lmfmradio',
@@ -2352,7 +2352,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'CurrentAffairs',
       ],
       socials: {
-        email: 'info@businesspost.ie',
+        email: 'mailto:info@businesspost.ie',
         linkedin: 'https://www.linkedin.com/company/businessposthq',
         facebook: 'https://www.facebook.com/businessposthq/',
         twitter: 'https://twitter.com/businessposthq',
@@ -2665,7 +2665,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       ],
       socials: {
         podcast: 'https://www.thejournal.ie/the-explainer/news/',
-        email: 'hello@thejournal.ie',
+        email: 'mailto:hello@thejournal.ie',
         facebook: 'https://www.facebook.com/thejournal.ie',
         twitter: 'https://twitter.com/thejournal_ie',
         instagram: 'https://www.instagram.com/thejournal_ie',
@@ -2758,7 +2758,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'SportsOpinion',
       ],
       socials: {
-        email: 'sport@the42.ie',
+        email: 'mailto:sport@the42.ie',
         facebook: 'https://www.facebook.com/the42.ie',
         twitter: 'https://twitter.com/the42_ie',
         instagram: 'https://www.instagram.com/the42.ie',
@@ -2819,7 +2819,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'Cúrsaí Reatha',
       ],
       socials: {
-        email: 'eolas@tuairisc.ie',
+        email: 'mailto:eolas@tuairisc.ie',
         facebook: 'https://www.facebook.com/tuairisc.ie',
         twitter: 'https://twitter.com/tuairiscnuacht',
       },
@@ -3140,7 +3140,6 @@ export const INNewsSources = new Map<string, NewsSource>([
         'World',
       ],
       socials: {
-        email: '',
         facebook: 'https://www.facebook.com/Asian-Age-514897795345965/',
         twitter: 'https://twitter.com/theasianagenews',
       },
@@ -3764,7 +3763,7 @@ export const NZNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
       tags: ['WairarapaTimesAge', 'WairarapaNews', 'LocalNews', 'NewZealand'],
       socials: {
-        email: 'news@age.co.nz',
+        email: 'mailto:news@age.co.nz',
         facebook: 'https://www.facebook.com/WairarapaTimesAge/',
         twitter: 'https://twitter.com/WairarapaTA',
         instagram: 'https://www.instagram.com/wairarapatimesage/',
@@ -3779,9 +3778,20 @@ export const NZNewsSources = new Map<string, NewsSource>([
       name: 'Whanganui Chronicle',
       url: 'https://www.nzherald.co.nz/whanganui-chronicle/',
       est: 1856,
-      about: 'Local and regional news from the Whanganui region.',
+      about:
+        'The Whanganui Chronicle is a trusted source of local and regional news from the Whanganui region in New Zealand. It covers a wide range of topics, including community events, local government, business, sports, entertainment, and more. With its dedicated team of journalists, the Whanganui Chronicle keeps residents informed about the latest happenings and developments in their region, highlighting the stories that matter most to the community.',
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
+      tags: ['WhanganuiChronicle', 'WhanganuiNews', 'LocalNews', 'NewZealand'],
+      socials: {
+        video: 'https://www.nzherald.co.nz/whanganui-chronicle/video/',
+        email: 'mailto:news@whanganuichronicle.co.nz',
+        facebook: 'https://www.facebook.com/WhanganuiChronicle/',
+        twitter: 'https://twitter.com/WhangaChron',
+        instagram: 'https://www.instagram.com/whanganuichronicle/',
+      },
+      headerBG: '#084A7A',
+      primaryColor: '#ecac0d',
     },
   ],
   [
@@ -3805,7 +3815,7 @@ export const NZNewsSources = new Map<string, NewsSource>([
       ],
       socials: {
         video: 'https://www.nzherald.co.nz/rotorua-daily-post/video/',
-        email: 'news@dailypost.co.nz',
+        email: 'mailto:news@dailypost.co.nz',
         facebook: 'https://www.facebook.com/RotoruaDailyPost',
         twitter: 'https://twitter.com/TheDailyPost',
         instagram: 'https://www.instagram.com/rotoruadailypost/',
@@ -3860,7 +3870,7 @@ export const OZNewsSources = new Map<string, NewsSource>([
         'MaritimeLogistics',
       ],
       socials: {
-        email: 'james.hayman@thedcn.com.au',
+        email: 'mailto:james.hayman@thedcn.com.au',
         facebook: 'https://www.facebook.com/thedcn.com.au/',
         twitter: 'https://twitter.com/DCN_Editor',
         instagram: 'https://www.instagram.com/dailycargonews/?hl=en',
@@ -4040,7 +4050,6 @@ export const USNewsSources = new Map<string, NewsSource>([
         'SouthernCaliforniaNews',
       ],
       socials: {
-        email: '',
         podcast: 'https://www.latimes.com/podcasts',
         video: 'https://www.latimes.com/video',
         twitter: 'https://twitter.com/latimes',
@@ -4245,7 +4254,7 @@ export const USNewsSources = new Map<string, NewsSource>([
         'Lifestyle',
       ],
       socials: {
-        email: 'web@newsday.com',
+        email: 'mailto:web@newsday.com',
         facebook: 'https://www.newsday.com/facebook',
         twitter: 'https://www.newsday.com/twitter',
         instagram: 'https://www.instagram.com/newsday',
@@ -4337,7 +4346,6 @@ export const USNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
       tags: ['CNN', 'News', 'BreakingNews', 'USNews', 'WorldNews'],
       socials: {
-        email: '',
         audio: 'https://edition.cnn.com/audio',
         video: 'https://edition.cnn.com/video',
         facebook: 'https://facebook.com/CNN',
@@ -4481,7 +4489,7 @@ export const USNewsSources = new Map<string, NewsSource>([
         'NortheastOhio',
       ],
       socials: {
-        email: 'feedback@cleveland.com',
+        email: 'mailto:feedback@cleveland.com',
         twitter: 'https://twitter.com/clevelanddotcom',
         pinterest: 'https://www.pinterest.com/clevelanddotcom/',
         facebook: 'https://www.facebook.com/pages/clevelandcom/48573742500',
@@ -4546,7 +4554,6 @@ export const USNewsSources = new Map<string, NewsSource>([
         'Entertainment',
       ],
       socials: {
-        email: 'mailto:',
         facebook: 'https://www.facebook.com/detroitfreepress/',
         twitter: 'https://twitter.com/freep',
         instagram: 'https://www.instagram.com/detroitfreepress/',
@@ -4641,7 +4648,7 @@ export const USNewsSources = new Map<string, NewsSource>([
       ],
       socials: {
         podcast: 'https://www.instagram.com/detroitfreepress/',
-        email: 'feedback@sfchronicle.com',
+        email: 'mailto:feedback@sfchronicle.com',
         facebook: 'https://www.facebook.com/SFChronicle/',
         twitter: 'https://twitter.com/sfchronicle',
         instagram: 'https://www.instagram.com/sfchronicle/',
