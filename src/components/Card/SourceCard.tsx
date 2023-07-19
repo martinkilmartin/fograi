@@ -13,11 +13,12 @@ import Image from 'next/image';
 import { flags } from '@constants/FLAGS';
 
 type Props = {
+  idx: number;
   k: string;
   source?: NewsSource;
 };
 
-const SourceCard = ({ k, source }: Props): JSX.Element => {
+const SourceCard = ({ idx, k, source }: Props): JSX.Element => {
   const [suffix, setSuffix] = useState<string>('svg');
   const { theme } = useTheme();
   const country = k.substring(0, 2).toLowerCase();
@@ -30,6 +31,9 @@ const SourceCard = ({ k, source }: Props): JSX.Element => {
         }}
       >
         <Row justify="space-between" align="center">
+          <Text size={18} weight="bold">
+            {'#' + idx}
+          </Text>
           <Badge
             isSquared
             css={{ backgroundColor: source?.primaryColor }}
