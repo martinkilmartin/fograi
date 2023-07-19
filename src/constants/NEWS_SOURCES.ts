@@ -3668,9 +3668,19 @@ export const NZNewsSources = new Map<string, NewsSource>([
       url: 'https://www.nzherald.co.nz/hawkes-bay-today',
       est: 1999,
       about:
-        'Latest Napier, Hasting and Hawkes Bay news including local news, business, sport, lifestyle, entertainment and more.',
+        "Hawke's Bay Today is a leading source of news and information for the Napier, Hastings, and Hawke's Bay region in New Zealand. It provides comprehensive coverage of local news, business, sports, lifestyle, entertainment, and more. With its team of dedicated journalists, Hawke's Bay Today keeps residents updated on the latest happenings, events, and developments in their community, delivering timely and relevant news that matters to the people of Hawke's Bay.",
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
+      tags: ['HawkesBayToday', 'HawkesBayNews', 'LocalNews', 'NewZealand'],
+      socials: {
+        video: 'https://www.nzherald.co.nz/hawkes-bay-today/video/',
+        email: '',
+        facebook: 'https://www.facebook.com/HawkesBayToday',
+        twitter: 'https://twitter.com/HawkesBayToday',
+        instagram: 'https://www.instagram.com/hawkesbaytoday/',
+      },
+      headerBG: '#0e76bc',
+      primaryColor: '#ecac0d;',
     },
   ],
   [
@@ -3734,9 +3744,17 @@ export const NZNewsSources = new Map<string, NewsSource>([
       url: 'https://www.nzherald.co.nz/northern-advocate',
       est: 1902,
       about:
-        'Local and regional news from the Northland region, including Whangarei, far north and Kaipara.',
+        'The Northern Advocate is a trusted source of local and regional news from the Northland region in New Zealand. With a focus on areas such as Whangarei, far north, and Kaipara, it provides comprehensive coverage of news, events, and developments that are of significance to the communities in Northland. From breaking news to in-depth features, The Northern Advocate keeps its readers informed and engaged with the latest happenings in the region.',
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
+      tags: ['TheNorthernAdvocate', 'NorthlandNews', 'LocalNews', 'NewZealand'],
+      socials: {
+        facebook: 'https://www.facebook.com/NorthernAdvocate',
+        twitter: 'https://twitter.com/northernadvocat',
+        instagram: 'https://www.instagram.com/northernadvocate/',
+      },
+      headerBG: '#808285',
+      primaryColor: '#ecac0d',
     },
   ],
   [
@@ -3832,9 +3850,19 @@ export const NZNewsSources = new Map<string, NewsSource>([
       url: 'https://www.greystar.co.nz/',
       est: 1866,
       about:
-        'Daily evening (Monday-Saturday) newspaper circulating throughout the West Coast.',
+        'The Greymouth Star is a daily evening newspaper that circulates throughout the West Coast region of New Zealand. It has been a trusted source of news, information, and stories that are relevant to the communities in the West Coast area for generations. The Greymouth Star provides comprehensive coverage of local news, events, sports, and more, keeping its readers up-to-date with the latest happenings in the region.',
       emos: ['📰', '🇳🇿'],
       langs: ['en'],
+      tags: ['GreymouthStar', 'WestCoastNews', 'LocalNews', 'NewZealand'],
+      socials: {
+        video: 'https://www.greystar.co.nz/category/video/',
+        email: 'mailto:office@greystar.co.nz',
+        facebook: 'https://www.facebook.com/Greymouth-Star-242269589146590/',
+        instagram: 'https://www.instagram.com/greymouthstar/',
+        twitter: 'https://twitter.com/greymouthstar',
+      },
+      headerBG: '#fff',
+      primaryColor: '#0096ED',
     },
   ],
 ]);
@@ -3847,9 +3875,30 @@ export const OZNewsSources = new Map<string, NewsSource>([
       url: 'https://www.afr.com/',
       est: 1951,
       about:
-        'Reports the latest news from business, finance, investment and politics, updated in real time. Independent, award-winning journalism. Essential reading for the business and investor community.',
+        'The Australian Financial Review (AFR) is a leading source of news and analysis on business, finance, investment, and politics in Australia. It has built a strong reputation for providing independent, award-winning journalism that is essential reading for the business and investor community. With a focus on real-time reporting, the AFR delivers timely and insightful coverage of the latest news, trends, and developments shaping the Australian economy.',
       emos: ['📰', '🇦🇺'],
       langs: ['en'],
+      tags: [
+        'AustralianFinancialReview',
+        'BusinessNews',
+        'Finance',
+        'Investment',
+        'Politics',
+        'Australia',
+      ],
+      socials: {
+        twitter: 'https://twitter.com/FinancialReview',
+        instagram: 'https://www.instagram.com/financialreview/',
+        linkedin: 'http://www.linkedin.com/company/1628885',
+        facebook: 'https://www.facebook.com/financialreview',
+        youtube: 'https://www.youtube.com/@FinancialReview',
+        apple:
+          'https://apps.apple.com/au/app/the-australian-financial-review/id524599864',
+        android:
+          'https://play.google.com/store/apps/details?id=com.fairfaxmedia.ink.metro.afr',
+      },
+      headerBG: '#fff',
+      primaryColor: '#0f6cc9',
     },
   ],
   [
