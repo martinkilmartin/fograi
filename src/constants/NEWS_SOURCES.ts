@@ -3282,9 +3282,27 @@ export const INNewsSources = new Map<string, NewsSource>([
       url: 'https://www.gujaratsamachar.com/',
       est: 1932,
       about:
-        'News from Ahmedabad, Baroda, Bhavnagar, Bhuj, Gandhinagar, Kheda-Anand, North Gujarat, Rajkot & Surat. Aims to cover each and every segment of the society not with standing their cast, religion, economic status and give due emphasis to all the adverse viewpoints.',
+        'ગુજરાત સમાચાર આહમદાબાદ, બરોડા, ભાવનગર, ભુજ, ગાંધીનગર, ખેડા-આણંદ, ઉત્તર ગુજરાત, રાજકોટ અને સુરતમાંથી આવતા સમાચાર પૂરી પહોંચવાનો લક્ષ્ય રાખે છે. આપેલ સમાચાર યોજનાઓને બિનસમ્મતિ માંથી ધ્યાન આપી સમાજના પ્રત્યેની તમામ વર્ગોને સમાવેશ કરી દ્વેષ તાપમાનની આપરાધિક દૃષ્ટિએ વિશેષ જોર આપવામાં આવી છે.',
       emos: ['📰', '🇮🇳'],
       langs: ['gu'],
+      tags: [
+        'ગુજરાતસમાચાર',
+        'ગુજરાતનામાંસમાચાર',
+        'સ્થાનિકસમાચાર',
+        'સમાજ',
+        'અપડેટેડસમાચાર',
+      ],
+      socials: {
+        email: 'mailto:gs.adrec@gmail.com',
+        facebook: 'https://www.facebook.com/gujarat.samachar.news',
+        instagram: 'https://www.instagram.com/gujaratsamacharofficial/',
+        youtube: 'https://www.youtube.com/@gujarat_samachar',
+        twitter: 'https://twitter.com/gujratsamachar',
+        linkedin: 'https://www.linkedin.com/company/gujaratsamachar/',
+        telegram: 'https://t.me/gujaratsamacharofficial',
+      },
+      headerBG: '#fff',
+      primaryColor: '#e31e25',
     },
   ],
   [
