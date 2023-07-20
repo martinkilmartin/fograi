@@ -2221,15 +2221,6 @@ export const IENewsSources = new Map<string, NewsSource>([
     },
   ],
   [
-    'IE_RTE',
-    {
-      name: 'RTÉ',
-      url: 'https://www.rte.ie/',
-      est: 1926,
-      emos: ['📺', '🇮🇪'],
-    },
-  ],
-  [
     'IE_SNNS',
     {
       name: 'Shannonside FM',
@@ -3002,6 +2993,38 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.womansway.ie/',
       est: 1963,
       emos: ['📰', '👭'],
+    },
+  ],
+  [
+    'IE_RTE',
+    {
+      name: 'RTÉ',
+      url: 'https://www.rte.ie/',
+      est: 1966,
+      about:
+        "RTÉ is Ireland's national public service media organization. It provides a wide range of news, entertainment, and educational content through television, radio, and online platforms. With a commitment to serving the Irish public, RTÉ plays a vital role in informing, entertaining, and connecting the people of Ireland.",
+      emos: ['📺', '📻', '🇮🇪'],
+      langs: ['en'],
+      tags: [
+        'RTÉ',
+        'IrishNews',
+        'PublicBroadcasting',
+        'Entertainment',
+        'Sports',
+        'Culture',
+        'Education',
+      ],
+      socials: {
+        video: 'https://www.rte.ie/player/',
+        email: 'info@rte.ie',
+        twitter: 'https://twitter.com/rte',
+        facebook: 'https://www.facebook.com/ExploreRTE/',
+        instagram: 'https://www.instagram.com/explorerte/',
+        linkedin: 'https://linkedin.com/company/rte/',
+        youtube: 'https://www.youtube.com/user/rte',
+      },
+      headerBG: '#fff',
+      primaryColor: '#00a7b3',
     },
   ],
 ]);
