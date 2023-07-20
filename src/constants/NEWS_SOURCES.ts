@@ -2520,6 +2520,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       about:
         'Not-for-profit news outlet covering local stories affecting communities in Ireland. Contributors come from all over Ireland and are hobbyist and professional journalists, chronicling stories from all four corners of the island',
       emos: ['💻', '🇮🇪'],
+      logoWidth: 258,
+      logoHeight: 77,
+      headerBG: '#141618',
+      primaryColor: '#15141A',
     },
   ],
   [
