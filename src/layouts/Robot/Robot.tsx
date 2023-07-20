@@ -39,6 +39,10 @@ const Robot = ({ title }: Props): JSX.Element => (
       <b>fógraí-bot</b> does not index or capture the main content of a news
       article.
     </Text>
+    <Text>
+      <b>fógraí-bot</b> is currently hosted in Dublin, Ireland under IP{' '}
+      <code>34.244.102.150</code>.
+    </Text>
     <Text h2>Rules</Text>
     <Text>
       <b>fógraí-bot</b> adheres to rules that it finds in robots.txt.
