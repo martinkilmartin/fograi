@@ -1685,6 +1685,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.kfmradio.com/',
       est: 2004,
       emos: ['📻', '🇮🇪'],
+      logoWidth: 73,
+      logoHeight: 80,
+      headerBG: '#faeb22',
+      primaryColor: '#faeb22;',
     },
   ],
   [
