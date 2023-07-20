@@ -15,10 +15,10 @@ export default function MyNavbar(): JSX.Element {
         <Navbar.Content>
           <Link href="/">
             <Image
-              src="/img/OnlyHeadlines.svg"
-              alt="Only Headlines logo"
-              width={400}
-              height={100}
+              src="/img/nooze.svg"
+              alt="Nooze logo"
+              width={200}
+              height={80}
             />
           </Link>
         </Navbar.Content>
