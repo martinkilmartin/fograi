@@ -707,6 +707,8 @@ export const CANewsSources = new Map<string, NewsSource>([
         'Toronto street magazine for alternative news, entertainment, events, and food.',
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_NWMG.svg',
+      headerBG: '#011543',
+      primaryColor: '#011543',
     },
   ],
 ]);

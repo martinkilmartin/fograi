@@ -1,6 +1,6 @@
-export const APP_TITLE = 'fógraí';
-export const BASE_URL = 'fogr.ai';
-export const BRAND = 'fógraí';
+export const APP_TITLE = 'NOOZE';
+export const BASE_URL = 'nooze.news';
+export const BRAND = 'NOOZE';
 export const TAG_LINE = '🇮🇪';
 export const HERO_IMG = '@img/bg/classifieds-browse.webp';
 export const BOT_TITLE = 'fógraí-bot';
