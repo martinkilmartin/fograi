@@ -1327,6 +1327,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       est: 1989,
       about: "Wicklow's Radio Station.",
       emos: ['📻', '🇮🇪'],
+      logoWidth: 185,
+      logoHeight: 138,
     },
   ],
   [
@@ -1506,6 +1508,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.highlandradio.com/',
       est: 1990,
       emos: ['📻', '🇮🇪'],
+      headerBG: '#A6228C',
     },
   ],
   [
@@ -1917,8 +1920,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         'LMFM is a popular Irish radio station that has been broadcasting since 1989. With a focus on providing quality programming to the local community, LMFM covers a wide range of topics, including news, sports, entertainment, and more. The station keeps listeners informed and entertained with a mix of music, talk shows, interviews, and live events. LMFM is dedicated to serving the needs and interests of its audience, fostering a sense of community and providing a platform for local voices.',
       emos: ['📻', '🇮🇪'],
       langs: ['en'],
-      logoWidth: 200,
-      logoHeight: 60,
+      logoWidth: 180,
+      logoHeight: 145,
       tags: [
         'LMFM',
         'IrishRadio',
@@ -2014,6 +2017,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.midlands103.com/',
       est: 1990,
       emos: ['📻', '🇮🇪'],
+      logoWidth: 180,
+      logoHeight: 130,
+      headerBG: '#0E7C40',
+      primaryColor: '#0b7a3e',
     },
   ],
   [
@@ -2254,6 +2261,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.southeastradio.ie/',
       est: 1989,
       emos: ['📻', '🇮🇪'],
+      logoWidth: 161,
+      logoHeight: 110,
     },
   ],
   [
