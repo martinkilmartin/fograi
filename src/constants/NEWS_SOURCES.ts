@@ -3217,7 +3217,7 @@ export const IENewsSources = new Map<string, NewsSource>([
     {
       name: 'Éire Bheo',
       url: 'https://www.eirebheo.ie/',
-      est: 0,
+      est: 2022,
       about:
         "Is láithreán gréasáin Éireannach é Éire Bheo atá tiomanta d'nuachta agus eolais a sheachadadh i nGaeilge na hÉireann. Mar lucht taca bródúil don chultúr agus don teanga, tá sé mar aidhm ag Éire Bheo an oidhreacht shaibhir na hÉireann a chur chun cinn agus a chaomhnú trína chuid ábhar. Ag díriú ar imeachtaí reatha, cultúr, agus pobal, tá Éire Bheo ag streachailt chun a bheith mar fhoinse d'fhoghlaimeoirí agus d'fhoghlaimeoirí Gaeilge, ag soláthar léargas uathúil agus fíorúil ar ábhar éagsúil.",
       emos: ['🌐', '🇮🇪'],
