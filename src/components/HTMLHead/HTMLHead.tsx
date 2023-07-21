@@ -1,18 +1,18 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import {
   BASE_URL,
   BRAND,
   COLOR_MS_TILE,
   COLOR_SAFARI_PIN,
   COLOR_THEME,
-} from '@constants/CONTENT'
+} from '@constants/CONTENT';
 
 type Props = {
-  appName?: string
-  title: string
-  description: string
-  twitterCreator?: string
-}
+  appName?: string;
+  title: string;
+  description: string;
+  twitterCreator?: string;
+};
 
 const HTMLHead = ({
   title,
@@ -21,7 +21,9 @@ const HTMLHead = ({
   twitterCreator,
 }: Props): JSX.Element => (
   <Head>
-    <title>{title}</title>
+    <title>
+      {description}
+    </title>
     <meta charSet="utf-8" />
     <meta
       name="viewport"
@@ -71,6 +73,6 @@ const HTMLHead = ({
     />
     <link rel="shortcut icon" href="/favicon.ico" />
   </Head>
-)
+);
 
-export default HTMLHead
+export default HTMLHead;

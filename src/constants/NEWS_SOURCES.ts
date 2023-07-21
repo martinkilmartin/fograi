@@ -562,6 +562,8 @@ export const CANewsSources = new Map<string, NewsSource>([
         'Producing content that matters to the diverse community of Jews in Canada, through articles, podcasts and events.',
       emos: ['📰', '🇨🇦'],
       logo: '/img/ns/CA_TCJN.png',
+      logoWidth: 415,
+      logoHeight: 36,
     },
   ],
   [
@@ -609,6 +611,8 @@ export const CANewsSources = new Map<string, NewsSource>([
         'Bejsment to cyfrowa platforma Wiadomości, wybitnej polskiej gazety wydawanej w Ontario, w Kanadzie. Dzięki silnej obecności w Internecie, pomaga ona diaspory polskiej w Kanadzie pozostać w kontakcie ze swoimi korzeniami i informować o swoim nowym domu. Bejsment pokrywa szeroki zakres tematów, od wiadomości i wydarzeń w polskiej społeczności, po aktualności z Polski i sprawy międzynarodowe.',
       emos: ['📰', '🇨🇦', '🇵🇱'],
       logo: '/img/ns/CA_BJST.png',
+      logoWidth: 225,
+      logoHeight: 45,
       langs: ['pl'],
       tags: [
         'Bejsment',
@@ -1013,6 +1017,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         "Clare FM has provides the people of County Clare with a comprehensive radio service, reflecting the unique identities of their diverse communities. The station offers a rich array of content that mirrors the interests, concerns, and spirit of Clare's residents.",
       emos: ['📻', '🇮🇪'],
       langs: ['en'],
+      logoWidth: 280,
+      logoHeight: 96,
       tags: [
         'ClareFM',
         'LocalRadio',
@@ -1072,6 +1078,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         "Classic Hits is Ireland's premier radio station for the best of 80's and 90's music. As the go-to platform for fans of these iconic decades, it offers a rich assortment of music that transcends generations.",
       emos: ['📻', '🎭'],
       langs: ['en'],
+      logoWidth: 177,
+      logoHeight: 100,
       tags: [
         'ClassicHits',
         'RadioStation',
@@ -1194,6 +1202,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       est: 2005,
       about: 'Free newspaper bringing everything needed to know in Cork.',
       emos: ['💻', '🇮🇪'],
+      logoWidth: 212,
+      logoHeight: 100,
+      headerBG: '#fff',
+      primaryColor: '#D20019',
     },
   ],
   [
@@ -1203,6 +1215,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://redfm.ie',
       est: 2002,
       emos: ['📻', '🇮🇪'],
+      logoWidth: 144,
+      logoHeight: 100,
+      headerBG: '#d71921',
+      primaryColor: '#d71921',
     },
   ],
   [
@@ -1288,6 +1304,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       about:
         'Reporting the news from Dublin City & County. International news headlines, articles from the business world and a major section on European news supplement the local and national roundup.',
       emos: ['📰', '🇮🇪'],
+      logoWidth: 596,
+      logoHeight: 100,
     },
   ],
   [
@@ -1299,6 +1317,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       about:
         "Three weekly titles serving Dublin: Northside People East, Northside People West & Southside People. Distributed throughout Dublin's suburbs to homes, pick-up points and businesses.",
       emos: ['💻', '🇮🇪'],
+      logoWidth: 302,
+      logoHeight: 100,
     },
   ],
   [
@@ -1342,6 +1362,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       about:
         "Serving the people of Cork by faithfully, factually and fairly reporting the daily news and standing up for the citizens. Dedicated to the interests of the people of Cork City and County. Extensive coverage in stories and pictures of the good news and the bad news as it affects Cork people. Argues and advocates Cork's case on every issue.",
       emos: ['📰', '🇮🇪'],
+      logoWidth: 300,
+      logoHeight: 58,
     },
   ],
   [
@@ -1353,6 +1375,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       about:
         'Engineers Ireland aims to support members at every career, from students and apprentices to qualified graduates and experienced engineers.',
       emos: ['📰', '🧑‍💻'],
+      logoWidth: 136,
+      logoHeight: 49,
+      headerBG: '#002542',
+      primaryColor: '#004040',
     },
   ],
   [
@@ -1402,6 +1428,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       about:
         "Giving the inside track on all of Ireland's top news stories. All the latest news from Ireland and the world. News With A Little Extra.",
       emos: ['💻', '🇮🇪'],
+      logoWidth: 409,
+      logoHeight: 100,
     },
   ],
   [
@@ -1420,6 +1448,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://fleet.ie/',
       est: 2003,
       emos: ['💻', '🚛'],
+      logoWidth: 300,
+      logoHeight: 104,
     },
   ],
   [
@@ -1447,6 +1477,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://galwaybayfm.ie/',
       est: 1989,
       emos: ['📻', '🇮🇪'],
+      logoWidth: 272,
+      logoHeight: 90,
+      headerBG: '#073045',
+      primaryColor: '#FFC70F',
     },
   ],
   [
@@ -1520,6 +1554,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.hotpress.com/',
       est: 1977,
       emos: ['📰', '🎭'],
+      logoWidth: 124,
+      logoHeight: 66,
     },
   ],
   [
@@ -1556,6 +1592,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.iradio.ie/',
       est: 2011,
       emos: ['📻', '🇮🇪'],
+      logoWidth: 87,
+      logoHeight: 100,
     },
   ],
   [
@@ -1574,6 +1612,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.irishcentral.com/',
       est: 2009,
       emos: ['💻', '🇮🇪'],
+      logoWidth: 450,
+      logoHeight: 90,
     },
   ],
   [
@@ -1610,6 +1650,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         'Through the years, the Irish Farmers Journal has remained committed to its mission of serving the Irish farming community. It continues to strive for excellence in journalism, providing high-quality, relevant, and timely content. Its rich history and dedication to its readers make it a vital resource within the agricultural industry.',
       ],
       emos: ['📰', '🌱'],
+      logoWidth: 236,
+      logoHeight: 92,
       langs: ['en'],
       tags: [
         'IrishFarmersJournal',
@@ -1678,6 +1720,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://kclr96fm.com/',
       est: 2004,
       emos: ['📻', '🇮🇪'],
+      logoWidth: 144,
+      logoHeight: 45,
+      headerBG: '#005495',
+      primaryColor: '#00a2e1',
     },
   ],
   [
@@ -1739,6 +1785,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         'Kilkenny People is a long-standing Irish newspaper with a rich history and deep-rooted connection to the local community. Kilkenny People provides comprehensive coverage of news, events, and stories that matter to the people of Kilkenny. From local news and politics to sports, culture, and lifestyle, Kilkenny People aims to keep its readers informed and engaged with the latest happenings in the region. With a commitment to quality journalism and a strong focus on community-centric reporting, Kilkenny People remains a trusted source of news and information for the people of Kilkenny.',
       emos: ['📰', '🇮🇪'],
       langs: ['en'],
+      logoWidth: 260,
+      logoHeight: 55,
       tags: [
         'KilkennyPeople',
         'IrishNews',
@@ -1765,6 +1813,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.killarneytoday.com/',
       est: 2014,
       emos: ['💻', '🇮🇪'],
+      logoWidth: 257,
+      logoHeight: 100,
     },
   ],
   [
@@ -1795,6 +1845,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         "Leinster Express, a regional newspaper, keeps the residents of Leinster informed about local events, sports, business news and more. Its extensive coverage spans news that affects the local community directly, keeping them abreast with the latest developments in their vicinity. A reliable source of news, it's a trusted companion to the people of Leinster.",
       emos: ['📰', '🇮🇪'],
       langs: ['en'],
+      logoWidth: 311,
+      logoHeight: 100,
       tags: [
         'LeinsterExpress',
         'LocalNews',
@@ -1828,6 +1880,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.leitrimobserver.ie/',
       est: 1889,
       emos: ['📰', '🇮🇪'],
+      logoWidth: 640,
+      logoHeight: 82,
     },
   ],
   [
@@ -1869,6 +1923,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         'Limerick Post is a reputable Irish newspaper that has been providing news, information, and insights to the local community since 1986. With a focus on Limerick and its surrounding areas, the newspaper delivers comprehensive coverage of local news, events, sports, business, entertainment, and more. Limerick Post serves as a reliable source of information, keeping the community informed about important happenings and offering a platform for discussions and debates. It plays a crucial role in connecting the people of Limerick and fostering a sense of community.',
       emos: ['📰', '🇮🇪'],
       langs: ['en'],
+      logoWidth: 201,
+      logoHeight: 100,
       tags: [
         'LimerickPost',
         'IrishNews',
@@ -2036,6 +2092,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://midwestradio.ie/',
       est: 1979,
       emos: ['📻', '🇮🇪'],
+      logoWidth: 234,
+      logoHeight: 96,
+      headerBG: '#000034',
+      primaryColor: '#F5B418',
     },
   ],
   [
@@ -2122,6 +2182,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         'Seirbhís nuachta Gaeilge atá ar fáil ó TG4, an stáisiún teilifíse Gaeilge náisiúnta. Soláthraíonn Nuacht TG4 nuacht iomlánra Gaeilge do dhaoine atá ag lorg eolas faoi thionscail, cúrsaí reatha agus nuashonruithe cultúrtha. Clúdach iomlánra Gaeilge le fáil i Nuacht TG4, curtha ar fáil ag foireann Nuacht TG4 atá tarraingthe de scéalaíocht agus de shaibhreas taighde.',
       emos: ['📺', '🇮🇪'],
       langs: ['ga'],
+      logoWidth: 273,
+      logoHeight: 100,
       tags: [
         'NuachtTG4',
         'Nuacht',
@@ -2195,6 +2257,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.nova.ie/',
       est: 2010,
       emos: ['📻', '🇮🇪'],
+      logoWidth: 272,
+      logoHeight: 90,
+      headerBG: '#0a2846',
+      primaryColor: '#AF1817',
     },
   ],
   [
@@ -2204,6 +2270,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.radiokerry.ie/',
       est: 1990,
       emos: ['📻', '🇮🇪'],
+      logoWidth: 140,
+      logoHeight: 127,
+      headerBG: '#113F77',
+      primaryColor: '#E1C04B',
     },
   ],
   [
@@ -2249,6 +2319,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.siliconrepublic.com/',
       est: 2001,
       emos: ['💻', '🧮'],
+      logoWidth: 552,
+      logoHeight: 50,
     },
   ],
   [
@@ -2305,6 +2377,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.sundayworld.com/',
       est: 1973,
       emos: ['📰', '🇮🇪'],
+      logoWidth: 224,
+      logoHeight: 110,
+      headerBG: '#000',
+      primaryColor: '##FF0D0D',
     },
   ],
   [
@@ -2332,6 +2408,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://avondhupress.ie/',
       est: 2001,
       emos: ['💻', '🇮🇪'],
+      logoWidth: 300,
+      logoHeight: 100,
+      headerBG: '#08192d',
+      primaryColor: '#d50b17',
     },
   ],
   [
@@ -2390,6 +2470,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.clareecho.ie/',
       est: 2017,
       emos: ['📰', '🇮🇪'],
+      logoWidth: 198,
+      logoHeight: 42,
+      headerBG: '#fff',
+      primaryColor: '#2392d0',
     },
   ],
   [
@@ -2419,6 +2503,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       about:
         'Local Sport, Entertainment, Business & Lifestyle news for Dundalk, Greenore, Louth & Leinster.',
       emos: ['📰', '🇮🇪'],
+      logoWidth: 403,
+      logoHeight: 100,
     },
   ],
   [
@@ -2430,6 +2516,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       about:
         'news, sports, entertainment, business, and lifestyle stories for County Cork and its surrounding areas',
       emos: ['💻', '🇮🇪'],
+      logoWidth: 220,
+      logoHeight: 42,
     },
   ],
   [
@@ -2441,6 +2529,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       about:
         'Up-to-date local news, sports, entertainment, business, and lifestyle stories for the Fingal region and surrounding areas, keeping readers informed and engaged with their community.',
       emos: ['💻', '🇮🇪'],
+      logoWidth: 307,
+      logoHeight: 100,
     },
   ],
   [
@@ -2541,6 +2631,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       about:
         'Latest local, business, sport, lifestyle, jobs & entertainment news from around Killarney.',
       emos: ['💻', '🇮🇪'],
+      logoWidth: 450,
+      logoHeight: 97,
+      headerBG: '#ed1c24',
+      primaryColor: '#262879',
     },
   ],
   [
@@ -2562,6 +2656,18 @@ export const IENewsSources = new Map<string, NewsSource>([
       est: 2010,
       about: 'Local news, features and sport.',
       emos: ['💻', '🇮🇪'],
+    },
+  ],
+  [
+    'IE_NEWR',
+    {
+      name: 'Newry.ie',
+      url: 'https://www.newry.ie',
+      est: 2012,
+      about: 'Local news, features and sport.',
+      emos: ['💻', '🇮🇪'],
+      logoWidth: 300,
+      logoHeight: 54,
     },
   ],
   [
@@ -2626,6 +2732,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.irishpost.com/',
       est: 1970,
       emos: ['📰', '🇮🇪'],
+      logoWidth: 360,
+      logoHeight: 65,
+      headerBG: '#004d15',
+      primaryColor: '#004d15',
     },
   ],
   [
@@ -2696,6 +2806,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.independent.ie/regionals/kerryman/',
       est: 1904,
       emos: ['📰', '🇮🇪'],
+      logoWidth: 525,
+      logoHeight: 125,
     },
   ],
   [
@@ -2705,6 +2817,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.munster-express.ie/',
       est: 1860,
       emos: ['📰', '🇮🇪'],
+      logoWidth: 438,
+      logoHeight: 63,
     },
   ],
   [
@@ -2723,6 +2837,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.independent.ie/regionals/sligochampion',
       est: 1836,
       emos: ['📰', '🇮🇪'],
+      logoWidth: 629,
+      logoHeight: 100,
     },
   ],
   [
@@ -2741,6 +2857,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.independent.ie/regionals/wexford/',
       est: 1853,
       emos: ['📰', '🇮🇪'],
+      logoWidth: 307,
+      logoHeight: 100,
     },
   ],
   [
@@ -2750,6 +2868,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.independent.ie/regionals/wicklow/',
       est: 1882,
       emos: ['📰', '🇮🇪'],
+      logoWidth: 476,
+      logoHeight: 36,
     },
   ],
   [
@@ -2933,6 +3053,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://waterford-news.ie/',
       est: 1848,
       emos: ['📰', '🇮🇪'],
+      logoWidth: 600,
+      logoHeight: 91,
     },
   ],
   [
@@ -2942,6 +3064,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.westmeathexaminer.ie/',
       est: 1882,
       emos: ['📰', '🇮🇪'],
+      logoWidth: 762,
+      logoHeight: 94,
+      headerBG: '#fff',
+      primaryColor: '#004588',
     },
   ],
   [
