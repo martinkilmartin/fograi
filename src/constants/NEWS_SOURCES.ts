@@ -1532,6 +1532,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.her.ie/',
       est: 2012,
       emos: ['💻', '👭'],
+      logoWidth: 136,
+      logoHeight: 70,
+      headerBG: '#560537',
+      primaryColor: '#FFFF82',
     },
   ],
   [
