@@ -768,6 +768,8 @@ export const IENewsSources = new Map<string, NewsSource>([
         'The Athlone Advertiser is a renowned free newspaper distributed throughout Athlone & Westmeath every Thursday. As a trusted local news source, it offers comprehensive coverage of local events, politics, sports, arts, and community happenings. The Athlone Advertiser is dedicated to providing timely and accurate reporting, fostering informed discussions, and contributing to the vibrant community spirit of Athlone and Westmeath.',
       emos: ['📰', '🇮🇪', '📍'],
       langs: ['en'],
+      logoWidth: 300,
+      logoHeight: 40,
       tags: [
         'AthloneNews',
         'LocalJournalism',
@@ -1428,8 +1430,8 @@ export const IENewsSources = new Map<string, NewsSource>([
       about:
         "Giving the inside track on all of Ireland's top news stories. All the latest news from Ireland and the world. News With A Little Extra.",
       emos: ['💻', '🇮🇪'],
-      logoWidth: 409,
-      logoHeight: 100,
+      logoWidth: 244,
+      logoHeight: 58,
     },
   ],
   [
@@ -1490,6 +1492,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.advertiser.ie/galway',
       est: 1970,
       emos: ['📰', '🇮🇪'],
+      logoWidth: 300,
+      logoHeight: 40,
+      headerBG: '#d70909',
+      primaryColor: '#d70909',
     },
   ],
   [
@@ -2014,6 +2020,13 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.longfordleader.ie/',
       est: 1897,
       emos: ['📰', '🇮🇪'],
+      logoWidth: 169,
+      logoHeight: 100,
+      socials: {
+        email: 'mailto:news@longfordleader.ie',
+        twitter: 'https://twitter.com/Longford_Leader',
+        facebook: 'https://www.facebook.com/LongfordLeader',
+      },
     },
   ],
   [
@@ -2023,6 +2036,10 @@ export const IENewsSources = new Map<string, NewsSource>([
       url: 'https://www.advertiser.ie/mayo',
       est: 1970,
       emos: ['📰', '🇮🇪'],
+      logoWidth: 300,
+      logoHeight: 40,
+      headerBG: '#d70909',
+      primaryColor: '#d70909',
     },
   ],
   [
@@ -3170,6 +3187,60 @@ export const IENewsSources = new Map<string, NewsSource>([
       },
       headerBG: '#fff',
       primaryColor: '#00a7b3',
+    },
+  ],
+  [
+    'IE_DTCH',
+    {
+      name: 'The Ditch',
+      url: 'https://www.ontheditch.com/',
+      est: 2021,
+      about:
+        'The Ditch is an Irish online platform that brings you a unique perspective on various topics, from current events and culture to technology and more. As an emerging media outlet, The Ditch aims to engage and entertain its audience through insightful content and creative storytelling. With a fresh and innovative approach, The Ditch invites you to explore a diverse range of subjects and join the conversation on the issues that matter.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+      logoWidth: 514,
+      logoHeight: 100,
+      tags: ['wereontheditch'],
+      socials: {
+        email: 'ontheditch@protonmail.com',
+        facebook: 'https://www.facebook.com/the-ditch-107969441391099',
+        twitter: 'https://twitter.com/wereontheditch',
+        rss: 'https://feedly.com/i/subscription/feed/https://www.ontheditch.com/rss/',
+      },
+      headerBG: '#fff',
+      primaryColor: '#0CD500',
+    },
+  ],
+  [
+    'IE_EBEO',
+    {
+      name: 'Éire Bheo',
+      url: 'https://www.eirebheo.ie/',
+      est: 0,
+      about:
+        "Is láithreán gréasáin Éireannach é Éire Bheo atá tiomanta d'nuachta agus eolais a sheachadadh i nGaeilge na hÉireann. Mar lucht taca bródúil don chultúr agus don teanga, tá sé mar aidhm ag Éire Bheo an oidhreacht shaibhir na hÉireann a chur chun cinn agus a chaomhnú trína chuid ábhar. Ag díriú ar imeachtaí reatha, cultúr, agus pobal, tá Éire Bheo ag streachailt chun a bheith mar fhoinse d'fhoghlaimeoirí agus d'fhoghlaimeoirí Gaeilge, ag soláthar léargas uathúil agus fíorúil ar ábhar éagsúil.",
+      emos: ['🌐', '🇮🇪'],
+      langs: ['ga'],
+      logoWidth: 100,
+      logoHeight: 100,
+      tags: [
+        'EireBheo',
+        'Gaeilge',
+        'Cultúr',
+        'Nuachtlitir',
+        'Foghlaimeoirí',
+        'Pobal na hÉireann',
+      ],
+      socials: {
+        email: 'news@eirebheo.ie',
+        facebook: 'https://www.facebook.com/EireBheo/',
+        instagram: 'https://www.instagram.com/EireBheo/',
+        twitter: 'https://twitter.com/EireBheo',
+        rss: 'https://www.eirebheo.ie/sezioni/2851/rss',
+      },
+      headerBG: '#fff',
+      primaryColor: '#333',
     },
   ],
 ]);
