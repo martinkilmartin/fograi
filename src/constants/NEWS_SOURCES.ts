@@ -1535,7 +1535,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       logoWidth: 136,
       logoHeight: 70,
       headerBG: '#560537',
-      primaryColor: '#FFFF82',
+      primaryColor: '#560537',
     },
   ],
   [
