@@ -4529,7 +4529,7 @@ export const OZNewsSources = new Map<string, NewsSource>([
       url: 'https://alicespringsnews.com.au/',
       est: 1994,
       about:
-        'Alice Springs News is a trusted source of news and information that focuses on events, stories, and developments in and around Alice Springs, Australia. Since its establishment in 1994, Alice Springs News has been committed to providing accurate and up-to-date reporting that matters to the local community. Covering a diverse range of topics, including local news, culture, politics, and more, the publication strives to keep its readers well-informed and engaged.',
+        'Alice Springs News is a trusted source of news and information that focuses on events, stories, and developments in and around Alice Springs, Australia. Alice Springs News is committed to providing accurate and up-to-date reporting that matters to the local community. Covering a diverse range of topics, including local news, culture, politics, and more, the publication strives to keep its readers well-informed and engaged.',
       emos: ['📰', '🇦🇺'],
       langs: ['en'],
       logoWidth: 236,
