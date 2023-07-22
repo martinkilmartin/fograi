@@ -4548,6 +4548,137 @@ export const OZNewsSources = new Map<string, NewsSource>([
       primaryColor: '#EE3C2D',
     },
   ],
+  [
+    'OZ_ESS',
+    {
+      name: 'The Eastern Shore Sun',
+      url: 'https://www.easternshoresun.com.au/',
+      est: 2019,
+      about:
+        'The Eastern Shore Sun is a community newspaper that serves the vibrant Eastern Shore region of Tasmanian. Committed to delivering local news, events, and stories that matter to the residents, The Eastern Shore Sun strives to keep its readers informed and engaged in the happenings of their community. Since its establishment, the publication has become a reliable source for the latest updates, features, and highlights that showcase the rich culture and spirit of the Eastern Shore area.',
+      emos: ['📰', '🇦🇺'],
+      langs: ['en'],
+      logoWidth: 100,
+      logoHeight: 100,
+      tags: [
+        'EasternShoreSun',
+        'EasternShore',
+        'LocalNews',
+        'Community',
+        'Events',
+      ],
+      socials: {
+        email: 'mailto:editorial@easternshoresun.com.au',
+        facebook: 'https://www.facebook.com/easternshoresun/',
+        instagram: 'https://www.instagram.com/eastern_shore_sun/',
+      },
+      headerBG: '#fff',
+      primaryColor: '#EA9635',
+    },
+  ],
+  [
+    'OZ_GYGZ',
+    {
+      name: 'The Glenorchy Gazette',
+      url: 'https://www.glenorchygazette.com.au/',
+      est: 2019,
+      about: '',
+      emos: ['📰', '🇦🇺'],
+      langs: ['en'],
+      logoWidth: 300,
+      logoHeight: 76,
+      tags: [''],
+      socials: {
+        email: 'mailto:editorial@glenorchygazette.com.au',
+        facebook: 'http://www.facebook.com/glenorchygazette',
+        instagram: 'https://www.instagram.com/glenorchy_gazette/',
+      },
+      headerBG: '#fff',
+      primaryColor: '#1E73BE',
+    },
+  ],
+  [
+    'OZ_CHC',
+    {
+      name: 'Circular Head Chronicle',
+      url: 'https://www.chchronicle.com.au/',
+      est: 1906,
+      about:
+        'Circular Head Chronicle is a trusted community newspaper based in Tasmania, Australia. It is committed to providing reliable news and information to the residents of the Circular Head region. With a focus on local stories, events, and issues that matter most to the community, the Circular Head Chronicle strives to keep its readers well-informed and engaged in the happenings of their area. As a long-standing publication, it has become an integral part of the community, reflecting the unique culture and spirit of Circular Head.',
+      emos: ['📰', '🇦🇺'],
+      langs: ['en'],
+      logoWidth: 342,
+      logoHeight: 90,
+      tags: [
+        'CircularHeadChronicle',
+        'CircularHead',
+        'LocalNews',
+        'Community',
+        'Tasmania',
+      ],
+      socials: {
+        facebook: 'https://www.facebook.com/CH.Chronicle',
+        instagram: 'https://www.instagram.com/chchronicle/',
+      },
+      headerBG: '#fff',
+      primaryColor: '#004a88',
+    },
+  ],
+  [
+    'OZ_KILC',
+    {
+      name: 'King Is Land Courier',
+      url: 'https://kingislandcourier.com/',
+      est: 1983,
+      about:
+        "King Island Courier is a trusted source of news and information serving the community. With a focus on providing local news, events, and stories that matter most to the people of King Island, it aims to keep its readers well-informed and connected. As a dedicated community newspaper, King Island Courier reflects the unique identity and spirit of King Island, Tasmania. Whether it's covering local events, issues, or achievements, the newspaper plays a vital role in fostering a sense of community and unity among its readers.",
+      emos: ['📰', '🇦🇺'],
+      langs: ['en'],
+      logoWidth: 398,
+      logoHeight: 100,
+      tags: [
+        'KingIslandCourier',
+        'KingIsland',
+        'LocalNews',
+        'Community',
+        'Tasmania',
+      ],
+      socials: {
+        facebook: 'https://www.facebook.com/KingIslandCourier/',
+        instagram: 'https://www.instagram.com/kingislandcourier/',
+      },
+      headerBG: '#fff',
+      primaryColor: '#FFCA05',
+    },
+  ],
+  [
+    'OZ_HOBO',
+    {
+      name: 'The Hobart Observerr',
+      url: 'https://kingislandcourier.com/',
+      est: 2019,
+      about:
+        'The Hobart Observer is a leading newspaper dedicated to providing comprehensive news and insights to the community of Hobart, Tasmania. With a commitment to delivering reliable, up-to-date, and in-depth reporting, The Hobart Observer covers a wide range of topics, including local news, events, politics, business, sports, and more. As a trusted source of information, it aims to keep the residents of Hobart well-informed and engaged with the issues that matter most to them. Through its coverage, The Hobart Observer plays an integral role in fostering a sense of community and connection among its readers.',
+      emos: ['📰', '🇦🇺'],
+      langs: ['en'],
+      logoWidth: 300,
+      logoHeight: 77,
+      tags: [
+        'TheHobartObserver',
+        'Hobart',
+        'Tasmania',
+        'LocalNews',
+        'Community',
+        'Tasmania',
+      ],
+      socials: {
+        facebook: 'https://www.facebook.com/hobartobserver/',
+        instagram: 'https://www.instagram.com/hobart_observer/',
+      },
+      headerBG: '#fff',
+      primaryColor: '#8224E3',
+    },
+  ],
 ]);
 
 export const USNewsSources = new Map<string, NewsSource>([
