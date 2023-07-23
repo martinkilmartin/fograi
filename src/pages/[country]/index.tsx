@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { useInfiniteQuery } from 'react-query';
+import { InfiniteData, useInfiniteQuery } from 'react-query';
 import { useMediaQuery } from 'react-responsive';
 import { useRouter } from 'next/router';
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
@@ -8,8 +8,13 @@ import { getHeadlinesCountry } from '@lib/getHeadlines';
 import { HeadlineList } from '@components/Headlines';
 import { Headline } from '../../types';
 import { Countries } from 'src/types/countries';
+import { GetServerSideProps } from 'next';
 
-const HomePage: React.FC = () => {
+interface HomePageProps {
+  initialData: InfiniteData<Headline[]>;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
   const router = useRouter();
   const { country } = router.query;
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
@@ -33,7 +38,8 @@ const HomePage: React.FC = () => {
       {
         getNextPageParam: (lastPage, _pages) =>
           lastPage[lastPage.length - 1]?.created_at,
-        enabled: router.isReady, // this line was added
+        enabled: router.isReady,
+        initialData: initialData,
       },
     );
 
@@ -76,3 +82,17 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const country = context.query.country as Countries;
+  const initialHeadlines = await getHeadlinesCountry(null, 12, country);
+
+  return {
+    props: {
+      initialData: {
+        pages: [initialHeadlines],
+        pageParams: [null],
+      },
+    },
+  };
+};

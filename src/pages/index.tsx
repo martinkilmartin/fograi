@@ -1,13 +1,18 @@
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { Page } from '@layouts/Page';
 import React, { useEffect, useRef } from 'react';
-import { useInfiniteQuery } from 'react-query';
+import { InfiniteData, useInfiniteQuery } from 'react-query';
 import { useMediaQuery } from 'react-responsive';
 import { getHeadlines } from '@lib/getHeadlines';
 import { HeadlineList } from '../components/Headlines';
 import { Headline } from '../types';
+import { GetServerSideProps } from 'next';
 
-const HomePage: React.FC = () => {
+interface HomePageProps {
+  initialData: InfiniteData<Headline[]>;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
   const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
 
@@ -28,6 +33,7 @@ const HomePage: React.FC = () => {
       {
         getNextPageParam: (lastPage, _pages) =>
           lastPage[lastPage.length - 1]?.created_at,
+        initialData: initialData,
       },
     );
 
@@ -70,3 +76,16 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const initialHeadlines = await getHeadlines(null, 12);
+
+  return {
+    props: {
+      initialData: {
+        pages: [initialHeadlines],
+        pageParams: [null],
+      },
+    },
+  };
+};
