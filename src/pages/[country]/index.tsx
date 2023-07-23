@@ -83,9 +83,16 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
 
 export default HomePage;
 
+const isMobileUserAgent = (userAgent: string): boolean => {
+  return /mobile|android|iphone|ipad/i.test(userAgent);
+};
+
 export const getServerSideProps: GetServerSideProps = async (context) => {
+  const userAgent = context.req.headers['user-agent'] || '';
+  const isMobile = isMobileUserAgent(userAgent);
+  const limit = isMobile ? 3 : 12;
   const country = context.query.country as Countries;
-  const initialHeadlines = await getHeadlinesCountry(null, 12, country);
+  const initialHeadlines = await getHeadlinesCountry(null, limit, country);
 
   return {
     props: {

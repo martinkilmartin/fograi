@@ -77,8 +77,15 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
 
 export default HomePage;
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const initialHeadlines = await getHeadlines(null, 12);
+const isMobileUserAgent = (userAgent: string): boolean => {
+  return /mobile|android|iphone|ipad/i.test(userAgent);
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const userAgent = context.req.headers['user-agent'] || '';
+  const isMobile = isMobileUserAgent(userAgent);
+  const limit = isMobile ? 3 : 12;
+  const initialHeadlines = await getHeadlines(null, limit);
 
   return {
     props: {
