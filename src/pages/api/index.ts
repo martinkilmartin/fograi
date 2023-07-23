@@ -1,12 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { getLast24 } from '@lib/getHeadlines'
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 const HelloWorld = async (
   _request: NextApiRequest,
-  response: NextApiResponse
+  response: NextApiResponse,
 ): Promise<void> => {
-  const { data } = await getLast24();
-  response.status(200).send(JSON.stringify({ headlines: data }))
-}
+  response.status(200).send(JSON.stringify({ hello: 'World' }));
+};
 
-export default HelloWorld
+export default HelloWorld;
