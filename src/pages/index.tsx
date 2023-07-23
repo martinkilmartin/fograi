@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { useInfiniteQuery } from 'react-query';
 import { useMediaQuery } from 'react-responsive';
 import { getHeadlines } from '@lib/getHeadlines';
-import { HeadlineList } from '../components/Headlines/HeadlineList';
+import { HeadlineList } from '../components/Headlines';
 import { Headline } from '../types';
 
 const HomePage: React.FC = () => {
@@ -21,20 +21,15 @@ const HomePage: React.FC = () => {
     limit = 12;
   }
 
-  const {
-    data,
-    fetchNextPage,
-    hasNextPage,
-    isFetchingNextPage,
-    status,
-  } = useInfiniteQuery<Headline[], Error>(
-    'headlines',
-    ({ pageParam = null }) => getHeadlines(pageParam, limit),
-    {
-      getNextPageParam: (lastPage, _pages) =>
-        lastPage[lastPage.length - 1]?.created_at,
-    }
-  );
+  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
+    useInfiniteQuery<Headline[], Error>(
+      'headlines',
+      ({ pageParam = null }) => getHeadlines(pageParam, limit),
+      {
+        getNextPageParam: (lastPage, _pages) =>
+          lastPage[lastPage.length - 1]?.created_at,
+      },
+    );
 
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
@@ -45,7 +40,8 @@ const HomePage: React.FC = () => {
         hasNextPage &&
         loadMoreRef.current &&
         window.innerHeight + window.scrollY >=
-        (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) * 0.5
+          (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) *
+            0.5
       ) {
         fetchNextPage();
       }

@@ -12,7 +12,7 @@ interface HeadlineListProps {
   error: Error | null;
 }
 
-export const HeadlineList: React.FC<HeadlineListProps> = ({
+const HeadlineList: React.FC<HeadlineListProps> = ({
   headlines,
   loading,
   fetching,
@@ -64,3 +64,5 @@ export const HeadlineList: React.FC<HeadlineListProps> = ({
     );
   }
 };
+
+export default HeadlineList;

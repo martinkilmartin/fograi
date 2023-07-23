@@ -1,2 +1,1 @@
-export { default as Headlines } from './Headlines'
-export { default as HeadlinesSSR } from './HeadlinesSSR'
+export { default as HeadlineList } from './HeadlineList';

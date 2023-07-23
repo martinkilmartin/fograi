@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { Page } from '@layouts/Page';
 import { getHeadlinesCountry } from '@lib/getHeadlines';
-import { HeadlineList } from '@components/Headlines/HeadlineList';
+import { HeadlineList } from '@components/Headlines';
 import { Headline } from '../../types';
 import { Countries } from 'src/types/countries';
 
@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
         getNextPageParam: (lastPage, _pages) =>
           lastPage[lastPage.length - 1]?.created_at,
         enabled: router.isReady, // this line was added
-      }
+      },
     );
 
   const loadMoreRef = useRef<HTMLDivElement | null>(null);

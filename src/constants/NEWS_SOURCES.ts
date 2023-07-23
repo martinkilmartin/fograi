@@ -5809,6 +5809,32 @@ export const USNewsSources = new Map<string, NewsSource>([
       primaryColor: '#0B3D91',
     },
   ],
+  [
+    'US_CSPN',
+    {
+      name: 'C-SPAN',
+      url: 'https://www.c-span.org/',
+      est: 1979,
+      about: '',
+      description: [],
+      emos: ['🚀', '🇺🇸'],
+      langs: ['en'],
+      logoWidth: 110,
+      logoHeight: 92,
+      tags: ['NASA'],
+      socials: {
+        podcast: 'https://www.c-span.org/podcasts/',
+        radio: 'https://www.c-span.org/radio/',
+        email: 'public-inquiries@hq.nasa.gov',
+        facebook: 'https://www.facebook.com/CSPAN',
+        instagram: 'https://www.instagram.com/cspan/',
+        twitter: 'https://twitter.com/cspan',
+        youtube: 'https://www.youtube.com/user/CSPAN',
+      },
+      headerBG: '#fff',
+      primaryColor: '#0B3D91',
+    },
+  ],
 ]);
 
 export const AllNewsSources = new Map<string, NewsSource>([
