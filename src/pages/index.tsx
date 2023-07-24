@@ -81,10 +81,20 @@ const isMobileUserAgent = (userAgent: string): boolean => {
   return /mobile|android|iphone|ipad/i.test(userAgent);
 };
 
+const isTabletUserAgent = (userAgent: string): boolean => {
+  return /ipad|tablet|tab|kindle|playbook|silk/i.test(userAgent);
+};
+
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const userAgent = context.req.headers['user-agent'] || '';
   const isMobile = isMobileUserAgent(userAgent);
-  const limit = isMobile ? 3 : 12;
+  const isTablet = isTabletUserAgent(userAgent);
+  let limit = 8; // default for desktop
+  if (isMobile) {
+    limit = 2;
+  } else if (isTablet) {
+    limit = 4;
+  }
   const initialHeadlines = await getHeadlines(null, limit);
 
   return {
