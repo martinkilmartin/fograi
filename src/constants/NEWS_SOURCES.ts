@@ -4112,6 +4112,28 @@ export const UKNewsSources = new Map<string, NewsSource>([
       secondaryColor: '#000958',
     },
   ],
+  [
+    'UK_GRDN',
+    {
+      name: 'The Guardian',
+      url: 'https://www.theguardian.com/',
+      est: 0,
+      about:
+        'The Guardian is an esteemed and influential English-language newspaper with a global reach, providing comprehensive coverage of news, politics, culture, and more. With a commitment to truth and integrity, it has been a trusted source of information for readers around the world. Through insightful reporting and thought-provoking analysis, The Guardian strives to keep its audience well-informed and engaged, fostering a deeper understanding of the complexities of our modern society. As a beacon of journalism, it remains dedicated to upholding democratic values, amplifying diverse voices, and championing free press and independent media.',
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+      logoWidth: 300,
+      logoHeight: 100,
+      tags: ['TheGuardian', 'Newspaper', 'News', 'Media', 'Journalism'],
+      socials: {
+        facebook: 'https://www.facebook.com/theguardian',
+        twitter: 'https://twitter.com/guardian',
+      },
+      headerBG: '#052962',
+      primaryColor: '#052962',
+      secondaryColor: '#FFFFFF',
+    },
+  ],
 ]);
 
 export const NZNewsSources = new Map<string, NewsSource>([
