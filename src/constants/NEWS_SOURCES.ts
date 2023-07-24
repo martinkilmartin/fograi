@@ -1242,6 +1242,11 @@ export const IENewsSources = new Map<string, NewsSource>([
       langs: ['en'],
       tags: ['DerryJournal', 'News', 'Journalism', 'Ireland', 'LocalNews'],
       headerBG: '#fff',
+      socials: {
+        email: 'mailto:editorial@derryjournal.com',
+        facebook: 'https://www.facebook.com/derryjournal',
+        twitter: 'https://www.twitter.com/derryjournal',
+      },
       primaryColor: '#00528f',
       secondaryColor: '#ecb810',
     },
@@ -2239,6 +2244,11 @@ export const IENewsSources = new Map<string, NewsSource>([
         'MediaHistory',
       ],
       headerBG: '#fff',
+      socials: {
+        email: 'mailto:letters@newsletter.co.uk',
+        facebook: 'https://www.facebook.com/belfastnewsletter',
+        twitter: 'https://twitter.com/News_Letter',
+      },
       primaryColor: '#003399',
       secondaryColor: '#ffcc00',
     },
