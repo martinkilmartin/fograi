@@ -6,7 +6,7 @@ import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { Page } from '@layouts/Page';
 import { getHeadlinesCountry } from '@lib/getHeadlines';
 import { HeadlineList } from '@components/Headlines';
-import { Headline } from '../../types';
+import { Headline } from '../../../types';
 import { Countries } from 'src/types/countries';
 import { GetServerSideProps } from 'next';
 

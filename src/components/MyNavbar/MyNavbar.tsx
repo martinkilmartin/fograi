@@ -1,6 +1,8 @@
 import { Link, Navbar, Switch, useTheme, Grid, Text } from '@nextui-org/react';
 import { useTheme as useNextTheme } from 'next-themes';
 import Image from 'next/image';
+import { flags } from '@constants/FLAGS';
+import { countries } from '@constants/COUNTRIES';
 
 export default function MyNavbar(): JSX.Element {
   const { setTheme } = useNextTheme();
@@ -34,57 +36,28 @@ export default function MyNavbar(): JSX.Element {
               iconOff={`🌞`}
             ></Switch>
           </Navbar.Item>
-        </Navbar.Content>{' '}
+        </Navbar.Content>
         <Navbar.Collapse>
           <Navbar.CollapseItem>
             <Grid.Container justify="center" gap={2}>
               <Grid>
-                <Link href="/oz">
-                  <Text size={48}>Australia&nbsp;🇦🇺</Text>
+                <Link href="/bookmarks">
+                  <Text size={48}>Bookmarks&nbsp;🔖</Text>
                 </Link>
               </Grid>
-              <Grid>
-                <Link href="/ca">
-                  <Text size={48}>Canada&nbsp;🇨🇦</Text>
-                </Link>
-              </Grid>
-              <Grid>
-                <Link href="/in">
-                  <Text size={48}>India&nbsp;🇮🇳</Text>
-                </Link>
-              </Grid>
-              <Grid>
-                <Link href="/ie">
-                  <Text size={48}>Ireland&nbsp;🇮🇪</Text>
-                </Link>
-              </Grid>
-              <Grid>
-                <Link href="/nz">
-                  <Text size={48}>New&nbsp;Zealand&nbsp;🇳🇿</Text>
-                </Link>
-              </Grid>
-              <Grid>
-                <Link
-                  color="inherit"
-                  css={{
-                    minWidth: '100%',
-                  }}
-                  href="/uk"
-                >
-                  <Text size={48}>UK&nbsp;🇬🇧</Text>
-                </Link>
-              </Grid>
-              <Grid>
-                <Link
-                  color="inherit"
-                  css={{
-                    minWidth: '100%',
-                  }}
-                  href="/us"
-                >
-                  <Text size={48}>USA&nbsp;🇺🇸</Text>
-                </Link>
-              </Grid>
+            </Grid.Container>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Grid.Container justify="center" gap={2}>
+              {Array.from(countries.entries()).map(([code, name]) => (
+                <Grid key={code}>
+                  <Link href={`/c/${code}`}>
+                    <Text size={48}>
+                      {name}&nbsp;{flags.get(code)}
+                    </Text>
+                  </Link>
+                </Grid>
+              ))}
             </Grid.Container>
           </Navbar.CollapseItem>
         </Navbar.Collapse>

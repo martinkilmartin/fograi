@@ -24,11 +24,13 @@ type Props = {
 };
 
 const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
+  const COLLECTION_KEY = 'nooze';
+
   const { theme } = useTheme();
   const [suffix, setSuffix] = useState<string>('svg');
   const [leadImgErr, setLeadImgErr] = useState<boolean>(false);
   const [liked, setLiked] = useState<boolean>(false);
-  const [copied, setCopied] = useState<boolean>(false);
+  const [saved, setSaved] = useState<boolean>(false);
   const DATE = new Date(headline.created_at);
   const country = headline.source.substring(0, 2).toLowerCase();
 
@@ -41,6 +43,11 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
   const countryName = countries.get(country as Countries);
 
   useEffect(() => {
+    const isSaved = () => {
+      const currentCollection = retrieveCollection();
+      return !!(currentCollection && currentCollection.get(headline.id));
+    };
+    setSaved(isSaved());
     const likedPosts = JSON.parse(localStorage.getItem('likedPosts') || '[]');
     setLiked(likedPosts.includes(headline.id));
   }, [headline.id]);
@@ -57,22 +64,39 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
     setLiked(!liked);
   };
 
-  const copyToClipboard = async () => {
-    if (navigator.clipboard) {
-      await navigator.clipboard.writeText(headline.link);
-      setCopied(true);
-      alert(
-        'The link has been copied to your clipboard. You can add paste it to your bookmarks: ' +
-          headline.link
-      );
+  const saveToOrRemoveFromCollection = () => {
+    const currentCollection = retrieveCollection();
+    if (currentCollection) {
+      if (saved && currentCollection.get(headline.id)) {
+        currentCollection.delete(headline.id);
+        const mapAsArray = Array.from(currentCollection.entries());
+        localStorage.setItem(COLLECTION_KEY, JSON.stringify(mapAsArray));
+        setSaved(false);
+      } else {
+        currentCollection.set(headline.id, headline);
+        const mapAsArray = Array.from(currentCollection.entries());
+        localStorage.setItem(COLLECTION_KEY, JSON.stringify(mapAsArray));
+        setSaved(true);
+      }
     } else {
-      setCopied(false);
-      alert(
-        'Sorry, copying to clipboard is not supported in your browser. You can manually copy the link: ' +
-          headline.link
-      );
+      const newCollection = new Map<number, Headline>();
+      newCollection.set(headline.id, headline);
+      const mapAsArray = Array.from(newCollection.entries());
+      localStorage.setItem(COLLECTION_KEY, JSON.stringify(mapAsArray));
+      setSaved(true);
     }
   };
+
+  function retrieveCollection() {
+    if (typeof window !== 'undefined') {
+      const mapAsArrayString = localStorage.getItem(COLLECTION_KEY);
+      if (mapAsArrayString) {
+        const mapAsArray = JSON.parse(mapAsArrayString);
+        return new Map<number, Headline>(mapAsArray);
+      }
+    }
+    return null;
+  }
 
   const share = async () => {
     if (navigator.share) {
@@ -82,7 +106,7 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
       });
     } else {
       alert(
-        `The Web Share API is not supported by your browser: ${window.navigator.userAgent}.`
+        `The Web Share API is not supported by your browser: ${window.navigator.userAgent}.`,
       );
     }
   };
@@ -106,11 +130,11 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
             {'#' + idx}
           </Text>
           <Text size={28} weight={'bold'}>
-            <Link href={'/' + country}>
+            <Link href={'/c/' + country}>
               {flag}&nbsp;&nbsp;{countryName}
             </Link>
           </Text>
-          <Text size={18} weight="bold">
+          <Text size={18} weight="bold" suppressHydrationWarning>
             {diffDisplay(DATE)}
           </Text>
         </div>
@@ -193,10 +217,10 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
           </Grid>
           <Grid xs={4} justify="center">
             <Image
-              src={copied ? bookmarkedImg : bookmarkImg}
-              alt={copied ? 'Remove Bookmark' : 'Bookmark'}
+              src={saved ? bookmarkedImg : bookmarkImg}
+              alt={saved ? 'Unsave' : 'Save'}
               height={32}
-              onClick={copyToClipboard}
+              onClick={saveToOrRemoveFromCollection}
             />
           </Grid>
           <Grid xs={4} justify="center">
