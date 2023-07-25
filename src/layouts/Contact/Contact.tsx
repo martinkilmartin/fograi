@@ -1,7 +1,14 @@
 import { useState, FormEvent } from 'react';
-import { Button, Card, Input, Textarea, Spacer } from '@nextui-org/react';
+import {
+  Badge,
+  Button,
+  Card,
+  Grid,
+  Input,
+  Textarea,
+  Spacer,
+} from '@nextui-org/react';
 import { CONTACT_SUCCESS, CONTACT_FAILURE } from '@constants/CONTENT';
-import { Alert } from '@components/Alert';
 
 type Props = {
   messageTitle: string;
@@ -18,40 +25,59 @@ const Contact = ({
   contactPlaceholder,
   buttonText,
 }: Props): JSX.Element => {
-  const [result, setResult] = useState();
-  const [error, setError] = useState();
+  const [result, setResult] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
+  const [emptyForm, setEmptyForm] = useState<boolean>(false);
   async function formSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setResult(false);
+    setError(false);
+    setEmptyForm(false);
     const htmlForm = event.target as HTMLFormElement;
-    const res = await fetch('/api/contact', {
-      body: JSON.stringify({
-        email: htmlForm.email.value,
-        message: htmlForm.message.value,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-    });
-    const { result, error } = await res.json();
-    if (result) {
-      setResult(result);
-      setError(undefined);
+    if (htmlForm.email.value.length && htmlForm.email.value.length) {
+      const res = await fetch('/api/contact', {
+        body: JSON.stringify({
+          email: htmlForm.email.value,
+          message: htmlForm.message.value,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        method: 'POST',
+      });
+      const { result, error } = await res.json();
+      if (result) {
+        setResult(result);
+        setError(false);
+
+        setEmptyForm(false);
+      }
+      if (error) {
+        setResult(false);
+        setError(error);
+        setEmptyForm(false);
+      }
+    } else {
+      setResult(false);
+      setError(false);
+      setEmptyForm(true);
     }
-    if (error) {
-      setResult(undefined);
-      setError(error);
-    }
-    Card;
   }
   return (
     <div className="px-4">
       <h1 style={{ textAlign: 'center' }}>Contact Us</h1>
-      {result && <Alert color="success" text={CONTACT_SUCCESS} />}
-      {error && <Alert color="error" text={CONTACT_FAILURE} />}
       <Card>
-        <Card.Body>
-          <form onSubmit={formSubmit}>
+        <form onSubmit={formSubmit}>
+          <Card.Header>
+            {result && <Badge color="success">{CONTACT_SUCCESS}</Badge>}
+            {error ||
+              (emptyForm && (
+                <Badge color="error">
+                  {emptyForm ? 'Nothing to say?' : CONTACT_FAILURE}
+                </Badge>
+              ))}
+          </Card.Header>
+          <Card.Body>
             <Textarea
               label={messageTitle}
               placeholder={messagePlaceholder}
@@ -61,16 +87,16 @@ const Contact = ({
             <Spacer />
             <Input
               label={contactTitle}
-              labelPlaceholder={contactPlaceholder}
+              placeholder={contactPlaceholder}
               type="email"
               name="email"
               id="email"
             />
-          </form>
-        </Card.Body>
-        <Card.Footer>
-          <Button>{buttonText}</Button>
-        </Card.Footer>
+          </Card.Body>
+          <Card.Footer>
+            <Button type="submit">{buttonText}</Button>
+          </Card.Footer>
+        </form>
       </Card>
     </div>
   );
