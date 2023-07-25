@@ -1,4 +1,12 @@
-import { Link, Navbar, Switch, useTheme, Grid, Text } from '@nextui-org/react';
+import {
+  Button,
+  Dropdown,
+  Link,
+  Navbar,
+  Switch,
+  useTheme,
+  Text,
+} from '@nextui-org/react';
 import { useTheme as useNextTheme } from 'next-themes';
 import Image from 'next/image';
 import { flags } from '@constants/FLAGS';
@@ -39,26 +47,83 @@ export default function MyNavbar(): JSX.Element {
         </Navbar.Content>
         <Navbar.Collapse>
           <Navbar.CollapseItem>
-            <Grid.Container justify="center" gap={2}>
-              <Grid>
-                <Link href="/bookmarks">
-                  <Text size={48}>Bookmarks&nbsp;🔖</Text>
-                </Link>
-              </Grid>
-            </Grid.Container>
+            <Link href="/bookmarks">
+              <Button flat>
+                <Text size={24}>🔖&nbsp;Bookmarks</Text>
+              </Button>
+            </Link>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>
-            <Grid.Container justify="center" gap={2}>
-              {Array.from(countries.entries()).map(([code, name]) => (
-                <Grid key={code}>
-                  <Link href={`/c/${code}`}>
-                    <Text size={48}>
-                      {name}&nbsp;{flags.get(code)}
-                    </Text>
+            <Dropdown>
+              <Dropdown.Trigger>
+                <Dropdown.Button flat>
+                  <Text size={24}>🗺️&nbsp;Countries</Text>
+                </Dropdown.Button>
+              </Dropdown.Trigger>
+              <Dropdown.Menu>
+                {Array.from(countries.entries()).map(([code, name]) => (
+                  <Dropdown.Item key={code}>
+                    <Link href={`/c/${code}`}>
+                      <Text size={24}>
+                        {flags.get(code)}&nbsp;{name}
+                      </Text>
+                    </Link>
+                  </Dropdown.Item>
+                ))}
+              </Dropdown.Menu>
+            </Dropdown>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Dropdown>
+              <Dropdown.Trigger>
+                <Dropdown.Button flat>
+                  <Text size={24}>ℹ️&nbsp;Info</Text>
+                </Dropdown.Button>
+              </Dropdown.Trigger>
+              <Dropdown.Menu>
+                <Dropdown.Item>
+                  <Link href={`/about`}>
+                    <Text size={24}>🤷&nbsp;About</Text>
                   </Link>
-                </Grid>
-              ))}
-            </Grid.Container>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <Link href={`/contact`}>
+                    <Text size={24}>💌&nbsp;Contact</Text>
+                  </Link>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <Link href={`/sources`}>
+                    <Text size={24}>📰&nbsp;Sources</Text>
+                  </Link>
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Dropdown>
+              <Dropdown.Trigger>
+                <Dropdown.Button flat>
+                  <Text size={24}>⚖️&nbsp;Legal</Text>
+                </Dropdown.Button>
+              </Dropdown.Trigger>
+              <Dropdown.Menu>
+                <Dropdown.Item>
+                  <Link href={`/cookie`}>
+                    <Text size={24}>🥠&nbsp;Cookie Policy</Text>
+                  </Link>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <Link href={`/privacy`}>
+                    <Text size={24}>🔏&nbsp;Privacy Policy</Text>
+                  </Link>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <Link href={`/terms`}>
+                    <Text size={24}>🧸&nbsp;Terms Of Use</Text>
+                  </Link>
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Navbar.CollapseItem>
         </Navbar.Collapse>
       </Navbar>

@@ -1,17 +1,15 @@
-import { useState, FormEvent } from 'react'
-
-import { CONTACT_SUCCESS, CONTACT_FAILURE } from '@constants/CONTENT'
-import { Alert } from '@components/Alert'
-import { TextArea, TextInput } from '@components/Form'
-import { Button } from '@components/Button'
+import { useState, FormEvent } from 'react';
+import { Button, Card, Input, Textarea, Spacer } from '@nextui-org/react';
+import { CONTACT_SUCCESS, CONTACT_FAILURE } from '@constants/CONTENT';
+import { Alert } from '@components/Alert';
 
 type Props = {
-  messageTitle: string
-  messagePlaceholder: string
-  contactTitle: string
-  contactPlaceholder: string
-  buttonText: string
-}
+  messageTitle: string;
+  messagePlaceholder: string;
+  contactTitle: string;
+  contactPlaceholder: string;
+  buttonText: string;
+};
 
 const Contact = ({
   messageTitle,
@@ -20,11 +18,11 @@ const Contact = ({
   contactPlaceholder,
   buttonText,
 }: Props): JSX.Element => {
-  const [result, setResult] = useState()
-  const [error, setError] = useState()
+  const [result, setResult] = useState();
+  const [error, setError] = useState();
   async function formSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    const htmlForm = event.target as HTMLFormElement
+    event.preventDefault();
+    const htmlForm = event.target as HTMLFormElement;
     const res = await fetch('/api/contact', {
       body: JSON.stringify({
         email: htmlForm.email.value,
@@ -34,43 +32,48 @@ const Contact = ({
         'Content-Type': 'application/json',
       },
       method: 'POST',
-    })
-    const { result, error } = await res.json()
+    });
+    const { result, error } = await res.json();
     if (result) {
-      setResult(result)
-      setError(undefined)
+      setResult(result);
+      setError(undefined);
     }
     if (error) {
-      setResult(undefined)
-      setError(error)
+      setResult(undefined);
+      setError(error);
     }
+    Card;
   }
   return (
-    <div className="justify-center max-w-full shadow-2xl card hero-content">
+    <div className="px-4">
+      <h1 style={{ textAlign: 'center' }}>Contact Us</h1>
       {result && <Alert color="success" text={CONTACT_SUCCESS} />}
       {error && <Alert color="error" text={CONTACT_FAILURE} />}
-      <div className="card-body">
-        <form onSubmit={formSubmit}>
-          <TextArea
-            title={messageTitle}
-            placeholder={messagePlaceholder}
-            name="message"
-            id="message"
-          />
-          <TextInput
-            title={contactTitle}
-            placeholder={contactPlaceholder}
-            type="email"
-            name="email"
-            id="email"
-          />
-          <div className="mt-6 form-control">
-            <Button text={buttonText} />
-          </div>
-        </form>
-      </div>
+      <Card>
+        <Card.Body>
+          <form onSubmit={formSubmit}>
+            <Textarea
+              label={messageTitle}
+              placeholder={messagePlaceholder}
+              name="message"
+              id="message"
+            />
+            <Spacer />
+            <Input
+              label={contactTitle}
+              labelPlaceholder={contactPlaceholder}
+              type="email"
+              name="email"
+              id="email"
+            />
+          </form>
+        </Card.Body>
+        <Card.Footer>
+          <Button>{buttonText}</Button>
+        </Card.Footer>
+      </Card>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

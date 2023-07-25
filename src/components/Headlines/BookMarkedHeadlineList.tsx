@@ -16,7 +16,7 @@ const BookMarkedHeadlineList: React.FC<BookMarkedHeadlineListProps> = ({
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   };
   if (!headlines?.length) {
-    return <div>No headlines!</div>;
+    return <div>No Bookmarks!</div>;
   } else {
     return (
       <>
