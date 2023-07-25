@@ -4230,8 +4230,8 @@ export const UKNewsSources = new Map<string, NewsSource>([
       ],
       emos: ['📰', '🇬🇧'],
       langs: ['en'],
-      logoWidth: 187,
-      logoHeight: 100,
+      logoWidth: 359,
+      logoHeight: 76,
       tags: ['DailyExpress'],
       socials: {
         facebook: 'https://www.facebook.com/DailyExpress',
