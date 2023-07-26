@@ -59,13 +59,11 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
       if (response.ok) {
         const data = await response.json();
         setLikeCount(data.result);
-      } else {
-        console.error('Failed to increment counter.');
+        setLiked(!liked);
       }
-    } catch (error) {
-      console.error('There was an error calling the API:', error);
+    } catch (_error) {
+      // Do nothing
     }
-    setLiked(!liked);
   };
 
   useEffect(() => {
@@ -74,7 +72,21 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
       return !!(currentCollection && currentCollection.get(headline.id));
     };
     setSaved(isSaved());
-  }, [headline.id]);
+    const getLikes = async () => {
+      try {
+        const response = await fetch(`/api/fast/read?id=${headline.id}`, {
+          method: 'POST',
+        });
+        if (response.ok) {
+          const data = await response.json();
+          setLikeCount(data.result);
+        }
+      } catch (error) {
+        setLikeCount(0);
+      }
+    };
+    getLikes();
+  }, []);
 
   const saveToOrRemoveFromCollection = () => {
     const currentCollection = retrieveCollection();
