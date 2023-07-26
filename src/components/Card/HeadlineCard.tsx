@@ -35,7 +35,7 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
   const [suffix, setSuffix] = useState<string>('svg');
   const [leadImgErr, setLeadImgErr] = useState<boolean>(false);
   const [liked, setLiked] = useState<boolean>(false);
-  const [likeCount, setLikeCount] = useState<number | '?'>(0);
+  const [likeCount, setLikeCount] = useState<number | '?'>('?');
   const [saved, setSaved] = useState<boolean>(false);
   const DATE = new Date(headline.created_at);
   const country = headline.source.substring(0, 2).toLowerCase();
@@ -233,7 +233,12 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
       >
         <Grid.Container justify="center">
           <Grid xs={4} justify="center">
-            <Badge disableOutline content={likeCount} size="lg">
+            <Badge
+              disableOutline
+              content={likeCount}
+              size="lg"
+              color={likeCount === '?' ? 'warning' : 'success'}
+            >
               <Avatar
                 squared
                 size="lg"
