@@ -35,7 +35,7 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
   const [suffix, setSuffix] = useState<string>('svg');
   const [leadImgErr, setLeadImgErr] = useState<boolean>(false);
   const [liked, setLiked] = useState<boolean>(false);
-  const [likeCount, setLikeCount] = useState<number>(0);
+  const [likeCount, setLikeCount] = useState<number | '?'>(0);
   const [saved, setSaved] = useState<boolean>(false);
   const DATE = new Date(headline.created_at);
   const country = headline.source.substring(0, 2).toLowerCase();
@@ -59,11 +59,26 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
       if (response.ok) {
         const data = await response.json();
         setLikeCount(data.result);
-        setLiked(!liked);
+      } else {
+        throw Error();
       }
     } catch (_error) {
-      // Do nothing
+      setLikeCount('?');
     }
+    toggleLocalLike();
+    setLiked(!liked);
+  };
+
+  const toggleLocalLike = () => {
+    const likedPosts = JSON.parse(localStorage.getItem('likedPosts') || '[]');
+    if (likedPosts.includes(headline.id)) {
+      const index = likedPosts.indexOf(headline.id);
+      likedPosts.splice(index, 1);
+    } else {
+      likedPosts.push(headline.id);
+    }
+    localStorage.setItem('likedPosts', JSON.stringify(likedPosts));
+    setLiked(!liked);
   };
 
   useEffect(() => {
@@ -72,20 +87,8 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
       return !!(currentCollection && currentCollection.get(headline.id));
     };
     setSaved(isSaved());
-    const getLikes = async () => {
-      try {
-        const response = await fetch(`/api/fast/read?id=${headline.id}`, {
-          method: 'POST',
-        });
-        if (response.ok) {
-          const data = await response.json();
-          setLikeCount(data.result);
-        }
-      } catch (error) {
-        setLikeCount(0);
-      }
-    };
-    getLikes();
+    const likedPosts = JSON.parse(localStorage.getItem('likedPosts') || '[]');
+    setLiked(likedPosts.includes(headline.id));
   }, [headline.id]);
 
   const saveToOrRemoveFromCollection = () => {
