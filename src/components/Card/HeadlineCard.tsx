@@ -86,7 +86,7 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
       }
     };
     getLikes();
-  }, []);
+  }, [headline.id]);
 
   const saveToOrRemoveFromCollection = () => {
     const currentCollection = retrieveCollection();
