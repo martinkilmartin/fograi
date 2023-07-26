@@ -1,19 +1,24 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Card, Grid, Row, Text, useTheme } from '@nextui-org/react';
+import {
+  Avatar,
+  Badge,
+  Card,
+  Grid,
+  Row,
+  Text,
+  useTheme,
+} from '@nextui-org/react';
+import Link from 'next/link';
 import diffDisplay from '@lib/time-format';
 import { Headline } from 'src/types';
 import { Countries } from 'src/types/countries';
 import { flags } from '@constants/FLAGS';
 import { countries } from '@constants/COUNTRIES';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
-
 import bookmarkImg from '../../../public/img/ic/bookmark.svg';
 import bookmarkedImg from '../../../public/img/ic/bookmarked.svg';
-import likeImg from '../../../public/img/ic/like.svg';
-import likedImg from '../../../public/img/ic/liked.svg';
 import shareImg from '../../../public/img/ic/share.svg';
-import Link from 'next/link';
 
 type Props = {
   header?: boolean;
@@ -30,6 +35,7 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
   const [suffix, setSuffix] = useState<string>('svg');
   const [leadImgErr, setLeadImgErr] = useState<boolean>(false);
   const [liked, setLiked] = useState<boolean>(false);
+  const [likeCount, setLikeCount] = useState<number>(0);
   const [saved, setSaved] = useState<boolean>(false);
   const DATE = new Date(headline.created_at);
   const country = headline.source.substring(0, 2).toLowerCase();
@@ -42,27 +48,33 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
   const flag = flags.get(country);
   const countryName = countries.get(country as Countries);
 
+  const toggleLike = async () => {
+    try {
+      const response = await fetch(
+        `/api/fast/react?id=${headline.id}&liked=${liked}`,
+        {
+          method: 'POST',
+        },
+      );
+      if (response.ok) {
+        const data = await response.json();
+        setLikeCount(data.result);
+      } else {
+        console.error('Failed to increment counter.');
+      }
+    } catch (error) {
+      console.error('There was an error calling the API:', error);
+    }
+    setLiked(!liked);
+  };
+
   useEffect(() => {
     const isSaved = () => {
       const currentCollection = retrieveCollection();
       return !!(currentCollection && currentCollection.get(headline.id));
     };
     setSaved(isSaved());
-    const likedPosts = JSON.parse(localStorage.getItem('likedPosts') || '[]');
-    setLiked(likedPosts.includes(headline.id));
   }, [headline.id]);
-
-  const toggleLike = () => {
-    const likedPosts = JSON.parse(localStorage.getItem('likedPosts') || '[]');
-    if (likedPosts.includes(headline.id)) {
-      const index = likedPosts.indexOf(headline.id);
-      likedPosts.splice(index, 1);
-    } else {
-      likedPosts.push(headline.id);
-    }
-    localStorage.setItem('likedPosts', JSON.stringify(likedPosts));
-    setLiked(!liked);
-  };
 
   const saveToOrRemoveFromCollection = () => {
     const currentCollection = retrieveCollection();
@@ -201,19 +213,19 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
       <Card.Divider />
       <Card.Footer
         style={{
-          backgroundColor: theme?.colors.accents0.value,
           borderRadius: '0',
         }}
       >
         <Grid.Container justify="center">
           <Grid xs={4} justify="center">
-            <div onClick={toggleLike}>
-              <Image
-                src={liked ? likedImg : likeImg}
-                alt={liked ? 'Remove like' : 'Like'}
-                height={32}
+            <Badge disableOutline content={likeCount} size="lg">
+              <Avatar
+                squared
+                size="lg"
+                src={liked ? '/img/ic/liked.svg' : '/img/ic/like.svg'}
+                onClick={toggleLike}
               />
-            </div>
+            </Badge>
           </Grid>
           <Grid xs={4} justify="center">
             <Image
