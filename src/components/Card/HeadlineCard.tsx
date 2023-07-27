@@ -45,6 +45,7 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
   const country = headline.source.substring(0, 2).toLowerCase();
 
   const sourceHeaderBG = AllNewsSources.get(headline.source)?.headerBG;
+  const sourceAbout = AllNewsSources.get(headline.source)?.about;
   const logoWidth = AllNewsSources.get(headline.source)?.logoWidth;
   const logoHeight = AllNewsSources.get(headline.source)?.logoHeight;
   const sourceURL = AllNewsSources.get(headline.source)?.url;
@@ -204,7 +205,7 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
                       css={{ mt: '$1' }}
                       color="#888888"
                     >
-                      Some speel 🎉
+                      {sourceAbout}
                     </Text>
                   </Grid>
                 </Grid.Container>
@@ -228,22 +229,6 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
                     >
                       {est}
                     </Text>
-                  </Text>
-                  <Spacer inline x={0.5} />
-                  <Text
-                    className="user-twitter-card__text"
-                    size={14}
-                    color="#888888"
-                  >
-                    <Text
-                      b
-                      color="foreground"
-                      className="user-twitter-card__text"
-                      size={14}
-                    >
-                      ?&nbsp;
-                    </Text>
-                    Followers
                   </Text>
                 </Grid.Container>
               </Grid.Container>
