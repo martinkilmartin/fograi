@@ -3,10 +3,15 @@ import Image from 'next/image';
 import {
   Avatar,
   Badge,
+  Button,
   Card,
+  Col,
   Grid,
+  Popover,
   Row,
+  Spacer,
   Text,
+  User,
   useTheme,
 } from '@nextui-org/react';
 import Link from 'next/link';
@@ -45,6 +50,8 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
   const logoHeight = AllNewsSources.get(headline.source)?.logoHeight;
   const sourceURL = AllNewsSources.get(headline.source)?.url;
   const sourceName = AllNewsSources.get(headline.source)?.name;
+  const emos = AllNewsSources.get(headline.source)?.emos;
+  const est = AllNewsSources.get(headline.source)?.est;
   const flag = flags.get(country);
   const countryName = countries.get(country as Countries);
 
@@ -153,9 +160,96 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
             width: '100%',
           }}
         >
-          <Text size={18} weight="bold">
-            {'#' + idx}
-          </Text>
+          {' '}
+          <Popover>
+            <Popover.Trigger>
+              <Text size={18} weight="bold">
+                {'#' + idx}
+              </Text>
+            </Popover.Trigger>
+            <Popover.Content css={{ px: '$4', py: '$2' }}>
+              <Grid.Container
+                className="user-twitter-card__container"
+                css={{
+                  mw: '270px',
+                  borderRadius: '$lg',
+                  padding: '$sm',
+                }}
+              >
+                <Row justify="space-around" align="center">
+                  <Col span={8}>
+                    <User
+                      src={`/img/ns/${headline.source}.${suffix}`}
+                      name={sourceName ?? ''}
+                      description={emos?.join()}
+                      css={{ px: 0 }}
+                      size="lg"
+                      onError={() => setSuffix('png')}
+                    />
+                  </Col>
+                  <Col span={4}>
+                    <Row>
+                      <Link href={`/s/${headline.source}`}>
+                        <Badge color="success" size="lg">
+                          View All
+                        </Badge>
+                      </Link>
+                    </Row>
+                  </Col>
+                </Row>
+                <Grid.Container className="user-twitter-card__username-container">
+                  <Grid xs={12}>
+                    <Text
+                      className="user-twitter-card__text"
+                      size={14}
+                      css={{ mt: '$1' }}
+                      color="#888888"
+                    >
+                      Some speel 🎉
+                    </Text>
+                  </Grid>
+                </Grid.Container>
+
+                <Grid.Container
+                  className="user-twitter-card__metrics-container"
+                  justify="flex-start"
+                  alignContent="center"
+                >
+                  <Text
+                    className="user-twitter-card__text"
+                    size={14}
+                    color="#888888"
+                  >
+                    Since&nbsp;
+                    <Text
+                      b
+                      color="foreground"
+                      className="user-twitter-card__text"
+                      size={14}
+                    >
+                      {est}
+                    </Text>
+                  </Text>
+                  <Spacer inline x={0.5} />
+                  <Text
+                    className="user-twitter-card__text"
+                    size={14}
+                    color="#888888"
+                  >
+                    <Text
+                      b
+                      color="foreground"
+                      className="user-twitter-card__text"
+                      size={14}
+                    >
+                      ?&nbsp;
+                    </Text>
+                    Followers
+                  </Text>
+                </Grid.Container>
+              </Grid.Container>
+            </Popover.Content>
+          </Popover>
           <Text size={28} weight={'bold'}>
             <Link href={'/c/' + country}>
               {flag}&nbsp;&nbsp;{countryName}

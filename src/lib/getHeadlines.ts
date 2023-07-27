@@ -28,10 +28,36 @@ export async function getHeadlinesCountry(
 ): Promise<Headline[]> {
   try {
     const { data, error } = await supabase.rpc(
-      'get_paginated_results_country',
+      'get_paginated_results_country_sources',
       {
         page_size: limit,
         country: country,
+        last_seen: lastSeen,
+      },
+    );
+
+    if (error) throw error;
+
+    return data || [];
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+}
+
+export async function getHeadlinesCountrySource(
+  lastSeen: string | null = null,
+  limit = 8,
+  country: Countries,
+  sources: string,
+): Promise<Headline[]> {
+  try {
+    const { data, error } = await supabase.rpc(
+      'get_paginated_results_country_sources',
+      {
+        page_size: limit,
+        country: country,
+        source_filter: sources,
         last_seen: lastSeen,
       },
     );
