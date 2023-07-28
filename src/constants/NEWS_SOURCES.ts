@@ -6177,6 +6177,113 @@ export const USNewsSources = new Map<string, NewsSource>([
   ],
 ]);
 
+export const TZNewsSources = new Map<string, NewsSource>([
+  [
+    'TZ_CTZN',
+    {
+      name: 'The Citizen',
+      url: 'https://www.thecitizen.co.tz/',
+      est: 1995,
+      about:
+        "The Citizen, one of Tanzania's most reputable newspapers, serves as a critical voice in East African journalism. With its comprehensive coverage of Tanzanian politics, business, society, and more, it offers readers an insightful look into the nation's events and broader regional implications.",
+      description: [
+        'Since its inception, The Citizen has established itself as a champion of balanced reporting in Tanzania. Its dedication to delivering factual, timely, and unbiased news has made it a cornerstone in Tanzanian journalism.',
+        "In addition to its robust political and business sections, The Citizen brings to light cultural stories, societal commentaries, and features that reflect the diverse interests of its readership. From local happenings in Dar es Salaam to broader East African developments, it captures the essence of the region's dynamic socio-political landscape.",
+        "The Citizen's commitment to digital journalism is evident in its online presence, which includes video segments that offer a more immersive news experience. Whether in print or online, The Citizen stands as a testament to the power of responsible journalism in shaping national conversations.",
+        "Today, The Citizen remains unwavering in its mission to inform, educate, and inspire, staying true to its role as Tanzania's voice in the larger East African community.",
+      ],
+      emos: ['📰', '🇹🇿'],
+      langs: ['en'],
+      logoWidth: 496,
+      logoHeight: 69,
+      tags: [
+        'TheCitizen',
+        'Tanzania',
+        'East African Journalism',
+        'Politics',
+        'Business',
+        'Culture',
+        'Society',
+        'Local News',
+        'Regional Developments',
+        'Digital Journalism',
+      ],
+      socials: {
+        video: 'https://www.thecitizen.co.tz/tanzania/video',
+      },
+      headerBG: '#fff',
+      primaryColor: '#0071BD',
+    },
+  ],
+  [
+    'TZ_DYNW',
+    {
+      name: 'Daily News',
+      url: 'https://www.dailynews.co.tz',
+      est: 1972,
+      about:
+        "The Daily News is one of Tanzania's most trusted daily newspapers, offering insightful coverage on national politics, business, sports, and cultural affairs. As a prominent voice in Tanzanian media, it reflects the pulse of the nation and the East African region.",
+      description: [
+        "From its early days, the Daily News has been committed to delivering quality journalism, ensuring its readers stay well-informed about the evolving Tanzanian landscape. Through in-depth reports, analyses, and features, it provides a panoramic view of the nation's socio-economic and political dynamics.",
+        'As the media industry has evolved, so has the Daily News. It proudly embraces digital journalism, offering its audience engaging multimedia content, from videos to podcasts, ensuring they have a well-rounded news experience. This commitment to innovation underlines its role as a leading news outlet in Tanzania.',
+        "The Daily News is more than just a source of information; it's a platform for dialogue, education, and understanding. Through its comprehensive coverage, it fosters informed discussions on crucial national issues, promoting a more engaged and informed citizenry.",
+        'Today, whether one is looking for the latest political developments in Dodoma, business trends in Dar es Salaam, or cultural narratives from across the country, the Daily News stands as the go-to source for all things Tanzanian.',
+      ],
+      emos: ['📰', '🇹🇿'],
+      langs: ['en'],
+      logoWidth: 243,
+      logoHeight: 50,
+      tags: [
+        'DailyNews',
+        'Tanzania',
+        'Politics',
+        'Business',
+        'Sports',
+        'Culture',
+        'National Affairs',
+        'Digital Journalism',
+        'Podcasts',
+        'Multimedia',
+      ],
+      socials: {
+        video: 'https://dailynews.co.tz/daily-news-digital/',
+        podcast: 'https://dailynews.co.tz/category/multimedia/podcast/',
+        facebook: 'https://www.facebook.com/DailynewsTanzania',
+        twitter: 'https://twitter.com/dailynewstz',
+        youtube: 'https://www.youtube.com/c/DailyNewsDigital',
+        instagram: 'https://instagram.com/dailynews_tz',
+      },
+      headerBG: '#fff',
+      primaryColor: '#FF0000',
+    },
+  ],
+  [
+    'TZ_HLEO',
+    {
+      name: 'Daily News',
+      url: 'https://www.dailynews.co.tz',
+      est: 0,
+      about: '',
+      description: [''],
+      emos: ['📰', '🇹🇿'],
+      langs: ['en'],
+      logoWidth: 243,
+      logoHeight: 51,
+      tags: [''],
+      socials: {
+        video: 'https://habarileo.co.tz/daily-news-digital/',
+        podcast: 'https://habarileo.co.tz/category/podcast/',
+        facebook: 'https://facebook.com/habarileo',
+        twitter: 'https://twitter.com/HabariLeo',
+        youtube: 'https://www.youtube.com/c/DailyNewsDigital',
+        instagram: 'https://instagram.com/habarileo_tz',
+      },
+      headerBG: '#fff',
+      primaryColor: '#007DC6',
+    },
+  ],
+]);
+
 export const AllNewsSources = new Map<string, NewsSource>([
   ...CANewsSources.entries(),
   ...IENewsSources.entries(),
@@ -6185,4 +6292,5 @@ export const AllNewsSources = new Map<string, NewsSource>([
   ...NZNewsSources.entries(),
   ...OZNewsSources.entries(),
   ...USNewsSources.entries(),
+  ...TZNewsSources.entries(),
 ]);

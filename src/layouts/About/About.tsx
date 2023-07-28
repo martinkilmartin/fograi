@@ -7,6 +7,7 @@ import {
   OZNewsSources,
   UKNewsSources,
   USNewsSources,
+  TZNewsSources,
 } from '@constants/NEWS_SOURCES';
 
 type Props = {
@@ -20,6 +21,7 @@ const NZ_SOURCES_SIZE = Array.from(NZNewsSources).length;
 const OZ_SOURCES_SIZE = Array.from(OZNewsSources).length;
 const UK_SOURCES_SIZE = Array.from(UKNewsSources).length;
 const US_SOURCES_SIZE = Array.from(USNewsSources).length;
+const TZ_SOURCES_SIZE = Array.from(TZNewsSources).length;
 
 const About = ({ title }: Props): JSX.Element => (
   <div className="px-4 text-center">
@@ -40,8 +42,9 @@ const About = ({ title }: Props): JSX.Element => (
         This website continually lists the main headline of{' '}
         <b>{OZ_SOURCES_SIZE}</b> Australian, <b>{CA_SOURCES_SIZE}</b> Canadian,{' '}
         <b>{IN_SOURCES_SIZE}</b> Indian, <b>{IE_SOURCES_SIZE}</b> Irish,{' '}
-        <b>{NZ_SOURCES_SIZE}</b> New Zealand, <b>{UK_SOURCES_SIZE}</b> UK and{' '}
-        <b>{US_SOURCES_SIZE}</b> USA online news sources.
+        <b>{NZ_SOURCES_SIZE}</b> New Zealand, <b>{TZ_SOURCES_SIZE}</b> Tanzania,{' '}
+        <b>{UK_SOURCES_SIZE}</b> UK and <b>{US_SOURCES_SIZE}</b> USA online news
+        sources.
       </p>
       <h3 className="mt-3 text-2xl">📝 📧 📨 📩 📤 📥</h3>
       <p className="mt-1">

@@ -1,3 +1,12 @@
-import { flags as Flagtypes } from "../types/flags";
+import { flags as Flagtypes } from '../types/flags';
 
-export const flags = new Map<string, Flagtypes>([['ca', '🇨🇦'], ['ie', '🇮🇪'], ['in', '🇮🇳'], ['nz', '🇳🇿'], ['oz', '🇦🇺'], ['uk', '🇬🇧'], ['us', '🇺🇸']]);
+export const flags = new Map<string, Flagtypes>([
+  ['ca', '🇨🇦'],
+  ['ie', '🇮🇪'],
+  ['in', '🇮🇳'],
+  ['nz', '🇳🇿'],
+  ['oz', '🇦🇺'],
+  ['uk', '🇬🇧'],
+  ['us', '🇺🇸'],
+  ['tz', '🇹🇿'],
+]);

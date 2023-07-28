@@ -8,4 +8,5 @@ export const countries = new Map<CountryTypes, string>([
   ['oz', 'Australia'],
   ['uk', 'UK'],
   ['us', 'USA'],
+  ['tz', 'Tanzania'],
 ]);
