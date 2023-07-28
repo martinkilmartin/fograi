@@ -8,6 +8,7 @@ import {
   Grid,
   Popover,
   Row,
+  Spacer,
   Text,
   User,
   useTheme,
@@ -176,25 +177,14 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
                 }}
               >
                 <Row justify="space-around" align="center">
-                  <Col span={8}>
-                    <User
-                      src={`/img/ns/${headline.source}.${suffix}`}
-                      name={sourceName ?? ''}
-                      description={emos?.join()}
-                      css={{ px: 0 }}
-                      size="lg"
-                      onError={() => setSuffix('png')}
-                    />
-                  </Col>
-                  <Col span={4}>
-                    <Row>
-                      <Link href={`/s/${headline.source}`}>
-                        <Badge color="success" size="lg">
-                          View All
-                        </Badge>
-                      </Link>
-                    </Row>
-                  </Col>
+                  <User
+                    src={`/img/ns/${headline.source}.${suffix}`}
+                    name={sourceName ?? ''}
+                    description={emos?.join()}
+                    css={{ px: 0 }}
+                    size="lg"
+                    onError={() => setSuffix('png')}
+                  />
                 </Row>
                 <Grid.Container className="user-twitter-card__username-container">
                   <Grid xs={12}>
@@ -208,27 +198,39 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
                     </Text>
                   </Grid>
                 </Grid.Container>
-
                 <Grid.Container
                   className="user-twitter-card__metrics-container"
                   justify="flex-start"
                   alignContent="center"
                 >
-                  <Text
-                    className="user-twitter-card__text"
-                    size={14}
-                    color="#888888"
-                  >
-                    Since&nbsp;
-                    <Text
-                      b
-                      color="foreground"
-                      className="user-twitter-card__text"
-                      size={14}
-                    >
-                      {est}
-                    </Text>
-                  </Text>
+                  <Row justify="space-around" align="stretch">
+                    <Col span={8}>
+                      <Text
+                        className="user-twitter-card__text"
+                        size={18}
+                        color="#888888"
+                      >
+                        Since&nbsp;
+                        <Text
+                          b
+                          color="foreground"
+                          className="user-twitter-card__text"
+                          size={18}
+                        >
+                          {est}
+                        </Text>
+                      </Text>
+                    </Col>
+                    <Col span={4}>
+                      <Row>
+                        <Link href={`/s/${headline.source}`}>
+                          <Badge color="primary" size="lg">
+                            View All
+                          </Badge>
+                        </Link>
+                      </Row>
+                    </Col>
+                  </Row>
                 </Grid.Container>
               </Grid.Container>
             </Popover.Content>
