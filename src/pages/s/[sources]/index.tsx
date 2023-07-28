@@ -9,7 +9,6 @@ import { Page } from '@layouts/Page';
 import { getHeadlinesCountrySource } from '@lib/getHeadlines';
 import { Headline } from '../../../types';
 import { Countries } from '../../../types/countries';
-import { NS_BI_MAP } from '@constants/NS_BI_MAP';
 
 interface HomePageProps {
   initialData: InfiniteData<Headline[]>;
