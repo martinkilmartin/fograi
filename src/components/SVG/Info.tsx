@@ -7,7 +7,7 @@ const Info = ({
 }: SVG): JSX.Element => {
   return (
     <svg
-      enable-background={`new 0 0 ${width} ${height}`}
+      enableBackground={`new 0 0 ${width} ${height}`}
       height={height}
       viewBox={`0 0 ${width} ${height}`}
       width={width}
