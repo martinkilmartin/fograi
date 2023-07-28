@@ -8,7 +8,6 @@ import {
   Grid,
   Popover,
   Row,
-  Spacer,
   Text,
   User,
   useTheme,
