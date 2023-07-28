@@ -16,7 +16,6 @@ export async function getHeadlines(
 
     return data || [];
   } catch (error) {
-    console.error(error);
     return [];
   }
 }
@@ -40,7 +39,6 @@ export async function getHeadlinesCountry(
 
     return data || [];
   } catch (error) {
-    console.error(error);
     return [];
   }
 }
@@ -66,7 +64,6 @@ export async function getHeadlinesCountrySource(
 
     return data || [];
   } catch (error) {
-    console.error(error);
     return [];
   }
 }

@@ -1,6 +1,6 @@
 import { Countries as CountryTypes } from '../types/countries';
 
-export const countries = new Map<CountryTypes, string>([
+export const COUNTRIES = new Map<CountryTypes, string>([
   ['ca', 'Canada'],
   ['ie', 'Ireland'],
   ['in', 'India'],

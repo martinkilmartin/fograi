@@ -13,12 +13,16 @@ function writeMapToTSFile(
   outputPath: string = './src/constants/NS_BI_MAP.ts',
 ) {
   const mapFromObject = new Map(Object.entries(inputMap));
-  let content = 'export const exportedMap = new Map([\n';
+  let content = 'export const NS_BI_MAP = new Map([\n';
   mapFromObject.forEach((v, k) => {
     if (k === 'AllNewsSources') {
       for (const [key, value] of mapFromObject.get(k)) {
-        content += `  ["${key}", "${value[property]}"],\n`;
-        content += `  ["${value[property]}", "${key}"],\n`;
+        content += `  ["${key}", "${(value[property] as string)
+          .toLowerCase()
+          .replaceAll(' ', '-')}"],\n`;
+        content += `  ["${(value[property] as string)
+          .toLowerCase()
+          .replaceAll(' ', '-')}", "${key}"],\n`;
       }
     }
   });

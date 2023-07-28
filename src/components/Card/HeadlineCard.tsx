@@ -14,12 +14,12 @@ import {
 } from '@nextui-org/react';
 import Link from 'next/link';
 import diffDisplay from '@lib/time-format';
-import { Headline } from 'src/types';
-import { Countries } from 'src/types/countries';
-import { flags } from '@constants/FLAGS';
-import { countries } from '@constants/COUNTRIES';
-import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import Info from '@components/SVG/Info';
+import { flags } from '@constants/FLAGS';
+import { COUNTRIES } from '@constants/COUNTRIES';
+import { AllNewsSources } from '@constants/NEWS_SOURCES';
+import { Headline } from '../../types';
+import { Countries } from '../../types/countries';
 import bookmarkImg from '../../../public/img/ic/bookmark.svg';
 import bookmarkedImg from '../../../public/img/ic/bookmarked.svg';
 import shareImg from '../../../public/img/ic/share.svg';
@@ -53,7 +53,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const emos = AllNewsSources.get(headline.source)?.emos;
   const est = AllNewsSources.get(headline.source)?.est;
   const flag = flags.get(country);
-  const countryName = countries.get(country as Countries);
+  const countryName = COUNTRIES.get(country as Countries);
 
   const toggleLike = async () => {
     try {
@@ -222,7 +222,11 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
                     </Col>
                     <Col span={4}>
                       <Row>
-                        <Link href={`/s/${headline.source}`}>
+                        <Link
+                          href={`/source/${sourceName
+                            ?.toLowerCase()
+                            .replaceAll(' ', '-')}`}
+                        >
                           <Badge color="primary" size="lg">
                             View All
                           </Badge>
@@ -235,7 +239,11 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             </Popover.Content>
           </Popover>
           <Text size={28} weight={'bold'}>
-            <Link href={'/c/' + country}>
+            <Link
+              href={
+                '/country/' + countryName?.toLowerCase().replaceAll(' ', '-')
+              }
+            >
               {flag}&nbsp;&nbsp;{countryName}
             </Link>
           </Text>

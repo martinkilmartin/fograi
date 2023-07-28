@@ -10,7 +10,7 @@ import {
 import { useTheme as useNextTheme } from 'next-themes';
 import Image from 'next/image';
 import { flags } from '@constants/FLAGS';
-import { countries } from '@constants/COUNTRIES';
+import { COUNTRIES } from '@constants/COUNTRIES';
 
 export default function MyNavbar(): JSX.Element {
   const { setTheme } = useNextTheme();
@@ -61,9 +61,9 @@ export default function MyNavbar(): JSX.Element {
                 </Dropdown.Button>
               </Dropdown.Trigger>
               <Dropdown.Menu>
-                {Array.from(countries.entries()).map(([code, name]) => (
+                {Array.from(COUNTRIES.entries()).map(([code, name]) => (
                   <Dropdown.Item key={code}>
-                    <Link href={`/c/${code}`}>
+                    <Link href={`/country/${code}`}>
                       <Text size={24}>
                         {flags.get(code)}&nbsp;{name}
                       </Text>

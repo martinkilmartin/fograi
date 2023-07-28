@@ -2,13 +2,14 @@ import React, { useEffect, useRef } from 'react';
 import { InfiniteData, useInfiniteQuery } from 'react-query';
 import { useMediaQuery } from 'react-responsive';
 import { useRouter } from 'next/router';
-import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
-import { Page } from '@layouts/Page';
-import { getHeadlinesCountry } from '@lib/getHeadlines';
-import { HeadlineList } from '@components/Headlines';
-import { Headline } from '../../../types';
-import { Countries } from 'src/types/countries';
 import { GetServerSideProps } from 'next';
+import { HeadlineList } from '@components/Headlines';
+import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
+import { NS_BI_MAP } from '@constants/NS_BI_MAP';
+import { Page } from '@layouts/Page';
+import { getHeadlinesCountrySource } from '@lib/getHeadlines';
+import { Headline } from '../../../types';
+import { Countries } from '../../../types/countries';
 
 interface HomePageProps {
   initialData: InfiniteData<Headline[]>;
@@ -16,9 +17,13 @@ interface HomePageProps {
 
 const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
   const router = useRouter();
-  const { country } = router.query;
+  const { source } = router.query;
+  const sourceID = NS_BI_MAP.get(source as string);
+  const country = (sourceID as string)?.substring(0, 2).toLowerCase();
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
   const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
+
+  const sourcesArray = `{${sourceID as string}}`;
 
   let limit: number;
 
@@ -34,7 +39,12 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
     useInfiniteQuery<Headline[], Error>(
       'headlines',
       ({ pageParam = null }) =>
-        getHeadlinesCountry(pageParam, limit, country as Countries),
+        getHeadlinesCountrySource(
+          pageParam,
+          limit,
+          country as Countries,
+          sourcesArray,
+        ),
       {
         getNextPageParam: (lastPage, _pages) =>
           lastPage[lastPage.length - 1]?.created_at,
@@ -92,6 +102,21 @@ const isTabletUserAgent = (userAgent: string): boolean => {
 };
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { source } = context.query;
+
+  const sourceID = NS_BI_MAP.get(source as string);
+  if (!sourceID) {
+    return {
+      props: {
+        initialData: {
+          pages: [[]],
+          pageParams: [null],
+        },
+      },
+    };
+  }
+  const country = (sourceID as string).substring(0, 2).toLowerCase();
+  const sourcesArray = `{${sourceID}}`;
   const userAgent = context.req.headers['user-agent'] || '';
   const isMobile = isMobileUserAgent(userAgent);
   const isTablet = isTabletUserAgent(userAgent);
@@ -101,8 +126,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   } else if (isTablet) {
     limit = 4;
   }
-  const country = context.query.country as Countries;
-  const initialHeadlines = await getHeadlinesCountry(null, limit, country);
+  const initialHeadlines = await getHeadlinesCountrySource(
+    null,
+    limit,
+    country as Countries,
+    sourcesArray,
+  );
 
   return {
     props: {

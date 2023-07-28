@@ -1,6 +1,6 @@
-# sionnach.solutions
+# fogr.ai
 
-Website for Sionnach Solutions / Sionnach Buí
+Website for fogr.ai / nooze.news
 
 ## Run dev build & start dev server
 
@@ -41,3 +41,6 @@ Website for Sionnach Solutions / Sionnach Buí
 ## Lint, Type-check & Test code
 
 `yarn test-all`
+
+## Make news source id / name bi-map
+`ts-node -P tsconfig.util.json src/utils/mapToTypeScriptFiles.ts`

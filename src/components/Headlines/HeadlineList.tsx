@@ -3,7 +3,7 @@ import { Badge, Button, Grid, Loading } from '@nextui-org/react';
 import { HeadlineCard } from '@components/Card';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { Headline } from '../../types/Headline';
-import { Countries } from 'src/types/countries';
+import { Countries } from '../../types/countries';
 
 interface HeadlineListProps {
   headlines: Headline[] | undefined;
