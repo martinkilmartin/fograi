@@ -19,6 +19,7 @@ import { Countries } from 'src/types/countries';
 import { flags } from '@constants/FLAGS';
 import { countries } from '@constants/COUNTRIES';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
+import Info from '@components/SVG/Info';
 import bookmarkImg from '../../../public/img/ic/bookmark.svg';
 import bookmarkedImg from '../../../public/img/ic/bookmarked.svg';
 import shareImg from '../../../public/img/ic/share.svg';
@@ -31,7 +32,7 @@ type Props = {
   idx?: number;
 };
 
-const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
+const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const COLLECTION_KEY = 'nooze';
 
   const { theme } = useTheme();
@@ -159,12 +160,11 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
             width: '100%',
           }}
         >
-          {' '}
           <Popover>
             <Popover.Trigger>
-              <Text size={18} weight="bold">
-                {'#' + idx}
-              </Text>
+              <span>
+                <Info />
+              </span>
             </Popover.Trigger>
             <Popover.Content css={{ px: '$4', py: '$2' }}>
               <Grid.Container
@@ -238,9 +238,9 @@ const HeadlineCard = ({ headline, idx }: Props): JSX.Element => {
               {flag}&nbsp;&nbsp;{countryName}
             </Link>
           </Text>
-          <Text size={18} weight="bold" suppressHydrationWarning>
+          <Badge color="primary" size="lg" suppressHydrationWarning>
             {diffDisplay(DATE)}
-          </Text>
+          </Badge>
         </div>
       </Card.Header>
       <hr />
