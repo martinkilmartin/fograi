@@ -2,13 +2,14 @@ import React, { useEffect, useRef } from 'react';
 import { InfiniteData, useInfiniteQuery } from 'react-query';
 import { useMediaQuery } from 'react-responsive';
 import { useRouter } from 'next/router';
+import { GetServerSideProps } from 'next';
+import { HeadlineList } from '@components/Headlines';
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { Page } from '@layouts/Page';
 import { getHeadlinesCountrySource } from '@lib/getHeadlines';
-import { HeadlineList } from '@components/Headlines';
 import { Headline } from '../../../types';
-import { Countries } from 'src/types/countries';
-import { GetServerSideProps } from 'next';
+import { Countries } from '../../../types/countries';
+import { NS_BI_MAP } from '@constants/NS_BI_MAP';
 
 interface HomePageProps {
   initialData: InfiniteData<Headline[]>;

@@ -1,4 +1,4 @@
-import { NewsSource } from 'src/types/NewsSource';
+import { NewsSource } from '../types/NewsSource';
 
 export const CANewsSources = new Map<string, NewsSource>([
   [
@@ -6260,16 +6260,33 @@ export const TZNewsSources = new Map<string, NewsSource>([
   [
     'TZ_HLEO',
     {
-      name: 'Daily News',
-      url: 'https://www.dailynews.co.tz',
-      est: 0,
-      about: '',
-      description: [''],
+      name: 'HabariLeo',
+      url: 'https://habarileo.co.tz',
+      est: 2007,
+      about:
+        "HabariLeo stands as one of Tanzania's prominent Swahili newspapers, delving deep into national news, sports, entertainment, and more. With a commitment to quality journalism, it captures the essence of Tanzanian life, ensuring its readers remain updated and informed.",
+      description: [
+        'Since its foundation, HabariLeo has made significant strides in Swahili journalism, setting standards with its rigorous reporting, comprehensive analyses, and engaging narratives.',
+        'A part of the modern media landscape, HabariLeo has embraced the digital age wholeheartedly. From video news segments to enlightening podcasts, the newspaper ensures its audience enjoys a diverse multimedia experience, making news consumption both informative and enjoyable.',
+        'Being a trusted source of information, HabariLeo plays a vital role in shaping public opinion, fostering constructive debates on issues of national importance, and celebrating Tanzanian culture and achievements.',
+        'In a rapidly changing world, HabariLeo remains steadfast in its mission, serving as the bridge between Tanzanians and the news that matters most, cementing its place as a beloved national newspaper.',
+      ],
       emos: ['📰', '🇹🇿'],
-      langs: ['en'],
+      langs: ['sw'],
       logoWidth: 243,
       logoHeight: 51,
-      tags: [''],
+      tags: [
+        'HabariLeo',
+        'Tanzania',
+        'Swahili Journalism',
+        'National News',
+        'Entertainment',
+        'Sports',
+        'Culture',
+        'Multimedia',
+        'Digital News',
+        'Podcasts',
+      ],
       socials: {
         video: 'https://habarileo.co.tz/daily-news-digital/',
         podcast: 'https://habarileo.co.tz/category/podcast/',
