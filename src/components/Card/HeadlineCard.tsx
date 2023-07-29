@@ -140,7 +140,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   };
 
   function calculateFontSize(text: string, baseSize = 38): number {
-    const reductionFactor = 0.4;
+    const reductionFactor = 0.5;
 
     let newSize = baseSize - text.length * reductionFactor;
 
