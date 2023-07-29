@@ -63,7 +63,11 @@ export default function MyNavbar(): JSX.Element {
               <Dropdown.Menu>
                 {Array.from(COUNTRIES.entries()).map(([code, name]) => (
                   <Dropdown.Item key={code}>
-                    <Link href={`/country/${code}`}>
+                    <Link
+                      href={`/country/${name
+                        ?.toLowerCase()
+                        .replaceAll(' ', '-')}`}
+                    >
                       <Text size={24}>
                         {flags.get(code)}&nbsp;{name}
                       </Text>
