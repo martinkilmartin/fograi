@@ -635,7 +635,7 @@ export const CANewsSources = new Map<string, NewsSource>([
   [
     'CA_RSEX',
     {
-      name: 'The Russian Express Weekly Newspaper',
+      name: 'The Russian Express',
       url: 'https://russianexpress.net',
       est: 2002,
       about: 'Toronto community weekly newspaper.',
@@ -2709,7 +2709,7 @@ export const IENewsSources = new Map<string, NewsSource>([
   [
     'IE_STRW',
     {
-      name: 'Strabane Weekly News and Tyrone & Donegal Reporter',
+      name: 'Strabane Weekly News',
       url: 'https://www.strabaneweekly.co.uk/',
       est: 2008,
       about:
