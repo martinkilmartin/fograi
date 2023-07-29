@@ -20,6 +20,7 @@ const Sources = ({ title }: Props): JSX.Element => {
             height: 'auto',
             fontFamily: '"Georgia", "Times New Roman", Times, serif',
           }}
+          lined
         >
           <Table.Header>
             <Table.Column>
