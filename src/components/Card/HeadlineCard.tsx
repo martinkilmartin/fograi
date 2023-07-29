@@ -294,6 +294,9 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               width="100%"
               alt={headline.img_alt ?? ''}
               onError={() => setLeadImgErr(true)}
+              style={{
+                filter: 'blur(5px)',
+              }}
             />
           )}
           {!headline.img_src && (
