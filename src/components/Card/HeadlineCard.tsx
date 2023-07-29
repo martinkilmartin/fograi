@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { Image as NextUIImage } from "@nextui-org/react";
 import {
   Avatar,
   Badge,
@@ -281,7 +282,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           style={{ overflow: 'auto' }}
         >
           {headline.img_src && (
-            <Image
+            <NextUIImage
               src={leadImgErr ? '/img/no-image.png' : headline.img_src}
               objectFit="cover"
               width={400}
@@ -291,6 +292,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               style={{
                 filter: 'blur(5px)',
               }}
+              showSkeleton
             />
           )}
           {!headline.img_src && (
