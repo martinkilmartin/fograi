@@ -44,10 +44,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const DATE = new Date(headline.created_at);
   const country = headline.source.substring(0, 2).toLowerCase();
 
-  const sourceHeaderBG = AllNewsSources.get(headline.source)?.headerBG;
   const sourceAbout = AllNewsSources.get(headline.source)?.about;
-  const logoWidth = AllNewsSources.get(headline.source)?.logoWidth;
-  const logoHeight = AllNewsSources.get(headline.source)?.logoHeight;
   const sourceURL = AllNewsSources.get(headline.source)?.url;
   const sourceName = AllNewsSources.get(headline.source)?.name;
   const emos = AllNewsSources.get(headline.source)?.emos;
@@ -146,7 +143,14 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   };
 
   return (
-    <Card isHoverable variant="bordered" style={{ borderRadius: '0' }}>
+    <Card
+      isHoverable
+      variant="bordered"
+      style={{
+        borderRadius: '0',
+        fontFamily: '"Georgia", "Times New Roman", Times, serif',
+      }}
+    >
       <Card.Header
         style={{
           backgroundColor: theme?.colors.background.value,
@@ -253,11 +257,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         </div>
       </Card.Header>
       <hr />
-      <Card.Header
-        style={{
-          backgroundColor: sourceHeaderBG ?? theme?.colors.background.value,
-        }}
-      >
+      <Card.Header>
         <div
           style={{
             display: 'flex',
@@ -267,16 +267,9 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           }}
         >
           <a href={sourceURL} target="_blank" rel="noreferrer">
-            <Image
-              src={`/img/ns/${headline.source}.${suffix}`}
-              width={logoWidth ?? 400}
-              height={logoHeight ?? 80}
-              style={{
-                maxHeight: '$3xl',
-              }}
-              alt={sourceName ?? ''}
-              onError={() => setSuffix('png')}
-            />
+            <Text h2 size={40} weight="bold">
+              {sourceName ?? ''}
+            </Text>
           </a>
         </div>
       </Card.Header>
@@ -288,10 +281,11 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           style={{ overflow: 'auto' }}
         >
           {headline.img_src && (
-            <Card.Image
+            <Image
               src={leadImgErr ? '/img/no-image.png' : headline.img_src}
               objectFit="cover"
-              width="100%"
+              width={400}
+              height={200}
               alt={headline.img_alt ?? ''}
               onError={() => setLeadImgErr(true)}
               style={{
