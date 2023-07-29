@@ -1,6 +1,5 @@
 import { Container, Card, Table, Text } from '@nextui-org/react';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
-import { COUNTRIES } from '@constants/COUNTRIES';
 import { flags } from '@constants/FLAGS';
 import { Countries } from 'src/types/countries';
 
