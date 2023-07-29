@@ -31,7 +31,6 @@ const Footer = (): JSX.Element => (
       footer {
         width: 100%;
         bottom: 0;
-        background: #f8f9fa;
         padding-bottom: 10px;
         text-align: center;
       }
