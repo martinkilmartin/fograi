@@ -35,7 +35,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const COLLECTION_KEY = 'nooze';
 
   const { theme } = useTheme();
-  const [suffix, setSuffix] = useState<string>('svg');
   const [leadImgErr, setLeadImgErr] = useState<boolean>(false);
   const [liked, setLiked] = useState<boolean>(false);
   const [likeCount, setLikeCount] = useState<number | '?'>('?');
@@ -140,8 +139,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     }
   };
 
-  function calculateFontSize(text: string): number {
-    const baseSize = 38;
+  function calculateFontSize(text: string, baseSize = 38): number {
     const reductionFactor = 0.4;
 
     let newSize = baseSize - text.length * reductionFactor;
@@ -191,14 +189,20 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
                 }}
               >
                 <Row justify="space-around" align="center">
-                  <User
-                    src={`/img/ns/${headline.source}.${suffix}`}
-                    name={sourceName ?? ''}
-                    description={emos?.join()}
-                    css={{ px: 0 }}
-                    size="lg"
-                    onError={() => setSuffix('png')}
-                  />
+                  <a href={sourceURL} target="_blank" rel="noreferrer">
+                    <Text
+                      h2
+                      size={calculateFontSize(sourceName ?? '', 24)}
+                      weight="bold"
+                      style={{
+                        borderRadius: '0',
+                        fontFamily:
+                          '"Georgia", "Times New Roman", Times, serif',
+                      }}
+                    >
+                      {emos?.[0]}&nbsp;{sourceName ?? ''}&nbsp;{emos?.[1]}
+                    </Text>
+                  </a>
                 </Row>
                 <Grid.Container className="user-twitter-card__username-container">
                   <Grid xs={12}>
