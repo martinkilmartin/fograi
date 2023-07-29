@@ -33,7 +33,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
       <>
         <Grid.Container gap={2} justify="center" style={{ padding: '0' }}>
           {headlines?.map((headline, idx) => (
-            <Grid xs={12} md={6} lg={4} xl={3} key={headline.id}>
+            <Grid xs={12} sm={6} md={6} lg={4} xl={3} key={headline.id}>
               <HeadlineCard
                 headline={headline}
                 country={

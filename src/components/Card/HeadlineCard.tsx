@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Image as NextUIImage } from "@nextui-org/react";
+import { Image as NextUIImage } from '@nextui-org/react';
 import {
   Avatar,
   Badge,
@@ -143,6 +143,19 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     }
   };
 
+  function calculateFontSize(text: string): number {
+    const baseSize = 38;
+    const reductionFactor = 0.4;
+
+    let newSize = baseSize - text.length * reductionFactor;
+
+    const minimumSize = 12;
+    if (newSize < minimumSize) {
+      newSize = minimumSize;
+    }
+    return newSize;
+  }
+
   return (
     <Card
       isHoverable
@@ -249,7 +262,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
                 '/country/' + countryName?.toLowerCase().replaceAll(' ', '-')
               }
             >
-              {flag}&nbsp;&nbsp;{countryName}
+              {countryName}
             </Link>
           </Text>
           <Badge color="primary" size="lg" suppressHydrationWarning>
@@ -268,7 +281,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           }}
         >
           <a href={sourceURL} target="_blank" rel="noreferrer">
-            <Text h2 size={40} weight="bold">
+            <Text h2 size={calculateFontSize(sourceName ?? '')} weight="bold">
               {sourceName ?? ''}
             </Text>
           </a>
