@@ -9,7 +9,6 @@ import {
   Popover,
   Row,
   Text,
-  User,
   useTheme,
 } from '@nextui-org/react';
 import Link from 'next/link';
