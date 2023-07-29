@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Image as NextUIImage } from '@nextui-org/react';
 import {
-  Avatar,
   Badge,
   Card,
   Col,
@@ -16,13 +15,12 @@ import {
 import Link from 'next/link';
 import diffDisplay from '@lib/time-format';
 import Info from '@components/SVG/Info';
-import { flags } from '@constants/FLAGS';
+import Bookmark from '@components/SVG/Bookmark';
+import Heart from '@components/SVG/Heart';
 import { COUNTRIES } from '@constants/COUNTRIES';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { Headline } from '../../types';
 import { Countries } from '../../types/countries';
-import bookmarkImg from '../../../public/img/ic/bookmark.svg';
-import bookmarkedImg from '../../../public/img/ic/bookmarked.svg';
 import shareImg from '../../../public/img/ic/share.svg';
 
 type Props = {
@@ -50,7 +48,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const sourceName = AllNewsSources.get(headline.source)?.name;
   const emos = AllNewsSources.get(headline.source)?.emos;
   const est = AllNewsSources.get(headline.source)?.est;
-  const flag = flags.get(country);
   const countryName = COUNTRIES.get(country as Countries);
 
   const toggleLike = async () => {
@@ -330,28 +327,18 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         }}
       >
         <Grid.Container justify="center">
-          <Grid xs={4} justify="center">
+          <Grid xs={4} justify="center" onClick={toggleLike}>
             <Badge
               disableOutline
               content={likeCount}
               size="lg"
               color={likeCount === '?' ? 'warning' : 'success'}
             >
-              <Avatar
-                squared
-                size="lg"
-                src={liked ? '/img/ic/liked.svg' : '/img/ic/like.svg'}
-                onClick={toggleLike}
-              />
+              <Heart someBool={liked} />
             </Badge>
           </Grid>
-          <Grid xs={4} justify="center">
-            <Image
-              src={saved ? bookmarkedImg : bookmarkImg}
-              alt={saved ? 'Unsave' : 'Save'}
-              height={32}
-              onClick={saveToOrRemoveFromCollection}
-            />
+          <Grid xs={4} justify="center" onClick={saveToOrRemoveFromCollection}>
+            <Bookmark someBool={saved} />
           </Grid>
           <Grid xs={4} justify="center">
             <Image src={shareImg} alt="Share" height={32} onClick={share} />
