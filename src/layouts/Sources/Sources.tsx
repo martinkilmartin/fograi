@@ -1,5 +1,8 @@
-import { Grid, Table, Text } from '@nextui-org/react';
+import { Container, Card, Table, Text } from '@nextui-org/react';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
+import { COUNTRIES } from '@constants/COUNTRIES';
+import { flags } from '@constants/FLAGS';
+import { Countries } from 'src/types/countries';
 
 type Props = {
   title: string;
@@ -7,27 +10,26 @@ type Props = {
 
 const Sources = ({ title }: Props): JSX.Element => {
   return (
-    <div className="px-4">
+    <Container>
       <h1 style={{ textAlign: 'center' }}>
         {title}&nbsp;({AllNewsSources.size})
       </h1>
-      <Grid.Container gap={2} justify="center" style={{ padding: '0' }}>
+      <Card style={{ padding: '10', margin: '10' }}>
         <Table
           aria-label="List of news sources"
           css={{
             height: 'auto',
-            minWidth: '100%',
             fontFamily: '"Georgia", "Times New Roman", Times, serif',
           }}
         >
           <Table.Header>
             <Table.Column>
-              <Text h2 size={48} weight="bold">
+              <Text h2 size={12} weight="bold">
                 Name
               </Text>
             </Table.Column>
             <Table.Column>
-              <Text h2 size={48} weight="bold">
+              <Text h2 size={12} weight="bold">
                 Established
               </Text>
             </Table.Column>
@@ -36,21 +38,23 @@ const Sources = ({ title }: Props): JSX.Element => {
             {Array.from(AllNewsSources)
               .sort((a, b) => a[1].est - b[1].est)
               .map((ns, i) => {
+                const country = ns[0].substring(0, 2).toLowerCase();
+                const cFlag = flags.get(country as Countries);
                 const sourceURL = AllNewsSources.get(ns[0])?.url;
                 const sourceName = AllNewsSources.get(ns[0])?.name;
                 return (
                   <Table.Row key={i}>
                     <Table.Cell>
                       <a href={sourceURL} target="_blank" rel="noreferrer">
-                        <Text h2 size={48} weight="bold">
-                          {sourceName ?? ''}
+                        <Text h2 size={12} weight="bold">
+                          {cFlag}&nbsp;{sourceName ?? ''}
                         </Text>
                       </a>
                     </Table.Cell>
                     <Table.Cell>
                       <Text
                         h2
-                        size={48}
+                        size={12}
                         weight="bold"
                         css={{
                           textAlign: 'right',
@@ -64,8 +68,8 @@ const Sources = ({ title }: Props): JSX.Element => {
               })}
           </Table.Body>
         </Table>
-      </Grid.Container>
-    </div>
+      </Card>
+    </Container>
   );
 };
 
