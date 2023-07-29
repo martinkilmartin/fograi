@@ -1,4 +1,4 @@
-import { Link } from '@nextui-org/react';
+import { Grid, Link } from '@nextui-org/react';
 import {
   CANewsSources,
   IENewsSources,
@@ -25,7 +25,9 @@ const TZ_SOURCES_SIZE = Array.from(TZNewsSources).length;
 
 const About = ({ title }: Props): JSX.Element => (
   <div className="px-4 text-center">
-    <h1 className="w-full mb-4 text-4xl font-extrabold leading-9">{title}</h1>
+    <Grid.Container justify="center">
+      <h1>{title}</h1>
+    </Grid.Container>
     <h2 className="text-3xl">
       <Link
         className="link link-primary"
