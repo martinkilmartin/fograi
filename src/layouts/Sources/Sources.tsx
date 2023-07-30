@@ -66,17 +66,11 @@ const Sources = ({ title }: Props): JSX.Element => {
                       </Row>
                       <Grid.Container>
                         <Grid xs={12}>
-                          <Collapse.Group>
-                            <Collapse title="About">
-                              <Text
-                                size={14}
-                                css={{ mt: '$1' }}
-                                color="#888888"
-                              >
-                                {sourceAbout}
-                              </Text>
-                            </Collapse>
-                          </Collapse.Group>
+                          <Collapse title="About" bordered>
+                            <Text size={14} css={{ mt: '$1' }} color="#888888">
+                              {sourceAbout}
+                            </Text>
+                          </Collapse>
                         </Grid>
                       </Grid.Container>
                     </Grid.Container>

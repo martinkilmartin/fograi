@@ -1,4 +1,4 @@
-import { Grid, Link, Text, Tooltip } from '@nextui-org/react';
+import { Container, Grid, Link, Text, Tooltip } from '@nextui-org/react';
 import {
   CANewsSources,
   IENewsSources,
@@ -46,7 +46,7 @@ const CSM = new Map([
 ]);
 
 const About = ({ title }: Props): JSX.Element => (
-  <div>
+  <Container css={{ padding: 10 }}>
     <Grid.Container justify="center">
       <Text h1>{title}</Text>
     </Grid.Container>
@@ -135,7 +135,7 @@ const About = ({ title }: Props): JSX.Element => (
         <b>Contact Us</b>
       </Link>
     </Grid.Container>
-  </div>
+  </Container>
 );
 
 export default About;
