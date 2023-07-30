@@ -1,4 +1,4 @@
-import { Grid } from '@nextui-org/react';
+import { Grid, Text } from '@nextui-org/react';
 import { Copyright } from '@components/Copyright';
 import { FOOTER_LINKS } from '@constants/FOOTER_LINKS';
 import Link from 'next/link';
@@ -16,9 +16,9 @@ const Footer = (): JSX.Element => (
           >
             <h3>{linkSection.title}</h3>
             {linkSection.urls.map((url, idx) => (
-              <Link key={idx} href={url.path}>
-                {url.text}
-              </Link>
+              <Text key={idx} weight="bold" size={18}>
+                <Link href={url.path}>{url.text}</Link>
+              </Text>
             ))}
           </div>
         </Grid>

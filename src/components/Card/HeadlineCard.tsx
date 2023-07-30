@@ -174,7 +174,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         >
           <Popover>
             <Popover.Trigger>
-              <span>
+              <span role="button">
                 <Info />
               </span>
             </Popover.Trigger>
@@ -265,7 +265,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               {countryName}
             </Link>
           </Text>
-          <Badge color="primary" size="lg" suppressHydrationWarning>
+          <Badge size="lg" suppressHydrationWarning>
             {diffDisplay(DATE)}
           </Badge>
         </div>
