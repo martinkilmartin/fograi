@@ -1,4 +1,4 @@
-import { Grid, Link } from '@nextui-org/react';
+import { Grid, Link, Text } from '@nextui-org/react';
 import {
   CANewsSources,
   IENewsSources,
@@ -9,80 +9,121 @@ import {
   USNewsSources,
   TZNewsSources,
 } from '@constants/NEWS_SOURCES';
+import { flags } from '@constants/FLAGS';
 
 type Props = {
   title: string;
 };
 
-const CA_SOURCES_SIZE = Array.from(CANewsSources).length;
-const IE_SOURCES_SIZE = Array.from(IENewsSources).length;
-const IN_SOURCES_SIZE = Array.from(INNewsSources).length;
-const NZ_SOURCES_SIZE = Array.from(NZNewsSources).length;
-const OZ_SOURCES_SIZE = Array.from(OZNewsSources).length;
-const UK_SOURCES_SIZE = Array.from(UKNewsSources).length;
-const US_SOURCES_SIZE = Array.from(USNewsSources).length;
-const TZ_SOURCES_SIZE = Array.from(TZNewsSources).length;
+const CA_SOURCES_SIZE = CANewsSources.size;
+const IE_SOURCES_SIZE = IENewsSources.size;
+const IN_SOURCES_SIZE = INNewsSources.size;
+const NZ_SOURCES_SIZE = NZNewsSources.size;
+const OZ_SOURCES_SIZE = OZNewsSources.size;
+const UK_SOURCES_SIZE = UKNewsSources.size;
+const US_SOURCES_SIZE = USNewsSources.size;
+const TZ_SOURCES_SIZE = TZNewsSources.size;
+
+const ALL_SIZES =
+  CA_SOURCES_SIZE +
+  IE_SOURCES_SIZE +
+  IN_SOURCES_SIZE +
+  NZ_SOURCES_SIZE +
+  OZ_SOURCES_SIZE +
+  UK_SOURCES_SIZE +
+  US_SOURCES_SIZE +
+  TZ_SOURCES_SIZE;
 
 const About = ({ title }: Props): JSX.Element => (
-  <div className="px-4 text-center">
+  <div>
     <Grid.Container justify="center">
-      <h1>{title}</h1>
+      <Text h1>{title}</Text>
     </Grid.Container>
-    <h2 className="text-3xl">
+    <Text
+      h2
+      size={60}
+      css={{
+        textGradient: '45deg, $blue600 -20%, $pink600 50%',
+      }}
+      weight="bold"
+    >
+      Journalism Matters:
+    </Text>
+    <Text
+      h2
+      size={60}
+      css={{
+        textGradient: '45deg, $purple600 -20%, $pink600 100%',
+      }}
+      weight="bold"
+    >
+      Stay Updated with
+    </Text>
+    <Text
+      h3
+      size={60}
+      css={{
+        textGradient: '45deg, $yellow600 -20%, $red600 100%',
+      }}
+      weight="bold"
+    >
+      Global Headlines Instantly!
+    </Text>
+    <Grid.Container justify="center">
+      <Text h2>
+        {Array.from(flags.entries()).map((f) => (
+          <Link key={f[0]} href={`#${f[0]}`} style={{ marginRight: '5px' }}>
+            {f[1]}
+          </Link>
+        ))}
+      </Text>
+    </Grid.Container>
+    <Text size={24} style={{ marginTop: '10px' }}>
+      Dive into what matters most.
+    </Text>
+    <Text size={24} style={{ marginTop: '10px' }}>
+      <b>Continuous</b> headlines from <b>{ALL_SIZES}</b> global news sources.
+    </Text>
+    <Text size={24} style={{ marginTop: '10px' }}>
+      Showcasing each publication&apos;s <b>lead</b> story.
+    </Text>
+    <Text size={24} style={{ marginTop: '10px' }}>
+      Stay informed.
+    </Text>
+    <Text size={24} style={{ marginTop: '10px' }}>
       <Link
-        className="link link-primary"
         href="https://newsbrandsireland.ie/journalismmatters/"
         target="_blank"
         rel="noreferrer"
+        style={{
+          textDecoration: 'none',
+          transition: 'color 0.3s',
+          fontWeight: 'bold',
+        }}
+        onMouseOver={(e) => (e.currentTarget.style.color = '#D71E1F')}
+        onMouseOut={(e) => (e.currentTarget.style.color = '')}
       >
-        #journalismmatters
+        #journalismmatters&nbsp;↗
       </Link>
-    </h2>
-    <div className="flex flex-col mx-auto my-2">
-      <h3 className="mt-3 text-2xl">🇦🇺 🇨🇦 🇮🇳 🇮🇪 🇳🇿 🇬🇧 🇺🇸</h3>
-      <p className="mt-1">
-        This website continually lists the main headline of{' '}
-        <b>{OZ_SOURCES_SIZE}</b> Australian, <b>{CA_SOURCES_SIZE}</b> Canadian,{' '}
-        <b>{IN_SOURCES_SIZE}</b> Indian, <b>{IE_SOURCES_SIZE}</b> Irish,{' '}
-        <b>{NZ_SOURCES_SIZE}</b> New Zealand, <b>{TZ_SOURCES_SIZE}</b> Tanzania,{' '}
-        <b>{UK_SOURCES_SIZE}</b> UK and <b>{US_SOURCES_SIZE}</b> USA online news
-        sources.
-      </p>
-      <h3 className="mt-3 text-2xl">📝 📧 📨 📩 📤 📥</h3>
-      <p className="mt-1">
-        <Link className="link link-primary" href="/contact">
-          Contact us
-        </Link>{' '}
-        with any enquiries, removals, additions or corrections.
-      </p>
-      <h3 className="mt-3 text-2xl">📰 🗞 📺 📻 🖥</h3>
-      <p className="mt-1">
-        See{' '}
-        <Link className="link link-primary" href="/sources">
-          sources
-        </Link>{' '}
-        for the full list of sources of headlines.
-      </p>
-      <h3 className="mt-3 text-2xl">🧪 👩‍🔬 🔬 👨‍💻 🔭 👩‍🔬 📡</h3>
-      <p className="mt-1">
-        This is an experimental website and is liable to stop updating 📴 or go
-        offline 🪦 at any moment . . . 👻
-      </p>
-      <h3 className="mt-3 text-2xl">🔮 🧱 ⛓ 🪄 🤑 🤯 🪙 💸</h3>
-      <p className="mt-1">
-        Future development may include permanent storage of headlines on a
-        globally distributed proof-of-work blockchain such as{' '}
-        <Link
-          className="link link-primary"
-          href="https://ethereumclassic.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Ethereum Classic
-        </Link>
-        .
-      </p>
-    </div>
+      .
+    </Text>
+    <Grid.Container justify="center" style={{ marginTop: '20px' }}>
+      <Link
+        href="/contact"
+        style={{
+          padding: '10px 20px',
+          background: '#0072F5',
+          color: 'white',
+          borderRadius: '5px',
+          textDecoration: 'none',
+          transition: 'background 0.3s',
+        }}
+        onMouseOver={(e) => (e.currentTarget.style.background = '#D71E1F')}
+        onMouseOut={(e) => (e.currentTarget.style.background = '#0072F5')}
+      >
+        <b>Contact Us</b>
+      </Link>
+    </Grid.Container>
   </div>
 );
 
