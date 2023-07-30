@@ -64,15 +64,21 @@ const Sources = ({ title }: Props): JSX.Element => {
                           </Text>
                         </Link>
                       </Row>
-                      <Grid.Container>
-                        <Grid xs={12}>
-                          <Collapse title="About" bordered>
-                            <Text size={14} css={{ mt: '$1' }} color="#888888">
-                              {sourceAbout}
-                            </Text>
-                          </Collapse>
-                        </Grid>
-                      </Grid.Container>
+                      {sourceAbout && (
+                        <Grid.Container>
+                          <Grid xs={12}>
+                            <Collapse title="About" bordered>
+                              <Text
+                                size={14}
+                                css={{ mt: '$1' }}
+                                color="#888888"
+                              >
+                                {sourceAbout}
+                              </Text>
+                            </Collapse>
+                          </Grid>
+                        </Grid.Container>
+                      )}
                     </Grid.Container>
                   </Card.Body>
                   <Card.Footer>
