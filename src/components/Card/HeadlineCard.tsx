@@ -6,6 +6,7 @@ import {
   Card,
   Col,
   Grid,
+  Loading,
   Popover,
   Row,
   Text,
@@ -37,6 +38,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const [leadImgErr, setLeadImgErr] = useState<boolean>(false);
   const [liked, setLiked] = useState<boolean>(false);
   const [likeCount, setLikeCount] = useState<number | '?'>('?');
+  const [likeLoading, setLikeLoading] = useState<boolean>(false);
   const [saved, setSaved] = useState<boolean>(false);
   const DATE = new Date(headline.created_at);
   const country = headline.source.substring(0, 2).toLowerCase();
@@ -49,6 +51,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const countryName = COUNTRIES.get(country as Countries);
 
   const toggleLike = async () => {
+    setLikeLoading(true);
     try {
       const response = await fetch(
         `/api/fast/react?id=${headline.id}&liked=${liked}`,
@@ -67,6 +70,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     }
     toggleLocalLike();
     setLiked(!liked);
+    setLikeLoading(false);
   };
 
   const toggleLocalLike = () => {
@@ -333,7 +337,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           <Grid xs={4} justify="center" onClick={toggleLike}>
             <Badge
               disableOutline
-              content={likeCount}
+              content={likeLoading ? <Loading size="xs" /> : likeCount}
               size="lg"
               color={likeCount === '?' ? 'warning' : 'success'}
             >

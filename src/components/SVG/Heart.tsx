@@ -1,4 +1,5 @@
 import { useTheme as useNextTheme } from 'next-themes';
+import { useState, useEffect } from 'react';
 import { SVG } from '../../types';
 
 const Heart = ({
@@ -8,8 +9,15 @@ const Heart = ({
   vBH = 512,
   fillColors = ['#000', '#fff'],
   someBool = false,
-}: SVG): JSX.Element => {
+}: SVG): JSX.Element | null => {
+  const [mounted, setMounted] = useState(false);
   const { theme } = useNextTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
   return (
     <svg
       version="1.1"
