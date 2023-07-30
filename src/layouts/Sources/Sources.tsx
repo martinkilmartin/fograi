@@ -52,7 +52,7 @@ const Sources = ({ title }: Props): JSX.Element => {
                         <Link href={sourceURL} target="_blank" rel="noreferrer">
                           <Text
                             h2
-                            size={calculateFontSize(sourceName ?? '')}
+                            size={calculateFontSize(sourceName ?? '', 28)}
                             weight="bold"
                             style={{
                               borderRadius: '0',
@@ -67,7 +67,7 @@ const Sources = ({ title }: Props): JSX.Element => {
                       {sourceAbout && (
                         <Grid.Container>
                           <Grid xs={12}>
-                            <Collapse title="About" bordered>
+                            <Collapse title={<Text h4>About</Text>} bordered>
                               <Text
                                 size={14}
                                 css={{ mt: '$1' }}
