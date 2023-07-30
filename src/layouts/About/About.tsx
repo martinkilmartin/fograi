@@ -1,4 +1,4 @@
-import { Grid, Link, Text } from '@nextui-org/react';
+import { Grid, Link, Text, Tooltip } from '@nextui-org/react';
 import {
   CANewsSources,
   IENewsSources,
@@ -33,6 +33,17 @@ const ALL_SIZES =
   UK_SOURCES_SIZE +
   US_SOURCES_SIZE +
   TZ_SOURCES_SIZE;
+
+const CSM = new Map([
+  ['ca', CA_SOURCES_SIZE],
+  ['ie', IE_SOURCES_SIZE],
+  ['in', IN_SOURCES_SIZE],
+  ['nz', NZ_SOURCES_SIZE],
+  ['oz', OZ_SOURCES_SIZE],
+  ['uk', UK_SOURCES_SIZE],
+  ['us', US_SOURCES_SIZE],
+  ['tz', TZ_SOURCES_SIZE],
+]);
 
 const About = ({ title }: Props): JSX.Element => (
   <div>
@@ -69,14 +80,14 @@ const About = ({ title }: Props): JSX.Element => (
     >
       Global Headlines Instantly!
     </Text>
-    <Grid.Container justify="center">
-      <Text h2>
-        {Array.from(flags.entries()).map((f) => (
-          <Link key={f[0]} href={`#${f[0]}`} style={{ marginRight: '5px' }}>
-            {f[1]}
-          </Link>
-        ))}
-      </Text>
+    <Grid.Container justify="center" gap={1}>
+      {Array.from(flags.entries()).map((f) => (
+        <Grid key={f[0]}>
+          <Tooltip content={CSM.get(f[0])}>
+            <Text h2>{f[1]}</Text>
+          </Tooltip>
+        </Grid>
+      ))}
     </Grid.Container>
     <Text size={24} style={{ marginTop: '10px' }}>
       Dive into what matters most.
