@@ -1,7 +1,7 @@
 export const APP_TITLE = 'NOOZE';
 export const BASE_URL = 'nooze.news';
 export const BRAND = 'NOOZE';
-export const TAG_LINE = 'nooze.news - The New Name in News';
+export const TAG_LINE = 'nooze.news - Know Everything. Now.';
 export const HERO_IMG = '@img/bg/classifieds-browse.webp';
 export const BOT_TITLE = 'nooze-bot';
 export const ABOUT_TITLE = 'About';
