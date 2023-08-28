@@ -40,6 +40,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const [likeCount, setLikeCount] = useState<number | '?'>('?');
   const [likeLoading, setLikeLoading] = useState<boolean>(false);
   const [saved, setSaved] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState(false);
   const DATE = new Date(headline.created_at);
   const country = headline.source.substring(0, 2).toLowerCase();
 
@@ -176,9 +177,9 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             width: '100%',
           }}
         >
-          <Popover>
+          <Popover isOpen={isOpen} onOpenChange={(open) => setIsOpen(open)}>
             <Popover.Trigger>
-              <span role="button">
+              <span role="button" aria-expanded={isOpen ? 'true' : 'false'}>
                 <Info />
               </span>
             </Popover.Trigger>
