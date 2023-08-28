@@ -1310,7 +1310,7 @@ export const IENewsSources = new Map<string, NewsSource>([
   [
     'IE_DLNW',
     {
-      name: 'Donegal News / Derry People',
+      name: 'Donegal News & Derry People',
       url: 'https://donegalnews.com/',
       est: 1903,
       about:
