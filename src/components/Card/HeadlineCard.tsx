@@ -179,7 +179,11 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         >
           <Popover isOpen={isOpen} onOpenChange={(open) => setIsOpen(open)}>
             <Popover.Trigger>
-              <span role="button" aria-expanded={isOpen ? 'true' : 'false'}>
+              <span
+                role="button"
+                aria-expanded={isOpen ? 'true' : 'false'}
+                aria-label="Information on news source"
+              >
                 <Info />
               </span>
             </Popover.Trigger>
