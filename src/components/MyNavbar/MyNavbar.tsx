@@ -22,7 +22,7 @@ export default function MyNavbar(): JSX.Element {
         <Navbar.Brand>
           <Navbar.Toggle aria-label="toggle navigation" />
         </Navbar.Brand>
-        <Navbar.Content>
+        <Navbar.Brand>
           <Link href="/">
             <Image
               src="/img/nooze.svg"
@@ -31,7 +31,7 @@ export default function MyNavbar(): JSX.Element {
               height={80}
             />
           </Link>
-        </Navbar.Content>
+        </Navbar.Brand>
         <Navbar.Content>
           <Navbar.Item>
             <Switch
