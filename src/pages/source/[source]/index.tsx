@@ -6,6 +6,7 @@ import { GetServerSideProps } from 'next';
 import { HeadlineList } from '@components/Headlines';
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { NS_BI_MAP } from '@constants/NS_BI_MAP';
+import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { Page } from '@layouts/Page';
 import { getHeadlinesCountrySource } from '@lib/getHeadlines';
 import { Headline } from '../../../types';
@@ -13,9 +14,10 @@ import { Countries } from '../../../types/countries';
 
 interface HomePageProps {
   initialData: InfiniteData<Headline[]>;
+  sourceName: string;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
+const HomePage: React.FC<HomePageProps> = ({ initialData, sourceName }) => {
   const router = useRouter();
   const { source } = router.query;
   const sourceID = NS_BI_MAP.get(source as string);
@@ -80,6 +82,14 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
   if (!router.isReady) return null;
   return (
     <Page title={APP_TITLE} heading={TAG_LINE}>
+      <h1
+        style={{
+          textAlign: 'center',
+          fontFamily: '"Georgia", "Times New Roman", Times, serif',
+        }}
+      >
+        {sourceName}
+      </h1>
       <HeadlineList
         headlines={allHeadlines}
         loading={status === 'loading'}
@@ -112,6 +122,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
           pages: [[]],
           pageParams: [null],
         },
+        sourceName: '',
       },
     };
   }
@@ -132,6 +143,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     country as Countries,
     sourcesArray,
   );
+  const sourceName = AllNewsSources.get(sourceID)?.name;
 
   return {
     props: {
@@ -139,6 +151,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         pages: [initialHeadlines],
         pageParams: [null],
       },
+      sourceName,
     },
   };
 };

@@ -72,6 +72,14 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
   if (!router.isReady) return null;
   return (
     <Page title={APP_TITLE} heading={TAG_LINE}>
+      <h1
+        style={{
+          textAlign: 'center',
+          fontFamily: '"Georgia", "Times New Roman", Times, serif',
+        }}
+      >
+        {capitalizeFirstLetterOfEachWord((country as string).replace('-', ' '))}
+      </h1>
       <HeadlineList
         headlines={allHeadlines}
         loading={status === 'loading'}
@@ -82,6 +90,12 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
     </Page>
   );
 };
+
+function capitalizeFirstLetterOfEachWord(str: string) {
+  return str.replace(/\b[a-z]/g, function (letter) {
+    return letter.toUpperCase();
+  });
+}
 
 export default HomePage;
 
