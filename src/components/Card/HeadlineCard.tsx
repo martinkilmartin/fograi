@@ -270,7 +270,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               {countryName}
             </Link>
           </Text>
-          <Badge size="lg" suppressHydrationWarning>
+          <Badge color="error" size="lg" suppressHydrationWarning>
             {diffDisplay(DATE)}
           </Badge>
         </div>
