@@ -3,6 +3,7 @@ import { Page } from '@layouts/Page';
 import React, { useEffect, useRef } from 'react';
 import { InfiniteData, useInfiniteQuery } from 'react-query';
 import { useMediaQuery } from 'react-responsive';
+import { Text } from '@nextui-org/react';
 import { getHeadlines } from '@lib/getHeadlines';
 import { HeadlineList } from '../components/Headlines';
 import { Headline } from '../types';
@@ -64,6 +65,22 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
 
   return (
     <Page title={APP_TITLE} heading={TAG_LINE}>
+      <Text
+        h1
+        style={{
+          position: 'absolute',
+          width: '1px',
+          height: '1px',
+          padding: 0,
+          margin: '-1px',
+          overflow: 'hidden',
+          clip: 'rect(0,0,0,0)',
+          whiteSpace: 'nowrap',
+          border: 0,
+        }}
+      >
+        {TAG_LINE}
+      </Text>
       <HeadlineList
         headlines={allHeadlines}
         loading={status === 'loading'}

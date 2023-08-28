@@ -78,7 +78,7 @@ const About = (): JSX.Element => {
     <Container css={{ padding: 10 }}>
       <Grid.Container justify="center">
         <Text
-          h2
+          h1
           size={60}
           css={{
             textGradient: '45deg, $blue600 0%, $red600 50%',

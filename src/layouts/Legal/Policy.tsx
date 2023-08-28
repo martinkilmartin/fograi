@@ -18,11 +18,11 @@ type Props = {
 const Policy = ({ title, paragraphs }: Props): JSX.Element => (
   <Container>
     <Grid.Container justify="center">
-      <h2>{title}</h2>
+      <h1>{title}</h1>
     </Grid.Container>
     <Grid.Container justify="center">
       {paragraphs.map((paragraph, i) => (
-        <Card key={i} css={{ mw: 1200, m: 20 , p: 20}} >
+        <Card key={i} css={{ mw: 1200, m: 20, p: 20 }}>
           {paragraph.title && (
             <dt className="mb-4">
               <h3 className="text-xl font-semibold text-center">
