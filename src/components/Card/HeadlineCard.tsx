@@ -14,10 +14,8 @@ import {
 } from '@nextui-org/react';
 import Link from 'next/link';
 import diffDisplay from '@lib/time-format';
-import Info from '@components/SVG/Info';
 import Bookmark from '@components/SVG/Bookmark';
 import Heart from '@components/SVG/Heart';
-import { COUNTRIES } from '@constants/COUNTRIES';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { Headline } from '../../types';
 import { Countries } from '../../types/countries';
@@ -42,14 +40,12 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const [saved, setSaved] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState(false);
   const DATE = new Date(headline.created_at);
-  const country = headline.source.substring(0, 2).toLowerCase();
 
   const sourceAbout = AllNewsSources.get(headline.source)?.about;
   const sourceURL = AllNewsSources.get(headline.source)?.url;
   const sourceName = AllNewsSources.get(headline.source)?.name;
   const emos = AllNewsSources.get(headline.source)?.emos;
   const est = AllNewsSources.get(headline.source)?.est;
-  const countryName = COUNTRIES.get(country as Countries);
 
   const toggleLike = async () => {
     setLikeLoading(true);
@@ -218,20 +214,24 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         <div
           style={{
             display: 'flex',
-            justifyContent: 'space-between',
+            justifyContent: 'space-around',
             alignItems: 'center',
             width: '100%',
           }}
         >
           <Popover isOpen={isOpen} onOpenChange={(open) => infoHandler(open)}>
             <Popover.Trigger>
-              <span
+              <Text
+                size={48}
                 role="button"
+                style={{
+                  cursor: 'pointer',
+                }}
                 aria-expanded={isOpen ? 'true' : 'false'}
                 aria-label="Information on news source"
               >
-                <Info />
-              </span>
+                {emos?.[1]}{' '}
+              </Text>
             </Popover.Trigger>
             <Popover.Content css={{ px: '$4', py: '$2' }}>
               <Grid.Container
@@ -312,38 +312,29 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               </Grid.Container>
             </Popover.Content>
           </Popover>
-          <Text size={28} weight={'bold'}>
-            <Link
-              onClick={(_event) => trackClicks('country')}
-              href={
-                '/country/' + countryName?.toLowerCase().replaceAll(' ', '-')
-              }
+          <Link
+            onClick={(_event) => trackClicks('source')}
+            href={sourceURL!}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Text
+              h2
+              size={calculateFontSize(sourceName ?? '')}
+              weight="bold"
+              style={{
+                textAlign: 'center',
+              }}
             >
-              {countryName}
-            </Link>
-          </Text>
+              {sourceName ?? ''}
+            </Text>
+          </Link>
           <Badge color="error" size="lg" suppressHydrationWarning>
             {diffDisplay(DATE)}
           </Badge>
         </div>
       </Card.Header>
       <hr />
-      <Card.Header>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: '100%',
-          }}
-        >
-          <a href={sourceURL} target="_blank" rel="noreferrer">
-            <Text h2 size={calculateFontSize(sourceName ?? '')} weight="bold">
-              {sourceName ?? ''}
-            </Text>
-          </a>
-        </div>
-      </Card.Header>
       <Card.Body css={{ py: '$2' }}>
         <Link
           onClick={(_event) => trackClicks('link')}

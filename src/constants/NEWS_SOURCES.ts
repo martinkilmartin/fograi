@@ -726,7 +726,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       est: 2012,
       about:
         "Agriland is Ireland's leading digital news and services platform for the farming and agricultural sectors. Serving as a vital resource for farming professionals and enthusiasts, offering in-depth coverage on industry news, weather reports, market trends, and innovative agricultural technologies.Agriland connects the Irish farming community with practical insights, expert advice, and a platform for discourse on issues that matter.",
-      emos: ['🚜', '🌱', '🐄'],
+      emos: ['🚜', '🇮🇪 ', '🌱', '🐄'],
       langs: ['en'],
       tags: [
         'IrishFarming',
@@ -1606,7 +1606,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Hot Press',
       url: 'https://www.hotpress.com/',
       est: 1977,
-      emos: ['📰', '🎭'],
+      emos: ['📰', '🇮🇪 ', '🎭'],
       logoWidth: 124,
       logoHeight: 66,
     },
@@ -1732,7 +1732,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'In response to the digital age, the journal has developed an online presence, making its valuable resources accessible to a global audience. This move into the digital space has allowed it to expand its readership beyond Ireland, reaching farming communities and those interested in agriculture worldwide.',
         'Through the years, the Irish Farmers Journal has remained committed to its mission of serving the Irish farming community. It continues to strive for excellence in journalism, providing high-quality, relevant, and timely content. Its rich history and dedication to its readers make it a vital resource within the agricultural industry.',
       ],
-      emos: ['📰', '🌱'],
+      emos: ['📰', '🇮🇪', '🌱'],
       logoWidth: 236,
       logoHeight: 92,
       langs: ['en'],
