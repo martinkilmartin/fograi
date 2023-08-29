@@ -175,6 +175,25 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     }
   };
 
+  const imageFilter = () => {
+    switch (Math.floor(Math.random() * (5 - 0 + 1)) + 0) {
+      case 0:
+        return 'blur(5px)';
+      case 1:
+        return 'contrast(5000%)';
+      case 2:
+        return 'hue-rotate(180deg)';
+      case 3:
+        return 'invert(100%)';
+      case 4:
+        return 'saturate(1500%)';
+      case 5:
+        return 'sepia(100%)';
+      default:
+        return 'blur(5px)';
+    }
+  };
+
   const trackClicks = (
     action:
       | 'like'
@@ -352,7 +371,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               alt={headline.img_alt ?? ''}
               onError={() => setLeadImgErr(true)}
               style={{
-                filter: 'blur(5px)',
+                filter: imageFilter(),
               }}
               showSkeleton
             />
