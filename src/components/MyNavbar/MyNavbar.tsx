@@ -48,9 +48,7 @@ export default function MyNavbar(): JSX.Element {
         <Navbar.Collapse>
           <Navbar.CollapseItem>
             <Link href="/bookmarks">
-              <Button flat>
-                <Text size={24}>🔖&nbsp;Bookmarks</Text>
-              </Button>
+              <Text size={24}>🔖&nbsp;Bookmarks</Text>
             </Link>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>
@@ -78,30 +76,19 @@ export default function MyNavbar(): JSX.Element {
             </Dropdown>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>
-            <Dropdown>
-              <Dropdown.Trigger>
-                <Dropdown.Button flat>
-                  <Text size={24}>ℹ️&nbsp;Info</Text>
-                </Dropdown.Button>
-              </Dropdown.Trigger>
-              <Dropdown.Menu>
-                <Dropdown.Item>
-                  <Link href={`/about`}>
-                    <Text size={24}>🤷&nbsp;About</Text>
-                  </Link>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  <Link href={`/contact`}>
-                    <Text size={24}>💌&nbsp;Contact</Text>
-                  </Link>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  <Link href={`/sources`}>
-                    <Text size={24}>📰&nbsp;Sources</Text>
-                  </Link>
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+            <Link href={`/about`}>
+              <Text size={24}>🤷&nbsp;About</Text>
+            </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Link href={`/contact`}>
+              <Text size={24}>💌&nbsp;Contact</Text>
+            </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Link href={`/sources`}>
+              <Text size={24}>📰&nbsp;Sources</Text>
+            </Link>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>
             <Dropdown>
