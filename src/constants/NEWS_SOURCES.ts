@@ -799,7 +799,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         "BALLS.ie is Ireland's premier online platform for sports enthusiasts, covering a vast range of sports from Hurling to American Football, and Curling to Downhill Skiing. BALLS.ie brings you real-time updates, engaging content in video, gif, image, and tweet form, and in-depth commentary on the games you love. Stay updated with BALLS.ie, where every sport has a story to tell.",
       logoWidth: 100,
       logoHeight: 100,
-      emos: ['💻', '⚽', '🏈', '🥌', '⛷'],
+      emos: ['💻', '🇮🇪', '⚽', '🏈', '🥌', '⛷'],
       langs: ['en'],
       tags: [
         'BALLSie',
@@ -900,7 +900,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       est: 1998,
       about:
         "Biz Plus is a monthly business magazine dedicated to the activities of Irish companies and companies based in Ireland. With a sharp focus on the pulse of Ireland's business sector, Biz Plus delivers insightful analysis, industry news, interviews, and reports on a monthly basis. Biz Plus is your definitive guide to understanding and navigating the ever-evolving Irish business landscape.",
-      emos: ['💻', '🧑‍💼', '📈'],
+      emos: ['💻', '🇮🇪', '🧑‍💼', '📈'],
       langs: ['en'],
       tags: [
         'BizPlus',
@@ -1078,7 +1078,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       est: 2009,
       about:
         "Classic Hits is Ireland's premier radio station for the best of 80's and 90's music. As the go-to platform for fans of these iconic decades, it offers a rich assortment of music that transcends generations.",
-      emos: ['📻', '🎭'],
+      emos: ['📻', '🇮🇪', '🎭'],
       langs: ['en'],
       logoWidth: 177,
       logoHeight: 100,
@@ -1419,7 +1419,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       est: 1835,
       about:
         'Engineers Ireland aims to support members at every career, from students and apprentices to qualified graduates and experienced engineers.',
-      emos: ['📰', '🧑‍💻'],
+      emos: ['📰', '🇮🇪', '🧑‍💻'],
       logoWidth: 136,
       logoHeight: 49,
       headerBG: '#002542',
@@ -1432,7 +1432,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'entertainment.ie',
       url: 'https://entertainment.ie/',
       est: 1997,
-      emos: ['💻', '🎭'],
+      emos: ['💻', '🇮🇪', '🎭'],
     },
   ],
   [
@@ -1443,7 +1443,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       est: 2014,
       about:
         "EVOKE is a popular digital platform tailored for Irish women. It offers a comprehensive blend of the latest news, high-street fashion, beauty trends, and captivating entertainment and celebrity gossip. With a firm finger on the pulse of what's trending, EVOKE is the go-to destination for women seeking to stay updated and inspired.",
-      emos: ['💻', '👭'],
+      emos: ['💻', '🇮🇪', '👭'],
       langs: ['en'],
       tags: [
         'EVOKE',
@@ -1492,7 +1492,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Fleet Transport',
       url: 'https://fleet.ie/',
       est: 2003,
-      emos: ['💻', '🚛'],
+      emos: ['💻', '🇮🇪', '🚛'],
       logoWidth: 300,
       logoHeight: 104,
     },
@@ -1565,7 +1565,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Gay Community News',
       url: 'https://gcn.ie/',
       est: 1988,
-      emos: ['📰', '🏳️‍🌈'],
+      emos: ['📰', '🇮🇪', '🏳️‍🌈'],
     },
   ],
   [
@@ -1574,7 +1574,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Her',
       url: 'https://www.her.ie/',
       est: 2012,
-      emos: ['💻', '👭'],
+      emos: ['💻', '🇮🇪', '👭'],
       logoWidth: 136,
       logoHeight: 70,
       headerBG: '#560537',
@@ -1587,7 +1587,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'HGV Ireland',
       url: 'https://www.hgvireland.com/',
       est: 2007,
-      emos: ['💻', '🚛'],
+      emos: ['💻', '🇮🇪', '🚛'],
     },
   ],
   [
@@ -1617,7 +1617,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'House And Home',
       url: 'https://www.houseandhome.ie/',
       est: 2001,
-      emos: ['💻', '🏡'],
+      emos: ['💻', '🇮🇪', '🏡'],
     },
   ],
   [
@@ -1626,7 +1626,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Image',
       url: 'https://www.image.ie/',
       est: 1975,
-      emos: ['📰', '👚'],
+      emos: ['📰', '🇮🇪', '👚'],
     },
   ],
   [
@@ -1655,7 +1655,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Irish Boxing',
       url: 'https://www.irish-boxing.com/',
       est: 2001,
-      emos: ['💻', '🥊'],
+      emos: ['💻', '🇮🇪', '🥊'],
     },
   ],
   [
@@ -1675,7 +1675,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Irish Country Magazine',
       url: 'https://irishcountrymagazine.ie/',
       est: 2012,
-      emos: ['💻', '🏡'],
+      emos: ['💻', '🇮🇪', '🏡'],
     },
   ],
   [
@@ -1766,7 +1766,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Irish Legal News',
       url: 'https://www.irishlegal.com/',
       est: 2015,
-      emos: ['💻', '🧑‍⚖️'],
+      emos: ['💻', '🇮🇪', '🧑‍⚖️'],
     },
   ],
   [
@@ -1775,7 +1775,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Irish Medical Times',
       url: 'https://www.imt.ie/',
       est: 1967,
-      emos: ['📰', '🧑‍⚕️'],
+      emos: ['📰', '🇮🇪', '🧑‍⚕️'],
     },
   ],
   [
@@ -1915,7 +1915,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Law Society Gazette',
       url: 'https://www.lawsociety.ie/gazette',
       est: 1907,
-      emos: ['📰', '🧑‍⚖️'],
+      emos: ['📰', '🇮🇪', '🧑‍⚖️'],
     },
   ],
   [
@@ -2145,7 +2145,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       est: 2007,
       about:
         'Merrion Street is an online platform that serves as a central hub for the latest news, updates, and announcements from the Irish government. It provides valuable insights into government policies, initiatives, and activities, covering a wide range of topics such as politics, economy, healthcare, education, and more. Merrion Street aims to foster transparency and open communication by delivering reliable and timely information directly from the government sources. Stay informed about the latest developments and decisions shaping Ireland through the comprehensive coverage offered by Merrion Street.',
-      emos: ['💻', '🃏'],
+      emos: ['💻', '🇮🇪', '🃏'],
       langs: ['en'],
       tags: [
         'MerrionStreet',
@@ -2198,7 +2198,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Motley',
       url: 'https://motley.ie/',
       est: 2006,
-      emos: ['💻', '🧑‍🎓'],
+      emos: ['💻', '🇮🇪', '🧑‍🎓'],
     },
   ],
   [
@@ -2355,7 +2355,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Off The Ball Sports',
       url: 'https://www.otbsports.com/',
       est: 2002,
-      emos: ['📻', '⚽'],
+      emos: ['📻', '🇮🇪', '⚽'],
     },
   ],
   [
@@ -2364,7 +2364,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Pundit Arena',
       url: 'https://punditarena.com/',
       est: 2013,
-      emos: ['💻', '⚽'],
+      emos: ['💻', '🇮🇪', '⚽'],
     },
   ],
   [
@@ -2407,7 +2407,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'In addition to its informative articles, RollerCoaster.ie also features expert insights from healthcare professionals, educators, and parenting specialists. This ensures that parents have access to reliable and evidence-based information to make informed decisions for their families.',
         'Over the years, RollerCoaster.ie has evolved into a comprehensive resource for Irish parents, offering not only practical advice but also emotional support during the various stages of parenthood. Its commitment to providing a platform that celebrates the unique journey of each family sets it apart as a trusted and beloved parenting website in Ireland.',
       ],
-      emos: ['💻', '🤰'],
+      emos: ['💻', '🇮🇪', '🤰'],
       langs: ['en'],
       logoWidth: 206,
       logoHeight: 45,
@@ -2441,7 +2441,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'RSVP Live',
       url: 'https://www.rsvplive.ie/',
       est: 2017,
-      emos: ['💻', '📸'],
+      emos: ['💻', '🇮🇪', '📸'],
     },
   ],
   [
@@ -2459,7 +2459,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Siliconrepublic.com',
       url: 'https://www.siliconrepublic.com/',
       est: 2001,
-      emos: ['💻', '🧮'],
+      emos: ['💻', '🇮🇪', '🧮'],
       logoWidth: 552,
       logoHeight: 50,
     },
@@ -2508,7 +2508,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Sports Joe',
       url: 'https://www.sportsjoe.ie/',
       est: 2014,
-      emos: ['💻', '⚽'],
+      emos: ['💻', '🇮🇪', '⚽'],
     },
   ],
   [
@@ -2530,7 +2530,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Tech Central',
       url: 'https://www.techcentral.ie/',
       est: 1984,
-      emos: ['📰', '🧮'],
+      emos: ['📰', '🇮🇪', '🧮'],
     },
   ],
   [
@@ -2569,7 +2569,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'In addition to its print edition, The Business Post has embraced digital platforms, offering online articles, multimedia content, and interactive features to cater to a diverse audience. It leverages technology to deliver up-to-date news, analysis, and opinion pieces to its readership across Ireland and beyond.',
         'With its commitment to high-quality journalism and comprehensive coverage, The Business Post continues to be a go-to source for professionals, executives, investors, and anyone interested in staying informed about the world of business.',
       ],
-      emos: ['📰', '🧑‍💼'],
+      emos: ['📰', '🇮🇪', '🧑‍💼'],
       langs: ['en'],
       tags: [
         'TheBusinessPost',
@@ -2827,7 +2827,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'The Gloss',
       url: 'https://thegloss.ie/',
       est: 2006,
-      emos: ['💻', '👚'],
+      emos: ['💻', '🇮🇪', '👚'],
     },
   ],
   [
@@ -2854,7 +2854,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'The Irish Field',
       url: 'https://www.theirishfield.ie/',
       est: 1870,
-      emos: ['📰', '🏇'],
+      emos: ['📰', '🇮🇪', '🏇'],
     },
   ],
   [
@@ -3021,7 +3021,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       est: 2010,
       about:
         'The 42 is a leading Irish sports news and analysis website, dedicated to providing comprehensive coverage of a wide range of sports, with a particular focus on football. As a trusted source of sports journalism in Ireland, The 42 delivers breaking news, in-depth features, expert analysis, and engaging opinion pieces that keep sports enthusiasts and football fans informed and entertained. With its team of experienced journalists and passionate contributors, The 42 offers a unique perspective on national and international sports events, including major tournaments, leagues, and competitions.',
-      emos: ['💻', '⚽'],
+      emos: ['💻', '🇮🇪', '⚽'],
       langs: ['en'],
       tags: [
         'The42',
@@ -3055,7 +3055,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'TN2 Magazine',
       url: 'https://www.tn2magazine.ie/',
       est: 2012,
-      emos: ['💻', '🧑‍🎓'],
+      emos: ['💻', '🇮🇪', '🧑‍🎓'],
     },
   ],
   [
@@ -3064,7 +3064,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Trinity News',
       url: 'https://trinitynews.ie/',
       est: 1953,
-      emos: ['📰', '🧑‍🎓'],
+      emos: ['📰', '🇮🇪', '🧑‍🎓'],
     },
   ],
   [
@@ -3115,7 +3115,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'University Express',
       url: 'https://uccexpress.ie/',
       est: 1997,
-      emos: ['💻', '🧑‍🎓'],
+      emos: ['💻', '🇮🇪', '🧑‍🎓'],
     },
   ],
   [
@@ -3135,7 +3135,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'With the rise of digital platforms, the University Observer seamlessly integrated its offerings online. This expansion allowed for a broader reach, interactive multimedia stories, and timely updates, catering to the dynamic needs of its readership.',
         "Remaining true to its mission, the Observer continues to be a platform that reflects, engages, and informs the university's student population.",
       ],
-      emos: ['📰', '🧑‍🎓'],
+      emos: ['📰', '🇮🇪', '🧑‍🎓'],
       langs: ['en'],
       tags: [
         'UniversityObserver',
@@ -3174,7 +3174,7 @@ export const IENewsSources = new Map<string, NewsSource>([
         'The University Times also serves as a platform for student engagement and expression, encouraging students to submit articles, opinion pieces, and letters to the editor. This fosters a sense of community and inclusivity, allowing different perspectives to be shared and discussed.',
         'With its commitment to upholding journalistic standards and serving the needs of the Trinity College Dublin community, the University Times continues to be an essential source of information and a platform for student expression on campus.',
       ],
-      emos: ['💻', '🧑‍🎓'],
+      emos: ['💻', '🇮🇪', '🧑‍🎓'],
       langs: ['en'],
       tags: [
         'UniversityTimes',
@@ -3298,7 +3298,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       name: 'Womans Way',
       url: 'https://www.womansway.ie/',
       est: 1963,
-      emos: ['📰', '👭'],
+      emos: ['📰', '🇮🇪', '👭'],
     },
   ],
   [
@@ -3309,7 +3309,7 @@ export const IENewsSources = new Map<string, NewsSource>([
       est: 1966,
       about:
         "RTÉ is Ireland's national public service media organization. It provides a wide range of news, entertainment, and educational content through television, radio, and online platforms. With a commitment to serving the Irish public, RTÉ plays a vital role in informing, entertaining, and connecting the people of Ireland.",
-      emos: ['📺', '📻', '🇮🇪'],
+      emos: ['📺', '🇮🇪', '📻'],
       langs: ['en'],
       tags: [
         'RTÉ',
