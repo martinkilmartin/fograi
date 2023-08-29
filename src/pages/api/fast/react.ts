@@ -13,21 +13,30 @@ export default async function handler(
   if (req.method !== 'POST') {
     return res.status(405).end();
   }
-  const { id, liked } = req.query;
-  if (!id) {
+  const { id, action, reaction } = req.query;
+  if (
+    !(typeof id === 'string') ||
+    (action !== 'like' &&
+      action !== 'saved' &&
+      action !== 'shared' &&
+      action !== 'link' &&
+      action !== 'info' &&
+      action !== 'source' &&
+      action !== 'country') ||
+    (reaction !== 'true' && reaction !== 'false')
+  ) {
     return res.status(400).end();
   }
-  if (typeof id === 'string') {
-    try {
-      const data =
-        liked === 'true' ? await redis.decr(id) : await redis.incr(id);
-      res.status(200).json({ result: data });
-    } catch (error) {
-      res.status(500).json({
-        error: `Failed to ${liked === 'true' ? 'decrement' : 'increment'}.`,
-      });
-    }
-  } else {
-    return res.status(400).end();
+
+  try {
+    const data =
+      reaction === 'true'
+        ? await redis.hincrby(id, action, -1)
+        : await redis.hincrby(id, action, 1);
+    res.status(200).json({ result: data });
+  } catch (error) {
+    res.status(500).json({
+      error: `Failed to ${reaction === 'true' ? 'decrement' : 'increment'}.`,
+    });
   }
 }

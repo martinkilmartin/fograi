@@ -55,7 +55,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     setLikeLoading(true);
     try {
       const response = await fetch(
-        `/api/fast/react?id=${headline.id}&liked=${liked}`,
+        `/api/fast/react?id=${headline.id}&action=like&reaction=${liked}`,
         {
           method: 'POST',
         },
@@ -96,7 +96,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     setLiked(likedPosts.includes(headline.id));
   }, [headline.id]);
 
-  const saveToOrRemoveFromCollection = () => {
+  const saveToOrRemoveFromCollection = async () => {
     const currentCollection = retrieveCollection();
     if (currentCollection) {
       if (saved && currentCollection.get(headline.id)) {
@@ -117,6 +117,16 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
       localStorage.setItem(COLLECTION_KEY, JSON.stringify(mapAsArray));
       setSaved(true);
     }
+    try {
+      fetch(
+        `/api/fast/react?id=${headline.id}&action=saved&reaction=${saved}`,
+        {
+          method: 'POST',
+        },
+      );
+    } catch (_error) {
+      // do nothing
+    }
   };
 
   function retrieveCollection() {
@@ -131,6 +141,13 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   }
 
   const share = async () => {
+    try {
+      fetch(`/api/fast/react?id=${headline.id}&action=shared&reaction=false`, {
+        method: 'POST',
+      });
+    } catch (_error) {
+      // do nothing
+    }
     if (navigator.share) {
       await navigator.share({
         title: headline.headline,
@@ -155,6 +172,33 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     return newSize;
   }
 
+  const infoHandler = (open: boolean) => {
+    setIsOpen(open);
+    trackClicks('info');
+  };
+
+  const trackClicks = (
+    action:
+      | 'like'
+      | 'saved'
+      | 'shared'
+      | 'link'
+      | 'info'
+      | 'source'
+      | 'country',
+  ) => {
+    try {
+      fetch(
+        `/api/fast/react?id=${headline.id}&action=${action}&reaction=false`,
+        {
+          method: 'POST',
+        },
+      );
+    } catch (_error) {
+      // do nothing
+    }
+  };
+
   return (
     <Card
       isHoverable
@@ -177,7 +221,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             width: '100%',
           }}
         >
-          <Popover isOpen={isOpen} onOpenChange={(open) => setIsOpen(open)}>
+          <Popover isOpen={isOpen} onOpenChange={(open) => infoHandler(open)}>
             <Popover.Trigger>
               <span
                 role="button"
@@ -250,6 +294,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
                     <Col span={4}>
                       <Row>
                         <Link
+                          onClick={(_event) => trackClicks('source')}
                           href={`/source/${sourceName
                             ?.toLowerCase()
                             .replaceAll(' ', '-')}`}
@@ -267,6 +312,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           </Popover>
           <Text size={28} weight={'bold'}>
             <Link
+              onClick={(_event) => trackClicks('country')}
               href={
                 '/country/' + countryName?.toLowerCase().replaceAll(' ', '-')
               }
@@ -297,7 +343,8 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         </div>
       </Card.Header>
       <Card.Body css={{ py: '$2' }}>
-        <a
+        <Link
+          onClick={(_event) => trackClicks('link')}
           href={headline.link}
           target="_blank"
           rel="noreferrer"
@@ -330,7 +377,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               {headline.headline}&nbsp;↗
             </Text>
           </Row>
-        </a>
+        </Link>
       </Card.Body>
       <Card.Divider />
       <Card.Footer
