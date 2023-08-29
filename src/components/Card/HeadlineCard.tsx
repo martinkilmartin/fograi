@@ -174,7 +174,9 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
 
   const infoHandler = (open: boolean) => {
     setIsOpen(open);
-    trackClicks('info');
+    if (open) {
+      trackClicks('info');
+    }
   };
 
   const trackClicks = (
