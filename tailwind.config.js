@@ -1,6 +1,10 @@
-module.exports = {
-  mode: 'jit',
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+import { nextui } from '@nextui-org/react';
+import typography from '@tailwindcss/typography';
+
+/** @type {import('tailwindcss').Config} */
+const config = {
+  content: ['./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       screens: {
@@ -15,5 +19,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/typography'), require('daisyui')],
-}
+  plugins: [typography, nextui()],
+};
+
+export default config;
