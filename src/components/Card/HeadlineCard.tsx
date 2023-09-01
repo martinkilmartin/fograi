@@ -10,12 +10,14 @@ import {
   Popover,
   Row,
   Text,
+  Tooltip,
   useTheme,
 } from '@nextui-org/react';
 import Link from 'next/link';
 import diffDisplay from '@lib/time-format';
 import Bookmark from '@components/SVG/Bookmark';
 import Heart from '@components/SVG/Heart';
+import X from '@components/SVG/X';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { Headline } from '../../types';
 import { Countries } from '../../types/countries';
@@ -39,6 +41,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const [likeLoading, setLikeLoading] = useState<boolean>(false);
   const [saved, setSaved] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [canShare, setShareable] = useState(true);
   const DATE = new Date(headline.created_at);
 
   const sourceAbout = AllNewsSources.get(headline.source)?.about;
@@ -144,15 +147,13 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     } catch (_error) {
       // do nothing
     }
-    if (navigator.share) {
+    try {
       await navigator.share({
         title: headline.headline,
         url: headline.link,
       });
-    } else {
-      alert(
-        `The Web Share API is not supported by your browser: ${window.navigator.userAgent}.`,
-      );
+    } catch (_e) {
+      setShareable(false);
     }
   };
 
@@ -215,6 +216,12 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
       // do nothing
     }
   };
+
+  const twShare =
+    'https://twitter.com/intent/tweet?text=' +
+    headline.headline +
+    '&url=' +
+    headline.link;
 
   return (
     <Card
@@ -412,7 +419,24 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             <Bookmark someBool={saved} />
           </Grid>
           <Grid xs={4} justify="center">
-            <Image src={shareImg} alt="Share" height={32} onClick={share} />
+            {canShare && (
+              <Image src={shareImg} alt="Share" height={32} onClick={share} />
+            )}
+            {!canShare && (
+              <Link
+                href={twShare}
+                target="_blank"
+                rel="noreferrer"
+                title="Share on X"
+              >
+                <Tooltip
+                  content={'Browser share not supported. Defaulting to X.'}
+                >
+                  {' '}
+                  <X />
+                </Tooltip>
+              </Link>
+            )}
           </Grid>
         </Grid.Container>
       </Card.Footer>

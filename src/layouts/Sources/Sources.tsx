@@ -73,6 +73,26 @@ const Sources = ({ title }: Props): JSX.Element => {
     }
   }, [likedSources]);
 
+  const trackClicks = (
+    action:
+      | 'like'
+      | 'saved'
+      | 'shared'
+      | 'link'
+      | 'info'
+      | 'source'
+      | 'country',
+    ns: string,
+  ) => {
+    try {
+      fetch(`/api/fast/react?id=${ns}&action=${action}&reaction=false`, {
+        method: 'POST',
+      });
+    } catch (_error) {
+      // do nothing
+    }
+  };
+
   return (
     <Container>
       <h1 style={{ textAlign: 'center' }}>
@@ -110,7 +130,12 @@ const Sources = ({ title }: Props): JSX.Element => {
                 >
                   &nbsp;{cFlag}&nbsp;
                   <b>
-                    <Link href={sourceURL} target="_blank" rel="noreferrer">
+                    <Link
+                      onClick={(_event) => trackClicks('link', ns[0])}
+                      href={sourceURL}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       {sourceName}
                     </Link>
                   </b>
