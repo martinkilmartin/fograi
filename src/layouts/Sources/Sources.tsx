@@ -1,12 +1,11 @@
+import { useState, useEffect } from 'react';
 import {
   Container,
-  Card,
-  Text,
-  Badge,
-  Collapse,
   Grid,
   Link,
-  Row,
+  Switch,
+  SwitchEvent,
+  Text,
 } from '@nextui-org/react';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { flags } from '@constants/FLAGS';
@@ -17,17 +16,49 @@ type Props = {
 };
 
 const Sources = ({ title }: Props): JSX.Element => {
-  function calculateFontSize(text: string, baseSize = 38): number {
-    const reductionFactor = 0.5;
+  const [likedSources, likSource] = useState<Set<keyof typeof AllNewsSources>>(
+    () => {
+      if (typeof window !== 'undefined') {
+        const locallyLikedSources = localStorage.getItem('likedSources');
+        if (locallyLikedSources && locallyLikedSources !== '[]') {
+          return new Set(JSON.parse(locallyLikedSources)) as Set<
+            keyof typeof AllNewsSources
+          >;
+        }
+      }
+      return new Set<keyof typeof AllNewsSources>();
+    },
+  );
 
-    let newSize = baseSize - text.length * reductionFactor;
+  const addItem = (item: keyof typeof AllNewsSources) => {
+    likSource((prevSet) => new Set([...prevSet, item]));
+  };
 
-    const minimumSize = 12;
-    if (newSize < minimumSize) {
-      newSize = minimumSize;
+  const removeItem = (item: keyof typeof AllNewsSources) => {
+    likSource((prevSet) => {
+      const newSet = new Set(prevSet);
+      newSet.delete(item);
+      return newSet;
+    });
+  };
+
+  const sourcy = (e: SwitchEvent, ns: keyof typeof AllNewsSources) => {
+    if (e.target.checked) {
+      addItem(ns);
+    } else {
+      removeItem(ns);
     }
-    return newSize;
-  }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const saveLocally = () => {
+        localStorage.setItem('likedSources', JSON.stringify([...likedSources]));
+      };
+      saveLocally();
+    }
+  }, [likedSources]);
+
   return (
     <Container>
       <h1 style={{ textAlign: 'center' }}>
@@ -39,72 +70,39 @@ const Sources = ({ title }: Props): JSX.Element => {
           .map((ns, i) => {
             const country = ns[0].substring(0, 2).toLowerCase();
             const cFlag = flags.get(country as Countries);
-            const sourceURL = AllNewsSources.get(ns[0])?.url;
             const sourceName = AllNewsSources.get(ns[0])?.name;
-            const sourceAbout = AllNewsSources.get(ns[0])?.about;
             const sourceEst = AllNewsSources.get(ns[0])?.est;
+            const sourceURL = AllNewsSources.get(ns[0])?.url;
+            const isLiked = likedSources.has(
+              ns[0] as keyof typeof AllNewsSources,
+            );
             return (
               <Grid xs={12} sm={6} md={6} lg={4} xl={3} key={i}>
-                <Card>
-                  <Card.Body>
-                    <Grid.Container>
-                      <Row justify="space-around" align="center">
-                        <Link href={sourceURL} target="_blank" rel="noreferrer">
-                          <Text
-                            h2
-                            size={calculateFontSize(sourceName ?? '', 28)}
-                            weight="bold"
-                            style={{
-                              borderRadius: '0',
-                              fontFamily:
-                                '"Georgia", "Times New Roman", Times, serif',
-                            }}
-                          >
-                            {cFlag}&nbsp;{sourceName ?? ''}
-                          </Text>
-                        </Link>
-                      </Row>
-                      {sourceAbout && (
-                        <Grid.Container>
-                          <Grid xs={12}>
-                            <Collapse title={<Text h4>About</Text>} bordered>
-                              <Text
-                                size={14}
-                                css={{ mt: '$1' }}
-                                color="#888888"
-                              >
-                                {sourceAbout}
-                              </Text>
-                            </Collapse>
-                          </Grid>
-                        </Grid.Container>
-                      )}
-                    </Grid.Container>
-                  </Card.Body>
-                  <Card.Footer>
-                    <Grid.Container justify="space-evenly" alignItems="center">
-                      <Grid>
-                        <Text size={18} color="#888888">
-                          Since&nbsp;
-                          <Text b color="foreground" size={18}>
-                            {sourceEst}
-                          </Text>
-                        </Text>
-                      </Grid>
-                      <Grid>
-                        <Link
-                          href={`/source/${sourceName
-                            ?.toLowerCase()
-                            .replaceAll(' ', '-')}`}
-                        >
-                          <Badge color="primary" size="lg">
-                            View All
-                          </Badge>
-                        </Link>
-                      </Grid>
-                    </Grid.Container>
-                  </Card.Footer>
-                </Card>
+                <Switch
+                  checked={isLiked}
+                  onChange={(e) =>
+                    sourcy(e, ns[0] as keyof typeof AllNewsSources)
+                  }
+                  size="xl"
+                  color="success"
+                  iconOn="❤️"
+                  iconOff="◻️"
+                />
+                <Text
+                  size={22}
+                  style={{
+                    fontFamily: '"Georgia", "Times New Roman", Times, serif',
+                  }}
+                >
+                  &nbsp;{cFlag}&nbsp;
+                  <b>
+                    <Link href={sourceURL} target="_blank" rel="noreferrer">
+                      {sourceName}
+                    </Link>
+                  </b>
+                  &nbsp;
+                  <i>{sourceEst}</i>
+                </Text>
               </Grid>
             );
           })}
