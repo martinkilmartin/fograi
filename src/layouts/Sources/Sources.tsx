@@ -32,6 +32,13 @@ const Sources = ({ title }: Props): JSX.Element => {
 
   const addItem = (item: keyof typeof AllNewsSources) => {
     likSource((prevSet) => new Set([...prevSet, item]));
+    try {
+      fetch(`/api/fast/react?id=${item as string}&action=like&reaction=false`, {
+        method: 'POST',
+      });
+    } catch (_error) {
+      // do nothing
+    }
   };
 
   const removeItem = (item: keyof typeof AllNewsSources) => {
@@ -40,6 +47,13 @@ const Sources = ({ title }: Props): JSX.Element => {
       newSet.delete(item);
       return newSet;
     });
+    try {
+      fetch(`/api/fast/react?id=${item as string}&action=like&reaction=true`, {
+        method: 'POST',
+      });
+    } catch (_error) {
+      // do nothing
+    }
   };
 
   const sourcy = (e: SwitchEvent, ns: keyof typeof AllNewsSources) => {
