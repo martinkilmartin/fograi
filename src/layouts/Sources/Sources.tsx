@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import {
+  Badge,
   Container,
   Grid,
   Link,
@@ -128,7 +129,17 @@ const Sources = ({ title }: Props): JSX.Element => {
                     fontFamily: '"Georgia", "Times New Roman", Times, serif',
                   }}
                 >
-                  &nbsp;{cFlag}&nbsp;
+                  <Link
+                    href={`/source/${sourceName
+                      ?.toLowerCase()
+                      .replaceAll(' ', '-')}`}
+                  >
+                    &nbsp;
+                    <Badge variant="bordered" size={'lg'}>
+                      {cFlag}
+                    </Badge>
+                    &nbsp;
+                  </Link>
                   <b>
                     <Link
                       onClick={(_event) => trackClicks('link', ns[0])}
@@ -136,12 +147,12 @@ const Sources = ({ title }: Props): JSX.Element => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      {sourceName}
+                      {sourceName}&nbsp;↗
                     </Link>
                   </b>
                   &nbsp;
                   <i>{sourceEst}</i>
-                </Text>
+                </Text>{' '}
               </Grid>
             );
           })}

@@ -76,26 +76,6 @@ const Countries = ({ title }: Props): JSX.Element => {
     }
   }, [likedCountries]);
 
-  const trackClicks = (
-    action:
-      | 'like'
-      | 'saved'
-      | 'shared'
-      | 'link'
-      | 'info'
-      | 'source'
-      | 'country',
-    ns: string,
-  ) => {
-    try {
-      fetch(`/api/fast/react?id=${ns}&action=${action}&reaction=false`, {
-        method: 'POST',
-      });
-    } catch (_error) {
-      // do nothing
-    }
-  };
-
   return (
     <Container>
       <h1 style={{ textAlign: 'center' }}>
@@ -125,7 +105,6 @@ const Countries = ({ title }: Props): JSX.Element => {
                 &nbsp;{cFlag}&nbsp;
                 <b>
                   <Link
-                    onClick={(_event) => trackClicks('link', ns[0])}
                     href={`/country/${ns[1]
                       ?.toLowerCase()
                       .replaceAll(' ', '-')}`}
