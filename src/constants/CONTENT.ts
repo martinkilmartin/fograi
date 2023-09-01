@@ -16,6 +16,7 @@ export const CONTACT_SUCCESS = 'Message received! 🦊';
 export const CONTACT_FAILURE = "🤷 Error! It's us, not you! 🤦";
 export const COOKIE_TITLE = '🍪 Cookie Policy';
 export const PRIVACY_TITLE = '👀 Privacy Policy';
+export const COUNTRIES_TITLE = '🌎 🌍 🌏 Countries';
 export const SOURCES_TITLE = '😶‍🌫️ Sources';
 export const TERMS_TITLE = '⚖ Terms Of Use';
 export const HTTP_403 = 'Woah there Betsy 🐄';

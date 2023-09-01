@@ -8,8 +8,6 @@ import {
 } from '@nextui-org/react';
 import { useTheme as useNextTheme } from 'next-themes';
 import Image from 'next/image';
-import { flags } from '@constants/FLAGS';
-import { COUNTRIES } from '@constants/COUNTRIES';
 
 export default function MyNavbar(): JSX.Element {
   const { setTheme } = useNextTheme();
@@ -46,42 +44,23 @@ export default function MyNavbar(): JSX.Element {
         </Navbar.Content>
         <Navbar.Collapse>
           <Navbar.CollapseItem>
-            <Link href="/bookmarks">
-              <Text size={24}>🔖&nbsp;Bookmarks</Text>
-            </Link>
-          </Navbar.CollapseItem>
-          <Navbar.CollapseItem>
-            <Dropdown>
-              <Dropdown.Trigger>
-                <Dropdown.Button flat>
-                  <Text size={24}>🗺️&nbsp;Countries</Text>
-                </Dropdown.Button>
-              </Dropdown.Trigger>
-              <Dropdown.Menu>
-                {Array.from(COUNTRIES.entries()).map(([code, name]) => (
-                  <Dropdown.Item key={code}>
-                    <Link
-                      href={`/country/${name
-                        ?.toLowerCase()
-                        .replaceAll(' ', '-')}`}
-                    >
-                      <Text size={24}>
-                        {flags.get(code)}&nbsp;{name}
-                      </Text>
-                    </Link>
-                  </Dropdown.Item>
-                ))}
-              </Dropdown.Menu>
-            </Dropdown>
-          </Navbar.CollapseItem>
-          <Navbar.CollapseItem>
             <Link href={`/about`}>
               <Text size={24}>🤷&nbsp;About</Text>
             </Link>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>
+            <Link href="/bookmarks">
+              <Text size={24}>🔖&nbsp;Bookmarks</Text>
+            </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
             <Link href={`/contact`}>
               <Text size={24}>💌&nbsp;Contact</Text>
+            </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Link href="/countries">
+              <Text size={24}>🗺️&nbsp;Countries</Text>
             </Link>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>
