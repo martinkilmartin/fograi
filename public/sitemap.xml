@@ -16,6 +16,21 @@
     <priority>0.2</priority>
   </url>
   <url>
+    <loc>https://nooze.news/countries</loc>
+    <changefreq>hourly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nooze.news/sources</loc>
+    <changefreq>hourly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nooze.news/roadmap</loc>
+    <changefreq>hourly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://nooze.news/cookie</loc>
     <changefreq>hourly</changefreq>
     <priority>0.1</priority>
@@ -29,11 +44,6 @@
     <loc>https://nooze.news/terms</loc>
     <changefreq>hourly</changefreq>
     <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>https://nooze.news/countries</loc>
-    <changefreq>hourly</changefreq>
-    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://nooze.news/country/canada</loc>

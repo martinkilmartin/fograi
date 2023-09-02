@@ -69,6 +69,11 @@ export default function MyNavbar(): JSX.Element {
             </Link>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>
+            <Link href={`/roadmap`}>
+              <Text size={24}>📍&nbsp;Roadmap</Text>
+            </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
             <Dropdown>
               <Dropdown.Trigger>
                 <Dropdown.Button flat>
