@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import { createTheme, NextUIProvider } from '@nextui-org/react';
 import { ThemeProvider } from 'next-themes';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { Analytics } from '@vercel/analytics/react';
 
 const lightTheme = createTheme({
   type: 'light',
@@ -28,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <NextUIProvider>
         <QueryClientProvider client={queryClient}>
           <Component {...pageProps} />
+          <Analytics />
         </QueryClientProvider>
       </NextUIProvider>
     </ThemeProvider>
