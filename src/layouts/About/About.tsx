@@ -126,7 +126,7 @@ const About = (): JSX.Element => {
             textShadow: '2px 2px 2px rgba(0,0,0,0.2)',
           }}
         >
-          Dive into what matters most.
+          Only Headlines.
         </Text>
       </Grid.Container>
       <Grid.Container justify="center" ref={ref2}>
@@ -138,31 +138,18 @@ const About = (): JSX.Element => {
             textShadow: '2px 2px 2px rgba(0,0,0,0.2)',
           }}
         >
-          <b>Continuous</b> headlines from <b>{ALL_SIZES}</b> global news
-          sources.
+          <Tooltip content={ALL_SIZES}>Hundreds of global sources.</Tooltip>
         </Text>
       </Grid.Container>
-      <Grid.Container justify="center" ref={ref3}>
+      <Grid.Container justify="center" ref={ref4}>
         <Text
           size={24}
-          style={{ marginTop: '10px' }}
-          css={{
+          style={{
+            marginTop: '10px',
             fontFamily: 'serif',
             textShadow: '2px 2px 2px rgba(0,0,0,0.2)',
           }}
         >
-          Showcasing each publication&apos;s <b>lead</b> story.
-        </Text>
-      </Grid.Container>
-      <Grid.Container
-        justify="center"
-        css={{
-          fontFamily: 'serif',
-          textShadow: '2px 2px 2px rgba(0,0,0,0.2)',
-        }}
-        ref={ref4}
-      >
-        <Text size={24} style={{ marginTop: '10px' }}>
           Stay informed.
         </Text>
       </Grid.Container>
