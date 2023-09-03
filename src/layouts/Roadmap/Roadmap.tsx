@@ -105,8 +105,8 @@ const Roadmap = ({ title = true }: Props): JSX.Element => {
               <Row>
                 <Col span={9}>
                   <Text>
-                    From selecting or hiding individual publications, entire
-                    countries, or particular niches and categories.
+                    Select or hide individual publications, countries, languages
+                    or particular niches and categories.
                   </Text>
                 </Col>
                 <Col span={3}>
