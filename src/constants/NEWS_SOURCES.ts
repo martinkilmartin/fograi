@@ -6207,7 +6207,7 @@ export const USNewsSources = new Map<string, NewsSource>([
     {
       name: 'Maui Now',
       url: 'https://mauinow.com/',
-      est: 1900,
+      est: 2002,
       about:
         'Bringing you the latest news, information, and updates about Maui and the surrounding islands. Maui Now covers a wide range of topics including local news, events, weather, sports, and more.',
       description: [
@@ -6236,6 +6236,71 @@ export const USNewsSources = new Map<string, NewsSource>([
       },
       headerBG: '#FFFFFF',
       primaryColor: '#184787',
+    },
+  ],
+  [
+    'US_CULL',
+    {
+      name: 'The Cullman Times',
+      url: 'https://www.cullmantimes.com/',
+      est: 1901,
+      about:
+        'Delivering local news, events, and updates to the Cullman community since 1901. The Cullman Times provides comprehensive coverage of important topics, ranging from breaking news and sports to community events and more.',
+      description: [
+        'The Cullman Times has been a steadfast source of news and information for the Cullman community for more than a century. Committed to delivering relevant and timely updates, the newspaper covers a wide range of topics that matter to its readers.',
+        'From breaking news and local events to in-depth sports coverage and community features, The Cullman Times keeps its audience well-informed and engaged. With a focus on accurate reporting and a dedication to serving the local community, the newspaper has become a trusted voice that residents can rely on.',
+        'Through its digital presence, The Cullman Times continues to adapt to changing media landscapes, ensuring that its content reaches a wide audience. Whether in print or online, the newspaper remains an essential source of information, connecting the Cullman community and fostering a sense of unity.',
+      ],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+      logoWidth: 333,
+      logoHeight: 42,
+      tags: [
+        'TheCullmanTimes',
+        'LocalNews',
+        'CommunityEvents',
+        'SportsCoverage',
+        'BreakingNews',
+      ],
+      socials: {
+        youtube: 'https://www.youtube.com/@TheCullmanTimes',
+        twitter: 'https://twitter.com/TheCullmanTimes/',
+        facebook: 'https://www.facebook.com/TheCullmanTimes/',
+        apple:
+          'https://itunes.apple.com/us/app/cullman-times/id912940499?ls=1&mt=8',
+        android:
+          'https://play.google.com/store/apps/details?id=com.thecullmantimes.android.prod&hl=en',
+      },
+      headerBG: '#FFFFFF',
+      primaryColor: '#28a745',
+    },
+  ],
+  [
+    'US_DEGL',
+    {
+      name: 'Dothan Eagle',
+      url: 'https://dothaneagle.com/',
+      est: 1908,
+      about:
+        'Delivering local news and updates to the Dothan community. The Dothan Eagle is dedicated to providing comprehensive coverage of important local events, breaking news, and more.',
+      description: [
+        "The Dothan Eagle is a trusted source of news and information for the Dothan community. With a commitment to accuracy and relevance, the newspaper covers a wide range of topics that impact its readers' lives.",
+        'From local events and breaking news to in-depth coverage of community issues, The Dothan Eagle strives to keep its audience informed and engaged. Through its journalistic efforts, the newspaper aims to highlight the stories that matter most to the residents of Dothan.',
+        "By offering both print and digital platforms, The Dothan Eagle ensures that its content reaches a diverse audience. The newspaper's dedication to providing reliable and up-to-date information makes it an essential resource for those seeking to stay informed about local matters.",
+      ],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+      logoWidth: 600,
+      logoHeight: 51,
+      tags: ['DothanEagle', 'LocalNews', 'CommunityUpdates', 'BreakingNews'],
+      socials: {
+        youtube: 'https://www.youtube.com/@dothaneagle',
+        twitter: 'https://twitter.com/dothaneagle',
+        facebook: 'https://www.facebook.com/dothaneagle/',
+        instagram: 'https://www.instagram.com/dothaneagle/',
+      },
+      headerBG: '#FFFFFF',
+      primaryColor: '#00000',
     },
   ],
 ]);
