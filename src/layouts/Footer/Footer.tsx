@@ -2,6 +2,8 @@ import { Grid, Text } from '@nextui-org/react';
 import { Copyright } from '@components/Copyright';
 import { FOOTER_LINKS } from '@constants/FOOTER_LINKS';
 import Link from 'next/link';
+import { RedditLogo } from '@components/SVG';
+import X from '@components/SVG/X';
 
 const Footer = (): JSX.Element => (
   <footer>
@@ -23,6 +25,22 @@ const Footer = (): JSX.Element => (
           </div>
         </Grid>
       ))}
+    </Grid.Container>
+    <Grid.Container justify="center" gap={2}>
+      <Grid>
+        <Text>
+          <Link href="https://www.reddit.com/u/noozenews" target="_blank">
+            <RedditLogo />
+          </Link>
+        </Text>
+      </Grid>
+      <Grid>
+        <Text>
+          <Link href="https://twitter.com/NoozeNews" target="_blank">
+            <X />
+          </Link>
+        </Text>
+      </Grid>
     </Grid.Container>
     <div>
       <Copyright />

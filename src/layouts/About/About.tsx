@@ -1,6 +1,4 @@
 import { Container, Grid, Link, Text, Tooltip } from '@nextui-org/react';
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
 import {
   CANewsSources,
   IENewsSources,
@@ -14,6 +12,7 @@ import {
 import { flags } from '@constants/FLAGS';
 import { COUNTRIES } from '@constants/COUNTRIES';
 import { Countries } from 'src/types/countries';
+import { Roadmap } from '@layouts/Roadmap';
 
 const CA_SOURCES_SIZE = CANewsSources.size;
 const IE_SOURCES_SIZE = IENewsSources.size;
@@ -46,150 +45,123 @@ const CSM = new Map([
 ]);
 
 const About = (): JSX.Element => {
-  const ref1 = useRef(null);
-  const ref2 = useRef(null);
-  const ref3 = useRef(null);
-  const ref4 = useRef(null);
-  const ref5 = useRef(null);
-  const ref6 = useRef(null);
-
-  const refs = [ref1, ref2, ref3, ref4, ref5, ref6];
-
-  useEffect(() => {
-    refs.forEach((ref, idx) => {
-      const startPosition = idx % 2 === 0 ? '-100%' : '100%';
-
-      gsap.fromTo(
-        ref.current,
-        {
-          x: startPosition,
-          opacity: 0,
-        },
-        {
-          x: '0%', // Settle to its original position
-          opacity: 1,
-          duration: 1.6,
-          ease: 'power2.out',
-          delay: idx * 1.6, // Each element starts 0.6 seconds after the previous one
-        },
-      );
-    });
-  }, []);
-
   return (
-    <Container css={{ padding: 10 }}>
-      <Grid.Container justify="center">
-        <Text
-          h1
-          size={60}
-          css={{
-            textGradient: '45deg, $blue600 0%, $red600 50%',
-          }}
-          weight="bold"
-        >
-          Know Everything.
-        </Text>
-      </Grid.Container>
-      <Grid.Container justify="center">
-        <Text
-          h2
-          size={60}
-          css={{
-            textGradient: '45deg, $red600 0%, $blue600 100%',
-          }}
-          weight="bold"
-        >
-          Now.
-        </Text>
-      </Grid.Container>
-      <Grid.Container justify="center" gap={1}>
-        {Array.from(flags.entries()).map((f) => (
-          <Grid key={f[0]}>
-            <Tooltip content={CSM.get(f[0])}>
-              <Link
-                href={`/country/${COUNTRIES.get(f[0] as Countries)
-                  ?.toLowerCase()
-                  .replaceAll(' ', '-')}`}
-              >
-                <Text h2>{f[1]}</Text>
-              </Link>
-            </Tooltip>
-          </Grid>
-        ))}
-      </Grid.Container>
-      <Grid.Container justify="center" ref={ref1}>
-        <Text
-          size={24}
-          style={{ marginTop: '10px' }}
-          css={{
-            fontFamily: 'serif',
-            textShadow: '2px 2px 2px rgba(0,0,0,0.2)',
-          }}
-        >
-          Only Headlines.
-        </Text>
-      </Grid.Container>
-      <Grid.Container justify="center" ref={ref2}>
-        <Text
-          size={24}
-          style={{ marginTop: '10px' }}
-          css={{
-            fontFamily: 'serif',
-            textShadow: '2px 2px 2px rgba(0,0,0,0.2)',
-          }}
-        >
-          <Tooltip content={ALL_SIZES}>Hundreds of global sources.</Tooltip>
-        </Text>
-      </Grid.Container>
-      <Grid.Container justify="center" ref={ref4}>
-        <Text
-          size={24}
-          style={{
-            marginTop: '10px',
-            fontFamily: 'serif',
-            textShadow: '2px 2px 2px rgba(0,0,0,0.2)',
-          }}
-        >
-          Stay informed.
-        </Text>
-      </Grid.Container>
-      <Grid.Container justify="center" ref={ref5}>
-        <Text size={24} style={{ marginTop: '10px' }}>
-          <Link
-            href="https://newsbrandsireland.ie/journalismmatters/"
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              textDecoration: 'none',
-              transition: 'color 0.3s',
-              fontWeight: 'bold',
+    <>
+      <Container css={{ padding: 10 }}>
+        <Grid.Container justify="center">
+          <Text
+            h1
+            size={60}
+            css={{
+              textGradient: '45deg, $blue600 0%, $red600 50%',
             }}
-            onMouseOver={(e) => (e.currentTarget.style.color = '#D71E1F')}
-            onMouseOut={(e) => (e.currentTarget.style.color = '')}
+            weight="bold"
           >
-            #journalismmatters&nbsp;↗
+            Know Everything.
+          </Text>
+        </Grid.Container>
+        <Grid.Container justify="center">
+          <Text
+            h2
+            size={60}
+            css={{
+              textGradient: '45deg, $red600 0%, $blue600 100%',
+            }}
+            weight="bold"
+          >
+            Now.
+          </Text>
+        </Grid.Container>
+        <Grid.Container justify="center" gap={1}>
+          {Array.from(flags.entries()).map((f) => (
+            <Grid key={f[0]}>
+              <Tooltip content={CSM.get(f[0])}>
+                <Link
+                  href={`/country/${COUNTRIES.get(f[0] as Countries)
+                    ?.toLowerCase()
+                    .replaceAll(' ', '-')}`}
+                >
+                  <Text h2>{f[1]}</Text>
+                </Link>
+              </Tooltip>
+            </Grid>
+          ))}
+        </Grid.Container>
+        <Grid.Container justify="center">
+          <Text
+            size={24}
+            style={{ marginTop: '10px' }}
+            css={{
+              fontFamily: 'serif',
+              textShadow: '2px 2px 2px rgba(0,0,0,0.2)',
+            }}
+          >
+            Only Headlines.
+          </Text>
+        </Grid.Container>
+        <Grid.Container justify="center">
+          <Text
+            size={24}
+            style={{ marginTop: '10px' }}
+            css={{
+              fontFamily: 'serif',
+              textShadow: '2px 2px 2px rgba(0,0,0,0.2)',
+            }}
+          >
+            <Tooltip content={ALL_SIZES}>Hundreds of global sources.</Tooltip>
+          </Text>
+        </Grid.Container>
+        <Grid.Container justify="center">
+          <Text
+            size={24}
+            style={{
+              marginTop: '10px',
+              fontFamily: 'serif',
+              textShadow: '2px 2px 2px rgba(0,0,0,0.2)',
+            }}
+          >
+            Stay informed.
+          </Text>
+        </Grid.Container>
+        <Grid.Container justify="center">
+          <Text size={24} style={{ marginTop: '10px' }}>
+            <Link
+              href="https://newsbrandsireland.ie/journalismmatters/"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                textDecoration: 'none',
+                transition: 'color 0.3s',
+                fontWeight: 'bold',
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.color = '#D71E1F')}
+              onMouseOut={(e) => (e.currentTarget.style.color = '')}
+            >
+              #journalismmatters&nbsp;↗
+            </Link>
+            .
+          </Text>
+        </Grid.Container>
+        <Grid.Container justify="center" style={{ marginTop: '20px' }}>
+          <Link
+            href="/contact"
+            style={{
+              padding: '10px 20px',
+              background: '#0072F5',
+              color: 'white',
+              borderRadius: '5px',
+              textDecoration: 'none',
+              transition: 'background 0.3s',
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.background = '#D71E1F')}
+            onMouseOut={(e) => (e.currentTarget.style.background = '#0072F5')}
+          >
+            <b>Contact Us</b>
           </Link>
-          .
-        </Text>
-      </Grid.Container>
-      <Grid.Container justify="center" style={{ marginTop: '20px' }} ref={ref6}>
-        <Link
-          href="/contact"
-          style={{
-            padding: '10px 20px',
-            background: '#0072F5',
-            color: 'white',
-            borderRadius: '5px',
-            textDecoration: 'none',
-            transition: 'background 0.3s',
-          }}
-          onMouseOver={(e) => (e.currentTarget.style.background = '#D71E1F')}
-          onMouseOut={(e) => (e.currentTarget.style.background = '#0072F5')}
-        >
-          <b>Contact Us</b>
-        </Link>
-      </Grid.Container>
-    </Container>
+        </Grid.Container>
+      </Container>
+      <Roadmap title={false} />
+    </>
   );
 };
 

@@ -8,21 +8,27 @@ import Trends from '@components/SVG/Trends';
 import Sources from '@components/SVG/Sources';
 import Multimedia from '@components/SVG/Multimedia';
 
-const Roadmap = (): JSX.Element => {
+type Props = {
+  title?: boolean;
+};
+
+const Roadmap = ({ title = true }: Props): JSX.Element => {
   return (
     <Container css={{ padding: 10 }}>
       <Grid.Container justify="center">
-        <Grid xs={12} justify="center">
-          <Text
-            h1
-            css={{
-              textGradient: '45deg, $blue600 0%, $red600 50%',
-            }}
-            weight="bold"
-          >
-            Roadmap
-          </Text>
-        </Grid>
+        {title && (
+          <Grid xs={12} justify="center">
+            <Text
+              h1
+              css={{
+                textGradient: '45deg, $blue600 0%, $red600 50%',
+              }}
+              weight="bold"
+            >
+              Roadmap
+            </Text>
+          </Grid>
+        )}
         <Grid xs={12} justify="center">
           <Text
             h2
