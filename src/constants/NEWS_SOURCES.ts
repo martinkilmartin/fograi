@@ -6299,6 +6299,63 @@ export const TZNewsSources = new Map<string, NewsSource>([
       primaryColor: '#007DC6',
     },
   ],
+  [
+    'TZ_MWST',
+    {
+      name: 'Mwana Spoti',
+      url: 'https://www.mwanaspoti.co.tz/',
+      est: 2001,
+      about:
+        'Mwana Spoti is a prominent Swahili-language newspaper in Tanzania, dedicated to providing up-to-date news, sports coverage, and relevant information to its readers. With a focus on quality journalism and insightful reporting, Mwana Spoti keeps its audience engaged and informed about the latest developments in sports, politics, culture, and more. Through its comprehensive coverage and thoughtful analysis, the newspaper contributes to shaping public opinion and fostering a deeper understanding of various issues within Tanzanian society. By offering a platform for diverse voices and perspectives, Mwana Spoti plays a vital role in the media landscape, connecting communities and providing a space for informed discourse.',
+      description: [
+        'As a leading source of news in Tanzania, Mwana Spoti aims to keep its readers well-informed and engaged with reliable and accurate reporting.',
+        'Through its in-depth coverage of sports and other topics, the newspaper strives to capture the pulse of the nation and reflect the interests and concerns of its readership.',
+        'With a commitment to journalistic integrity, Mwana Spoti serves as a reliable source of information, contributing to a more informed and connected society.',
+      ],
+      emos: ['📰', '🇹🇿'],
+      langs: ['sw'],
+      logoWidth: 120,
+      logoHeight: 44,
+      tags: ['MwanaSpoti', 'SwahiliNews', 'SportsCoverage', 'TanzanianMedia'],
+      socials: {
+        video: 'https://www.mwanaspoti.co.tz/ms/video',
+        facebook: 'https://www.facebook.com/MwanaSpoti/',
+        twitter: 'https://twitter.com/MwanaspotiTZ',
+        instagram: 'https://www.instagram.com/mwanaspoti_tz/',
+      },
+      headerBG: '#fff',
+      primaryColor: '#F5911E',
+    },
+  ],
+  [
+    'TZ_MWNC',
+    {
+      name: 'Mwananchi',
+      url: 'https://www.mwananchi.co.tz/',
+      est: 2000,
+      about:
+        'Mwananchi is a prominent Tanzanian newspaper that serves as a vital source of news, information, and insights for its readers. With a history dating back to the year 2000, the newspaper has played a pivotal role in keeping the Tanzanian public informed about local and international events, politics, business, culture, sports, and more.',
+      description: [
+        'Since its establishment, Mwananchi has been dedicated to delivering accurate, relevant, and reliable news coverage to its readership. Through its reporting, the newspaper aims to empower citizens with the knowledge they need to make informed decisions and actively participate in their society.',
+        "Mwananchi's commitment to journalistic integrity and unbiased reporting has earned it a reputation as a trusted news source in Tanzania. Its coverage spans a wide range of topics, ensuring that readers are well-informed about key developments and trends that impact their lives.",
+        'In addition to traditional print media, Mwananchi has embraced digital platforms to reach a broader audience. Its online presence includes video content, social media engagement, and multimedia reporting, reflecting its adaptability in the modern media landscape.',
+      ],
+      emos: ['📰', '🇹🇿'],
+      langs: ['sw'],
+      logoWidth: 120,
+      logoHeight: 44,
+      tags: ['Mwananchi', 'TanzanianNews', 'Media', 'Journalism'],
+      socials: {
+        video: 'https://www.mwananchi.co.tz/mw/video',
+        facebook: 'https://www.facebook.com/MwananchiNews/',
+        twitter: 'https://twitter.com/MwananchiNews/',
+        youtube: 'https://www.youtube.com/@Mwananchidigital',
+        instagram: 'https://www.instagram.com/mwananchi_official/',
+      },
+      headerBG: '#fff',
+      primaryColor: '#E61E23',
+    },
+  ],
 ]);
 
 export const AllNewsSources = new Map<string, NewsSource>([

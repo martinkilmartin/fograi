@@ -12,6 +12,8 @@ import {
   TZNewsSources,
 } from '@constants/NEWS_SOURCES';
 import { flags } from '@constants/FLAGS';
+import { COUNTRIES } from '@constants/COUNTRIES';
+import { Countries } from 'src/types/countries';
 
 const CA_SOURCES_SIZE = CANewsSources.size;
 const IE_SOURCES_SIZE = IENewsSources.size;
@@ -104,7 +106,13 @@ const About = (): JSX.Element => {
         {Array.from(flags.entries()).map((f) => (
           <Grid key={f[0]}>
             <Tooltip content={CSM.get(f[0])}>
-              <Text h2>{f[1]}</Text>
+              <Link
+                href={`/country/${COUNTRIES.get(f[0] as Countries)
+                  ?.toLowerCase()
+                  .replaceAll(' ', '-')}`}
+              >
+                <Text h2>{f[1]}</Text>
+              </Link>
             </Tooltip>
           </Grid>
         ))}
