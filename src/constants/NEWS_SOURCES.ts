@@ -6175,6 +6175,69 @@ export const USNewsSources = new Map<string, NewsSource>([
       primaryColor: '#2a53c1',
     },
   ],
+  [
+    'US_MAUI',
+    {
+      name: 'The Maui News',
+      url: 'https://www.mauinews.com/',
+      est: 1900,
+      about:
+        'The Maui News is a reputable source of news and information serving the Maui community and beyond. As a dedicated newspaper, it aims to provide comprehensive coverage of local events, issues, and developments that matter to the people of Maui. With a commitment to accuracy and quality journalism, The Maui News strives to be a reliable source for readers seeking to stay informed about the latest happenings.',
+      description: [
+        "The newspaper's dedication to delivering up-to-date and relevant content has established it as a go-to resource for readers in Maui, offering insights into a wide range of topics including local news, sports, culture, and more.",
+        "In a rapidly evolving media landscape, The Maui News has embraced digital platforms to expand its reach and engage a diverse audience. Through its online presence and social media channels, it provides timely updates and stories that reflect the dynamic nature of Maui's community.",
+        'With its focus on journalistic integrity and community engagement, The Maui News continues to uphold its legacy as a trusted and respected news outlet for the Maui region.',
+      ],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+      logoWidth: 917,
+      logoHeight: 96,
+      tags: ['TheMauiNews', 'MauiNews', 'LocalNews', 'Journalism', 'Media'],
+      socials: {
+        twitter: 'https://twitter.com/TheMauiNewsHI',
+        facebook: 'https://www.facebook.com/MauiNews/',
+        instagram: 'https://www.instagram.com/themauinews/',
+      },
+      headerBG: '#FFFFFF',
+      primaryColor: '#386E4B',
+    },
+  ],
+  [
+    'US_MINW',
+    {
+      name: 'Maui Now',
+      url: 'https://mauinow.com/',
+      est: 1900,
+      about:
+        'Bringing you the latest news, information, and updates about Maui and the surrounding islands. Maui Now covers a wide range of topics including local news, events, weather, sports, and more.',
+      description: [
+        'Maui Now is a comprehensive source for news and updates related to Maui and its neighboring islands. With a focus on delivering timely and relevant information, Maui Now covers various topics including local news, community events, weather updates, sports, and much more.',
+        "The platform serves as a go-to resource for residents and visitors alike, providing valuable insights into the happenings on the beautiful island of Maui. Whether it's breaking news, in-depth articles, or engaging multimedia content, Maui Now aims to keep its audience well-informed and connected to the local community.",
+        'With a user-friendly interface and a commitment to accurate reporting, Maui Now continues to be a trusted source for those seeking to stay up-to-date on all things Maui. Through its online presence, the platform brings people together, fostering a sense of community and shared knowledge.',
+      ],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+      logoWidth: 917,
+      logoHeight: 96,
+      tags: [
+        'MauiNow',
+        'MauiNews',
+        'Community',
+        'LocalEvents',
+        'WeatherUpdates',
+        'Sports',
+      ],
+      socials: {
+        video: 'https://mauinow.com/maui-videos/',
+        youtube: 'https://www.youtube.com/@MauiNowNews',
+        twitter: 'https://twitter.com/MauiNOW/',
+        facebook: 'https://www.facebook.com/mauinow/',
+        instagram: 'https://www.instagram.com/@mauinownews/',
+      },
+      headerBG: '#FFFFFF',
+      primaryColor: '#184787',
+    },
+  ],
 ]);
 
 export const TZNewsSources = new Map<string, NewsSource>([

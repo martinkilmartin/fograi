@@ -41,7 +41,7 @@ const Robot = ({ title }: Props): JSX.Element => (
     </Text>
     <Text>
       <b>nooze-bot</b> is currently hosted in Dublin, Ireland under IP{' '}
-      <code>34.244.102.150</code>.
+      <code>63-35-201-225</code>.
     </Text>
     <Text h2>Rules</Text>
     <Text>
