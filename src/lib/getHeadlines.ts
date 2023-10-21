@@ -67,3 +67,27 @@ export async function getHeadlinesCountrySource(
     return [];
   }
 }
+
+export async function getSearchTerm(
+  country: Countries | null = null,
+  lastSeen: string | null = null,
+  limit = 8,
+  searchTerm: string,
+  sources: string | null = null,
+): Promise<Headline[]> {
+  try {
+    const { data, error } = await supabase.rpc('get_search_term', {
+      country: country,
+      last_seen: lastSeen,
+      page_size: limit,
+      search_term: searchTerm,
+      source_filter: sources,
+    });
+
+    if (error) throw error;
+
+    return data || [];
+  } catch (error) {
+    return [];
+  }
+}

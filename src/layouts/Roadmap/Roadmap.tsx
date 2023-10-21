@@ -100,7 +100,6 @@ const Roadmap = ({ title = true }: Props): JSX.Element => {
             }}
           >
             <Text h3>FILTERS</Text>
-
             <Card.Body style={{ marginBottom: '-20px' }}>
               <Row>
                 <Col span={9}>
@@ -126,7 +125,6 @@ const Roadmap = ({ title = true }: Props): JSX.Element => {
             }}
           >
             <Text h3>TOPICS</Text>
-
             <Card.Body style={{ marginBottom: '-20px' }}>
               <Row>
                 <Col span={9}>
@@ -153,7 +151,6 @@ const Roadmap = ({ title = true }: Props): JSX.Element => {
             }}
           >
             <Text h3>SENTIMENTS</Text>
-
             <Card.Body style={{ marginBottom: '-20px' }}>
               <Row>
                 <Col span={9}>
@@ -179,7 +176,6 @@ const Roadmap = ({ title = true }: Props): JSX.Element => {
             }}
           >
             <Text h3>TRENDS</Text>
-
             <Card.Body style={{ marginBottom: '-20px' }}>
               <Row>
                 <Col span={9}>
@@ -206,7 +202,6 @@ const Roadmap = ({ title = true }: Props): JSX.Element => {
             }}
           >
             <Text h3>MORE SOURCES</Text>
-
             <Card.Body style={{ marginBottom: '-20px' }}>
               <Row>
                 <Col span={9}>
@@ -232,7 +227,6 @@ const Roadmap = ({ title = true }: Props): JSX.Element => {
             }}
           >
             <Text h3>MULTIMEDIA</Text>
-
             <Card.Body style={{ marginBottom: '-20px' }}>
               <Row>
                 <Col span={9}>
