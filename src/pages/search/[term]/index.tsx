@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { InfiniteData, useInfiniteQuery } from 'react-query';
+import { InfiniteData, useInfiniteQuery, useQueryClient } from 'react-query';
 import { useMediaQuery } from 'react-responsive';
 import { useRouter } from 'next/router';
-import { Input, Button } from '@nextui-org/react';
+import { Input, Button, Loading } from '@nextui-org/react';
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { Page } from '@layouts/Page';
 import { getSearchTerm } from '@lib/getHeadlines';
@@ -16,15 +16,20 @@ interface HomePageProps {
 
 const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const { term } = router.query;
 
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
   const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
 
+  const queryClient = useQueryClient();
+
   const handleSearch = () => {
-    // Navigate to the desired route using the input text
+    setLoading(true);
+    queryClient.removeQueries('headlines');
     router.push(`/search/${searchTerm}`);
+    setTimeout(() => setLoading(false), 3000);
   };
 
   let limit: number;
@@ -37,18 +42,24 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
     limit = 12;
   }
 
-  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
-    useInfiniteQuery<Headline[], Error>(
-      'headlines',
-      ({ pageParam = null }) =>
-        getSearchTerm(null, pageParam, limit, term as string, null),
-      {
-        getNextPageParam: (lastPage, _pages) =>
-          lastPage[lastPage.length - 1]?.created_at,
-        enabled: router.isReady,
-        initialData: initialData,
-      },
-    );
+  const {
+    data,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    status,
+    refetch,
+  } = useInfiniteQuery<Headline[], Error>(
+    ['headlines', term],
+    ({ pageParam = null }) =>
+      getSearchTerm(null, pageParam, limit, term as string, null),
+    {
+      getNextPageParam: (lastPage, _pages) =>
+        lastPage[lastPage.length - 1]?.created_at,
+      enabled: !!term && router.isReady,
+      initialData: initialData,
+    },
+  );
 
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
 
@@ -73,6 +84,12 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
     };
   }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
 
+  useEffect(() => {
+    if (term) {
+      refetch();
+    }
+  }, [refetch, term]);
+
   const allHeadlines = data?.pages.flatMap((page) => page);
   if (!router.isReady) return null;
   return (
@@ -88,7 +105,9 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
           placeholder={term as string}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <Button onClick={() => handleSearch()}>Search</Button>
+        <Button bordered onClick={() => handleSearch()}>
+          {loading ? <Loading /> : 'Search'}
+        </Button>
       </h1>
       <HeadlineList
         headlines={allHeadlines}

@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import { Input, Button } from '@nextui-org/react';
+import { Input, Button, Loading } from '@nextui-org/react';
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { Page } from '@layouts/Page';
 
 const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const { term } = router.query;
 
   const handleSearch = () => {
-    // Navigate to the desired route using the input text
+    setLoading(true);
     router.push(`/search/${searchTerm}`);
+    setTimeout(() => setLoading(false), 3000);
   };
 
   return (
@@ -27,7 +29,9 @@ const HomePage: React.FC = () => {
           placeholder={term as string}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <Button onClick={() => handleSearch()}>Search</Button>
+        <Button bordered onClick={() => handleSearch()}>
+          {loading ? <Loading /> : 'Search'}
+        </Button>
       </h1>
     </Page>
   );
