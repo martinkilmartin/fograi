@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { InfiniteData, useInfiniteQuery, useQueryClient } from 'react-query';
+import React, { useEffect, useRef } from 'react';
+import { InfiniteData, useInfiniteQuery } from 'react-query';
 import { useMediaQuery } from 'react-responsive';
 import { useRouter } from 'next/router';
-import { Input, Button, Loading } from '@nextui-org/react';
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { Page } from '@layouts/Page';
 import { getSearchTerm } from '@lib/getHeadlines';
@@ -15,22 +14,11 @@ interface HomePageProps {
 }
 
 const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const { term } = router.query;
 
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
   const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
-
-  const queryClient = useQueryClient();
-
-  const handleSearch = () => {
-    setLoading(true);
-    queryClient.removeQueries('headlines');
-    router.push(`/search/${searchTerm}`);
-    setTimeout(() => setLoading(false), 3000);
-  };
 
   let limit: number;
 
@@ -94,21 +82,6 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
   if (!router.isReady) return null;
   return (
     <Page title={APP_TITLE} heading={TAG_LINE}>
-      <h1
-        style={{
-          textAlign: 'center',
-          fontFamily: '"Georgia", "Times New Roman", Times, serif',
-        }}
-      >
-        <Input
-          label="Search results for "
-          placeholder={term as string}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <Button bordered onClick={() => handleSearch()}>
-          {loading ? <Loading /> : 'Search'}
-        </Button>
-      </h1>
       <HeadlineList
         headlines={allHeadlines}
         loading={status === 'loading'}

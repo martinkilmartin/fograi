@@ -1,5 +1,12 @@
+import React, { useState } from 'react';
+import { useQueryClient } from 'react-query';
+import { useRouter } from 'next/router';
 import {
+  Grid,
+  Button,
   Dropdown,
+  Input,
+  Loading,
   Link,
   Navbar,
   Switch,
@@ -11,8 +18,20 @@ import Image from 'next/image';
 
 export default function MyNavbar(): JSX.Element {
   const { setTheme } = useNextTheme();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  const queryClient = useQueryClient();
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { isDark } = useTheme();
+
+  const handleSearch = () => {
+    setLoading(true);
+    queryClient.removeQueries('headlines');
+    router.push(`/search/${searchTerm}`);
+    setTimeout(() => setLoading(false), 3000);
+  };
+
   return (
     <>
       <Navbar isBordered={isDark} shouldHideOnScroll variant="sticky">
@@ -31,6 +50,26 @@ export default function MyNavbar(): JSX.Element {
         </Navbar.Brand>
         <Navbar.Content>
           <Navbar.Item>
+            <Grid.Container gap={4}>
+              <Grid xs={12}>
+                <Input
+                  clearable
+                  bordered
+                  color="primary"
+                  placeholder={
+                    searchTerm.length ? searchTerm : 'Search...'
+                  }
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+                <Button auto bordered onClick={() => handleSearch()}>
+                  {loading ? <Loading /> : '🔎'}
+                </Button>
+              </Grid>
+            </Grid.Container>
+          </Navbar.Item>
+        </Navbar.Content>
+        <Navbar.Collapse>
+          <Navbar.CollapseItem>
             <Switch
               shadow
               color="primary"
@@ -40,22 +79,10 @@ export default function MyNavbar(): JSX.Element {
               iconOn={`🌛`}
               iconOff={`🌞`}
             ></Switch>
-          </Navbar.Item>
-        </Navbar.Content>
-        <Navbar.Collapse>
-          <Navbar.CollapseItem>
-            <Link href={`/about`}>
-              <Text size={24}>🤷&nbsp;About</Text>
-            </Link>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>
-            <Link href="/bookmarks">
-              <Text size={24}>🔖&nbsp;Bookmarks</Text>
-            </Link>
-          </Navbar.CollapseItem>
-          <Navbar.CollapseItem>
-            <Link href={`/contact`}>
-              <Text size={24}>💌&nbsp;Contact</Text>
+            <Link href={`/search`}>
+              <Text size={24}>🔎&nbsp;Search</Text>
             </Link>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>
@@ -64,19 +91,40 @@ export default function MyNavbar(): JSX.Element {
             </Link>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>
+            <Link href="/bookmarks">
+              <Text size={24}>🔖&nbsp;Bookmarks</Text>
+            </Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
             <Link href={`/sources`}>
               <Text size={24}>📰&nbsp;Sources</Text>
             </Link>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>
-            <Link href={`/search`}>
-              <Text size={24}>🔎&nbsp;Search</Text>
-            </Link>
-          </Navbar.CollapseItem>
-          <Navbar.CollapseItem>
-            <Link href={`/roadmap`}>
-              <Text size={24}>📍&nbsp;Roadmap</Text>
-            </Link>
+            <Dropdown>
+              <Dropdown.Trigger>
+                <Dropdown.Button flat>
+                  <Text size={24}>💼&nbsp;Company</Text>
+                </Dropdown.Button>
+              </Dropdown.Trigger>
+              <Dropdown.Menu>
+                <Dropdown.Item>
+                  <Link href={`/about`}>
+                    <Text size={24}>🤷&nbsp;About</Text>
+                  </Link>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <Link href={`/contact`}>
+                    <Text size={24}>💌&nbsp;Contact</Text>
+                  </Link>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <Link href={`/roadmap`}>
+                    <Text size={24}>📍&nbsp;Roadmap</Text>
+                  </Link>
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>
             <Dropdown>
