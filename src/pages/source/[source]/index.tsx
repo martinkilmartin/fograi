@@ -84,8 +84,15 @@ const HomePage: React.FC<HomePageProps> = ({ initialData, sourceName }) => {
     <Page title={APP_TITLE} heading={TAG_LINE}>
       <h1
         style={{
-          textAlign: 'center',
-          fontFamily: '"Georgia", "Times New Roman", Times, serif',
+          position: 'absolute',
+          width: '1px',
+          height: '1px',
+          padding: 0,
+          margin: '-1px',
+          overflow: 'hidden',
+          clip: 'rect(0,0,0,0)',
+          whiteSpace: 'nowrap',
+          border: 0,
         }}
       >
         {sourceName}

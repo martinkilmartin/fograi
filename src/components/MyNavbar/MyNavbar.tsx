@@ -81,11 +81,6 @@ export default function MyNavbar(): JSX.Element {
             ></Switch>
           </Navbar.CollapseItem>
           <Navbar.CollapseItem>
-            <Link href={`/search`}>
-              <Text size={24}>🔎&nbsp;Search</Text>
-            </Link>
-          </Navbar.CollapseItem>
-          <Navbar.CollapseItem>
             <Link href="/countries">
               <Text size={24}>🗺️&nbsp;Countries</Text>
             </Link>
