@@ -235,130 +235,126 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
       <Card.Header
         style={{
           backgroundColor: theme?.colors.background.value,
+          display: 'flex',
+          justifyContent: 'space-around',
+          alignItems: 'center',
+          width: '100%',
+          padding: '0px',
         }}
       >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-around',
-            alignItems: 'center',
-            width: '100%',
-          }}
-        >
-          <Popover isOpen={isOpen} onOpenChange={(open) => infoHandler(open)}>
-            <Popover.Trigger>
-              <Text
-                size={48}
-                role="button"
-                style={{
-                  cursor: 'pointer',
-                }}
-                aria-expanded={isOpen ? 'true' : 'false'}
-                aria-label="Information on news source"
-              >
-                {emos?.[1]}{' '}
-              </Text>
-            </Popover.Trigger>
-            <Popover.Content css={{ px: '$4', py: '$2' }}>
-              <Grid.Container
-                className="user-twitter-card__container"
-                css={{
-                  mw: '270px',
-                  borderRadius: '$lg',
-                  padding: '$sm',
-                }}
-              >
-                <Row justify="space-around" align="center">
-                  <a href={sourceURL} target="_blank" rel="noreferrer">
-                    <Text
-                      h2
-                      size={calculateFontSize(sourceName ?? '', 24)}
-                      weight="bold"
-                      style={{
-                        borderRadius: '0',
-                        fontFamily:
-                          '"Georgia", "Times New Roman", Times, serif',
-                      }}
-                    >
-                      {emos?.[0]}&nbsp;{sourceName ?? ''}&nbsp;{emos?.[1]}
-                    </Text>
-                  </a>
-                </Row>
-                <Grid.Container className="user-twitter-card__username-container">
-                  <Grid xs={12}>
-                    <Text
-                      className="user-twitter-card__text"
-                      size={14}
-                      css={{ mt: '$1' }}
-                      color="#888888"
-                    >
-                      {sourceAbout}
-                    </Text>
-                  </Grid>
-                </Grid.Container>
-                <Grid.Container
-                  className="user-twitter-card__metrics-container"
-                  justify="flex-start"
-                  alignContent="center"
-                >
-                  <Row justify="space-around" align="stretch">
-                    <Col span={8}>
-                      <Text
-                        className="user-twitter-card__text"
-                        size={18}
-                        color="#888888"
-                      >
-                        Since&nbsp;
-                        <Text
-                          b
-                          color="foreground"
-                          className="user-twitter-card__text"
-                          size={18}
-                        >
-                          {est}
-                        </Text>
-                      </Text>
-                    </Col>
-                    <Col span={4}>
-                      <Row>
-                        <Link
-                          onClick={(_event) => trackClicks('source')}
-                          href={`/source/${sourceName
-                            ?.toLowerCase()
-                            .replaceAll(' ', '-')}`}
-                        >
-                          <Badge color="primary" size="lg">
-                            View All
-                          </Badge>
-                        </Link>
-                      </Row>
-                    </Col>
-                  </Row>
-                </Grid.Container>
-              </Grid.Container>
-            </Popover.Content>
-          </Popover>
-          <Link
-            onClick={(_event) => trackClicks('source')}
-            href={sourceURL!}
-            target="_blank"
-            rel="noreferrer"
-          >
+        <Popover isOpen={isOpen} onOpenChange={(open) => infoHandler(open)}>
+          <Popover.Trigger>
             <Text
-              h2
-              size={calculateFontSize(sourceName ?? '')}
-              weight="bold"
+              size={36}
+              role="button"
               style={{
-                textAlign: 'center',
+                cursor: 'pointer',
+              }}
+              aria-expanded={isOpen ? 'true' : 'false'}
+              aria-label="Information on news source"
+            >
+              {emos?.[1]}{' '}
+            </Text>
+          </Popover.Trigger>
+          <Popover.Content css={{ px: '$4', py: '$2' }}>
+            <Grid.Container
+              className="user-twitter-card__container"
+              css={{
+                mw: '270px',
+                borderRadius: '$lg',
               }}
             >
-              {sourceName ?? ''}
-            </Text>
-          </Link>
+              <Row justify="space-around" align="center">
+                <a href={sourceURL} target="_blank" rel="noreferrer">
+                  <Text
+                    h2
+                    size={calculateFontSize(sourceName ?? '', 24)}
+                    weight="bold"
+                    style={{
+                      borderRadius: '0',
+                      fontFamily: '"Georgia", "Times New Roman", Times, serif',
+                    }}
+                  >
+                    {emos?.[0]}&nbsp;{sourceName ?? ''}&nbsp;{emos?.[1]}
+                  </Text>
+                </a>
+              </Row>
+              <Grid.Container className="user-twitter-card__username-container">
+                <Grid xs={12}>
+                  <Text
+                    className="user-twitter-card__text"
+                    size={14}
+                    css={{ mt: '$1' }}
+                    color="#888888"
+                  >
+                    {sourceAbout}
+                  </Text>
+                </Grid>
+              </Grid.Container>
+              <Grid.Container
+                className="user-twitter-card__metrics-container"
+                justify="flex-start"
+                alignContent="center"
+              >
+                <Row justify="space-around" align="stretch">
+                  <Col span={8}>
+                    <Text
+                      className="user-twitter-card__text"
+                      size={18}
+                      color="#888888"
+                    >
+                      Since&nbsp;
+                      <Text
+                        b
+                        color="foreground"
+                        className="user-twitter-card__text"
+                        size={18}
+                      >
+                        {est}
+                      </Text>
+                    </Text>
+                  </Col>
+                  <Col span={4}>
+                    <Row>
+                      <Link
+                        onClick={(_event) => trackClicks('source')}
+                        href={`/source/${sourceName
+                          ?.toLowerCase()
+                          .replaceAll(' ', '-')}`}
+                      >
+                        <Badge color="primary" size="lg">
+                          View All
+                        </Badge>
+                      </Link>
+                    </Row>
+                  </Col>
+                </Row>
+              </Grid.Container>
+            </Grid.Container>
+          </Popover.Content>
+        </Popover>
+        <Link
+          onClick={(_event) => trackClicks('source')}
+          href={sourceURL!}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Text
+            h2
+            size={calculateFontSize(sourceName ?? '')}
+            weight="bold"
+            style={{
+              textAlign: 'center',
+            }}
+          >
+            {sourceName ?? ''}
+          </Text>
+        </Link>
+        <Tooltip content={DATE.toLocaleString()}>
           <Badge color="error" size="lg" suppressHydrationWarning>
             {diffDisplay(DATE)}
           </Badge>
-        </div>
+        </Tooltip>
       </Card.Header>
       <hr />
       <Card.Body css={{ py: '$2' }}>

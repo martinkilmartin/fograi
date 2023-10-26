@@ -50,22 +50,22 @@ export default function MyNavbar(): JSX.Element {
         </Navbar.Brand>
         <Navbar.Content>
           <Navbar.Item>
-            <Grid.Container gap={4}>
-              <Grid xs={12}>
-                <Input
-                  clearable
-                  bordered
-                  color="primary"
-                  placeholder={
-                    searchTerm.length ? searchTerm : 'Search...'
-                  }
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-                <Button auto bordered onClick={() => handleSearch()}>
-                  {loading ? <Loading /> : '🔎'}
-                </Button>
-              </Grid>
-            </Grid.Container>
+            <form onSubmit={() => handleSearch()}>
+              <Grid.Container gap={4}>
+                <Grid xs={12}>
+                  <Input
+                    clearable
+                    bordered
+                    color="primary"
+                    placeholder={searchTerm.length ? searchTerm : 'Search...'}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                  <Button auto bordered onClick={() => handleSearch()}>
+                    {loading ? <Loading /> : '🔎'}
+                  </Button>
+                </Grid>
+              </Grid.Container>
+            </form>
           </Navbar.Item>
         </Navbar.Content>
         <Navbar.Collapse>

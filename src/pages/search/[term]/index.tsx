@@ -82,13 +82,26 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
   if (!router.isReady) return null;
   return (
     <Page title={APP_TITLE} heading={TAG_LINE}>
-      <HeadlineList
-        headlines={allHeadlines}
-        loading={status === 'loading'}
-        fetching={isFetchingNextPage}
-        error={status === 'error' ? new Error() : null}
-      />
-      <div ref={loadMoreRef} />
+      {allHeadlines?.length ? (
+        <>
+          <HeadlineList
+            headlines={allHeadlines}
+            loading={status === 'loading'}
+            fetching={isFetchingNextPage}
+            error={status === 'error' ? new Error() : null}
+          />
+          <div ref={loadMoreRef} />
+        </>
+      ) : (
+        <h1
+          style={{
+            textAlign: 'center',
+            fontFamily: '"Georgia", "Times New Roman", Times, serif',
+          }}
+        >
+          Sorry! Nothing found for <i>{term}</i>. Try something else.
+        </h1>
+      )}
     </Page>
   );
 };
