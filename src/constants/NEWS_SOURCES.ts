@@ -5009,7 +5009,7 @@ export const OZNewsSources = new Map<string, NewsSource>([
     'OZ_HOBO',
     {
       name: 'The Hobart Observerr',
-      url: 'https://kingislandcourier.com/',
+      url: 'https://hobartobserver.com.au/',
       est: 2019,
       about:
         'The Hobart Observer is a leading newspaper dedicated to providing comprehensive news and insights to the community of Hobart, Tasmania. With a commitment to delivering reliable, up-to-date, and in-depth reporting, The Hobart Observer covers a wide range of topics, including local news, events, politics, business, sports, and more. As a trusted source of information, it aims to keep the residents of Hobart well-informed and engaged with the issues that matter most to them. Through its coverage, The Hobart Observer plays an integral role in fostering a sense of community and connection among its readers.',
