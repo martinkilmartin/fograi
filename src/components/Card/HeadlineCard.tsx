@@ -367,23 +367,23 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         >
           {headline.img_src && (
             <NextUIImage
-              src={leadImgErr ? '/img/no-image.png' : headline.img_src}
+              src={leadImgErr ? '/img/broken.svg' : headline.img_src}
               objectFit="cover"
               width={400}
               height={200}
               alt={headline.img_alt ?? ''}
               onError={() => setLeadImgErr(true)}
               style={{
-                filter: imageFilter(),
+                filter: !leadImgErr ? imageFilter() : 'none',
               }}
               showSkeleton
             />
           )}
           {!headline.img_src && (
             <Card.Image
-              src="/img/no-image.png"
-              objectFit="cover"
-              width="100%"
+              src="/img/broken.svg"
+              width={400}
+              height={200}
               alt="No image for this story"
             />
           )}
