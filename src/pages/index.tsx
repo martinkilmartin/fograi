@@ -4,7 +4,10 @@ import React, { useEffect, useRef } from 'react';
 import { InfiniteData, useInfiniteQuery } from 'react-query';
 import { useMediaQuery } from 'react-responsive';
 import { Text } from '@nextui-org/react';
-import { getHeadlines } from '@lib/getHeadlines';
+import {
+  getHeadlines,
+  getHeadlinesWithPreferredCountries,
+} from '@lib/getHeadlines';
 import { HeadlineList } from '../components/Headlines';
 import { Headline } from '../types';
 import { GetServerSideProps } from 'next';
@@ -27,10 +30,23 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
     limit = 12;
   }
 
+  let favCountries: string | any[] | null | undefined = undefined;
+
+  if (typeof window !== 'undefined') {
+    favCountries = localStorage.getItem('likedCountries');
+  }
+
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
     useInfiniteQuery<Headline[], Error>(
       'headlines',
-      ({ pageParam = null }) => getHeadlines(pageParam, limit),
+      ({ pageParam = null }) =>
+        favCountries && favCountries !== '[]'
+          ? getHeadlinesWithPreferredCountries(
+              pageParam,
+              limit,
+              JSON.parse(favCountries as string),
+            )
+          : getHeadlines(pageParam, limit),
       {
         getNextPageParam: (lastPage, _pages) =>
           lastPage[lastPage.length - 1]?.created_at,

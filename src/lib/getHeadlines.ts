@@ -91,3 +91,27 @@ export async function getSearchTerm(
     return [];
   }
 }
+
+export async function getHeadlinesWithPreferredCountries(
+  lastSeen: string | null = null,
+  limit = 8,
+  countries: string[],
+): Promise<Headline[]> {
+  try {
+    const { data, error } = await supabase.rpc(
+      'get_preferred_paged_headlines',
+      {
+        page_size: limit,
+        countries: countries,
+        source_filter: null,
+        last_seen: lastSeen,
+      },
+    );
+
+    if (error) throw error;
+
+    return data || [];
+  } catch (error) {
+    return [];
+  }
+}
