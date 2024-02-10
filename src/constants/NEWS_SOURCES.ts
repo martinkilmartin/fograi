@@ -715,6 +715,74 @@ export const CANewsSources = new Map<string, NewsSource>([
       primaryColor: '#011543',
     },
   ],
+  [
+    'CA_SALA',
+    {
+      name: 'Salam Toronto',
+      url: 'https://salamtoronto.ca/',
+      est: 2000,
+      about:
+        'The first Farsi-English bilingual weekly publications based in the Greater Toronto Area.',
+      emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_NWMG.svg',
+      headerBG: '#011543',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_ACNV',
+    {
+      name: 'Acadie Nouvelle',
+      url: 'https://www.acadienouvelle.com/',
+      est: 1984,
+      about:
+        "L'actualité provinciale, régionale, sportive, économique et culturelle du Nouveau-Brunswick.",
+      emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_NWMG.svg',
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_BRUN',
+    {
+      name: 'The Brunswickan',
+      url: 'https://thebruns.ca/',
+      est: 1867,
+      about:
+        'The official student newspaper of the Fredericton campus of the University of New Brunswick.',
+      emos: ['📰', '🇨🇦'],
+      logo: '/img/ns/CA_NWMG.svg',
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_LEMA',
+    {
+      name: 'Le Moniteur Acadien',
+      url: 'https://moniteuracadien.com/',
+      est: 1867,
+      about:
+        'Un journal francophone originaire de Shediac, Nouveau-Brunswick offrant des nouvelles pertinentes aux peuples acadiens.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_LEFR',
+    {
+      name: 'Le Franco',
+      url: 'https://lefranco.ab.ca/',
+      est: 1928,
+      about:
+        "Le seul média francophone consacré à l'actualité albertaine au Canada.",
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
 ]);
 
 export const IENewsSources = new Map<string, NewsSource>([
