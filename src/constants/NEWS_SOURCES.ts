@@ -4326,6 +4326,84 @@ export const UKNewsSources = new Map<string, NewsSource>([
       primaryColor: '#990f3d',
     },
   ],
+  [
+    'UK_MRNG',
+    {
+      name: 'Morning Star',
+      url: 'https://morningstaronline.co.uk/',
+      est: 1888,
+      about:
+        'The only English-language socialist daily newspaper in the world, published six days a week.',
+      description: [''],
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+      logoWidth: 1054,
+      logoHeight: 86,
+      tags: [''],
+      socials: {
+        email: 'mailto:enquiries@peoples-press.com',
+      },
+      headerBG: '#ca422c',
+      primaryColor: '#fff',
+    },
+  ],
+  [
+    'UK_BBC',
+    {
+      name: 'BBC News',
+      url: 'https://www.bbc.com/news',
+      est: 1922,
+      about:
+        'Up-to-the-minute news, breaking news, video, audio and feature stories. BBC News provides trusted World and UK news as well as local and regional perspectives. Also entertainment, business, science, technology and health news.',
+      description: [''],
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+      logoWidth: 1054,
+      logoHeight: 86,
+      tags: [''],
+      socials: undefined,
+      headerBG: '#ca422c',
+      primaryColor: '#fff',
+    },
+  ],
+  [
+    'UK_SKYN',
+    {
+      name: 'Sky News',
+      url: 'https://news.sky.com/',
+      est: 1989,
+      about:
+        'Breaking news, headlines and top stories from business, politics, entertainment and more in the UK and worldwide.',
+      description: [''],
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+      logoWidth: 1054,
+      logoHeight: 86,
+      tags: [''],
+      socials: undefined,
+      headerBG: '#ca422c',
+      primaryColor: '#fff',
+    },
+  ],
+  [
+    'UK_C4N',
+    {
+      name: 'Channel 4 News',
+      url: 'https://www.channel4.com/news/',
+      est: 1982,
+      about:
+        "Latest news from the UK and around the world, including politics, health, war, crime and more. Find out what's happening in New Hampshire, Ukraine, Northern Ireland and other topics of interest.",
+      description: [''],
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+      logoWidth: 1054,
+      logoHeight: 86,
+      tags: [''],
+      socials: undefined,
+      headerBG: '#3d125a',
+      primaryColor: '#fff',
+    },
+  ],
 ]);
 
 export const NZNewsSources = new Map<string, NewsSource>([
