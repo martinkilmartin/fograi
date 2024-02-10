@@ -14,9 +14,10 @@ import { Countries } from 'src/types/countries';
 
 type Props = {
   title: string;
+  subTitle: string;
 };
 
-const Sources = ({ title }: Props): JSX.Element => {
+const Sources = ({ title, subTitle }: Props): JSX.Element => {
   const [likedSources, likSource] = useState<Set<keyof typeof AllNewsSources>>(
     () => {
       if (typeof window !== 'undefined') {
@@ -99,6 +100,9 @@ const Sources = ({ title }: Props): JSX.Element => {
       <h1 style={{ textAlign: 'center' }}>
         {title}&nbsp;({AllNewsSources.size})
       </h1>
+      <Text h5 style={{ textAlign: 'center' }}>
+        {subTitle}
+      </Text>
       <Grid.Container gap={2} justify="space-evenly" style={{ padding: '0' }}>
         {Array.from(AllNewsSources)
           .sort((a, b) => a[1].est - b[1].est)

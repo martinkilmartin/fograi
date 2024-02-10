@@ -17,8 +17,11 @@ export const CONTACT_FAILURE = "🤷 Error! It's us, not you! 🤦";
 export const COOKIE_TITLE = '🍪 Cookie Policy';
 export const PRIVACY_TITLE = '👀 Privacy Policy';
 export const COUNTRIES_TITLE = '🌎 🌍 🌏 Countries';
+export const COUNTRIES_SUBTITLE = 'Choose which countries to see news from';
 export const ROADMAP_TITLE = '📍 Roadmap';
 export const SOURCES_TITLE = '😶‍🌫️ Sources';
+export const SOURCES_SUBTITLE =
+  'Coming soon: select which news sources to see news from';
 export const TERMS_TITLE = '⚖ Terms Of Use';
 export const HTTP_403 = 'Woah there Betsy 🐄';
 export const HTTP_404 = '🧍 Not Found';

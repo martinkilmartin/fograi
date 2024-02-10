@@ -13,9 +13,10 @@ import { Countries } from 'src/types/countries';
 
 type Props = {
   title: string;
+  subTitle: string;
 };
 
-const Countries = ({ title }: Props): JSX.Element => {
+const Countries = ({ title, subTitle }: Props): JSX.Element => {
   const [likedCountries, likCountry] = useState<Set<keyof typeof COUNTRIES>>(
     () => {
       if (typeof window !== 'undefined') {
@@ -81,6 +82,9 @@ const Countries = ({ title }: Props): JSX.Element => {
       <h1 style={{ textAlign: 'center' }}>
         {title}&nbsp;({COUNTRIES.size})
       </h1>
+      <Text h5 style={{ textAlign: 'center' }}>
+        {subTitle}
+      </Text>
       <Grid.Container gap={2} justify="space-evenly" style={{ padding: '0' }}>
         {Array.from(COUNTRIES).map((ns, i) => {
           const country = ns[0].substring(0, 2).toLowerCase();
