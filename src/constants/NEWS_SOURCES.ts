@@ -783,7 +783,320 @@ export const CANewsSources = new Map<string, NewsSource>([
       primaryColor: '#011543',
     },
   ],
+  [
+    'CA_BRTY',
+    {
+      name: 'Barrie Today',
+      url: 'https://www.barrietoday.com/',
+      est: 2016,
+      about:
+        'Barrie news, events, information and more.  Local news from local journalists, photos, event coverage, weekly flyers, entertainment.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_BAYT',
+    {
+      name: 'Bay Today',
+      url: 'https://www.baytoday.ca/',
+      est: 2003,
+      about:
+        'North Bay, nipissing, news, editorials, events, calendar, maps, businesses, directory, weather, sports, classified ads, accommodations, apartments, real estate, coupons, northern Ontario, Canada, Algoma, entertainment.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_BRAD',
+    {
+      name: 'Bradford Today',
+      url: 'https://www.bradfordtoday.ca/',
+      est: 2019,
+      about:
+        'Regularly updated local news from local journalists along with photos, video, sports, events, classifieds, weekly flyers, entertainment.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_BRLT',
+    {
+      name: 'Burlington Today',
+      url: 'https://www.burlingtontoday.com/',
+      est: 2022,
+      about:
+        "Burlington's newest source for local news, sports, business community information, obituaries and more.",
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_CMBT',
+    {
+      name: 'Cambridge Today',
+      url: 'https://www.cambridgetoday.ca/',
+      est: 2021,
+      about:
+        'News, events, weather, obituaries and more - all focused on Cambridge.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_COLT',
+    {
+      name: 'Collingwood Today',
+      url: 'https://www.collingwoodtoday.ca/',
+      est: 2021,
+      about:
+        "Collingwood's online source for local news, obituaries, events and more.",
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_ELKT',
+    {
+      name: 'Elliot Lake Today',
+      url: 'https://www.elliotlaketoday.com/',
+      est: 2017,
+      about:
+        "Elliot Lake News, Weather, Obituaries and more.  Elliot Lake's online source for community information, updated regularly.",
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_ELFT',
+    {
+      name: 'Elora & Fergus Today',
+      url: 'https://www.elorafergustoday.com/',
+      est: 2021,
+      about:
+        'EloraFergusToday is your go-to source for local news in  the Elora and Fergus communities, offering the latest updates on the events, issues, people and businesses that matter most.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_GUET',
+    {
+      name: 'Guelph Today',
+      url: 'https://www.guelphtoday.com/',
+      est: 2016,
+      about:
+        'Guelph news, events, information and more.  Local news from local journalists, photos, event coverage, weekly flyers and entertainment.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_HHLT',
+    {
+      name: 'Halton Hills Today',
+      url: 'https://www.haltonhillstoday.ca/',
+      est: 2022,
+      about:
+        'HaltonHillsToday is your go-to source for local news in Halton Hills, offering the latest updates on the events, issues, people and businesses that matter most in our community.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_INFT',
+    {
+      name: 'Innisfil Today',
+      url: 'https://www.innisfiltoday.ca',
+      est: 2020,
+      about:
+        'News, events, weather, obituaries and more - all focused on Innisfil.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_MDLT',
+    {
+      name: 'Midland Today',
+      url: 'https://www.midlandtoday.ca/',
+      est: 2020,
+      about:
+        "Midland's source for local news and community information.  Includes original reporting, sports, entertainment, obituaries, weather, and more.",
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_NRKT',
+    {
+      name: 'Newmarket Today',
+      url: 'https://www.newmarkettoday.ca/',
+      est: 2018,
+      about:
+        "Newmarket's online news source, including local news from local journalists, photos, video, sports, events, classifieds, weekly flyers, and entertainment.",
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_NOTL',
+    {
+      name: 'Niagara-on-the-Lake Local',
+      url: 'https://www.notllocal.com/',
+      est: 2019,
+      about:
+        'Niagara-on-the-Lake news, events, information and more.  Local news from local journalists, photos, event coverage, weekly flyers and entertainment.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_NROB',
+    {
+      name: 'Niagara-on-the-Lake Local',
+      url: 'https://www.northernontariobusiness.com/',
+      est: 1980,
+      about:
+        'Northern Ontario Business publication provides Northern Ontario with relevant, current, and insightful editorial content and business news and information.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_ORIL',
+    {
+      name: 'Orillia Matters',
+      url: 'https://www.orilliamatters.com/',
+      est: 2018,
+      about:
+        "Orillia's online news source.  Local news from local journalists, photos, video, sports, events, classifieds, weekly flyers and entertainment.",
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_PLHT',
+    {
+      name: 'Pelham Today',
+      url: 'https://www.pelhamtoday.ca/',
+      est: 1997,
+      about:
+        "Pelham's source for local news, sports, business community information, obituaries and more.",
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_SOTY',
+    {
+      name: 'Soo Today',
+      url: 'https://www.sootoday.com/',
+      est: 2002,
+      about:
+        "Sault Ste. Marie's largest news source. Local news from local journalists, photos, video, sports, events, classifieds, weekly flyers and entertainment.",
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_STRF',
+    {
+      name: 'Stratford Today',
+      url: 'https://www.stratfordtoday.ca/',
+      est: 2022,
+      about:
+        'The news that matters most to the Stratford community, as it happens.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_SUDY',
+    {
+      name: 'Sudbury.com',
+      url: 'https://www.sudbury.com/',
+      est: 1998,
+      about:
+        "Sudbury's number one source for local news. Stay current with news, sports, entertainment, classifieds, events and more.",
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_THOR',
+    {
+      name: 'Thorold Today',
+      url: 'https://www.thoroldtoday.ca/',
+      est: 2021,
+      about:
+        "Thorold's local news source.  Local news from local journalists, photos, video, sports, weekly flyers, entertainment and more.",
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_TIMM',
+    {
+      name: 'Timmins Today',
+      url: 'https://www.timminstoday.com/',
+      est: 2009,
+      about:
+        'Timmins news, events, information and more.  Local news from local journalists, photos, event coverage, weekly flyers, entertainment.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_LONG',
+    {
+      name: 'Longmont Leader',
+      url: 'https://www.longmontleader.com/',
+      est: 2020,
+      about:
+        "Longmont's local news source. Local news from local journalists, photos, video, sports, entertainment and more.",
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
+  [
+    'CA_SOOL',
+    {
+      name: 'Soo Leader',
+      url: 'https://www.sooleader.com/',
+      est: 2022,
+      about:
+        'Soo Leader is your go-to source for local news in Sault Ste Marie, Michigan, offering the latest updates on the events, issues, people and businesses that matter most in our community.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
 ]);
+export const CANewsSourcesLength = CANewsSources.size;
 
 export const IENewsSources = new Map<string, NewsSource>([
   [
@@ -3456,6 +3769,7 @@ export const IENewsSources = new Map<string, NewsSource>([
     },
   ],
 ]);
+export const IENewsSourcesLength = IENewsSources.size;
 
 export const INNewsSources = new Map<string, NewsSource>([
   [
@@ -3881,6 +4195,7 @@ export const INNewsSources = new Map<string, NewsSource>([
     },
   ],
 ]);
+export const INNewsSourcesLength = INNewsSources.size;
 
 export const UKNewsSources = new Map<string, NewsSource>([
   [
@@ -4473,6 +4788,7 @@ export const UKNewsSources = new Map<string, NewsSource>([
     },
   ],
 ]);
+export const UKNewsSourcesLength = UKNewsSources.size;
 
 export const NZNewsSources = new Map<string, NewsSource>([
   [
@@ -4798,6 +5114,7 @@ export const NZNewsSources = new Map<string, NewsSource>([
     },
   ],
 ]);
+export const NZNewsSourcesLength = NZNewsSources.size;
 
 export const OZNewsSources = new Map<string, NewsSource>([
   [
@@ -5180,6 +5497,7 @@ export const OZNewsSources = new Map<string, NewsSource>([
     },
   ],
 ]);
+export const OZNewsSourcesLength = OZNewsSources.size;
 
 export const USNewsSources = new Map<string, NewsSource>([
   [
@@ -6450,6 +6768,7 @@ export const USNewsSources = new Map<string, NewsSource>([
     },
   ],
 ]);
+export const USNewsSourcesLength = USNewsSources.size;
 
 export const TZNewsSources = new Map<string, NewsSource>([
   [
@@ -6631,6 +6950,7 @@ export const TZNewsSources = new Map<string, NewsSource>([
     },
   ],
 ]);
+export const TZNewsSourcesLength = TZNewsSources.size;
 
 export const AllNewsSources = new Map<string, NewsSource>([
   ...CANewsSources.entries(),
