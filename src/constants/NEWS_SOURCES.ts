@@ -968,7 +968,7 @@ export const CANewsSources = new Map<string, NewsSource>([
   [
     'CA_NROB',
     {
-      name: 'Niagara-on-the-Lake Local',
+      name: 'Northern Ontario Business',
       url: 'https://www.northernontariobusiness.com/',
       est: 1980,
       about:
