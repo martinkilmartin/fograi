@@ -3931,7 +3931,7 @@ export const INNewsSources = new Map<string, NewsSource>([
   [
     'IN_TLGP',
     {
-      name: 'The Telegraph',
+      name: 'The Telegraph Online',
       url: 'https://www.telegraphindia.com/',
       est: 1982,
       about:
