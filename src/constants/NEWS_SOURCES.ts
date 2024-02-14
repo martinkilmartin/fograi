@@ -6767,6 +6767,60 @@ export const USNewsSources = new Map<string, NewsSource>([
       primaryColor: '#00000',
     },
   ],
+  [
+    'US_AP',
+    {
+      name: 'Associated Press News',
+      url: 'https://apnews.com/',
+      est: 1846,
+      about:
+        'Latest headlines, breaking news, and videos. A definitive source for independent journalism from every corner of the globe.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+      logoWidth: 600,
+      logoHeight: 51,
+      tags: [],
+      headerBG: '#FFFFFF',
+      primaryColor: '#00000',
+    },
+  ],
+  [
+    'US_NNN',
+    {
+      name: 'News Nation',
+      url: 'https://www.newsnationnow.com',
+      est: 1978,
+      about:
+        'NewsNation is your trusted source for breaking news, unbiased U.S. news & video delivered from the heartland of America delivered 24/7.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+      logoWidth: 600,
+      logoHeight: 51,
+      tags: [],
+      headerBG: '#FFFFFF',
+      primaryColor: '#00000',
+    },
+  ],
+  [
+    'US_HUFF',
+    {
+      name: 'HuffPost',
+      url: 'https://www.huffpost.com/',
+      est: 2005,
+      about:
+        'Read the latest headlines, news stories, and opinion from Politics, Entertainment, Life, Perspectives, and more.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+      logoWidth: 600,
+      logoHeight: 51,
+      tags: [],
+      headerBG: '#FFFFFF',
+      primaryColor: '#00000',
+    },
+  ],
 ]);
 export const USNewsSourcesLength = USNewsSources.size;
 
