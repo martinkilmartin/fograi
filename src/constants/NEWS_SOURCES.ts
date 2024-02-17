@@ -1095,6 +1095,19 @@ export const CANewsSources = new Map<string, NewsSource>([
       primaryColor: '#011543',
     },
   ],
+  [
+    'CA_OBSV',
+    {
+      name: 'The Sarnia Observer',
+      url: 'https://www.theobserver.ca/',
+      est: 1853,
+      about:
+        'A newspaper that covers the latest news, sports, entertainment and lifestyle stories from Sarnia-Lambton, Ontario.',
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
 ]);
 export const CANewsSourcesLength = CANewsSources.size;
 
@@ -7062,6 +7075,42 @@ export const USNewsSources = new Map<string, NewsSource>([
       est: 1949,
       about:
         'Television station in Los Angeles, California, United States, serving as the West Coast flagship of the NBC network.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+      logoWidth: 600,
+      logoHeight: 51,
+      tags: [],
+      headerBG: '#FFFFFF',
+      primaryColor: '#00000',
+    },
+  ],
+  [
+    'US_BOSH',
+    {
+      name: 'Boston Herald',
+      url: 'https://www.bostonherald.com/',
+      est: 1846,
+      about:
+        'The Boston Herald is the leading source of breaking news, local news, sports, politics, entertainment, opinion and weather in Boston, Massachusetts.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+      logoWidth: 600,
+      logoHeight: 51,
+      tags: [],
+      headerBG: '#FFFFFF',
+      primaryColor: '#00000',
+    },
+  ],
+  [
+    'US_AUTO',
+    {
+      name: 'Automotive News',
+      url: 'https://www.autonews.com/',
+      est: 1925,
+      about:
+        'Automotive News is the leading source of news about the global automotive industry.',
       description: [],
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
