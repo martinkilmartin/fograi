@@ -7054,6 +7054,24 @@ export const USNewsSources = new Map<string, NewsSource>([
       primaryColor: '#00000',
     },
   ],
+  [
+    'US_KNBC',
+    {
+      name: 'KNBC',
+      url: 'https://www.nbclosangeles.com/',
+      est: 1949,
+      about:
+        'Television station in Los Angeles, California, United States, serving as the West Coast flagship of the NBC network.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+      logoWidth: 600,
+      logoHeight: 51,
+      tags: [],
+      headerBG: '#FFFFFF',
+      primaryColor: '#00000',
+    },
+  ],
 ]);
 export const USNewsSourcesLength = USNewsSources.size;
 
