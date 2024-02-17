@@ -45,7 +45,8 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const DATE = new Date(headline.created_at);
 
   const sourceAbout = AllNewsSources.get(headline.source)?.about;
-  const sourceURL = AllNewsSources.get(headline.source)?.url;
+  const sourceURL =
+    AllNewsSources.get(headline.source)?.url + '?utm_source=nooze.news';
   const sourceName = AllNewsSources.get(headline.source)?.name;
   const emos = AllNewsSources.get(headline.source)?.emos;
   const est = AllNewsSources.get(headline.source)?.est;
@@ -150,7 +151,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     try {
       await navigator.share({
         title: headline.headline,
-        url: headline.link,
+        url: headline.link + '?utm_source=nooze.news',
       });
     } catch (_e) {
       setShareable(false);
@@ -202,7 +203,8 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     'https://twitter.com/intent/tweet?text=' +
     headline.headline +
     '&url=' +
-    headline.link;
+    headline.link +
+    '?utm_source=nooze.news';
 
   return (
     <Card
@@ -316,7 +318,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         </Popover>
         <Link
           onClick={(_event) => trackClicks('source')}
-          href={sourceURL!}
+          href={sourceURL}
           target="_blank"
           rel="noreferrer"
         >
@@ -341,7 +343,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
       <Card.Body css={{ py: '$2' }}>
         <Link
           onClick={(_event) => trackClicks('link')}
-          href={headline.link}
+          href={headline.link + '?utm_source=nooze.news'}
           target="_blank"
           rel="noreferrer"
           style={{ overflow: 'auto' }}
