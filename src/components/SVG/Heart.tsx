@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import { SVG } from '../../types';
 
 const Heart = ({
-  width = 48,
-  height = 48,
+  width = 36,
+  height = 36,
   vBW = 512,
   vBH = 512,
   fillColors = ['#000', '#fff'],

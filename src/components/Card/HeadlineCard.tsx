@@ -235,6 +235,8 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               role="button"
               style={{
                 cursor: 'pointer',
+                flex: '1',
+                paddingLeft: '2px',
               }}
               aria-expanded={isOpen ? 'true' : 'false'}
               aria-label="Information on news source"
@@ -320,6 +322,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           </Popover.Content>
         </Popover>
         <Link
+          style={{ flex: '8' }}
           onClick={(_event) => trackClicks('source')}
           href={sourceURL}
           target="_blank"
@@ -327,7 +330,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         >
           <Text
             h2
-            size={calculateFontSize(sourceName ?? '')}
+            size={24}
             weight="bold"
             style={{
               textAlign: 'center',
@@ -336,11 +339,17 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             {sourceName ?? ''}
           </Text>
         </Link>
-        <Tooltip content={DATE.toLocaleString()}>
-          <Badge color="error" size="lg" suppressHydrationWarning>
-            {diffDisplay(DATE)}
-          </Badge>
-        </Tooltip>
+        <div
+          style={{
+            flex: '1',
+          }}
+        >
+          <Tooltip content={DATE.toLocaleString()}>
+            <Badge color="error" size="lg" suppressHydrationWarning>
+              {diffDisplay(DATE)}
+            </Badge>
+          </Tooltip>
+        </div>
       </Card.Header>
       <hr
         style={{
@@ -359,6 +368,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           <Row justify="center" align="center">
             <Text
               h3
+              size={28}
               color="primary"
               style={{
                 textAlign: 'center',
@@ -367,9 +377,9 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               {headline.headline}&nbsp;↗
             </Text>
           </Row>
-          {headline.img_src && (
+          {headline.img_src && !leadImgErr && (
             <NextUIImage
-              src={leadImgErr ? '/img/broken.svg' : headline.img_src}
+              src={headline.img_src}
               objectFit="cover"
               width={400}
               height={200}
@@ -378,20 +388,14 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               showSkeleton
             />
           )}
-          {!headline.img_src && (
-            <Card.Image
-              src="/img/broken.svg"
-              width={400}
-              height={200}
-              alt="No image for this story"
-            />
-          )}
         </Link>
       </Card.Body>
       <Card.Divider />
       <Card.Footer
         style={{
           borderRadius: '0',
+          borderTop: '2px solid',
+          color: theme?.colors.foreground.value,
         }}
       >
         <Grid.Container justify="center">
@@ -399,7 +403,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             <Badge
               disableOutline
               content={likeLoading ? <Loading size="xs" /> : likeCount}
-              size="lg"
+              size="md"
               color={likeCount === '?' ? 'warning' : 'success'}
             >
               <Heart someBool={liked} />
@@ -410,7 +414,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           </Grid>
           <Grid xs={4} justify="center">
             {canShare && (
-              <Image src={shareImg} alt="Share" height={32} onClick={share} />
+              <Image src={shareImg} alt="Share" height={36} onClick={share} />
             )}
             {!canShare && (
               <Link
