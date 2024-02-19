@@ -231,7 +231,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         <Popover isOpen={isOpen} onOpenChange={(open) => infoHandler(open)}>
           <Popover.Trigger>
             <Text
-              size={36}
+              size={28}
               role="button"
               style={{
                 cursor: 'pointer',
@@ -330,7 +330,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         >
           <Text
             h2
-            size={24}
+            size={28}
             weight="bold"
             style={{
               textAlign: 'center',
@@ -345,7 +345,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           }}
         >
           <Tooltip content={DATE.toLocaleString()}>
-            <Badge color="error" size="lg" suppressHydrationWarning>
+            <Badge color="error" size="md" suppressHydrationWarning>
               {diffDisplay(DATE)}
             </Badge>
           </Tooltip>
@@ -368,7 +368,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           <Row justify="center" align="center">
             <Text
               h3
-              size={28}
+              size={32}
               color="primary"
               style={{
                 textAlign: 'center',
