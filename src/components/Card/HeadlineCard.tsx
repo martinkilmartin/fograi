@@ -211,9 +211,11 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
       isHoverable
       variant="bordered"
       style={{
+        border: '2px solid',
         borderRadius: '0',
+        borderColor: theme?.colors.foreground.value,
         fontFamily: '"Georgia", "Times New Roman", Times, serif',
-        margin: '10px',
+        margin: '0 10px',
       }}
     >
       <Card.Header
@@ -340,7 +342,12 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           </Badge>
         </Tooltip>
       </Card.Header>
-      <hr />
+      <hr
+        style={{
+          borderTop: '2px solid',
+          color: theme?.colors.foreground.value,
+        }}
+      />
       <Card.Body css={{ py: '$2' }}>
         <Link
           onClick={(_event) => trackClicks('link')}
@@ -350,7 +357,13 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           style={{ overflow: 'auto' }}
         >
           <Row justify="center" align="center">
-            <Text h3 color="primary">
+            <Text
+              h3
+              color="primary"
+              style={{
+                textAlign: 'center',
+              }}
+            >
               {headline.headline}&nbsp;↗
             </Text>
           </Row>
