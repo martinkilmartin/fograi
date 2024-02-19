@@ -3794,6 +3794,256 @@ export const IENewsSources = new Map<string, NewsSource>([
       primaryColor: '#333',
     },
   ],
+  [
+    'IE_WERT',
+    {
+      name: 'WeAreTyrone',
+      url: 'https://wearetyrone.com/',
+      est: 1896,
+      about:
+        'A multi-media hub for news, sport, entertainment and lifestyle content for the Tyrone community.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_SLUG',
+    {
+      name: "Slugger O'Toole",
+      url: 'https://sluggerotoole.com/',
+      est: 2002,
+      about:
+        'A leading source of news and analysis on Northern Ireland politics, culture and society.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_TECH',
+    {
+      name: 'Irish Tech News',
+      url: 'https://irishtechnews.ie/',
+      est: 2104,
+      about:
+        'Keeping you informed of all the latest news from the world of Technology. With the main focus on Irish based news, covering a wide range of topics from social media and smartphones to start-ups and SMEs.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_PHOB',
+    {
+      name: 'An Phoblacht',
+      url: 'https://www.anphoblacht.com/',
+      est: 1970,
+      about:
+        'Has a long and historic association with the Irish Republican Movement.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_REBL',
+    {
+      name: 'Rebel News',
+      url: 'http://www.rebelnews.ie/',
+      est: 2018,
+      about:
+        'Rebel is a new socialist website dedicated to challenging establishment politics here in Ireland and beyond, and to creating a platform for alternative left-wing viewpoints to be aired.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_BAF',
+    {
+      name: 'Business & Finance',
+      url: 'https://businessandfinance.com/',
+      est: 1964,
+      about: 'Providing business news & information to business leaders.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_FILM',
+    {
+      name: 'Film Ireland',
+      url: 'https://filmireland.net/',
+      est: 1987,
+      about: 'A cultural cinema magazine.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_HGNS',
+    {
+      name: 'Hogan Stand',
+      url: 'https://www.hoganstand.com/',
+      est: 1991,
+      about:
+        'A news website and the online face of the monthly Gaelic games magazine Hogan Stand.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_BB',
+    {
+      name: 'Better Business',
+      url: 'https://betterbusiness.ie/',
+      est: 2004,
+      about:
+        "Better Business is Ireland's newest business quarterly and is the official publication of the Small Firms Association (SFA).",
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_ABIZ',
+    {
+      name: 'Autobiz',
+      url: 'https://www.autobiz.ie/',
+      est: 1978,
+      about:
+        "Autobiz is Ireland's only monthly motor trade magazine. We cover the entire motor trade including bodyshop, garage, aftermarket and dealer news. Keep informed with what's going on in the motor trade in Ireland with autobiz.ie.",
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_BODY',
+    {
+      name: 'Irish Bodyshop Journal',
+      url: 'http://www.bodyshop.ie/',
+      est: 2006,
+      about:
+        "Ireland's Publication for the refinishing & associated Industries.",
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_SHLF',
+    {
+      name: 'ShelfLife',
+      url: 'https://www.shelflife.ie/',
+      est: 1998,
+      about:
+        "ShelfLife is Ireland's retail authority and the leading trade publication in its category. ShelfLife ranks #1 with buyers and retailers and has the highest circulation of any trade title in the country. With a footprint across several platforms, we provide our audience with critical insights and access to leading brands and solution providers.",
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_PLAN',
+    {
+      name: 'Plan Magazine',
+      url: 'https://planonline.ie/',
+      est: 1969,
+      about:
+        'Architecture and design publication based in Dublin, Ireland. It caters mainly for Irish and international architects and designers. Plan also documents alternative architectural culture such as interdisciplinary interplays between architecture and philosophy, art and new social movements.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_NOS',
+    {
+      name: 'Nós',
+      url: 'https://nos.ie/',
+      est: 2008,
+      about:
+        'Is iris chultúir é NÓS a chlúdaíonn suimeanna coitianta an tsaoil chomhaimseartha. Tá sé de sprioc ag NÓS beocht fhuinniúil a chur i sochaí na hÉireann trí léargas muiníneach Gaelach a thabhairt ar an saol thart orainn. Is mian linn chomh maith pobal na teanga a spreagadh chun spraoi, chun smaoinimh agus chun gnímh.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['ga'],
+    },
+  ],
+  [
+    'IE_CKUT',
+    {
+      name: 'Checkout',
+      url: 'https://www.checkout.ie/',
+      est: 1968,
+      about:
+        'Checkout is your home for the latest news and analysis on Irish grocery retail, FMCG, supply-chain, packaging, NPD, tech and more.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_ELSM',
+    {
+      name: 'eolas magazine',
+      url: 'https://www.eolasmagazine.ie',
+      est: 2010,
+      about:
+        "eolas Magazine is Ireland's leading policy, politics and business magazine which reaches over 10,000 senior decision-makers and influencers in government, business and the voluntary sector.",
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_BULD',
+    {
+      name: 'Irish Building Magazine',
+      url: 'https://www.eolasmagazine.ie',
+      est: 2007,
+      about:
+        "Ireland's construction & building sector news portal. The most visited news & information site for the Irish construction & building market.",
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_BIM',
+    {
+      name: 'BIM Ireland',
+      url: 'https://bimireland.ie/',
+      est: 2015,
+      about:
+        "Addressing the information needs of Ireland's leading AECO firms. Will act as the voice for BIM Users, Stakeholders, Educators and Trainers.",
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_WILD',
+    {
+      name: 'Go Wild Magazine',
+      url: 'https://gowildmagazine.com/',
+      est: 2018,
+      about:
+        'Go Wild Magazines showcase Irish brands nationally and internationally across 8 individual titles. Feature your brand on Go Wild Today for greater success.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_VET',
+    {
+      name: 'Irish Veterinary Journal',
+      url: 'https://irishvetjournal.biomedcentral.com/',
+      est: 1946,
+      about:
+        'Publishing veterinary research that has relevance to clinical practice. Has an international reputation for publishing high quality clinical veterinary science.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_WSKY',
+    {
+      name: 'Irish Whiskey Magazine',
+      url: 'https://www.irishwhiskeymagazine.com/',
+      est: 2016,
+      about:
+        'Immerse yourself in the exciting world of Irish whiskey with Irish Whiskey Magazine, the definitive independent publication.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const IENewsSourcesLength = IENewsSources.size;
 
