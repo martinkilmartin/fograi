@@ -231,7 +231,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         <Popover isOpen={isOpen} onOpenChange={(open) => infoHandler(open)}>
           <Popover.Trigger>
             <Text
-              size={24}
+              size={22}
               role="button"
               style={{
                 cursor: 'pointer',
@@ -330,7 +330,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         >
           <Text
             h2
-            size={24}
+            size={20}
             weight="bold"
             style={{
               textAlign: 'center',
