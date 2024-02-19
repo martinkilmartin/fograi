@@ -231,7 +231,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         <Popover isOpen={isOpen} onOpenChange={(open) => infoHandler(open)}>
           <Popover.Trigger>
             <Text
-              size={22}
+              size={24}
               role="button"
               style={{
                 cursor: 'pointer',
@@ -321,8 +321,41 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             </Grid.Container>
           </Popover.Content>
         </Popover>
+        <Text
+          style={{
+            flex: '8',
+          }}
+        >
+          {''}
+        </Text>
+        <div
+          style={{
+            flex: '1',
+          }}
+        >
+          <Tooltip content={DATE.toLocaleString()}>
+            <Badge color="error" size="md" suppressHydrationWarning>
+              {diffDisplay(DATE)}
+            </Badge>
+          </Tooltip>
+        </div>
+      </Card.Header>
+      <hr
+        style={{
+          borderTop: '2px solid',
+          color: theme?.colors.foreground.value,
+        }}
+      />
+      <Card.Header
+        style={{
+          backgroundColor: theme?.colors.background.value,
+          display: 'flex',
+          justifyContent: 'space-around',
+          width: '100%',
+          padding: '0px',
+        }}
+      >
         <Link
-          style={{ flex: '8' }}
           onClick={(_event) => trackClicks('source')}
           href={sourceURL}
           target="_blank"
@@ -330,27 +363,15 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         >
           <Text
             h2
-            size={20}
+            size={24}
             weight="bold"
             style={{
               textAlign: 'center',
-              verticalAlign: 'middle',
             }}
           >
             {sourceName ?? ''}
           </Text>
         </Link>
-        <div
-          style={{
-            flex: '1',
-          }}
-        >
-          <Tooltip content={DATE.toLocaleString()}>
-            <Badge color="error" size="sm" suppressHydrationWarning>
-              {diffDisplay(DATE)}
-            </Badge>
-          </Tooltip>
-        </div>
       </Card.Header>
       <hr
         style={{
