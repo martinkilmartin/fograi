@@ -213,6 +213,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
       style={{
         borderRadius: '0',
         fontFamily: '"Georgia", "Times New Roman", Times, serif',
+        margin: '10px',
       }}
     >
       <Card.Header
@@ -348,6 +349,11 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           rel="noreferrer"
           style={{ overflow: 'auto' }}
         >
+          <Row justify="center" align="center">
+            <Text h3 color="primary">
+              {headline.headline}&nbsp;↗
+            </Text>
+          </Row>
           {headline.img_src && (
             <NextUIImage
               src={leadImgErr ? '/img/broken.svg' : headline.img_src}
@@ -367,11 +373,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               alt="No image for this story"
             />
           )}
-          <Row justify="center" align="center">
-            <Text h3 color="primary">
-              {headline.headline}&nbsp;↗
-            </Text>
-          </Row>
         </Link>
       </Card.Body>
       <Card.Divider />
