@@ -390,7 +390,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           <Row justify="center" align="center">
             <Text
               h3
-              size={32}
+              size={28}
               color="primary"
               style={{
                 textAlign: 'center',
