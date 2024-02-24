@@ -35,21 +35,25 @@ export default function MyNavbar(): JSX.Element {
   return (
     <>
       <Navbar isBordered={isDark} shouldHideOnScroll variant="sticky">
-        <Navbar.Brand>
-          <Navbar.Toggle aria-label="toggle navigation" />
-        </Navbar.Brand>
-        <Navbar.Brand>
-          <Link href="/">
-            <Image
-              src="/img/nooze.svg"
-              alt="Nooze logo"
-              width={200}
-              height={80}
-            />
-          </Link>
-        </Navbar.Brand>
-        <Navbar.Content>
-          <Navbar.Item>
+        <Grid.Container gap={2}>
+          <Grid xs={2}>
+            <Navbar.Toggle aria-label="toggle navigation" />
+          </Grid>
+          <Grid xs={10} justify="center">
+            <Navbar.Brand>
+              <Link href="/">
+                <Image
+                  src="/img/nooze.svg"
+                  alt="Nooze logo"
+                  width={200}
+                  height={80}
+                />
+              </Link>
+            </Navbar.Brand>
+          </Grid>
+        </Grid.Container>
+        <Navbar.Collapse>
+          <Navbar.CollapseItem>
             <form onSubmit={() => handleSearch()}>
               <Grid.Container gap={4}>
                 <Grid xs={12}>
@@ -66,9 +70,7 @@ export default function MyNavbar(): JSX.Element {
                 </Grid>
               </Grid.Container>
             </form>
-          </Navbar.Item>
-        </Navbar.Content>
-        <Navbar.Collapse>
+          </Navbar.CollapseItem>
           <Navbar.CollapseItem>
             <Switch
               shadow

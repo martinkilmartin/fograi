@@ -4044,6 +4044,29 @@ export const IENewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'IE_BIZW',
+    {
+      name: 'Business World',
+      url: 'https://www.businessworld.ie/',
+      est: 2001,
+      about:
+        "Business World are Ireland's leading financial and business news website. Our content creation process is tailored to your needs.",
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_KNMN',
+    {
+      name: 'Kenmare News',
+      url: 'http://kenmarenews.biz/wp/',
+      est: 2013,
+      about: "If it's happing in Kenmare, it's in the Kenmarenews.",
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const IENewsSourcesLength = IENewsSources.size;
 

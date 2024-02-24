@@ -43,7 +43,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const [canShare, setShareable] = useState(true);
   const DATE = new Date(headline.created_at);
-
+  const emojie = headline.emos;
   const sourceAbout = AllNewsSources.get(headline.source)?.about;
   const sourceURL =
     AllNewsSources.get(headline.source)?.url + '?utm_source=nooze.news';
@@ -324,9 +324,10 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         <Text
           style={{
             flex: '8',
+            textAlign: 'center',
           }}
         >
-          {''}
+          {emojie}
         </Text>
         <div
           style={{
