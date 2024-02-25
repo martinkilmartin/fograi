@@ -18,7 +18,7 @@ import {
 import { useTheme as useNextTheme } from 'next-themes';
 import Image from 'next/image';
 import Countries from '@components/Filters/Countries';
-import Sources from '@components/Filters/Sources';
+//import Sources from '@components/Filters/Sources';
 
 export default function MyNavbar(): JSX.Element {
   const { setTheme } = useNextTheme();
@@ -126,7 +126,7 @@ export default function MyNavbar(): JSX.Element {
                     <Countries />
                   </Collapse>
                   <Collapse title="Sources">
-                    <Sources />
+                    <Text>Coming soon</Text>
                   </Collapse>
                   <Collapse title="Categories">
                     <Text>Coming soon</Text>
