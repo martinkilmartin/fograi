@@ -57,7 +57,12 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
           auto
           ghost
           onClick={() => backToTop()}
-          css={{ position: 'fixed', bottom: '20px', right: '10px' }}
+          css={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '10px',
+            maxWidth: '50px',
+          }}
           icon={'⬆️'}
         ></Button>
       </>
