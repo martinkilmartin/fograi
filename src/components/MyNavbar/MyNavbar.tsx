@@ -34,7 +34,10 @@ export default function MyNavbar(): JSX.Element {
     setLoading(true);
     queryClient.removeQueries('headlines');
     router.push(`/search/${searchTerm}`);
-    setTimeout(() => setLoading(false), 3000);
+    setTimeout(() => {
+      setLoading(false);
+      setModalVisible(false);
+    }, 3000);
   };
 
   const closeModalHandler = () => {
