@@ -8,6 +8,7 @@ import {
   UKNewsSources,
   USNewsSources,
   TZNewsSources,
+  ZWNewsSources,
 } from '@constants/NEWS_SOURCES';
 import { flags } from '@constants/FLAGS';
 import { COUNTRIES } from '@constants/COUNTRIES';
@@ -21,6 +22,7 @@ const OZ_SOURCES_SIZE = OZNewsSources.size;
 const UK_SOURCES_SIZE = UKNewsSources.size;
 const US_SOURCES_SIZE = USNewsSources.size;
 const TZ_SOURCES_SIZE = TZNewsSources.size;
+const ZW_SOURCES_SIZE = ZWNewsSources.size;
 
 const ALL_SIZES =
   CA_SOURCES_SIZE +
@@ -30,7 +32,8 @@ const ALL_SIZES =
   OZ_SOURCES_SIZE +
   UK_SOURCES_SIZE +
   US_SOURCES_SIZE +
-  TZ_SOURCES_SIZE;
+  TZ_SOURCES_SIZE +
+  ZW_SOURCES_SIZE;
 
 const CSM = new Map([
   ['ca', CA_SOURCES_SIZE],
@@ -41,6 +44,7 @@ const CSM = new Map([
   ['uk', UK_SOURCES_SIZE],
   ['us', US_SOURCES_SIZE],
   ['tz', TZ_SOURCES_SIZE],
+  ['zw', ZW_SOURCES_SIZE],
 ]);
 
 const About = (): JSX.Element => {

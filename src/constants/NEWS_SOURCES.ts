@@ -8113,6 +8113,570 @@ export const TZNewsSources = new Map<string, NewsSource>([
 ]);
 export const TZNewsSourcesLength = TZNewsSources.size;
 
+export const ZWNewsSources = new Map<string, NewsSource>([
+  [
+    'ZW_3MOB',
+    {
+      name: 'Three Men On a Boat',
+      url: 'https://3-mob.com/',
+      est: 2008,
+      about:
+        "Three Men On a Boat is an existential analysis where humanity thinks it is going. It is skulduggery and pin-point cutting edge summary of thoughts. The boat is not on water, or is it? Or maybe it is. We don't know. What is a boat. Well. It is a boat. Boat is a good word…",
+      description: [],
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+      tags: [
+        'ThreeMenOnaBoat',
+        'Zimbabwe',
+        'News',
+        'Entertainment',
+        'Lifestyle',
+        'Culture',
+        'Technology',
+        'SocialMedia',
+        'Podcasts',
+        'Videos',
+      ],
+      socials: {
+        facebook: 'https://www.facebook.com/ThreeMenOnaBoat/',
+        twitter: 'https://twitter.com/ThreeMenOnaBoat',
+        instagram: 'https://www.instagram.com/3mobdotcom/',
+        linkedin: 'https://www.linkedin.com/company/3-mob-com/',
+        pinterest: 'https://www.pinterest.com/3mobcom/',
+        reddit: 'https://www.reddit.com/user/3mobdotcom',
+        youtube: 'https://www.youtube.com/c/3mobcom',
+        telegram: 'https://t.me/threemob',
+      },
+      headerBG: '#fff',
+      primaryColor: '#0071BD',
+    },
+  ],
+  [
+    'ZW_HRLD',
+    {
+      name: 'The Herald',
+      url: 'https://www.herald.co.zw/',
+      est: 1892,
+      about: "Zimbabwe's largest daily newspaper.",
+      description: [],
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+      tags: [
+        'TheHerald',
+        'Zimbabwe',
+        'News',
+        'Politics',
+        'Business',
+        'Sports',
+        'Entertainment',
+        'Culture',
+        'Lifestyle',
+        'DigitalMedia',
+      ],
+      socials: {
+        rss: 'https://www.herald.co.zw/feed/',
+        facebook: 'https://www.facebook.com/TheHeraldZimbabwe',
+        twitter: 'https://twitter.com/HeraldZimbabwe',
+        instagram: 'https://www.instagram.com/heraldzimbabwe/',
+      },
+    },
+  ],
+  [
+    'ZW_SUNM',
+    {
+      name: 'The Sunday Mail',
+      url: 'https://www.sundaymail.co.zw/',
+      est: 1892,
+      about: 'The Leading Family Newspaper in Zimbabwe.',
+      description: [],
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+      tags: [
+        'TheSundayMail',
+        'Zimbabwe',
+        'News',
+        'Politics',
+        'Business',
+        'Sports',
+        'Entertainment',
+        'Culture',
+        'Lifestyle',
+        'DigitalMedia',
+      ],
+      socials: {
+        facebook: 'https://www.facebook.com/TheSundayMailZimbabwe',
+        twitter: 'https://twitter.com/SundayMailZim',
+      },
+    },
+  ],
+  [
+    'ZW_ALL',
+    {
+      name: 'All In Zimbabwe',
+      url: 'https://www.allinzimbabwe.com/',
+      est: 2018,
+      about:
+        'Zimbabwe news headlines and breaking news of Zimbabwe.The best online Zimbabwean newspaper for the latest news and updates from Zimbabwe.',
+      description: [],
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+      socials: {
+        facebook: 'https://www.facebook.com/allinzimbabwe/',
+        twitter: 'https://twitter.com/AllinZimbabwe',
+        instagram: 'https://www.instagram.com/allinzimbabwe/',
+        youtube: 'https://www.youtube.com/@allinzimbabwe6891',
+      },
+    },
+  ],
+  [
+    'ZW_B24',
+    {
+      name: 'Bulawayo24',
+      url: 'https://bulawayo24.com/',
+      est: 2010,
+      about:
+        "The Bulawayo and Zimbabwe's premier online news resource, with 24 hour coverage to bring you local and international news as it happens, when it happens.",
+      description: [],
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+      socials: {
+        email: 'mailto:info@bulawayo24.com',
+        twitter: 'https://twitter.com/Bulawayo24News',
+        facebook: 'https://www.facebook.com/Bulawayo24News',
+      },
+    },
+  ],
+  [
+    'ZW_BZDY',
+    {
+      name: 'Business Daily',
+      url: 'http://www.businessdaily.co.zw/',
+      est: 2013,
+      about:
+        "Zimbabwe's up to date business news website. Business Daily carries a selection of Business stories from Zimbabwean newspaper.",
+      description: [],
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+      socials: {
+        email: 'mailto:ngonis@businessdaily.co.zw',
+      },
+    },
+  ],
+  [
+    'ZW_BZWY',
+    {
+      name: 'Business Daily',
+      url: 'https://www.businessweekly.co.zw/',
+      est: 2008,
+      about: 'Moving Business Ideas',
+      description: [],
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+      socials: {
+        facebook: 'https://www.facebook.com/BusinessWeeklyZim/',
+        twitter: 'https://twitter.com/BizWeeklyZim',
+        youtube: 'https://www.youtube.com/user/Zimpapers',
+      },
+    },
+  ],
+  [
+    'ZW_CHRN',
+    {
+      name: 'The Chronicle',
+      url: 'https://www.chronicle.co.zw/',
+      est: 1894,
+      about: "Bulawayo's most popular daily newspaper",
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_DLYN',
+    {
+      name: 'DailyNews',
+      url: 'https://dailynews.co.zw/',
+      est: 1999,
+      about:
+        "Zimbabwe's leading daily newspaper, a source of balanced and unbiased news on Zimbabwean issues. Politics, Business, Sport, Entertainment and Commentary; we have it all!",
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_FNGZ',
+    {
+      name: 'The Financial Gazette',
+      url: 'https://fingaz.co.zw/',
+      est: 1969,
+      about:
+        "The Financial Gazette is Zimbabwe's leading business and financial daily newspaper.",
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_HRPT',
+    {
+      name: 'Harare Post',
+      url: 'https://www.hararepost.co.zw/en/',
+      est: 2019,
+      about:
+        'The Harare Post is a Zimbabwean news website that provides the latest news and updates from Zimbabwe.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_IHRR',
+    {
+      name: 'iHarare',
+      url: 'https://iharare.com/',
+      est: 2011,
+      about: 'Zimbabwe News and Internet Marketing.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_INZM',
+    {
+      name: 'The Insider',
+      url: 'https://insiderzim.com/',
+      est: 2003,
+      about: 'News about Zimbabwe that you can use',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_MBRT',
+    {
+      name: 'Mbare Times',
+      url: 'https://mbaretimes.com/',
+      est: 2019,
+      about:
+        'Mbare Times is a Zimbabwean news website that provides the latest news and updates from Zimbabwe.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_MYZW',
+    {
+      name: 'My Zimbabwe News',
+      url: 'https://www.myzimbabwe.co.zw/',
+      est: 2011,
+      about:
+        "My Zimbabwe News publishes Zimbabwe's latest news daily from Harare, Bulawayo and around Zimbabwe. We report latest political news, sports news, business and general news and updates.",
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_NWZW',
+    {
+      name: 'New Zimbabwe',
+      url: 'https://www.newzimbabwe.com/',
+      est: 2009,
+      about:
+        "New Zimbabwe.com - The Zimbabwe News You Trust is Zimbabwe's leading online newspaper and published by New Zimbabwe Media Ltd.",
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_NWZV',
+    {
+      name: 'New Zimbabwe Vision',
+      url: 'http://newzimbabwevision.com/',
+      est: 2014,
+      about: 'Zimbabwe news, Africa news, World news.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_NWDY',
+    {
+      name: 'NewsDay',
+      url: 'https://www.newsday.co.zw/',
+      est: 2010,
+      about:
+        "Zimbabwe's leading daily newspaper, a source of balanced and unbiased news on Zimbabwean issues.",
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_NOTS',
+    {
+      name: 'News of the South',
+      url: 'https://newsofthesouth.com/',
+      est: 2013,
+      about: 'Zimbabwean diaspora and Africa news website.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_NWDZ',
+    {
+      name: 'NewsDzeZimbabwe',
+      url: 'https://www.newsdzezimbabwe.co.uk/',
+      est: 2013,
+      about: 'Zimbabwe news, Africa news, World news.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_TECZ',
+    {
+      name: 'Techzim',
+      url: 'https://www.techzim.co.zw/',
+      est: 2010,
+      about: 'Zimbabwe and regional technology news and updates.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_ZMWB',
+    {
+      name: 'The Zimbabwe Daily',
+      url: 'https://www.thezimbabwedaily.com/',
+      est: 2012,
+      about: 'Zimbabwe news, Africa news, World news.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_ZIMM',
+    {
+      name: 'ZiMetro News',
+      url: 'https://zimetro.co.zw/',
+      est: 2016,
+      about: 'We believe in Truth | No favor, No Fear!',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_ZEYE',
+    {
+      name: 'ZimEye',
+      url: 'https://www.zimeye.net/',
+      est: 2010,
+      about: 'Zimbabwe news, Africa news, World news.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_ZWN',
+    {
+      name: 'Zw News Zimbabwe',
+      url: 'https://zwnews.com/',
+      est: 2001,
+      about: 'Zimbabwe news, Africa news, World news.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_BMTR',
+    {
+      name: 'B-Metro',
+      url: 'https://bmetro.co.zw/',
+      est: 2015,
+      about: 'Catch this weeks hottest news with no delay.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_TBC',
+    {
+      name: 'The Business Connect',
+      url: 'http://www.thebusinessconnect.co.zw/',
+      est: 2013,
+      about: 'The Business Connect is a Zimbabwean business news website.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_MNPT',
+    {
+      name: 'The Manica Post',
+      url: 'https://www.manicapost.co.zw/',
+      est: 1983,
+      about: 'Hot News From The East.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_MSVM',
+    {
+      name: 'Masvingo Mirror',
+      url: 'https://masvingomirror.com/',
+      est: 2013,
+      about: 'Masvingo Mirror is a Zimbabwean news website.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_MBWY',
+    {
+      name: 'My Bulawayo',
+      url: 'http://www.mybulawayo.com/',
+      est: 2013,
+      about:
+        'My Bulawayo is a dynamic online and offline project all about shining the spotlight on Bulawayo as a city and business community within Zimbabwe.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_SEYE',
+    {
+      name: 'Southern Eye',
+      url: 'https://www.southerneye.co.zw/',
+      est: 2013,
+      about:
+        'Breaking news, news online, Zimbabwe news, world news, news video, weather, business, money, politics, law, technology, entertainment, education,health.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_TZIM',
+    {
+      name: 'TellZim',
+      url: 'https://tellzim.com/',
+      est: 2010,
+      about: 'The Voice of the People.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_TIND',
+    {
+      name: 'The Zimbabwe Independent',
+      url: 'https://www.theindependent.co.zw/',
+      est: 2002,
+      about: 'The Leading Business Weekly.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_PTRT',
+    {
+      name: 'The Patriot',
+      url: 'https://www.thepatriot.co.zw/',
+      est: 2012,
+      about: 'Celebrating Being Zimbabwean.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_STND',
+    {
+      name: 'The Standard',
+      url: 'https://www.thestandard.co.zw/',
+      est: 1997,
+      about: "Zimbabwe's Leading Sunday Newspaper.",
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_SUNN',
+    {
+      name: 'The Sun',
+      url: 'https://thesunnews.co.zw/',
+      est: 2018,
+      about:
+        'A weekly private publication and the only paper in the country distributed in the following areas: Bulawayo- Matabeleland North and South Midlands.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_TZWN',
+    {
+      name: 'The Zimbabwean',
+      url: 'https://www.thezimbabwean.co/',
+      est: 2013,
+      about: 'The Zimbabwean - A Voice for the Voiceless.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_ZMLV',
+    {
+      name: 'ZimLive',
+      url: 'https://www.zimlive.com/',
+      est: 2018,
+      about: 'Zimbabwe news, Africa news, World news.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_ZMMT',
+    {
+      name: 'Zim Metro',
+      url: 'http://zimmetro.net/',
+      est: 2016,
+      about: 'Zimbabwe news, Africa news, World news.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_TZM',
+    {
+      name: 'The Zimbabwe Mail',
+      url: 'https://www.thezimbabwemail.com/',
+      est: 2008,
+      about: 'Leading Zimbabwe Daily News.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_ZON',
+    {
+      name: 'Zimbabwe Online News',
+      url: 'https://www.zimbabweonlinenews.com/',
+      est: 2013,
+      about: 'Breaking News General Industry National Sports National.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZW_ZSIT',
+    {
+      name: 'Zimbabwe Situation',
+      url: 'https://www.zimbabwesituation.com/',
+      est: 2000,
+      about: 'Zimbabwe news, Africa news, World news.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
+]);
+export const ZWNewsSourcesLength = ZWNewsSources.size;
+
 export const AllNewsSources = new Map<string, NewsSource>([
   ...CANewsSources.entries(),
   ...IENewsSources.entries(),
@@ -8122,4 +8686,5 @@ export const AllNewsSources = new Map<string, NewsSource>([
   ...OZNewsSources.entries(),
   ...USNewsSources.entries(),
   ...TZNewsSources.entries(),
+  ...ZWNewsSources.entries(),
 ]);

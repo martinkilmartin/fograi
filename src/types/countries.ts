@@ -1,4 +1,4 @@
-export type Countries = 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us' | 'tz';
+export type Countries = 'ca' | 'ie' | 'in' | 'nz' | 'oz' | 'uk' | 'us' | 'tz' | 'zw';
 export type CountryKeys =
   | 'canada'
   | 'ireland'
@@ -7,4 +7,5 @@ export type CountryKeys =
   | 'australia'
   | 'uk'
   | 'usa'
-  | 'tanzania';
+  | 'tanzania'
+  | 'zimbabwe';

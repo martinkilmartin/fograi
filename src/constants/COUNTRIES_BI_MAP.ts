@@ -9,4 +9,5 @@ export const COUNTRIES_BI_MAP = new Map<CountryKeys, Countries>([
   ['uk', 'uk'],
   ['usa', 'us'],
   ['tanzania', 'tz'],
+  ['zimbabwe', 'zw'],
 ]);

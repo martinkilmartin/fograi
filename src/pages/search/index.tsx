@@ -3,7 +3,15 @@ import { useQueryClient } from 'react-query';
 import { useRouter } from 'next/router';
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { Page } from '@layouts/Page';
-import { Button, Input, Loading, Row, Spacer } from '@nextui-org/react';
+import {
+  Button,
+  Grid,
+  Input,
+  Loading,
+  Row,
+  Spacer,
+  Text,
+} from '@nextui-org/react';
 
 const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,15 +28,54 @@ const HomePage: React.FC = () => {
 
   return (
     <Page title={APP_TITLE} heading={TAG_LINE}>
-      <h1
-        style={{
-          textAlign: 'center',
-          fontFamily: '"Georgia", "Times New Roman", Times, serif',
-          display: 'block',
-        }}
-      >
-        Search thousands of headlines from hundreds of global sources.
-      </h1>
+      <Grid.Container justify="center">
+        <Text
+          h1
+          size={60}
+          css={{
+            textGradient: '45deg, $blue600 0%, $red600 50%',
+          }}
+          weight="bold"
+        >
+          Search
+        </Text>
+      </Grid.Container>
+      <Grid.Container justify="center">
+        <Text
+          h1
+          size={60}
+          css={{
+            textGradient: '45deg, $red600 0%, $green600 50%',
+          }}
+          weight="bold"
+        >
+          thousands of headlines
+        </Text>
+      </Grid.Container>
+      <Grid.Container justify="center">
+        <Text
+          h2
+          size={60}
+          css={{
+            textGradient: '45deg, $green600 0%, $yellow600 100%',
+          }}
+          weight="bold"
+        >
+          from
+        </Text>
+      </Grid.Container>
+      <Grid.Container justify="center">
+        <Text
+          h2
+          size={60}
+          css={{
+            textGradient: '45deg, $yellow600 0%, $blue600 100%',
+          }}
+          weight="bold"
+        >
+          hundreds of global sources.
+        </Text>
+      </Grid.Container>
       <Row justify="center">
         <form onSubmit={() => handleSearch()}>
           <Row>
