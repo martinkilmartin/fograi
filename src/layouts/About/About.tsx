@@ -12,7 +12,6 @@ import {
 import { flags } from '@constants/FLAGS';
 import { COUNTRIES } from '@constants/COUNTRIES';
 import { Countries } from 'src/types/countries';
-import { Roadmap } from '@layouts/Roadmap';
 
 const CA_SOURCES_SIZE = CANewsSources.size;
 const IE_SOURCES_SIZE = IENewsSources.size;
