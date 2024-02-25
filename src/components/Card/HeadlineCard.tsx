@@ -222,8 +222,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         style={{
           backgroundColor: theme?.colors.background.value,
           display: 'flex',
-          justifyContent: 'space-around',
-          alignItems: 'center',
           width: '100%',
           padding: '0px',
         }}
@@ -361,13 +359,16 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           href={sourceURL}
           target="_blank"
           rel="noreferrer"
+          style={{
+            display: 'flex',
+          }}
         >
           <Text
             h2
             size={24}
             weight="bold"
             style={{
-              textAlign: 'center',
+              marginBottom: '0',
             }}
           >
             {sourceName ?? ''}
