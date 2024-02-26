@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, Button, Grid, Loading } from '@nextui-org/react';
+import { Badge, Grid, Loading } from '@nextui-org/react';
 import { HeadlineCard } from '@components/Card';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { Headline } from '../../types/Headline';
@@ -52,10 +52,9 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
         >
           {fetching ? <Loading type="gradient" size="xs" /> : headlines?.length}
         </Badge>
-        <Button
+        <Badge
+          role='button'
           aria-label="Back to top"
-          auto
-          ghost
           onClick={() => backToTop()}
           css={{
             position: 'fixed',
@@ -63,8 +62,10 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
             right: '10px',
             maxWidth: '50px',
           }}
-          icon={'⬆️'}
-        ></Button>
+          size='lg'
+          color='primary'
+          variant="bordered"
+        >⬆️</Badge>
       </>
     );
   }
