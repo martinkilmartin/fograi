@@ -369,6 +369,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             weight="bold"
             style={{
               marginBottom: '0',
+              textAlign: 'center',
             }}
           >
             {sourceName ?? ''}
