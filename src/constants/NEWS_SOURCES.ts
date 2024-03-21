@@ -7928,6 +7928,24 @@ export const USNewsSources = new Map<string, NewsSource>([
       primaryColor: '#00000',
     },
   ],
+  [
+    'US_NWRP',
+    {
+      name: 'The New Republic',
+      url: 'https://newrepublic.com',
+      est: 1914,
+      about:
+        'The New Republic is a media organization dedicated to addressing today\'s most critical issues.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+      logoWidth: 600,
+      logoHeight: 51,
+      tags: [],
+      headerBG: '#FFFFFF',
+      primaryColor: '#00000',
+    },
+  ],
 ]);
 export const USNewsSourcesLength = USNewsSources.size;
 
