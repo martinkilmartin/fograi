@@ -1121,6 +1121,19 @@ export const CANewsSources = new Map<string, NewsSource>([
       primaryColor: '#011543',
     },
   ],
+  [
+    'CA_CBC',
+    {
+      name: 'CBC',
+      url: 'https://www.cbc.ca/',
+      est: 1936,
+      about:
+        "Canada's home for breaking and in-depth coverage of local, national and international news.",
+      emos: ['📰', '🇨🇦'],
+      headerBG: '#003366',
+      primaryColor: '#011543',
+    },
+  ],
 ]);
 export const CANewsSourcesLength = CANewsSources.size;
 
@@ -4067,6 +4080,29 @@ export const IENewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'IE_VRGN',
+    {
+      name: 'Virgin Media News',
+      url: 'https://www.virginmediatelevision.ie/',
+      est: 2018,
+      about:
+        'The latest national and international news stories from the Virgin Media News team, followed by sport and weather.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_TODF',
+    {
+      name: 'Today FM',
+      url: 'https://www.todayfm.com/',
+      est: 1997,
+      about: 'The latest News news from TodayFM.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const IENewsSourcesLength = IENewsSources.size;
 
@@ -4489,6 +4525,18 @@ export const INNewsSources = new Map<string, NewsSource>([
       est: 1881,
       about:
         'Publishes news and views without bias or prejudice. Restraint and moderation, rather than agitational language and partisanship, are hallmarks of the paper.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IN_WION',
+    {
+      name: 'WION',
+      url: 'https://www.wionews.com/',
+      est: 2016,
+      about:
+        'WION (World Is One News) brings latest & breaking news from South Asia, India, Pakistan, Bangladesh, Nepal, Sri Lanka and rest of the World in politics, business, economy, sports, lifestyle, science & technology with opinions & analysis.',
       emos: ['📰', '🇮🇳'],
       langs: ['en'],
     },
@@ -5076,7 +5124,7 @@ export const UKNewsSources = new Map<string, NewsSource>([
       about:
         "Latest news from the UK and around the world, including politics, health, war, crime and more. Find out what's happening in New Hampshire, Ukraine, Northern Ireland and other topics of interest.",
       description: [''],
-      emos: ['📰', '🇬🇧'],
+      emos: ['📺', '🇬🇧'],
       langs: ['en'],
       logoWidth: 1054,
       logoHeight: 86,
@@ -5084,6 +5132,57 @@ export const UKNewsSources = new Map<string, NewsSource>([
       socials: undefined,
       headerBG: '#3d125a',
       primaryColor: '#fff',
+    },
+  ],
+  [
+    'UK_C4',
+    {
+      name: 'Channel 4 News',
+      url: 'https://www.channel4.com/news/',
+      est: 1982,
+      about:
+        "Latest news from the UK and around the world, including politics, health, war, crime and more. Find out what's happening in New Hampshire, Ukraine, Northern Ireland and other topics of interest.",
+      description: [''],
+      emos: ['📺', '🇬🇧'],
+      langs: ['en'],
+      logoWidth: 1054,
+      logoHeight: 86,
+      tags: [''],
+      socials: undefined,
+      headerBG: '#3d125a',
+      primaryColor: '#fff',
+    },
+  ],
+  [
+    'UK_ITV',
+    {
+      name: 'ITV News',
+      url: 'https://www.itv.com/news',
+      est: 1955,
+      about:
+        "Get the latest stories from ITV News, the UK's largest commercial news organisation, including breaking news on a regional and national level.",
+      description: [''],
+      emos: ['📺', '🇬🇧'],
+      langs: ['en'],
+      logoWidth: 1054,
+      logoHeight: 86,
+      tags: [''],
+      socials: undefined,
+      headerBG: '#3d125a',
+      primaryColor: '#fff',
+    },
+  ],
+  [
+    'UK_UNHR',
+    {
+      name: 'UnHerd',
+      url: 'https://www.vice.com/',
+      est: 2017,
+      about:
+        'Challenging the herd with new and bold thinking in philosophy, politics and culture.',
+      description: [],
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
     },
   ],
 ]);
@@ -5793,6 +5892,18 @@ export const OZNewsSources = new Map<string, NewsSource>([
       },
       headerBG: '#fff',
       primaryColor: '#8224E3',
+    },
+  ],
+  [
+    'OZ_ABC',
+    {
+      name: 'ABC News',
+      url: 'https://www.abc.net.au/news/',
+      est: 1932,
+      about:
+        'ABC News is a trusted source of news and information in Australia, providing comprehensive coverage of local and international events. With a focus on delivering accurate and impartial reporting, ABC News serves as a reliable resource for millions of Australians. From breaking news to in-depth analysis, ABC News covers a wide range of topics, including politics, business, health, science, technology, and more. Through its commitment to journalistic excellence, ABC News continues to inform, educate, and engage audiences across the country.',
+      emos: ['📰', '🇦🇺'],
+      langs: ['en'],
     },
   ],
 ]);
@@ -7946,6 +8057,108 @@ export const USNewsSources = new Map<string, NewsSource>([
       primaryColor: '#00000',
     },
   ],
+  [
+    'US_WP',
+    {
+      name: 'Washington Post',
+      url: 'https://www.washingtonpost.com/',
+      est: 1877,
+      about:
+        'Breaking news, live coverage, investigations, analysis, video, photos and opinions from The Washington Post. Subscribe for the latest on U.S. and international news, politics, business, technology, climate change, health and wellness, sports, science, weather, lifestyle and more.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_VOX',
+    {
+      name: 'Vox',
+      url: 'https://www.vox.com/',
+      est: 2014,
+      about:
+        'Vox is a general interest news site for the 21st century. Its mission: to help everyone understand our complicated world, so that we can all help shape it. In text, video and audio, our reporters explain politics, policy, world affairs, technology, culture, science, the climate crisis, money, health and everything else that matters. Our goal is to ensure that everyone, regardless of income or status, can access accurate information that empowers them.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_VOX',
+    {
+      name: 'Vox',
+      url: 'https://www.vox.com/',
+      est: 2014,
+      about:
+        'Vox is a general interest news site for the 21st century. Its mission: to help everyone understand our complicated world, so that we can all help shape it. In text, video and audio, our reporters explain politics, policy, world affairs, technology, culture, science, the climate crisis, money, health and everything else that matters. Our goal is to ensure that everyone, regardless of income or status, can access accurate information that empowers them.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_VICE',
+    {
+      name: 'Vice News',
+      url: 'https://www.vice.com/',
+      est: 2013,
+      about: 'The definitive guide to enlightening information.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_TYTI',
+    {
+      name: 'TYT Investigates',
+      url: 'https://tyt.com/reports/investigates',
+      est: 2016,
+      about:
+        'TYT Investigates is a news organization that reports on stories that matter.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_TYT',
+    {
+      name: 'The Young Turks',
+      url: 'https://tyt.com',
+      est: 2002,
+      about: 'The largest online news show in the world.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_DWIR',
+    {
+      name: 'The Daily Wire',
+      url: 'https://www.dailywire.com/',
+      est: 2015,
+      about:
+        'Daily coverage of the latest news and important stories in politics, culture, education, and sports.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_COWN',
+    {
+      name: 'Candace Owens',
+      url: 'https://candaceowens.com/',
+      est: 2015,
+      about:
+        'Connect with Candace and other members of Candace Owens community.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const USNewsSourcesLength = USNewsSources.size;
 
@@ -8695,6 +8908,57 @@ export const ZWNewsSources = new Map<string, NewsSource>([
 ]);
 export const ZWNewsSourcesLength = ZWNewsSources.size;
 
+export const FRNewsSources = new Map<string, NewsSource>([
+  [
+    'FR_FR24',
+    {
+      name: 'France 24',
+      url: 'https://www.france24.com/',
+      est: 2006,
+      about:
+        'Breaking news and world news from France 24 on Business, Sports, Culture. Video news. News from the US, Europe, Asia Pacific, Africa, Middle East, America.',
+      description: [],
+      emos: ['📰', '🇫🇷'],
+      langs: ['en', 'fr', 'ar'],
+    },
+  ],
+]);
+export const FRNewsSourcesLength = FRNewsSources.size;
+
+export const DENewsSources = new Map<string, NewsSource>([
+  [
+    'DE_DW',
+    {
+      name: 'Deutsche Welle',
+      url: 'https://www.dw.com/',
+      est: 1953,
+      about:
+        'DW (English) or Deutsche Welle Europe, is a news and information TV Station founded in 1953. This is the German version.',
+      description: [],
+      emos: ['📰', '🇩🇪'],
+      langs: ['en', 'de'],
+    },
+  ],
+]);
+export const DENewsSourcesLength = DENewsSources.size;
+
+export const QANewsSources = new Map<string, NewsSource>([
+  [
+    'QA_ALJ',
+    {
+      name: 'Al Jazeera',
+      url: 'https://www.aljazeera.com/',
+      est: 1996,
+      about:
+        'News, analysis from the Middle East and worldwide, multimedia and interactives, opinions, documentaries, podcasts, long reads and broadcast schedule.',
+      description: [],
+      emos: ['📰', '🇶🇦'],
+      langs: ['en', 'ar'],
+    },
+  ],
+]);
+export const QANewsSourcesLength = QANewsSources.size;
+
 export const AllNewsSources = new Map<string, NewsSource>([
   ...CANewsSources.entries(),
   ...IENewsSources.entries(),
@@ -8705,4 +8969,6 @@ export const AllNewsSources = new Map<string, NewsSource>([
   ...USNewsSources.entries(),
   ...TZNewsSources.entries(),
   ...ZWNewsSources.entries(),
+  ...FRNewsSources.entries(),
+  ...DENewsSources.entries(),
 ]);
