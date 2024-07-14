@@ -7,7 +7,7 @@ export async function getHeadlines(
   limit = 8,
 ): Promise<Headline[]> {
   try {
-    const { data, error } = await supabase.rpc('get_paginated_results', {
+    const { data, error } = await supabase.rpc('get_paginated_results_v2', {
       page_size: limit,
       last_seen: lastSeen,
     });
@@ -27,7 +27,7 @@ export async function getHeadlinesCountry(
 ): Promise<Headline[]> {
   try {
     const { data, error } = await supabase.rpc(
-      'get_paginated_results_country_sources',
+      'get_paginated_results_country_sources_v2',
       {
         page_size: limit,
         country: country,
@@ -51,7 +51,7 @@ export async function getHeadlinesCountrySource(
 ): Promise<Headline[]> {
   try {
     const { data, error } = await supabase.rpc(
-      'get_paginated_results_country_sources',
+      'get_paginated_results_country_sources_v2',
       {
         page_size: limit,
         country: country,
@@ -69,15 +69,15 @@ export async function getHeadlinesCountrySource(
 }
 
 export async function getSearchTerm(
-  country: Countries | null = null,
+  country: Array<Countries> | null = null,
   lastSeen: string | null = null,
   limit = 8,
   searchTerm: string,
-  sources: string | null = null,
+  sources: Array<string> | null = null,
 ): Promise<Headline[]> {
   try {
-    const { data, error } = await supabase.rpc('get_search_term', {
-      country: country,
+    const { data, error } = await supabase.rpc('get_search_term_v2', {
+      country_filter: country,
       last_seen: lastSeen,
       page_size: limit,
       search_term: searchTerm,
@@ -95,11 +95,11 @@ export async function getSearchTerm(
 export async function getHeadlinesWithPreferredCountries(
   lastSeen: string | null = null,
   limit = 8,
-  countries: string[],
+  countries: Array<Countries>,
 ): Promise<Headline[]> {
   try {
     const { data, error } = await supabase.rpc(
-      'get_preferred_paged_headlines',
+      'get_preferred_paged_headlines_v2',
       {
         page_size: limit,
         countries: countries,

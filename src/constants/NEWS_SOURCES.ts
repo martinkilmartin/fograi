@@ -7935,7 +7935,7 @@ export const USNewsSources = new Map<string, NewsSource>([
       url: 'https://newrepublic.com',
       est: 1914,
       about:
-        'The New Republic is a media organization dedicated to addressing today\'s most critical issues.',
+        "The New Republic is a media organization dedicated to addressing today's most critical issues.",
       description: [],
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
