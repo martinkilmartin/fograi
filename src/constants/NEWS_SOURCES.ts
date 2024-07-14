@@ -8159,6 +8159,44 @@ export const USNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'US_PBSN',
+    {
+      name: 'PBS NewsHour',
+      url: 'https://www.pbs.org/newshour/',
+      est: 1975,
+      about:
+        "The PBS NewsHour is an American daily evening television news program that is broadcast on the Public Broadcasting Service (PBS), airing seven nights a week on more than 350 of the public broadcaster's member stations.",
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_BLOM',
+    {
+      name: 'Bloomberg Quicktake',
+      url: 'https://www.bloomberg.com/Quicktake',
+      est: 2017,
+      about: 'News explainers for a world in flux.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_NPR',
+    {
+      name: 'NPR',
+      url: 'https://www.npr.org/',
+      est: 1970,
+      about:
+        'Top stories in the U.S. and world news, politics, health, science, business, music, arts and culture. Nonprofit journalism with a mission.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const USNewsSourcesLength = USNewsSources.size;
 
