@@ -8971,4 +8971,5 @@ export const AllNewsSources = new Map<string, NewsSource>([
   ...ZWNewsSources.entries(),
   ...FRNewsSources.entries(),
   ...DENewsSources.entries(),
+  ...QANewsSources.entries(),
 ]);
