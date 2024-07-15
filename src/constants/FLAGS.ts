@@ -173,4 +173,6 @@ export const flags = new Map<string, Flagtypes>([
   ['mz', '🇲🇿'], // Mozambique
   ['et', '🇪🇹'], // Ethiopia
   ['ug', '🇺🇬'], // Uganda
+  ['zm', '🇿🇲'], // Zambia
+  ['id', '🇮🇩'], // Indonesia
 ]);
