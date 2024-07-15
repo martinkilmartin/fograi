@@ -4541,6 +4541,30 @@ export const INNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'IN_NDTV',
+    {
+      name: 'NDTV',
+      url: 'https://www.ndtv.com/',
+      est: 1988,
+      about:
+        "NDTV.com provides latest news from India and around the world. Get breaking news alerts from India and follow today's live news updates in field of politics, business, technology, Bollywood, cricket and more.",
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IN_AAJ',
+    {
+      name: 'Aaj Tak',
+      url: 'https://www.aajtak.in/',
+      est: 2000,
+      about:
+        "Aaj Tak is India's best Hindi News Channel. Aaj Tak news channel covers the latest news in politics, entertainment, Bollywood, business and sports.",
+      emos: ['📰', '🇮🇳'],
+      langs: ['hi'],
+    },
+  ],
 ]);
 export const INNewsSourcesLength = INNewsSources.size;
 
@@ -8197,6 +8221,32 @@ export const USNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'US_RL',
+    {
+      name: 'RealLifeLore',
+      url: 'https://www.youtube.com/@RealLifeLore',
+      est: 2015,
+      about:
+        'RealLifeLore is a YouTube channel that creates videos about geography, history, and science.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_JRE',
+    {
+      name: 'Joe Rogan Experience',
+      url: 'https://spoti.fi/JoeRoganExperience',
+      est: 2009,
+      about:
+        'The Joe Rogan Experience podcast is a long form conversation hosted by comedian Joe Rogan with friends and guests that have included comedians, actors, musicians, MMA fighters, authors, artists, and beyond.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const USNewsSourcesLength = USNewsSources.size;
 
@@ -8997,6 +9047,74 @@ export const QANewsSources = new Map<string, NewsSource>([
 ]);
 export const QANewsSourcesLength = QANewsSources.size;
 
+export const MXNewsSources = new Map<string, NewsSource>([
+  [
+    'MX_UNI',
+    {
+      name: 'Univision',
+      url: 'https://www.univision.com/',
+      est: 1962,
+      about:
+        'Noticias de inmigración, política, resultados de la lotería de California, información de salud, entretenimiento y deportes, y el clima.',
+      description: [],
+      emos: ['📰', '🇲🇽'],
+      langs: ['es'],
+    },
+  ],
+]);
+export const MXNewsSourcesLength = MXNewsSources.size;
+
+export const IDNewsSources = new Map<string, NewsSource>([
+  [
+    'ID_CNN',
+    {
+      name: 'CNN Indonesia',
+      url: 'https://www.cnnindonesia.com/',
+      est: 2015,
+      about:
+        'CNNIndonesia.com menyajikan berita terkini Indonesia, dunia, bisnis, teknologi, hiburan, olahraga, profil dan travel.',
+      description: [],
+      emos: ['📰', '🇮🇩'],
+      langs: ['id'],
+    },
+  ],
+]);
+export const IDNewsSourcesLength = IDNewsSources.size;
+
+export const AENewsSources = new Map<string, NewsSource>([
+  [
+    'AE_ARA',
+    {
+      name: 'Al Arabiya',
+      url: 'https://www.alarabiya.net/',
+      est: 2003,
+      about:
+        'Al Arabiya is a Saudi free-to-air television news channel broadcast in Modern Standard Arabic. The channel is based in Dubai and broadcasts to a pan-Arab audience.',
+      description: [],
+      emos: ['📰', '🇦🇪'],
+      langs: ['ar'],
+    },
+  ],
+]);
+export const AENewsSourcesLength = AENewsSources.size;
+
+export const ARNewsSources = new Map<string, NewsSource>([
+  [
+    'AR_TLN',
+    {
+      name: 'Telemundo',
+      url: 'https://www.telemundo.com/',
+      est: 1984,
+      about:
+        'Mira capítulos completos de tus programas favoritos de Telemundo y contenido exclusivo en Telemundo Now.',
+      description: [],
+      emos: ['📰', '🇦🇷'],
+      langs: ['es'],
+    },
+  ],
+]);
+export const ARNewsSourcesLength = ARNewsSources.size;
+
 export const AllNewsSources = new Map<string, NewsSource>([
   ...CANewsSources.entries(),
   ...IENewsSources.entries(),
@@ -9010,4 +9128,8 @@ export const AllNewsSources = new Map<string, NewsSource>([
   ...FRNewsSources.entries(),
   ...DENewsSources.entries(),
   ...QANewsSources.entries(),
+  ...MXNewsSources.entries(),
+  ...IDNewsSources.entries(),
+  ...AENewsSources.entries(),
+  ...ARNewsSources.entries(),
 ]);

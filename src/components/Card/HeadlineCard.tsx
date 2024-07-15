@@ -43,13 +43,20 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const [canShare, setShareable] = useState(true);
   const DATE = new Date(headline.created_at);
-  const emojie = headline.emos;
+  // const emojie = headline.emos;
   const sourceAbout = AllNewsSources.get(headline.source)?.about;
   const sourceURL =
     AllNewsSources.get(headline.source)?.url + '?utm_source=nooze.news';
   const sourceName = AllNewsSources.get(headline.source)?.name;
   const emos = AllNewsSources.get(headline.source)?.emos;
   const est = AllNewsSources.get(headline.source)?.est;
+
+  const mediaTypeIcons = {
+    video: '📹',
+    audio: '🔊',
+    image: '📸',
+    article: '📰',
+  };
 
   const toggleLike = async () => {
     setLikeLoading(true);
@@ -323,9 +330,10 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           style={{
             flex: '8',
             textAlign: 'center',
+            fontSize: '28px',
           }}
         >
-          {emojie}
+          {mediaTypeIcons[headline.media_type as keyof typeof mediaTypeIcons]}
         </Text>
         <div
           style={{

@@ -10,4 +10,5 @@ export type Headline = {
   img_alt?: string
   author?: string
   published?: string
+  media_type: string
 }
