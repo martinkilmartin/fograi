@@ -3836,7 +3836,7 @@ export const IENewsSources = new Map<string, NewsSource>([
     {
       name: 'Irish Tech News',
       url: 'https://irishtechnews.ie/',
-      est: 2104,
+      est: 2014,
       about:
         'Keeping you informed of all the latest news from the world of Technology. With the main focus on Irish based news, covering a wide range of topics from social media and smartphones to start-ups and SMEs.',
       emos: ['🌐', '🇮🇪'],
