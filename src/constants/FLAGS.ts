@@ -14,7 +14,6 @@ export const flags = new Map<string, Flagtypes>([
   ['ng', '🇳🇬'], // Nigeria
   ['ke', '🇰🇪'], // Kenya
   ['gh', '🇬🇭'], // Ghana
-  ['au', '🇦🇺'], // Australia
   ['de', '🇩🇪'], // Germany
   ['fr', '🇫🇷'], // France
   ['es', '🇪🇸'], // Spain
@@ -48,11 +47,9 @@ export const flags = new Map<string, Flagtypes>([
   ['hn', '🇭🇳'], // Honduras
   ['ni', '🇳🇮'], // Nicaragua
   ['sv', '🇸🇻'], // El Salvador
-  ['bz', '🇧🇿'], // Belize
   ['jm', '🇯🇲'], // Jamaica
   ['ht', '🇭🇹'], // Haiti
   ['ml', '🇲🇱'], // Mali
-  ['cg', '🇨🇬'], // Republic of the Congo
   ['dz', '🇩🇿'], // Algeria
   ['ly', '🇱🇾'], // Libya
   ['sd', '🇸🇩'], // Sudan
@@ -61,13 +58,10 @@ export const flags = new Map<string, Flagtypes>([
   ['bf', '🇧🇫'], // Burkina Faso
   ['sn', '🇸🇳'], // Senegal
   ['ci', '🇨🇮'], // Côte d'Ivoire
-  ['tg', '🇹🇬'], // Togo
   ['bj', '🇧🇯'], // Benin
   ['gm', '🇬🇲'], // Gambia
   ['sl', '🇸🇱'], // Sierra Leone
   ['lr', '🇱🇷'], // Liberia
-  ['cf', '🇨🇫'], // Central African Republic
-  ['cd', '🇨🇩'], // Democratic Republic of the Congo
   ['bi', '🇧🇮'], // Burundi
   ['rw', '🇷🇼'], // Rwanda
   ['so', '🇸🇴'], // Somalia
@@ -75,7 +69,6 @@ export const flags = new Map<string, Flagtypes>([
   ['er', '🇪🇷'], // Eritrea
   ['st', '🇸🇹'], // São Tomé and Príncipe
   ['km', '🇰🇲'], // Comoros
-  ['mw', '🇲🇼'], // Malawi
   ['lb', '🇱🇧'], // Lebanon
   ['jo', '🇯🇴'], // Jordan
   ['iq', '🇮🇶'], // Iraq
@@ -161,13 +154,9 @@ export const flags = new Map<string, Flagtypes>([
   ['wf', '🇼🇫'], // Wallis and Futuna
   ['bl', '🇧🇱'], // Saint Barthélemy
   ['sh', '🇸🇭'], // Saint Helena, Ascension and Tristan da Cunha
-  ['sc', '🇸🇨'], // Seychelles
   ['mr', '🇲🇷'], // Mauritania
   ['mg', '🇲🇬'], // Madagascar
   ['mu', '🇲🇺'], // Mauritius
-  ['ls', '🇱🇸'], // Lesotho
-  ['bw', '🇧🇼'], // Botswana
-  ['sz', '🇸🇿'], // Eswatini
   ['na', '🇳🇦'], // Namibia
   ['ao', '🇦🇴'], // Angola
   ['mz', '🇲🇿'], // Mozambique
@@ -190,29 +179,46 @@ export const flags = new Map<string, Flagtypes>([
   ['gq', '🇬🇶'], // Equatorial Guinea
   ['cv', '🇨🇻'], // Cape Verde
   ['st', '🇸🇹'], // São Tomé and Príncipe
-  ['sc', '🇸🇨'], // Seychelles
-  ['mu', '🇲🇺'], // Mauritius
   ['mw', '🇲🇼'], // Malawi
   ['ls', '🇱🇸'], // Lesotho
   ['bw', '🇧🇼'], // Botswana
   ['sz', '🇸🇿'], // Eswatini
-  ['lr', '🇱🇷'], // Liberia
-  ['sl', '🇸🇱'], // Sierra Leone
   ['gn', '🇬🇳'], // Guinea
   ['sn', '🇸🇳'], // Senegal
   ['gm', '🇬🇲'], // Gambia
   ['gw', '🇬🇼'], // Guinea-Bissau
-  ['bj', '🇧🇯'], // Benin
   ['tg', '🇹🇬'], // Togo
-  ['gh', '🇬🇭'], // Ghana
-  ['ci', '🇨🇮'], // Côte d'Ivoire
   ['bf', '🇧🇫'], // Burkina Faso
   ['ne', '🇳🇪'], // Niger
-  ['ng', '🇳🇬'], // Nigeria
-  ['tg', '🇹🇬'], // Togo
-  ['bj', '🇧🇯'], // Benin
-  ['tg', '🇹🇬'], // Togo
-  ['gh', '🇬🇭'], // Ghana
-  ['ci', '🇨🇮'], // Côte d'Ivo
-  ['ni', '🇳🇮'], // Nicaragua
+  ['ad', '🇦🇩'], // Andorra
+  ['ag', '🇦🇬'], // Antigua and Barbuda
+  ['bb', '🇧🇧'], // Barbados
+  ['bs', '🇧🇸'], // Bahamas
+  ['dm', '🇩🇲'], // Dominica
+  ['fj', '🇫🇯'], // Fiji
+  ['gd', '🇬🇩'], // Grenada
+  ['gy', '🇬🇾'], // Guyana
+  ['ki', '🇰🇮'], // Kiribati
+  ['kn', '🇰🇳'], // Saint Kitts and Nevis
+  ['lc', '🇱🇨'], // Saint Lucia
+  ['nr', '🇳🇷'], // Nauru
+  ['sb', '🇸🇧'], // Solomon Islands
+  ['sc', '🇸🇨'], // Seychelles
+  ['vc', '🇻🇨'], // Saint Vincent and the Grenadines
+  ['ws', '🇼🇸'], // Samoa
+  ['vu', '🇻🇺'], // Vanuatu
+  ['tv', '🇹🇻'], // Tuvalu
+  ['pw', '🇵🇼'], // Palau
+  ['fm', '🇫🇲'], // Micronesia
+  ['as', '🇦🇸'], // American Samoa
+  ['aq', '🇦🇶'], // Antarctica
+  ['ai', '🇦🇮'], // Anguilla
+  ['mp', '🇲🇵'], // Northern Mariana Islands
+  ['ms', '🇲🇸'], // Montserrat
+  ['pm', '🇵🇲'], // Saint Pierre and Miquelon
+  ['vg', '🇻🇬'], // British Virgin Islands
+  ['vi', '🇻🇮'], // U.S. Virgin Islands
+  ['sj', '🇸🇯'], // Svalbard and Jan Mayen
+  ['eh', '🇪🇭'], // Western Sahara
+  ['gu', '🇬🇺'], // Guam
 ]);

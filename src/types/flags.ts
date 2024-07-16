@@ -152,7 +152,6 @@ export type flags =
   | '🇲🇴' // Macau
   | '🇭🇰' // Hong Kong
   | '🇹🇼' // Taiwan
-  | '🇸🇬' // Singapore
   | '🇮🇲' // Isle of Man
   | '🇨🇽' // Christmas Island
   | '🇨🇨' // Cocos (Keeling) Islands
@@ -165,9 +164,7 @@ export type flags =
   | '🇧🇱' // Saint Barthélemy
   | '🇸🇭' // Saint Helena, Ascension and Tristan da Cunha
   | '🇸🇨' // Seychelles
-  | '🇲🇻' // Maldives
   | '🇲🇷' // Mauritania
-  | '🇲🇬' // Madagascar
   | '🇲🇺' // Mauritius
   | '🇱🇸' // Lesotho
   | '🇧🇼' // Botswana
@@ -213,4 +210,22 @@ export type flags =
   | '🇨🇻' // Cape Verde
   | '🇬🇳' // Guines
   | '🇬🇼' // Guinea-Bissau
-  | '🇳🇮'; // Nicaragua
+  | '🇦🇩' // Andorra
+  | '🇦🇬' // Antigua and Barbuda
+  | '🇰🇮' // Kiribati
+  | '🇳🇷' // Nauru
+  | '🇵🇼' // Palau
+  | '🇹🇻' // Tuvalu
+  | '🇦🇶' // Antarctica
+  | '🇦🇮' // Anguilla
+  | '🇦🇸' // American Samoa
+  | '🇫🇲' // Micronesia
+  | '🇬🇺' // Guam
+  | '🇲🇵' // Northern Mariana Islands
+  | '🇲🇸' // Montserrat
+  | '🇵🇲' // Saint Pierre and Miquelon
+  | '🇻🇬' // British Virgin Islands
+  | '🇻🇮' // U.S. Virgin Islands
+  | '🇸🇯' // Svalbard and Jan Mayen
+  | '🇪🇭' // Western Sahara
+

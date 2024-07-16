@@ -211,6 +211,11 @@ export type Countries =
   | 'gq' // Equatorial Guinea
   | 'ni' // Nicaragua
   | 'ga' // Gabon
+  | 'ad' // Andorra
+  | 'ag' // Antigua and Barbuda
+  | 'cv' // Cape Verde
+  | 'ki' // Kiribati
+  | 'nr' // Nauru
 
 export type CountryKeys =
   | 'canada'
@@ -425,3 +430,8 @@ export type CountryKeys =
   | 'equatorial-guinea' // Equatorial Guinea
   | 'nicaragua' // Nicaragua
   | 'gabon' // Gabon
+  | 'andorra' // Andorra
+  | 'antigua-and-barbuda' // Antigua and Barbuda
+  | 'cape-verde' // Cape Verde
+  | 'kiribati' // Kiribati
+  | 'nauru' // Nauru
