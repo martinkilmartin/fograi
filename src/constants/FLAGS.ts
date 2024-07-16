@@ -214,4 +214,5 @@ export const flags = new Map<string, Flagtypes>([
   ['tg', '🇹🇬'], // Togo
   ['gh', '🇬🇭'], // Ghana
   ['ci', '🇨🇮'], // Côte d'Ivo
+  ['ni', '🇳🇮'], // Nicaragua
 ]);

@@ -209,6 +209,8 @@ export type Countries =
   | 'cm' // Cameroon
   | 'td' // Chad
   | 'gq' // Equatorial Guinea
+  | 'ni' // Nicaragua
+  | 'ga' // Gabon
 
 export type CountryKeys =
   | 'canada'
@@ -421,3 +423,5 @@ export type CountryKeys =
   | 'cameroon' // Cameroon
   | 'chad' // Chad
   | 'equatorial-guinea' // Equatorial Guinea
+  | 'nicaragua' // Nicaragua
+  | 'gabon' // Gabon

@@ -190,4 +190,5 @@ export const COUNTRIES = new Map<CountryTypes, string>([
   ['mu', 'Mauritius'],
   ['sc', 'Seychelles'],
   ['km', 'Comoros'],
+  ['ni', 'Nicaragua'],
 ]);

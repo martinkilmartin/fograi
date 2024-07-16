@@ -212,4 +212,5 @@ export type flags =
   | '🇬🇶' // Equitorial Guinea
   | '🇨🇻' // Cape Verde
   | '🇬🇳' // Guines
-  | '🇬🇼'; // Guinea-Bissau
+  | '🇬🇼' // Guinea-Bissau
+  | '🇳🇮'; // Nicaragua
