@@ -9264,7 +9264,7 @@ export const JPNewsSources = new Map<string, NewsSource>([
         "NHK World-Japan is the international service of Japan's public broadcaster, NHK. It provides news and information from Japan and Asia to a global audience.",
       description: [],
       emos: ['📰', '🇯🇵'],
-      langs: ['en'],
+      langs: ['en', 'ja'],
     },
   ],
 ]);
