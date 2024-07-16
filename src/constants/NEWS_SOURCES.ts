@@ -4565,6 +4565,30 @@ export const INNewsSources = new Map<string, NewsSource>([
       langs: ['hi'],
     },
   ],
+  [
+    'IN_ZN24',
+    {
+      name: 'Zee News',
+      url: 'https://zeenews.india.com/',
+      est: 1999,
+      about:
+        'Zee News brings latest news from India and World on breaking news, today news headlines, politics, business, technology, bollywood, entertainment, sports and others.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IN_RPUB',
+    {
+      name: 'Republic World',
+      url: 'https://www.republicworld.com/',
+      est: 2017,
+      about:
+        'Republic World brings to you the latest news on politics, business, sports, entertainment, and more from India and around the world.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const INNewsSourcesLength = INNewsSources.size;
 
@@ -5535,6 +5559,18 @@ export const NZNewsSources = new Map<string, NewsSource>([
       primaryColor: '#0096ED',
     },
   ],
+  [
+    'NZ_1NEW',
+    {
+      name: '1News',
+      url: 'https://www.1news.co.nz/',
+      est: 1969,
+      about:
+        'Latest and breaking news, in-depth analysis, political and economic news, business, sports, and entertainment and award-winning journalism.',
+      emos: ['📰', '🇳🇿'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const NZNewsSourcesLength = NZNewsSources.size;
 
@@ -5926,6 +5962,18 @@ export const OZNewsSources = new Map<string, NewsSource>([
       est: 1932,
       about:
         'ABC News is a trusted source of news and information in Australia, providing comprehensive coverage of local and international events. With a focus on delivering accurate and impartial reporting, ABC News serves as a reliable resource for millions of Australians. From breaking news to in-depth analysis, ABC News covers a wide range of topics, including politics, business, health, science, technology, and more. Through its commitment to journalistic excellence, ABC News continues to inform, educate, and engage audiences across the country.',
+      emos: ['📰', '🇦🇺'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'OZ_7NEW',
+    {
+      name: '7NEWS',
+      url: 'https://7news.com.au/',
+      est: 1958,
+      about:
+        '7NEWS is a leading Australian news network that provides comprehensive coverage of local, national, and international events. With a focus on delivering breaking news, in-depth analysis, and insightful reporting, 7NEWS serves as a trusted source of information for millions of Australians. From politics to business, health, entertainment, and more, 7NEWS covers a wide range of topics that are of interest and importance to its audience. Through its commitment to quality journalism, 7NEWS continues to inform, educate, and engage viewers across the country.',
       emos: ['📰', '🇦🇺'],
       langs: ['en'],
     },
@@ -9010,6 +9058,19 @@ export const FRNewsSources = new Map<string, NewsSource>([
       langs: ['en', 'fr', 'ar'],
     },
   ],
+  [
+    'FR_LMON',
+    {
+      name: 'Le Monde',
+      url: 'https://www.lemonde.fr/',
+      est: 1944,
+      about:
+        'Le Monde is a French daily afternoon newspaper founded by Hubert Beuve-Méry and continuously published in Paris since its first edition on 19 December 1944.',
+      description: [],
+      emos: ['📰', '🇫🇷'],
+      langs: ['fr'],
+    },
+  ],
 ]);
 export const FRNewsSourcesLength = FRNewsSources.size;
 
@@ -9056,6 +9117,19 @@ export const MXNewsSources = new Map<string, NewsSource>([
       est: 1962,
       about:
         'Noticias de inmigración, política, resultados de la lotería de California, información de salud, entretenimiento y deportes, y el clima.',
+      description: [],
+      emos: ['📰', '🇲🇽'],
+      langs: ['es'],
+    },
+  ],
+  [
+    'MX_EXLS',
+    {
+      name: 'Excélsior TV',
+      url: 'https://www.excelsior.com.mx/',
+      est: 1917,
+      about:
+        'Excélsior TV is a Mexican news television channel owned by Grupo Imagen. It provides news and information on national and international events.',
       description: [],
       emos: ['📰', '🇲🇽'],
       langs: ['es'],
@@ -9112,8 +9186,174 @@ export const ARNewsSources = new Map<string, NewsSource>([
       langs: ['es'],
     },
   ],
+  [
+    'AR_CLAR',
+    {
+      name: 'Clarín',
+      url: 'https://www.clarin.com/',
+      est: 1945,
+      about:
+        'Clarín is the largest newspaper in Argentina and the second most circulated in the Spanish-speaking world. It is based in Buenos Aires.',
+      description: [],
+      emos: ['📰', '🇦🇷'],
+      langs: ['es'],
+    },
+  ],
 ]);
 export const ARNewsSourcesLength = ARNewsSources.size;
+
+export const SGNewsSources = new Map<string, NewsSource>([
+  [
+    'SG_CNA',
+    {
+      name: 'Channel NewsAsia',
+      url: 'https://www.channelnewsasia.com/',
+      est: 1999,
+      about:
+        "Comprehensive news coverage of Asia-Pacific with special reports from Channel NewsAsia's foreign correspondents and regional news sources.",
+      description: [],
+      emos: ['📰', '🇸🇬'],
+      langs: ['en'],
+    },
+  ],
+]);
+export const SGNewsSourcesLength = SGNewsSources.size;
+
+export const NGNewsSources = new Map<string, NewsSource>([
+  [
+    'NG_CHAN',
+    {
+      name: 'Channels Television',
+      url: 'https://www.channelstv.com/',
+      est: 1992,
+      about:
+        'Channels Television is a leading 24-hour news channel broadcasting live from Lagos, Nigeria - West Africa. Our mission is to produce and broadcast television programs of quality and integrity that recognize and challenge the intelligence and curiosity of our viewers.',
+      description: [],
+      emos: ['📰', '🇳🇬'],
+      langs: ['en'],
+    },
+  ],
+]);
+export const NGNewsSourcesLength = NGNewsSources.size;
+
+export const ZANewsSources = new Map<string, NewsSource>([
+  [
+    'ZA_ENCA',
+    {
+      name: 'eNCA',
+      url: 'https://www.enca.com/',
+      est: 2008,
+      about:
+        "eNCA is South Africa's most trusted independent TV and online news brand. It launched on June 1st, 2008 to become the country's first 24-hour television news service.",
+      description: [],
+      emos: ['📰', '🇿🇦'],
+      langs: ['en'],
+    },
+  ],
+]);
+export const ZANewsSourcesLength = ZANewsSources.size;
+
+export const JPNewsSources = new Map<string, NewsSource>([
+  [
+    'JP_NHKW',
+    {
+      name: 'NHK World',
+      url: 'https://www3.nhk.or.jp/nhkworld/',
+      est: 1998,
+      about:
+        "NHK World-Japan is the international service of Japan's public broadcaster, NHK. It provides news and information from Japan and Asia to a global audience.",
+      description: [],
+      emos: ['📰', '🇯🇵'],
+      langs: ['en'],
+    },
+  ],
+]);
+export const JPNewsSourcesLength = JPNewsSources.size;
+
+export const KRNewsSources = new Map<string, NewsSource>([
+  [
+    'KR_YON',
+    {
+      name: 'Yonhap News Agency',
+      url: 'https://en.yna.co.kr/',
+      est: 1980,
+      about:
+        "Yonhap News Agency is South Korea's leading news agency, providing comprehensive coverage of both domestic and international news.",
+      description: [],
+      emos: ['📰', '🇰🇷'],
+      langs: ['ko'],
+    },
+  ],
+]);
+export const KRNewsSourcesLength = KRNewsSources.size;
+
+export const CNNewsSources = new Map<string, NewsSource>([
+  [
+    'CN_CGTN',
+    {
+      name: 'CGTN',
+      url: 'https://www.cgtn.com/',
+      est: 2016,
+      about:
+        'CGTN (China Global Television Network) is an international media organization launched on December 31, 2016. It aims to provide objective and balanced news coverage.',
+      description: [],
+      emos: ['📰', '🇨🇳'],
+      langs: ['en'],
+    },
+  ],
+]);
+export const CNNewsSourcesLength = CNNewsSources.size;
+
+export const ESNewsSources = new Map<string, NewsSource>([
+  [
+    'ES_ELPA',
+    {
+      name: 'El País',
+      url: 'https://elpais.com/',
+      est: 1976,
+      about:
+        "El País is a Spanish-language daily newspaper published in Madrid. It is the most widely-circulated daily newspaper in Spain, and it is considered one of the country's newspapers of record.",
+      description: [],
+      emos: ['📰', '🇪🇸'],
+      langs: ['es'],
+    },
+  ],
+]);
+export const ESNewsSourcesLength = ESNewsSources.size;
+
+export const ITNewsSources = new Map<string, NewsSource>([
+  [
+    'IT_RAINE',
+    {
+      name: 'Rai News 24',
+      url: 'https://www.rainews.it/',
+      est: 1999,
+      about:
+        "Rai News 24 is Italy's 24-hour all-news state-owned television channel, broadcast on digital terrestrial television in Italy and via satellite worldwide.",
+      description: [],
+      emos: ['📰', '🇮🇹'],
+      langs: ['it'],
+    },
+  ],
+]);
+export const ITNewsSourcesLength = ITNewsSources.size;
+
+export const PLNewsSources = new Map<string, NewsSource>([
+  [
+    'PL_TVP',
+    {
+      name: 'TVP Info',
+      url: 'https://www.tvp.info/',
+      est: 2007,
+      about:
+        "TVP Info is a Polish free-to-air news channel, launched on 6 October 2007. It is part of Telewizja Polska (TVP), Poland's public broadcasting corporation.",
+      description: [],
+      emos: ['📰', '🇵🇱'],
+      langs: ['pl'],
+    },
+  ],
+]);
+export const PLNewsSourcesLength = PLNewsSources.size;
 
 export const AllNewsSources = new Map<string, NewsSource>([
   ...CANewsSources.entries(),
@@ -9132,4 +9372,13 @@ export const AllNewsSources = new Map<string, NewsSource>([
   ...IDNewsSources.entries(),
   ...AENewsSources.entries(),
   ...ARNewsSources.entries(),
+  ...SGNewsSources.entries(),
+  ...NGNewsSources.entries(),
+  ...ZANewsSources.entries(),
+  ...JPNewsSources.entries(),
+  ...KRNewsSources.entries(),
+  ...CNNewsSources.entries(),
+  ...ESNewsSources.entries(),
+  ...ITNewsSources.entries(),
+  ...PLNewsSources.entries(),
 ]);

@@ -77,11 +77,11 @@ export async function getSearchTerm(
 ): Promise<Headline[]> {
   try {
     const { data, error } = await supabase.rpc('get_search_term_v2', {
-      page_size: limit,
       country_filter: country,
-      source_filter: sources,
       last_seen: lastSeen,
+      page_size: limit,
       search_term: searchTerm,
+      source_filter: sources,
     });
 
     if (error) throw error;
