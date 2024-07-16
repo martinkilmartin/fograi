@@ -216,6 +216,7 @@ export type Countries =
   | 'cv' // Cape Verde
   | 'ki' // Kiribati
   | 'nr' // Nauru
+  | 'tv' // Tuvalu
 
 export type CountryKeys =
   | 'canada'
@@ -435,3 +436,4 @@ export type CountryKeys =
   | 'cape-verde' // Cape Verde
   | 'kiribati' // Kiribati
   | 'nauru' // Nauru
+  | 'tuvalu' // Tuvalu
