@@ -9,6 +9,22 @@ import {
   USNewsSources,
   TZNewsSources,
   ZWNewsSources,
+  AENewsSources,
+  ARNewsSources,
+  DENewsSources,
+  FRNewsSources,
+  ITNewsSources,
+  JPNewsSources,
+  MXNewsSources,
+  QANewsSources,
+  IDNewsSources,
+  SGNewsSources,
+  NGNewsSources,
+  ZANewsSources,
+  KRNewsSources,
+  CNNewsSources,
+  ESNewsSources,
+  PLNewsSources,
 } from '@constants/NEWS_SOURCES';
 import { flags } from '@constants/FLAGS';
 import { COUNTRIES } from '@constants/COUNTRIES';
@@ -23,6 +39,22 @@ const UK_SOURCES_SIZE = UKNewsSources.size;
 const US_SOURCES_SIZE = USNewsSources.size;
 const TZ_SOURCES_SIZE = TZNewsSources.size;
 const ZW_SOURCES_SIZE = ZWNewsSources.size;
+const AE_SOURCES_SIZE = AENewsSources.size;
+const AR_SOURCES_SIZE = ARNewsSources.size;
+const DE_SOURCES_SIZE = DENewsSources.size;
+const FR_SOURCES_SIZE = FRNewsSources.size;
+const IT_SOURCES_SIZE = ITNewsSources.size;
+const JP_SOURCES_SIZE = JPNewsSources.size;
+const MX_SOURCES_SIZE = MXNewsSources.size;
+const QA_SOURCES_SIZE = QANewsSources.size;
+const ID_SOURCES_SIZE = IDNewsSources.size;
+const SG_SOURCES_SIZE = SGNewsSources.size;
+const NG_SOURCES_SIZE = NGNewsSources.size;
+const ZA_SOURCES_SIZE = ZANewsSources.size;
+const KR_SOURCES_SIZE = KRNewsSources.size;
+const CN_SOURCES_SIZE = CNNewsSources.size;
+const ES_SOURCES_SIZE = ESNewsSources.size;
+const PL_SOURCES_SIZE = PLNewsSources.size;
 
 const ALL_SIZES =
   CA_SOURCES_SIZE +
@@ -33,7 +65,23 @@ const ALL_SIZES =
   UK_SOURCES_SIZE +
   US_SOURCES_SIZE +
   TZ_SOURCES_SIZE +
-  ZW_SOURCES_SIZE;
+  ZW_SOURCES_SIZE +
+  AE_SOURCES_SIZE +
+  AR_SOURCES_SIZE +
+  DE_SOURCES_SIZE +
+  FR_SOURCES_SIZE +
+  IT_SOURCES_SIZE +
+  JP_SOURCES_SIZE +
+  MX_SOURCES_SIZE +
+  QA_SOURCES_SIZE +
+  ID_SOURCES_SIZE +
+  SG_SOURCES_SIZE +
+  NG_SOURCES_SIZE +
+  ZA_SOURCES_SIZE +
+  KR_SOURCES_SIZE +
+  CN_SOURCES_SIZE +
+  ES_SOURCES_SIZE +
+  PL_SOURCES_SIZE;
 
 const CSM = new Map([
   ['ca', CA_SOURCES_SIZE],
@@ -45,6 +93,22 @@ const CSM = new Map([
   ['us', US_SOURCES_SIZE],
   ['tz', TZ_SOURCES_SIZE],
   ['zw', ZW_SOURCES_SIZE],
+  ['ae', AE_SOURCES_SIZE],
+  ['ar', AR_SOURCES_SIZE],
+  ['de', DE_SOURCES_SIZE],
+  ['fr', FR_SOURCES_SIZE],
+  ['it', IT_SOURCES_SIZE],
+  ['jp', JP_SOURCES_SIZE],
+  ['mx', MX_SOURCES_SIZE],
+  ['qa', QA_SOURCES_SIZE],
+  ['id', ID_SOURCES_SIZE],
+  ['sg', SG_SOURCES_SIZE],
+  ['ng', NG_SOURCES_SIZE],
+  ['za', ZA_SOURCES_SIZE],
+  ['kr', KR_SOURCES_SIZE],
+  ['cn', CN_SOURCES_SIZE],
+  ['es', ES_SOURCES_SIZE],
+  ['pl', PL_SOURCES_SIZE],
 ]);
 
 const About = (): JSX.Element => {

@@ -175,4 +175,43 @@ export const flags = new Map<string, Flagtypes>([
   ['ug', '🇺🇬'], // Uganda
   ['zm', '🇿🇲'], // Zambia
   ['id', '🇮🇩'], // Indonesia
+  ['ck', '🇨🇰'], // Cook Islands
+  ['il', '🇮🇱'], // Israel
+  ['bt', '🇧🇹'], // Bhutan
+  ['hr', '🇭🇷'], // Croatia
+  ['cy', '🇨🇾'], // Cyprus
+  ['mt', '🇲🇹'], // Malta
+  ['si', '🇸🇮'], // Slovenia
+  ['cm', '🇨🇲'], // Cameroon
+  ['td', '🇹🇩'], // Chad
+  ['cf', '🇨🇫'], // Central African Republic
+  ['cg', '🇨🇬'], // Republic of the Congo
+  ['ga', '🇬🇦'], // Gabon
+  ['gq', '🇬🇶'], // Equatorial Guinea
+  ['cv', '🇨🇻'], // Cape Verde
+  ['st', '🇸🇹'], // São Tomé and Príncipe
+  ['sc', '🇸🇨'], // Seychelles
+  ['mu', '🇲🇺'], // Mauritius
+  ['mw', '🇲🇼'], // Malawi
+  ['ls', '🇱🇸'], // Lesotho
+  ['bw', '🇧🇼'], // Botswana
+  ['sz', '🇸🇿'], // Eswatini
+  ['lr', '🇱🇷'], // Liberia
+  ['sl', '🇸🇱'], // Sierra Leone
+  ['gn', '🇬🇳'], // Guinea
+  ['sn', '🇸🇳'], // Senegal
+  ['gm', '🇬🇲'], // Gambia
+  ['gw', '🇬🇼'], // Guinea-Bissau
+  ['bj', '🇧🇯'], // Benin
+  ['tg', '🇹🇬'], // Togo
+  ['gh', '🇬🇭'], // Ghana
+  ['ci', '🇨🇮'], // Côte d'Ivoire
+  ['bf', '🇧🇫'], // Burkina Faso
+  ['ne', '🇳🇪'], // Niger
+  ['ng', '🇳🇬'], // Nigeria
+  ['tg', '🇹🇬'], // Togo
+  ['bj', '🇧🇯'], // Benin
+  ['tg', '🇹🇬'], // Togo
+  ['gh', '🇬🇭'], // Ghana
+  ['ci', '🇨🇮'], // Côte d'Ivo
 ]);

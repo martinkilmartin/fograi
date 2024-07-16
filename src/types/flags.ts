@@ -199,4 +199,17 @@ export type flags =
   | '🇪🇷' // Eritrea
   | '🇸🇹' // São Tomé and Príncipe
   | '🇰🇲' // Comoros
-  | '🇲🇼'; // Malawi
+  | '🇲🇼' // Malawi
+  | '🇨🇰' // Cook Islands
+  | '🇧🇹' // Bhutan
+  | '🇭🇷' // Croatia
+  | '🇨🇾' // Cyprus
+  | '🇲🇹' // Malta
+  | '🇸🇮' // Slovenia
+  | '🇨🇲' // Cameroon
+  | '🇹🇩' // Chad
+  | '🇬🇦' // Gabon
+  | '🇬🇶' // Equitorial Guinea
+  | '🇨🇻' // Cape Verde
+  | '🇬🇳' // Guines
+  | '🇬🇼'; // Guinea-Bissau

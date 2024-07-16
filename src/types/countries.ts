@@ -196,7 +196,19 @@ export type Countries =
   | 'cz' // Czech Republic
   | 'hu' // Hungary
   | 'is' // Iceland
-  | 'ci'; // Côte d'Ivoire
+  | 'ci' // Côte d'Ivoire
+  | 'il' // Israel
+  | 'bt' // Bhutan
+  | 'pt' // Portugal
+  | 'sk' // Slovakia
+  | 'lu' // Luxembourg
+  | 'hr' // Croatia
+  | 'cy' // Cyprus
+  | 'mt' // Malta
+  | 'si' // Slovenia
+  | 'cm' // Cameroon
+  | 'td' // Chad
+  | 'gq' // Equatorial Guinea
 
 export type CountryKeys =
   | 'canada'
@@ -395,4 +407,17 @@ export type CountryKeys =
   | 'czech-republic' // Czech Republic
   | 'hungary' // Hungary
   | 'iceland' // Iceland
-  | 'ivory-coast'; // Côte d'Ivoire
+  | 'ivory-coast' // Côte d'Ivoire
+  | 'cook-islands' // Cook Islands
+  | 'israel' // Israel
+  | 'bhutan' // Bhutan
+  | 'portugal' // Portugal
+  | 'slovakia' // Slovakia
+  | 'luxembourg' // Luxembourg
+  | 'croatia' // Croatia
+  | 'cyprus' // Cyprus
+  | 'malta' // Malta
+  | 'slovenia' // Slovenia
+  | 'cameroon' // Cameroon
+  | 'chad' // Chad
+  | 'equatorial-guinea' // Equatorial Guinea
