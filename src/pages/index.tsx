@@ -37,8 +37,7 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
     favCountries = localStorage.getItem('likedCountries');
     favSources = localStorage.getItem('likedSources');
   }
-  // eslint-disable-next-line no-console
-  console.log(favCountries);
+
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
     useInfiniteQuery<Headline[], Error>(
       'headlines',
@@ -47,8 +46,8 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
           ? getHeadlinesWithPreferredCountries(
             pageParam,
             limit,
-            JSON.parse(favCountries as string),
-            JSON.parse(favSources as string)
+            favCountries && favCountries !== '[]' ? JSON.parse(favCountries as string) : null,
+            favSources && favSources !== '[]' ? JSON.parse(favSources as string) : null,
           )
           : getHeadlines(pageParam, limit),
       {

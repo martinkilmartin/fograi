@@ -95,7 +95,7 @@ export async function getSearchTerm(
 export async function getHeadlinesWithPreferredCountries(
   lastSeen: string | null = null,
   limit = 8,
-  countries: Array<Countries>,
+  countries: Array<Countries> | null = null,
   sources: Array<string> | null = null,
 ): Promise<Headline[]> {
   try {
