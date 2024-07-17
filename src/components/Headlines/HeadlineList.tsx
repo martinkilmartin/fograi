@@ -34,7 +34,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
         <div
           style={{
         columnGap: '16px',
-        padding: '0 10px',
+        padding: '20px',
       }}
       className="masonry-container"
         >
