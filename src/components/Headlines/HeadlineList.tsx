@@ -33,10 +33,10 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
       <>
         <div
           style={{
-            columnCount: 4,
-            columnGap: '16px',
-            padding: '0 10px',
-          }}
+        columnGap: '16px',
+        padding: '0 10px',
+      }}
+      className="masonry-container"
         >
           {headlines?.map((headline, idx) => (
             <div
@@ -78,6 +78,26 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
         >
           ⬆️
         </Badge>
+            <style jsx>{`
+      .masonry-container {
+        column-count: 1; /* Default to one column */
+      }
+      @media (min-width: 600px) {
+        .masonry-container {
+          column-count: 2; /* Two columns for tablet */
+        }
+      }
+      @media (min-width: 900px) {
+        .masonry-container {
+          column-count: 3; /* Three columns for smaller desktops */
+        }
+      }
+      @media (min-width: 1200px) {
+        .masonry-container {
+          column-count: 4; /* Four columns for larger desktops */
+        }
+      }
+    `}</style>
       </>
     );
 
