@@ -43,7 +43,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
               key={headline.id}
               style={{
                 breakInside: 'avoid',
-                marginBottom: '16px',
+                margin: '20px',
               }}
             >
               <HeadlineCard
