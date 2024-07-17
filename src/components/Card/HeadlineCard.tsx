@@ -240,7 +240,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         <Popover isOpen={isOpen} onOpenChange={(open) => infoHandler(open)}>
           <Popover.Trigger>
             <Text
-              size={24}
+              size={28}
               role="button"
               style={{
                 cursor: 'pointer',
