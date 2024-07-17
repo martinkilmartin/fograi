@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge, Loading } from '@nextui-org/react';
-import { HeadlineCard } from '@components/Card';
+import { CleanAndSimpleHeadlineCard } from '@components/Card';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { Headline } from '../../types/Headline';
 import { Countries } from '../../types/countries';
@@ -51,7 +51,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
               key={headline.id}
               className="masonry-item"
             >
-              <HeadlineCard
+              <CleanAndSimpleHeadlineCard
                 headline={headline}
                 country={headline.source.substring(0, 2).toLowerCase() as Countries}
                 idx={idx + 1}
