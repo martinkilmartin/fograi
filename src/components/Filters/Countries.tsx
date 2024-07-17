@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Grid, Link, Switch, SwitchEvent, Text } from '@nextui-org/react';
 import { COUNTRIES } from '@constants/COUNTRIES';
 import { flags } from '@constants/FLAGS';
-import { Countries } from 'src/types/countries';
+import { Countries as CountriesType} from 'src/types/countries';
 
 const Countries = (): JSX.Element => {
   const [likedCountries, likCountry] = useState<Set<keyof typeof COUNTRIES>>(
@@ -69,7 +69,7 @@ const Countries = (): JSX.Element => {
     <Grid.Container gap={2} justify="space-evenly" style={{ padding: '0' }}>
       {Array.from(COUNTRIES).map((ns, i) => {
         const country = ns[0].substring(0, 2).toLowerCase();
-        const cFlag = flags.get(country as Countries);
+        const cFlag = flags.get(country as CountriesType);
         const isLiked = likedCountries.has(ns[0] as keyof typeof COUNTRIES);
         return (
           <Grid xs={12} sm={6} md={6} lg={4} xl={3} key={i}>

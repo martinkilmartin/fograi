@@ -219,10 +219,11 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
       variant="bordered"
       style={{
         border: '2px solid',
-        borderRadius: '0',
-        borderColor: theme?.colors.foreground.value,
-        fontFamily: '"Georgia", "Times New Roman", Times, serif',
-        margin: '0 10px',
+        borderRadius: '10px',
+        borderColor: theme?.colors.primary.value,
+        fontFamily: '"Arial", sans-serif',
+        margin: '20px 10px',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       }}
     >
       <Card.Header
@@ -230,7 +231,10 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           backgroundColor: theme?.colors.background.value,
           display: 'flex',
           width: '100%',
-          padding: '0px',
+          padding: '10px',
+          alignItems: 'center',
+          borderTopLeftRadius: '10px',
+          borderTopRightRadius: '10px',
         }}
       >
         <Popover isOpen={isOpen} onOpenChange={(open) => infoHandler(open)}>
@@ -241,7 +245,8 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               style={{
                 cursor: 'pointer',
                 flex: '1',
-                paddingLeft: '2px',
+                paddingLeft: '10px',
+                color: theme?.colors.primary.value,
               }}
               aria-expanded={isOpen ? 'true' : 'false'}
               aria-label="Information on news source"
@@ -249,12 +254,13 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               {emos?.[1]}{' '}
             </Text>
           </Popover.Trigger>
-          <Popover.Content css={{ px: '$4', py: '$2' }}>
+          <Popover.Content style={{ padding: '16px 8px' }}>
             <Grid.Container
               className="user-twitter-card__container"
-              css={{
-                mw: '270px',
-                borderRadius: '$lg',
+              style={{
+                maxWidth: '270px',
+                borderRadius: '8px',
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
               }}
             >
               <Row justify="space-around" align="center">
@@ -265,7 +271,8 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
                     weight="bold"
                     style={{
                       borderRadius: '0',
-                      fontFamily: '"Georgia", "Times New Roman", Times, serif',
+                      fontFamily: '"Arial", sans-serif',
+                      color: theme?.colors.text.value,
                     }}
                   >
                     {emos?.[0]}&nbsp;{sourceName ?? ''}&nbsp;{emos?.[1]}
@@ -277,8 +284,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
                   <Text
                     className="user-twitter-card__text"
                     size={14}
-                    css={{ mt: '$1' }}
-                    color="#888888"
+                    style={{ marginTop: '4px', color: '#888888' }}
                   >
                     {sourceAbout}
                   </Text>
@@ -294,12 +300,12 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
                     <Text
                       className="user-twitter-card__text"
                       size={18}
-                      color="#888888"
+                      style={{ color: '#888888' }}
                     >
                       Since&nbsp;
                       <Text
                         b
-                        color="foreground"
+                        style={{ color: theme?.colors.primary.value }}
                         className="user-twitter-card__text"
                         size={18}
                       >
@@ -331,6 +337,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             flex: '8',
             textAlign: 'center',
             fontSize: '28px',
+            color: theme?.colors.primary.value,
           }}
         >
           {mediaTypeIcons[headline.media_type as keyof typeof mediaTypeIcons]}
@@ -338,6 +345,9 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         <div
           style={{
             flex: '1',
+            display: 'flex',
+            justifyContent: 'flex-end',
+            paddingRight: '10px',
           }}
         >
           <Tooltip content={DATE.toLocaleString()}>
@@ -351,6 +361,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         style={{
           borderTop: '2px solid',
           color: theme?.colors.foreground.value,
+          margin: '0 10px',
         }}
       />
       <Card.Header
@@ -359,7 +370,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           display: 'flex',
           justifyContent: 'space-around',
           width: '100%',
-          padding: '0px',
+          padding: '10px',
         }}
       >
         <Link
@@ -369,6 +380,8 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           rel="noreferrer"
           style={{
             display: 'flex',
+            justifyContent: 'center',
+            width: '100%',
           }}
         >
           <Text
@@ -378,6 +391,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             style={{
               marginBottom: '0',
               textAlign: 'center',
+              color: theme?.colors.primary.value,
             }}
           >
             {sourceName ?? ''}
@@ -388,9 +402,10 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         style={{
           borderTop: '2px solid',
           color: theme?.colors.foreground.value,
+          margin: '0 10px',
         }}
       />
-      <Card.Body css={{ py: '$2' }}>
+      <Card.Body style={{ padding: '8px 0' }}>
         <Link
           onClick={(_event) => trackClicks('link')}
           href={headline.link + '?utm_source=nooze.news'}
@@ -402,9 +417,9 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             <Text
               h3
               size={28}
-              color="primary"
               style={{
                 textAlign: 'center',
+                color: theme?.colors.primary.value,
               }}
             >
               {headline.headline}&nbsp;↗
@@ -419,6 +434,11 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               alt={headline.img_alt ?? ''}
               onError={() => setLeadImgErr(true)}
               showSkeleton
+              style={{
+                borderRadius: '10px',
+                margin: '10px 0',
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              }}
             />
           )}
         </Link>
@@ -429,6 +449,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           borderRadius: '0',
           borderTop: '2px solid',
           color: theme?.colors.foreground.value,
+          padding: '10px',
         }}
       >
         <Grid.Container justify="center">
@@ -446,20 +467,16 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             <Bookmark someBool={saved} />
           </Grid>
           <Grid xs={4} justify="center">
-            {canShare && (
+            {canShare ? (
               <Image src={shareImg} alt="Share" height={36} onClick={share} />
-            )}
-            {!canShare && (
+            ) : (
               <Link
                 href={twShare}
                 target="_blank"
                 rel="noreferrer"
                 title="Share on X"
               >
-                <Tooltip
-                  content={'Browser share not supported. Defaulting to X.'}
-                >
-                  {' '}
+                <Tooltip content={'Browser share not supported. Defaulting to X.'}>
                   <X />
                 </Tooltip>
               </Link>
@@ -469,6 +486,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
       </Card.Footer>
     </Card>
   );
-};
+}
 
 export default HeadlineCard;
