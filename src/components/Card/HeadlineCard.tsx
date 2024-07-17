@@ -223,6 +223,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         borderColor: theme?.colors.primary.value,
         fontFamily: '"Arial", sans-serif',
         margin: '20px 10px',
+        padding: '16px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       }}
     >

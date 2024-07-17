@@ -4,6 +4,8 @@ import { HeadlineCard } from '@components/Card';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { Headline } from '../../types/Headline';
 import { Countries } from '../../types/countries';
+import Masonry from 'react-masonry-css';
+import classNames from 'classnames';
 
 interface HeadlineListProps {
   headlines: Headline[] | undefined;
@@ -22,29 +24,32 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   };
+
   if (loading) {
     return <LoadingSpinner />;
   } else if (error) {
-    return <div>Error: {error.message} </div>;
+    return <div>Error: {error.message}</div>;
   } else if (!loading && !error && !headlines?.length) {
     return <div>No headlines!</div>;
   } else {
+    const breakpointColumnsObj = {
+      default: 4,
+      1100: 3,
+      700: 2,
+      500: 1,
+    };
+
     return (
       <>
-        <div
-          style={{
-        columnGap: '16px',
-        padding: '20px',
-      }}
-      className="masonry-container"
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className={classNames('my-masonry-grid')}
+          columnClassName="my-masonry-grid_column"
         >
           {headlines?.map((headline, idx) => (
             <div
               key={headline.id}
-              style={{
-                breakInside: 'avoid',
-                margin: '20px',
-              }}
+              className="masonry-item"
             >
               <HeadlineCard
                 headline={headline}
@@ -53,7 +58,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
               />
             </div>
           ))}
-        </div>
+        </Masonry>
         {fetching && <Loading type="spinner" size="xl" />}
         <Badge
           aria-label="The number of headlines loaded"
@@ -78,29 +83,8 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
         >
           ⬆️
         </Badge>
-            <style jsx>{`
-      .masonry-container {
-        column-count: 1; /* Default to one column */
-      }
-      @media (min-width: 600px) {
-        .masonry-container {
-          column-count: 2; /* Two columns for tablet */
-        }
-      }
-      @media (min-width: 900px) {
-        .masonry-container {
-          column-count: 3; /* Three columns for smaller desktops */
-        }
-      }
-      @media (min-width: 1200px) {
-        .masonry-container {
-          column-count: 4; /* Four columns for larger desktops */
-        }
-      }
-    `}</style>
       </>
     );
-
   }
 };
 
