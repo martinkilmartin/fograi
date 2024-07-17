@@ -31,21 +31,25 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
   }
 
   let favCountries: string | any[] | null | undefined = undefined;
+  let favSources: string | any[] | null | undefined = undefined;
 
   if (typeof window !== 'undefined') {
     favCountries = localStorage.getItem('likedCountries');
+    favSources = localStorage.getItem('likedSources');
   }
-
+  // eslint-disable-next-line no-console
+  console.log(favCountries);
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
     useInfiniteQuery<Headline[], Error>(
       'headlines',
       ({ pageParam = null }) =>
-        favCountries && favCountries !== '[]'
+        ((favCountries && favCountries !== '[]') || (favSources && favSources !== '[]'))
           ? getHeadlinesWithPreferredCountries(
-              pageParam,
-              limit,
-              JSON.parse(favCountries as string),
-            )
+            pageParam,
+            limit,
+            JSON.parse(favCountries as string),
+            JSON.parse(favSources as string)
+          )
           : getHeadlines(pageParam, limit),
       {
         getNextPageParam: (lastPage, _pages) =>
@@ -63,8 +67,8 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
         hasNextPage &&
         loadMoreRef.current &&
         window.innerHeight + window.scrollY >=
-          (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) *
-            0.5
+        (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) *
+        0.5
       ) {
         fetchNextPage();
       }

@@ -96,17 +96,17 @@ export async function getHeadlinesWithPreferredCountries(
   lastSeen: string | null = null,
   limit = 8,
   countries: Array<Countries>,
+  sources: Array<string> | null = null,
 ): Promise<Headline[]> {
   try {
-    const { data, error } = await supabase.rpc(
-      'get_preferred_paged_headlines_v2',
-      {
-        page_size: limit,
-        countries: countries,
-        source_filter: null,
-        last_seen: lastSeen,
-      },
-    );
+    const { data, error } = await supabase.rpc('get_paginated_results_v3', {
+      page_size: limit,
+      country_filter: countries,
+      lang_filter: null,
+      source_filter: sources,
+      media_type_filter: null,
+      last_seen: lastSeen,
+    });
 
     if (error) throw error;
 

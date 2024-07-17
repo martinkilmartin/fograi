@@ -9323,7 +9323,7 @@ export const ESNewsSourcesLength = ESNewsSources.size;
 
 export const ITNewsSources = new Map<string, NewsSource>([
   [
-    'IT_RAINE',
+    'IT_RAIN',
     {
       name: 'Rai News 24',
       url: 'https://www.rainews.it/',
