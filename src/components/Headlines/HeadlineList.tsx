@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, Grid, Loading } from '@nextui-org/react';
+import { Badge, Loading } from '@nextui-org/react';
 import { HeadlineCard } from '@components/Card';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { Headline } from '../../types/Headline';
@@ -31,43 +31,56 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
   } else {
     return (
       <>
-        <Grid.Container gap={2} justify="center" style={{ padding: '0' }}>
+        <div
+          style={{
+            columnCount: 4,
+            columnGap: '16px',
+            padding: '0 10px',
+          }}
+        >
           {headlines?.map((headline, idx) => (
-            <Grid xs={12} sm={6} md={6} lg={4} xl={3} key={headline.id}>
+            <div
+              key={headline.id}
+              style={{
+                breakInside: 'avoid',
+                marginBottom: '16px',
+              }}
+            >
               <HeadlineCard
                 headline={headline}
-                country={
-                  headline.source.substring(0, 2).toLowerCase() as Countries
-                }
+                country={headline.source.substring(0, 2).toLowerCase() as Countries}
                 idx={idx + 1}
               />
-            </Grid>
+            </div>
           ))}
-        </Grid.Container>
+        </div>
         {fetching && <Loading type="spinner" size="xl" />}
         <Badge
           aria-label="The number of headlines loaded"
           variant="bordered"
-          css={{ position: 'fixed', bottom: '20px', left: '10px' }}
+          style={{ position: 'fixed', bottom: '20px', left: '10px' }}
         >
           {fetching ? <Loading type="gradient" size="xs" /> : headlines?.length}
         </Badge>
         <Badge
-          role='button'
+          role="button"
           aria-label="Back to top"
           onClick={() => backToTop()}
-          css={{
+          style={{
             position: 'fixed',
             bottom: '20px',
             right: '10px',
             maxWidth: '50px',
           }}
-          size='lg'
-          color='primary'
+          size="lg"
+          color="primary"
           variant="bordered"
-        >⬆️</Badge>
+        >
+          ⬆️
+        </Badge>
       </>
     );
+
   }
 };
 
