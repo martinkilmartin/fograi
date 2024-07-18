@@ -43,4 +43,10 @@ Website for fogr.ai / nooze.news
 `yarn test-all`
 
 ## Make news source id / name bi-map
-`ts-node -P tsconfig.util.json src/utils/mapToTypeScriptFiles.ts`
+
+`ts-node -P tsconfig.util.json src/utils/mapToTypeScriptFiles.ts` 
+
+## Notes
+
+ * Object with the longest name: 34 Ulster Gazette and Armagh Standard
+
