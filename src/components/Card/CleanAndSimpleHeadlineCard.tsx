@@ -213,6 +213,22 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     headline.link +
     '?utm_source=nooze.news';
 
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  function getRandomGradient() {
+    const color1 = getRandomColor();
+    const color2 = getRandomColor();
+    return `45deg, ${color1} -20%, ${color2} 100%`;
+  }
+  const gradient = getRandomGradient();
+
   return (
     <Card
       isHoverable
@@ -251,7 +267,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
                 role="button"
                 style={{
                   cursor: 'pointer',
-                  paddingLeft: '10px',
                   color: theme?.colors.primary.value,
                 }}
                 aria-expanded={isOpen ? 'true' : 'false'}
@@ -337,9 +352,11 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               </Grid.Container>
             </Popover.Content>
           </Popover>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: '1' }}>
           <Text
             size={28}
-            style={{ marginLeft: '10px', color: theme?.colors.primary.value }}
+            style={{ marginLeft: '32px', color: theme?.colors.primary.value }}
           >
             {mediaTypeIcons[headline.media_type as keyof typeof mediaTypeIcons]}
           </Text>
@@ -385,8 +402,11 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             }}
           >
             <Text
-              size={24}
+              size={20}
               weight="bold"
+              css={{
+                textGradient: gradient,
+              }}
               style={{ color: theme?.colors.text.value }}
             >
               {sourceName ?? ''}
@@ -394,7 +414,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           </Link>
         </div>
       </Card.Header>
-
       <Card.Body style={{ padding: '16px 0' }}>
         <Link
           onClick={(_event) => trackClicks('link')}
@@ -465,7 +484,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         </Grid.Container>
       </Card.Footer>
     </Card>
-
   );
 }
 
