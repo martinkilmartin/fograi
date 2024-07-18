@@ -345,27 +345,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           </Text>
         </div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Link
-            onClick={(_event) => trackClicks('source')}
-            href={sourceURL}
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              textDecoration: 'none',
-              color: theme?.colors.primary.value,
-              marginRight: '10px',
-            }}
-          >
-            <Text
-              size={24}
-              weight="bold"
-              style={{ color: theme?.colors.text.value }}
-            >
-              {sourceName ?? ''}
-            </Text>
-          </Link>
           <Tooltip content={DATE.toLocaleString()}>
             <Badge
               style={{
@@ -383,6 +362,39 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           </Tooltip>
         </div>
       </Card.Header>
+      <Card.Header
+        style={{
+          display: 'flex',
+          justifyContent: 'flex-end', // Aligns content to the right
+          alignItems: 'center',       // Vertically centers the content
+          padding: '10px 0',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Link
+            onClick={(_event) => trackClicks('source')}
+            href={sourceURL}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              display: 'flex',
+              alignItems: 'center', // Ensures the content within Link is centered
+              textDecoration: 'none',
+              color: theme?.colors.primary.value,
+              marginRight: '10px',
+            }}
+          >
+            <Text
+              size={24}
+              weight="bold"
+              style={{ color: theme?.colors.text.value }}
+            >
+              {sourceName ?? ''}
+            </Text>
+          </Link>
+        </div>
+      </Card.Header>
+
       <Card.Body style={{ padding: '16px 0' }}>
         <Link
           onClick={(_event) => trackClicks('link')}
