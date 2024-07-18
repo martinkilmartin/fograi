@@ -5,7 +5,6 @@ import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { Headline } from '../../types/Headline';
 import { Countries } from '../../types/countries';
 import Masonry from 'react-masonry-css';
-import classNames from 'classnames';
 
 interface HeadlineListProps {
   headlines: Headline[] | undefined;
