@@ -25,6 +25,11 @@ import {
   CNNewsSources,
   ESNewsSources,
   PLNewsSources,
+  KWNewsSources,
+  PFNewsSources,
+  CKNewsSources,
+  TONewsSources,
+  ASNewsSources,
 } from '@constants/NEWS_SOURCES';
 import { flags } from '@constants/FLAGS';
 import { COUNTRIES } from '@constants/COUNTRIES';
@@ -55,6 +60,11 @@ const KR_SOURCES_SIZE = KRNewsSources.size;
 const CN_SOURCES_SIZE = CNNewsSources.size;
 const ES_SOURCES_SIZE = ESNewsSources.size;
 const PL_SOURCES_SIZE = PLNewsSources.size;
+const KW_SOURCES_SIZE = KWNewsSources.size;
+const PF_SOURCES_SIZE = PFNewsSources.size;
+const CK_SOURCES_SIZE = CKNewsSources.size;
+const TO_SOURCES_SIZE = TONewsSources.size;
+const AS_SOURCES_SIZE = ASNewsSources.size;
 
 const ALL_SIZES =
   CA_SOURCES_SIZE +
@@ -81,7 +91,12 @@ const ALL_SIZES =
   KR_SOURCES_SIZE +
   CN_SOURCES_SIZE +
   ES_SOURCES_SIZE +
-  PL_SOURCES_SIZE;
+  PL_SOURCES_SIZE +
+  KW_SOURCES_SIZE +
+  PF_SOURCES_SIZE +
+  CK_SOURCES_SIZE +
+  TO_SOURCES_SIZE +
+  AS_SOURCES_SIZE;
 
 const CSM = new Map([
   ['ca', CA_SOURCES_SIZE],
@@ -109,6 +124,11 @@ const CSM = new Map([
   ['cn', CN_SOURCES_SIZE],
   ['es', ES_SOURCES_SIZE],
   ['pl', PL_SOURCES_SIZE],
+  ['kw', KW_SOURCES_SIZE],
+  ['pf', PF_SOURCES_SIZE],
+  ['ck', CK_SOURCES_SIZE],
+  ['to', TO_SOURCES_SIZE],
+  ['as', AS_SOURCES_SIZE],
 ]);
 
 const About = (): JSX.Element => {

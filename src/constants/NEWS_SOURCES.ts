@@ -9233,6 +9233,19 @@ export const NGNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'NG_ALMT',
+    {
+      name: 'Alimosho Today',
+      url: 'https://www.alimoshotoday.com/',
+      est: 2019,
+      about:
+        'Alimosho Today is a community news platform that provides news and information about Alimosho Local Government Area in Lagos State, Nigeria.',
+      description: [],
+      emos: ['📰', '🇳🇬'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const NGNewsSourcesLength = NGNewsSources.size;
 
@@ -9355,6 +9368,91 @@ export const PLNewsSources = new Map<string, NewsSource>([
 ]);
 export const PLNewsSourcesLength = PLNewsSources.size;
 
+export const KWNewsSources = new Map<string, NewsSource>([
+  [
+    'KW_ARAB',
+    {
+      name: 'Arab Times',
+      url: 'https://www.arabtimesonline.com/',
+      est: 1977,
+      about:
+        'Arab Times is a daily English-language newspaper published in Kuwait. The newspaper is one of the oldest English dailies in the Arab world.',
+      description: [],
+      emos: ['📰', '🇰🇼'],
+      langs: ['en'],
+    },
+  ],
+]);
+export const KWNewsSourcesLength = KWNewsSources.size;
+
+export const PFNewsSources = new Map<string, NewsSource>([
+  [
+    'PF_DPCH',
+    {
+      name: 'La Dépêche de Tahiti',
+      url: 'https://www.ladepeche.pf/',
+      est: 1964,
+      about:
+        'La Dépêche de Tahiti is a daily newspaper published in French Polynesia. It is the oldest newspaper in the territory and is published in French.',
+      description: [],
+      emos: ['📰', '🇵🇫'],
+      langs: ['fr'],
+    },
+  ],
+]);
+export const PFNewsSourcesLength = PFNewsSources.size;
+
+export const CKNewsSources = new Map<string, NewsSource>([
+  [
+    'CK_ISLN',
+    {
+      name: 'Cook Islands News',
+      url: 'https://www.cookislandsnews.com/',
+      est: 1963,
+      about:
+        'The Cook Islands News is a daily newspaper published in Rarotonga, the capital of the Cook Islands. It is the only daily newspaper in the country.',
+      description: [],
+      emos: ['📰', '🇨🇰'],
+      langs: ['en'],
+    },
+  ],
+]);
+export const CKNewsSourcesLength = CKNewsSources.size;
+
+export const TONewsSources = new Map<string, NewsSource>([
+  [
+    'TO_MTNG',
+    {
+      name: 'Matangi Tonga',
+      url: 'https://matangitonga.to/',
+      est: 2000,
+      about:
+        'Matangi Tonga is a Tongan news website that provides the latest news and updates from Tonga.',
+      description: [],
+      emos: ['📰', '🇹🇴'],
+      langs: ['en'],
+    },
+  ],
+]);
+export const TONewsSourcesLength = TONewsSources.size;
+
+export const ASNewsSources = new Map<string, NewsSource>([
+  [
+    'AS_SAMO',
+    {
+      name: 'Samoa News',
+      url: 'https://www.samoanews.com/',
+      est: 1984,
+      about:
+        "Samoa News is a Samoan newspaper published in Pago Pago, American Samoa. It is the territory's only newspaper and is published in English.",
+      description: [],
+      emos: ['📰', '🇦🇸'],
+      langs: ['en'],
+    },
+  ],
+]);
+export const ASNewsSourcesLength = ASNewsSources.size;
+
 export const AllNewsSources = new Map<string, NewsSource>([
   ...CANewsSources.entries(),
   ...IENewsSources.entries(),
@@ -9381,4 +9479,9 @@ export const AllNewsSources = new Map<string, NewsSource>([
   ...ESNewsSources.entries(),
   ...ITNewsSources.entries(),
   ...PLNewsSources.entries(),
+  ...KWNewsSources.entries(),
+  ...PFNewsSources.entries(),
+  ...CKNewsSources.entries(),
+  ...TONewsSources.entries(),
+  ...ASNewsSources.entries(),
 ]);
