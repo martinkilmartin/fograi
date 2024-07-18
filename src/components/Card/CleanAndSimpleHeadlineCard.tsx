@@ -240,7 +240,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          padding: '10px 0',
+          padding: '0',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -367,7 +367,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           display: 'flex',
           justifyContent: 'flex-end', // Aligns content to the right
           alignItems: 'center',       // Vertically centers the content
-          padding: '10px 0',
+          padding: '0',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center' }}>
