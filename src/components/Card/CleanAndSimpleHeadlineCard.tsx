@@ -356,7 +356,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: '1' }}>
           <Text
             size={28}
-            style={{ marginLeft: '32px', color: theme?.colors.primary.value }}
+            style={{ marginLeft: '16px', color: theme?.colors.primary.value }}
           >
             {mediaTypeIcons[headline.media_type as keyof typeof mediaTypeIcons]}
           </Text>
@@ -426,7 +426,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             h3
             size={28}
             style={{
-              textAlign: 'center',
               color: theme?.colors.primary.value,
               marginBottom: '16px',
             }}
