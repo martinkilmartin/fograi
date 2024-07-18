@@ -41,25 +41,28 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
 
     return (
       <>
-        <Masonry
-          breakpointCols={breakpointColumnsObj}
-          className={classNames('my-masonry-grid')}
-          columnClassName="my-masonry-grid_column"
-        >
-          {headlines?.map((headline, idx) => (
-            <div
-              key={headline.id}
-              className="masonry-item"
-            >
-              <CleanAndSimpleHeadlineCard
-                headline={headline}
-                country={headline.source.substring(0, 2).toLowerCase() as Countries}
-                idx={idx + 1}
-              />
-            </div>
-          ))}
-        </Masonry>
-        {fetching && <Loading type="spinner" size="xl" />}
+        <div style={{ position: 'relative', paddingLeft: '24px' }}>
+          <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className={classNames('my-masonry-grid')}
+            columnClassName="my-masonry-grid_column"
+          >
+            {headlines?.map((headline, idx) => (
+              <div key={headline.id} className="masonry-item">
+                <CleanAndSimpleHeadlineCard
+                  headline={headline}
+                  country={headline.source.substring(0, 2).toLowerCase() as Countries}
+                  idx={idx + 1}
+                />
+              </div>
+            ))}
+            {fetching && (
+              <div className="loading-spinner-container">
+                <Loading type="spinner" size="xl" />
+              </div>
+            )}
+          </Masonry>
+        </div>
         <Badge
           aria-label="The number of headlines loaded"
           variant="bordered"
@@ -83,6 +86,26 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
         >
           ⬆️
         </Badge>
+        <style jsx>{`
+          .my-masonry-grid {
+            display: flex;
+            width: 100%;
+            margin-left: -16px; /* gutter size offset */
+          }
+          .my-masonry-grid_column {
+            padding-left: 16px; /* gutter size */
+            background-clip: padding-box;
+          }
+          .my-masonry-grid_column > div {
+            margin-bottom: 16px;
+          }
+          .loading-spinner-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          }
+        `}</style>
       </>
     );
   }
