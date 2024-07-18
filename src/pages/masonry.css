@@ -1,13 +1,18 @@
 .my-masonry-grid {
   display: flex;
-  width: 100%;
+  width: 95vw;
   margin-left: -32px; /* gutter size offset */
 }
 .my-masonry-grid_column {
   padding-left: 16px; /* gutter size */
   background-clip: padding-box;
 }
-/* Style for each grid item */
 .my-masonry-grid_column > div {
   margin-bottom: 16px;
+}
+.loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

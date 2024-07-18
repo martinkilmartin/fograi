@@ -33,10 +33,16 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
     return <div>No headlines!</div>;
   } else {
     const breakpointColumnsObj = {
-      default: 4,
-      1100: 3,
-      700: 2,
-      500: 1,
+      default: 10, // 8K monitors (7680px and up)
+      7680: 10, // 8K resolution
+      5120: 8, // 5K resolution
+      3840: 6, // 4K resolution
+      2560: 5, // WQHD resolution
+      1920: 4, // Full HD resolution
+      1440: 3, // HD resolution
+      1100: 2, // Small desktops/tablets
+      700: 2, // Tablets
+      500: 1, // Mobile
     };
 
     return (
@@ -44,7 +50,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
         <div style={{ position: 'relative', paddingLeft: '24px' }}>
           <Masonry
             breakpointCols={breakpointColumnsObj}
-            className={classNames('my-masonry-grid')}
+            className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
             {headlines?.map((headline, idx) => (
@@ -86,26 +92,6 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
         >
           ⬆️
         </Badge>
-        <style jsx>{`
-          .my-masonry-grid {
-            display: flex;
-            width: 100%;
-            margin-left: -16px; /* gutter size offset */
-          }
-          .my-masonry-grid_column {
-            padding-left: 16px; /* gutter size */
-            background-clip: padding-box;
-          }
-          .my-masonry-grid_column > div {
-            margin-bottom: 16px;
-          }
-          .loading-spinner-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-          }
-        `}</style>
       </>
     );
   }
