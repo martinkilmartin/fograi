@@ -414,7 +414,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           </Link>
         </div>
       </Card.Header>
-      <Card.Body style={{ padding: '16px 0' }}>
+      <Card.Body style={{ padding: '16px 0', marginTop: '-24px' }}>
         <Link
           onClick={(_event) => trackClicks('link')}
           href={headline.link + '?utm_source=nooze.news'}
