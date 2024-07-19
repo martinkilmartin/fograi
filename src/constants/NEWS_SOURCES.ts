@@ -5233,6 +5233,19 @@ export const UKNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'UK_INEW',
+    {
+      name: 'iNews',
+      url: 'https://inews.co.uk/',
+      est: 2016,
+      about:
+        'iNews is a UK-based news website that provides a fresh perspective on current events, politics, culture, and more. With a focus on in-depth analysis and engaging storytelling, iNews aims to keep its readers informed and entertained.',
+      description: [],
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const UKNewsSourcesLength = UKNewsSources.size;
 
@@ -5974,6 +5987,18 @@ export const OZNewsSources = new Map<string, NewsSource>([
       est: 1958,
       about:
         '7NEWS is a leading Australian news network that provides comprehensive coverage of local, national, and international events. With a focus on delivering breaking news, in-depth analysis, and insightful reporting, 7NEWS serves as a trusted source of information for millions of Australians. From politics to business, health, entertainment, and more, 7NEWS covers a wide range of topics that are of interest and importance to its audience. Through its commitment to quality journalism, 7NEWS continues to inform, educate, and engage viewers across the country.',
+      emos: ['📰', '🇦🇺'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'OZ_CONV',
+    {
+      name: 'The Conversation',
+      url: 'https://theconversation.com/',
+      est: 2011,
+      about:
+        'The Conversation is an independent source of news and views, sourced from the academic and research community and delivered direct to the public. Our team of professional editors work with experts to unlock their knowledge for use by the wider public. Access to independent, high-quality, authenticated, explanatory journalism underpins a functioning democracy. Our aim is to allow for better understanding of current affairs and complex issues. And hopefully allow for a better quality of public discourse and conversations.',
       emos: ['📰', '🇦🇺'],
       langs: ['en'],
     },
@@ -8295,6 +8320,19 @@ export const USNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'US_MHDP',
+    {
+      name: 'Mid Hudson Daily News',
+      url: 'https://www.midhudsonnews.com/',
+      est: 1999,
+      about:
+        "Mid Hudson News has been the Hudson Valley's news source since 1999. The news site and podcast feature breaking news, politics, crime, entertainment, and more.",
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const USNewsSourcesLength = USNewsSources.size;
 
@@ -9241,6 +9279,19 @@ export const NGNewsSources = new Map<string, NewsSource>([
       est: 2019,
       about:
         'Alimosho Today is a community news platform that provides news and information about Alimosho Local Government Area in Lagos State, Nigeria.',
+      description: [],
+      emos: ['📰', '🇳🇬'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'NG_OAPD',
+    {
+      name: 'The Open Africa Podcast',
+      url: 'https://openafricapodcast.com/',
+      est: 2020,
+      about:
+        'The Open Africa Podcast is a platform that showcases the best of Africa to the world. We tell the African story from the African perspective.',
       description: [],
       emos: ['📰', '🇳🇬'],
       langs: ['en'],
