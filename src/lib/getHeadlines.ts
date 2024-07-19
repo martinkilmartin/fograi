@@ -97,6 +97,7 @@ export async function getHeadlinesWithPreferredCountries(
   limit = 8,
   countries: Array<Countries> | null = null,
   sources: Array<string> | null = null,
+  mediaTypes: Array<string> | null = null,
 ): Promise<Headline[]> {
   try {
     const { data, error } = await supabase.rpc('get_paginated_results_v3', {
@@ -104,7 +105,7 @@ export async function getHeadlinesWithPreferredCountries(
       country_filter: countries,
       lang_filter: null,
       source_filter: sources,
-      media_type_filter: null,
+      media_type_filter: mediaTypes,
       last_seen: lastSeen,
     });
 

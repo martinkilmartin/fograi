@@ -32,22 +32,25 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
 
   let favCountries: string | any[] | null | undefined = undefined;
   let favSources: string | any[] | null | undefined = undefined;
+  let favMediaTypes: string | any[] | null | undefined = undefined;
 
   if (typeof window !== 'undefined') {
     favCountries = localStorage.getItem('likedCountries');
     favSources = localStorage.getItem('likedSources');
+    favMediaTypes = localStorage.getItem('likedMediaTypes');
   }
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
     useInfiniteQuery<Headline[], Error>(
       'headlines',
       ({ pageParam = null }) =>
-        ((favCountries && favCountries !== '[]') || (favSources && favSources !== '[]'))
+        ((favCountries && favCountries !== '[]') || (favSources && favSources !== '[]') || (favMediaTypes && favMediaTypes !== '[]'))
           ? getHeadlinesWithPreferredCountries(
             pageParam,
             limit,
             favCountries && favCountries !== '[]' ? JSON.parse(favCountries as string) : null,
             favSources && favSources !== '[]' ? JSON.parse(favSources as string) : null,
+            favMediaTypes && favMediaTypes !== '[]' ? JSON.parse(favMediaTypes as string) : null
           )
           : getHeadlines(pageParam, limit),
       {

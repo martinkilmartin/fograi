@@ -19,6 +19,7 @@ import { useTheme as useNextTheme } from 'next-themes';
 import Image from 'next/image';
 import Countries from '@components/Filters/Countries';
 import Sources from '@components/Filters/Sources';
+import MediaTypes from '@components/Filters/MediaTypes';
 
 export default function MyNavbar(): JSX.Element {
   const { setTheme } = useNextTheme();
@@ -131,8 +132,8 @@ export default function MyNavbar(): JSX.Element {
                   <Collapse title="Sources">
                     <Sources />
                   </Collapse>
-                  <Collapse title="Categories">
-                    <Text>Coming soon</Text>
+                  <Collapse title="Media Types">
+                    <MediaTypes />
                   </Collapse>
                 </Collapse.Group>
               </Modal.Body>
