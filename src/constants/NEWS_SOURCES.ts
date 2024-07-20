@@ -8422,6 +8422,19 @@ export const USNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'US_SWIN',
+    {
+      name: 'Swindled',
+      url: 'https://swindledpodcast.com/',
+      est: 2018,
+      about:
+        'Swindled is a podcast that tells stories of corporate greed, corruption, and scandal.',
+      description: [],
+      emos: ['🎙️', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const USNewsSourcesLength = USNewsSources.size;
 

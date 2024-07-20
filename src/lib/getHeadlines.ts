@@ -69,19 +69,21 @@ export async function getHeadlinesCountrySource(
 }
 
 export async function getSearchTerm(
-  country: Array<Countries> | null = null,
-  lastSeen: string | null = null,
   limit = 8,
-  searchTerm: string,
+  country: Array<Countries> | null = null,
   sources: Array<string> | null = null,
+  mediaTypes: Array<'article' | 'video' | 'audio'> | null = null,
+  lastSeen: string | null = null,
+  searchTerm: string,
 ): Promise<Headline[]> {
   try {
-    const { data, error } = await supabase.rpc('get_search_term_v2', {
-      country_filter: country,
-      last_seen: lastSeen,
+    const { data, error } = await supabase.rpc('get_search_term_v3', {
       page_size: limit,
-      search_term: searchTerm,
+      country_filter: country,
       source_filter: sources,
+      media_type_filter: mediaTypes,
+      last_seen: lastSeen,
+      search_term: searchTerm,
     });
 
     if (error) throw error;

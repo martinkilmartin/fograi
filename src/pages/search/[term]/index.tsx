@@ -30,6 +30,16 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
     limit = 12;
   }
 
+  let favCountries: string | any[] | null | undefined = undefined;
+  let favSources: string | any[] | null | undefined = undefined;
+  let favMediaTypes: string | any[] | null | undefined = undefined;
+
+  if (typeof window !== 'undefined') {
+    favCountries = localStorage.getItem('likedCountries');
+    favSources = localStorage.getItem('likedSources');
+    favMediaTypes = localStorage.getItem('likedMediaTypes');
+  }
+
   const {
     data,
     fetchNextPage,
@@ -40,7 +50,9 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
   } = useInfiniteQuery<Headline[], Error>(
     ['headlines', term],
     ({ pageParam = null }) =>
-      getSearchTerm(null, pageParam, limit, term as string, null),
+      getSearchTerm(limit, favCountries && favCountries !== '[]' ? JSON.parse(favCountries as string) : null,
+        favSources && favSources !== '[]' ? JSON.parse(favSources as string) : null,
+        favMediaTypes && favMediaTypes !== '[]' ? JSON.parse(favMediaTypes as string) : null, pageParam, term as string),
     {
       getNextPageParam: (lastPage, _pages) =>
         lastPage[lastPage.length - 1]?.created_at,
@@ -58,8 +70,8 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
         hasNextPage &&
         loadMoreRef.current &&
         window.innerHeight + window.scrollY >=
-          (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) *
-            0.5
+        (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) *
+        0.5
       ) {
         fetchNextPage();
       }
@@ -129,11 +141,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const term = context.query.term;
 
   const initialHeadlines = await getSearchTerm(
-    null,
-    null,
     limit,
-    term as string,
     null,
+    null,
+    null,
+    null,
+    term as string,
   );
 
   return {
