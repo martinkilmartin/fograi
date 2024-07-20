@@ -45,6 +45,13 @@ export default function MyNavbar(): JSX.Element {
     setModalVisible(false);
   };
 
+  function clearAllFilters() {
+    localStorage.removeItem('likedCountries');
+    localStorage.removeItem('likedSources');
+    localStorage.removeItem('likedMediaTypes');
+    queryClient.invalidateQueries('headlines');
+  }
+
   return (
     <>
       <Navbar isBordered={isDark} shouldHideOnScroll variant="sticky">
@@ -121,7 +128,7 @@ export default function MyNavbar(): JSX.Element {
               </Modal.Header>
               <Modal.Header>
                 <Text id="modal-title" size={18}>
-                  Filters
+                  Filters <span style={{ color: 'red' }} onClick={() => clearAllFilters()}>🗑️</span>
                 </Text>
               </Modal.Header>
               <Modal.Body>
