@@ -4103,6 +4103,18 @@ export const IENewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'IE_STND',
+    {
+      name: 'The Stand with Eamon Dunphy',
+      url: 'https://thestandwitheamondunphy.com/',
+      est: 2018,
+      about:
+        'The Stand is a current affairs podcast presented by Eamon Dunphy. Eamon is one of Ireland’s most respected journalists and broadcasters.',
+      emos: ['🎙️', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const IENewsSourcesLength = IENewsSources.size;
 
@@ -5246,6 +5258,32 @@ export const UKNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'UK_GBN',
+    {
+      name: 'GB News',
+      url: 'https://www.gbnews.com/',
+      est: 2021,
+      about:
+        'GB News is a British news channel that offers a fresh perspective on current events, politics, and culture. With a focus on providing a platform for diverse voices and opinions, GB News aims to engage viewers with insightful analysis and lively debates.',
+      description: [],
+      emos: ['📺', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'UK_PNP',
+    {
+      name: 'Positive News',
+      url: 'https://www.positive.news/',
+      est: 2012,
+      about:
+        'Positive News is a pioneering media organization that focuses on reporting uplifting and constructive news stories from around the world. With a mission to inspire and empower readers, Positive News aims to create a more balanced and solutions-focused media landscape.',
+      description: [],
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const UKNewsSourcesLength = UKNewsSources.size;
 
@@ -6000,6 +6038,18 @@ export const OZNewsSources = new Map<string, NewsSource>([
       about:
         'The Conversation is an independent source of news and views, sourced from the academic and research community and delivered direct to the public. Our team of professional editors work with experts to unlock their knowledge for use by the wider public. Access to independent, high-quality, authenticated, explanatory journalism underpins a functioning democracy. Our aim is to allow for better understanding of current affairs and complex issues. And hopefully allow for a better quality of public discourse and conversations.',
       emos: ['📰', '🇦🇺'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'AU_NWS',
+    {
+      name: 'News Weakly',
+      url: 'https://shows.acast.com/news-weakly',
+      est: 2021,
+      about:
+        'News Weakly is a satirical news podcast that takes a humorous look at the week’s headlines. With a mix of parody, satire, and comedy, News Weakly offers a fresh and entertaining take on current events, politics, and pop culture. Hosted by a team of comedians and writers, the podcast provides a light-hearted and irreverent perspective on the news stories that are making headlines. Whether you’re looking for a laugh or a break from the seriousness of the news cycle, News Weakly is the perfect podcast for you.',
+      emos: ['🎙️', '🇦🇺'],
       langs: ['en'],
     },
   ],
@@ -8328,6 +8378,45 @@ export const USNewsSources = new Map<string, NewsSource>([
       est: 1999,
       about:
         "Mid Hudson News has been the Hudson Valley's news source since 1999. The news site and podcast feature breaking news, politics, crime, entertainment, and more.",
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_TNA',
+    {
+      name: 'The New Abnormal',
+      url: 'https://www.thedailybeast.com/',
+      est: 2008,
+      about:
+        'The New Abnormal is a podcast hosted by Molly Jong-Fast and Rick Wilson that covers politics, media, and culture.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_KFF',
+    {
+      name: "KFF Health News' 'What the Health?'",
+      url: 'https://kffhealthnews.org/',
+      est: 2017,
+      about:
+        "KFF Health News' 'What the Health?' is a podcast that covers health policy and politics.",
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_DTN',
+    {
+      name: 'Daily Tech News Show',
+      url: 'https://www.dailytechnewsshow.com/',
+      est: 2014,
+      about:
+        'Daily Tech News Show is a podcast that covers technology news and analysis.',
       description: [],
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
