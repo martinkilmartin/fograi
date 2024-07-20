@@ -5284,6 +5284,19 @@ export const UKNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'UK_GLHN',
+    {
+      name: 'Goalhanger',
+      url: 'https://www.goalhangerpodcasts.com',
+      est: 2018,
+      about:
+        'Goalhanger Films is a production company that creates documentaries, podcasts, and other content related to history, politics, current affairs and sport. With a focus on storytelling and engaging narratives, Goalhanger Podcasts aims to entertain and inform audiences through its diverse range of projects.',
+      description: [],
+      emos: ['🎙️', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const UKNewsSourcesLength = UKNewsSources.size;
 
