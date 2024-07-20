@@ -2,6 +2,7 @@ import React from 'react';
 import { Badge, Loading } from '@nextui-org/react';
 import { CleanAndSimpleHeadlineCard } from '@components/Card';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
+import LoadingGrid from '@components/Loading/LoadingGrid';
 import { Headline } from '../../types/Headline';
 import { Countries } from '../../types/countries';
 import Masonry from 'react-masonry-css';
@@ -29,7 +30,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
   } else if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!loading && !error && !headlines?.length) {
-    return <div>No headlines!</div>;
+    return <LoadingGrid />;
   } else {
     const breakpointColumnsObj = {
       default: 10, // 8K monitors (7680px and up)

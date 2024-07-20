@@ -4,6 +4,7 @@ import { ThemeProvider } from 'next-themes';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Analytics } from '@vercel/analytics/react';
 import './masonry.css';
+import './loading.css';
 
 const lightTheme = createTheme({
   type: 'light',
