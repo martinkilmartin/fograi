@@ -9412,6 +9412,19 @@ export const NGNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'NG_TVC',
+    {
+      name: 'TVC News',
+      url: 'https://www.tvcnews.tv/',
+      est: 2012,
+      about:
+        'TVC News is a 24-hour pan-African News Channel offering a fresh perspective on African and world events.',
+      description: [],
+      emos: ['📰', '🇳🇬'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const NGNewsSourcesLength = NGNewsSources.size;
 
@@ -9424,6 +9437,19 @@ export const ZANewsSources = new Map<string, NewsSource>([
       est: 2008,
       about:
         "eNCA is South Africa's most trusted independent TV and online news brand. It launched on June 1st, 2008 to become the country's first 24-hour television news service.",
+      description: [],
+      emos: ['📰', '🇿🇦'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ZA_SABC',
+    {
+      name: 'SABC News',
+      url: 'https://www.sabcnews.com/sabcnews/',
+      est: 1936,
+      about:
+        'SABC News brings you the latest news from around South Africa and the world, together with multimedia from the SABC newsroom.',
       description: [],
       emos: ['📰', '🇿🇦'],
       langs: ['en'],
@@ -9444,6 +9470,19 @@ export const JPNewsSources = new Map<string, NewsSource>([
       description: [],
       emos: ['📰', '🇯🇵'],
       langs: ['en', 'ja'],
+    },
+  ],
+  [
+    'JP_ASSH',
+    {
+      name: 'The Asahi Shimbun',
+      url: 'https://www.asahi.com/',
+      est: 1879,
+      about:
+        'The Asahi Shimbun is widely regarded for its journalism as the most respected daily newspaper in Japan. The English version offers selected articles from the vernacular Asahi Shimbun.',
+      description: [],
+      emos: ['📰', '🇯🇵'],
+      langs: ['ja'],
     },
   ],
 ]);
@@ -9619,6 +9658,23 @@ export const ASNewsSources = new Map<string, NewsSource>([
 ]);
 export const ASNewsSourcesLength = ASNewsSources.size;
 
+export const BRNewsSources = new Map<string, NewsSource>([
+  [
+    'BR_G1',
+    {
+      name: 'g1',
+      url: 'https://g1.globo.com/',
+      est: 2006,
+      about:
+        'O G1 reúne notícias de todas as regiões do Brasil, com vídeos e fotos de qualidade e informações sobre tudo o que acontece no seu estado.',
+      description: [],
+      emos: ['📰', '🇧🇷'],
+      langs: ['pt'],
+    },
+  ],
+]);
+export const BRNewsSourcesLength = BRNewsSources.size;
+
 export const AllNewsSources = new Map<string, NewsSource>([
   ...CANewsSources.entries(),
   ...IENewsSources.entries(),
@@ -9650,4 +9706,5 @@ export const AllNewsSources = new Map<string, NewsSource>([
   ...CKNewsSources.entries(),
   ...TONewsSources.entries(),
   ...ASNewsSources.entries(),
+  ...BRNewsSources.entries(),
 ]);
