@@ -9299,8 +9299,8 @@ export const MXNewsSources = new Map<string, NewsSource>([
       description: [],
       emos: ['📰', '🇲🇽'],
       langs: ['es'],
-    }
-  ]
+    },
+  ],
 ]);
 export const MXNewsSourcesLength = MXNewsSources.size;
 
@@ -9688,6 +9688,92 @@ export const BRNewsSources = new Map<string, NewsSource>([
 ]);
 export const BRNewsSourcesLength = BRNewsSources.size;
 
+export const ILNewsSources = new Map<string, NewsSource>([
+  [
+    'IL_ILTV',
+    {
+      name: 'ILTV News',
+      url: 'https://iltv.tv/',
+      est: 2015,
+      about:
+        'ILTV is an English-language news and current affairs television channel based in Tel Aviv and broadcasting from Jaffa Port.',
+      description: [],
+      // tv emoji
+      emos: ['📺', '🇮🇱'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IL_INN',
+    {
+      name: 'Israel National News - Arutz Sheva',
+      url: 'https://www.israelnationalnews.com',
+      est: 1988,
+      about:
+        'The Israel National News Arutz Sheva website of the largest media group in the Jewish world, brings you news from Israel, the Diaspora, and the world - 24 hours a day. News, economy, culture, food, health, and more.',
+      description: [],
+      emos: ['📰', '🇮🇱'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IL_KAN',
+    {
+      name: 'KAN News',
+      url: 'https://www.kan.org.il/',
+      est: 2017,
+      about:
+        'באתר כאן [תאגיד השידור הישראלי] מחכים לכם מגוון ענק של תכנים! חדשות בארץ ובעולם, תוכניות טלוויזיה מומלצות לצפייה ישירה, שידורים חיים, פודקאסטים, תחנות רדיו ועוד.',
+      description: [],
+      emos: ['📰', '🇮🇱'],
+      langs: ['he'],
+    },
+  ],
+  [
+    'IL_YNET',
+    {
+      name: 'Ynet',
+      url: 'https://www.ynet.co.il',
+      est: 2000,
+      about:
+        'אתר החדשות המוביל בישראל מבית ידיעות אחרונות. סיקור מלא של חדשות מישראל והעולם, ספורט, כלכלה, תרבות, אוכל, מדע וטבע, כל מה שקורה וכל מה שמעניין ב ynet',
+      description: [],
+      emos: ['📰', '🇮🇱'],
+      langs: ['he'],
+    },
+  ],
+]);
+export const ILNewsSourcesLength = ILNewsSources.size;
+
+export const PSNewsSources = new Map<string, NewsSource>([
+  [
+    'PS_ALQD',
+    {
+      name: 'Al-Quds',
+      url: 'https://www.alquds.com/',
+      est: 1951,
+      about:
+        'جريدة القدس العربي "القدس العربي"، صحيفة عربية يومية مستقلة، تأسست في لندن في نيسان/أبريل 1989. تطبع في الوقت نفسه في لندن ونيويورك وفرانكفورت.',
+      description: [],
+      emos: ['📰', '🇵🇸'],
+      langs: ['ar'],
+    },
+  ],
+  [
+    'PS_MAAN',
+    {
+      name: 'Maan News',
+      url: 'https://www.maannews.net/',
+      est: 2005,
+      about: 'موقع اخباري فلسطيني يغطي الاحداث ساعة بساعة',
+      description: [],
+      emos: ['📰', '🇵🇸'],
+      langs: ['ar'],
+    },
+  ],
+]);
+export const PSNewsSourcesLength = PSNewsSources.size;
+
 export const AllNewsSources = new Map<string, NewsSource>([
   ...CANewsSources.entries(),
   ...IENewsSources.entries(),
@@ -9720,4 +9806,6 @@ export const AllNewsSources = new Map<string, NewsSource>([
   ...TONewsSources.entries(),
   ...ASNewsSources.entries(),
   ...BRNewsSources.entries(),
+  ...ILNewsSources.entries(),
+  ...PSNewsSources.entries(),
 ]);
