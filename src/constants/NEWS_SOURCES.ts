@@ -9288,6 +9288,19 @@ export const MXNewsSources = new Map<string, NewsSource>([
       langs: ['es'],
     },
   ],
+  [
+    'MX_NMAS',
+    {
+      name: 'NMás',
+      url: 'https://www.nmas.com.mx/',
+      est: 2019,
+      about:
+        'NMás es un medio de comunicación digital que ofrece información veraz y oportuna sobre los hechos más relevantes de México y el mundo.',
+      description: [],
+      emos: ['📰', '🇲🇽'],
+      langs: ['es'],
+    }
+  ]
 ]);
 export const MXNewsSourcesLength = MXNewsSources.size;
 
