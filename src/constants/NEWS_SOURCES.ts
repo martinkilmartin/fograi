@@ -4115,6 +4115,18 @@ export const IENewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'IE_DVMW',
+    {
+      name: 'David McWilliams',
+      url: 'https://www.davidmcwilliams.ie/',
+      est: 2010,
+      about:
+        'David McWilliams is an economist, author, journalist, documentary-maker and broadcaster. He is Adjunct Professor of Global Economics at the School of Business Trinity College Dublin.',
+      emos: ['🌐', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const IENewsSourcesLength = IENewsSources.size;
 
@@ -5297,6 +5309,19 @@ export const UKNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'UK_REUT',
+    {
+      name: 'Reuters',
+      url: 'https://www.reuters.com/',
+      est: 1851,
+      about:
+        'Reuters is an international news organization that provides breaking news, analysis, and market data to a global audience. With a reputation for accuracy and impartiality, Reuters delivers trusted news coverage on a wide range of topics, including politics, business, finance, and more.',
+      description: [],
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const UKNewsSourcesLength = UKNewsSources.size;
 
@@ -6063,6 +6088,18 @@ export const OZNewsSources = new Map<string, NewsSource>([
       about:
         'News Weakly is a satirical news podcast that takes a humorous look at the week’s headlines. With a mix of parody, satire, and comedy, News Weakly offers a fresh and entertaining take on current events, politics, and pop culture. Hosted by a team of comedians and writers, the podcast provides a light-hearted and irreverent perspective on the news stories that are making headlines. Whether you’re looking for a laugh or a break from the seriousness of the news cycle, News Weakly is the perfect podcast for you.',
       emos: ['🎙️', '🇦🇺'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'OZ_SBS',
+    {
+      name: 'SBS News',
+      url: 'https://www.sbs.com.au/news/',
+      est: 1978,
+      about:
+        'SBS News is a trusted source of news and information in Australia, providing comprehensive coverage of local and international events. With a focus on delivering accurate and impartial reporting, SBS News serves as a reliable resource for millions of Australians. From breaking news to in-depth analysis, SBS News covers a wide range of topics, including politics, business, health, science, technology, and more. Through its commitment to journalistic excellence, SBS News continues to inform, educate, and engage audiences across the country.',
+      emos: ['📰', '🇦🇺'],
       langs: ['en'],
     },
   ],
