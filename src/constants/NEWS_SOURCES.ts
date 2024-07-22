@@ -4671,8 +4671,32 @@ export const INNewsSources = new Map<string, NewsSource>([
         'Republic Bharat brings to you the latest news on politics, business, sports, entertainment, and more from India and around the world.',
       emos: ['📰', '🇮🇳'],
       langs: ['hi'],
-    }
-  ]
+    },
+  ],
+  [
+    'IN_NTAK',
+    {
+      name: 'News Tak',
+      url: 'https://www.newstak.in/',
+      est: 2017,
+      about:
+        'News Tak is a popular Hindi news channel that provides the latest news updates on politics, business, sports, entertainment, and more. With its comprehensive coverage and in-depth analysis, News Tak keeps its viewers informed about the latest developments in India and around the world.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['hi'],
+    },
+  ],
+  [
+    'IN_PLMN',
+    {
+      name: 'Polimer News',
+      url: 'https://www.polimernews.com/',
+      est: 2009,
+      about:
+        'Polimer News is a popular Tamil news channel that provides the latest news updates on politics, business, sports, entertainment, and more. With its comprehensive coverage and in-depth analysis, Polimer News keeps its viewers informed about the latest developments in Tamil Nadu and around the world.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['ta'],
+    },
+  ],
 ]);
 export const INNewsSourcesLength = INNewsSources.size;
 
@@ -7108,6 +7132,19 @@ export const USNewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'US_INED',
+    {
+      name: 'Inside Edition',
+      url: 'https://www.insideedition.com/',
+      est: 1989,
+      about:
+        'Inside Edition is a long-running American news program that covers a wide range of topics, including breaking news, human interest stories, celebrity news, and investigative reports. With a focus on delivering engaging and informative content, Inside Edition provides viewers with a mix of news, entertainment, and lifestyle stories. Whether it’s the latest headlines or in-depth features, Inside Edition keeps its audience informed and entertained with its unique blend of news and entertainment.',
+      description: [],
+      emos: ['📺', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
     'US_NBC',
     {
       name: 'NBC News',
@@ -9415,6 +9452,32 @@ export const IDNewsSources = new Map<string, NewsSource>([
       langs: ['id'],
     },
   ],
+  [
+    'ID_KOMP',
+    {
+      name: 'KompasTV',
+      url: 'https://www.kompas.tv/',
+      est: 2011,
+      about:
+        'Kompas TV adalah stasiun televisi swasta nasional di Indonesia yang berpusat di Jakarta. Kompas TV merupakan bagian dari grup Kompas Gramedia.',
+      description: [],
+      emos: ['📺', '🇮🇩'],
+      langs: ['id'],
+    },
+  ],
+  [
+    'ID_TRIB',
+    {
+      name: 'Tribunnews',
+      url: 'https://www.tribunnews.com/',
+      est: 2008,
+      about:
+        'Tribunnews.com menyajikan berita terkini Indonesia, daerah, nasional, internasional, seleb, olahraga, teknologi, dan gaya hidup.',
+      description: [],
+      emos: ['📰', '🇮🇩'],
+      langs: ['id'],
+    },
+  ],
 ]);
 export const IDNewsSourcesLength = IDNewsSources.size;
 
@@ -9885,6 +9948,32 @@ export const BDNewsSources = new Map<string, NewsSource>([
       langs: ['bn'],
     },
   ],
+  [
+    'BD_JAMU',
+    {
+      name: 'Jamuna TV',
+      url: 'https://jamuna.tv/',
+      est: 2014,
+      about:
+        'Jamuna Television known as “Jamuna TV” is a 24-hour News Channel of Bangladesh. Jamuna Television was launched on April 5, 2014.',
+      description: [],
+      emos: ['📰', '🇧🇩'],
+      langs: ['bn'],
+    },
+  ],
+  [
+    'BD_C24',
+    {
+      name: 'Channel 24',
+      url: 'https://www.channel24bd.tv/',
+      est: 2012,
+      about:
+        'Channel 24 is a News channel of Bangladesh. the station is created by ha-Mim group, one of the leading financial company in Bangladesh.',
+      description: [],
+      emos: ['📰', '🇧🇩'],
+      langs: ['bn'],
+    },
+  ],
 ]);
 export const BDNewsSourcesLength = BDNewsSources.size;
 
@@ -9902,8 +9991,38 @@ export const PHNewsSources = new Map<string, NewsSource>([
       langs: ['en', 'tl'],
     },
   ],
+  [
+    'PH_ABSC',
+    {
+      name: 'ABS-CBN News',
+      url: 'https://news.abs-cbn.com/',
+      est: 1986,
+      about:
+        'Get the latest news on the Philippines and the world: nation, business, entertainment, sports, global Filipino and lifestyle in text, video, and photos.',
+      description: [],
+      emos: ['📰', '🇵🇭'],
+      langs: ['en', 'tl'],
+    },
+  ],
 ]);
 export const PHNewsSourcesLength = PHNewsSources.size;
+
+export const PKNewsSources = new Map<string, NewsSource>([
+  [
+    'PK_GEO',
+    {
+      name: 'Geo News',
+      url: 'https://www.geo.tv/',
+      est: 2002,
+      about:
+        'Geo News is a Pakistani news channel and part of the Jang Group of Newspapers. It was established in May 2002.',
+      description: [],
+      emos: ['📰', '🇵🇰'],
+      langs: ['en', 'ur'],
+    },
+  ],
+]);
+export const PKNewsSourcesLength = PKNewsSources.size;
 
 export const AllNewsSources = new Map<string, NewsSource>([
   ...CANewsSources.entries(),
@@ -9941,4 +10060,5 @@ export const AllNewsSources = new Map<string, NewsSource>([
   ...PSNewsSources.entries(),
   ...BDNewsSources.entries(),
   ...PHNewsSources.entries(),
+  ...PKNewsSources.entries(),
 ]);
