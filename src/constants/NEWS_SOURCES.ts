@@ -4613,6 +4613,66 @@ export const INNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'IN_ABPN',
+    {
+      name: 'ABP News',
+      url: 'https://www.abplive.com/',
+      est: 2003,
+      about:
+        'ABP News is a popular Hindi news channel that provides the latest news updates on politics, business, sports, entertainment, and more. With its comprehensive coverage and in-depth analysis, ABP News keeps its viewers informed about the latest developments in India and around the world.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['hi'],
+    },
+  ],
+  [
+    'IN_TV',
+    {
+      name: 'India TV',
+      url: 'https://www.indiatvnews.com/',
+      est: 2004,
+      about:
+        'India TV is a leading Hindi news channel that offers the latest news updates on politics, business, sports, entertainment, and more. With its engaging content and comprehensive coverage, India TV keeps its viewers informed about the latest happenings in India and around the world.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['hi'],
+    },
+  ],
+  [
+    'IN_LLTP',
+    {
+      name: 'The Lallantop',
+      url: 'https://www.thelallantop.com/',
+      est: 2016,
+      about:
+        'The Lallantop is a popular Hindi news and opinion website that covers a wide range of topics including politics, entertainment, sports, lifestyle, and more. With its engaging content and unique storytelling style, The Lallantop has become a go-to source for many Hindi-speaking readers looking for the latest news and updates.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['hi'],
+    },
+  ],
+  [
+    'IN_N18',
+    {
+      name: 'News18',
+      url: 'https://hindi.news18.com/',
+      est: 2005,
+      about:
+        'News18 India is a leading Hindi news channel that provides the latest news updates on politics, business, sports, entertainment, and more. With its comprehensive coverage and in-depth analysis, News18 India keeps its viewers informed about the latest developments in India and around the world.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['hi'],
+    },
+  ],
+  [
+    'IN_RB',
+    {
+      name: 'Republic Bharat',
+      url: 'https://www.republicbharat.com/',
+      est: 2019,
+      about:
+        'Republic Bharat brings to you the latest news on politics, business, sports, entertainment, and more from India and around the world.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['hi'],
+    }
+  ]
 ]);
 export const INNewsSourcesLength = INNewsSources.size;
 
@@ -9811,6 +9871,40 @@ export const PSNewsSources = new Map<string, NewsSource>([
 ]);
 export const PSNewsSourcesLength = PSNewsSources.size;
 
+export const BDNewsSources = new Map<string, NewsSource>([
+  [
+    'BD_SOMO',
+    {
+      name: 'Somoy TV',
+      url: 'https://www.somoynews.tv/',
+      est: 2011,
+      about:
+        'Somoy TV is a 24-hour Bengali news-based private satellite television channel. It started broadcasting in 2011.',
+      description: [],
+      emos: ['📰', '🇧🇩'],
+      langs: ['bn'],
+    },
+  ],
+]);
+export const BDNewsSourcesLength = BDNewsSources.size;
+
+export const PHNewsSources = new Map<string, NewsSource>([
+  [
+    'PH_GMA',
+    {
+      name: 'GMA News',
+      url: 'https://www.gmanetwork.com/news/',
+      est: 1995,
+      about:
+        "GMA News Online is the official online news platform of GMA News, the Philippines' no. 1 TV network. It provides comprehensive coverage of the latest news and current events.",
+      description: [],
+      emos: ['📰', '🇵🇭'],
+      langs: ['en', 'tl'],
+    },
+  ],
+]);
+export const PHNewsSourcesLength = PHNewsSources.size;
+
 export const AllNewsSources = new Map<string, NewsSource>([
   ...CANewsSources.entries(),
   ...IENewsSources.entries(),
@@ -9845,4 +9939,6 @@ export const AllNewsSources = new Map<string, NewsSource>([
   ...BRNewsSources.entries(),
   ...ILNewsSources.entries(),
   ...PSNewsSources.entries(),
+  ...BDNewsSources.entries(),
+  ...PHNewsSources.entries(),
 ]);

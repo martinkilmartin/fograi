@@ -33,6 +33,8 @@ import {
   BRNewsSources,
   ILNewsSources,
   PSNewsSources,
+  BDNewsSources,
+  PHNewsSources,
 } from '@constants/NEWS_SOURCES';
 import { flags } from '@constants/FLAGS';
 import { COUNTRIES } from '@constants/COUNTRIES';
@@ -71,6 +73,8 @@ const AS_SOURCES_SIZE = ASNewsSources.size;
 const BR_SOURCES_SIZE = BRNewsSources.size;
 const IL_SOURCES_SIZE = ILNewsSources.size;
 const PS_SOURCES_SIZE = PSNewsSources.size;
+const BD_SOURCES_SIZE = BDNewsSources.size;
+const PH_SOURCES_SIZE = PHNewsSources.size;
 
 const ALL_SIZES =
   CA_SOURCES_SIZE +
@@ -105,7 +109,9 @@ const ALL_SIZES =
   AS_SOURCES_SIZE +
   BR_SOURCES_SIZE +
   IL_SOURCES_SIZE +
-  PS_SOURCES_SIZE;
+  PS_SOURCES_SIZE +
+  BD_SOURCES_SIZE +
+  PH_SOURCES_SIZE;
 
 const CSM = new Map([
   ['ca', CA_SOURCES_SIZE],
@@ -141,6 +147,8 @@ const CSM = new Map([
   ['br', BR_SOURCES_SIZE],
   ['il', IL_SOURCES_SIZE],
   ['ps', PS_SOURCES_SIZE],
+  ['bd', BD_SOURCES_SIZE],
+  ['ph', PH_SOURCES_SIZE],
 ]);
 
 const About = (): JSX.Element => {
