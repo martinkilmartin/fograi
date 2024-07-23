@@ -39,18 +39,19 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
     favCountries = localStorage.getItem('likedCountries');
     favSources = localStorage.getItem('likedSources');
     favMediaTypes = localStorage.getItem('likedMediaTypes');
-    favLanguages = localStorage.getItem('likedLanguages') || '[]';
+    favLanguages = localStorage.getItem('likedLanguages');
   }
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
     useInfiniteQuery<Headline[], Error>(
       'headlines',
       ({ pageParam = null }) =>
-        ((favCountries && favCountries !== '[]') || (favSources && favSources !== '[]') || (favMediaTypes && favMediaTypes !== '[]'))
+        ((favCountries && favCountries !== '[]') || (favSources && favSources !== '[]') || (favMediaTypes && favMediaTypes !== '[]') || (favLanguages && favLanguages !== '[]'))
           ? getHeadlinesWithPreferredCountries(
             pageParam,
             limit,
             favCountries && favCountries !== '[]' ? JSON.parse(favCountries as string) : null,
+            favLanguages && favLanguages !== '[]' ? JSON.parse(favLanguages as string) : null,
             favSources && favSources !== '[]' ? JSON.parse(favSources as string) : null,
             favMediaTypes && favMediaTypes !== '[]' ? JSON.parse(favMediaTypes as string) : null
           )
@@ -85,7 +86,7 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
     };
   }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
 
-  const allHeadlines = data?.pages.flatMap((page) => page).filter((ah: Headline) => favLanguages && favLanguages !== '[]' ? favLanguages.includes(ah.lang) : true);
+  const allHeadlines = data?.pages.flatMap((page) => page);
 
   return (
     <Page title={APP_TITLE} heading={TAG_LINE}>
