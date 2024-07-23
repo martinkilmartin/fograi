@@ -8,7 +8,7 @@ import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { NS_BI_MAP } from '@constants/NS_BI_MAP';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { Page } from '@layouts/Page';
-import { getHeadlinesCountrySource } from '@lib/getHeadlines';
+import { getHeadlinesWithPreferredCountries } from '@lib/getHeadlines';
 import { Headline } from '../../../types';
 import { Countries } from '../../../types/countries';
 
@@ -25,7 +25,7 @@ const HomePage: React.FC<HomePageProps> = ({ initialData, sourceName }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
   const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
 
-  const sourcesArray = `{${sourceID as string}}`;
+  const sourcesArray = sourceID;
 
   let limit: number;
 
@@ -41,11 +41,13 @@ const HomePage: React.FC<HomePageProps> = ({ initialData, sourceName }) => {
     useInfiniteQuery<Headline[], Error>(
       'headlines',
       ({ pageParam = null }) =>
-        getHeadlinesCountrySource(
+        getHeadlinesWithPreferredCountries(
           pageParam,
           limit,
-          country as Countries,
-          sourcesArray,
+          [country as Countries],
+          null,
+          [sourcesArray as string],
+          null
         ),
       {
         getNextPageParam: (lastPage, _pages) =>
@@ -64,8 +66,8 @@ const HomePage: React.FC<HomePageProps> = ({ initialData, sourceName }) => {
         hasNextPage &&
         loadMoreRef.current &&
         window.innerHeight + window.scrollY >=
-          (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) *
-            0.5
+        (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) *
+        0.5
       ) {
         fetchNextPage();
       }
@@ -134,7 +136,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     };
   }
   const country = (sourceID as string).substring(0, 2).toLowerCase();
-  const sourcesArray = `{${sourceID}}`;
+  const sourcesArray = sourceID;
   const userAgent = context.req.headers['user-agent'] || '';
   const isMobile = isMobileUserAgent(userAgent);
   const isTablet = isTabletUserAgent(userAgent);
@@ -144,11 +146,13 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   } else if (isTablet) {
     limit = 4;
   }
-  const initialHeadlines = await getHeadlinesCountrySource(
+  const initialHeadlines = await getHeadlinesWithPreferredCountries(
     null,
     limit,
-    country as Countries,
-    sourcesArray,
+    [country as Countries],
+    null,
+    [sourcesArray],
+    null
   );
   const sourceName = AllNewsSources.get(sourceID)?.name;
 

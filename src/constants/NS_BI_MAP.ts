@@ -1041,6 +1041,8 @@ export const NS_BI_MAP = new Map([
   ["clarín", "AR_CLAR"],
   ["SG_CNA", "channel-newsasia"],
   ["channel-newsasia", "SG_CNA"],
+  ["SG_ST", "the-straits-times"],
+  ["the-straits-times", "SG_ST"],
   ["NG_CHAN", "channels-television"],
   ["channels-television", "NG_CHAN"],
   ["NG_ALMT", "alimosho-today"],

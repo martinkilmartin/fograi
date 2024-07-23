@@ -27,10 +27,13 @@ export async function getHeadlinesCountry(
 ): Promise<Headline[]> {
   try {
     const { data, error } = await supabase.rpc(
-      'get_paginated_results_country_sources_v2',
+      'get_paginated_results_v3',
       {
         page_size: limit,
-        country: country,
+        country_filter: [country],
+        lang_filter: null,
+        source_filter: null,
+        media_type_filter: null,
         last_seen: lastSeen,
       },
     );
@@ -47,14 +50,14 @@ export async function getHeadlinesCountrySource(
   lastSeen: string | null = null,
   limit = 8,
   country: Countries,
-  sources: string,
+  sources: Array<string> | null = null,
 ): Promise<Headline[]> {
   try {
     const { data, error } = await supabase.rpc(
       'get_paginated_results_country_sources_v2',
       {
         page_size: limit,
-        country: country,
+        country_filter: country,
         source_filter: sources,
         last_seen: lastSeen,
       },

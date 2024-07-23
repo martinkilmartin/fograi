@@ -9554,6 +9554,19 @@ export const SGNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'SG_ST',
+    {
+      name: 'The Straits Times',
+      url: 'https://www.straitstimes.com/',
+      est: 1845,
+      about:
+        'The Straits Times - Get latest breaking news, business, sports, lifestyle, tech & multimedia and more news in Singapore, Asia & rest of the world at straitstimes.com.',
+      description: [],
+      emos: ['📰', '🇸🇬'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const SGNewsSourcesLength = SGNewsSources.size;
 
