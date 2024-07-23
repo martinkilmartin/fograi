@@ -20,8 +20,7 @@ export const COUNTRIES_TITLE = '🌎 🌍 🌏 Countries';
 export const COUNTRIES_SUBTITLE = 'Choose which countries to see news from';
 export const ROADMAP_TITLE = '📍 Roadmap';
 export const SOURCES_TITLE = '😶‍🌫️ Sources';
-export const SOURCES_SUBTITLE =
-  'Coming soon: select which news sources to see news from';
+export const SOURCES_SUBTITLE = 'Choose which news sources to see news from';
 export const TERMS_TITLE = '⚖ Terms Of Use';
 export const HTTP_403 = 'Woah there Betsy 🐄';
 export const HTTP_404 = '🧍 Not Found';

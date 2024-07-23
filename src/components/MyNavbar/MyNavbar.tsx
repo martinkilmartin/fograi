@@ -135,11 +135,11 @@ export default function MyNavbar(): JSX.Element {
               </Modal.Header>
               <Modal.Body>
                 <Collapse.Group>
-                  <Collapse title="Languages">
-                    <Langs />
-                  </Collapse>
                   <Collapse title="Media Types">
                     <MediaTypes />
+                  </Collapse>
+                  <Collapse title="Languages">
+                    <Langs />
                   </Collapse>
                   <Collapse title="Countries">
                     <Countries />
