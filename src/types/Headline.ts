@@ -1,6 +1,8 @@
 export type Headline = {
   id: number
   created_at: string
+  country: string
+  lang: string
   source: string
   section: string
   headline: string

@@ -10062,3 +10062,44 @@ export const AllNewsSources = new Map<string, NewsSource>([
   ...PHNewsSources.entries(),
   ...PKNewsSources.entries(),
 ]);
+
+// // Function to extract unique languages
+// function getUniqueLangs(map: Map<string, NewsSource>) {
+//   const allLangs: Array<string> = [''];
+
+//   // Iterate through the map
+//   map.forEach((value) => {
+//     if (value.langs) {
+//       allLangs.push(...value.langs);
+//     }
+//   });
+
+//   // Create a Set to store unique values
+//   const uniqueLangs = [...new Set(allLangs)];
+
+//   return uniqueLangs;
+// }
+
+// function createLangToObjectKeysMap(map: Map<string, NewsSource>) {
+//   const langToObjectKeysMap = new Map();
+
+//   // Iterate through the map
+//   map.forEach((value, key) => {
+//     if (value.langs) {
+//       value.langs.forEach((lang) => {
+//         if (!langToObjectKeysMap.has(lang)) {
+//           langToObjectKeysMap.set(lang, []);
+//         }
+//         langToObjectKeysMap.get(lang).push(key);
+//       });
+//     }
+//   });
+
+//   return langToObjectKeysMap;
+// }
+
+// const uniqueLangs = getUniqueLangs(AllNewsSources);
+// console.log(JSON.stringify(uniqueLangs));
+
+// const langToObjectKeysMap = createLangToObjectKeysMap(AllNewsSources);
+// console.log(langToObjectKeysMap);

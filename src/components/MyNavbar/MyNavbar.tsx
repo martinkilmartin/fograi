@@ -20,6 +20,7 @@ import Image from 'next/image';
 import Countries from '@components/Filters/Countries';
 import Sources from '@components/Filters/Sources';
 import MediaTypes from '@components/Filters/MediaTypes';
+import Langs from '@components/Filters/Langs';
 
 export default function MyNavbar(): JSX.Element {
   const { setTheme } = useNextTheme();
@@ -49,6 +50,7 @@ export default function MyNavbar(): JSX.Element {
     localStorage.removeItem('likedCountries');
     localStorage.removeItem('likedSources');
     localStorage.removeItem('likedMediaTypes');
+    localStorage.removeItem('likedLanguages');
     queryClient.invalidateQueries('headlines');
   }
 
@@ -133,14 +135,17 @@ export default function MyNavbar(): JSX.Element {
               </Modal.Header>
               <Modal.Body>
                 <Collapse.Group>
+                  <Collapse title="Languages">
+                    <Langs />
+                  </Collapse>
+                  <Collapse title="Media Types">
+                    <MediaTypes />
+                  </Collapse>
                   <Collapse title="Countries">
                     <Countries />
                   </Collapse>
                   <Collapse title="Sources">
                     <Sources />
-                  </Collapse>
-                  <Collapse title="Media Types">
-                    <MediaTypes />
                   </Collapse>
                 </Collapse.Group>
               </Modal.Body>

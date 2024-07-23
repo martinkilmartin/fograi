@@ -33,11 +33,13 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
   let favCountries: string | any[] | null | undefined = undefined;
   let favSources: string | any[] | null | undefined = undefined;
   let favMediaTypes: string | any[] | null | undefined = undefined;
+  let favLanguages: string | any[] | null | undefined = undefined;
 
   if (typeof window !== 'undefined') {
     favCountries = localStorage.getItem('likedCountries');
     favSources = localStorage.getItem('likedSources');
     favMediaTypes = localStorage.getItem('likedMediaTypes');
+    favLanguages = localStorage.getItem('likedLanguages') || '[]';
   }
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, status } =
@@ -83,7 +85,7 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
     };
   }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
 
-  const allHeadlines = data?.pages.flatMap((page) => page);
+  const allHeadlines = data?.pages.flatMap((page) => page).filter((ah: Headline) => favLanguages && favLanguages !== '[]' ? favLanguages.includes(ah.lang) : true);
 
   return (
     <Page title={APP_TITLE} heading={TAG_LINE}>
