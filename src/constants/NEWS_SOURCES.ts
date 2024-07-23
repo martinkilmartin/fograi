@@ -4225,6 +4225,18 @@ export const INNewsSources = new Map<string, NewsSource>([
     },
   ],
   [
+    'IN_TOI',
+    {
+      name: 'The Times of India',
+      url: 'https://timesofindia.indiatimes.com/',
+      est: 1838,
+      about:
+        'Times of India brings the Latest News & Breaking News Headlines from India & around the World. Read Today’s News on Sports, Business, Health & Fitness, Bollywood & Entertainment.',
+      emos: ['📰', '🇮🇳'],
+      langs: ['en'],
+    },
+  ],
+  [
     'IN_IXPR',
     {
       name: 'The Indian Express',
@@ -9845,6 +9857,19 @@ export const BRNewsSources = new Map<string, NewsSource>([
       langs: ['pt'],
     },
   ],
+  [
+    'BR_UOL',
+    {
+      name: 'UOL',
+      url: 'https://www.uol.com.br/',
+      est: 1996,
+      about:
+        'UOL, a maior empresa brasileira de conteúdo, serviços digitais e tecnologia com vários canais de jornalismo e diversas soluções para você ou seu negócio.',
+      description: [],
+      emos: ['📰', '🇧🇷'],
+      langs: ['pt'],
+    },
+  ],
 ]);
 export const BRNewsSourcesLength = BRNewsSources.size;
 
@@ -10021,8 +10046,38 @@ export const PKNewsSources = new Map<string, NewsSource>([
       langs: ['en', 'ur'],
     },
   ],
+  [
+    'PK_DAWN',
+    {
+      name: 'Dawn News TV',
+      url: 'https://www.dawnnews.tv/',
+      est: 2007,
+      about:
+        'Dawn News is one of Pakistan’s 24-hour Urdu news channel. Based in Karachi, the station is a subsidiary of Pakistan Herald Publications Limited (PHPL), Pakistan’s largest English-language media group.',
+      description: [],
+      emos: ['📰', '🇵🇰'],
+      langs: ['en', 'ur'],
+    },
+  ],
 ]);
 export const PKNewsSourcesLength = PKNewsSources.size;
+
+export const KENewsSources = new Map<string, NewsSource>([
+  [
+    'KE_NTV',
+    {
+      name: 'NTV Kenya',
+      url: 'https://ntvkenya.co.ke/news/',
+      est: 2005,
+      about:
+        'NTV Kenya is the leading television broadcasting station covering a large part of Kenya and the region. NTV Kenya Turning On Your World.',
+      description: [],
+      emos: ['📰', '🇰🇪'],
+      langs: ['en'],
+    },
+  ],
+]);
+export const KENewsSourcesLength = KENewsSources.size;
 
 export const AllNewsSources = new Map<string, NewsSource>([
   ...CANewsSources.entries(),
@@ -10061,6 +10116,7 @@ export const AllNewsSources = new Map<string, NewsSource>([
   ...BDNewsSources.entries(),
   ...PHNewsSources.entries(),
   ...PKNewsSources.entries(),
+  ...KENewsSources.entries(),
 ]);
 
 // // Function to extract unique languages
