@@ -1134,6 +1134,18 @@ export const CANewsSources = new Map<string, NewsSource>([
       primaryColor: '#011543',
     },
   ],
+  [
+    'CA_GLBL',
+    {
+      name: 'Global News',
+      url: 'https://globalnews.ca/',
+      est: 1994,
+      about:
+        'Global News provides breaking news & current latest Canadian news headlines; national weather forecasts & predictions, local news videos, money and financial news; sports stats and scores.',
+      emos: ['📰', '🇨🇦'],
+      langs: ['en'],
+    }
+  ]
 ]);
 export const CANewsSourcesLength = CANewsSources.size;
 
