@@ -1,5 +1,5 @@
 {
-  "name": "fograi",
+  "name": "nooze",
   "version": "0.1.0",
   "scripts": {
     "dev": "doppler run -- next dev",

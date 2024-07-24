@@ -250,6 +250,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         e.currentTarget.style.transform = 'translateY(0)';
         e.currentTarget.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
       }}
+    // className={`${headline.media_type}-bg`}
     >
       <Card.Header
         style={{
@@ -263,7 +264,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           <Popover isOpen={isOpen} onOpenChange={(open) => infoHandler(open)}>
             <Popover.Trigger>
               <Text
-                size={28}
+                size={36}
                 role="button"
                 style={{
                   cursor: 'pointer',
@@ -355,7 +356,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: '1' }}>
           <Text
-            size={28}
+            size={36}
             style={{ marginLeft: '16px', color: theme?.colors.primary.value }}
           >
             {mediaTypeIcons[headline.media_type as keyof typeof mediaTypeIcons]}
@@ -367,7 +368,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               style={{
                 backgroundColor: theme?.colors.primary.value,
                 color: '#fff',
-                padding: '5px 10px',
+                // padding: '5px 10px',
                 borderRadius: '10px',
                 fontSize: '14px',
                 cursor: 'pointer',

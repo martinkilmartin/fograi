@@ -33,7 +33,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
     return <LoadingGrid />;
   } else {
     const breakpointColumnsObj = {
-      default: 10, // 8K monitors (7680px and up)
+      default: 12, // > 8K monitors (7680px and up)
       7680: 10, // 8K resolution
       5120: 8, // 5K resolution
       3840: 6, // 4K resolution
@@ -47,7 +47,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
 
     return (
       <>
-        <div style={{ position: 'relative', paddingLeft: '24px' }}>
+        <div style={{ position: 'relative', paddingLeft: '12px' }}>
           <Masonry
             breakpointCols={breakpointColumnsObj}
             className="my-masonry-grid"
