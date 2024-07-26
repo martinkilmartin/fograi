@@ -1144,8 +1144,8 @@ export const CANewsSources = new Map<string, NewsSource>([
         'Global News provides breaking news & current latest Canadian news headlines; national weather forecasts & predictions, local news videos, money and financial news; sports stats and scores.',
       emos: ['📰', '🇨🇦'],
       langs: ['en'],
-    }
-  ]
+    },
+  ],
 ]);
 export const CANewsSourcesLength = CANewsSources.size;
 
@@ -9707,6 +9707,19 @@ export const KRNewsSources = new Map<string, NewsSource>([
       est: 1980,
       about:
         "Yonhap News Agency is South Korea's leading news agency, providing comprehensive coverage of both domestic and international news.",
+      description: [],
+      emos: ['📰', '🇰🇷'],
+      langs: ['ko'],
+    },
+  ],
+  [
+    'KR_MBC',
+    {
+      name: 'MBC News',
+      url: 'https://imnews.imbc.com/',
+      est: 1961,
+      about:
+        'MBC News is a South Korean news website that provides the latest news and updates from South Korea.',
       description: [],
       emos: ['📰', '🇰🇷'],
       langs: ['ko'],
