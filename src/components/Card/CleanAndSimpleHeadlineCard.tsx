@@ -54,6 +54,22 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const emos = AllNewsSources.get(headline.source)?.emos;
   const est = AllNewsSources.get(headline.source)?.est;
 
+  const cardBorders = {
+    video: '#ff0000',
+    audio: '#570f8a',
+    article: '#000000',
+  }
+
+  const cardBorder = cardBorders[headline.media_type as keyof typeof cardBorders];
+
+  const cardBackgrounds = {
+    video: isDark ? '#4c0000' : '#ffe6e6',
+    audio: isDark ? '#2e004f' : '#f4e1f7',
+    article: isDark ? '#1c1c1c' : '#f0f0f0',
+  }
+
+  const cardBackground = cardBackgrounds[headline.media_type as keyof typeof cardBackgrounds];
+
   const mediaTypeIcons = {
     video: <Link href="https://www.youtube.com?utm_source=nooze.news" target='_blank' onClick={() => powered('youtube')} ><Image src={youTubeImg} alt="Powered by YouTube" width={50} /></Link>,
     audio: <Link href="https://www.podchaser.com?utm_source=nooze.news" target='_blank' onClick={() => powered('podchaser')} ><Image src={isDark ? podchaserDarkModeImg : podchaserLightModeImg} alt="Powered by Podchaser" width={200} /></Link>,
@@ -247,8 +263,9 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
       isHoverable
       variant="bordered"
       style={{
-        border: '1px solid #ddd',
+        border: `1px solid ${cardBorder}`,
         borderRadius: '10px',
+        backgroundColor: cardBackground,
         fontFamily: '"Arial", sans-serif',
         margin: '20px 10px',
         padding: '16px',
