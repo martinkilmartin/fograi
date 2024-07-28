@@ -5430,6 +5430,19 @@ export const UKNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'UK_BUGL',
+    {
+      name: 'The Bugle',
+      url: 'https://thebuglepodcast.com/',
+      est: 2007,
+      about:
+        'The Bugle is a satirical news podcast that offers a humorous take on current events, politics, and culture. With a blend of comedy and commentary, The Bugle aims to entertain and inform listeners through its unique and irreverent approach to news.',
+      description: [],
+      emos: ['🎙️', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const UKNewsSourcesLength = UKNewsSources.size;
 
