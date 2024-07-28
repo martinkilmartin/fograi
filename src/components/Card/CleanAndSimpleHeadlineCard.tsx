@@ -57,7 +57,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const cardBorders = {
     video: '#ff0000',
     audio: '#570f8a',
-    article: '#000000',
+    article: '#99ccff',
   }
 
   const cardBorder = cardBorders[headline.media_type as keyof typeof cardBorders];
@@ -65,10 +65,18 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const cardBackgrounds = {
     video: isDark ? '#4c0000' : '#ffe6e6',
     audio: isDark ? '#2e004f' : '#f4e1f7',
-    article: isDark ? '#1c1c1c' : '#f0f0f0',
+    article: isDark ? '#1a3a5f' : '#e6f2ff',
   }
 
   const cardBackground = cardBackgrounds[headline.media_type as keyof typeof cardBackgrounds];
+
+  const headlineColors = {
+    video: isDark ? theme?.colors.text.value : theme?.colors.red900.value,
+    audio: isDark ? theme?.colors.text.value : theme?.colors.purple900.value,
+    article: isDark ? theme?.colors.text.value : theme?.colors.blue900.value,
+  }
+
+  const headlineColor = headlineColors[headline.media_type as keyof typeof headlineColors];
 
   const mediaTypeIcons = {
     video: <Link href="https://www.youtube.com?utm_source=nooze.news" target='_blank' onClick={() => powered('youtube')} ><Image src={youTubeImg} alt="Powered by YouTube" width={50} /></Link>,
@@ -457,7 +465,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             h3
             size={28}
             style={{
-              color: isDark ? theme?.colors.text.value : theme?.colors.primary.value,
+              color: headlineColor,
               marginBottom: '16px',
             }}
           >
