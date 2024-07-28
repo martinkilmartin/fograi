@@ -22,6 +22,9 @@ import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { Headline } from '../../types';
 import { Countries } from '../../types/countries';
 import shareImg from '../../../public/img/ic/share.svg';
+import podchaserLightModeImg from '../../../public/img/api/podchaser-black.svg';
+import podchaserDarkModeImg from '../../../public/img/api/podchaser-white.svg';
+import youTubeImg from '../../../public/img/api/youtube.png';
 
 type Props = {
   header?: boolean;
@@ -34,7 +37,7 @@ type Props = {
 const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const COLLECTION_KEY = 'nooze';
 
-  const { theme } = useTheme();
+  const { theme, isDark } = useTheme();
   const [leadImgErr, setLeadImgErr] = useState<boolean>(false);
   const [liked, setLiked] = useState<boolean>(false);
   const [likeCount, setLikeCount] = useState<number | '?'>('?');
@@ -52,8 +55,8 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const est = AllNewsSources.get(headline.source)?.est;
 
   const mediaTypeIcons = {
-    video: '📹',
-    audio: '🔊',
+    video: <Link href="https://www.youtube.com?utm_source=nooze.news" target='_blank' onClick={() => powered('youtube')} ><Image src={youTubeImg} alt="Powered by YouTube" width={50} /></Link>,
+    audio: <Link href="https://www.podchaser.com?utm_source=nooze.news" target='_blank' onClick={() => powered('podchaser')} ><Image src={isDark ? podchaserDarkModeImg : podchaserLightModeImg} alt="Powered by Podchaser" width={200} /></Link>,
     image: '📸',
     article: '📰',
   };
@@ -162,6 +165,16 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
       });
     } catch (_e) {
       setShareable(false);
+    }
+  };
+
+  const powered = async (by: string) => {
+    try {
+      fetch(`/api/fast/react?id=${by}&action=powered&reaction=false`, {
+        method: 'POST',
+      });
+    } catch (_error) {
+      // do nothing
     }
   };
 
@@ -427,7 +440,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             h3
             size={28}
             style={{
-              color: theme?.colors.primary.value,
+              color: isDark ? theme?.colors.text.value : theme?.colors.primary.value,
               marginBottom: '16px',
             }}
           >
