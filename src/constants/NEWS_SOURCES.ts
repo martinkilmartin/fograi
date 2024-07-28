@@ -8619,6 +8619,71 @@ export const USNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'US_SLAT',
+    {
+      name: 'Slate',
+      url: 'https://slate.com/',
+      est: 1996,
+      about:
+        'Online magazine that covers current affairs, politics, and culture.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_NWTY',
+    {
+      name: 'The Newsworthy',
+      url: 'https://www.thenewsworthy.com/',
+      est: 2017,
+      about:
+        'The Newsworthy is a daily news podcast that covers the day’s news in 10 minutes.',
+      description: [],
+      emos: ['🎙️', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_SKIM',
+    {
+      name: 'The Skimm',
+      url: 'https://www.theskimm.com/',
+      est: 2012,
+      about:
+        'The Skimm is a daily newsletter that simplifies the headlines for busy people.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_WNYC',
+    {
+      name: 'WNYC',
+      url: 'https://www.wnyc.org/',
+      est: 1924,
+      about:
+        'WNYC is a public radio station that covers news, culture, and music.',
+      description: [],
+      emos: ['🎙️', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_NWYR',
+    {
+      name: 'The New Yorker',
+      url: 'https://www.newyorker.com/',
+      est: 1925,
+      about:
+        'The New Yorker is a weekly magazine that covers news, culture, and politics.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const USNewsSourcesLength = USNewsSources.size;
 
