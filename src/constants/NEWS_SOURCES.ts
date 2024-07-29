@@ -5443,6 +5443,19 @@ export const UKNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'UK_MNCL',
+    {
+      name: 'Monocle',
+      url: 'https://monocle.com/',
+      est: 2007,
+      about:
+        'Monocle is a global affairs and lifestyle magazine that covers a wide range of topics, including politics, business, culture, design, and more. With a focus on quality journalism and engaging storytelling, Monocle aims to provide readers with a unique perspective on the world around them.',
+      description: [],
+      emos: ['📰', '🇬🇧'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const UKNewsSourcesLength = UKNewsSources.size;
 
@@ -8679,6 +8692,45 @@ export const USNewsSources = new Map<string, NewsSource>([
       est: 1925,
       about:
         'The New Yorker is a weekly magazine that covers news, culture, and politics.',
+      description: [],
+      emos: ['📰', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_WGBH',
+    {
+      name: 'WGBH',
+      url: 'https://www.wgbh.org/',
+      est: 1951,
+      about:
+        'WGBH is a public radio station that covers news, culture, and music.',
+      description: [],
+      emos: ['🎙️', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_GLBD',
+    {
+      name: 'Global Dispatches',
+      url: 'https://www.globaldispatches.org/',
+      est: 2010,
+      about:
+        'Global Dispatches is a podcast that covers international affairs and foreign policy.',
+      description: [],
+      emos: ['🎙️', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'US_TRNN',
+    {
+      name: 'The Real News Network',
+      url: 'https://therealnews.com/',
+      est: 2007,
+      about:
+        'The Real News Network is a nonprofit news organization that covers news and analysis.',
       description: [],
       emos: ['📰', '🇺🇸'],
       langs: ['en'],
