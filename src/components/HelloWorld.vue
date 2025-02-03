@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, onServerPrefetch } from 'vue';
+import { onMounted, onServerPrefetch } from 'vue';
 import { useHeadlines } from '@/composables/useHeadlines';
 
 const { headlines, loading, getHeadlinesSSR, getHeadlinesCSR } = useHeadlines();

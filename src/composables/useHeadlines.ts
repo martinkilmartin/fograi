@@ -6,6 +6,10 @@ import type { Countries } from "../../types/Countries";
 const supabaseURL = import.meta.env.VITE_SUPABASE_URL;
 const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
 
+if (!supabaseURL || !supabaseKey) {
+  console.error('Supabase environment variables are missing!');
+}
+
 // 🟢 In-memory session cache (prevents duplicate requests)
 const cache = new Map<string, Headline[]>();
 
@@ -82,7 +86,7 @@ export function useHeadlines() {
   }
 
   async function getSearchTerm(searchTerm: string, limit = 8, country: Array<Countries> | null = null, sources: Array<string> | null = null, mediaTypes: Array<"article" | "video" | "audio"> | null = null, lastSeen: string | null = null) {
-    headlines.value = await fetchFromSupabase<Headline>("get_search_term_v3", { page_size: limit, country_filter: country, source_filter: sources, media_type_filter: mediaTypes, search_term: searchTerm }, `search_${searchTerm}`);
+    headlines.value = await fetchFromSupabase<Headline>("get_search_term_v3", { page_size: limit, last_seen: lastSeen, country_filter: country, source_filter: sources, media_type_filter: mediaTypes, search_term: searchTerm }, `search_${searchTerm}`);
   }
 
   async function getHeadlinesWithPreferredCountries(lastSeen: string | null = null, limit = 8, countries: Array<Countries> | null = null, languages: Array<string> | null = null, sources: Array<string> | null = null, mediaTypes: Array<string> | null = null) {
