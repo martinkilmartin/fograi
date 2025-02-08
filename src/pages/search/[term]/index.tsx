@@ -6,6 +6,7 @@ import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { Page } from '@layouts/Page';
 import { getSearchTerm } from '@lib/getHeadlines';
 import { HeadlineList } from '@components/Headlines';
+import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { Headline } from '../../../types';
 import { GetServerSideProps } from 'next';
 
@@ -50,9 +51,20 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
   } = useInfiniteQuery<Headline[], Error>(
     ['headlines', term],
     ({ pageParam = null }) =>
-      getSearchTerm(limit, favCountries && favCountries !== '[]' ? JSON.parse(favCountries as string) : null,
-        favSources && favSources !== '[]' ? JSON.parse(favSources as string) : null,
-        favMediaTypes && favMediaTypes !== '[]' ? JSON.parse(favMediaTypes as string) : null, pageParam, term as string),
+      getSearchTerm(
+        limit,
+        favCountries && favCountries !== '[]'
+          ? JSON.parse(favCountries as string)
+          : null,
+        favSources && favSources !== '[]'
+          ? JSON.parse(favSources as string)
+          : null,
+        favMediaTypes && favMediaTypes !== '[]'
+          ? JSON.parse(favMediaTypes as string)
+          : null,
+        pageParam,
+        term as string,
+      ),
     {
       getNextPageParam: (lastPage, _pages) =>
         lastPage[lastPage.length - 1]?.created_at,
@@ -70,8 +82,8 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
         hasNextPage &&
         loadMoreRef.current &&
         window.innerHeight + window.scrollY >=
-        (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) *
-        0.5
+          (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) *
+            0.5
       ) {
         fetchNextPage();
       }
@@ -96,12 +108,14 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
     <Page title={APP_TITLE} heading={TAG_LINE}>
       {allHeadlines?.length ? (
         <>
-          <HeadlineList
-            headlines={allHeadlines}
-            loading={status === 'loading'}
-            fetching={isFetchingNextPage}
-            error={status === 'error' ? new Error() : null}
-          />
+          {status === 'loading' && <LoadingSpinner />}
+          {status === 'error' && <LoadingSpinner isError={true} />}
+          {status !== 'loading' && status !== 'error' && (
+            <HeadlineList
+              headlines={allHeadlines}
+              fetching={isFetchingNextPage}
+            />
+          )}
           <div ref={loadMoreRef} />
         </>
       ) : (

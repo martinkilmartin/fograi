@@ -7,6 +7,7 @@ import { COUNTRIES_BI_MAP } from '@constants/COUNTRIES_BI_MAP';
 import { Page } from '@layouts/Page';
 import { getHeadlinesCountry } from '@lib/getHeadlines';
 import { HeadlineList } from '@components/Headlines';
+import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { Headline } from '../../../types';
 import { Countries, CountryKeys } from 'src/types/countries';
 import { GetServerSideProps } from 'next';
@@ -80,12 +81,14 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
       >
         {capitalizeFirstLetterOfEachWord((country as string).replace('-', ' '))}
       </h1>
-      <HeadlineList
-        headlines={allHeadlines}
-        loading={status === 'loading'}
-        fetching={isFetchingNextPage}
-        error={status === 'error' ? new Error() : null}
-      />
+      {status === 'loading' && <LoadingSpinner />}
+      {status === 'error' && <LoadingSpinner isError={true} />}
+      {status !== 'loading' && status !== 'error' && (
+        <HeadlineList
+          headlines={allHeadlines}
+          fetching={isFetchingNextPage}
+        />
+      )}
       <div ref={loadMoreRef} />
     </Page>
   );

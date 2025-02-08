@@ -2,9 +2,9 @@ import { GetServerSideProps } from 'next';
 import React, { useEffect, useRef } from 'react';
 import { InfiniteData, useInfiniteQuery } from 'react-query';
 import { useMediaQuery } from 'react-responsive';
-import { Text } from '@nextui-org/react';
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { NEIGHBOURS } from '@constants/NEIGHBOURS';
+import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { Page } from '@layouts/Page';
 import {
   getHeadlines,
@@ -139,29 +139,15 @@ const HomePage: React.FC<HomePageProps> = ({
 
   return (
     <Page title={APP_TITLE} heading={TAG_LINE}>
-      <Text
-        h1
-        style={{
-          position: 'absolute',
-          width: '1px',
-          height: '1px',
-          padding: 0,
-          margin: '-1px',
-          overflow: 'hidden',
-          clip: 'rect(0,0,0,0)',
-          whiteSpace: 'nowrap',
-          border: 0,
-        }}
-      >
-        {TAG_LINE}
-      </Text>
-      <HeadlineList
-        headlines={allHeadlines}
-        loading={status === 'loading'}
-        fetching={isFetchingNextPage}
-        error={status === 'error' ? new Error() : null}
-        numberOfColumns={numberOfColumns}
-      />
+      {status === 'loading' && <LoadingSpinner />}
+      {status === 'error' && <LoadingSpinner isError={true} />}
+      {status !== 'loading' && status !== 'error' && (
+        <HeadlineList
+          headlines={allHeadlines}
+          fetching={isFetchingNextPage}
+          numberOfColumns={numberOfColumns}
+        />
+      )}
       <div ref={loadMoreRef} />
     </Page>
   );

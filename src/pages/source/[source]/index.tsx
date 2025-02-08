@@ -4,6 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 import { useRouter } from 'next/router';
 import { GetServerSideProps } from 'next';
 import { HeadlineList } from '@components/Headlines';
+import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { NS_BI_MAP } from '@constants/NS_BI_MAP';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
@@ -47,7 +48,7 @@ const HomePage: React.FC<HomePageProps> = ({ initialData, sourceName }) => {
           [country as Countries],
           null,
           [sourcesArray as string],
-          null
+          null,
         ),
       {
         getNextPageParam: (lastPage, _pages) =>
@@ -66,8 +67,8 @@ const HomePage: React.FC<HomePageProps> = ({ initialData, sourceName }) => {
         hasNextPage &&
         loadMoreRef.current &&
         window.innerHeight + window.scrollY >=
-        (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) *
-        0.5
+          (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) *
+            0.5
       ) {
         fetchNextPage();
       }
@@ -99,12 +100,14 @@ const HomePage: React.FC<HomePageProps> = ({ initialData, sourceName }) => {
       >
         {sourceName}
       </h1>
-      <HeadlineList
-        headlines={allHeadlines}
-        loading={status === 'loading'}
-        fetching={isFetchingNextPage}
-        error={status === 'error' ? new Error() : null}
-      />
+      {status === 'loading' && <LoadingSpinner />}
+      {status === 'error' && <LoadingSpinner isError={true} />}
+      {status !== 'loading' && status !== 'error' && (
+        <HeadlineList
+          headlines={allHeadlines}
+          fetching={isFetchingNextPage}
+        />
+      )}
       <div ref={loadMoreRef} />
     </Page>
   );
@@ -152,7 +155,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     [country as Countries],
     null,
     [sourcesArray],
-    null
+    null,
   );
   const sourceName = AllNewsSources.get(sourceID)?.name;
 

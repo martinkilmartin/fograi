@@ -2,16 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Badge, Loading } from '@nextui-org/react';
 import { CleanAndSimpleHeadlineCard as HeadlineCard } from '@components/Card';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
-import LoadingGrid from '@components/Loading/LoadingGrid';
 import { Headline } from '../../types/Headline';
 import { Countries } from '../../types/countries';
 import Masonry from 'react-masonry-css';
 
 interface HeadlineListProps {
   headlines: Headline[] | undefined;
-  loading: boolean;
   fetching: boolean;
-  error: Error | null;
   numberOfColumns?: number;
 }
 
@@ -46,9 +43,7 @@ const useBreakpointColumns = (numberOfColumns?: number) => {
 
 const HeadlineList: React.FC<HeadlineListProps> = ({
   headlines,
-  loading,
   fetching,
-  error,
   numberOfColumns,
 }) => {
   const columns = useBreakpointColumns(numberOfColumns);
@@ -62,12 +57,8 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   };
 
-  if (loading) {
+  if (!headlines?.length) {
     return <LoadingSpinner />;
-  } else if (error) {
-    return <div>Error: {error.message}</div>;
-  } else if (!loading && !error && !headlines?.length) {
-    return <LoadingGrid />;
   } else {
     return (
       <>
