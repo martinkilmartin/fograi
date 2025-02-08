@@ -33,8 +33,8 @@ const Bookmark = ({
 			c3.904,0,7.74-1.523,10.61-4.394l150.063-150.061L406.06,507.606c4.29,4.29,10.742,5.573,16.347,3.252
 			c5.605-2.322,9.26-7.791,9.26-13.858V15C431.667,6.716,424.951,0,416.667,0z M256.002,321.332c-3.978,0-7.793,1.58-10.606,4.394
 			L110.333,460.787V30h291.333v430.785L266.609,325.726C263.796,322.912,259.981,321.332,256.002,321.332z"
-        stroke={theme === 'light' ? fillColors[0] : fillColors[1]}
-        strokeWidth={2}
+        stroke={someBool ? 'red' : theme === 'light' ? fillColors[0] : fillColors[1]}
+        strokeWidth={40}
         fill={
           someBool ? 'red' : theme === 'light' ? fillColors[0] : fillColors[1]
         }

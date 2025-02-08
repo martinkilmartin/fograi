@@ -16,16 +16,76 @@ import Bookmark from '@components/SVG/Bookmark';
 import Heart from '@components/SVG/Heart';
 import X from '@components/SVG/X';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
+import { COUNTRIES } from '@constants/COUNTRIES';
 import { Headline } from '../../types';
-import { Countries } from '../../types/countries';
+import { Countries as CountriesType } from '../../types/countries';
 import shareImg from '../../../public/img/ic/share.svg';
 
 type Props = {
   header?: boolean;
   bgImage?: boolean;
-  country?: Countries;
+  country?: CountriesType;
   headline: Headline;
   idx?: number;
+};
+
+interface AgoBadgeProps {
+  media_type: Headline['media_type'];
+  created_at: Date;
+}
+
+const cardBorders = {
+  video: '#ff0000',
+  audio: '#570f8a',
+  article: '#99ccff',
+};
+
+const AgoBadge = ({ media_type, created_at }: AgoBadgeProps): JSX.Element => {
+  if (media_type === 'article') {
+    return (
+      <Badge color="primary" suppressHydrationWarning>
+        {diffDisplay(created_at)}
+      </Badge>
+    );
+  } else if (media_type === 'video') {
+    return (
+      <Badge color={'error'} suppressHydrationWarning>
+        {diffDisplay(created_at)}
+      </Badge>
+    );
+  } else if (media_type === 'audio') {
+    return (
+      <Badge color={'secondary'} suppressHydrationWarning>
+        {diffDisplay(created_at)}
+      </Badge>
+    );
+  }
+  return <Badge suppressHydrationWarning>{diffDisplay(created_at)}</Badge>;
+};
+
+const MediaBadge = ({
+  media_type,
+}: Pick<Headline, 'media_type'>): JSX.Element => {
+  if (media_type === 'article') {
+    return (
+      <Badge color={'primary'} size={'lg'}>
+        📰&nbsp;Read&nbsp;↗
+      </Badge>
+    );
+  } else if (media_type === 'video') {
+    return (
+      <Badge color={'error'} size={'lg'}>
+        📺&nbsp;Watch&nbsp;↗
+      </Badge>
+    );
+  } else if (media_type === 'audio') {
+    return (
+      <Badge color={'secondary'} size={'lg'}>
+        🔊&nbsp;Listen&nbsp;↗
+      </Badge>
+    );
+  }
+  return <Badge>{media_type}</Badge>;
 };
 
 const HeadlineCard = ({ headline }: Props): JSX.Element => {
@@ -44,12 +104,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     AllNewsSources.get(headline.source)?.url + '?utm_source=nooze.news';
   const sourceName = AllNewsSources.get(headline.source)?.name;
   const emos = AllNewsSources.get(headline.source)?.emos;
-
-  const cardBorders = {
-    video: '#ff0000',
-    audio: '#570f8a',
-    article: '#99ccff',
-  };
 
   const cardBorder =
     cardBorders[headline.media_type as keyof typeof cardBorders];
@@ -245,7 +299,9 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             weight="bold"
             style={{ color: theme?.colors.text.value }}
           >
-            {emos?.[1]}
+            <Tooltip content={COUNTRIES.get(headline.country as CountriesType)}>
+              {emos?.[1]}
+            </Tooltip>
           </Text>
         </div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -272,19 +328,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         </div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <Tooltip content={DATE.toLocaleString()}>
-            <Badge
-              style={{
-                backgroundColor: theme?.colors.primary.value,
-                color: '#fff',
-                // padding: '5px 10px',
-                borderRadius: '10px',
-                fontSize: '14px',
-                cursor: 'pointer',
-              }}
-              suppressHydrationWarning
-            >
-              {diffDisplay(DATE)}
-            </Badge>
+            <AgoBadge created_at={DATE} media_type={headline.media_type} />
           </Tooltip>
         </div>
       </Card.Header>
@@ -296,16 +340,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           rel="noreferrer"
           style={{ overflow: 'auto' }}
         >
-          <Text
-            h3
-            size={28}
-            style={{
-              color: headlineColor,
-              marginBottom: '16px',
-            }}
-          >
-            {headline.headline}&nbsp;↗
-          </Text>
           {headline.img_src && !leadImgErr && (
             <NextUIImage
               src={headline.img_src}
@@ -321,6 +355,20 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
               }}
             />
           )}
+          <Text
+            h3
+            size={28}
+            style={{
+              color: headlineColor,
+              marginBottom: '16px',
+              textAlign: 'center',
+            }}
+          >
+            {headline.headline}
+          </Text>
+          <Grid.Container justify="space-around">
+            <MediaBadge media_type={headline.media_type} />
+          </Grid.Container>
         </Link>
       </Card.Body>
       <Card.Footer style={{ paddingTop: '10px', textAlign: 'center' }}>
