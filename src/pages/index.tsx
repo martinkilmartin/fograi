@@ -174,6 +174,10 @@ const isHDUserAgent = (userAgent: string): boolean => {
   return /hd|1920x1080|1080p/i.test(userAgent);
 };
 
+const isDesktopUserAgent = (userAgent: string): boolean => {
+  return /windows|macintosh|linux/i.test(userAgent);
+};
+
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const userAgent = context.req.headers['user-agent'] || '';
   const isMobile = isMobileUserAgent(userAgent);
@@ -182,8 +186,9 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const is5K = is5KUserAgent(userAgent);
   const is8K = is8KUserAgent(userAgent);
   const isHD = isHDUserAgent(userAgent);
+  const isDeskTop = isDesktopUserAgent(userAgent);
 
-  let limit = 8; // Default for desktop (Full HD)
+  let limit = 4;
 
   if (isMobile) {
     limit = 4;
@@ -197,6 +202,9 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     limit = 32;
   } else if (is8K) {
     limit = 48;
+  }
+  else if (isDeskTop) {
+    limit = 16;
   }
 
   const initialHeadlines = await getHeadlines(null, limit);
