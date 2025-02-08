@@ -4,11 +4,8 @@ import { Image as NextUIImage } from '@nextui-org/react';
 import {
   Badge,
   Card,
-  Col,
   Grid,
   Loading,
-  Popover,
-  Row,
   Text,
   Tooltip,
   useTheme,
@@ -22,9 +19,6 @@ import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { Headline } from '../../types';
 import { Countries } from '../../types/countries';
 import shareImg from '../../../public/img/ic/share.svg';
-import podchaserLightModeImg from '../../../public/img/api/podchaser-black.svg';
-import podchaserDarkModeImg from '../../../public/img/api/podchaser-white.svg';
-import youTubeImg from '../../../public/img/api/youtube.png';
 
 type Props = {
   header?: boolean;
@@ -43,47 +37,40 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const [likeCount, setLikeCount] = useState<number | '?'>('?');
   const [likeLoading, setLikeLoading] = useState<boolean>(false);
   const [saved, setSaved] = useState<boolean>(false);
-  const [isOpen, setIsOpen] = useState(false);
   const [canShare, setShareable] = useState(true);
   const DATE = new Date(headline.created_at);
   // const emojie = headline.emos;
-  const sourceAbout = AllNewsSources.get(headline.source)?.about;
   const sourceURL =
     AllNewsSources.get(headline.source)?.url + '?utm_source=nooze.news';
   const sourceName = AllNewsSources.get(headline.source)?.name;
   const emos = AllNewsSources.get(headline.source)?.emos;
-  const est = AllNewsSources.get(headline.source)?.est;
 
   const cardBorders = {
     video: '#ff0000',
     audio: '#570f8a',
     article: '#99ccff',
-  }
+  };
 
-  const cardBorder = cardBorders[headline.media_type as keyof typeof cardBorders];
+  const cardBorder =
+    cardBorders[headline.media_type as keyof typeof cardBorders];
 
   const cardBackgrounds = {
     video: isDark ? '#4c0000' : '#ffe6e6',
     audio: isDark ? '#2e004f' : '#f4e1f7',
     article: isDark ? '#1a3a5f' : '#e6f2ff',
-  }
+  };
 
-  const cardBackground = cardBackgrounds[headline.media_type as keyof typeof cardBackgrounds];
+  const cardBackground =
+    cardBackgrounds[headline.media_type as keyof typeof cardBackgrounds];
 
   const headlineColors = {
     video: isDark ? theme?.colors.text.value : theme?.colors.red900.value,
     audio: isDark ? theme?.colors.text.value : theme?.colors.purple900.value,
     article: isDark ? theme?.colors.text.value : theme?.colors.blue900.value,
-  }
-
-  const headlineColor = headlineColors[headline.media_type as keyof typeof headlineColors];
-
-  const mediaTypeIcons = {
-    video: <Link href="https://www.youtube.com?utm_source=nooze.news" target='_blank' onClick={() => powered('youtube')} ><Image src={youTubeImg} alt="Powered by YouTube" width={50} /></Link>,
-    audio: <Link href="https://www.podchaser.com?utm_source=nooze.news" target='_blank' onClick={() => powered('podchaser')} ><Image src={isDark ? podchaserDarkModeImg : podchaserLightModeImg} alt="Powered by Podchaser" width={200} /></Link>,
-    image: '📸',
-    article: '📰',
   };
+
+  const headlineColor =
+    headlineColors[headline.media_type as keyof typeof headlineColors];
 
   const toggleLike = async () => {
     setLikeLoading(true);
@@ -192,35 +179,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     }
   };
 
-  const powered = async (by: string) => {
-    try {
-      fetch(`/api/fast/react?id=${by}&action=powered&reaction=false`, {
-        method: 'POST',
-      });
-    } catch (_error) {
-      // do nothing
-    }
-  };
-
-  function calculateFontSize(text: string, baseSize = 38): number {
-    const reductionFactor = 0.5;
-
-    let newSize = baseSize - text.length * reductionFactor;
-
-    const minimumSize = 12;
-    if (newSize < minimumSize) {
-      newSize = minimumSize;
-    }
-    return newSize;
-  }
-
-  const infoHandler = (open: boolean) => {
-    setIsOpen(open);
-    if (open) {
-      trackClicks('info');
-    }
-  };
-
   const trackClicks = (
     action:
       | 'like'
@@ -250,22 +208,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     headline.link +
     '?utm_source=nooze.news';
 
-  function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
-
-  function getRandomGradient() {
-    const color1 = getRandomColor();
-    const color2 = getRandomColor();
-    return `45deg, ${color1} -20%, ${color2} 100%`;
-  }
-  const gradient = getRandomGradient();
-
   return (
     <Card
       isHoverable
@@ -288,117 +230,45 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         e.currentTarget.style.transform = 'translateY(0)';
         e.currentTarget.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
       }}
-    // className={`${headline.media_type}-bg`}
     >
       <Card.Header
         style={{
           display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
+          justifyContent: 'space-between', // Aligns content to the right
+          alignItems: 'center', // Vertically centers the content
           padding: '0',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Popover isOpen={isOpen} onOpenChange={(open) => infoHandler(open)}>
-            <Popover.Trigger>
-              <Text
-                size={36}
-                role="button"
-                style={{
-                  cursor: 'pointer',
-                  color: theme?.colors.primary.value,
-                }}
-                aria-expanded={isOpen ? 'true' : 'false'}
-                aria-label="Information on news source"
-              >
-                {emos?.[1]}
-              </Text>
-            </Popover.Trigger>
-            <Popover.Content style={{ padding: '16px 8px' }}>
-              <Grid.Container
-                className="user-twitter-card__container"
-                style={{
-                  maxWidth: '270px',
-                  borderRadius: '8px',
-                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-                }}
-              >
-                <Row justify="space-around" align="center">
-                  <a href={sourceURL} target="_blank" rel="noreferrer">
-                    <Text
-                      h2
-                      size={calculateFontSize(sourceName ?? '', 24)}
-                      weight="bold"
-                      style={{
-                        fontFamily: '"Arial", sans-serif',
-                        color: theme?.colors.text.value,
-                      }}
-                    >
-                      {emos?.[0]}&nbsp;{sourceName ?? ''}&nbsp;{emos?.[1]}
-                    </Text>
-                  </a>
-                </Row>
-                <Grid.Container className="user-twitter-card__username-container">
-                  <Grid xs={12}>
-                    <Text
-                      className="user-twitter-card__text"
-                      size={14}
-                      style={{ marginTop: '4px', color: '#888888' }}
-                    >
-                      {sourceAbout}
-                    </Text>
-                  </Grid>
-                </Grid.Container>
-                <Grid.Container
-                  className="user-twitter-card__metrics-container"
-                  justify="flex-start"
-                  alignContent="center"
-                >
-                  <Row justify="space-around" align="stretch">
-                    <Col span={8}>
-                      <Text
-                        className="user-twitter-card__text"
-                        size={18}
-                        style={{ color: '#888888' }}
-                      >
-                        Since&nbsp;
-                        <Text
-                          b
-                          style={{ color: theme?.colors.primary.value }}
-                          className="user-twitter-card__text"
-                          size={18}
-                        >
-                          {est}
-                        </Text>
-                      </Text>
-                    </Col>
-                    <Col span={4}>
-                      <Row>
-                        <Link
-                          onClick={(_event) => trackClicks('source')}
-                          href={`/source/${sourceName
-                            ?.toLowerCase()
-                            .replaceAll(' ', '-')}`}
-                        >
-                          <Badge color="primary" size="lg">
-                            View All
-                          </Badge>
-                        </Link>
-                      </Row>
-                    </Col>
-                  </Row>
-                </Grid.Container>
-              </Grid.Container>
-            </Popover.Content>
-          </Popover>
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: '1' }}>
           <Text
-            size={36}
-            style={{ marginLeft: '16px', color: theme?.colors.primary.value }}
+            size={20}
+            weight="bold"
+            style={{ color: theme?.colors.text.value }}
           >
-            {mediaTypeIcons[headline.media_type as keyof typeof mediaTypeIcons]}
+            {emos?.[1]}
           </Text>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Link
+            onClick={(_event) => trackClicks('source')}
+            href={sourceURL}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              flex: '1',
+            }}
+          >
+            <Text
+              size={20}
+              weight="bold"
+              style={{ color: theme?.colors.text.value }}
+            >
+              {sourceName ?? ''}
+            </Text>
+          </Link>
         </div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <Tooltip content={DATE.toLocaleString()}>
@@ -418,42 +288,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           </Tooltip>
         </div>
       </Card.Header>
-      <Card.Header
-        style={{
-          display: 'flex',
-          justifyContent: 'flex-end', // Aligns content to the right
-          alignItems: 'center',       // Vertically centers the content
-          padding: '0',
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Link
-            onClick={(_event) => trackClicks('source')}
-            href={sourceURL}
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              display: 'flex',
-              alignItems: 'center', // Ensures the content within Link is centered
-              textDecoration: 'none',
-              color: theme?.colors.primary.value,
-              marginRight: '10px',
-            }}
-          >
-            <Text
-              size={20}
-              weight="bold"
-              css={{
-                textGradient: gradient,
-              }}
-              style={{ color: theme?.colors.text.value }}
-            >
-              {sourceName ?? ''}
-            </Text>
-          </Link>
-        </div>
-      </Card.Header>
-      <Card.Body style={{ padding: '16px 0', marginTop: '-24px' }}>
+      <Card.Body style={{ padding: '16px 0' }}>
         <Link
           onClick={(_event) => trackClicks('link')}
           href={headline.link + '?utm_source=nooze.news'}
@@ -513,7 +348,9 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
                 rel="noreferrer"
                 title="Share on X"
               >
-                <Tooltip content={'Browser share not supported. Defaulting to X.'}>
+                <Tooltip
+                  content={'Browser share not supported. Defaulting to X.'}
+                >
                   <X />
                 </Tooltip>
               </Link>
@@ -523,6 +360,6 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
       </Card.Footer>
     </Card>
   );
-}
+};
 
 export default HeadlineCard;
