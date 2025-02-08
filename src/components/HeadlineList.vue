@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { onMounted, onServerPrefetch } from 'vue';
 import { useHeadlines } from '@/composables/useHeadlines';
+// import HeadlineCard from "./HeadlineCard.vue";
+import MasonryGrid from "./MasonryGrid.vue";
 
 const { headlines, loading, getHeadlinesSSR, getHeadlinesCSR } = useHeadlines();
 
@@ -15,12 +17,11 @@ onMounted(() => {
 
 <template>
   <div>
-    <h2>Latest News</h2>
+    <h2><i>nooze</i></h2>
     <div v-if="loading">Loading...</div>
-    <ul v-else>
-      <li v-for="headline in headlines" :key="headline.id">
-        <a :href="headline.link" target="_blank">{{ headline.headline }}</a>
-      </li>
-    </ul>
+    <div v-else>
+      <!-- HeadlineCard v-for="headline in headlines" :key="headline.id" :headline="headline" / -->
+      <MasonryGrid :headlines="headlines" />
+    </div>
   </div>
 </template>

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import HeadlineList from './components/HeadlineList.vue'
 </script>
 
 <template>
   <Suspense>
     <template #default>
-      <HelloWorld />
+      <HeadlineList />
     </template>
     <template #fallback>
       <div>Loading...</div>

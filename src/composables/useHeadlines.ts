@@ -1,13 +1,15 @@
 import { ref, computed } from "vue";
 import { useStorage, isClient } from "@vueuse/core";
-import type { Headline } from "../../types/Headline";
-import type { Countries } from "../../types/Countries";
+import type { Headline } from "@/../types/Headline";
+import type { Countries } from "@/../types/Countries";
 
 const supabaseURL = import.meta.env.VITE_SUPABASE_URL;
 const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
 
+const pageSizeLimit = 48;
+
 if (!supabaseURL || !supabaseKey) {
-  console.error('Supabase environment variables are missing!');
+  console.error("Supabase environment variables are missing!");
 }
 
 // 🟢 In-memory session cache (prevents duplicate requests)
@@ -67,29 +69,29 @@ export function useHeadlines() {
     }
   }
 
-  async function getHeadlinesSSR(lastSeen: string | null = null, limit = 8) {
+  async function getHeadlinesSSR(lastSeen: string | null = null, limit = pageSizeLimit) {
     if (typeof window !== "undefined") return; // ✅ Runs only on the server
     headlines.value = await fetchFromSupabase<Headline>("get_paginated_results_v2", { page_size: limit, last_seen: lastSeen }, "get_headlines");
   }
 
-  async function getHeadlinesCSR(lastSeen: string | null = null, limit = 8) {
+  async function getHeadlinesCSR(lastSeen: string | null = null, limit = pageSizeLimit) {
     if (!isClient) return; // ✅ Runs only in the client
     headlines.value = await fetchFromSupabase<Headline>("get_paginated_results_v2", { page_size: limit, last_seen: lastSeen }, "get_headlines");
   }
 
-  async function getHeadlinesCountry(lastSeen: string | null = null, limit = 8, country: Countries) {
+  async function getHeadlinesCountry(lastSeen: string | null = null, limit = pageSizeLimit, country: Countries) {
     headlines.value = await fetchFromSupabase<Headline>("get_paginated_results_v3", { page_size: limit, last_seen: lastSeen, country_filter: [country] }, `country_${country}`);
   }
 
-  async function getHeadlinesCountrySource(lastSeen: string | null = null, limit = 8, country: Countries, sources: Array<string> | null = null) {
+  async function getHeadlinesCountrySource(lastSeen: string | null = null, limit = pageSizeLimit, country: Countries, sources: Array<string> | null = null) {
     headlines.value = await fetchFromSupabase<Headline>("get_paginated_results_country_sources_v2", { page_size: limit, last_seen: lastSeen, country_filter: country, source_filter: sources }, `country_${country}_sources`);
   }
 
-  async function getSearchTerm(searchTerm: string, limit = 8, country: Array<Countries> | null = null, sources: Array<string> | null = null, mediaTypes: Array<"article" | "video" | "audio"> | null = null, lastSeen: string | null = null) {
+  async function getSearchTerm(searchTerm: string, limit = pageSizeLimit, country: Array<Countries> | null = null, sources: Array<string> | null = null, mediaTypes: Array<"article" | "video" | "audio"> | null = null, lastSeen: string | null = null) {
     headlines.value = await fetchFromSupabase<Headline>("get_search_term_v3", { page_size: limit, last_seen: lastSeen, country_filter: country, source_filter: sources, media_type_filter: mediaTypes, search_term: searchTerm }, `search_${searchTerm}`);
   }
 
-  async function getHeadlinesWithPreferredCountries(lastSeen: string | null = null, limit = 8, countries: Array<Countries> | null = null, languages: Array<string> | null = null, sources: Array<string> | null = null, mediaTypes: Array<string> | null = null) {
+  async function getHeadlinesWithPreferredCountries(lastSeen: string | null = null, limit = pageSizeLimit, countries: Array<Countries> | null = null, languages: Array<string> | null = null, sources: Array<string> | null = null, mediaTypes: Array<string> | null = null) {
     headlines.value = await fetchFromSupabase<Headline>("get_paginated_results_v3", { page_size: limit, last_seen: lastSeen, country_filter: countries, lang_filter: languages, source_filter: sources, media_type_filter: mediaTypes }, "preferred_countries");
   }
 
