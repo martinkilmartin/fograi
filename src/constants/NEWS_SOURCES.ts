@@ -9482,6 +9482,17 @@ export const ZWNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'ZW_PZIM',
+    {
+      name: 'PaZimbabwe',
+      url: 'https://www.pazimbabwe.com/',
+      est: 2014,
+      about: 'News on Business, Entertainment, Sports, Technology, and Health & Fitness.',
+      emos: ['📰', '🇿🇼'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const ZWNewsSourcesLength = ZWNewsSources.size;
 
