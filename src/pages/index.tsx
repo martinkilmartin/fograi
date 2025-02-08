@@ -17,7 +17,10 @@ interface HomePageProps {
   numberOfColumns: number;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ initialData, numberOfColumns }) => {
+const HomePage: React.FC<HomePageProps> = ({
+  initialData,
+  numberOfColumns,
+}) => {
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
   const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
   const isHD = useMediaQuery({
@@ -202,8 +205,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     limit = 32;
   } else if (is8K) {
     limit = 48;
-  }
-  else if (isDeskTop) {
+  } else if (isDeskTop) {
     limit = 16;
   }
 
