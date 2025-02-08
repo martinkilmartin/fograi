@@ -14,11 +14,22 @@ import { GetServerSideProps } from 'next';
 
 interface HomePageProps {
   initialData: InfiniteData<Headline[]>;
+  numberOfColumns: number;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
+const HomePage: React.FC<HomePageProps> = ({ initialData, numberOfColumns }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
   const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
+  const isHD = useMediaQuery({
+    query: '(min-width: 1920px) and (max-width: 2560px)',
+  });
+  const is4K = useMediaQuery({
+    query: '(min-width: 3840px) and (max-width: 5120px)',
+  });
+  const is5K = useMediaQuery({
+    query: '(min-width: 5120px) and (max-width: 7680px)',
+  });
+  const is8K = useMediaQuery({ query: '(min-width: 7680px)' });
 
   let limit: number;
 
@@ -26,8 +37,16 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
     limit = 3;
   } else if (isTablet) {
     limit = 6;
-  } else {
+  } else if (isHD) {
+    limit = 8;
+  } else if (is4K) {
+    limit = 10;
+  } else if (is5K) {
     limit = 12;
+  } else if (is8K) {
+    limit = 16;
+  } else {
+    limit = 12; // Default for Full HD
   }
 
   let favCountries: string | any[] | null | undefined = undefined;
@@ -46,15 +65,26 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
     useInfiniteQuery<Headline[], Error>(
       'headlines',
       ({ pageParam = null }) =>
-        ((favCountries && favCountries !== '[]') || (favSources && favSources !== '[]') || (favMediaTypes && favMediaTypes !== '[]') || (favLanguages && favLanguages !== '[]'))
+        (favCountries && favCountries !== '[]') ||
+        (favSources && favSources !== '[]') ||
+        (favMediaTypes && favMediaTypes !== '[]') ||
+        (favLanguages && favLanguages !== '[]')
           ? getHeadlinesWithPreferredCountries(
-            pageParam,
-            limit,
-            favCountries && favCountries !== '[]' ? JSON.parse(favCountries as string) : null,
-            favLanguages && favLanguages !== '[]' ? JSON.parse(favLanguages as string) : null,
-            favSources && favSources !== '[]' ? JSON.parse(favSources as string) : null,
-            favMediaTypes && favMediaTypes !== '[]' ? JSON.parse(favMediaTypes as string) : null
-          )
+              pageParam,
+              limit,
+              favCountries && favCountries !== '[]'
+                ? JSON.parse(favCountries as string)
+                : null,
+              favLanguages && favLanguages !== '[]'
+                ? JSON.parse(favLanguages as string)
+                : null,
+              favSources && favSources !== '[]'
+                ? JSON.parse(favSources as string)
+                : null,
+              favMediaTypes && favMediaTypes !== '[]'
+                ? JSON.parse(favMediaTypes as string)
+                : null,
+            )
           : getHeadlines(pageParam, limit),
       {
         getNextPageParam: (lastPage, _pages) =>
@@ -72,8 +102,8 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
         hasNextPage &&
         loadMoreRef.current &&
         window.innerHeight + window.scrollY >=
-        (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) *
-        0.5
+          (loadMoreRef.current.offsetTop + loadMoreRef.current.offsetHeight) *
+            0.5
       ) {
         fetchNextPage();
       }
@@ -111,6 +141,7 @@ const HomePage: React.FC<HomePageProps> = ({ initialData }) => {
         loading={status === 'loading'}
         fetching={isFetchingNextPage}
         error={status === 'error' ? new Error() : null}
+        numberOfColumns={numberOfColumns}
       />
       <div ref={loadMoreRef} />
     </Page>
@@ -127,16 +158,47 @@ const isTabletUserAgent = (userAgent: string): boolean => {
   return /ipad|tablet|tab|kindle|playbook|silk/i.test(userAgent);
 };
 
+const is4KUserAgent = (userAgent: string): boolean => {
+  return /4k|ultrahd|uhd/i.test(userAgent);
+};
+
+const is5KUserAgent = (userAgent: string): boolean => {
+  return /5k/i.test(userAgent);
+};
+
+const is8KUserAgent = (userAgent: string): boolean => {
+  return /8k/i.test(userAgent);
+};
+
+const isHDUserAgent = (userAgent: string): boolean => {
+  return /hd|1920x1080|1080p/i.test(userAgent);
+};
+
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const userAgent = context.req.headers['user-agent'] || '';
   const isMobile = isMobileUserAgent(userAgent);
   const isTablet = isTabletUserAgent(userAgent);
-  let limit = 8; // default for desktop
+  const is4K = is4KUserAgent(userAgent);
+  const is5K = is5KUserAgent(userAgent);
+  const is8K = is8KUserAgent(userAgent);
+  const isHD = isHDUserAgent(userAgent);
+
+  let limit = 8; // Default for desktop (Full HD)
+
   if (isMobile) {
-    limit = 2;
-  } else if (isTablet) {
     limit = 4;
+  } else if (isTablet) {
+    limit = 8;
+  } else if (isHD) {
+    limit = 16;
+  } else if (is4K) {
+    limit = 24;
+  } else if (is5K) {
+    limit = 32;
+  } else if (is8K) {
+    limit = 48;
   }
+
   const initialHeadlines = await getHeadlines(null, limit);
 
   return {
@@ -145,6 +207,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         pages: [initialHeadlines],
         pageParams: [null],
       },
+      numberOfColumns: limit / 4,
     },
   };
 };
