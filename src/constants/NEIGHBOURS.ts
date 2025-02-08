@@ -2,7 +2,7 @@ import { Countries as CountryTypes } from '../types/countries';
 
 export const NEIGHBOURS = new Map<CountryTypes, Array<CountryTypes | ''>>([
   ['oz', ['nz', 'to']],
-  ['ca', ['us']],
+  ['ca', ['']],
   ['in', ['pk']],
   ['ie', ['uk']],
   ['nz', ['oz', 'to']],
