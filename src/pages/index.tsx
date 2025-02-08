@@ -1,25 +1,28 @@
-import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
-import { Page } from '@layouts/Page';
+import { GetServerSideProps } from 'next';
 import React, { useEffect, useRef } from 'react';
 import { InfiniteData, useInfiniteQuery } from 'react-query';
 import { useMediaQuery } from 'react-responsive';
 import { Text } from '@nextui-org/react';
+import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
+import { COUNTRIES } from '@constants/COUNTRIES';
+import { Page } from '@layouts/Page';
 import {
   getHeadlines,
   getHeadlinesWithPreferredCountries,
 } from '@lib/getHeadlines';
-import { HeadlineList } from '../components/Headlines';
-import { Headline } from '../types';
-import { GetServerSideProps } from 'next';
+import { HeadlineList } from '@components/Headlines';
+import { Headline, Countries as CountriesType } from '../types';
 
 interface HomePageProps {
   initialData: InfiniteData<Headline[]>;
   numberOfColumns: number;
+  country: CountriesType | null;
 }
 
 const HomePage: React.FC<HomePageProps> = ({
   initialData,
   numberOfColumns,
+  country,
 }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
   const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
@@ -81,12 +84,15 @@ const HomePage: React.FC<HomePageProps> = ({
         (favCountries && favCountries !== '[]') ||
         (favSources && favSources !== '[]') ||
         (favMediaTypes && favMediaTypes !== '[]') ||
-        (favLanguages && favLanguages !== '[]')
+        (favLanguages && favLanguages !== '[]') ||
+        country
           ? getHeadlinesWithPreferredCountries(
               pageParam,
               limit,
               favCountries && favCountries !== '[]'
                 ? JSON.parse(favCountries as string)
+                : country
+                ? [country.toLowerCase()]
                 : null,
               favLanguages && favLanguages !== '[]'
                 ? JSON.parse(favLanguages as string)
@@ -219,7 +225,20 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     limit = 16;
   }
 
-  const initialHeadlines = await getHeadlines(null, limit);
+  let userCountry: CountriesType | null = null;
+  let country = context.req.headers['x-vercel-ip-country'] ?? null;
+  if (country === 'AU') {
+    country = 'oz';
+  }
+  if (typeof country === 'string') {
+    const countryToSearchIsEnabled = country.toLowerCase() as CountriesType;
+    if (COUNTRIES.get(countryToSearchIsEnabled)) {
+      userCountry = countryToSearchIsEnabled;
+    }
+  }
+  const initialHeadlines = userCountry
+    ? await getHeadlinesWithPreferredCountries(null, limit, [userCountry])
+    : await getHeadlines(null, limit);
 
   return {
     props: {
@@ -228,6 +247,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         pageParams: [null],
       },
       numberOfColumns: limit / 4,
+      country: userCountry,
     },
   };
 };
