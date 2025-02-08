@@ -4,7 +4,7 @@ import { InfiniteData, useInfiniteQuery } from 'react-query';
 import { useMediaQuery } from 'react-responsive';
 import { Text } from '@nextui-org/react';
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
-import { COUNTRIES } from '@constants/COUNTRIES';
+import { NEIGHBOURS } from '@constants/NEIGHBOURS';
 import { Page } from '@layouts/Page';
 import {
   getHeadlines,
@@ -16,13 +16,13 @@ import { Headline, Countries as CountriesType } from '../types';
 interface HomePageProps {
   initialData: InfiniteData<Headline[]>;
   numberOfColumns: number;
-  country: CountriesType | null;
+  friendsAndNeighbours: Array<CountriesType> | null;
 }
 
 const HomePage: React.FC<HomePageProps> = ({
   initialData,
   numberOfColumns,
-  country,
+  friendsAndNeighbours,
 }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
   const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
@@ -85,14 +85,14 @@ const HomePage: React.FC<HomePageProps> = ({
         (favSources && favSources !== '[]') ||
         (favMediaTypes && favMediaTypes !== '[]') ||
         (favLanguages && favLanguages !== '[]') ||
-        country
+        friendsAndNeighbours
           ? getHeadlinesWithPreferredCountries(
               pageParam,
               limit,
               favCountries && favCountries !== '[]'
                 ? JSON.parse(favCountries as string)
-                : country
-                ? [country.toLowerCase()]
+                : friendsAndNeighbours
+                ? friendsAndNeighbours
                 : null,
               favLanguages && favLanguages !== '[]'
                 ? JSON.parse(favLanguages as string)
@@ -225,19 +225,24 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     limit = 16;
   }
 
-  let userCountry: CountriesType | null = null;
-  let country = context.req.headers['x-vercel-ip-country'] ?? null;
+  let friendsAndNeighbours: Array<CountriesType> | null = null;
+  let country = context.req.headers['x-vercel-ip-country'] ?? "UK";
   if (country === 'AU') {
     country = 'oz';
   }
   if (typeof country === 'string') {
     const countryToSearchIsEnabled = country.toLowerCase() as CountriesType;
-    if (COUNTRIES.get(countryToSearchIsEnabled)) {
-      userCountry = countryToSearchIsEnabled;
+    const foundNeigbours = NEIGHBOURS.get(countryToSearchIsEnabled);
+    if (foundNeigbours) {
+      friendsAndNeighbours = [countryToSearchIsEnabled, ...foundNeigbours];
     }
   }
-  const initialHeadlines = userCountry
-    ? await getHeadlinesWithPreferredCountries(null, limit, [userCountry])
+  const initialHeadlines = friendsAndNeighbours
+    ? await getHeadlinesWithPreferredCountries(
+        null,
+        limit,
+        friendsAndNeighbours,
+      )
     : await getHeadlines(null, limit);
 
   return {
@@ -247,7 +252,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         pageParams: [null],
       },
       numberOfColumns: limit / 4,
-      country: userCountry,
+      friendsAndNeighbours: friendsAndNeighbours,
     },
   };
 };
