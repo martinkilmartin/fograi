@@ -226,7 +226,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   }
 
   let friendsAndNeighbours: Array<CountriesType> | null = null;
-  let country = context.req.headers['x-vercel-ip-country'] ?? "UK";
+  let country = context.req.headers['x-vercel-ip-country'] ?? null;
   if (country === 'AU') {
     country = 'oz';
   }
@@ -234,7 +234,10 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     const countryToSearchIsEnabled = country.toLowerCase() as CountriesType;
     const foundNeigbours = NEIGHBOURS.get(countryToSearchIsEnabled);
     if (foundNeigbours) {
-      friendsAndNeighbours = [countryToSearchIsEnabled, ...foundNeigbours];
+      const nonEmptyNeighbours = foundNeigbours.filter(
+        (fn) => fn !== '',
+      ) as Array<CountriesType>;
+      friendsAndNeighbours = [countryToSearchIsEnabled, ...nonEmptyNeighbours];
     }
   }
   const initialHeadlines = friendsAndNeighbours
