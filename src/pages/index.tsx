@@ -23,8 +23,14 @@ const HomePage: React.FC<HomePageProps> = ({
 }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
   const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 992px) and (max-width: 1920px)',
+  });
   const isHD = useMediaQuery({
     query: '(min-width: 1920px) and (max-width: 2560px)',
+  });
+  const is3K = useMediaQuery({
+    query: '(min-width: 2560px) and (max-width: 3840px)',
   });
   const is4K = useMediaQuery({
     query: '(min-width: 3840px) and (max-width: 5120px)',
@@ -34,22 +40,26 @@ const HomePage: React.FC<HomePageProps> = ({
   });
   const is8K = useMediaQuery({ query: '(min-width: 7680px)' });
 
-  let limit: number;
+  let limit = 4;
 
   if (isMobile) {
-    limit = 3;
+    limit = 4;
   } else if (isTablet) {
-    limit = 6;
-  } else if (isHD) {
     limit = 8;
-  } else if (is4K) {
-    limit = 10;
-  } else if (is5K) {
+  } else if (isDesktop) {
     limit = 12;
-  } else if (is8K) {
+  } else if (isHD) {
     limit = 16;
+  } else if (is3K) {
+    limit = 20;
+  } else if (is4K) {
+    limit = 24;
+  } else if (is5K) {
+    limit = 32;
+  } else if (is8K) {
+    limit = 48;
   } else {
-    limit = 12; // Default for Full HD
+    limit = 12;
   }
 
   let favCountries: string | any[] | null | undefined = undefined;
