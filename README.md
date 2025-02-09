@@ -1,6 +1,6 @@
-# fogr.ai
+# nooze.news
 
-Website for fogr.ai / nooze.news
+Website for nooze.news
 
 ## Run dev build & start dev server
 

@@ -198,4 +198,6 @@ export const COUNTRIES_BI_MAP = new Map<CountryKeys, Countries>([
   ['namibia', 'na'], // Namibia
   ['angola', 'ao'], // Angola
   ['mozambique', 'mz'], // Mozambique
+  ['israel', 'il'], // Israel
+  ['palestinian-territories', 'ps'], // Palestinian Territories
 ]);

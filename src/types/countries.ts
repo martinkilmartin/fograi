@@ -217,6 +217,7 @@ export type Countries =
   | 'ki' // Kiribati
   | 'nr' // Nauru
   | 'tv' // Tuvalu
+  | 'ps' // Palestinian Territories
 
 export type CountryKeys =
   | 'canada'
@@ -437,3 +438,4 @@ export type CountryKeys =
   | 'kiribati' // Kiribati
   | 'nauru' // Nauru
   | 'tuvalu' // Tuvalu
+  | 'palestinian-territories' // Palestine

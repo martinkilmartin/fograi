@@ -166,6 +166,7 @@ export const flags = new Map<string, Flagtypes>([
   ['id', '🇮🇩'], // Indonesia
   ['ck', '🇨🇰'], // Cook Islands
   ['il', '🇮🇱'], // Israel
+  ['ps', '🇵🇸'], // Palestinian Territories
   ['bt', '🇧🇹'], // Bhutan
   ['hr', '🇭🇷'], // Croatia
   ['cy', '🇨🇾'], // Cyprus

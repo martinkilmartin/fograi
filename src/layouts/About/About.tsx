@@ -186,21 +186,6 @@ const About = (): JSX.Element => {
           Now.
         </Text>
       </Grid.Container>
-      <Grid.Container justify="center" gap={1}>
-        {Array.from(flags.entries()).map((f) => (
-          <Grid key={f[0]}>
-            <Tooltip content={CSM.get(f[0])}>
-              <Link
-                href={`/country/${COUNTRIES.get(f[0] as Countries)
-                  ?.toLowerCase()
-                  .replaceAll(' ', '-')}`}
-              >
-                <Text h2>{f[1]}</Text>
-              </Link>
-            </Tooltip>
-          </Grid>
-        ))}
-      </Grid.Container>
       <Grid.Container justify="center">
         <Text
           size={24}
@@ -214,7 +199,9 @@ const About = (): JSX.Element => {
         </Text>
       </Grid.Container>
       <Grid.Container justify="center">
-        <Text>See the latest main headline from each news source.</Text>
+        <Text>
+          Get the latest <em>main headline</em> from a broad range of sources.
+        </Text>
       </Grid.Container>
       <Grid.Container justify="center">
         <Text
@@ -225,12 +212,14 @@ const About = (): JSX.Element => {
             textShadow: '2px 2px 2px rgba(0,0,0,0.2)',
           }}
         >
-          <Tooltip content={ALL_SIZES}>Hundreds of global sources.</Tooltip>
+          Global. Diverse. Non-stop.
         </Text>
       </Grid.Container>
       <Grid.Container justify="center">
         <Text>
-          Find the latest and breaking news with 24/7 worldwide coverage.
+          Discover breaking news, local updates, industry insights, and cultural
+          stories from <Tooltip content={ALL_SIZES}>hundreds</Tooltip> of
+          outlets and independent journalists worldwide.
         </Text>
       </Grid.Container>
       <Grid.Container justify="center">
@@ -245,7 +234,9 @@ const About = (): JSX.Element => {
           Stay informed.
         </Text>
         <Grid.Container justify="center">
-          <Text>Know everything that is going on, now.</Text>
+          <Text>
+            Be the first to know what&apos;s happening everywhere—right now.
+          </Text>
         </Grid.Container>
       </Grid.Container>
       <Grid.Container justify="center">
@@ -272,23 +263,44 @@ const About = (): JSX.Element => {
           The future of journalism is at stake. Support real news from real
           people.
         </Text>
-        <Grid.Container justify="center" style={{ marginTop: '20px' }}>
-          <Link
-            href="/contact"
-            style={{
-              padding: '10px 20px',
-              background: '#0072F5',
-              color: 'white',
-              borderRadius: '5px',
-              textDecoration: 'none',
-              transition: 'background 0.3s',
-            }}
-            onMouseOver={(e) => (e.currentTarget.style.background = '#D71E1F')}
-            onMouseOut={(e) => (e.currentTarget.style.background = '#0072F5')}
-          >
-            <b>Contact Us</b>
-          </Link>
-        </Grid.Container>
+      </Grid.Container>
+      <Grid.Container justify="center" style={{ marginTop: '20px' }}>
+        <Link
+          href="/contact"
+          style={{
+            padding: '10px 20px',
+            background: '#0072F5',
+            color: 'white',
+            borderRadius: '5px',
+            textDecoration: 'none',
+            transition: 'background 0.3s',
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.background = '#D71E1F')}
+          onMouseOut={(e) => (e.currentTarget.style.background = '#0072F5')}
+        >
+          <b>Contact Us</b>
+        </Link>
+      </Grid.Container>
+      <Grid.Container justify="center" gap={1}>
+        {Array.from(flags.entries()).map((f) => (
+          <Grid key={f[0]}>
+            {CSM.get(f[0]) ? (
+              <Tooltip content={CSM.get(f[0]) + ' from ' + f[0]}>
+                <Link
+                  href={`/country/${COUNTRIES.get(f[0] as Countries)
+                    ?.toLowerCase()
+                    .replaceAll(' ', '-')}`}
+                >
+                  <Text h2>{f[1]}</Text>
+                </Link>
+              </Tooltip>
+            ) : (
+              <Tooltip content={f[0] + ' is coming soon . . .'}>
+                <Text h2>{f[1]}</Text>
+              </Tooltip>
+            )}
+          </Grid>
+        ))}
       </Grid.Container>
     </Container>
   );

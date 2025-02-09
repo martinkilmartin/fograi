@@ -64,6 +64,7 @@ export const COUNTRIES = new Map<CountryTypes, string>([
   // ['sa', 'Saudi Arabia'],
   ['ae', 'United Arab Emirates'],
   ['il', 'Israel'],
+  ['ps', 'Palestinian Territories'],
   // ['eg', 'Egypt'],
   // ['ma', 'Morocco'],
   // ['tn', 'Tunisia'],
