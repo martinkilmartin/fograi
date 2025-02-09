@@ -6,10 +6,73 @@ import {
   ReactNode,
   ReactPortal,
   useState,
+  useEffect,
 } from 'react';
 import { Button } from '@nextui-org/react';
+import { ADJACENTS } from '@constants/ADJACENTS';
+import { flags } from '@constants/FLAGS';
+import { LangsMap } from '@constants/LANGS';
+import { Countries as CountryTypes } from '../../types/countries';
 
-const ActionBar = () => {
+const AnimatedButton = ({
+  action,
+  secondaryActions,
+  onClick,
+}: {
+  action: { label: ActionLabel; icon: string };
+  secondaryActions: string[];
+  onClick: () => void;
+}) => {
+  const [displayIcon, setDisplayIcon] = useState(action.icon);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout | null = null;
+    let index = 0;
+    const cycleDurations = [3000, 6000, 9000]; // Cycles with increasing intervals
+    let cycleIndex = 0;
+
+    const startCycle = () => {
+      if (cycleIndex >= cycleDurations.length) return; // Stop after 3 cycles
+
+      setTimeout(() => {
+        interval = setInterval(() => {
+          index = (index + 1) % (secondaryActions.length + 1);
+          setDisplayIcon(index === secondaryActions.length ? action.icon : secondaryActions[index]);
+          if (index === secondaryActions.length) {
+            clearInterval(interval!);
+            cycleIndex++;
+            startCycle();
+          }
+        }, 1500);
+      }, cycleDurations[cycleIndex]);
+    };
+
+    startCycle();
+
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [action.icon, secondaryActions]);
+
+  return (
+    <Button auto light onClick={onClick}>
+      {displayIcon}
+    </Button>
+  );
+};
+
+interface ActionBarProps {
+  userCountry?: CountryTypes;
+}
+
+type ActionLabel =
+  | 'Media Types'
+  | 'Countries'
+  | 'Languages'
+  | 'Categories'
+  | 'Search';
+
+const ActionBar = ({ userCountry }: ActionBarProps) => {
   const actions: { label: ActionLabel; icon: string }[] = [
     { label: 'Media Types', icon: '🎥' },
     { label: 'Countries', icon: '🌍' },
@@ -18,17 +81,19 @@ const ActionBar = () => {
     { label: 'Search', icon: '🔍' },
   ];
 
-  type ActionLabel =
-    | 'Media Types'
-    | 'Countries'
-    | 'Languages'
-    | 'Categories'
-    | 'Search';
-
   const secondaryActions: Record<ActionLabel, string[]> = {
     'Media Types': ['🎬', '📺', '🎵', '🎮'],
-    Countries: ['🇨🇦', '🇺🇸', '🇬🇧', '🇮🇳'],
-    Languages: ['🇬🇧', '🇫🇷', '🇪🇸', '🇩🇪'],
+    Countries: (userCountry &&
+      ADJACENTS.get(userCountry)?.countries.map((c) => flags.get(c) ?? c)) ?? [
+      '🇨🇦',
+      '🇺🇸',
+      '🇬🇧',
+      '🇮🇳',
+    ],
+    Languages: (userCountry &&
+      ADJACENTS.get(userCountry)?.langs.map(
+        (l) => LangsMap.get(l)?.icon ?? l,
+      )) ?? ['🇬🇧', '🇫🇷', '🇪🇸', '🇩🇪'],
     Categories: ['📖', '🎨', '🏀', '💼'],
     Search: ['🔍', '📅', '🔥'],
   };
@@ -78,14 +143,12 @@ const ActionBar = () => {
       {/* Bottom Button.Group - Main Actions */}
       <Button.Group color="gradient" ghost>
         {actions.map((action, index) => (
-          <Button
+          <AnimatedButton
             key={index}
-            auto
-            light
+            action={action}
+            secondaryActions={secondaryActions[action.label]}
             onClick={() => handleActionClick(action.label)}
-          >
-            {action.icon}
-          </Button>
+          />
         ))}
       </Button.Group>
     </div>

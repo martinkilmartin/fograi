@@ -17,42 +17,42 @@ export const ADJACENTS = new Map<CountryTypes, Adjacents>([
   [
     'ca',
     {
-      countries: ['us', 'uk', 'fr', 'au'],
+      countries: ['us', 'uk', 'fr', 'oz'],
       langs: ['fr', 'pl', 'es', 'de', 'it'],
     },
   ],
   [
     'in',
     {
-      countries: ['pk', 'uk', 'qa', 'au'],
+      countries: ['pk', 'uk', 'qa', 'oz'],
       langs: ['hi', 'gu', 'ur', 'ta', 'bn'],
     },
   ],
   [
     'ie',
     {
-      countries: ['au', 'ca', 'us', 'nz'],
+      countries: ['oz', 'ca', 'us', 'nz'],
       langs: ['ga', 'pl', 'fr', 'es', 'de'],
     },
   ],
   [
     'nz',
     {
-      countries: ['au', 'ca', 'us', 'to'],
+      countries: ['oz', 'ca', 'us', 'to'],
       langs: ['en'],
     },
   ],
   [
     'uk',
     {
-      countries: ['ie', 'us', 'au', 'ca'],
+      countries: ['ie', 'us', 'oz', 'ca'],
       langs: ['ga', 'en', 'pl', 'fr'],
     },
   ],
   [
     'us',
     {
-      countries: ['ca', 'uk', 'au', 'ie'],
+      countries: ['ca', 'uk', 'oz', 'ie'],
       langs: ['en', 'es', 'fr'],
     },
   ],

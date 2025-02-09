@@ -17,12 +17,14 @@ interface HomePageProps {
   initialData: InfiniteData<Headline[]>;
   numberOfColumns: number;
   friendsAndNeighbours: Array<CountriesType> | null;
+  userCountry: CountriesType;
 }
 
 const HomePage: React.FC<HomePageProps> = ({
   initialData,
   numberOfColumns,
   friendsAndNeighbours,
+  userCountry,
 }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
   const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
@@ -146,6 +148,7 @@ const HomePage: React.FC<HomePageProps> = ({
           headlines={allHeadlines}
           fetching={isFetchingNextPage}
           numberOfColumns={numberOfColumns}
+          userCountry={userCountry}
         />
       )}
       <div ref={loadMoreRef} />
@@ -212,12 +215,13 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   }
 
   let friendsAndNeighbours: Array<CountriesType> | null = null;
-  let country = context.req.headers['x-vercel-ip-country'] ?? null;
-  if (country === 'AU') {
-    country = 'oz';
+  let userCountry = context.req.headers['x-vercel-ip-country'] ?? 'CA';
+  if (userCountry === 'AU') {
+    userCountry = 'oz';
   }
-  if (typeof country === 'string') {
-    const countryToSearchIsEnabled = country.toLowerCase() as CountriesType;
+  if (typeof userCountry === 'string') {
+    userCountry = userCountry.toLowerCase();
+    const countryToSearchIsEnabled = userCountry as CountriesType;
     const foundNeigbours = NEIGHBOURS.get(countryToSearchIsEnabled);
     if (foundNeigbours) {
       const nonEmptyNeighbours = foundNeigbours.filter(
@@ -241,7 +245,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         pageParams: [null],
       },
       numberOfColumns: limit / 4,
-      friendsAndNeighbours: friendsAndNeighbours,
+      friendsAndNeighbours,
+      userCountry,
     },
   };
 };
