@@ -46,7 +46,7 @@ const useBreakpointColumns = (numberOfColumns?: number) => {
 const HeadlineList: React.FC<HeadlineListProps> = ({
   headlines,
   fetching,
-  userCountry,
+  //userCountry,
   numberOfColumns,
 }) => {
   const columns = useBreakpointColumns(numberOfColumns);
