@@ -62,7 +62,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
   } else {
     return (
       <>
-        <div style={{ position: 'relative', paddingLeft: '12px' }}>
+        <div style={{ position: 'relative' }}>
           <Masonry
             breakpointCols={breakpointColumnsObj}
             className="my-masonry-grid"

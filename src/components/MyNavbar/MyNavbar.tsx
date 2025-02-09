@@ -56,7 +56,14 @@ export default function MyNavbar(): JSX.Element {
 
   return (
     <>
-      <Navbar isBordered={isDark} shouldHideOnScroll variant="sticky">
+      <Navbar
+        isBordered={isDark}
+        shouldHideOnScroll
+        variant="sticky"
+        style={{
+          backgroundColor: '#f0f0ff',
+        }}
+      >
         <Grid.Container gap={2}>
           <Grid xs={2}>
             <Navbar.Toggle aria-label="toggle navigation" />
@@ -130,7 +137,13 @@ export default function MyNavbar(): JSX.Element {
               </Modal.Header>
               <Modal.Header>
                 <Text id="modal-title" size={18}>
-                  Filters <span style={{ color: 'red' }} onClick={() => clearAllFilters()}>🗑️</span>
+                  Filters{' '}
+                  <span
+                    style={{ color: 'red' }}
+                    onClick={() => clearAllFilters()}
+                  >
+                    🗑️
+                  </span>
                 </Text>
               </Modal.Header>
               <Modal.Body>

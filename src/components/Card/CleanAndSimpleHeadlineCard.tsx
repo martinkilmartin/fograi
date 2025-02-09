@@ -265,7 +265,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           display: 'flex',
           justifyContent: 'space-between', // Aligns content to the right
           alignItems: 'center', // Vertically centers the content
-          padding: '2px 10px',
+          padding: '2px 2px',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center' }}>
