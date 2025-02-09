@@ -271,8 +271,8 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         borderRadius: '10px',
         backgroundColor: cardBackground,
         fontFamily: '"Arial", sans-serif',
-        margin: '20px 10px',
-        padding: '16px',
+        margin: '10px 10px',
+        padding: '10px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
         transition: 'transform 0.3s ease, box-shadow 0.3s ease',
       }}
@@ -318,7 +318,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             }}
           >
             <Text
-              size={20}
+              size={18}
               weight="bold"
               style={{ color: theme?.colors.text.value }}
             >
@@ -356,8 +356,8 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             />
           )}
           <Text
-            h3
-            size={28}
+            h2
+            size={24}
             style={{
               color: headlineColor,
               marginBottom: '16px',
@@ -371,7 +371,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           </Grid.Container>
         </Link>
       </Card.Body>
-      <Card.Footer style={{ paddingTop: '10px', textAlign: 'center' }}>
+      <Card.Footer style={{  marginBottom: '-20px', paddingTop: '10px', textAlign: 'center' }}>
         <Grid.Container justify="space-around">
           <Grid onClick={toggleLike}>
             <Badge
