@@ -61,7 +61,7 @@ export default function MyNavbar(): JSX.Element {
         shouldHideOnScroll
         variant="sticky"
         style={{
-          backgroundColor: '#f0f0ff',
+          backgroundColor: '#ededf0',
         }}
       >
         <Grid.Container gap={2}>
@@ -171,49 +171,85 @@ export default function MyNavbar(): JSX.Element {
           </Grid>
         </Grid.Container>
         <Navbar.Collapse>
-          <Navbar.CollapseItem>
+          <Navbar.CollapseItem
+            css={{
+              justifyContent: 'center',
+            }}
+          >
             <Link href={`/about`}>
-              <Text size={24}>🤷&nbsp;About</Text>
+              <Text size={24}>🤷&nbsp;&nbsp;About</Text>
             </Link>
           </Navbar.CollapseItem>
-          <Navbar.CollapseItem>
+          <Navbar.CollapseItem
+            css={{
+              justifyContent: 'center',
+            }}
+          >
             <Link href="/bookmarks">
-              <Text size={24}>🔖&nbsp;Bookmarks</Text>
+              <Text size={24}>🔖&nbsp;&nbsp;Bookmarks</Text>
             </Link>
           </Navbar.CollapseItem>
-          <Navbar.CollapseItem>
+          <Navbar.CollapseItem
+            css={{
+              justifyContent: 'center',
+            }}
+          >
             <Link href={`/contact`}>
-              <Text size={24}>💌&nbsp;Contact</Text>
+              <Text size={24}>💌&nbsp;&nbsp;Contact</Text>
             </Link>
           </Navbar.CollapseItem>
-          <Navbar.CollapseItem>
+          <Navbar.CollapseItem
+            css={{
+              justifyContent: 'center',
+            }}
+          >
             <Link href="/countries">
-              <Text size={24}>🗺️&nbsp;Countries</Text>
+              <Text size={24}>🗺️&nbsp;&nbsp;Countries</Text>
             </Link>
           </Navbar.CollapseItem>
-          <Navbar.CollapseItem>
+          <Navbar.CollapseItem
+            css={{
+              justifyContent: 'center',
+            }}
+          >
             <Link href={`/sources`}>
-              <Text size={24}>📰&nbsp;Sources</Text>
+              <Text size={24}>📰&nbsp;&nbsp;Sources</Text>
             </Link>
           </Navbar.CollapseItem>
-          <Navbar.CollapseItem>
+          <Navbar.CollapseItem
+            css={{
+              justifyContent: 'center',
+            }}
+          >
             <Link href={`/roadmap`}>
-              <Text size={24}>📍&nbsp;Roadmap</Text>
+              <Text size={24}>📍&nbsp;&nbsp;Roadmap</Text>
             </Link>
           </Navbar.CollapseItem>
-          <Navbar.CollapseItem>
+          <Navbar.CollapseItem
+            css={{
+              justifyContent: 'center',
+            }}
+          >
             <Link href={`/cookie`}>
-              <Text size={24}>🥠&nbsp;Cookie Policy</Text>
+              <Text size={24}>🥠&nbsp;&nbsp;Cookie Policy</Text>
             </Link>
           </Navbar.CollapseItem>
-          <Navbar.CollapseItem>
+          <Navbar.CollapseItem
+            css={{
+              justifyContent: 'center',
+            }}
+          >
             <Link href={`/privacy`}>
-              <Text size={24}>🔏&nbsp;Privacy Policy</Text>
+              <Text size={24}>🔏&nbsp;&nbsp;Privacy Policy</Text>
             </Link>
           </Navbar.CollapseItem>
-          <Navbar.CollapseItem>
+          <Navbar.CollapseItem
+            css={{
+              justifyContent: 'center',
+            }}
+          >
             <Link href={`/terms`}>
-              <Text size={24}>🧸&nbsp;Terms Of Use</Text>
+              <Text size={24}>🧸&nbsp;&nbsp;Terms Of Use</Text>
             </Link>
           </Navbar.CollapseItem>
         </Navbar.Collapse>

@@ -6,7 +6,11 @@ import { RedditLogo } from '@components/SVG';
 import X from '@components/SVG/X';
 
 const Footer = (): JSX.Element => (
-  <footer>
+  <footer
+    style={{
+      marginBottom: '50px',
+    }}
+  >
     <Grid.Container justify="center" gap={2}>
       {FOOTER_LINKS.map((linkSection, idx) => (
         <Grid key={idx}>
