@@ -215,7 +215,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   }
 
   let friendsAndNeighbours: Array<CountriesType> | null = null;
-  let userCountry = context.req.headers['x-vercel-ip-country'] ?? 'CA';
+  let userCountry = context.req.headers['x-vercel-ip-country'] ?? null;
   if (userCountry === 'AU') {
     userCountry = 'oz';
   }
