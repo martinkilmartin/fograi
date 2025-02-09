@@ -44,48 +44,23 @@ const AgoBadge = ({ media_type, created_at }: AgoBadgeProps): JSX.Element => {
   if (media_type === 'article') {
     return (
       <Badge color="primary" suppressHydrationWarning>
-        {diffDisplay(created_at)}
+        📰&nbsp;{diffDisplay(created_at)}
       </Badge>
     );
   } else if (media_type === 'video') {
     return (
       <Badge color={'error'} suppressHydrationWarning>
-        {diffDisplay(created_at)}
+        📺&nbsp;{diffDisplay(created_at)}
       </Badge>
     );
   } else if (media_type === 'audio') {
     return (
       <Badge color={'secondary'} suppressHydrationWarning>
-        {diffDisplay(created_at)}
+        🔊&nbsp;{diffDisplay(created_at)}
       </Badge>
     );
   }
   return <Badge suppressHydrationWarning>{diffDisplay(created_at)}</Badge>;
-};
-
-const MediaBadge = ({
-  media_type,
-}: Pick<Headline, 'media_type'>): JSX.Element => {
-  if (media_type === 'article') {
-    return (
-      <Badge color={'primary'} size={'lg'}>
-        📰&nbsp;Read&nbsp;↗
-      </Badge>
-    );
-  } else if (media_type === 'video') {
-    return (
-      <Badge color={'error'} size={'lg'}>
-        📺&nbsp;Watch&nbsp;↗
-      </Badge>
-    );
-  } else if (media_type === 'audio') {
-    return (
-      <Badge color={'secondary'} size={'lg'}>
-        🔊&nbsp;Listen&nbsp;↗
-      </Badge>
-    );
-  }
-  return <Badge>{media_type}</Badge>;
 };
 
 const HeadlineCard = ({ headline }: Props): JSX.Element => {
@@ -271,8 +246,8 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         borderRadius: '10px',
         backgroundColor: cardBackground,
         fontFamily: '"Arial", sans-serif',
-        margin: '10px 10px',
-        padding: '10px',
+        margin: '10px',
+        padding: '5px 0px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
         transition: 'transform 0.3s ease, box-shadow 0.3s ease',
       }}
@@ -290,12 +265,12 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           display: 'flex',
           justifyContent: 'space-between', // Aligns content to the right
           alignItems: 'center', // Vertically centers the content
-          padding: '0',
+          padding: '2px 10px',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <Text
-            size={20}
+            size={18}
             weight="bold"
             style={{ color: theme?.colors.text.value }}
           >
@@ -318,7 +293,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             }}
           >
             <Text
-              size={18}
+              size={16}
               weight="bold"
               style={{ color: theme?.colors.text.value }}
             >
@@ -332,7 +307,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           </Tooltip>
         </div>
       </Card.Header>
-      <Card.Body style={{ padding: '16px 0' }}>
+      <Card.Body style={{ padding: '2px 0' }}>
         <Link
           onClick={(_event) => trackClicks('link')}
           href={headline.link + '?utm_source=nooze.news'}
@@ -344,34 +319,32 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
             <NextUIImage
               src={headline.img_src}
               objectFit="cover"
-              width={400}
-              height={200}
+              width={'100%'}
               alt={headline.img_alt ?? ''}
               onError={() => setLeadImgErr(true)}
               showSkeleton
-              style={{
-                borderRadius: '10px',
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-              }}
             />
           )}
           <Text
             h2
-            size={24}
+            size={18}
             style={{
               color: headlineColor,
-              marginBottom: '16px',
               textAlign: 'center',
             }}
           >
-            {headline.headline}
+            {headline.headline}&nbsp;↗
           </Text>
-          <Grid.Container justify="space-around">
-            <MediaBadge media_type={headline.media_type} />
-          </Grid.Container>
         </Link>
       </Card.Body>
-      <Card.Footer style={{  marginBottom: '-20px', paddingTop: '10px', textAlign: 'center' }}>
+      <hr />
+      <Card.Footer
+        style={{
+          marginBottom: '-15px',
+          paddingTop: '10px',
+          textAlign: 'center',
+        }}
+      >
         <Grid.Container justify="space-around">
           <Grid onClick={toggleLike}>
             <Badge
@@ -388,7 +361,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
           </Grid>
           <Grid>
             {canShare ? (
-              <Image src={shareImg} alt="Share" height={36} onClick={share} />
+              <Image src={shareImg} alt="Share" height={32} onClick={share} />
             ) : (
               <Link
                 href={twShare}

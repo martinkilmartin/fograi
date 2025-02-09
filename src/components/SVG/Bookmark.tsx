@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import { SVG } from '../../types';
 
 const Bookmark = ({
-  width = 36,
-  height = 36,
+  width = 32,
+  height = 32,
   vBW = 512,
   vBH = 512,
   fillColors = ['#000', '#fff'],

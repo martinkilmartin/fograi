@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import { SVG } from '../../types';
 
 const X = ({
-  width = 36,
-  height = 36,
+  width = 32,
+  height = 32,
   vBW = 1200,
   vBH = 1227,
   fillColors = ['#000', '#fff'],
