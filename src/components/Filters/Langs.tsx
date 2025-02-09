@@ -1,30 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Grid, Switch, SwitchEvent, Text } from '@nextui-org/react';
-
-type LangTypes = 'fr' | 'en' | 'pl' | 'ga' | 'gu' | 'hi' | 'ta' | 'sw' | 'ar' | 'de' | 'es' | 'id' | 'ja' | 'ko' | 'it' | 'pt' | 'he' | 'bn' | 'tl' | 'ur';
-
-const LangsMap = new Map([
-  ['fr', { text: 'French', icon: '🇫🇷' }],
-  ['en', { text: 'English', icon: '🇺🇸' }],
-  ['pl', { text: 'Polish', icon: '🇵🇱' }],
-  ['ga', { text: 'Irish', icon: '🇮🇪' }],
-  ['gu', { text: 'Gujarati', icon: '🇮🇳' }],
-  ['hi', { text: 'Hindi', icon: '🇮🇳' }],
-  ['ta', { text: 'Tamil', icon: '🇮🇳' }],
-  ['sw', { text: 'Swahili', icon: '🇹🇿' }],
-  ['ar', { text: 'Arabic', icon: '🇸🇦' }],
-  ['de', { text: 'German', icon: '🇩🇪' }],
-  ['es', { text: 'Spanish', icon: '🇪🇸' }],
-  ['id', { text: 'Indonesian', icon: '🇮🇩' }],
-  ['ja', { text: 'Japanese', icon: '🇯🇵' }],
-  ['ko', { text: 'Korean', icon: '🇰🇷' }],
-  ['it', { text: 'Italian', icon: '🇮🇹' }],
-  ['pt', { text: 'Portuguese', icon: '🇵🇹' }],
-  ['he', { text: 'Hebrew', icon: '🇮🇱' }],
-  ['bn', { text: 'Bengali', icon: '🇧🇩' }],
-  ['tl', { text: 'Filipino', icon: '🇵🇭' }],
-  ['ur', { text: 'Urdu', icon: '🇵🇰' }],
-]);
+import { LangTypes, LangsMap } from '@constants/LANGS';
 
 const LanguageOptions = (): JSX.Element => {
   const [likedLanguages, likLang] = useState<Set<LangTypes>>(

@@ -1,35 +1,179 @@
 import { Countries as CountryTypes } from '../types/countries';
+import { LangTypes } from '@constants/LANGS';
 
-export const NEIGHBOURS = new Map<CountryTypes, Array<CountryTypes | ''>>([
-  ['oz', ['nz', 'to']],
-  ['ca', ['']],
-  ['in', ['pk']],
-  ['ie', ['uk']],
-  ['nz', ['oz', 'to']],
-  ['uk', ['']],
-  ['us', ['ca']],
-  ['tz', ['za', 'zw', 'ng', 'ke']],
-  ['zw', ['za', 'tz', 'ng', 'ke']],
-  ['za', ['tz', 'zw', 'ng', 'ke']],
-  ['ng', ['za', 'zw', 'tz', 'ke']],
-  ['ke', ['za', 'zw', 'ng', 'tz']],
+interface Adjacents {
+  countries: Array<CountryTypes | ''>;
+  langs: Array<LangTypes | ''>;
+}
+
+export const ADJACENTS = new Map<CountryTypes, Adjacents>([
+  [
+    'oz',
+    {
+      countries: ['nz', 'to'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ca',
+    {
+      countries: ['us', 'uk', 'fr', 'au'],
+      langs: ['fr', 'pl', 'es', 'de', 'it'],
+    },
+  ],
+  [
+    'in',
+    {
+      countries: ['pk', 'uk', 'qa', 'au'],
+      langs: ['hi', 'gu', 'ur', 'ta', 'bn'],
+    },
+  ],
+  [
+    'ie',
+    {
+      countries: ['au', 'ca', 'us', 'nz'],
+      langs: ['ga', 'pl', 'fr', 'es', 'de'],
+    },
+  ],
+  [
+    'nz',
+    {
+      countries: ['au', 'ca', 'us', 'to'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'uk',
+    {
+      countries: ['ie', 'us', 'au', 'ca'],
+      langs: ['ga', 'en', 'pl', 'fr'],
+    },
+  ],
+  [
+    'us',
+    {
+      countries: ['ca', 'uk', 'au', 'ie'],
+      langs: ['en', 'es', 'fr'],
+    },
+  ],
+  [
+    'tz',
+    {
+      countries: ['za', 'zw', 'ng', 'ke'],
+      langs: ['sw', 'en'],
+    },
+  ],
+  [
+    'zw',
+    {
+      countries: ['za', 'tz', 'ng', 'ke'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'ng',
+    {
+      countries: ['tz', 'zw', 'ke', 'gh'],
+      langs: ['en', 'fr'],
+    },
+  ],
+  [
+    'ke',
+    {
+      countries: ['tz', 'zw', 'ug', 'so'],
+      langs: ['sw', 'en'],
+    },
+  ],
+  [
+    'za',
+    {
+      countries: ['zw', 'tz', 'bw', 'na'],
+      langs: ['en', 'sw'],
+    },
+  ],
   // ['gh', ['Ghana']],
-  ['de', ['fr', 'it', 'pl']],
-  ['fr', ['de', 'es', 'it']],
-  ['es', ['fr', 'it']],
-  ['it', ['fr', 'es', 'de']],
+  [
+    'de',
+    {
+      countries: ['fr', 'it', 'pl'],
+      langs: ['de', 'en', 'fr'],
+    },
+  ],
+  [
+    'fr',
+    {
+      countries: ['de', 'es', 'it'],
+      langs: ['fr', 'en', 'es'],
+    },
+  ],
+  [
+    'es',
+    {
+      countries: ['fr', 'it'],
+      langs: ['es', 'en'],
+    },
+  ],
+  [
+    'it',
+    {
+      countries: ['fr', 'es', 'de'],
+      langs: ['it', 'en', 'fr'],
+    },
+  ],
   // ['nl', ['Netherlands']],
   // ['no', ['Norway']],
   // ['se', ['Sweden']],
   // ['dk', ['Denmark']],
-  ['pl', ['de']],
+  [
+    'pl',
+    {
+      countries: ['de'],
+      langs: ['pl', 'en', 'de'],
+    },
+  ],
   // ['ru', ['Russia']],
-  ['cn', ['jp', 'kr']],
-  ['jp', ['cn', 'kr']],
-  ['kr', ['cn', 'jp']],
-  ['br', ['ar']],
-  ['mx', ['us', 'es', 'ar']],
-  ['ar', ['br']],
+  [
+    'cn',
+    {
+      countries: ['jp', 'kr'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'jp',
+    {
+      countries: ['cn', 'kr'],
+      langs: ['ja', 'en'],
+    },
+  ],
+  [
+    'kr',
+    {
+      countries: ['cn', 'jp'],
+      langs: ['ko', 'en'],
+    },
+  ],
+  [
+    'br',
+    {
+      countries: ['ar'],
+      langs: ['pt', 'es'],
+    },
+  ],
+  [
+    'mx',
+    {
+      countries: ['us', 'es', 'ar'],
+      langs: ['es', 'en'],
+    },
+  ],
+  [
+    'ar',
+    {
+      countries: ['br'],
+      langs: ['es', 'pt'],
+    },
+  ],
   // ['co', ['Colombia']],
   // ['pe', ['Peru']],
   // ['ve', ['Venezuela']],
@@ -59,17 +203,53 @@ export const NEIGHBOURS = new Map<CountryTypes, Array<CountryTypes | ''>>([
   // ['sg', ['Singapore']],
   // ['th', ['Thailand']],
   // ['vn', ['Vietnam']],
-  ['ph', ['id']],
-  ['id', ['ph']],
+  [
+    'ph',
+    {
+      countries: ['id'],
+      langs: ['tl', 'en'],
+    },
+  ],
+  [
+    'id',
+    {
+      countries: ['ph'],
+      langs: ['id', 'en'],
+    },
+  ],
   // ['sa', ['Saudi Arabia']],
-  ['ae', ['il', 'qa', 'kw']],
-  ['il', ['ae', 'qa', 'kw', 'ps']],
-  ['ps', ['ae', 'qa', 'kw', 'il']],
+  [
+    'ae',
+    {
+      countries: ['il', 'qa', 'kw'],
+      langs: ['ar', 'en'],
+    },
+  ],
+  [
+    'il',
+    {
+      countries: ['ae', 'qa', 'kw', 'ps'],
+      langs: ['he', 'ar', 'en'],
+    },
+  ],
+  [
+    'ps',
+    {
+      countries: ['ae', 'qa', 'kw', 'il'],
+      langs: ['ar', 'en'],
+    },
+  ],
   // ['eg', ['Egypt']],
   // ['ma', ['Morocco']],
   // ['tn', ['Tunisia']],
   // ['ir', ['Iran']],
-  ['pk', ['in', 'cn']],
+  [
+    'pk',
+    {
+      countries: ['in', 'cn'],
+      langs: ['ur', 'en'],
+    },
+  ],
   // ['lk', ['Sri Lanka']],
   // ['np', ['Nepal']],
   // ['bt', ['Bhutan']],
@@ -122,8 +302,20 @@ export const NEIGHBOURS = new Map<CountryTypes, Array<CountryTypes | ''>>([
   // ['sy', ['Syria']],
   // ['lb', ['Lebanon']],
   // ['jo', ['Jordan']],
-  ['kw', ['il', 'ae', 'qa']],
-  ['qa', ['il', 'ae', 'kw']],
+  [
+    'kw',
+    {
+      countries: ['il', 'ae', 'qa'],
+      langs: ['ar', 'en'],
+    },
+  ],
+  [
+    'qa',
+    {
+      countries: ['il', 'ae', 'kw'],
+      langs: ['ar', 'en'],
+    },
+  ],
   // ['bh', ['Bahrain']],
   // ['om', ['Oman']],
   // ['ye', ['Yemen']],
@@ -176,7 +368,13 @@ export const NEIGHBOURS = new Map<CountryTypes, Array<CountryTypes | ''>>([
   // ['sb', ['Solomon Islands']],
   // ['sl', ['Sierra Leone']],
   // ['sr', ['Suriname']],
-  ['to', ['oz', 'nz']],
+  [
+    'to',
+    {
+      countries: ['oz', 'nz'],
+      langs: ['en'],
+    },
+  ],
   // ['tt', ['Trinidad and Tobago']],
   // ['tv', ['Tuvalu']],
   // ['vu', ['Vanuatu']],

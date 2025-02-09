@@ -228,4 +228,5 @@ export type flags =
   | '🇻🇮' // U.S. Virgin Islands
   | '🇸🇯' // Svalbard and Jan Mayen
   | '🇪🇭' // Western Sahara
+  | "🇵🇸" // Palestinian Territories
 
