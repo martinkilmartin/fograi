@@ -75,8 +75,12 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   const [canShare, setShareable] = useState(true);
   const DATE = new Date(headline.created_at);
   // const emojie = headline.emos;
+  const nooze_utm_tag = 'utm_source=nooze.news';
   const sourceURL =
-    AllNewsSources.get(headline.source)?.url + '?utm_source=nooze.news';
+    AllNewsSources.get(headline.source)?.url + '?' + nooze_utm_tag;
+  const articleLink = headline.link.includes('?')
+    ? `${headline.link}&${nooze_utm_tag}`
+    : `${headline.link}?${nooze_utm_tag}`;
   const sourceName = AllNewsSources.get(headline.source)?.name;
   const emos = AllNewsSources.get(headline.source)?.emos;
 
@@ -201,7 +205,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     try {
       await navigator.share({
         title: headline.headline,
-        url: headline.link + '?utm_source=nooze.news',
+        url: articleLink,
       });
     } catch (_e) {
       setShareable(false);
@@ -234,8 +238,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
     'https://twitter.com/intent/tweet?text=' +
     headline.headline +
     '&url=' +
-    headline.link +
-    '?utm_source=nooze.news';
+    articleLink;
 
   return (
     <Card
@@ -310,7 +313,7 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
       <Card.Body style={{ padding: '2px 0' }}>
         <Link
           onClick={(_event) => trackClicks('link')}
-          href={headline.link + '?utm_source=nooze.news'}
+          href={articleLink}
           target="_blank"
           rel="noreferrer"
           style={{ overflow: 'auto' }}
