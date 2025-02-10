@@ -1,6 +1,11 @@
-export type LangTypes = 'fr' | 'en' | 'pl' | 'ga' | 'gu' | 'hi' | 'ta' | 'sw' | 'ar' | 'de' | 'es' | 'id' | 'ja' | 'ko' | 'it' | 'pt' | 'he' | 'bn' | 'tl' | 'ur';
+import { LangTypes } from '../types';
+import { flags } from '../types';
+interface LangsMapType {
+  text: string;
+  icon: flags;
+}
 
-export const LangsMap = new Map([
+export const LangsMap = new Map<LangTypes, LangsMapType>([
   ['fr', { text: 'French', icon: '🇫🇷' }],
   ['en', { text: 'English', icon: '🇺🇸' }],
   ['pl', { text: 'Polish', icon: '🇵🇱' }],

@@ -1,5 +1,5 @@
 import { Countries as CountryTypes } from '../types/countries';
-import { LangTypes } from '@constants/LANGS';
+import { LangTypes } from '../types';
 
 interface Adjacents {
   countries: Array<CountryTypes | ''>;

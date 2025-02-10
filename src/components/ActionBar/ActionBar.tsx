@@ -13,6 +13,7 @@ import { ADJACENTS } from '@constants/ADJACENTS';
 import { flags } from '@constants/FLAGS';
 import { LangsMap } from '@constants/LANGS';
 import { Countries as CountryTypes } from '../../types/countries';
+import { LangTypes } from 'src/types';
 
 const AnimatedButton = ({
   action,
@@ -37,7 +38,11 @@ const AnimatedButton = ({
       setTimeout(() => {
         interval = setInterval(() => {
           index = (index + 1) % (secondaryActions.length + 1);
-          setDisplayIcon(index === secondaryActions.length ? action.icon : secondaryActions[index]);
+          setDisplayIcon(
+            index === secondaryActions.length
+              ? action.icon
+              : secondaryActions[index],
+          );
           if (index === secondaryActions.length) {
             clearInterval(interval!);
             cycleIndex++;
@@ -92,7 +97,7 @@ const ActionBar = ({ userCountry }: ActionBarProps) => {
     ],
     Languages: (userCountry &&
       ADJACENTS.get(userCountry)?.langs.map(
-        (l) => LangsMap.get(l)?.icon ?? l,
+        (l) => LangsMap.get(l as LangTypes)?.icon ?? (l as LangTypes),
       )) ?? ['🇬🇧', '🇫🇷', '🇪🇸', '🇩🇪'],
     Categories: ['📖', '🎨', '🏀', '💼'],
     Search: ['🔍', '📅', '🔥'],

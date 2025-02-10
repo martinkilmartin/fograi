@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Grid, Switch, SwitchEvent, Text } from '@nextui-org/react';
-import { LangTypes, LangsMap } from '@constants/LANGS';
+import { LangsMap } from '@constants/LANGS';
+import { LangTypes } from 'src/types';
 
 const LanguageOptions = (): JSX.Element => {
   const [likedLanguages, likLang] = useState<Set<LangTypes>>(

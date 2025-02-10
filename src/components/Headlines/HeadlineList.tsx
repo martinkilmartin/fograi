@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { Badge, Loading } from '@nextui-org/react';
 import { CleanAndSimpleHeadlineCard as HeadlineCard } from '@components/Card';
-//import { ActionBar } from '@components/ActionBar';
+import { ActionBar } from '@components/ActionBar';
 import { Headline } from '../../types/Headline';
 import { Countries } from '../../types/countries';
 import Masonry from 'react-masonry-css';
@@ -46,9 +46,10 @@ const useBreakpointColumns = (numberOfColumns?: number) => {
 const HeadlineList: React.FC<HeadlineListProps> = ({
   headlines,
   fetching,
-  //userCountry,
+  userCountry,
   numberOfColumns,
 }) => {
+  const [bottomNav, showBottomNav] = useState(false);
   const columns = useBreakpointColumns(numberOfColumns);
 
   const breakpointColumnsObj = {
@@ -93,6 +94,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
           aria-label="The number of headlines loaded"
           variant="bordered"
           style={{ position: 'fixed', bottom: '20px', left: '10px' }}
+          onClick={() => showBottomNav(!bottomNav)}
         >
           {fetching ? <Loading type="gradient" size="xs" /> : headlines?.length}
         </Badge>
@@ -112,7 +114,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
         >
           ⬆️
         </Badge>
-        {/*<ActionBar userCountry={userCountry}/>*/}
+        {bottomNav && <ActionBar userCountry={userCountry} />}
       </>
     );
   }
