@@ -1,13 +1,4 @@
-import {
-  JSXElementConstructor,
-  Key,
-  PromiseLikeOfReactNode,
-  ReactElement,
-  ReactNode,
-  ReactPortal,
-  useState,
-  useEffect,
-} from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@nextui-org/react';
 import { ADJACENTS } from '@constants/ADJACENTS';
 import { flags } from '@constants/FLAGS';
