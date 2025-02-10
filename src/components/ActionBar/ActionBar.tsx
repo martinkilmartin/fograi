@@ -60,7 +60,7 @@ const AnimatedButton = ({
   }, [action.icon, secondaryActions]);
 
   return (
-    <Button auto light onClick={onClick}>
+    <Button auto light onClick={onClick} aria-label={action.label}>
       {displayIcon}
     </Button>
   );
@@ -124,20 +124,8 @@ const ActionBar = ({ userCountry }: ActionBarProps) => {
       {selectedAction && (
         <Button.Group color="gradient" ghost>
           {secondaryActions[selectedAction].map(
-            (
-              action:
-                | string
-                | number
-                | boolean
-                | ReactElement<any, string | JSXElementConstructor<any>>
-                | Iterable<ReactNode>
-                | ReactPortal
-                | PromiseLikeOfReactNode
-                | null
-                | undefined,
-              index: Key | null | undefined,
-            ) => (
-              <Button key={index} auto light>
+            (action: string, index: number) => (
+              <Button key={index} auto light aria-label={action}>
                 {action}
               </Button>
             ),
