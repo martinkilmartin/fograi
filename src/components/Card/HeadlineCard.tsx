@@ -31,7 +31,7 @@ type Props = {
   idx?: number;
 };
 
-const HeadlineCard = ({ headline }: Props): JSX.Element => {
+const ComicCard = ({ headline }: Props): JSX.Element => {
   const COLLECTION_KEY = 'nooze';
 
   const { theme } = useTheme();
@@ -489,4 +489,4 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
   );
 }
 
-export default HeadlineCard;
+export default ComicCard;

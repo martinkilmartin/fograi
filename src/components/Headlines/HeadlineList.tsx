@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { Badge, Loading } from '@nextui-org/react';
-import { CleanAndSimpleHeadlineCard as HeadlineCard } from '@components/Card';
+import { ComicCard as HeadlineCard } from '@components/Card';
 import { ActionBar } from '@components/ActionBar';
 import { Headline } from '../../types/Headline';
 import { Countries } from '../../types/countries';
