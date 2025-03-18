@@ -311,8 +311,6 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
           )}
           <div
             style={{
-              position: 'relative',
-              display: 'inline-block',
               backgroundColor: `${isDark ? 'black' : 'white'}`,
               border: `${isDark ? '2px solid white' : '2px solid black'}`,
               boxShadow: '4px 4px 0 black',
