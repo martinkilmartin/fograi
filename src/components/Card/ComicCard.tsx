@@ -56,7 +56,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
       ? 'radial-gradient(circle, black, darkred)' 
       : 'radial-gradient(circle, white, red)',
     audio: isDark
-      ? 'radial-gradient(circle, black, darkpurple)' 
+      ? 'radial-gradient(circle, black, darkviolet)' 
       : 'radial-gradient(circle, white, purple)',
     article: isDark
       ? 'radial-gradient(circle, black, darkblue)' 
