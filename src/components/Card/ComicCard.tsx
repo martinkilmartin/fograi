@@ -16,7 +16,6 @@ import Bookmark from '@components/SVG/Bookmark';
 import Heart from '@components/SVG/Heart';
 import X from '@components/SVG/X';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
-import { COUNTRIES } from '@constants/COUNTRIES';
 import { Headline } from '../../types';
 import { Countries as CountriesType } from '../../types/countries';
 import shareImg from '../../../public/img/ic/share.svg';
@@ -35,7 +34,7 @@ type Props = {
 const ComicCard = ({ headline }: Props): JSX.Element => {
   const COLLECTION_KEY = 'nooze';
 
-  const { theme, isDark } = useTheme();
+  const { isDark } = useTheme();
   const [leadImgErr, setLeadImgErr] = useState<boolean>(false);
   const [liked, setLiked] = useState<boolean>(false);
   const [likeCount, setLikeCount] = useState<number | '?'>('?');
@@ -216,10 +215,10 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
         transition: 'transform 0.3s ease, box-shadow 0.3s ease',
         border: '4px solid black',
         borderRadius: '0',
-        outline: '3px solid white',
+        outline: `${isDark ? '5px solid white' : '5px solid black'}`,
         outlineOffset: '-5px',
         imageRendering: 'crisp-edges',
-        boxShadow: '5px 5px 0px rgba(0, 0, 0, 0.8)',
+        boxShadow: `${isDark ? '0 4px 8px rgba(0, 0, 0, 0.1)' : '0 4px 8px rgba(0, 0, 0, 0.1)'}`,
       }}
       onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => {
         e.currentTarget.style.transform = 'translateY(-5px)';
