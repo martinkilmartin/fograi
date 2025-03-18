@@ -51,24 +51,21 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
     : `${headline.link}?${nooze_utm_tag}`;
   const sourceName = AllNewsSources.get(headline.source)?.name;
 
-
   const cardBackgrounds = {
     video: isDark
-      ? 'radial-gradient(circle, orange, red)'
-      : 'radial-gradient(circle, red, orange)',
+      ? 'radial-gradient(circle, black, darkred)' 
+      : 'radial-gradient(circle, white, red)',
     audio: isDark
-      ? '#radial-gradient(circle, red, blue)'
-      : '#radial-gradient(circle, blue, red)',
+      ? 'radial-gradient(circle, black, darkpurple)' 
+      : 'radial-gradient(circle, white, purple)',
     article: isDark
-      ? '#radial-gradient(circle, purple, blue)'
-      : '#radial-gradient(circle, blue, purple)',
+      ? 'radial-gradient(circle, black, darkblue)' 
+      : 'radial-gradient(circle, white, blue)',
   };
-
+  
   const cardBackground =
-    cardBackgrounds[headline.media_type as keyof typeof cardBackgrounds];
-
-
-
+    cardBackgrounds[headline.media_type as keyof typeof cardBackgrounds]; 
+  
   const toggleLike = async () => {
     setLikeLoading(true);
     try {
