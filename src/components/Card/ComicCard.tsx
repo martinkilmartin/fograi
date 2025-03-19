@@ -53,19 +53,19 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
 
   const cardBackgrounds = {
     video: isDark
-      ? 'radial-gradient(circle, black, darkred)' 
+      ? 'radial-gradient(circle, black, darkred)'
       : 'radial-gradient(circle, white, red)',
     audio: isDark
-      ? 'radial-gradient(circle, black, darkviolet)' 
+      ? 'radial-gradient(circle, black, darkviolet)'
       : 'radial-gradient(circle, white, purple)',
     article: isDark
-      ? 'radial-gradient(circle, black, darkblue)' 
+      ? 'radial-gradient(circle, black, darkblue)'
       : 'radial-gradient(circle, white, blue)',
   };
-  
+
   const cardBackground =
-    cardBackgrounds[headline.media_type as keyof typeof cardBackgrounds]; 
-  
+    cardBackgrounds[headline.media_type as keyof typeof cardBackgrounds];
+
   const toggleLike = async () => {
     setLikeLoading(true);
     try {
@@ -208,7 +208,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
         backgroundImage: cardBackground,
         fontFamily: '"Arial", sans-serif',
         margin: '10px',
-        padding: '2px',
+        padding: '4px',
         transition: 'transform 0.3s ease, box-shadow 0.3s ease',
         border: '4px solid black',
         borderRadius: '0',
@@ -234,7 +234,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
           rel="noreferrer"
           style={{ overflow: 'clip', display: 'block', position: 'relative' }}
         >
-          {headline.img_src && !leadImgErr && (
+          {headline.img_src && !leadImgErr ? (
             <div style={{ position: 'relative' }}>
               <NextUIImage
                 src={headline.img_src}
@@ -260,7 +260,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
               <div
                 style={{
                   position: 'absolute',
-                  top: '12px',
+                  top: '0px',
                   left: '12px',
                   backgroundColor: `${isDark ? "rgba(0, 0, 0, 0.9)" : "rgba(255, 255, 255, 0.9)"}`,
                   border: `${isDark ? '2px solid white' : '2px solid black'}`,
@@ -286,7 +286,57 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
               <div
                 style={{
                   position: 'absolute',
-                  top: '12px',
+                  top: '0px',
+                  right: '12px',
+                  backgroundColor: `${isDark ? "rgba(0, 0, 0, 0.9)" : "rgba(255, 255, 255, 0.9)"}`,
+                  border: `${isDark ? '2px solid white' : '2px solid black'}`,
+                  padding: '4px 8px',
+                  display: 'inline-block',
+                  fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
+                  fontSize: '14px',
+                  fontStyle: 'italic',
+                  boxShadow: `${isDark ? "2px 2px 0 white" : "2px 2px 0 black"}`,
+                  transform: 'skewX(-8deg)',
+                  zIndex: 10,
+                }}
+              >
+                <Tooltip content={DATE.toLocaleString()}>
+                  {diffDisplay(DATE)}
+                </Tooltip>
+              </div>
+            </div>
+          ) : (
+            <div style={{ position: 'relative' }}>
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '0px',
+                  left: '12px',
+                  backgroundColor: `${isDark ? "rgba(0, 0, 0, 0.9)" : "rgba(255, 255, 255, 0.9)"}`,
+                  border: `${isDark ? '2px solid white' : '2px solid black'}`,
+                  padding: '4px 8px',
+                  fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
+                  fontSize: '14px',
+                  fontStyle: 'italic',
+                  boxShadow: `${isDark ? "2px 2px 0 white" : "2px 2px 0 black"}`,
+                  transform: 'skewX(-8deg)',
+                  zIndex: 10,
+                }}
+              >
+                <Link
+                  onClick={(_event) => trackClicks('source')}
+                  href={sourceURL}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ color: `${isDark ? "white" : "black"}`, textDecoration: 'none' }}
+                >
+                  {sourceName ?? ''}
+                </Link>
+              </div>
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '0px',
                   right: '12px',
                   backgroundColor: `${isDark ? "rgba(0, 0, 0, 0.9)" : "rgba(255, 255, 255, 0.9)"}`,
                   border: `${isDark ? '2px solid white' : '2px solid black'}`,
@@ -316,7 +366,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
               fontSize: '18px',
               textAlign: 'center',
               transform: 'skewX(-8deg)',
-              margin: '12px',
+              margin: `${headline.img_src && !leadImgErr ? '0px' : '20px'} 12px 6px 12px`,
             }}
           >
             <Text
