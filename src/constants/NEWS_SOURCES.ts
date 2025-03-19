@@ -8736,6 +8736,19 @@ export const USNewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'US_GLHN',
+    {
+      name: 'Goalhanger',
+      url: 'https://www.goalhangerpodcasts.com',
+      est: 2018,
+      about:
+        'Goalhanger is a podcast that covers sports, culture, and politics.',
+      description: [],
+      emos: ['🎙️', '🇺🇸'],
+      langs: ['en'],
+    },
+  ],
 ]);
 export const USNewsSourcesLength = USNewsSources.size;
 
@@ -9488,7 +9501,8 @@ export const ZWNewsSources = new Map<string, NewsSource>([
       name: 'PaZimbabwe',
       url: 'https://www.pazimbabwe.com/',
       est: 2014,
-      about: 'News on Business, Entertainment, Sports, Technology, and Health & Fitness.',
+      about:
+        'News on Business, Entertainment, Sports, Technology, and Health & Fitness.',
       emos: ['📰', '🇿🇼'],
       langs: ['en'],
     },
