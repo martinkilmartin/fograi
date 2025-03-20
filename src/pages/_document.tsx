@@ -21,7 +21,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>{CssBaseline.flush()}</Head>
-        <body className="bg-base-100">
+        <body>
           <Main />
           <NextScript />
         </body>

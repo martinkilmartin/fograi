@@ -60,9 +60,6 @@ export default function MyNavbar(): JSX.Element {
         isBordered={isDark}
         shouldHideOnScroll
         variant="sticky"
-        style={{
-          backgroundColor: '#ededf0',
-        }}
       >
         <Grid.Container gap={2}>
           <Grid xs={2}>
