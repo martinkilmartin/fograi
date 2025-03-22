@@ -4139,6 +4139,28 @@ export const IENewsSources = new Map<string, NewsSource>([
       langs: ['en'],
     },
   ],
+  [
+    'IE_DSTR',
+    {
+      name: 'Irish Daily Star',
+      url: 'https://thestar.ie/',
+      est: 1987,
+      about:
+        'The Irish Daily Star is a tabloid newspaper published in Ireland by Reach plc, a subsidiary of Independent News & Media.',
+      emos: ['📰', '🇮🇪'],
+      langs: ['en'],
+    },
+  ],
+  [
+    'IE_JNGN',
+    {
+      name: 'Jane Gogan',
+      url: 'https://ie.linkedin.com/in/jane-gogan-94a53317a',
+      est: 2019,
+      about: 'Jane Gogan is a journalist and writer based in Dublin, Ireland.',
+      emos: ['🌐', '🇮🇪'],
+    },
+  ],
 ]);
 export const IENewsSourcesLength = IENewsSources.size;
 
