@@ -1,0 +1,864 @@
+{
+  "CA_LDVR": {
+    "name": "Le Devoir",
+    "url": "https://www.ledevoir.com/",
+    "est": 1910,
+    "about": "Le Devoir est un journal quotidien indépendant basé au Québec. Il se consacre à fournir les actualités les plus récentes et pertinentes, couvrant une gamme diversifiée de sujets allant de la politique locale et internationale à la culture, l'éducation et bien plus encore. Le Devoir est reconnu pour son journalisme d'investigation approfondi et son engagement envers l'intégrité et la transparence.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_LDVR.svg",
+    "langs": ["fr"],
+    "tags": [
+      "LeDevoir",
+      "NouvellesQuébec",
+      "NouvellesCanada",
+      "JournalIndépendant",
+      "NouvellesLocales",
+      "NouvellesNationales",
+      "Culture",
+      "Éducation",
+      "JournalismeInvestigation"
+    ],
+    "socials": {
+      "facebook": "http://www.facebook.com/ledevoir",
+      "twitter": "https://twitter.com/LeDevoir",
+      "instagram": "https://www.instagram.com/ledevoir/",
+      "youtube": "https://www.youtube.com/@ledevoir",
+      "linkedin": "https://www.linkedin.com/company/le-devoir/"
+    },
+    "headerBG": "#fff",
+    "primaryColor": "#333"
+  },
+  "CA_QCTO": {
+    "name": "The Quebec Chronicle Telegraph",
+    "url": "https://www.qctonline.com/",
+    "est": 1764,
+    "about": "The Quebec Chronicle-Telegraph, distinguished as the oldest newspaper in North America, continues to be an authoritative source of news and information. Covering a broad array of topics, from politics, business, and culture to local events and lifestyle, it provides the Quebec community and beyond with valuable insights and engaging stories.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_QCTO.png",
+    "langs": ["en", "fr"],
+    "tags": [
+      "QuebecChronicleTelegraph",
+      "News",
+      "QuebecNews",
+      "CanadaNews",
+      "Politics",
+      "Business",
+      "Culture",
+      "LocalEvents"
+    ],
+    "socials": {
+      "email": "mailto:info@qctonline.com",
+      "facebook": "https://www.facebook.com/qctonline",
+      "twitter": "https://twitter.com/QCTonline"
+    },
+    "headerBG": "#fff",
+    "primaryColor": "#996600"
+  },
+  "CA_TRTS": {
+    "name": "Toronto Star",
+    "url": "https://www.thestar.com/",
+    "est": 1892,
+    "about": "The Toronto Star, one of Canada's leading news platforms, consistently delivers insightful and relevant news to a global audience. With coverage that spans local events, national affairs, and international stories, it remains dedicated to upholding journalistic integrity while informing and engaging its readers.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_TRTS.svg",
+    "langs": ["en"],
+    "tags": [
+      "TorontoStar",
+      "News",
+      "CanadaNews",
+      "InternationalNews",
+      "LocalEvents",
+      "NationalAffairs"
+    ],
+    "socials": {
+      "email": "mailto:city@thestar.ca",
+      "facebook": "https://www.facebook.com/torontostar",
+      "twitter": "https://twitter.com/torontostar",
+      "youtube": "https://www.youtube.com/TorontoStar",
+      "instagram": "https://www.instagram.com/thetorontostar/",
+      "linkedin": "https://www.linkedin.com/company/toronto-star/"
+    },
+    "headerBG": "#fff",
+    "primaryColor": "#0060df"
+  },
+  "CA_TGAM": {
+    "name": "The Globe And Mail",
+    "url": "https://www.theglobeandmail.com/",
+    "est": 1844,
+    "about": "The Globe And Mail, Canada's foremost news media company, continuously engages Canadians with comprehensive coverage on news, politics, business, investing, and lifestyle topics. Known for its in-depth analysis and high journalistic standards, it is an authoritative source for national and international news.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_TGAM.svg",
+    "langs": ["en"],
+    "tags": [
+      "TheGlobeAndMail",
+      "News",
+      "CanadaNews",
+      "InternationalNews",
+      "Politics",
+      "Business",
+      "Investing",
+      "Lifestyle"
+    ],
+    "socials": {
+      "email": "mailto:newsroom@globeandmail.com",
+      "facebook": "https://www.facebook.com/theglobeandmail",
+      "twitter": "https://twitter.com/globeandmail",
+      "instagram": "https://instagram.com/globeandmail",
+      "linkedin": "https://www.linkedin.com/company/the-globe-and-mail",
+      "youtube": "https://www.youtube.com/user/TheGlobeandMail",
+      "tiktok": "https://www.tiktok.com/@globeandmail",
+      "snapchat": "https://story.snapchat.com/p/f9c37a38-b555-4c37-a97a-598423457108"
+    },
+    "headerBG": "#da161f",
+    "primaryColor": "#333"
+  },
+  "CA_LPRS": {
+    "name": "La Presse",
+    "url": "https://www.lapresse.ca/",
+    "est": 1884,
+    "about": "La Presse se dédie à la production d'information de qualité, accessible gratuitement à un large public. Comme l'un des journaux les plus influents au Canada, elle offre une variété de contenus couvrant l'actualité locale et mondiale, la politique, les arts, les sports et bien plus encore. Elle reste engagée envers l'intégrité journalistique, la rigueur éditoriale et l'innovation technologique.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_LPRS.svg",
+    "langs": ["fr"],
+    "tags": [
+      "LaPresse",
+      "NouvellesCanadiennes",
+      "PresseLocale",
+      "NouvellesMondiales",
+      "InformationGratuite",
+      "IntégritéJournalistique"
+    ],
+    "socials": {
+      "email": "mailto:enquetes@lapresse.ca",
+      "facebook": "https://fr-ca.facebook.com/LaPresseFB/",
+      "twitter": "https://twitter.com/lp_lapresse",
+      "linkedin": "https://ca.linkedin.com/company/la-presse",
+      "instagram": "https://www.instagram.com/lp_lapresse/?hl=fr-ca"
+    },
+    "headerBG": "#ED1C23",
+    "primaryColor": "#ED1C23"
+  },
+  "CA_JMTL": {
+    "name": "Le Journal de Montréal",
+    "url": "https://www.journaldemontreal.com/",
+    "est": 1964,
+    "about": "Le Journal de Montréal est une publication de premier plan offrant des nouvelles complètes et accessibles dans divers domaines. Qu'il s'agisse de sports, de politique, de spectacles, de finance ou de judiciaire, ce journal assure une couverture approfondie pour garder son lectorat bien informé. L'accent est mis sur la présentation de l'information de manière claire et concise, ce qui le rend populaire parmi un large éventail de lecteurs.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_JMTL.svg",
+    "langs": ["fr"],
+    "tags": [
+      "LeJournalDeMontréal",
+      "NouvellesCanadiennes",
+      "InformationLocale",
+      "Sport",
+      "Politique",
+      "Spectacles",
+      "Finance",
+      "Juridique"
+    ],
+    "socials": {
+      "email": "mailto:jdm.info@quebecormedia.com",
+      "facebook": "https://www.facebook.com/jdemontreal",
+      "twitter": "https://twitter.com/JdeMontreal",
+      "instagram": "https://www.instagram.com/jdemontreal/",
+      "apple": "https://apps.apple.com/ca/app/journal-de-montr%C3%A9al/id6444195089",
+      "android": "https://play.google.com/store/apps/details?id=com.quebecormedia.journaldemontreal",
+      "linkedin": "https://www.linkedin.com/company/jdemontreal/"
+    },
+    "headerBG": "#E32402",
+    "primaryColor": "#E32402"
+  },
+  "CA_MTGZ": {
+    "name": "Montreal Gazette",
+    "url": "https://montrealgazette.com/",
+    "est": 1778,
+    "about": "The Montreal Gazette is a trusted source for both national and international news. Committed to delivering accurate, insightful, and up-to-date reporting, the newspaper covers a broad range of topics from breaking news, events, to in-depth features. As one of the oldest newspapers in Canada, the Montreal Gazette continues to keep its readers informed about important happenings both locally and globally.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_MTGZ.svg",
+    "langs": ["en"],
+    "tags": [
+      "MontrealGazette",
+      "CanadianNews",
+      "LocalNews",
+      "InternationalNews",
+      "BreakingNews",
+      "Events",
+      "Features"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/montrealgazette/",
+      "twitter": "https://twitter.com/mtlgazette",
+      "youtube": "https://www.youtube.com/user/themontrealgazette",
+      "instagram": "https://www.instagram.com/montrealgazette/",
+      "linkedin": "https://www.linkedin.com/company/the-montreal-gazette/"
+    },
+    "headerBG": "#fff",
+    "primaryColor": "#016ea5"
+  },
+  "CA_VSUN": {
+    "name": "Vancouver Sun",
+    "url": "https://vancouversun.com/",
+    "est": 1912,
+    "about": "Vancouver Sun brings the latest national and international news right at your fingertips. Offering comprehensive coverage on a variety of topics, including politics, business, entertainment, sports, and more, it ensures that its readers are always updated with events and happenings from around the globe.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_VSUN.svg",
+    "langs": ["en"],
+    "tags": [
+      "VancouverSun",
+      "CanadianNews",
+      "InternationalNews",
+      "NewsUpdates",
+      "BreakingNews",
+      "Entertainment",
+      "Sports",
+      "Politics",
+      "Business"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/VancouverSun/",
+      "twitter": "https://twitter.com/VancouverSun",
+      "youtube": "https://www.youtube.com/user/VancouverSunOnline",
+      "instagram": "https://www.instagram.com/thevancouversun/"
+    },
+    "headerBG": "#fff",
+    "primaryColor": "#2f6450"
+  },
+  "CA_TPRV": {
+    "name": "The Province",
+    "url": "https://theprovince.com/",
+    "est": 1898,
+    "about": "The Province is committed to bringing the latest breaking news, updates, and headlines from national and international events. Covering diverse topics such as politics, sports, entertainment, and business, it ensures that its readers are always informed and engaged.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_TPRV.svg",
+    "langs": ["en"],
+    "tags": [
+      "TheProvince",
+      "CanadianNews",
+      "InternationalNews",
+      "NewsUpdates",
+      "BreakingNews",
+      "Entertainment",
+      "Sports",
+      "Politics",
+      "Business"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/TheProvince",
+      "twitter": "https://twitter.com/theprovince"
+    },
+    "headerBG": "#0073AD",
+    "primaryColor": "#0073AD"
+  },
+  "CA_NPST": {
+    "name": "National Post",
+    "url": "https://nationalpost.com/",
+    "est": 1998,
+    "about": "The National Post is a Canadian English-language newspaper that caters to a nationwide readership. Known for its fresh take on news, it covers national and international events, politics, sports, business, health, technology, and culture. The National Post has established itself as a leading voice in Canadian journalism, providing its readers with thought-provoking insights and comprehensive reportage.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_NPST.svg",
+    "langs": ["en"],
+    "tags": [
+      "NationalPost",
+      "CanadianNews",
+      "InternationalNews",
+      "Politics",
+      "Sports",
+      "Business",
+      "Health",
+      "Technology",
+      "Culture"
+    ],
+    "socials": {
+      "instagram": "https://www.instagram.com/nationalpost/",
+      "facebook": "https://www.facebook.com/NationalPost/",
+      "youtube": "https://www.youtube.com/user/nationalpost",
+      "twitter": "https://twitter.com/nationalpost",
+      "linkedin": "https://www.linkedin.com/company/national-post-inc."
+    },
+    "headerBG": "#ffcd05",
+    "primaryColor": "#333"
+  },
+  "CA_CLHD": {
+    "name": "Calgary Herald",
+    "url": "https://calgaryherald.com/",
+    "est": 1883,
+    "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_CLHD.svg"
+  },
+  "CA_OTCZ": {
+    "name": "Ottawa Citizen",
+    "url": "https://ottawacitizen.com/",
+    "est": 1845,
+    "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_OTCZ.svg"
+  },
+  "CA_EDJL": {
+    "name": "Edmonton Journal",
+    "url": "https://edmontonjournal.com/",
+    "est": 1903,
+    "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_EDJL.svg"
+  },
+  "CA_TSUN": {
+    "name": "Toronto Sun",
+    "url": "https://torontosun.com/",
+    "est": 1971,
+    "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_TSUN.svg"
+  },
+  "CA_LSOL": {
+    "name": "Le Soleil",
+    "url": "https://www.lesoleil.com/",
+    "est": 1896,
+    "about": "Actualités, Chroniques, Affaires, Arts, Le Mag, Sports, Hockey junior, Opinions, Protégez-Vous, Nos recommandations, Jeunesse, Maison, Auto, Balados, ULaval Nouvelles, La Vitrine, ZONE, Je m'abonne, Événements Le Soleil.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_LSOL.svg"
+  },
+  "CA_SPEC": {
+    "name": "The Hamilton Spectator",
+    "url": "https://www.thespec.com/",
+    "est": 1846,
+    "about": "Daily breaking news, local stories, life, opinion, voices from the community, events and more.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_SPEC.svg"
+  },
+  "CA_TCOL": {
+    "name": "The Times Colonist",
+    "url": "https://www.timescolonist.com/",
+    "est": 1858,
+    "about": "Chronicled the history of Victoria and Vancouver Island from the gold rush days of the 1850s to Victoria's present status. Lively blend of local news and informed commentary.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_TCOL.svg"
+  },
+  "CA_LFRP": {
+    "name": "The London Free Press",
+    "url": "https://lfpress.com/",
+    "est": 1849,
+    "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_LFRP.svg"
+  },
+  "CA_WNST": {
+    "name": "Windsor Star",
+    "url": "https://windsorstar.com/",
+    "est": 1888,
+    "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_WNST.svg"
+  },
+  "CA_EDSN": {
+    "name": "Edmonton Sun",
+    "url": "https://edmontonsun.com/",
+    "est": 1978,
+    "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_EDSN.svg"
+  },
+  "CA_TREC": {
+    "name": "Waterloo Region Record",
+    "url": "https://www.therecord.com",
+    "est": 1878,
+    "about": "Daily breaking news, local stories, life, opinion, voices from the community, events and more.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_TREC.svg"
+  },
+  "CA_SPHX": {
+    "name": "The StarPhoenix",
+    "url": "https://thestarphoenix.com/",
+    "est": 1902,
+    "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_SPHX.svg"
+  },
+  "CA_CSUN": {
+    "name": "Calgary Sun",
+    "url": "https://calgarysun.com/",
+    "est": 1980,
+    "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_CSUN.svg"
+  },
+  "CA_RLPT": {
+    "name": "Regina Leader-Post",
+    "url": "https://leaderpost.com/",
+    "est": 1883,
+    "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_RLPT.svg"
+  },
+  "CA_LCDS": {
+    "name": "Le Courrier du Sud",
+    "url": "https://www.lecourrierdusud.ca/",
+    "est": 1947,
+    "about": "Le Courrier du Sud, appartenant à Gravité Media, est un journal hebdomadaire distribué gratuitement. Il offre une couverture complète de l'actualité locale et régionale dans la région de Longueuil, notamment les nouvelles de la communauté, la politique, les événements culturels, les sports et plus encore.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_LCDS.svg",
+    "langs": ["fr"],
+    "tags": [
+      "LeCourrierDuSud",
+      "ActualitéLocale",
+      "Longueuil",
+      "JournalHebdomadaire",
+      "GravitéMedia",
+      "NouvellesCommunauté",
+      "Politique",
+      "Culture",
+      "Sports"
+    ],
+    "socials": {
+      "email": "mailto:redactioncd@gravitemedia.com",
+      "facebook": "https://www.facebook.com/lecourrierdusud/",
+      "twitter": "http://twitter.com/LeCourrierDuSud"
+    },
+    "headerBG": "#fff",
+    "primaryColor": "#d64c99"
+  },
+  "CA_NIND": {
+    "name": "CanIndia News",
+    "url": "https://www.canindia.com/",
+    "est": 1999,
+    "about": "CanIndia News provides a unique perspective, representing the viewpoint of the South Asian community in Canada. It covers a broad range of topics including current events, business, sports, and entertainment, with a special focus on issues and stories relevant to the South Asian diaspora. Through its insightful coverage, CanIndia News serves as a crucial link connecting the South Asian community with wider Canadian society.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_NIND.png",
+    "langs": ["en"],
+    "tags": [
+      "CanIndiaNews",
+      "SouthAsianNews",
+      "CanadianNews",
+      "DiasporaNews",
+      "CurrentEvents",
+      "BusinessNews",
+      "EntertainmentNews"
+    ],
+    "socials": {
+      "email": "mailto:Info@CanIndia.com",
+      "facebook": "https://facebook.com/canindianews",
+      "instagram": "https://www.instagram.com/CanIndiaNews",
+      "twitter": "https://twitter.com/canindianews"
+    },
+    "headerBG": "#dd3333",
+    "primaryColor": "#dd3333"
+  },
+  "CA_TCJN": {
+    "name": "The Canadian Jewish News",
+    "url": "https://thecjn.ca/",
+    "est": 1960,
+    "about": "Producing content that matters to the diverse community of Jews in Canada, through articles, podcasts and events.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_TCJN.png",
+    "logoWidth": 415,
+    "logoHeight": 36
+  },
+  "CA_CORR": {
+    "name": "Corriere Canadese",
+    "url": "https://www.corriere.ca/",
+    "est": 1954,
+    "about": "Il quotidiano italiano in Canada.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_CORR.png"
+  },
+  "CA_HRZN": {
+    "name": "Horizon Weekly",
+    "url": "https://horizonweekly.ca",
+    "est": 1979,
+    "about": "The official publication of Canada's Armenian Revolutionary Federation (ARF) Central Committee.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_HRZN.png"
+  },
+  "CA_KRTM": {
+    "name": "The Korea Times Daily",
+    "url": "https://www.koreatimes.net/",
+    "est": 1971,
+    "about": "The first and longest-running Korean language daily newspaper in Canada.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_KRTM.png"
+  },
+  "CA_BJST": {
+    "name": "Bejsment",
+    "url": "https://bejsment.com/",
+    "est": 2011,
+    "about": "Bejsment to cyfrowa platforma Wiadomości, wybitnej polskiej gazety wydawanej w Ontario, w Kanadzie. Dzięki silnej obecności w Internecie, pomaga ona diaspory polskiej w Kanadzie pozostać w kontakcie ze swoimi korzeniami i informować o swoim nowym domu. Bejsment pokrywa szeroki zakres tematów, od wiadomości i wydarzeń w polskiej społeczności, po aktualności z Polski i sprawy międzynarodowe.",
+    "emos": ["📰", "🇨🇦", "🇵🇱"],
+    "logo": "/img/ns/CA_BJST.png",
+    "logoWidth": 225,
+    "logoHeight": 45,
+    "langs": ["pl"],
+    "tags": [
+      "Bejsment",
+      "Wiadomości",
+      "PolskieWiadomości",
+      "WiadomościKanada",
+      "WiadomościOntario",
+      "WiadomościMiędzynarodowe",
+      "WiadomościSpołeczności"
+    ],
+    "socials": {
+      "email": "mailto:redakcja@bejsment.com",
+      "facebook": "https://pl-pl.facebook.com/Bejsment/",
+      "twitter": "https://twitter.com/BejsmentToronto"
+    },
+    "headerBG": "#fff",
+    "primaryColor": "#337ab7"
+  },
+  "CA_RSEX": {
+    "name": "The Russian Express",
+    "url": "https://russianexpress.net",
+    "est": 2002,
+    "about": "Toronto community weekly newspaper.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_RSEX.png"
+  },
+  "CA_SLMT": {
+    "name": "Salam Toronto",
+    "url": "https://salamtoronto.ca/",
+    "est": 2000,
+    "about": "The first Persian-English bilingual weekly publication in Canada.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_SLMT.png"
+  },
+  "CA_BNGT": {
+    "name": "Bengali Times",
+    "url": "https://www.thebengalitimes.com/",
+    "est": 2008,
+    "about": "The first and most popular Bengali online newspaper in Canada.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_BNGT.png"
+  },
+  "CA_TCST": {
+    "name": "The Coast",
+    "url": "https://www.thecoast.ca/",
+    "est": 1993,
+    "about": "The Coast is essential media for Kjipuktuk/Halifax.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_TCST.png"
+  },
+  "CA_STRT": {
+    "name": "The Georgia Straight",
+    "url": "https://www.straight.com/",
+    "est": 1967,
+    "about": "No other city publication knows more about Vancouver than the Georgia Straight.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_STRT.png"
+  },
+  "CA_GRPV": {
+    "name": "The Grapevine",
+    "url": "https://grapevinepublishing.ca/",
+    "est": 2004,
+    "about": "The Grapevine is a community-driven arts and culture publisher serving the Annapolis Valley.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_GRPV.png"
+  },
+  "CA_NWMG": {
+    "name": "NOW Magazine",
+    "url": "https://nowtoronto.com/",
+    "est": 1981,
+    "about": "Toronto street magazine for alternative news, entertainment, events, and food.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_NWMG.svg",
+    "headerBG": "#011543",
+    "primaryColor": "#011543"
+  },
+  "CA_SALA": {
+    "name": "Salam Toronto",
+    "url": "https://salamtoronto.ca/",
+    "est": 2000,
+    "about": "The first Farsi-English bilingual weekly publications based in the Greater Toronto Area.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_NWMG.svg",
+    "headerBG": "#011543",
+    "primaryColor": "#011543"
+  },
+  "CA_ACNV": {
+    "name": "Acadie Nouvelle",
+    "url": "https://www.acadienouvelle.com/",
+    "est": 1984,
+    "about": "L'actualité provinciale, régionale, sportive, économique et culturelle du Nouveau-Brunswick.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_NWMG.svg",
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_BRUN": {
+    "name": "The Brunswickan",
+    "url": "https://thebruns.ca/",
+    "est": 1867,
+    "about": "The official student newspaper of the Fredericton campus of the University of New Brunswick.",
+    "emos": ["📰", "🇨🇦"],
+    "logo": "/img/ns/CA_NWMG.svg",
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_LEMA": {
+    "name": "Le Moniteur Acadien",
+    "url": "https://moniteuracadien.com/",
+    "est": 1867,
+    "about": "Un journal francophone originaire de Shediac, Nouveau-Brunswick offrant des nouvelles pertinentes aux peuples acadiens.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_LEFR": {
+    "name": "Le Franco",
+    "url": "https://lefranco.ab.ca/",
+    "est": 1928,
+    "about": "Le seul média francophone consacré à l'actualité albertaine au Canada.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_BRTY": {
+    "name": "Barrie Today",
+    "url": "https://www.barrietoday.com/",
+    "est": 2016,
+    "about": "Barrie news, events, information and more.  Local news from local journalists, photos, event coverage, weekly flyers, entertainment.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_BAYT": {
+    "name": "Bay Today",
+    "url": "https://www.baytoday.ca/",
+    "est": 2003,
+    "about": "North Bay, nipissing, news, editorials, events, calendar, maps, businesses, directory, weather, sports, classified ads, accommodations, apartments, real estate, coupons, northern Ontario, Canada, Algoma, entertainment.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_BRAD": {
+    "name": "Bradford Today",
+    "url": "https://www.bradfordtoday.ca/",
+    "est": 2019,
+    "about": "Regularly updated local news from local journalists along with photos, video, sports, events, classifieds, weekly flyers, entertainment.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_BRLT": {
+    "name": "Burlington Today",
+    "url": "https://www.burlingtontoday.com/",
+    "est": 2022,
+    "about": "Burlington's newest source for local news, sports, business community information, obituaries and more.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_CMBT": {
+    "name": "Cambridge Today",
+    "url": "https://www.cambridgetoday.ca/",
+    "est": 2021,
+    "about": "News, events, weather, obituaries and more - all focused on Cambridge.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_COLT": {
+    "name": "Collingwood Today",
+    "url": "https://www.collingwoodtoday.ca/",
+    "est": 2021,
+    "about": "Collingwood's online source for local news, obituaries, events and more.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_ELKT": {
+    "name": "Elliot Lake Today",
+    "url": "https://www.elliotlaketoday.com/",
+    "est": 2017,
+    "about": "Elliot Lake News, Weather, Obituaries and more.  Elliot Lake's online source for community information, updated regularly.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_ELFT": {
+    "name": "Elora & Fergus Today",
+    "url": "https://www.elorafergustoday.com/",
+    "est": 2021,
+    "about": "EloraFergusToday is your go-to source for local news in  the Elora and Fergus communities, offering the latest updates on the events, issues, people and businesses that matter most.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_GUET": {
+    "name": "Guelph Today",
+    "url": "https://www.guelphtoday.com/",
+    "est": 2016,
+    "about": "Guelph news, events, information and more.  Local news from local journalists, photos, event coverage, weekly flyers and entertainment.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_HHLT": {
+    "name": "Halton Hills Today",
+    "url": "https://www.haltonhillstoday.ca/",
+    "est": 2022,
+    "about": "HaltonHillsToday is your go-to source for local news in Halton Hills, offering the latest updates on the events, issues, people and businesses that matter most in our community.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_INFT": {
+    "name": "Innisfil Today",
+    "url": "https://www.innisfiltoday.ca",
+    "est": 2020,
+    "about": "News, events, weather, obituaries and more - all focused on Innisfil.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_MDLT": {
+    "name": "Midland Today",
+    "url": "https://www.midlandtoday.ca/",
+    "est": 2020,
+    "about": "Midland's source for local news and community information.  Includes original reporting, sports, entertainment, obituaries, weather, and more.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_NRKT": {
+    "name": "Newmarket Today",
+    "url": "https://www.newmarkettoday.ca/",
+    "est": 2018,
+    "about": "Newmarket's online news source, including local news from local journalists, photos, video, sports, events, classifieds, weekly flyers, and entertainment.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_NOTL": {
+    "name": "Niagara-on-the-Lake Local",
+    "url": "https://www.notllocal.com/",
+    "est": 2019,
+    "about": "Niagara-on-the-Lake news, events, information and more.  Local news from local journalists, photos, event coverage, weekly flyers and entertainment.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_NROB": {
+    "name": "Northern Ontario Business",
+    "url": "https://www.northernontariobusiness.com/",
+    "est": 1980,
+    "about": "Northern Ontario Business publication provides Northern Ontario with relevant, current, and insightful editorial content and business news and information.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_ORIL": {
+    "name": "Orillia Matters",
+    "url": "https://www.orilliamatters.com/",
+    "est": 2018,
+    "about": "Orillia's online news source.  Local news from local journalists, photos, video, sports, events, classifieds, weekly flyers and entertainment.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_PLHT": {
+    "name": "Pelham Today",
+    "url": "https://www.pelhamtoday.ca/",
+    "est": 1997,
+    "about": "Pelham's source for local news, sports, business community information, obituaries and more.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_SOTY": {
+    "name": "Soo Today",
+    "url": "https://www.sootoday.com/",
+    "est": 2002,
+    "about": "Sault Ste. Marie's largest news source. Local news from local journalists, photos, video, sports, events, classifieds, weekly flyers and entertainment.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_STRF": {
+    "name": "Stratford Today",
+    "url": "https://www.stratfordtoday.ca/",
+    "est": 2022,
+    "about": "The news that matters most to the Stratford community, as it happens.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_SUDY": {
+    "name": "Sudbury.com",
+    "url": "https://www.sudbury.com/",
+    "est": 1998,
+    "about": "Sudbury's number one source for local news. Stay current with news, sports, entertainment, classifieds, events and more.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_THOR": {
+    "name": "Thorold Today",
+    "url": "https://www.thoroldtoday.ca/",
+    "est": 2021,
+    "about": "Thorold's local news source.  Local news from local journalists, photos, video, sports, weekly flyers, entertainment and more.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_TIMM": {
+    "name": "Timmins Today",
+    "url": "https://www.timminstoday.com/",
+    "est": 2009,
+    "about": "Timmins news, events, information and more.  Local news from local journalists, photos, event coverage, weekly flyers, entertainment.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_LONG": {
+    "name": "Longmont Leader",
+    "url": "https://www.longmontleader.com/",
+    "est": 2020,
+    "about": "Longmont's local news source. Local news from local journalists, photos, video, sports, entertainment and more.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_SOOL": {
+    "name": "Soo Leader",
+    "url": "https://www.sooleader.com/",
+    "est": 2022,
+    "about": "Soo Leader is your go-to source for local news in Sault Ste Marie, Michigan, offering the latest updates on the events, issues, people and businesses that matter most in our community.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_OBSV": {
+    "name": "The Sarnia Observer",
+    "url": "https://www.theobserver.ca/",
+    "est": 1853,
+    "about": "A newspaper that covers the latest news, sports, entertainment and lifestyle stories from Sarnia-Lambton, Ontario.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_KNCD": {
+    "name": "Kincardine News",
+    "url": "https://www.kincardinenews.com/",
+    "est": 1857,
+    "about": "All the latest breaking Kincardine news, stories and updates affecting Kincardine today.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_CBC": {
+    "name": "CBC",
+    "url": "https://www.cbc.ca/",
+    "est": 1936,
+    "about": "Canada's home for breaking and in-depth coverage of local, national and international news.",
+    "emos": ["📰", "🇨🇦"],
+    "headerBG": "#003366",
+    "primaryColor": "#011543"
+  },
+  "CA_GLBL": {
+    "name": "Global News",
+    "url": "https://globalnews.ca/",
+    "est": 1994,
+    "about": "Global News provides breaking news & current latest Canadian news headlines; national weather forecasts & predictions, local news videos, money and financial news; sports stats and scores.",
+    "emos": ["📰", "🇨🇦"],
+    "langs": ["en"]
+  }
+}

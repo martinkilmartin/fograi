@@ -690,7 +690,7 @@ export const CANewsSources = new Map<string, NewsSource>([
     },
   ],
   [
-    'CA_STRT',
+    'CA_GRPV',
     {
       name: 'The Grapevine',
       url: 'https://grapevinepublishing.ca/',

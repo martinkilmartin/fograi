@@ -1,0 +1,146 @@
+{
+  "cbc": {
+    "name": "CBC/Radio-Canada",
+    "nationality": "Canadian",
+    "url": "https://www.cbc.radio-canada.ca/",
+    "about": "Canada’s national public broadcaster offering TV, radio, and digital news in English and French."
+  },
+  "bell": {
+    "name": "Bell Media",
+    "nationality": "Canadian",
+    "url": "https://www.bellmedia.ca/",
+    "about": "A major multimedia company operating CTV, BNN Bloomberg, radio stations, and digital platforms."
+  },
+  "rogers": {
+    "name": "Rogers Sports & Media",
+    "nationality": "Canadian",
+    "url": "https://www.rogerssportsandmedia.com/",
+    "about": "Owns Citytv, OMNI, and radio stations; part of Rogers Communications."
+  },
+  "corus": {
+    "name": "Corus Entertainment",
+    "nationality": "Canadian",
+    "url": "https://www.corusent.com/",
+    "about": "Parent company of Global News and specialty TV channels; controlled by the Shaw family."
+  },
+  "postmedia": {
+    "name": "Postmedia Network",
+    "nationality": "foreign-owned",
+    "url": "https://www.postmedia.com/",
+    "about": "Owns dozens of major newspapers across Canada; majority-owned by U.S. hedge funds."
+  },
+  "torstar": {
+    "name": "Torstar Corporation",
+    "nationality": "Canadian",
+    "url": "https://www.torstar.com/",
+    "about": "Publisher of the Toronto Star and numerous community newspapers."
+  },
+  "quebecor": {
+    "name": "Quebecor Media",
+    "nationality": "Canadian",
+    "url": "https://www.quebecor.com/",
+    "about": "Media and telecommunications company in Québec; owns Journal de Montréal and TVA."
+  },
+  "glacier": {
+    "name": "Glacier Media",
+    "nationality": "Canadian",
+    "url": "https://www.glaciermedia.ca/",
+    "about": "Publishes regional newspapers in British Columbia and Western Canada."
+  },
+  "blackpress": {
+    "name": "Black Press",
+    "nationality": "Canadian",
+    "url": "https://www.blackpressmedia.com/",
+    "about": "One of the largest independent local news publishers in Western Canada and parts of the U.S."
+  },
+  "saltwire": {
+    "name": "SaltWire Network",
+    "nationality": "Canadian",
+    "url": "https://www.saltwire.com/",
+    "about": "Atlantic Canada’s largest media group, publishing newspapers like the Chronicle Herald."
+  },
+  "fp": {
+    "name": "FP Canadian Newspapers",
+    "nationality": "Canadian",
+    "url": "https://www.winnipegfreepress.com/",
+    "about": "Publisher of the Winnipeg Free Press and Brandon Sun in Manitoba."
+  },
+  "continental": {
+    "name": "Continental Newspapers",
+    "nationality": "Canadian",
+    "url": "https://www.kelownadailycourier.ca/",
+    "about": "Small publisher of regional daily newspapers in Ontario and British Columbia."
+  },
+  "village": {
+    "name": "Village Media",
+    "nationality": "Canadian",
+    "url": "https://www.villagemedia.ca/",
+    "about": "Owns dozens of hyperlocal online news sites across Ontario and Alberta."
+  },
+  "overstory": {
+    "name": "Overstory Media Group",
+    "nationality": "Canadian",
+    "url": "https://www.overstorymedia.com/",
+    "about": "Digital-first community media network, owner of The Georgia Straight and other outlets."
+  },
+  "gmi": {
+    "name": "Gonez Media Inc. (GMI)",
+    "nationality": "Canadian",
+    "url": "https://www.gonezmedia.com/",
+    "about": "Digital media company founded by Brandon Gonez, owns NOW Magazine."
+  },
+  "cn2i": {
+    "name": "Coopérative nationale de l’information indépendante (CN2i)",
+    "nationality": "Canadian",
+    "url": "https://www.cn2i.ca/",
+    "about": "Cooperative of six major French-language newspapers in Québec, including Le Soleil."
+  },
+  "gravite": {
+    "name": "Gravité Média",
+    "nationality": "Canadian",
+    "url": "https://www.gravitemedia.com/",
+    "about": "Publisher of community newspapers in Greater Montréal, such as Le Courrier du Sud."
+  },
+  "brunswick": {
+    "name": "Brunswick News Inc.",
+    "nationality": "Canadian",
+    "url": "https://tj.news/",
+    "about": "New Brunswick news group, formerly owned by the Irving family, now part of Postmedia."
+  },
+  "globe": {
+    "name": "The Globe and Mail",
+    "nationality": "Canadian",
+    "url": "https://www.theglobeandmail.com/",
+    "about": "Canada’s national newspaper of record, privately owned by Woodbridge Company Ltd."
+  },
+  "lapresse": {
+    "name": "La Presse",
+    "nationality": "Canadian",
+    "url": "https://www.lapresse.ca/",
+    "about": "Independent, nonprofit French-language digital news outlet based in Montréal."
+  },
+  "ledevoir": {
+    "name": "Le Devoir",
+    "nationality": "Canadian",
+    "url": "https://www.ledevoir.com/",
+    "about": "Independent French-language newspaper focused on thoughtful analysis and editorial rigor."
+  },
+  "canindia": {
+    "name": "World Media Corp (Canada) Inc.",
+    "nationality": "Canadian",
+    "url": "https://www.canindia.com/",
+    "about": "Publishes CanIndia News for the South Asian diaspora in Canada."
+  },
+  "koreatimes": {
+    "name": "The Korea Times & Hankook Ilbo (Canada) Ltd.",
+    "nationality": "foreign-owned",
+    "url": "https://www.koreatimes.net/",
+    "about": "Korean-language newspaper serving Canada’s Korean community; affiliated with Korean parent company."
+  },
+  "independent": {
+    "name": "Independent",
+    "nationality": "Canadian",
+    "url": "",
+    "about": "Used for standalone or community outlets not owned by any major group."
+  }
+}
