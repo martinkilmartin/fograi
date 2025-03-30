@@ -3,277 +3,594 @@
     "name": "CBC/Radio-Canada",
     "nationality": "Canadian",
     "url": "https://www.cbc.radio-canada.ca/",
-    "about": "Canada's national public broadcaster offering TV, radio, and digital news in English and French."
+    "about": "Canada's national public broadcaster offering TV, radio, and digital news in English and French.",
+    "founded": 1936,
+    "founder": "Government of Canada",
+    "socials": {
+      "facebook": "https://www.facebook.com/cbc",
+      "twitter": "https://twitter.com/CBC",
+      "instagram": "https://www.instagram.com/cbc"
+    }
   },
   "bell": {
     "name": "Bell Media",
     "nationality": "Canadian",
     "url": "https://www.bellmedia.ca/",
-    "about": "A major multimedia company operating CTV, BNN Bloomberg, radio stations, and digital platforms."
+    "about": "A major multimedia company operating CTV, BNN Bloomberg, radio stations, and digital platforms.",
+    "founded": 1960,
+    "founder": "Edward Samuel 'Ted' Rogers Jr.",
+    "socials": {
+      "facebook": "https://www.facebook.com/BellMediaPR",
+      "twitter": "https://twitter.com/BellMediaPR",
+      "linkedin": "https://www.linkedin.com/company/bell-media/"
+    }
   },
   "rogers": {
     "name": "Rogers Sports & Media",
     "nationality": "Canadian",
     "url": "https://www.rogerssportsandmedia.com/",
-    "about": "Owns Citytv, OMNI, and radio stations; part of Rogers Communications."
+    "about": "Owns Citytv, OMNI, and radio stations; part of Rogers Communications.",
+    "founded": 1960,
+    "founder": "Edward Samuel 'Ted' Rogers Jr.",
+    "socials": {
+      "facebook": "https://www.facebook.com/RogersMediaPR",
+      "twitter": "https://twitter.com/RogersMediaPR",
+      "linkedin": "https://www.linkedin.com/company/rogers-media-inc-/"
+    }
   },
   "corus": {
     "name": "Corus Entertainment",
     "nationality": "Canadian",
     "url": "https://www.corusent.com/",
-    "about": "Parent company of Global News and specialty TV channels; controlled by the Shaw family."
+    "about": "Parent company of Global News and specialty TV channels; controlled by the Shaw family.",
+    "founded": 1999,
+    "founder": "JR Shaw",
+    "socials": {
+      "facebook": "https://www.facebook.com/Corus",
+      "twitter": "https://twitter.com/coruspr",
+      "linkedin": "https://www.linkedin.com/company/corus-entertainment/"
+    }
   },
   "postmedia": {
     "name": "Postmedia Network",
     "nationality": "foreign-owned",
     "url": "https://www.postmedia.com/",
-    "about": "Owns dozens of major newspapers across Canada; majority-owned by U.S. hedge funds."
+    "about": "Owns dozens of major newspapers across Canada; majority-owned by U.S. hedge funds.",
+    "founded": 2010,
+    "founder": "Paul Godfrey",
+    "socials": {
+      "facebook": "https://www.facebook.com/PostmediaNetwork",
+      "twitter": "https://twitter.com/Postmedia",
+      "linkedin": "https://www.linkedin.com/company/postmedia-network-inc-/"
+    }
   },
   "torstar": {
     "name": "Torstar Corporation",
     "nationality": "Canadian",
     "url": "https://www.torstar.com/",
-    "about": "Publisher of the Toronto Star and numerous community newspapers."
+    "about": "Publisher of the Toronto Star and numerous community newspapers.",
+    "founded": 1892,
+    "founder": "Joseph E. Atkinson",
+    "socials": {
+      "facebook": "https://www.facebook.com/TorstarCorp",
+      "twitter": "https://twitter.com/TorstarCorp",
+      "linkedin": "https://www.linkedin.com/company/torstar-corporation/"
+    }
   },
   "quebecor": {
     "name": "Quebecor Media",
     "nationality": "Canadian",
     "url": "https://www.quebecor.com/",
-    "about": "Media and telecommunications company in Québec; owns Journal de Montréal and TVA."
+    "about": "Media and telecommunications company in Québec; owns Journal de Montréal and TVA.",
+    "founded": 1950,
+    "founder": "Pierre Péladeau",
+    "socials": {
+      "facebook": "https://www.facebook.com/Quebecor",
+      "twitter": "https://twitter.com/Quebecor",
+      "linkedin": "https://www.linkedin.com/company/quebecor/"
+    }
   },
   "glacier": {
     "name": "Glacier Media",
     "nationality": "Canadian",
     "url": "https://www.glaciermedia.ca/",
-    "about": "Publishes regional newspapers in British Columbia and Western Canada."
+    "about": "Publishes regional newspapers in British Columbia and Western Canada.",
+    "founded": 1988,
+    "founder": "Sam Grippo",
+    "socials": {
+      "facebook": "https://www.facebook.com/GlacierMediaGroup",
+      "twitter": "https://twitter.com/GlacierMediaGrp",
+      "linkedin": "https://www.linkedin.com/company/glacier-media-group/"
+    }
   },
   "blackpress": {
     "name": "Black Press",
     "nationality": "Canadian",
     "url": "https://www.blackpressmedia.com/",
-    "about": "One of the largest independent local news publishers in Western Canada and parts of the U.S."
+    "about": "One of the largest independent local news publishers in Western Canada and parts of the U.S.",
+    "founded": 1975,
+    "founder": "David Black",
+    "socials": {
+      "facebook": "https://www.facebook.com/BlackPressMedia",
+      "twitter": "https://twitter.com/BlackPressMedia",
+      "linkedin": "https://www.linkedin.com/company/black-press-media/"
+    }
   },
   "saltwire": {
     "name": "SaltWire Network",
     "nationality": "Canadian",
     "url": "https://www.saltwire.com/",
-    "about": "Atlantic Canada's largest media group, publishing newspapers like the Chronicle Herald."
+    "about": "Atlantic Canada's largest media group, publishing newspapers like the Chronicle Herald.",
+    "founded": 2017,
+    "founder": "Mark Lever",
+    "socials": {
+      "facebook": "https://www.facebook.com/SaltWireNetwork",
+      "twitter": "https://twitter.com/SaltWireNetwork",
+      "linkedin": "https://www.linkedin.com/company/saltwire-network/"
+    }
   },
   "fp": {
     "name": "FP Canadian Newspapers",
     "nationality": "Canadian",
     "url": "https://www.winnipegfreepress.com/",
-    "about": "Publisher of the Winnipeg Free Press and Brandon Sun in Manitoba."
+    "about": "Publisher of the Winnipeg Free Press and Brandon Sun in Manitoba.",
+    "founded": 1872,
+    "founder": "William Fisher Luxton and John A. Kenny",
+    "socials": {
+      "facebook": "https://www.facebook.com/winnipegfreepress",
+      "twitter": "https://twitter.com/WinnipegNews",
+      "linkedin": "https://www.linkedin.com/company/winnipeg-free-press/"
+    }
   },
   "continental": {
     "name": "Continental Newspapers",
     "nationality": "Canadian",
     "url": "https://www.kelownadailycourier.ca/",
-    "about": "Small publisher of regional daily newspapers in Ontario and British Columbia."
+    "about": "A publisher of regional daily newspapers in British Columbia and Ontario.",
+    "founded": 1999,
+    "founder": "David Radler",
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/continental-newspapers"
+    }
   },
   "village": {
     "name": "Village Media",
     "nationality": "Canadian",
     "url": "https://www.villagemedia.ca/",
-    "about": "Owns dozens of hyperlocal online news sites across Ontario and Alberta."
+    "about": "Owns hyperlocal online news sites across Ontario and Alberta.",
+    "founded": 2012,
+    "founder": "Jeff Elgie",
+    "socials": {
+      "facebook": "https://www.facebook.com/villagemedia",
+      "twitter": "https://twitter.com/villagemedia",
+      "linkedin": "https://www.linkedin.com/company/village-media"
+    }
   },
   "overstory": {
     "name": "Overstory Media Group",
     "nationality": "Canadian",
     "url": "https://www.overstorymedia.com/",
-    "about": "Digital-first community media network, owner of The Georgia Straight and other outlets."
+    "about": "A digital-first community media network.",
+    "founded": 2021,
+    "founders": ["Andrew Wilkinson", "Farhan Mohamed"],
+    "socials": {
+      "facebook": "https://www.facebook.com/overstorymediagroup",
+      "twitter": "https://twitter.com/thisisoverstory",
+      "linkedin": "https://www.linkedin.com/company/overstory-media-group"
+    }
   },
   "gmi": {
     "name": "Gonez Media Inc. (GMI)",
     "nationality": "Canadian",
     "url": "https://www.gonezmedia.com/",
-    "about": "Digital media company founded by Brandon Gonez, owns NOW Magazine."
+    "about": "A digital media company founded by Brandon Gonez.",
+    "founded": 2021,
+    "founder": "Brandon Gonez",
+    "socials": {
+      "facebook": "https://www.facebook.com/gonezmedia",
+      "twitter": "https://twitter.com/gonezmedia",
+      "linkedin": "https://www.linkedin.com/company/gonez-media-inc"
+    }
   },
   "cn2i": {
     "name": "Coopérative nationale de l'information indépendante (CN2i)",
     "nationality": "Canadian",
     "url": "https://www.cn2i.ca/",
-    "about": "Cooperative of six major French-language newspapers in Québec, including Le Soleil."
+    "about": "A cooperative of six major French-language newspapers in Québec.",
+    "founded": 2020,
+    "founder": "Consortium of six newspapers",
+    "socials": {
+      "facebook": "https://www.facebook.com/cn2i.ca",
+      "twitter": "https://twitter.com/cn2i_ca",
+      "linkedin": "https://www.linkedin.com/company/cn2i"
+    }
   },
   "gravite": {
     "name": "Gravité Média",
     "nationality": "Canadian",
     "url": "https://www.gravitemedia.com/",
-    "about": "Publisher of community newspapers in Greater Montréal, such as Le Courrier du Sud."
+    "about": "Publisher of community newspapers in Greater Montréal.",
+    "founded": 2016,
+    "founder": "Jean-Benoît Nadeau",
+    "socials": {
+      "facebook": "https://www.facebook.com/gravitemedia",
+      "twitter": "https://twitter.com/gravitemedia",
+      "linkedin": "https://www.linkedin.com/company/gravite-media"
+    }
   },
   "brunswick": {
     "name": "Brunswick News Inc.",
     "nationality": "Canadian",
     "url": "https://tj.news/",
-    "about": "New Brunswick news group, formerly owned by the Irving family, now part of Postmedia."
+    "about": "New Brunswick news group, formerly owned by the Irving family.",
+    "founded": 1998,
+    "founders": ["Arthur Irving", "James K. Irving", "John E. Irving"],
+    "socials": {
+      "facebook": "https://www.facebook.com/brunswicknews",
+      "twitter": "https://twitter.com/brunswicknews",
+      "linkedin": "https://www.linkedin.com/company/brunswick-news-inc"
+    }
   },
   "globe": {
     "name": "The Globe and Mail",
     "nationality": "Canadian",
     "url": "https://www.theglobeandmail.com/",
-    "about": "Canada's national newspaper of record, privately owned by Woodbridge Company Ltd."
+    "about": "Canada's national newspaper of record.",
+    "founded": 1844,
+    "founder": "George Brown",
+    "socials": {
+      "facebook": "https://www.facebook.com/theglobeandmail",
+      "twitter": "https://twitter.com/globeandmail",
+      "linkedin": "https://www.linkedin.com/company/the-globe-and-mail"
+    }
   },
   "lapresse": {
     "name": "La Presse",
     "nationality": "Canadian",
     "url": "https://www.lapresse.ca/",
-    "about": "Independent, nonprofit French-language digital news outlet based in Montréal."
+    "about": "Independent French-language digital news outlet based in Montréal.",
+    "founded": 1884,
+    "founder": "William-Edmond Blumhart",
+    "socials": {
+      "facebook": "https://www.facebook.com/lapresse",
+      "twitter": "https://twitter.com/lapresse",
+      "linkedin": "https://www.linkedin.com/company/la-presse"
+    }
   },
   "ledevoir": {
     "name": "Le Devoir",
     "nationality": "Canadian",
     "url": "https://www.ledevoir.com/",
-    "about": "Independent French-language newspaper focused on thoughtful analysis and editorial rigor."
+    "about": "Independent French-language newspaper focused on analysis and editorial rigor.",
+    "founded": 1910,
+    "founder": "Henri Bourassa",
+    "socials": {
+      "facebook": "https://www.facebook.com/ledevoir",
+      "twitter": "https://twitter.com/ledevoir",
+      "linkedin": "https://www.linkedin.com/company/le-devoir"
+    }
   },
   "canindia": {
     "name": "World Media Corp (Canada) Inc.",
     "nationality": "Canadian",
     "url": "https://www.canindia.com/",
-    "about": "Publishes CanIndia News for the South Asian diaspora in Canada."
+    "about": "Publishes CanIndia News for the South Asian diaspora in Canada.",
+    "founded": 1999,
+    "founder": "Unknown",
+    "socials": {
+      "facebook": "https://www.facebook.com/CanIndiaNews",
+      "twitter": "https://twitter.com/CanIndia",
+      "linkedin": "https://www.linkedin.com/company/canindia-news"
+    }
   },
   "koreatimes": {
     "name": "The Korea Times & Hankook Ilbo (Canada) Ltd.",
     "nationality": "foreign-owned",
     "url": "https://www.koreatimes.net/",
-    "about": "Korean-language newspaper serving Canada's Korean community; affiliated with Korean parent company."
+    "about": "Korean-language newspaper serving Canada's Korean community; affiliated with its Korean parent company.",
+    "founded": "Information not available",
+    "founder": "Information not available",
+    "socials": {
+      "facebook": "https://www.facebook.com/koreatimescanada",
+      "twitter": "https://twitter.com/koreatimesca",
+      "linkedin": "https://www.linkedin.com/company/korea-times-canada"
+    }
   },
   "metroland": {
     "name": "Metroland Media Group",
     "nationality": "Canadian",
     "url": "https://www.metroland.com/",
-    "about": "Regional publisher in Ontario formerly under Torstar, known for local papers like Guelph Mercury and others."
+    "about": "Regional publisher in Ontario known for local papers like Guelph Mercury and others.",
+    "founded": 1981,
+    "founder": "Formed through the merger of Metrospan Community Newspapers and Inland Publishing Company",
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/metroland"
+    }
   },
   "narwhal": {
     "name": "The Narwhal",
     "nationality": "Canadian",
     "url": "https://thenarwhal.ca/",
-    "about": "Non-profit environmental investigative journalism outlet in Canada."
+    "about": "Non-profit environmental investigative journalism outlet in Canada.",
+    "founded": 2018,
+    "founders": ["Emma Gilchrist", "Carol Linnitt"],
+    "socials": {
+      "facebook": "https://www.facebook.com/thenarwhalca",
+      "twitter": "https://twitter.com/TheNarwhalCA",
+      "instagram": "https://www.instagram.com/thenarwhalca",
+      "linkedin": "https://www.linkedin.com/company/the-narwhal"
+    }
   },
   "walrus": {
     "name": "The Walrus",
     "nationality": "Canadian",
     "url": "https://thewalrus.ca/",
-    "about": "Independent Canadian magazine covering current affairs, culture, and ideas."
+    "about": "Independent Canadian magazine covering current affairs, culture, and ideas.",
+    "founded": 2003,
+    "founder": "The Walrus Foundation",
+    "socials": {
+      "facebook": "https://www.facebook.com/walrusmagazine",
+      "twitter": "https://twitter.com/walrusmagazine",
+      "instagram": "https://www.instagram.com/walrusmagazine",
+      "linkedin": "https://www.linkedin.com/company/the-walrus"
+    }
   },
   "pressprogress": {
     "name": "PressProgress",
     "nationality": "Canadian",
     "url": "https://pressprogress.ca/",
-    "about": "Investigative journalism project of the Broadbent Institute focused on progressive issues in Canada."
+    "about": "Investigative journalism project of the Broadbent Institute focused on progressive issues in Canada.",
+    "founded": 2013,
+    "founder": "Broadbent Institute",
+    "socials": {
+      "facebook": "https://www.facebook.com/pressprogress",
+      "twitter": "https://twitter.com/pressprogress",
+      "linkedin": "https://www.linkedin.com/company/pressprogress"
+    }
   },
   "ipolitics": {
     "name": "iPolitics",
     "nationality": "Canadian",
     "url": "https://ipolitics.ca/",
-    "about": "Political news site providing in-depth coverage of Canadian federal politics and policy."
+    "about": "Political news site providing in-depth coverage of Canadian federal politics and policy.",
+    "founded": 2010,
+    "founder": "James Baxter",
+    "socials": {
+      "facebook": "https://www.facebook.com/iPoliticsCA",
+      "twitter": "https://twitter.com/iPoliticsCA",
+      "linkedin": "https://www.linkedin.com/company/ipolitics"
+    }
   },
   "breachmedia": {
     "name": "The Breach",
     "nationality": "Canadian",
     "url": "https://breachmedia.ca/",
-    "about": "Canadian independent media outlet producing investigative journalism and critical commentary."
+    "about": "Canadian independent media outlet producing investigative journalism and critical commentary.",
+    "founded": 2021,
+    "founders": ["Duncan Kinney", "Emma Paling"],
+    "socials": {
+      "facebook": "https://www.facebook.com/TheBreachMedia",
+      "twitter": "https://twitter.com/TheBreachMedia",
+      "instagram": "https://www.instagram.com/thebreachmedia",
+      "linkedin": "https://www.linkedin.com/company/the-breach-media"
+    }
   },
   "citynews": {
     "name": "CityNews",
     "nationality": "Canadian",
     "url": "https://www.citynews.ca/",
-    "about": "A local news brand operated by Rogers Sports & Media in multiple Canadian cities."
+    "about": "A local news brand operated by Rogers Sports & Media in multiple Canadian cities.",
+    "founded": 1977,
+    "founder": "Citytv",
+    "socials": {
+      "facebook": "https://www.facebook.com/CityNews",
+      "twitter": "https://twitter.com/CityNews",
+      "instagram": "https://www.instagram.com/citynewstoronto",
+      "linkedin": "https://www.linkedin.com/company/citynews"
+    }
   },
   "tvo": {
     "name": "TVOntario",
     "nationality": "Canadian",
     "url": "https://www.tvo.org/",
-    "about": "Ontario's public educational media organization, providing news and documentary content."
+    "about": "Ontario's public educational media organization, providing news and documentary content.",
+    "founded": 1970,
+    "founder": "Government of Ontario",
+    "socials": {
+      "facebook": "https://www.facebook.com/TVOntario",
+      "twitter": "https://twitter.com/tvo",
+      "instagram": "https://www.instagram.com/tvochannel",
+      "linkedin": "https://www.linkedin.com/company/tvo"
+    }
   },
   "ammsa": {
     "name": "Aboriginal Multi-Media Society (AMMSA)",
     "nationality": "Canadian",
     "url": "https://www.ammsa.com/",
-    "about": "Publishes Windspeaker and other Indigenous-focused news outlets in Canada."
+    "about": "Publishes Windspeaker and other Indigenous-focused news outlets in Canada.",
+    "founded": 1983,
+    "founder": "Bert Crowfoot",
+    "socials": {
+      "facebook": "https://www.facebook.com/AMMSA",
+      "twitter": "https://twitter.com/AMMSA",
+      "linkedin": "https://www.linkedin.com/company/aboriginal-multi-media-society"
+    }
   },
   "cultmtl": {
-    "name": "Cult MTL Media Inc.",
+    "name": "Cult MTL",
     "nationality": "Canadian",
-    "url": "https://cultmtl.com",
-    "about": "Publisher of Cult MTL, an English-language alt media outlet in Montreal focused on culture and city life."
+    "url": "https://cultmtl.com/",
+    "about": "Cult MTL is an English-language alternative media outlet in Montreal focused on culture and city life.",
+    "founded": 2012,
+    "founder": "Former staff of the Montreal Mirror",
+    "socials": {
+      "facebook": "https://www.facebook.com/CultMTL",
+      "twitter": "https://twitter.com/CultMTL",
+      "instagram": "https://www.instagram.com/cultmtl",
+      "linkedin": "https://www.linkedin.com/company/cult-mtl"
+    }
   },
   "goldenwest": {
-    "name": "Golden West Broadcasting",
+    "name": "Golden West Broadcasting Ltd.",
     "nationality": "Canadian",
     "url": "https://www.goldenwest.ca/",
-    "about": "Community media company serving the Canadian Prairies with radio and digital news."
+    "about": "Golden West Broadcasting Ltd. is a Canadian radio and digital media company based in Altona, Manitoba. It is the largest independent radio broadcaster in Canada, primarily operating small-market radio stations and internet portals in the Prairie provinces of Alberta, Saskatchewan, and Manitoba.",
+    "founded": 1957,
+    "founder": "A.J. Thiessen",
+    "socials": {
+      "facebook": "https://www.facebook.com/GoldenWestRadio",
+      "twitter": "https://twitter.com/GoldenWestRadio",
+      "linkedin": "https://www.linkedin.com/company/golden-west-broadcasting"
+    }
   },
   "itwc": {
-    "name": "IT World Canada",
+    "name": "IT World Canada (ITWC)",
     "nationality": "Canadian",
     "url": "https://www.itworldcanada.com/",
-    "about": "Publisher of IT World Canada, focused on technology and enterprise news."
+    "about": "Since its launch in 1984, IT World Canada has become the online information resource of choice for Canadian IT professionals. The company delivers timely, incisive information that helps IT executives and professionals succeed in their jobs.",
+    "founded": 1984,
+    "founder": "Information not available",
+    "socials": {
+      "facebook": "https://www.facebook.com/ITWorldCa",
+      "twitter": "https://twitter.com/itworldca",
+      "linkedin": "https://www.linkedin.com/company/itworldcanada"
+    }
   },
   "cartt": {
-    "name": "Cartt Publishing",
+    "name": "Cartt.ca",
     "nationality": "Canadian",
     "url": "https://cartt.ca/",
-    "about": "Independent trade publication covering Canadian cable, radio, telecom, and broadcasting sectors."
+    "about": "Cartt.ca is an independent trade publication covering the Canadian cable, radio, television, and telecom industries. It provides news, analysis, and opinion pieces relevant to professionals in these sectors.",
+    "founded": 2004,
+    "founder": "Greg O'Brien",
+    "socials": {
+      "twitter": "https://twitter.com/cartt_ca",
+      "linkedin": "https://www.linkedin.com/company/cartt-ca"
+    }
   },
   "hilltimes": {
-    "name": "Hill Times Publishing",
+    "name": "The Hill Times",
     "nationality": "Canadian",
     "url": "https://www.hilltimes.com/",
-    "about": "Ottawa-based political news publisher that operates The Wire Report and other outlets."
+    "about": "The Hill Times is a Canadian newspaper that covers politics, government affairs, and federal public policy. Based in Ottawa, it provides news and analysis for policymakers, political professionals, and the general public.",
+    "founded": 1989,
+    "founders": ["Jim Creskey", "Ross Dickson"],
+    "socials": {
+      "facebook": "https://www.facebook.com/TheHillTimes",
+      "twitter": "https://twitter.com/hilltimes",
+      "linkedin": "https://www.linkedin.com/company/the-hill-times"
+    }
   },
   "mingpao": {
     "name": "Ming Pao Newspapers (Canada) Ltd.",
     "nationality": "foreign-owned",
     "url": "https://www.mingpaocanada.com/",
-    "about": "Chinese-language daily newspaper in Canada affiliated with its Hong Kong-based parent company."
+    "about": "Ming Pao is a Chinese-language daily newspaper in Canada affiliated with its Hong Kong-based parent company. It serves the Chinese-speaking community with news coverage on local, national, and international events.",
+    "founded": "Information not available",
+    "founder": "Information not available",
+    "socials": {
+      "facebook": "https://www.facebook.com/mingpaotoronto",
+      "twitter": "https://twitter.com/mingpaotoronto"
+    }
   },
   "singtao": {
     "name": "Sing Tao Media Group Canada",
     "nationality": "foreign-owned",
     "url": "https://www.singtao.ca/",
-    "about": "Canadian edition of Sing Tao Daily, covering Chinese-Canadian news and international affairs."
+    "about": "Sing Tao Daily is a Chinese-language newspaper serving Canada's Chinese community. It is affiliated with its Hong Kong-based parent company and covers a range of topics including news, entertainment, and lifestyle.",
+    "founded": 1978,
+    "founder": "Information not available",
+    "socials": {
+      "facebook": "https://www.facebook.com/singtaotoronto",
+      "twitter": "https://twitter.com/singtao"
+    }
   },
   "stir": {
-    "name": "Stir Media",
+    "name": "Stir",
     "nationality": "Canadian",
     "url": "https://www.createastir.ca/",
-    "about": "Arts and culture news organization focused on Canadian creators and performances."
+    "about": "Stir is an arts and culture news organization focused on Canadian creators and performances. It covers a wide range of topics including music, film, theatre, and visual arts.",
+    "founded": 2020,
+    "founder": "Information not available",
+    "socials": {
+      "facebook": "https://www.facebook.com/createastir",
+      "twitter": "https://twitter.com/createastir",
+      "instagram": "https://www.instagram.com/createastir"
+    }
   },
   "turtleisland": {
-    "name": "Turtle Island News Publications",
+    "name": "Turtle Island News",
     "nationality": "Canadian",
     "url": "http://www.theturtleislandnews.com/",
-    "about": "Independent Indigenous-owned outlet based on Six Nations of the Grand River."
+    "about": "Turtle Island News is an independent Indigenous-owned newspaper based on the Six Nations of the Grand River. It covers Indigenous news and issues across Canada.",
+    "founded": 1994,
+    "founder": "Lynda Powless",
+    "socials": {
+      "facebook": "https://www.facebook.com/TurtleIslandNews",
+      "twitter": "https://twitter.com/TurtleIslandNews"
+    }
   },
   "nnsl": {
     "name": "Northern News Services Ltd.",
     "nationality": "Canadian",
     "url": "https://www.nnsl.com/",
-    "about": "Publishes community newspapers in the Northwest Territories and Nunavut."
+    "about": "Northern News Services Ltd. publishes community newspapers in the Northwest Territories and Nunavut, providing news coverage for northern communities.",
+    "founded": 1972,
+    "founder": "Jack "Sig" Sigvaldason",
+    "socials": {
+      "facebook": "https://www.facebook.com/NNSLonline",
+      "twitter": "https://twitter.com/NNSLonline"
+    }
   },
   "nnbc": {
     "name": "Northern Native Broadcasting (CFNR)",
     "nationality": "Canadian",
     "url": "https://www.cfnrfm.ca/about-cfnr/",
-    "about": "An Indigenous-owned broadcaster operating CFNR Radio Network in Northern BC."
+    "about": "Northern Native Broadcasting operates CFNR-FM, an Indigenous-owned broadcaster serving Northern British Columbia with a mix of music, news, and cultural programming.",
+    "founded": 1983,
+    "founder": "Information not available",
+    "socials": {
+      "facebook": "https://www.facebook.com/CFNRFM",
+      "twitter": "https://twitter.com/CFNRFM"
+    }
   },
   "whitepine": {
     "name": "White Pine Media",
     "nationality": "Canadian",
-    "url": "https://haliburtonecho.ca",
-    "about": "Independent community media publisher of the Haliburton Echo and Minden Times."
+    "url": "https://whitepinemedia.ca/",
+    "about": "White Pine Media is a Canadian media company specializing in video production and digital storytelling.",
+    "founded": "Information not available",
+    "founder": "JD Dinsdale",
+    "socials": {
+      "linkedin": "https://www.linkedin.com/in/jd-dinsdale-43672446"
+    }
   },
   "narcitymedia": {
     "name": "Narcity Media",
     "nationality": "Canadian",
     "url": "https://www.narcitymedia.com/",
-    "about": "A Canadian digital media company targeting millennial and Gen Z audiences with lifestyle and city-focused content."
+    "about": "Narcity Media is a leading digital media publisher targeting millennials and Gen Z audiences, covering local news, travel, and lifestyle content across North America.",
+    "founded": 2013,
+    "founder": "Charles Lapointe",
+    "socials": {
+      "facebook": "https://www.facebook.com/narcitycanada",
+      "twitter": "https://twitter.com/NarcityCanada",
+      "instagram": "https://www.instagram.com/narcitycanada",
+      "linkedin": "https://www.linkedin.com/company/narcity-media-group"
+    }
   },
   "haligonia": {
-    "name": "Haligonia Media",
+    "name": "Haligonia.ca",
     "nationality": "Canadian",
-    "url": "https://haligonia.ca",
-    "about": "Haligonia Media operates Haligonia.ca, a Halifax-based hyperlocal media platform that distributes municipal press releases, emergency alerts, and government updates. It does not produce original reporting or editorial content, instead focusing on amplifying official community communications."
+    "url": "https://haligonia.ca/",
+    "about": "Haligonia.ca is a Halifax-based hyperlocal media platform that distributes municipal press releases, emergency alerts, and government updates, focusing on amplifying official community communications.",
+    "founded": "Information not available",
+    "founder": "Information not available",
+    "socials": {
+      "facebook": "https://www.facebook.com/haligonia",
+      "twitter": "https://twitter.com/haligonia",
+      "instagram": "https://www.instagram.com/haligonia"
+    }
   },
   "pattison": {
     "name": "Pattison Media",
