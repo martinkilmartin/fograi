@@ -3,7 +3,7 @@
     "name": "CBC/Radio-Canada",
     "nationality": "Canadian",
     "url": "https://www.cbc.radio-canada.ca/",
-    "about": "Canada’s national public broadcaster offering TV, radio, and digital news in English and French."
+    "about": "Canada's national public broadcaster offering TV, radio, and digital news in English and French."
   },
   "bell": {
     "name": "Bell Media",
@@ -57,7 +57,7 @@
     "name": "SaltWire Network",
     "nationality": "Canadian",
     "url": "https://www.saltwire.com/",
-    "about": "Atlantic Canada’s largest media group, publishing newspapers like the Chronicle Herald."
+    "about": "Atlantic Canada's largest media group, publishing newspapers like the Chronicle Herald."
   },
   "fp": {
     "name": "FP Canadian Newspapers",
@@ -90,7 +90,7 @@
     "about": "Digital media company founded by Brandon Gonez, owns NOW Magazine."
   },
   "cn2i": {
-    "name": "Coopérative nationale de l’information indépendante (CN2i)",
+    "name": "Coopérative nationale de l'information indépendante (CN2i)",
     "nationality": "Canadian",
     "url": "https://www.cn2i.ca/",
     "about": "Cooperative of six major French-language newspapers in Québec, including Le Soleil."
@@ -111,7 +111,7 @@
     "name": "The Globe and Mail",
     "nationality": "Canadian",
     "url": "https://www.theglobeandmail.com/",
-    "about": "Canada’s national newspaper of record, privately owned by Woodbridge Company Ltd."
+    "about": "Canada's national newspaper of record, privately owned by Woodbridge Company Ltd."
   },
   "lapresse": {
     "name": "La Presse",
@@ -135,7 +135,121 @@
     "name": "The Korea Times & Hankook Ilbo (Canada) Ltd.",
     "nationality": "foreign-owned",
     "url": "https://www.koreatimes.net/",
-    "about": "Korean-language newspaper serving Canada’s Korean community; affiliated with Korean parent company."
+    "about": "Korean-language newspaper serving Canada's Korean community; affiliated with Korean parent company."
+  },
+  "metroland": {
+    "name": "Metroland Media Group",
+    "nationality": "Canadian",
+    "url": "https://www.metroland.com/",
+    "about": "Regional publisher in Ontario formerly under Torstar, known for local papers like Guelph Mercury and others."
+  },
+  "narwhal": {
+    "name": "The Narwhal",
+    "nationality": "Canadian",
+    "url": "https://thenarwhal.ca/",
+    "about": "Non-profit environmental investigative journalism outlet in Canada."
+  },
+  "walrus": {
+    "name": "The Walrus",
+    "nationality": "Canadian",
+    "url": "https://thewalrus.ca/",
+    "about": "Independent Canadian magazine covering current affairs, culture, and ideas."
+  },
+  "pressprogress": {
+    "name": "PressProgress",
+    "nationality": "Canadian",
+    "url": "https://pressprogress.ca/",
+    "about": "Investigative journalism project of the Broadbent Institute focused on progressive issues in Canada."
+  },
+  "ipolitics": {
+    "name": "iPolitics",
+    "nationality": "Canadian",
+    "url": "https://ipolitics.ca/",
+    "about": "Political news site providing in-depth coverage of Canadian federal politics and policy."
+  },
+  "breachmedia": {
+    "name": "The Breach",
+    "nationality": "Canadian",
+    "url": "https://breachmedia.ca/",
+    "about": "Canadian independent media outlet producing investigative journalism and critical commentary."
+  },
+  "citynews": {
+    "name": "CityNews",
+    "nationality": "Canadian",
+    "url": "https://www.citynews.ca/",
+    "about": "A local news brand operated by Rogers Sports & Media in multiple Canadian cities."
+  },
+  "tvo": {
+    "name": "TVOntario",
+    "nationality": "Canadian",
+    "url": "https://www.tvo.org/",
+    "about": "Ontario's public educational media organization, providing news and documentary content."
+  },
+  "ammsa": {
+    "name": "Aboriginal Multi-Media Society (AMMSA)",
+    "nationality": "Canadian",
+    "url": "https://www.ammsa.com/",
+    "about": "Publishes Windspeaker and other Indigenous-focused news outlets in Canada."
+  },
+  "cultmtl": {
+    "name": "Cult MTL Media Inc.",
+    "nationality": "Canadian",
+    "url": "https://cultmtl.com",
+    "about": "Publisher of Cult MTL, an English-language alt media outlet in Montreal focused on culture and city life."
+  },
+  "goldenwest": {
+    "name": "Golden West Broadcasting",
+    "nationality": "Canadian",
+    "url": "https://www.goldenwest.ca/",
+    "about": "Community media company serving the Canadian Prairies with radio and digital news."
+  },
+  "itwc": {
+    "name": "IT World Canada",
+    "nationality": "Canadian",
+    "url": "https://www.itworldcanada.com/",
+    "about": "Publisher of IT World Canada, focused on technology and enterprise news."
+  },
+  "cartt": {
+    "name": "Cartt Publishing",
+    "nationality": "Canadian",
+    "url": "https://cartt.ca/",
+    "about": "Independent trade publication covering Canadian cable, radio, telecom, and broadcasting sectors."
+  },
+  "hilltimes": {
+    "name": "Hill Times Publishing",
+    "nationality": "Canadian",
+    "url": "https://www.hilltimes.com/",
+    "about": "Ottawa-based political news publisher that operates The Wire Report and other outlets."
+  },
+  "mingpao": {
+    "name": "Ming Pao Newspapers (Canada) Ltd.",
+    "nationality": "foreign-owned",
+    "url": "https://www.mingpaocanada.com/",
+    "about": "Chinese-language daily newspaper in Canada affiliated with its Hong Kong-based parent company."
+  },
+  "singtao": {
+    "name": "Sing Tao Media Group Canada",
+    "nationality": "foreign-owned",
+    "url": "https://www.singtao.ca/",
+    "about": "Canadian edition of Sing Tao Daily, covering Chinese-Canadian news and international affairs."
+  },
+  "stir": {
+    "name": "Stir Media",
+    "nationality": "Canadian",
+    "url": "https://www.createastir.ca/",
+    "about": "Arts and culture news organization focused on Canadian creators and performances."
+  },
+  "turtleisland": {
+    "name": "Turtle Island News Publications",
+    "nationality": "Canadian",
+    "url": "http://www.theturtleislandnews.com/",
+    "about": "Independent Indigenous-owned outlet based on Six Nations of the Grand River."
+  },
+  "nnsl": {
+    "name": "Northern News Services Ltd.",
+    "nationality": "Canadian",
+    "url": "https://www.nnsl.com/",
+    "about": "Publishes community newspapers in the Northwest Territories and Nunavut."
   },
   "independent": {
     "name": "Independent",

@@ -989,5 +989,1076 @@
     "langs": ["en"],
     "owner": "corus",
     "tags": ["GlobalNews", "News", "Canada"]
+  },
+  "CA_CTVN": {
+    "name": "CTV News",
+    "url": "https://www.ctvnews.ca",
+    "est": 1961,
+    "about": "CTV News is a national news organization delivering breaking news, in-depth analysis, and comprehensive coverage of events from Canada and around the world. It is one of the most-watched television news networks in the country.",
+    "emos": ["📺", "🇨🇦"],
+    "logo": "/img/ns/CA_CTVN.png",
+    "langs": ["en"],
+    "tags": [
+      "CTVNews",
+      "NationalNews",
+      "BreakingNews",
+      "Politics",
+      "Health",
+      "Business",
+      "World",
+      "CanadaNews"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/CTVNews",
+      "twitter": "https://twitter.com/CTVNews",
+      "instagram": "https://www.instagram.com/ctvnews"
+    },
+    "headerBG": "#003366",
+    "primaryColor": "#cc0000",
+    "owner": "bell",
+    "scope": "national"
+  },
+  "CA_APTN": {
+    "name": "APTN National News",
+    "url": "https://www.aptnnews.ca",
+    "est": 1999,
+    "about": "APTN National News delivers daily Indigenous-focused journalism from across Canada. It is the first national Indigenous broadcaster in the world, dedicated to stories affecting First Nations, Inuit, and Métis communities.",
+    "emos": ["📺", "🪶", "🇨🇦"],
+    "logo": "/img/ns/CA_APTN.png",
+    "langs": ["en", "fr", "cree", "inuktitut"],
+    "tags": [
+      "APTN",
+      "IndigenousNews",
+      "FirstNations",
+      "Inuit",
+      "Métis",
+      "CommunityNews",
+      "HumanRights",
+      "Environment"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/APTNNews",
+      "twitter": "https://twitter.com/APTNNews",
+      "youtube": "https://www.youtube.com/user/APTNNationalNews"
+    },
+    "headerBG": "#000000",
+    "primaryColor": "#ffaa00",
+    "owner": "independent",
+    "scope": "national"
+  },
+  "CA_SALT": {
+    "name": "SaltWire Network",
+    "url": "https://www.saltwire.com",
+    "est": 2017,
+    "about": "SaltWire Network is Atlantic Canada's largest media group, publishing over 20 newspapers including the Halifax Chronicle Herald and The Guardian. It provides regional news coverage across Nova Scotia, Newfoundland and Labrador, and Prince Edward Island.",
+    "emos": ["📰", "🌊", "🇨🇦"],
+    "logo": "/img/ns/CA_SALT.png",
+    "langs": ["en"],
+    "tags": [
+      "SaltWire",
+      "AtlanticCanada",
+      "RegionalNews",
+      "NovaScotia",
+      "PEINews",
+      "NLNews",
+      "CommunityNews"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/saltwirenetwork",
+      "twitter": "https://twitter.com/saltwirenetwork"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#004165",
+    "owner": "saltwire",
+    "scope": "regional"
+  },
+  "CA_NOBS": {
+    "name": "Canada's National Observer",
+    "url": "https://www.nationalobserver.com",
+    "est": 2015,
+    "about": "The National Observer is an independent Canadian online news organization focused on climate change, energy, politics, and social justice. It provides investigative journalism and analysis with a progressive lens.",
+    "emos": ["🌎", "📰", "🇨🇦"],
+    "logo": "/img/ns/CA_NOBS.png",
+    "langs": ["en"],
+    "tags": [
+      "NationalObserver",
+      "Climate",
+      "Politics",
+      "InvestigativeJournalism",
+      "Energy",
+      "Environment",
+      "SocialJustice"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/NatObserver",
+      "twitter": "https://twitter.com/natobserver"
+    },
+    "headerBG": "#111111",
+    "primaryColor": "#32a852",
+    "owner": "independent",
+    "scope": "national"
+  },
+  "CA_WFP": {
+    "name": "Winnipeg Free Press",
+    "url": "https://www.winnipegfreepress.com",
+    "est": 1872,
+    "about": "The Winnipeg Free Press is Manitoba's largest and oldest newspaper, providing trusted local, national, and international news. Known for its editorial independence and strong regional coverage.",
+    "emos": ["📰", "🏙️", "🇨🇦"],
+    "logo": "/img/ns/CA_WFP.png",
+    "langs": ["en"],
+    "tags": [
+      "Winnipeg",
+      "LocalNews",
+      "Manitoba",
+      "Politics",
+      "Opinion",
+      "CanadaNews",
+      "Investigative"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/winnipegfreepress",
+      "twitter": "https://twitter.com/wpgfreepress"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#005aa7",
+    "owner": "fp",
+    "scope": "regional"
+  },
+  "CA_THEW": {
+    "name": "The Walrus",
+    "url": "https://thewalrus.ca",
+    "est": 2003,
+    "about": "The Walrus is a Canadian magazine of ideas, committed to publishing long-form journalism on politics, science, culture, and current affairs. It is a charitable non-profit focused on deep reporting and public dialogue.",
+    "emos": ["📘", "🦭", "🇨🇦"],
+    "logo": "/img/ns/CA_THEW.png",
+    "langs": ["en"],
+    "tags": [
+      "Magazine",
+      "Politics",
+      "Culture",
+      "Science",
+      "Society",
+      "LongForm",
+      "CanadianIdeas"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/TheWalrus",
+      "twitter": "https://twitter.com/walrusmagazine"
+    },
+    "headerBG": "#eaeaea",
+    "primaryColor": "#161616",
+    "owner": "walrus",
+    "scope": "national"
+  },
+  "CA_TYEE": {
+    "name": "The Tyee",
+    "url": "https://thetyee.ca",
+    "est": 2003,
+    "about": "The Tyee is an independent, non-profit digital news magazine that covers Canadian politics, society, and culture with a focus on British Columbia. It is known for investigative reporting and progressive perspectives.",
+    "emos": ["📰", "🌲", "🇨🇦"],
+    "logo": "/img/ns/CA_TYEE.png",
+    "langs": ["en"],
+    "tags": [
+      "BCNews",
+      "Politics",
+      "Progressive",
+      "Investigative",
+      "Opinion",
+      "Society",
+      "Environment"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/thetyee",
+      "twitter": "https://twitter.com/TheTyee"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#b71c1c",
+    "owner": "independent",
+    "scope": "regional"
+  },
+  "CA_TNC": {
+    "name": "True North",
+    "url": "https://tnc.news",
+    "est": 2019,
+    "about": "True North is a digital media platform that provides news, opinion, and analysis on Canadian politics and culture from a conservative perspective. It is operated by the True North Centre for Public Policy.",
+    "emos": ["📰", "🔵", "🇨🇦"],
+    "logo": "/img/ns/CA_TNC.png",
+    "langs": ["en"],
+    "tags": [
+      "TrueNorth",
+      "Conservative",
+      "Politics",
+      "Opinion",
+      "Culture",
+      "Canada",
+      "NewsAnalysis"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/TrueNorthCentre",
+      "twitter": "https://twitter.com/TrueNorthCentre"
+    },
+    "headerBG": "#f5f5f5",
+    "primaryColor": "#003366",
+    "owner": "independent",
+    "scope": "national"
+  },
+  "CA_MCLN": {
+    "name": "Maclean's",
+    "url": "https://www.macleans.ca",
+    "est": 1905,
+    "about": "Maclean's is Canada's national current affairs magazine, covering politics, culture, society, and public affairs. Known for its long-standing journalism, analysis, and rankings.",
+    "emos": ["📘", "📊", "🇨🇦"],
+    "logo": "/img/ns/CA_MCLN.png",
+    "langs": ["en"],
+    "tags": [
+      "Maclean's",
+      "Politics",
+      "Society",
+      "Rankings",
+      "Culture",
+      "CanadianAffairs",
+      "Investigative"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/macleans",
+      "twitter": "https://twitter.com/macleans"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#d71920",
+    "owner": "stjoseph",
+    "scope": "national"
+  },
+  "CA_LACT": {
+    "name": "L'actualité",
+    "url": "https://lactualite.com",
+    "est": 1976,
+    "about": "L'actualité is Quebec's leading French-language magazine, focused on in-depth analysis of politics, culture, science, and society. It is known for thoughtful journalism and investigative reporting.",
+    "emos": ["📰", "📚", "🇨🇦"],
+    "logo": "/img/ns/CA_LACT.png",
+    "langs": ["fr"],
+    "tags": [
+      "Lactualité",
+      "Québec",
+      "Francophone",
+      "Culture",
+      "Politics",
+      "Science",
+      "Society"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/lactualite",
+      "twitter": "https://twitter.com/Lactualite"
+    },
+    "headerBG": "#fdfdfd",
+    "primaryColor": "#df1e25",
+    "owner": "mishmash",
+    "scope": "national"
+  },
+  "CA_REBL": {
+    "name": "Rebel News",
+    "url": "https://www.rebelnews.com",
+    "est": 2015,
+    "about": "Rebel News is a digital media outlet known for its conservative, populist coverage of politics and social issues. It focuses on issues from a right-leaning perspective and engages in activist journalism.",
+    "emos": ["📢", "🧨", "🇨🇦"],
+    "logo": "/img/ns/CA_REBL.png",
+    "langs": ["en"],
+    "tags": [
+      "RebelNews",
+      "Conservative",
+      "Activism",
+      "Politics",
+      "Freedom",
+      "Investigations",
+      "Populism"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/rebelnews",
+      "twitter": "https://twitter.com/RebelNewsOnline",
+      "youtube": "https://www.youtube.com/channel/UCGy6uV7yqGWDeUWTZzT3ZEg"
+    },
+    "headerBG": "#000000",
+    "primaryColor": "#e30613",
+    "owner": "independent",
+    "scope": "national"
+  },
+  "CA_NUNS": {
+    "name": "Nunatsiaq News",
+    "url": "https://www.nunatsiaq.com",
+    "est": 1973,
+    "about": "Nunatsiaq News is the leading newspaper serving Nunavut and Nunavik. It provides bilingual coverage of Indigenous news, politics, environment, and community stories from Canada's Arctic region.",
+    "emos": ["🧊", "📰", "🇨🇦"],
+    "logo": "/img/ns/CA_NUNS.png",
+    "langs": ["en", "iu"],
+    "tags": [
+      "Nunavut",
+      "Inuit",
+      "IndigenousNews",
+      "Arctic",
+      "NorthernCanada",
+      "Bilingual",
+      "CommunityNews"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/NunatsiaqNews",
+      "twitter": "https://twitter.com/NunatsiaqNews"
+    },
+    "headerBG": "#f2f9ff",
+    "primaryColor": "#0076a8",
+    "owner": "nortext",
+    "scope": "regional"
+  },
+  "CA_APOL": {
+    "name": "Abbotsford News",
+    "url": "https://www.abbynews.com",
+    "est": 1922,
+    "about": "Abbotsford News is a weekly community newspaper serving Abbotsford, British Columbia. It provides local coverage of events, politics, business, and culture in the Fraser Valley region.",
+    "emos": ["📰", "🌲", "🇨🇦"],
+    "logo": "/img/ns/CA_APOL.png",
+    "langs": ["en"],
+    "tags": [
+      "Abbotsford",
+      "FraserValley",
+      "BCNews",
+      "CommunityNews",
+      "LocalEvents",
+      "BlackPress",
+      "Politics"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/AbbyNews",
+      "twitter": "https://twitter.com/AbbyNews"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#006341",
+    "owner": "blackpress",
+    "scope": "local"
+  },
+  "CA_BPPG": {
+    "name": "Briarpatch Magazine",
+    "url": "https://briarpatchmagazine.com",
+    "est": 1973,
+    "about": "Briarpatch is a Canadian independent magazine of politics and grassroots activism, based in Saskatchewan. It focuses on social justice, Indigenous issues, and environmental justice.",
+    "emos": ["📰", "🌱", "🇨🇦"],
+    "logo": "/img/ns/CA_BPPG.png",
+    "langs": ["en"],
+    "tags": [
+      "Briarpatch",
+      "Activism",
+      "SocialJustice",
+      "Indigenous",
+      "Environment",
+      "Grassroots",
+      "Saskatchewan"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/briarpatchmagazine",
+      "twitter": "https://twitter.com/briarpatchmag"
+    },
+    "headerBG": "#fffefb",
+    "primaryColor": "#008060",
+    "owner": "independent",
+    "scope": "national"
+  },
+  "CA_24MTL": {
+    "name": "24 Heures",
+    "url": "https://www.24heures.ca",
+    "est": 2001,
+    "about": "24 Heures is a free French-language daily news site based in Montreal, focusing on local news, sports, entertainment, and lifestyle. It was formerly distributed as a print commuter paper.",
+    "emos": ["📰", "🚇", "🇨🇦"],
+    "logo": "/img/ns/CA_24MTL.png",
+    "langs": ["fr"],
+    "tags": [
+      "24Heures",
+      "Montréal",
+      "LocalNews",
+      "Entertainment",
+      "Sports",
+      "Lifestyle",
+      "Quebecor"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/journal24heures",
+      "twitter": "https://twitter.com/24heuresmontreal"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#e30613",
+    "owner": "quebecor",
+    "scope": "local"
+  },
+  "CA_CHRH": {
+    "name": "The Chronicle Herald",
+    "url": "https://www.saltwire.com/halifax/",
+    "est": 1874,
+    "about": "The Chronicle Herald is the largest daily newspaper in Atlantic Canada, serving Halifax and the surrounding Nova Scotia region. It provides local news, opinion, business, and cultural coverage.",
+    "emos": ["📰", "⚓", "🇨🇦"],
+    "logo": "/img/ns/CA_CHRH.png",
+    "langs": ["en"],
+    "tags": [
+      "Halifax",
+      "ChronicleHerald",
+      "NovaScotia",
+      "LocalNews",
+      "SaltWire",
+      "Business",
+      "Opinion"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/thechronicleherald",
+      "twitter": "https://twitter.com/chronicleherald"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#003366",
+    "owner": "saltwire",
+    "scope": "regional"
+  },
+  "CA_GUAR": {
+    "name": "The Guardian (Charlottetown)",
+    "url": "https://www.saltwire.com/prince-edward-island/",
+    "est": 1895,
+    "about": "The Guardian is Prince Edward Island's leading daily newspaper, providing coverage of local news, politics, community events, and business in Charlottetown and across the province.",
+    "emos": ["📰", "🦞", "🇨🇦"],
+    "logo": "/img/ns/CA_GUAR.png",
+    "langs": ["en"],
+    "tags": [
+      "Charlottetown",
+      "PEI",
+      "LocalNews",
+      "Politics",
+      "Business",
+      "SaltWire",
+      "Community"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/theguardianpei",
+      "twitter": "https://twitter.com/PEIGuardian"
+    },
+    "headerBG": "#f9f9f9",
+    "primaryColor": "#005c87",
+    "owner": "saltwire",
+    "scope": "regional"
+  },
+  "CA_CBPT": {
+    "name": "Cape Breton Post",
+    "url": "https://www.saltwire.com/cape-breton/",
+    "est": 1901,
+    "about": "The Cape Breton Post is the daily newspaper for Cape Breton Island, based in Sydney, Nova Scotia. It focuses on regional news, sports, culture, and community affairs.",
+    "emos": ["📰", "🏒", "🇨🇦"],
+    "logo": "/img/ns/CA_CBPT.png",
+    "langs": ["en"],
+    "tags": [
+      "CapeBreton",
+      "Sydney",
+      "LocalNews",
+      "Sports",
+      "Culture",
+      "SaltWire",
+      "Community"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/CapeBretonPost",
+      "twitter": "https://twitter.com/CapeBretonPost"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#145da0",
+    "owner": "saltwire",
+    "scope": "regional"
+  },
+  "CA_JPNS": {
+    "name": "Journal Pioneer",
+    "url": "https://www.saltwire.com/prince-edward-island/",
+    "est": 1865,
+    "about": "The Journal Pioneer is a weekly newspaper based in Summerside, PEI. It provides coverage of local news, sports, and community happenings across western Prince Edward Island.",
+    "emos": ["📰", "🌊", "🇨🇦"],
+    "logo": "/img/ns/CA_JPNS.png",
+    "langs": ["en"],
+    "tags": [
+      "Summerside",
+      "PEI",
+      "LocalNews",
+      "Community",
+      "WeeklyNews",
+      "SaltWire",
+      "Events"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/JournalPioneer",
+      "twitter": "https://twitter.com/Journal_Pioneer"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#006699",
+    "owner": "saltwire",
+    "scope": "local"
+  },
+  "CA_LDRT": {
+    "name": "Le Droit",
+    "url": "https://www.ledroit.com",
+    "est": 1913,
+    "about": "Le Droit is a historic French-language daily newspaper serving the Ottawa-Gatineau region. It offers coverage of politics, culture, business, and local news on both sides of the Ontario-Quebec border.",
+    "emos": ["📰", "🏛️", "🇨🇦"],
+    "logo": "/img/ns/CA_LDRT.png",
+    "langs": ["fr"],
+    "tags": [
+      "Ottawa",
+      "Gatineau",
+      "Québec",
+      "Francophone",
+      "Politics",
+      "Culture",
+      "LocalNews"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/journalledroit",
+      "twitter": "https://twitter.com/LeDroitca"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#df1e25",
+    "owner": "cn2i",
+    "scope": "regional"
+  },
+  "CA_LTRB": {
+    "name": "La Tribune",
+    "url": "https://www.latribune.ca",
+    "est": 1910,
+    "about": "La Tribune is a French-language daily newspaper based in Sherbrooke, Québec. It reports on local and regional issues in Estrie, including politics, health, and the economy.",
+    "emos": ["📰", "🏔️", "🇨🇦"],
+    "logo": "/img/ns/CA_LTRB.png",
+    "langs": ["fr"],
+    "tags": [
+      "Sherbrooke",
+      "Estrie",
+      "LaTribune",
+      "Francophone",
+      "Health",
+      "Politics",
+      "Economy"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/LaTribuneSherbrooke",
+      "twitter": "https://twitter.com/LaTribuneCA"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#af1e2d",
+    "owner": "cn2i",
+    "scope": "regional"
+  },
+  "CA_LNVL": {
+    "name": "Le Nouvelliste",
+    "url": "https://www.lenouvelliste.ca",
+    "est": 1920,
+    "about": "Le Nouvelliste is the main daily newspaper serving Trois-Rivières and the Mauricie region. It delivers in-depth French-language coverage of local affairs, justice, and municipal politics.",
+    "emos": ["📰", "⚖️", "🇨🇦"],
+    "logo": "/img/ns/CA_LNVL.png",
+    "langs": ["fr"],
+    "tags": [
+      "TroisRivières",
+      "Mauricie",
+      "Francophone",
+      "Justice",
+      "LocalPolitics",
+      "Community",
+      "CN2i"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/lenouvelliste",
+      "twitter": "https://twitter.com/LeNouvelliste"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#bf2a2a",
+    "owner": "cn2i",
+    "scope": "regional"
+  },
+  "CA_LQTD": {
+    "name": "Le Quotidien",
+    "url": "https://www.lequotidien.com",
+    "est": 1973,
+    "about": "Le Quotidien is a French-language daily based in Saguenay, Québec. It offers regional news coverage with a focus on local development, economy, and culture in the Saguenay–Lac-Saint-Jean area.",
+    "emos": ["📰", "🏞️", "🇨🇦"],
+    "logo": "/img/ns/CA_LQTD.png",
+    "langs": ["fr"],
+    "tags": [
+      "Saguenay",
+      "LacSaintJean",
+      "Francophone",
+      "Economy",
+      "Culture",
+      "LocalNews",
+      "CN2i"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/LeQuotidien",
+      "twitter": "https://twitter.com/LeQuotidien1"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#254e70",
+    "owner": "cn2i",
+    "scope": "regional"
+  },
+  "CA_WINDS": {
+    "name": "Windspeaker",
+    "url": "https://www.windspeaker.com",
+    "est": 1983,
+    "about": "Windspeaker is a national Indigenous news outlet providing coverage of issues affecting First Nations, Métis, and Inuit peoples across Canada. It is published by the Aboriginal Multi-Media Society (AMMSA).",
+    "emos": ["📰", "🪶", "🇨🇦"],
+    "logo": "/img/ns/CA_WINDS.png",
+    "langs": ["en"],
+    "tags": [
+      "Indigenous",
+      "FirstNations",
+      "Métis",
+      "Inuit",
+      "AMMSA",
+      "NationalNews",
+      "Culture",
+      "Community"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/WindspeakerNews",
+      "twitter": "https://twitter.com/WindspeakerNews"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#cf2233",
+    "owner": "ammsa",
+    "scope": "national"
+  },
+  "CA_TISL": {
+    "name": "Turtle Island News",
+    "url": "http://www.theturtleislandnews.com",
+    "est": 1994,
+    "about": "Turtle Island News is Canada's only national Native weekly newspaper. Based on Six Nations of the Grand River, it reports on Indigenous politics, land defense, and community stories.",
+    "emos": ["📰", "🐢", "🇨🇦"],
+    "logo": "/img/ns/CA_TISL.png",
+    "langs": ["en"],
+    "tags": [
+      "TurtleIsland",
+      "SixNations",
+      "IndigenousNews",
+      "FirstNations",
+      "Politics",
+      "LandRights",
+      "Community"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/TurtleIslandNews",
+      "twitter": "https://twitter.com/TINnews"
+    },
+    "headerBG": "#fffdf5",
+    "primaryColor": "#197278",
+    "owner": "turtleisland",
+    "scope": "national"
+  },
+  "CA_MPAO": {
+    "name": "Ming Pao (Canada)",
+    "url": "https://www.mingpaocanada.com",
+    "est": 1993,
+    "about": "Ming Pao is a Chinese-language daily newspaper serving Chinese-speaking communities in Toronto and Vancouver. It provides news from Canada, Hong Kong, China, and global Chinese diaspora communities.",
+    "emos": ["📰", "🈶", "🇨🇦"],
+    "logo": "/img/ns/CA_MPAO.png",
+    "langs": ["zh"],
+    "tags": [
+      "ChineseMedia",
+      "Toronto",
+      "Vancouver",
+      "Immigration",
+      "Diaspora",
+      "AsiaNews",
+      "MingPao"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/mingpaotor",
+      "twitter": "https://twitter.com/MingPaoToronto"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#d52327",
+    "owner": "mingpao",
+    "scope": "national"
+  },
+  "CA_STAO": {
+    "name": "Sing Tao Daily (Canada)",
+    "url": "https://www.singtao.ca",
+    "est": 1978,
+    "about": "Sing Tao Daily is a prominent Chinese-language newspaper in Canada, with editions in Toronto, Vancouver, and Calgary. It covers local Chinese-Canadian issues, international affairs, and business.",
+    "emos": ["📰", "🀄", "🇨🇦"],
+    "logo": "/img/ns/CA_STAO.png",
+    "langs": ["zh"],
+    "tags": [
+      "SingTao",
+      "ChineseCommunity",
+      "Toronto",
+      "Vancouver",
+      "Business",
+      "LocalNews",
+      "Immigration"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/singtaotoronto",
+      "twitter": "https://twitter.com/singtaotoronto"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#0074c1",
+    "owner": "singtao",
+    "scope": "national"
+  },
+  "CA_UBYS": {
+    "name": "The Ubyssey",
+    "url": "https://www.ubyssey.ca",
+    "est": 1918,
+    "about": "The Ubyssey is the official student newspaper of the University of British Columbia in Vancouver. It covers campus affairs, student issues, university policy, and local events.",
+    "emos": ["📰", "🎓", "🇨🇦"],
+    "logo": "/img/ns/CA_UBYS.png",
+    "langs": ["en"],
+    "tags": [
+      "UBC",
+      "StudentNews",
+      "University",
+      "Campus",
+      "Vancouver",
+      "Education",
+      "Youth"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/ubyssey",
+      "twitter": "https://twitter.com/Ubyssey"
+    },
+    "headerBG": "#f2f2f2",
+    "primaryColor": "#002145",
+    "owner": "independent",
+    "scope": "student"
+  },
+  "CA_GAIT": {
+    "name": "The Gateway",
+    "url": "https://www.thegatewayonline.ca",
+    "est": 1910,
+    "about": "The Gateway is the student-run newspaper of the University of Alberta. It provides news, opinion, and culture coverage relevant to students and the Edmonton community.",
+    "emos": ["📰", "📚", "🇨🇦"],
+    "logo": "/img/ns/CA_GAIT.png",
+    "langs": ["en"],
+    "tags": [
+      "UofA",
+      "StudentNews",
+      "Alberta",
+      "Edmonton",
+      "Campus",
+      "Culture",
+      "YouthVoice"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/thegateway",
+      "twitter": "https://twitter.com/the_gateway"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#f6aa1c",
+    "owner": "independent",
+    "scope": "student"
+  },
+  "CA_VARC": {
+    "name": "The Varsity",
+    "url": "https://thevarsity.ca",
+    "est": 1880,
+    "about": "The Varsity is the official student newspaper of the University of Toronto. It publishes investigative news, student opinion, and cultural reporting from across all three U of T campuses.",
+    "emos": ["📰", "🏛️", "🇨🇦"],
+    "logo": "/img/ns/CA_VARC.png",
+    "langs": ["en"],
+    "tags": [
+      "UofT",
+      "StudentNews",
+      "Toronto",
+      "CampusLife",
+      "Investigation",
+      "Opinion",
+      "Arts"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/TheVarsity",
+      "twitter": "https://twitter.com/TheVarsity"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#002f6c",
+    "owner": "independent",
+    "scope": "student"
+  },
+  "CA_MGLT": {
+    "name": "The McGill Tribune",
+    "url": "https://www.mcgilltribune.com",
+    "est": 1981,
+    "about": "The McGill Tribune is one of McGill University's main student publications, covering news, opinion, sports, and arts. It is run entirely by students and is editorially independent from the university.",
+    "emos": ["📰", "🎓", "🇨🇦"],
+    "logo": "/img/ns/CA_MCLN.png",
+    "langs": ["en"],
+    "tags": [
+      "McGill",
+      "StudentVoice",
+      "Montreal",
+      "Arts",
+      "Sports",
+      "CampusNews",
+      "Youth"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/mcgilltribune",
+      "twitter": "https://twitter.com/mcgilltribune"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#800000",
+    "owner": "independent",
+    "scope": "student"
+  },
+  "CA_BIVN": {
+    "name": "Business in Vancouver",
+    "url": "https://www.biv.com",
+    "est": 1989,
+    "about": "Business in Vancouver provides news and analysis for British Columbia's business community, covering industries such as real estate, tech, law, and finance. It targets decision-makers and entrepreneurs.",
+    "emos": ["💼", "🏙️", "🇨🇦"],
+    "logo": "/img/ns/CA_BIVN.png",
+    "langs": ["en"],
+    "tags": [
+      "Business",
+      "Vancouver",
+      "RealEstate",
+      "Tech",
+      "Entrepreneurship",
+      "Law",
+      "Finance"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/bivnews",
+      "twitter": "https://twitter.com/bivnews"
+    },
+    "headerBG": "#f0f0f0",
+    "primaryColor": "#004c9b",
+    "owner": "glaciermedia",
+    "scope": "industry"
+  },
+  "CA_WIRE": {
+    "name": "The Wire Report",
+    "url": "https://www.thewirereport.ca",
+    "est": 2001,
+    "about": "The Wire Report is Canada's leading source of news about telecommunications, media, and digital policy. It delivers coverage of regulatory decisions, legislation, and telecom mergers.",
+    "emos": ["📡", "🧾", "🇨🇦"],
+    "logo": "/img/ns/CA_WIRE.png",
+    "langs": ["en"],
+    "tags": [
+      "Telecom",
+      "Media",
+      "Policy",
+      "CRTC",
+      "Internet",
+      "Broadcasting",
+      "Regulation"
+    ],
+    "socials": {
+      "twitter": "https://twitter.com/TheWireReport"
+    },
+    "headerBG": "#f8f8f8",
+    "primaryColor": "#1b365d",
+    "owner": "hilltimes",
+    "scope": "industry"
+  },
+  "CA_TECH": {
+    "name": "IT World Canada",
+    "url": "https://www.itworldcanada.com",
+    "est": 1984,
+    "about": "IT World Canada is the country's leading technology-focused media brand. It covers enterprise IT, cybersecurity, cloud, and digital transformation for Canadian business professionals.",
+    "emos": ["💻", "🔐", "🇨🇦"],
+    "logo": "/img/ns/CA_TECH.png",
+    "langs": ["en"],
+    "tags": [
+      "IT",
+      "TechNews",
+      "Cybersecurity",
+      "Enterprise",
+      "Cloud",
+      "DigitalTransformation",
+      "Innovation"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/itworldcanada",
+      "twitter": "https://twitter.com/itworldca"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#c8102e",
+    "owner": "itwc",
+    "scope": "industry"
+  },
+  "CA_CARTT": {
+    "name": "Cartt.ca",
+    "url": "https://cartt.ca",
+    "est": 2005,
+    "about": "Cartt.ca provides news and analysis on Canada's cable, radio, television, and telecom sectors. It tracks industry changes, CRTC decisions, and executive movement across media companies.",
+    "emos": ["📺", "📻", "🇨🇦"],
+    "logo": "/img/ns/CA_CARTT.png",
+    "langs": ["en"],
+    "tags": [
+      "Cable",
+      "Telecom",
+      "Broadcast",
+      "CRTC",
+      "TV",
+      "Radio",
+      "MediaIndustry"
+    ],
+    "socials": {
+      "twitter": "https://twitter.com/cartt_ca"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#1f4e79",
+    "owner": "cartt",
+    "scope": "industry"
+  },
+  "CA_YUKN": {
+    "name": "Yukon News",
+    "url": "https://www.yukon-news.com",
+    "est": 1960,
+    "about": "Yukon News is the primary newspaper serving Whitehorse and surrounding Yukon communities. It offers news, opinion, and cultural reporting focused on life in the North.",
+    "emos": ["📰", "❄️", "🇨🇦"],
+    "logo": "/img/ns/CA_YUKN.png",
+    "langs": ["en"],
+    "tags": [
+      "Yukon",
+      "Whitehorse",
+      "NorthernNews",
+      "Territories",
+      "LocalNews",
+      "Culture",
+      "Community"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/YukonNews",
+      "twitter": "https://twitter.com/yukon_news"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#1e3f66",
+    "owner": "blackpress",
+    "scope": "regional"
+  },
+  "CA_NWTP": {
+    "name": "News/North (NWT)",
+    "url": "https://www.nnsl.com",
+    "est": 1972,
+    "about": "News/North is the major newspaper covering the Northwest Territories. It delivers weekly coverage of territorial politics, Indigenous issues, and community life across the NWT.",
+    "emos": ["📰", "🧊", "🇨🇦"],
+    "logo": "/img/ns/CA_NWTP.png",
+    "langs": ["en"],
+    "tags": [
+      "NWT",
+      "NorthwestTerritories",
+      "Indigenous",
+      "Politics",
+      "Community",
+      "Territories",
+      "NorthernCanada"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/NewsNorthNWT",
+      "twitter": "https://twitter.com/NNSLonline"
+    },
+    "headerBG": "#eaf6fb",
+    "primaryColor": "#005577",
+    "owner": "nnsl",
+    "scope": "regional"
+  },
+  "CA_SASK": {
+    "name": "SaskToday",
+    "url": "https://www.sasktoday.ca",
+    "est": 2021,
+    "about": "SaskToday is a digital news hub for Saskatchewan, aggregating local stories from a network of Prairie newspapers. It covers politics, farming, rural life, and community news.",
+    "emos": ["🌾", "📰", "🇨🇦"],
+    "logo": "/img/ns/CA_SASK.png",
+    "langs": ["en"],
+    "tags": [
+      "Saskatchewan",
+      "Prairies",
+      "Farming",
+      "Politics",
+      "Community",
+      "Rural",
+      "SaskToday"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/sasktodaynews",
+      "twitter": "https://twitter.com/sasktodaynews"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#33691e",
+    "owner": "glaciermedia",
+    "scope": "regional"
+  },
+  "CA_MBPT": {
+    "name": "Portage Online",
+    "url": "https://www.portageonline.com",
+    "est": 2004,
+    "about": "Portage Online is a community-focused digital outlet for Portage la Prairie and central Manitoba. It features local news, events, weather, sports, and opinion.",
+    "emos": ["📰", "🌾", "🇨🇦"],
+    "logo": "/img/ns/CA_MBPT.png",
+    "langs": ["en"],
+    "tags": [
+      "Manitoba",
+      "Portage",
+      "Prairies",
+      "CommunityNews",
+      "LocalEvents",
+      "Radio",
+      "Rural"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/portageonline",
+      "twitter": "https://twitter.com/portageonline"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#0e4c92",
+    "owner": "goldenwest",
+    "scope": "local"
+  },
+  "CA_CULT": {
+    "name": "Cult MTL",
+    "url": "https://cultmtl.com",
+    "est": 2012,
+    "about": "Cult MTL is an English-language arts, culture, and lifestyle publication based in Montreal. It covers music, film, food, events, and urban issues with a youthful, alternative perspective.",
+    "emos": ["🎭", "🎶", "🇨🇦"],
+    "logo": "/img/ns/CA_CULT.png",
+    "langs": ["en"],
+    "tags": [
+      "Montreal",
+      "Arts",
+      "Culture",
+      "Lifestyle",
+      "Events",
+      "Music",
+      "Food",
+      "AlternativeMedia"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/CultMTL",
+      "twitter": "https://twitter.com/CultMTL"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#ed1c24",
+    "owner": "cultmtl",
+    "scope": "local"
+  },
+  "CA_STRS": {
+    "name": "Stir",
+    "url": "https://www.createastir.ca",
+    "est": 2020,
+    "about": "Stir is a digital platform dedicated to Canada's arts and culture scene, featuring stories about artists, performances, design, and creative innovation from across the country.",
+    "emos": ["🎨", "🖋️", "🇨🇦"],
+    "logo": "/img/ns/CA_STRS.png",
+    "langs": ["en"],
+    "tags": [
+      "Arts",
+      "Canada",
+      "Culture",
+      "Design",
+      "Performance",
+      "Creativity",
+      "Innovation"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/createastir",
+      "twitter": "https://twitter.com/createastir"
+    },
+    "headerBG": "#f9f9f9",
+    "primaryColor": "#c5004a",
+    "owner": "stir",
+    "scope": "national"
   }
 }
