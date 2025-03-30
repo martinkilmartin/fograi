@@ -26,7 +26,8 @@
       "linkedin": "https://www.linkedin.com/company/le-devoir/"
     },
     "headerBG": "#fff",
-    "primaryColor": "#333"
+    "primaryColor": "#333",
+    "owner": "ledevoir"
   },
   "CA_QCTO": {
     "name": "The Quebec Chronicle Telegraph",
@@ -52,7 +53,8 @@
       "twitter": "https://twitter.com/QCTonline"
     },
     "headerBG": "#fff",
-    "primaryColor": "#996600"
+    "primaryColor": "#996600",
+    "owner": "independent"
   },
   "CA_TRTS": {
     "name": "Toronto Star",
@@ -79,7 +81,8 @@
       "linkedin": "https://www.linkedin.com/company/toronto-star/"
     },
     "headerBG": "#fff",
-    "primaryColor": "#0060df"
+    "primaryColor": "#0060df",
+    "owner": "torstar"
   },
   "CA_TGAM": {
     "name": "The Globe And Mail",
@@ -110,7 +113,8 @@
       "snapchat": "https://story.snapchat.com/p/f9c37a38-b555-4c37-a97a-598423457108"
     },
     "headerBG": "#da161f",
-    "primaryColor": "#333"
+    "primaryColor": "#333",
+    "owner": "globe"
   },
   "CA_LPRS": {
     "name": "La Presse",
@@ -136,7 +140,8 @@
       "instagram": "https://www.instagram.com/lp_lapresse/?hl=fr-ca"
     },
     "headerBG": "#ED1C23",
-    "primaryColor": "#ED1C23"
+    "primaryColor": "#ED1C23",
+    "owner": "lapresse"
   },
   "CA_JMTL": {
     "name": "Le Journal de Montréal",
@@ -166,7 +171,8 @@
       "linkedin": "https://www.linkedin.com/company/jdemontreal/"
     },
     "headerBG": "#E32402",
-    "primaryColor": "#E32402"
+    "primaryColor": "#E32402",
+    "owner": "quebecor"
   },
   "CA_MTGZ": {
     "name": "Montreal Gazette",
@@ -193,7 +199,8 @@
       "linkedin": "https://www.linkedin.com/company/the-montreal-gazette/"
     },
     "headerBG": "#fff",
-    "primaryColor": "#016ea5"
+    "primaryColor": "#016ea5",
+    "owner": "postmedia"
   },
   "CA_VSUN": {
     "name": "Vancouver Sun",
@@ -221,7 +228,8 @@
       "instagram": "https://www.instagram.com/thevancouversun/"
     },
     "headerBG": "#fff",
-    "primaryColor": "#2f6450"
+    "primaryColor": "#2f6450",
+    "owner": "postmedia"
   },
   "CA_TPRV": {
     "name": "The Province",
@@ -247,7 +255,8 @@
       "twitter": "https://twitter.com/theprovince"
     },
     "headerBG": "#0073AD",
-    "primaryColor": "#0073AD"
+    "primaryColor": "#0073AD",
+    "owner": "postmedia"
   },
   "CA_NPST": {
     "name": "National Post",
@@ -276,7 +285,8 @@
       "linkedin": "https://www.linkedin.com/company/national-post-inc."
     },
     "headerBG": "#ffcd05",
-    "primaryColor": "#333"
+    "primaryColor": "#333",
+    "owner": "postmedia"
   },
   "CA_CLHD": {
     "name": "Calgary Herald",
@@ -284,7 +294,9 @@
     "est": 1883,
     "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_CLHD.svg"
+    "logo": "/img/ns/CA_CLHD.svg",
+    "owner": "postmedia",
+    "tags": ["CalgaryHerald", "News", "Canada"]
   },
   "CA_OTCZ": {
     "name": "Ottawa Citizen",
@@ -292,7 +304,9 @@
     "est": 1845,
     "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_OTCZ.svg"
+    "logo": "/img/ns/CA_OTCZ.svg",
+    "owner": "postmedia",
+    "tags": ["OttawaCitizen", "News", "Canada"]
   },
   "CA_EDJL": {
     "name": "Edmonton Journal",
@@ -300,7 +314,9 @@
     "est": 1903,
     "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_EDJL.svg"
+    "logo": "/img/ns/CA_EDJL.svg",
+    "owner": "postmedia",
+    "tags": ["EdmontonJournal", "News", "Canada"]
   },
   "CA_TSUN": {
     "name": "Toronto Sun",
@@ -308,7 +324,9 @@
     "est": 1971,
     "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_TSUN.svg"
+    "logo": "/img/ns/CA_TSUN.svg",
+    "owner": "postmedia",
+    "tags": ["TorontoSun", "News", "Canada"]
   },
   "CA_LSOL": {
     "name": "Le Soleil",
@@ -316,7 +334,9 @@
     "est": 1896,
     "about": "Actualités, Chroniques, Affaires, Arts, Le Mag, Sports, Hockey junior, Opinions, Protégez-Vous, Nos recommandations, Jeunesse, Maison, Auto, Balados, ULaval Nouvelles, La Vitrine, ZONE, Je m'abonne, Événements Le Soleil.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_LSOL.svg"
+    "logo": "/img/ns/CA_LSOL.svg",
+    "owner": "cn2i",
+    "tags": ["LeSoleil", "News", "Canada"]
   },
   "CA_SPEC": {
     "name": "The Hamilton Spectator",
@@ -324,7 +344,9 @@
     "est": 1846,
     "about": "Daily breaking news, local stories, life, opinion, voices from the community, events and more.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_SPEC.svg"
+    "logo": "/img/ns/CA_SPEC.svg",
+    "owner": "torstar",
+    "tags": ["TheHamiltonSpectator", "News", "Canada"]
   },
   "CA_TCOL": {
     "name": "The Times Colonist",
@@ -332,7 +354,9 @@
     "est": 1858,
     "about": "Chronicled the history of Victoria and Vancouver Island from the gold rush days of the 1850s to Victoria's present status. Lively blend of local news and informed commentary.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_TCOL.svg"
+    "logo": "/img/ns/CA_TCOL.svg",
+    "owner": "glacier",
+    "tags": ["TheTimesColonist", "News", "Canada"]
   },
   "CA_LFRP": {
     "name": "The London Free Press",
@@ -340,7 +364,9 @@
     "est": 1849,
     "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_LFRP.svg"
+    "logo": "/img/ns/CA_LFRP.svg",
+    "owner": "postmedia",
+    "tags": ["TheLondonFreePress", "News", "Canada"]
   },
   "CA_WNST": {
     "name": "Windsor Star",
@@ -348,7 +374,9 @@
     "est": 1888,
     "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_WNST.svg"
+    "logo": "/img/ns/CA_WNST.svg",
+    "owner": "postmedia",
+    "tags": ["WindsorStar", "News", "Canada"]
   },
   "CA_EDSN": {
     "name": "Edmonton Sun",
@@ -356,7 +384,9 @@
     "est": 1978,
     "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_EDSN.svg"
+    "logo": "/img/ns/CA_EDSN.svg",
+    "owner": "postmedia",
+    "tags": ["EdmontonSun", "News", "Canada"]
   },
   "CA_TREC": {
     "name": "Waterloo Region Record",
@@ -364,7 +394,9 @@
     "est": 1878,
     "about": "Daily breaking news, local stories, life, opinion, voices from the community, events and more.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_TREC.svg"
+    "logo": "/img/ns/CA_TREC.svg",
+    "owner": "torstar",
+    "tags": ["WaterlooRegionRecord", "News", "Canada"]
   },
   "CA_SPHX": {
     "name": "The StarPhoenix",
@@ -372,7 +404,9 @@
     "est": 1902,
     "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_SPHX.svg"
+    "logo": "/img/ns/CA_SPHX.svg",
+    "owner": "postmedia",
+    "tags": ["TheStarPhoenix", "News", "Canada"]
   },
   "CA_CSUN": {
     "name": "Calgary Sun",
@@ -380,7 +414,9 @@
     "est": 1980,
     "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_CSUN.svg"
+    "logo": "/img/ns/CA_CSUN.svg",
+    "owner": "postmedia",
+    "tags": ["CalgarySun", "News", "Canada"]
   },
   "CA_RLPT": {
     "name": "Regina Leader-Post",
@@ -388,7 +424,9 @@
     "est": 1883,
     "about": "Read latest breaking news, updates, and headlines on national and international events & more.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_RLPT.svg"
+    "logo": "/img/ns/CA_RLPT.svg",
+    "owner": "postmedia",
+    "tags": ["ReginaLeader-Post", "News", "Canada"]
   },
   "CA_LCDS": {
     "name": "Le Courrier du Sud",
@@ -415,7 +453,8 @@
       "twitter": "http://twitter.com/LeCourrierDuSud"
     },
     "headerBG": "#fff",
-    "primaryColor": "#d64c99"
+    "primaryColor": "#d64c99",
+    "owner": "gravite"
   },
   "CA_NIND": {
     "name": "CanIndia News",
@@ -441,7 +480,8 @@
       "twitter": "https://twitter.com/canindianews"
     },
     "headerBG": "#dd3333",
-    "primaryColor": "#dd3333"
+    "primaryColor": "#dd3333",
+    "owner": "canindia"
   },
   "CA_TCJN": {
     "name": "The Canadian Jewish News",
@@ -451,7 +491,9 @@
     "emos": ["📰", "🇨🇦"],
     "logo": "/img/ns/CA_TCJN.png",
     "logoWidth": 415,
-    "logoHeight": 36
+    "logoHeight": 36,
+    "owner": "independent",
+    "tags": ["TheCanadianJewishNews", "News", "Canada"]
   },
   "CA_CORR": {
     "name": "Corriere Canadese",
@@ -459,7 +501,9 @@
     "est": 1954,
     "about": "Il quotidiano italiano in Canada.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_CORR.png"
+    "logo": "/img/ns/CA_CORR.png",
+    "owner": "independent",
+    "tags": ["CorriereCanadese", "News", "Canada"]
   },
   "CA_HRZN": {
     "name": "Horizon Weekly",
@@ -467,7 +511,9 @@
     "est": 1979,
     "about": "The official publication of Canada's Armenian Revolutionary Federation (ARF) Central Committee.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_HRZN.png"
+    "logo": "/img/ns/CA_HRZN.png",
+    "owner": "independent",
+    "tags": ["HorizonWeekly", "News", "Canada"]
   },
   "CA_KRTM": {
     "name": "The Korea Times Daily",
@@ -475,7 +521,9 @@
     "est": 1971,
     "about": "The first and longest-running Korean language daily newspaper in Canada.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_KRTM.png"
+    "logo": "/img/ns/CA_KRTM.png",
+    "owner": "koreatimes",
+    "tags": ["TheKoreaTimesDaily", "News", "Canada"]
   },
   "CA_BJST": {
     "name": "Bejsment",
@@ -502,7 +550,8 @@
       "twitter": "https://twitter.com/BejsmentToronto"
     },
     "headerBG": "#fff",
-    "primaryColor": "#337ab7"
+    "primaryColor": "#337ab7",
+    "owner": "independent"
   },
   "CA_RSEX": {
     "name": "The Russian Express",
@@ -510,7 +559,9 @@
     "est": 2002,
     "about": "Toronto community weekly newspaper.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_RSEX.png"
+    "logo": "/img/ns/CA_RSEX.png",
+    "owner": "independent",
+    "tags": ["TheRussianExpress", "News", "Canada"]
   },
   "CA_SLMT": {
     "name": "Salam Toronto",
@@ -518,7 +569,9 @@
     "est": 2000,
     "about": "The first Persian-English bilingual weekly publication in Canada.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_SLMT.png"
+    "logo": "/img/ns/CA_SLMT.png",
+    "owner": "independent",
+    "tags": ["SalamToronto", "News", "Canada"]
   },
   "CA_BNGT": {
     "name": "Bengali Times",
@@ -526,7 +579,9 @@
     "est": 2008,
     "about": "The first and most popular Bengali online newspaper in Canada.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_BNGT.png"
+    "logo": "/img/ns/CA_BNGT.png",
+    "owner": "independent",
+    "tags": ["BengaliTimes", "News", "Canada"]
   },
   "CA_TCST": {
     "name": "The Coast",
@@ -534,7 +589,9 @@
     "est": 1993,
     "about": "The Coast is essential media for Kjipuktuk/Halifax.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_TCST.png"
+    "logo": "/img/ns/CA_TCST.png",
+    "owner": "independent",
+    "tags": ["TheCoast", "News", "Canada"]
   },
   "CA_STRT": {
     "name": "The Georgia Straight",
@@ -542,7 +599,9 @@
     "est": 1967,
     "about": "No other city publication knows more about Vancouver than the Georgia Straight.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_STRT.png"
+    "logo": "/img/ns/CA_STRT.png",
+    "owner": "overstory",
+    "tags": ["TheGeorgiaStraight", "News", "Canada"]
   },
   "CA_GRPV": {
     "name": "The Grapevine",
@@ -550,7 +609,9 @@
     "est": 2004,
     "about": "The Grapevine is a community-driven arts and culture publisher serving the Annapolis Valley.",
     "emos": ["📰", "🇨🇦"],
-    "logo": "/img/ns/CA_GRPV.png"
+    "logo": "/img/ns/CA_GRPV.png",
+    "owner": "independent",
+    "tags": ["TheGrapevine", "News", "Canada"]
   },
   "CA_NWMG": {
     "name": "NOW Magazine",
@@ -560,7 +621,9 @@
     "emos": ["📰", "🇨🇦"],
     "logo": "/img/ns/CA_NWMG.svg",
     "headerBG": "#011543",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "gmi",
+    "tags": ["NOWMagazine", "News", "Canada"]
   },
   "CA_SALA": {
     "name": "Salam Toronto",
@@ -570,7 +633,9 @@
     "emos": ["📰", "🇨🇦"],
     "logo": "/img/ns/CA_NWMG.svg",
     "headerBG": "#011543",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "independent",
+    "tags": ["SalamToronto", "News", "Canada"]
   },
   "CA_ACNV": {
     "name": "Acadie Nouvelle",
@@ -580,7 +645,9 @@
     "emos": ["📰", "🇨🇦"],
     "logo": "/img/ns/CA_NWMG.svg",
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "independent",
+    "tags": ["AcadieNouvelle", "News", "Canada"]
   },
   "CA_BRUN": {
     "name": "The Brunswickan",
@@ -590,7 +657,9 @@
     "emos": ["📰", "🇨🇦"],
     "logo": "/img/ns/CA_NWMG.svg",
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "independent",
+    "tags": ["TheBrunswickan", "News", "Canada"]
   },
   "CA_LEMA": {
     "name": "Le Moniteur Acadien",
@@ -599,7 +668,9 @@
     "about": "Un journal francophone originaire de Shediac, Nouveau-Brunswick offrant des nouvelles pertinentes aux peuples acadiens.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "independent",
+    "tags": ["LeMoniteurAcadien", "News", "Canada"]
   },
   "CA_LEFR": {
     "name": "Le Franco",
@@ -608,7 +679,9 @@
     "about": "Le seul média francophone consacré à l'actualité albertaine au Canada.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "independent",
+    "tags": ["LeFranco", "News", "Canada"]
   },
   "CA_BRTY": {
     "name": "Barrie Today",
@@ -617,7 +690,9 @@
     "about": "Barrie news, events, information and more.  Local news from local journalists, photos, event coverage, weekly flyers, entertainment.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["BarrieToday", "News", "Canada"]
   },
   "CA_BAYT": {
     "name": "Bay Today",
@@ -626,7 +701,9 @@
     "about": "North Bay, nipissing, news, editorials, events, calendar, maps, businesses, directory, weather, sports, classified ads, accommodations, apartments, real estate, coupons, northern Ontario, Canada, Algoma, entertainment.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["BayToday", "News", "Canada"]
   },
   "CA_BRAD": {
     "name": "Bradford Today",
@@ -635,7 +712,9 @@
     "about": "Regularly updated local news from local journalists along with photos, video, sports, events, classifieds, weekly flyers, entertainment.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["BradfordToday", "News", "Canada"]
   },
   "CA_BRLT": {
     "name": "Burlington Today",
@@ -644,7 +723,9 @@
     "about": "Burlington's newest source for local news, sports, business community information, obituaries and more.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["BurlingtonToday", "News", "Canada"]
   },
   "CA_CMBT": {
     "name": "Cambridge Today",
@@ -653,7 +734,9 @@
     "about": "News, events, weather, obituaries and more - all focused on Cambridge.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["CambridgeToday", "News", "Canada"]
   },
   "CA_COLT": {
     "name": "Collingwood Today",
@@ -662,7 +745,9 @@
     "about": "Collingwood's online source for local news, obituaries, events and more.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["CollingwoodToday", "News", "Canada"]
   },
   "CA_ELKT": {
     "name": "Elliot Lake Today",
@@ -671,7 +756,9 @@
     "about": "Elliot Lake News, Weather, Obituaries and more.  Elliot Lake's online source for community information, updated regularly.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["ElliotLakeToday", "News", "Canada"]
   },
   "CA_ELFT": {
     "name": "Elora & Fergus Today",
@@ -680,7 +767,9 @@
     "about": "EloraFergusToday is your go-to source for local news in  the Elora and Fergus communities, offering the latest updates on the events, issues, people and businesses that matter most.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["Elora&FergusToday", "News", "Canada"]
   },
   "CA_GUET": {
     "name": "Guelph Today",
@@ -689,7 +778,9 @@
     "about": "Guelph news, events, information and more.  Local news from local journalists, photos, event coverage, weekly flyers and entertainment.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["GuelphToday", "News", "Canada"]
   },
   "CA_HHLT": {
     "name": "Halton Hills Today",
@@ -698,7 +789,9 @@
     "about": "HaltonHillsToday is your go-to source for local news in Halton Hills, offering the latest updates on the events, issues, people and businesses that matter most in our community.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["HaltonHillsToday", "News", "Canada"]
   },
   "CA_INFT": {
     "name": "Innisfil Today",
@@ -707,7 +800,9 @@
     "about": "News, events, weather, obituaries and more - all focused on Innisfil.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["InnisfilToday", "News", "Canada"]
   },
   "CA_MDLT": {
     "name": "Midland Today",
@@ -716,7 +811,9 @@
     "about": "Midland's source for local news and community information.  Includes original reporting, sports, entertainment, obituaries, weather, and more.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["MidlandToday", "News", "Canada"]
   },
   "CA_NRKT": {
     "name": "Newmarket Today",
@@ -725,7 +822,9 @@
     "about": "Newmarket's online news source, including local news from local journalists, photos, video, sports, events, classifieds, weekly flyers, and entertainment.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["NewmarketToday", "News", "Canada"]
   },
   "CA_NOTL": {
     "name": "Niagara-on-the-Lake Local",
@@ -734,7 +833,9 @@
     "about": "Niagara-on-the-Lake news, events, information and more.  Local news from local journalists, photos, event coverage, weekly flyers and entertainment.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "independent",
+    "tags": ["Niagara-on-the-LakeLocal", "News", "Canada"]
   },
   "CA_NROB": {
     "name": "Northern Ontario Business",
@@ -743,7 +844,9 @@
     "about": "Northern Ontario Business publication provides Northern Ontario with relevant, current, and insightful editorial content and business news and information.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["NorthernOntarioBusiness", "News", "Canada"]
   },
   "CA_ORIL": {
     "name": "Orillia Matters",
@@ -752,7 +855,9 @@
     "about": "Orillia's online news source.  Local news from local journalists, photos, video, sports, events, classifieds, weekly flyers and entertainment.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["OrilliaMatters", "News", "Canada"]
   },
   "CA_PLHT": {
     "name": "Pelham Today",
@@ -761,7 +866,9 @@
     "about": "Pelham's source for local news, sports, business community information, obituaries and more.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["PelhamToday", "News", "Canada"]
   },
   "CA_SOTY": {
     "name": "Soo Today",
@@ -770,7 +877,9 @@
     "about": "Sault Ste. Marie's largest news source. Local news from local journalists, photos, video, sports, events, classifieds, weekly flyers and entertainment.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["SooToday", "News", "Canada"]
   },
   "CA_STRF": {
     "name": "Stratford Today",
@@ -779,7 +888,9 @@
     "about": "The news that matters most to the Stratford community, as it happens.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["StratfordToday", "News", "Canada"]
   },
   "CA_SUDY": {
     "name": "Sudbury.com",
@@ -788,7 +899,9 @@
     "about": "Sudbury's number one source for local news. Stay current with news, sports, entertainment, classifieds, events and more.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["Sudbury.com", "News", "Canada"]
   },
   "CA_THOR": {
     "name": "Thorold Today",
@@ -797,7 +910,9 @@
     "about": "Thorold's local news source.  Local news from local journalists, photos, video, sports, weekly flyers, entertainment and more.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["ThoroldToday", "News", "Canada"]
   },
   "CA_TIMM": {
     "name": "Timmins Today",
@@ -806,7 +921,9 @@
     "about": "Timmins news, events, information and more.  Local news from local journalists, photos, event coverage, weekly flyers, entertainment.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["TimminsToday", "News", "Canada"]
   },
   "CA_LONG": {
     "name": "Longmont Leader",
@@ -815,7 +932,9 @@
     "about": "Longmont's local news source. Local news from local journalists, photos, video, sports, entertainment and more.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["LongmontLeader", "News", "Canada"]
   },
   "CA_SOOL": {
     "name": "Soo Leader",
@@ -824,7 +943,9 @@
     "about": "Soo Leader is your go-to source for local news in Sault Ste Marie, Michigan, offering the latest updates on the events, issues, people and businesses that matter most in our community.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "village",
+    "tags": ["SooLeader", "News", "Canada"]
   },
   "CA_OBSV": {
     "name": "The Sarnia Observer",
@@ -833,7 +954,9 @@
     "about": "A newspaper that covers the latest news, sports, entertainment and lifestyle stories from Sarnia-Lambton, Ontario.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "postmedia",
+    "tags": ["TheSarniaObserver", "News", "Canada"]
   },
   "CA_KNCD": {
     "name": "Kincardine News",
@@ -842,7 +965,9 @@
     "about": "All the latest breaking Kincardine news, stories and updates affecting Kincardine today.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "postmedia",
+    "tags": ["KincardineNews", "News", "Canada"]
   },
   "CA_CBC": {
     "name": "CBC",
@@ -851,7 +976,9 @@
     "about": "Canada's home for breaking and in-depth coverage of local, national and international news.",
     "emos": ["📰", "🇨🇦"],
     "headerBG": "#003366",
-    "primaryColor": "#011543"
+    "primaryColor": "#011543",
+    "owner": "cbc",
+    "tags": ["CBC", "News", "Canada"]
   },
   "CA_GLBL": {
     "name": "Global News",
@@ -859,6 +986,8 @@
     "est": 1994,
     "about": "Global News provides breaking news & current latest Canadian news headlines; national weather forecasts & predictions, local news videos, money and financial news; sports stats and scores.",
     "emos": ["📰", "🇨🇦"],
-    "langs": ["en"]
+    "langs": ["en"],
+    "owner": "corus",
+    "tags": ["GlobalNews", "News", "Canada"]
   }
 }
