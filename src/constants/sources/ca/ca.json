@@ -2060,5 +2060,263 @@
     "primaryColor": "#c5004a",
     "owner": "stir",
     "scope": "national"
+  },
+  "CA_WLCB": {
+    "name": "The Westlock News",
+    "url": "https://www.westlocknews.com",
+    "est": 1950,
+    "about": "The Westlock News provides local news, sports, and events coverage in Westlock County, Alberta. It is part of Black Press Media.",
+    "emos": ["📰", "🌾", "🇨🇦"],
+    "logo": "/img/ns/CA_WLCB.png",
+    "langs": ["en"],
+    "tags": [
+      "Westlock",
+      "Alberta",
+      "LocalNews",
+      "BlackPress",
+      "Community",
+      "Rural",
+      "Events"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/WestlockNews",
+      "twitter": "https://twitter.com/WestlockNews"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#205072",
+    "owner": "blackpress",
+    "scope": "local"
+  },
+  "CA_CRFM": {
+    "name": "CFNR Network",
+    "url": "https://www.cfnrfm.ca",
+    "est": 1983,
+    "about": "CFNR is an Indigenous radio network serving Northern British Columbia, offering news, music, and cultural programming for First Nations communities.",
+    "emos": ["📻", "🪶", "🇨🇦"],
+    "logo": "/img/ns/CA_CRFM.png",
+    "langs": ["en"],
+    "tags": [
+      "Indigenous",
+      "Radio",
+      "NorthernBC",
+      "FirstNations",
+      "Music",
+      "CommunityNews"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/cfnrfm",
+      "twitter": "https://twitter.com/CFNRFM"
+    },
+    "headerBG": "#f5f5f5",
+    "primaryColor": "#e75c09",
+    "owner": "nnbc",
+    "scope": "regional"
+  },
+  "CA_FSCB": {
+    "name": "The Free Press",
+    "url": "https://www.thefreepress.ca",
+    "est": 1898,
+    "about": "The Free Press serves Fernie and the Elk Valley in southeastern British Columbia with local news, business, and community events.",
+    "emos": ["📰", "⛰️", "🇨🇦"],
+    "logo": "/img/ns/CA_FSCB.png",
+    "langs": ["en"],
+    "tags": [
+      "Fernie",
+      "BC",
+      "LocalNews",
+      "Community",
+      "Events",
+      "Mountains",
+      "BlackPress"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/TheFreePressBC",
+      "twitter": "https://twitter.com/TheFreePressBC"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#0073aa",
+    "owner": "blackpress",
+    "scope": "local"
+  },
+  "CA_HRRT": {
+    "name": "Haliburton Echo",
+    "url": "https://haliburtonecho.ca",
+    "est": 1884,
+    "about": "The Haliburton Echo is a local newspaper serving Haliburton County in Ontario with coverage of rural news, sports, and local government.",
+    "emos": ["📰", "🏕️", "🇨🇦"],
+    "logo": "/img/ns/CA_HRRT.png",
+    "langs": ["en"],
+    "tags": [
+      "Haliburton",
+      "CottageCountry",
+      "Ontario",
+      "LocalNews",
+      "Rural",
+      "Community",
+      "Sports"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/HaliburtonEcho",
+      "twitter": "https://twitter.com/HaliburtonEcho"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#4a752c",
+    "owner": "whitepine",
+    "scope": "local"
+  },
+  "CA_NARC": {
+    "name": "Narcity Canada",
+    "url": "https://www.narcity.com/ca",
+    "est": 2013,
+    "about": "Narcity is a digital media brand focused on lifestyle, travel, and city news for young Canadians. Offers viral, shareable content across major urban centers.",
+    "emos": ["📰", "🌆", "🇨🇦"],
+    "logo": "/img/ns/CA_NARC.png",
+    "langs": ["en"],
+    "tags": [
+      "Urban",
+      "Lifestyle",
+      "CityNews",
+      "Travel",
+      "Culture",
+      "Youth",
+      "Trending"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/NarcityCanada",
+      "twitter": "https://twitter.com/NarcityCanada"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#f4364c",
+    "owner": "narcitymedia",
+    "scope": "national"
+  },
+  "CA_ABPT": {
+    "name": "Alberta Prime Times",
+    "url": "https://www.albertaprimetimes.com",
+    "est": 1984,
+    "about": "Alberta Prime Times is a publication focused on news and lifestyle content for older adults across Alberta.",
+    "emos": ["📰", "👵", "🇨🇦"],
+    "logo": "/img/ns/CA_ABSH.png",
+    "langs": ["en"],
+    "tags": [
+      "Alberta",
+      "Seniors",
+      "Lifestyle",
+      "Health",
+      "Community",
+      "Boomers"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/AlbertaPrimeTimes"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#007a3d",
+    "owner": "glacier",
+    "scope": "regional"
+  },
+  "CA_TNV": {
+    "name": "The Northern View",
+    "url": "https://www.thenorthernview.com",
+    "est": 2006,
+    "about": "Based in Prince Rupert, The Northern View delivers local news and events to northwestern British Columbia. It is part of Black Press Media.",
+    "emos": ["📰", "🌊", "🇨🇦"],
+    "logo": "/img/ns/CA_TNSP.png",
+    "langs": ["en"],
+    "tags": [
+      "PrinceRupert",
+      "NorthBC",
+      "CommunityNews",
+      "LocalEvents",
+      "BlackPress"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/TheNorthernView",
+      "twitter": "https://twitter.com/NorthernView"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#004b87",
+    "owner": "blackpress",
+    "scope": "local"
+  },
+  "CA_CKDR": {
+    "name": "CKDR",
+    "url": "https://www.ckdr.net",
+    "est": 1956,
+    "about": "CKDR is a local radio station and news provider serving Dryden, Ontario, offering local news, sports, events, and community updates.",
+    "emos": ["📻", "📰", "🇨🇦"],
+    "logo": "/img/ns/CA_CKDR.png",
+    "langs": ["en"],
+    "tags": ["Dryden", "Ontario", "LocalNews", "Radio", "Community", "Events"],
+    "socials": {
+      "facebook": "https://www.facebook.com/CKDR.Dryden/"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#1b5e20",
+    "owner": "acadia",
+    "scope": "local"
+  },
+  "CA_HALG": {
+    "name": "Haligonia.ca",
+    "url": "https://haligonia.ca",
+    "est": 2008,
+    "about": "Haligonia.ca is a hyperlocal digital media platform based in Halifax, Nova Scotia. It specializes in publishing municipal news, emergency alerts, police press releases, government updates, community bulletins, and public service announcements—often directly from the source. Haligonia does not offer editorial content, opinion, or reporting; instead, it acts as a community signal booster by distributing public information to Halifax residents in a timely and accessible format.",
+    "emos": ["📢", "🏙️", "🇨🇦"],
+    "logo": "/img/ns/CA_HALG.png",
+    "langs": ["en"],
+    "tags": [
+      "Halifax",
+      "HRM",
+      "PublicNotices",
+      "CommunityUpdates",
+      "EmergencyAlerts",
+      "NovaScotia",
+      "CivicInfo",
+      "Unfiltered"
+    ],
+    "socials": {
+      "facebook": "https://www.facebook.com/haligonia/",
+      "twitter": "https://twitter.com/haligonia",
+      "instagram": "https://www.instagram.com/haligonia/"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#1a73e8",
+    "owner": "Haligonia Media",
+    "scope": "local"
+  },
+  "CA_MAPL": {
+    "name": "The Maple",
+    "url": "https://www.readthemaple.com",
+    "est": 2021,
+    "about": "The Maple is an independent digital news publication covering Canadian politics from the perspective of the many, not the few. It focuses on exposing economic inequality and social injustice, highlighting stories about the impacts of the climate emergency, and critically examining the effects of Canada’s imperialist and colonialist policies.",
+    "emos": ["📰", "🌿", "🇨🇦"],
+    "logo": "/img/ns/CA_MAPL.png",
+    "langs": ["en"],
+    "tags": ["CanadianPolitics", "EconomicInequality", "SocialJustice", "ClimateEmergency", "IndependentMedia"],
+    "socials": {
+      "facebook": "https://www.facebook.com/readthemaple",
+      "twitter": "https://twitter.com/readthemaple"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#ff6600",
+    "owner": "independent",
+    "scope": "national"
+  },
+  "CA_CFJC": {
+    "name": "CFJC Today",
+    "url": "https://cfjctoday.com",
+    "est": 1957,
+    "about": "CFJC Today is a news portal operated by CFJC-TV, a television station based in Kamloops, British Columbia. It provides local news, weather, sports, and community events coverage for the Kamloops area.",
+    "emos": ["📰", "📺", "🇨🇦"],
+    "logo": "/img/ns/CA_CFJC.png",
+    "langs": ["en"],
+    "tags": ["Kamloops", "LocalNews", "CommunityEvents", "Television"],
+    "socials": {
+      "facebook": "https://www.facebook.com/CFJC.Today",
+      "twitter": "https://twitter.com/CFJC_Today"
+    },
+    "headerBG": "#ffffff",
+    "primaryColor": "#d71920",
+    "owner": "pattison",
+    "scope": "local"
   }
 }

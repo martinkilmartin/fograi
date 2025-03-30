@@ -251,6 +251,42 @@
     "url": "https://www.nnsl.com/",
     "about": "Publishes community newspapers in the Northwest Territories and Nunavut."
   },
+  "nnbc": {
+    "name": "Northern Native Broadcasting (CFNR)",
+    "nationality": "Canadian",
+    "url": "https://www.cfnrfm.ca/about-cfnr/",
+    "about": "An Indigenous-owned broadcaster operating CFNR Radio Network in Northern BC."
+  },
+  "whitepine": {
+    "name": "White Pine Media",
+    "nationality": "Canadian",
+    "url": "https://haliburtonecho.ca",
+    "about": "Independent community media publisher of the Haliburton Echo and Minden Times."
+  },
+  "narcitymedia": {
+    "name": "Narcity Media",
+    "nationality": "Canadian",
+    "url": "https://www.narcitymedia.com/",
+    "about": "A Canadian digital media company targeting millennial and Gen Z audiences with lifestyle and city-focused content."
+  },
+  "haligonia": {
+    "name": "Haligonia Media",
+    "nationality": "Canadian",
+    "url": "https://haligonia.ca",
+    "about": "Haligonia Media operates Haligonia.ca, a Halifax-based hyperlocal media platform that distributes municipal press releases, emergency alerts, and government updates. It does not produce original reporting or editorial content, instead focusing on amplifying official community communications."
+  },
+  "pattison": {
+    "name": "Pattison Media",
+    "nationality": "Canadian",
+    "url": "https://www.pattisonmedia.com/",
+    "about": "Pattison Media, formerly known as Jim Pattison Broadcast Group, is one of Canada's premier radio and television companies. With over 90 years of broadcasting expertise, it operates numerous radio and television stations across British Columbia, Alberta, Saskatchewan, and Manitoba, serving the needs of listeners, viewers, advertisers, and communities.",
+    "logo": "/img/media/pattison.png",
+    "founded": 1965,
+    "founder": "Jim Pattison",
+    "socials": {
+      "linkedin": "https://ca.linkedin.com/company/pattison-media"
+    }
+  },
   "independent": {
     "name": "Independent",
     "nationality": "Canadian",
