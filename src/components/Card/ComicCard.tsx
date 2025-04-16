@@ -28,9 +28,6 @@ type Props = {
   idx?: number;
 };
 
-
-
-
 const ComicCard = ({ headline }: Props): JSX.Element => {
   const COLLECTION_KEY = 'nooze';
 
@@ -203,6 +200,8 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
 
   return (
     <Card
+      itemScope
+      itemType="https://schema.org/NewsArticle"
       isHoverable
       style={{
         backgroundImage: cardBackground,
@@ -215,7 +214,11 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
         outline: `${isDark ? '5px solid white' : '5px solid black'}`,
         outlineOffset: '-5px',
         imageRendering: 'crisp-edges',
-        boxShadow: `${isDark ? '0 4px 8px rgba(0, 0, 0, 0.1)' : '0 4px 8px rgba(0, 0, 0, 0.1)'}`,
+        boxShadow: `${
+          isDark
+            ? '0 4px 8px rgba(0, 0, 0, 0.1)'
+            : '0 4px 8px rgba(0, 0, 0, 0.1)'
+        }`,
       }}
       onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => {
         e.currentTarget.style.transform = 'translateY(-5px)';
@@ -228,6 +231,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
     >
       <Card.Body style={{ padding: '2px 0', position: 'relative' }}>
         <Link
+          itemProp="url"
           onClick={(_event) => trackClicks('link')}
           href={articleLink}
           target="_blank"
@@ -237,6 +241,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
           {headline.img_src && !leadImgErr ? (
             <div style={{ position: 'relative' }}>
               <NextUIImage
+                itemProp="image"
                 src={headline.img_src}
                 css={{
                   padding: '8px',
@@ -262,13 +267,17 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   position: 'absolute',
                   top: '0px',
                   left: '12px',
-                  backgroundColor: `${isDark ? "rgba(0, 0, 0, 0.9)" : "rgba(255, 255, 255, 0.9)"}`,
+                  backgroundColor: `${
+                    isDark ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)'
+                  }`,
                   border: `${isDark ? '2px solid white' : '2px solid black'}`,
                   padding: '4px 8px',
                   fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
                   fontSize: '14px',
                   fontStyle: 'italic',
-                  boxShadow: `${isDark ? "2px 2px 0 white" : "2px 2px 0 black"}`,
+                  boxShadow: `${
+                    isDark ? '2px 2px 0 white' : '2px 2px 0 black'
+                  }`,
                   transform: 'skewX(-8deg)',
                   zIndex: 10,
                 }}
@@ -278,7 +287,10 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   href={sourceURL}
                   target="_blank"
                   rel="noreferrer"
-                  style={{ color: `${isDark ? "white" : "black"}`, textDecoration: 'none' }}
+                  style={{
+                    color: `${isDark ? 'white' : 'black'}`,
+                    textDecoration: 'none',
+                  }}
                 >
                   {sourceName ?? ''}
                 </Link>
@@ -288,20 +300,26 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   position: 'absolute',
                   top: '0px',
                   right: '12px',
-                  backgroundColor: `${isDark ? "rgba(0, 0, 0, 0.9)" : "rgba(255, 255, 255, 0.9)"}`,
+                  backgroundColor: `${
+                    isDark ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)'
+                  }`,
                   border: `${isDark ? '2px solid white' : '2px solid black'}`,
                   padding: '4px 8px',
                   display: 'inline-block',
                   fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
                   fontSize: '14px',
                   fontStyle: 'italic',
-                  boxShadow: `${isDark ? "2px 2px 0 white" : "2px 2px 0 black"}`,
+                  boxShadow: `${
+                    isDark ? '2px 2px 0 white' : '2px 2px 0 black'
+                  }`,
                   transform: 'skewX(-8deg)',
                   zIndex: 10,
                 }}
               >
                 <Tooltip content={DATE.toLocaleString()}>
-                  {diffDisplay(DATE)}
+                  <time itemProp="datePublished" dateTime={DATE.toISOString()}>
+                    {diffDisplay(DATE)}
+                  </time>
                 </Tooltip>
               </div>
             </div>
@@ -312,13 +330,17 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   position: 'absolute',
                   top: '0px',
                   left: '12px',
-                  backgroundColor: `${isDark ? "rgba(0, 0, 0, 0.9)" : "rgba(255, 255, 255, 0.9)"}`,
+                  backgroundColor: `${
+                    isDark ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)'
+                  }`,
                   border: `${isDark ? '2px solid white' : '2px solid black'}`,
                   padding: '4px 8px',
                   fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
                   fontSize: '14px',
                   fontStyle: 'italic',
-                  boxShadow: `${isDark ? "2px 2px 0 white" : "2px 2px 0 black"}`,
+                  boxShadow: `${
+                    isDark ? '2px 2px 0 white' : '2px 2px 0 black'
+                  }`,
                   transform: 'skewX(-8deg)',
                   zIndex: 10,
                 }}
@@ -328,7 +350,10 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   href={sourceURL}
                   target="_blank"
                   rel="noreferrer"
-                  style={{ color: `${isDark ? "white" : "black"}`, textDecoration: 'none' }}
+                  style={{
+                    color: `${isDark ? 'white' : 'black'}`,
+                    textDecoration: 'none',
+                  }}
                 >
                   {sourceName ?? ''}
                 </Link>
@@ -338,14 +363,18 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   position: 'absolute',
                   top: '0px',
                   right: '12px',
-                  backgroundColor: `${isDark ? "rgba(0, 0, 0, 0.9)" : "rgba(255, 255, 255, 0.9)"}`,
+                  backgroundColor: `${
+                    isDark ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)'
+                  }`,
                   border: `${isDark ? '2px solid white' : '2px solid black'}`,
                   padding: '4px 8px',
                   display: 'inline-block',
                   fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
                   fontSize: '14px',
                   fontStyle: 'italic',
-                  boxShadow: `${isDark ? "2px 2px 0 white" : "2px 2px 0 black"}`,
+                  boxShadow: `${
+                    isDark ? '2px 2px 0 white' : '2px 2px 0 black'
+                  }`,
                   transform: 'skewX(-8deg)',
                   zIndex: 10,
                 }}
@@ -366,10 +395,13 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
               fontSize: '18px',
               textAlign: 'center',
               transform: 'skewX(-8deg)',
-              margin: `${headline.img_src && !leadImgErr ? '0px' : '20px'} 12px 6px 12px`,
+              margin: `${
+                headline.img_src && !leadImgErr ? '0px' : '20px'
+              } 12px 6px 12px`,
             }}
           >
             <Text
+              itemProp="headline"
               h2
               size={18}
               style={{
@@ -384,6 +416,14 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
             </Text>
           </div>
         </Link>
+        <span
+          itemProp="publisher"
+          itemScope
+          itemType="https://schema.org/Organization"
+          style={{ display: 'none' }}
+        >
+          <span itemProp="name">{sourceName}</span>
+        </span>
       </Card.Body>
       <hr />
       <Card.Footer
