@@ -245,15 +245,11 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 src={headline.img_src}
                 css={{
                   padding: '8px',
-                  filter:
-                    'contrast(2.7) brightness(1.3) saturate(2) drop-shadow(4px 4px 0 black)',
-
                   transition: 'all 0.2s ease-in-out',
                   '&:hover': {
-                    filter:
-                      'contrast(3) brightness(1.4) saturate(2.2) drop-shadow(6px 6px 0 black)',
                     boxShadow: '8px 8px 0px rgba(0, 0, 0, 0.8)',
-                    transform: 'rotate(-2deg) scale(1.05)',
+                    // random rotation
+                    transform: `rotate(${Math.random() * 10 - 5}deg) scale(1.05)`,
                   },
                 }}
                 objectFit="cover"

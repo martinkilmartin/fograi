@@ -3,6 +3,7 @@ import { createTheme, NextUIProvider } from '@nextui-org/react';
 import { ThemeProvider } from 'next-themes';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Analytics } from '@vercel/analytics/react';
+import '../styles/globals.css';
 import './masonry.css';
 import './bg.css';
 
