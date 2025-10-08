@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import diffDisplay from '@lib/time-format';
-import Bookmark from '@components/SVG/Bookmark';
 import Heart from '@components/SVG/Heart';
+import Bookmark from '@components/SVG/Bookmark';
+import Share from '@components/SVG/Share';
 import X from '@components/SVG/X';
 import { Badge } from '@components/ui/badge';
 import { Card, CardContent, CardFooter } from '@components/ui/card';
@@ -12,7 +13,6 @@ import { useTheme } from 'next-themes';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { Headline } from '../../types';
 import { Countries as CountriesType } from '../../types/countries';
-import shareImg from '../../../public/img/ic/share.svg';
 
 type Props = {
   header?: boolean;
@@ -416,64 +416,93 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
       <CardFooter
         style={{
           marginBottom: '-15px',
-          paddingTop: '10px',
+          padding: '16px',
           textAlign: 'center',
         }}
       >
-        <div style={{ display: 'flex', gap: '8px' }}>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          width: '100%',
+          maxWidth: '240px',
+          margin: '0 auto'
+        }}>
           <div
             onClick={toggleLike}
             style={{
-              flex: 1,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
               cursor: 'pointer',
               padding: '8px',
-              borderRadius: '4px',
-              transition: 'background-color 0.2s ease'
+              borderRadius: '8px',
+              transition: 'all 0.2s ease',
+              minWidth: '60px'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)';
+              e.currentTarget.style.transform = 'scale(1.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = 'transparent';
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
           >
-            <Badge style={{ marginBottom: '4px' }}>
+            <Badge style={{ marginBottom: '4px', fontSize: '12px' }}>
               {likeLoading ? '...' : likeCount}
             </Badge>
             <Heart someBool={liked} />
           </div>
+
           <div
             onClick={saveToOrRemoveFromCollection}
             style={{
-              flex: 1,
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
               cursor: 'pointer',
               padding: '8px',
-              borderRadius: '4px',
-              transition: 'background-color 0.2s ease'
+              borderRadius: '8px',
+              transition: 'all 0.2s ease',
+              minWidth: '60px'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)';
+              e.currentTarget.style.transform = 'scale(1.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = 'transparent';
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
           >
             <Bookmark someBool={saved} />
           </div>
+
           <div
             style={{
-              flex: 1,
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
               cursor: 'pointer',
               padding: '8px',
-              borderRadius: '4px',
-              transition: 'background-color 0.2s ease'
+              borderRadius: '8px',
+              transition: 'all 0.2s ease',
+              minWidth: '60px'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)';
+              e.currentTarget.style.transform = 'scale(1.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = 'transparent';
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
           >
             {canShare ? (
-              <img src={shareImg.src} alt="Share" height={32} onClick={share} />
+              <div onClick={share}>
+                <Share someBool={false} />
+              </div>
             ) : (
               <Link
                 href={twShare}
