@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button, Grid } from '@nextui-org/react';
 import { HeadlineCard } from '@components/Card';
 import { Headline } from '../../types/Headline';
 import { Countries } from 'src/types/countries';
@@ -20,9 +19,9 @@ const BookMarkedHeadlineList: React.FC<BookMarkedHeadlineListProps> = ({
   } else {
     return (
       <>
-        <Grid.Container gap={2} justify="center" style={{ padding: '0' }}>
+        <div style={{ display: 'grid', gap: '8px', justifyContent: 'center', padding: '0', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
           {headlines?.map((headline, idx) => (
-            <Grid xs={12} md={6} lg={4} xl={3} key={headline[0]}>
+            <div key={headline[0]}>
               <HeadlineCard
                 headline={headline[1]}
                 country={
@@ -30,17 +29,16 @@ const BookMarkedHeadlineList: React.FC<BookMarkedHeadlineListProps> = ({
                 }
                 idx={idx + 1}
               />
-            </Grid>
+            </div>
           ))}
-        </Grid.Container>
-        <Button
+        </div>
+        <button
           aria-label="Back to top"
-          auto
-          ghost
           onClick={() => backToTop()}
-          css={{ position: 'fixed', bottom: '20px', right: '10px' }}
-          icon={'⬆️'}
-        ></Button>
+          style={{ position: 'fixed', bottom: '20px', right: '10px', border: '1px solid', padding: '8px', borderRadius: '4px' }}
+        >
+          ⬆️
+        </button>
       </>
     );
   }

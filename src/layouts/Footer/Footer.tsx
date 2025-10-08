@@ -1,4 +1,3 @@
-import { Grid, Text } from '@nextui-org/react';
 import { Copyright } from '@components/Copyright';
 import { FOOTER_LINKS } from '@constants/FOOTER_LINKS';
 import Link from 'next/link';
@@ -11,9 +10,9 @@ const Footer = (): JSX.Element => (
       marginBottom: '50px',
     }}
   >
-    <Grid.Container justify="center" gap={2}>
+    <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
       {FOOTER_LINKS.map((linkSection, idx) => (
-        <Grid key={idx}>
+        <div key={idx}>
           <div
             style={{
               display: 'flex',
@@ -22,30 +21,26 @@ const Footer = (): JSX.Element => (
           >
             <h3>{linkSection.title}</h3>
             {linkSection.urls.map((url, idx) => (
-              <Text key={idx} weight="bold" size={18}>
+              <span key={idx} style={{ fontWeight: 'bold', fontSize: '18px' }}>
                 <Link href={url.path}>{url.text}</Link>
-              </Text>
+              </span>
             ))}
           </div>
-        </Grid>
+        </div>
       ))}
-    </Grid.Container>
-    <Grid.Container justify="center" gap={2}>
-      <Grid>
-        <Text>
-          <Link href="https://www.reddit.com/u/noozenews" target="_blank">
-            <RedditLogo />
-          </Link>
-        </Text>
-      </Grid>
-      <Grid>
-        <Text>
-          <Link href="https://twitter.com/NoozeNews" target="_blank">
-            <X />
-          </Link>
-        </Text>
-      </Grid>
-    </Grid.Container>
+    </div>
+    <div style={{ display: 'flex', justifyContent: 'center', gap: '16px' }}>
+      <div>
+        <Link href="https://www.reddit.com/u/noozenews" target="_blank">
+          <RedditLogo />
+        </Link>
+      </div>
+      <div>
+        <Link href="https://twitter.com/NoozeNews" target="_blank">
+          <X />
+        </Link>
+      </div>
+    </div>
     <div>
       <Copyright />
     </div>

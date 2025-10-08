@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
-import { Badge, Loading } from '@nextui-org/react';
 import { ComicCard as HeadlineCard } from '@components/Card';
 import { ActionBar } from '@components/ActionBar';
 import { Headline } from '../../types/Headline';
@@ -85,20 +84,19 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
             ))}
             {fetching && (
               <div className="loading-spinner-container">
-                <Loading type="spinner" size="xl" />
+                <div>⏳ Loading...</div>
               </div>
             )}
           </Masonry>
         </div>
-        <Badge
+        <button
           aria-label="The number of headlines loaded"
-          variant="bordered"
-          style={{ position: 'fixed', bottom: '20px', left: '10px' }}
+          style={{ position: 'fixed', bottom: '20px', left: '10px', border: '1px solid', padding: '8px', borderRadius: '4px' }}
           onClick={() => showBottomNav(!bottomNav)}
         >
-          {fetching ? <Loading type="gradient" size="xs" /> : headlines?.length}
-        </Badge>
-        <Badge
+          {fetching ? '⏳' : headlines?.length}
+        </button>
+        <button
           role="button"
           aria-label="Back to top"
           onClick={() => backToTop()}
@@ -107,13 +105,13 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
             bottom: '20px',
             right: '10px',
             maxWidth: '50px',
+            border: '1px solid',
+            padding: '8px',
+            borderRadius: '4px',
           }}
-          size="lg"
-          color="primary"
-          variant="bordered"
         >
           ⬆️
-        </Badge>
+        </button>
         {bottomNav && <ActionBar userCountry={userCountry} />}
       </>
     );

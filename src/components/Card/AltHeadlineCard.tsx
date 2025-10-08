@@ -1,6 +1,5 @@
 import { useState } from 'react';
-//import Image from 'next/image';
-import { Image as NextUIImage } from '@nextui-org/react';
+import Image from 'next/image';
 // import {
 //   Badge,
 //   Card,
@@ -244,14 +243,13 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
         {headline.headline}&nbsp;↗
       </div>
       {headline.img_src && (
-        <NextUIImage
+        <Image
           src={leadImgErr ? '/img/broken.svg' : headline.img_src}
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
           width={400}
           height={200}
           alt={headline.img_alt ?? ''}
           onError={() => setLeadImgErr(true)}
-          showSkeleton
         />
       )}
       <div

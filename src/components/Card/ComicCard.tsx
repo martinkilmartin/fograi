@@ -1,20 +1,14 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Image as NextUIImage } from '@nextui-org/react';
-import {
-  Badge,
-  Card,
-  Grid,
-  Loading,
-  Text,
-  Tooltip,
-  useTheme,
-} from '@nextui-org/react';
 import Link from 'next/link';
 import diffDisplay from '@lib/time-format';
 import Bookmark from '@components/SVG/Bookmark';
 import Heart from '@components/SVG/Heart';
 import X from '@components/SVG/X';
+import { Badge } from '@components/ui/badge';
+import { Card, CardContent, CardFooter } from '@components/ui/card';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@components/ui/tooltip';
+import { useTheme } from 'next-themes';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { Headline } from '../../types';
 import { Countries as CountriesType } from '../../types/countries';
@@ -31,7 +25,8 @@ type Props = {
 const ComicCard = ({ headline }: Props): JSX.Element => {
   const COLLECTION_KEY = 'nooze';
 
-  const { isDark } = useTheme();
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [leadImgErr, setLeadImgErr] = useState<boolean>(false);
   const [liked, setLiked] = useState<boolean>(false);
   const [likeCount, setLikeCount] = useState<number | '?'>('?');
@@ -199,16 +194,16 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
     articleLink;
 
   return (
-    <Card
+    <TooltipProvider>
+      <Card
       itemScope
       itemType="https://schema.org/NewsArticle"
-      isHoverable
+      className="hover:shadow-lg transition-transform duration-300 hover:-translate-y-1"
       style={{
         backgroundImage: cardBackground,
         fontFamily: '"Arial", sans-serif',
         margin: '10px',
         padding: '4px',
-        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
         border: '4px solid black',
         borderRadius: '0',
         outline: `${isDark ? '5px solid white' : '5px solid black'}`,
@@ -220,16 +215,8 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
             : '0 4px 8px rgba(0, 0, 0, 0.1)'
         }`,
       }}
-      onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => {
-        e.currentTarget.style.transform = 'translateY(-5px)';
-        e.currentTarget.style.boxShadow = '0 15px 25px rgba(0, 0, 0, 0.1)';
-      }}
-      onMouseLeave={(e: React.MouseEvent<HTMLDivElement>) => {
-        e.currentTarget.style.transform = 'translateY(0)';
-        e.currentTarget.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
-      }}
     >
-      <Card.Body style={{ padding: '2px 0', position: 'relative' }}>
+      <CardContent style={{ padding: '2px 0', position: 'relative' }}>
         <Link
           itemProp="url"
           onClick={(_event) => trackClicks('link')}
@@ -240,23 +227,19 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
         >
           {headline.img_src && !leadImgErr ? (
             <div style={{ position: 'relative' }}>
-              <NextUIImage
+              <Image
                 itemProp="image"
                 src={headline.img_src}
-                css={{
+                style={{
                   padding: '8px',
                   transition: 'all 0.2s ease-in-out',
-                  '&:hover': {
-                    boxShadow: '8px 8px 0px rgba(0, 0, 0, 0.8)',
-                    // random rotation
-                    transform: `rotate(${Math.random() * 10 - 5}deg) scale(1.05)`,
-                  },
                 }}
+                className="hover:shadow-[8px_8px_0px_rgba(0,0,0,0.8)] hover:scale-105 hover:rotate-[calc(var(--random-rotation))]"
                 objectFit="cover"
-                width={'100%'}
+                width={400}
+                height={300}
                 alt={headline.img_alt ?? ''}
                 onError={() => setLeadImgErr(true)}
-                showSkeleton
               />
               <div
                 style={{
@@ -312,10 +295,15 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   zIndex: 10,
                 }}
               >
-                <Tooltip content={DATE.toLocaleString()}>
-                  <time itemProp="datePublished" dateTime={DATE.toISOString()}>
-                    {diffDisplay(DATE)}
-                  </time>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <time itemProp="datePublished" dateTime={DATE.toISOString()}>
+                      {diffDisplay(DATE)}
+                    </time>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    {DATE.toLocaleString()}
+                  </TooltipContent>
                 </Tooltip>
               </div>
             </div>
@@ -375,8 +363,13 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   zIndex: 10,
                 }}
               >
-                <Tooltip content={DATE.toLocaleString()}>
-                  {diffDisplay(DATE)}
+                <Tooltip>
+                  <TooltipTrigger>
+                    {diffDisplay(DATE)}
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    {DATE.toLocaleString()}
+                  </TooltipContent>
                 </Tooltip>
               </div>
             </div>
@@ -396,10 +389,8 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
               } 12px 6px 12px`,
             }}
           >
-            <Text
+            <h2
               itemProp="headline"
-              h2
-              size={18}
               style={{
                 padding: '10px 15px',
                 fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
@@ -409,7 +400,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
               }}
             >
               {headline.headline}&nbsp;↗
-            </Text>
+            </h2>
           </div>
         </Link>
         <span
@@ -420,32 +411,69 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
         >
           <span itemProp="name">{sourceName}</span>
         </span>
-      </Card.Body>
+      </CardContent>
       <hr />
-      <Card.Footer
+      <CardFooter
         style={{
           marginBottom: '-15px',
           paddingTop: '10px',
           textAlign: 'center',
         }}
       >
-        <Grid.Container justify="space-around">
-          <Grid onClick={toggleLike}>
-            <Badge
-              disableOutline
-              content={likeLoading ? <Loading size="xs" /> : likeCount}
-              size="md"
-              color={likeCount === '?' ? 'warning' : 'success'}
-            >
-              <Heart someBool={liked} />
+        <div style={{ display: 'flex', gap: '8px' }}>
+          <div
+            onClick={toggleLike}
+            style={{
+              flex: 1,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              cursor: 'pointer',
+              padding: '8px',
+              borderRadius: '4px',
+              transition: 'background-color 0.2s ease'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+          >
+            <Badge style={{ marginBottom: '4px' }}>
+              {likeLoading ? '...' : likeCount}
             </Badge>
-          </Grid>
-          <Grid onClick={saveToOrRemoveFromCollection}>
+            <Heart someBool={liked} />
+          </div>
+          <div
+            onClick={saveToOrRemoveFromCollection}
+            style={{
+              flex: 1,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              cursor: 'pointer',
+              padding: '8px',
+              borderRadius: '4px',
+              transition: 'background-color 0.2s ease'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+          >
             <Bookmark someBool={saved} />
-          </Grid>
-          <Grid>
+          </div>
+          <div
+            style={{
+              flex: 1,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              cursor: 'pointer',
+              padding: '8px',
+              borderRadius: '4px',
+              transition: 'background-color 0.2s ease'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+          >
             {canShare ? (
-              <Image src={shareImg} alt="Share" height={32} onClick={share} />
+              <img src={shareImg.src} alt="Share" height={32} onClick={share} />
             ) : (
               <Link
                 href={twShare}
@@ -453,17 +481,21 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 rel="noreferrer"
                 title="Share on X"
               >
-                <Tooltip
-                  content={'Browser share not supported. Defaulting to X.'}
-                >
-                  <X />
+                <Tooltip>
+                  <TooltipTrigger>
+                    <X />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    Browser share not supported. Defaulting to X.
+                  </TooltipContent>
                 </Tooltip>
               </Link>
             )}
-          </Grid>
-        </Grid.Container>
-      </Card.Footer>
+          </div>
+        </div>
+      </CardFooter>
     </Card>
+    </TooltipProvider>
   );
 };
 
