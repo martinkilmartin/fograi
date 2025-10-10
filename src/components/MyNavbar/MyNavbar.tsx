@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useQueryClient } from 'react-query';
 import { useRouter } from 'next/router';
 import { useTheme as useNextTheme } from 'next-themes';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Countries from '@components/Filters/Countries';
 import Sources from '@components/Filters/Sources';
 import MediaTypes from '@components/Filters/MediaTypes';

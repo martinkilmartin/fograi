@@ -106,7 +106,7 @@ async function rateLimit(context: RateLimitContext) {
 }
 
 export const initRateLimit = (fn: RateLimitHandler) =>
-  async function isRateLimited(request: NextRequest): Promise<Response> {
+  (async function isRateLimited(request: NextRequest): Promise<Response> {
     const ctx = await fn(request)
 
     if (ctx instanceof Response) return ctx
@@ -117,4 +117,4 @@ export const initRateLimit = (fn: RateLimitHandler) =>
       headers: getHeaders(ctx.headers),
       onRateLimit: ctx.onRateLimit ?? rateLimited,
     })
-  }
+  })
