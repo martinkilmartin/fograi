@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { useTheme as useNextTheme } from 'next-themes';
 import Search from '@components/SVG/Search';
@@ -14,7 +14,35 @@ export default function MyNavbar(): JSX.Element {
   const [searchTerm, setSearchTerm] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
   const modalHandler = () => setModalVisible(true);
+
+  // Handle modal close on outside click or escape key
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        setModalVisible(false);
+      }
+    };
+
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setModalVisible(false);
+      }
+    };
+
+    if (modalVisible) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscapeKey);
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscapeKey);
+      document.body.style.overflow = 'unset';
+    };
+  }, [modalVisible]);
 
   const themes = [
     "light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro",
@@ -226,24 +254,95 @@ export default function MyNavbar(): JSX.Element {
         </div>
       </nav>
 
-      {/* Filters Modal */}
+      {/* Enhanced Filters Modal */}
       {modalVisible && (
         <div className="modal modal-open" style={{ zIndex: 100 }}>
-          <div className="modal-box max-w-2xl">
-            <h3 className="font-bold text-lg mb-4">Filter News</h3>
-            <div className="space-y-4">
-              <Countries />
-              <Sources />
-              <MediaTypes />
-              <Langs />
-            </div>
-            <div className="modal-action">
+          <div
+            ref={modalRef}
+            className="modal-box max-w-6xl w-full mx-4 max-h-[90vh] overflow-hidden flex flex-col"
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between mb-6 pb-4 border-b border-base-300">
+              <div className="flex items-center gap-3">
+                <Filter width={24} height={24} />
+                <h3 className="font-bold text-xl">Filter News</h3>
+              </div>
               <button
-                className="btn"
                 onClick={() => setModalVisible(false)}
+                className="btn btn-sm btn-ghost btn-circle"
+                aria-label="Close filters"
               >
-                Close
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
+            </div>
+
+            {/* Content - Responsive Grid Layout */}
+            <div className="flex-1 overflow-y-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+                {/* Countries Section */}
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 pb-2 border-b border-base-300">
+                    <span className="text-lg font-semibold">🌍 Countries</span>
+                    <span className="badge badge-sm badge-primary">Essential</span>
+                  </div>
+                  <div className="max-h-80 overflow-y-auto">
+                    <Countries />
+                  </div>
+                </div>
+
+                {/* Sources Section */}
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 pb-2 border-b border-base-300">
+                    <span className="text-lg font-semibold">📰 Sources</span>
+                    <span className="badge badge-sm badge-secondary">Quality</span>
+                  </div>
+                  <div className="max-h-80 overflow-y-auto">
+                    <Sources />
+                  </div>
+                </div>
+
+                {/* Media Types Section */}
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 pb-2 border-b border-base-300">
+                    <span className="text-lg font-semibold">📺 Media Types</span>
+                    <span className="badge badge-sm badge-accent">Format</span>
+                  </div>
+                  <div className="max-h-80 overflow-y-auto">
+                    <MediaTypes />
+                  </div>
+                </div>
+
+                {/* Languages Section */}
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 pb-2 border-b border-base-300">
+                    <span className="text-lg font-semibold">💬 Languages</span>
+                    <span className="badge badge-sm badge-neutral">Global</span>
+                  </div>
+                  <div className="max-h-80 overflow-y-auto">
+                    <Langs />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer Actions */}
+            <div className="modal-action mt-6 pt-4 border-t border-base-300">
+              <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                <button
+                  onClick={() => setModalVisible(false)}
+                  className="btn btn-primary flex-1 sm:flex-none"
+                >
+                  Apply Filters
+                </button>
+                <button
+                  onClick={() => setModalVisible(false)}
+                  className="btn btn-ghost flex-1 sm:flex-none"
+                >
+                  Cancel
+                </button>
+              </div>
             </div>
           </div>
         </div>
