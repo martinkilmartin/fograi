@@ -49,6 +49,9 @@ module.exports = {
       "dim",
       "nord",
       "sunset",
+      "caramellatte",
+      "abyss",
+      "silk"
     ],
     darkTheme: "dark",
   },
