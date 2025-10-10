@@ -1,12 +1,5 @@
 import { useState, useEffect } from 'react';
-import {
-  Container,
-  Grid,
-  Link,
-  Switch,
-  SwitchEvent,
-  Text,
-} from '@nextui-org/react';
+import Link from 'next/link';
 import { COUNTRIES } from '@constants/COUNTRIES';
 import { flags } from '@constants/FLAGS';
 import { Countries as CountriesTypes } from 'src/types/countries';
@@ -16,8 +9,8 @@ type Props = {
   subTitle: string;
 };
 
-const Countries = ({ title, subTitle }: Props): JSX.Element => {
-  const [likedCountries, likCountry] = useState<Set<keyof typeof COUNTRIES>>(
+const CountriesComponent = ({ title, subTitle }: Props): JSX.Element => {
+  const [likedCountries, setLikedCountries] = useState<Set<keyof typeof COUNTRIES>>(
     () => {
       if (typeof window !== 'undefined') {
         const locallyLikedSources = localStorage.getItem('likedCountries');
@@ -31,37 +24,29 @@ const Countries = ({ title, subTitle }: Props): JSX.Element => {
     },
   );
 
-  const addItem = (item: keyof typeof COUNTRIES) => {
-    likCountry((prevSet) => new Set([...prevSet, item]));
-    try {
-      fetch(`/api/fast/react?id=${item as string}&action=like&reaction=false`, {
-        method: 'POST',
-      });
-    } catch (_error) {
-      // do nothing
-    }
-  };
-
-  const removeItem = (item: keyof typeof COUNTRIES) => {
-    likCountry((prevSet) => {
-      const newSet = new Set(prevSet);
-      newSet.delete(item);
-      return newSet;
-    });
-    try {
-      fetch(`/api/fast/react?id=${item as string}&action=like&reaction=true`, {
-        method: 'POST',
-      });
-    } catch (_error) {
-      // do nothing
-    }
-  };
-
-  const sourcy = (e: SwitchEvent, ns: keyof typeof COUNTRIES) => {
-    if (e.target.checked) {
-      addItem(ns);
+  const toggleCountry = (countryKey: keyof typeof COUNTRIES, checked: boolean) => {
+    if (checked) {
+      setLikedCountries((prevSet) => new Set([...prevSet, countryKey]));
+      try {
+        fetch(`/api/fast/react?id=${countryKey as string}&action=like&reaction=false`, {
+          method: 'POST',
+        });
+      } catch (_error) {
+        // do nothing
+      }
     } else {
-      removeItem(ns);
+      setLikedCountries((prevSet) => {
+        const newSet = new Set(prevSet);
+        newSet.delete(countryKey);
+        return newSet;
+      });
+      try {
+        fetch(`/api/fast/react?id=${countryKey as string}&action=like&reaction=true`, {
+          method: 'POST',
+        });
+      } catch (_error) {
+        // do nothing
+      }
     }
   };
 
@@ -78,51 +63,41 @@ const Countries = ({ title, subTitle }: Props): JSX.Element => {
   }, [likedCountries]);
 
   return (
-    <Container>
-      <h1 style={{ textAlign: 'center' }}>
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold text-center mb-4">
         {title}&nbsp;({COUNTRIES.size})
       </h1>
-      <Text h5 style={{ textAlign: 'center' }}>
+      <p className="text-lg text-center mb-8">
         {subTitle}
-      </Text>
-      <Grid.Container gap={2} justify="space-evenly" style={{ padding: '0' }}>
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {Array.from(COUNTRIES).map((ns, i) => {
           const country = ns[0].substring(0, 2).toLowerCase();
           const cFlag = flags.get(country as CountriesTypes);
           const isLiked = likedCountries.has(ns[0] as keyof typeof COUNTRIES);
           return (
-            <Grid xs={12} sm={6} md={6} lg={4} xl={3} key={i}>
-              <Switch
+            <div key={i} className="flex items-center gap-3 p-3 border rounded-lg">
+              <input
+                type="checkbox"
+                className="checkbox checkbox-success checkbox-lg"
                 checked={isLiked}
-                onChange={(e) => sourcy(e, ns[0] as keyof typeof COUNTRIES)}
-                size="xl"
-                color="success"
-                iconOn="❤️"
-                iconOff="◻️"
+                onChange={(e) => toggleCountry(ns[0] as keyof typeof COUNTRIES, e.target.checked)}
               />
-              <Text
-                size={22}
-                style={{
-                  fontFamily: '"Georgia", "Times New Roman", Times, serif',
-                }}
+              <span className="text-2xl">{cFlag}</span>
+              <Link
+                href={`/country/${ns[1]
+                  ?.toLowerCase()
+                  .replaceAll(' ', '-')}`}
+                className="font-bold text-lg hover:link-primary"
               >
-                &nbsp;{cFlag}&nbsp;
-                <b>
-                  <Link
-                    href={`/country/${ns[1]
-                      ?.toLowerCase()
-                      .replaceAll(' ', '-')}`}
-                  >
-                    {ns[1]}
-                  </Link>
-                </b>
-              </Text>
-            </Grid>
+                {ns[1]}
+              </Link>
+            </div>
           );
         })}
-      </Grid.Container>
-    </Container>
+      </div>
+    </div>
   );
 };
 
-export default Countries;
+export default CountriesComponent;

@@ -1,4 +1,3 @@
-import { Text } from '@nextui-org/react';
 import Link from 'next/link';
 
 type Props = {
@@ -6,51 +5,51 @@ type Props = {
 };
 
 const Robot = ({ title }: Props): JSX.Element => (
-  <div>
-    <Text h1>🤖&nbsp;{title}</Text>
-    <Text h2>Purpose</Text>
-    <Text>
-      <b>nooze-bot</b> crawls particular news websites to index the main
-      headline only. This index is used by <Link href="/">nooze.news</Link> to
+  <div className="container mx-auto px-4 py-8">
+    <h1 className="text-4xl font-bold mb-6">🤖&nbsp;{title}</h1>
+    <h2 className="text-2xl font-semibold mb-4">Purpose</h2>
+    <p className="mb-4">
+      <strong>nooze-bot</strong> crawls particular news websites to index the main
+      headline only. This index is used by <Link href="/" className="link link-primary">nooze.news</Link> to
       list direct links to each indexed headline.
-    </Text>
-    <Text>
-      <b>nooze.news</b> aims support quality journalism and help secure the
+    </p>
+    <p className="mb-6">
+      <strong>nooze.news</strong> aims support quality journalism and help secure the
       future of newspapers.
-    </Text>
-    <Text h2>Operator</Text>
-    <Text>
-      <b>nooze-bot</b> is operated by Sionnach Buí Teoranta (Éireann) and
+    </p>
+    <h2 className="text-2xl font-semibold mb-4">Operator</h2>
+    <p className="mb-6">
+      <strong>nooze-bot</strong> is operated by Sionnach Buí Teoranta (Éireann) and
       Sionnach Solutions (Québec).
-    </Text>
-    <Text h2>Behavior</Text>
-    <Text>
-      <b>nooze-bot</b> will only access the homepage at a maximum rate of once
+    </p>
+    <h2 className="text-2xl font-semibold mb-4">Behavior</h2>
+    <p>
+      <strong>nooze-bot</strong> will only access the homepage at a maximum rate of once
       per 30 minutes.
-    </Text>
-    <Text>
-      <b>nooze-bot</b> will try to index each new main headline that it finds.
-    </Text>
-    <Text>
-      <b>nooze-bot</b> will try to access each new main headline and capture its
+    </p>
+    <p>
+      <strong>nooze-bot</strong> will try to index each new main headline that it finds.
+    </p>
+    <p>
+      <strong>nooze-bot</strong> will try to access each new main headline and capture its
       meta data, such as title, tags, image, published date and author.
-    </Text>
-    <Text>
-      <b>nooze-bot</b> does not index or capture the main content of a news
+    </p>
+    <p className="mb-4">
+      <strong>nooze-bot</strong> does not index or capture the main content of a news
       article.
-    </Text>
-    <Text>
-      <b>nooze-bot</b> is currently hosted in Dublin, Ireland under IP&apos;s{' '}
-      <code>63-35-201-225</code> and <code>54.155.128.69</code>.
-    </Text>
-    <Text h2>Rules</Text>
-    <Text>
-      <b>nooze-bot</b> adheres to rules that it finds in robots.txt.
-    </Text>
-    <Text h2>Contact</Text>
-    <Text>
-      <b>Email:</b> <Link href="mailto:info@nooze.news">info@nooze.news</Link>
-    </Text>
+    </p>
+    <p className="mb-6">
+      <strong>nooze-bot</strong> is currently hosted in Dublin, Ireland under IPs{' '}
+      <code>63.35.201.225</code> and <code>54.155.128.69</code>.
+    </p>
+    <h2 className="text-2xl font-semibold mb-4">Rules</h2>
+    <p className="mb-6">
+      <strong>nooze-bot</strong> adheres to rules that it finds in robots.txt.
+    </p>
+    <h2 className="text-2xl font-semibold mb-4">Contact</h2>
+    <p>
+      <strong>Email:</strong> <Link href="mailto:info@nooze.news" className="link link-primary">info@nooze.news</Link>
+    </p>
   </div>
 );
 
