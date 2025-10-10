@@ -11,8 +11,10 @@ const queryClient = new QueryClient();
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <ThemeProvider
-      defaultTheme="system"
-      attribute="class"
+      defaultTheme="light"
+      attribute="data-theme"
+      enableSystem={false}
+      disableTransitionOnChange={false}
     >
       <QueryClientProvider client={queryClient}>
         <Component {...pageProps} />

@@ -258,8 +258,11 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   zIndex: 10,
                 }}
               >
-                <Link
-                  onClick={(_event) => trackClicks('source')}
+                <a
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    trackClicks('source');
+                  }}
                   href={sourceURL}
                   target="_blank"
                   rel="noreferrer"
@@ -269,7 +272,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   }}
                 >
                   {sourceName ?? ''}
-                </Link>
+                </a>
               </div>
               <div
                 style={{
@@ -319,8 +322,11 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   zIndex: 10,
                 }}
               >
-                <Link
-                  onClick={(_event) => trackClicks('source')}
+                <a
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    trackClicks('source');
+                  }}
                   href={sourceURL}
                   target="_blank"
                   rel="noreferrer"
@@ -330,7 +336,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   }}
                 >
                   {sourceName ?? ''}
-                </Link>
+                </a>
               </div>
               <div
                 style={{

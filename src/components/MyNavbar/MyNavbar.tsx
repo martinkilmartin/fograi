@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTheme as useNextTheme } from 'next-themes';
 import Search from '@components/SVG/Search';
@@ -10,12 +9,55 @@ import MediaTypes from '@components/Filters/MediaTypes';
 import Langs from '@components/Filters/Langs';
 
 export default function MyNavbar(): JSX.Element {
-  const { setTheme } = useNextTheme();
+  const { setTheme, theme } = useNextTheme();
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const modalHandler = () => setModalVisible(true);
+
+  const themes = [
+    "light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro",
+    "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel",
+    "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business",
+    "acid", "lemonade", "night", "coffee", "winter", "dim", "nord", "sunset"
+  ];
+
+  // Color mapping for theme swatches
+  const themeColors: Record<string, string> = {
+    light: '#ffffff',
+    dark: '#1f2937',
+    cupcake: '#faf7f5',
+    bumblebee: '#fffbed',
+    emerald: '#ecfdf5',
+    corporate: '#ffffff',
+    synthwave: '#2a0e4e',
+    retro: '#ffe4c4',
+    cyberpunk: '#0d001a',
+    valentine: '#fff5f5',
+    halloween: '#2d1b1b',
+    garden: '#f0fdf4',
+    forest: '#f0fdf4',
+    aqua: '#ecfeff',
+    lofi: '#ffffff',
+    pastel: '#fef7ff',
+    fantasy: '#fff7ed',
+    wireframe: '#ffffff',
+    black: '#000000',
+    luxury: '#09090b',
+    dracula: '#282a36',
+    cmyk: '#ffffff',
+    autumn: '#fef3c7',
+    business: '#ffffff',
+    acid: '#f0fdf4',
+    lemonade: '#fefce8',
+    night: '#0f0f23',
+    coffee: '#382e2d',
+    winter: '#e0f2fe',
+    dim: '#2a2e37',
+    nord: '#2e3440',
+    sunset: '#fef2f2'
+  };
 
   return (
     <>
@@ -41,13 +83,13 @@ export default function MyNavbar(): JSX.Element {
         </div>
 
         <div className="navbar-center">
-          <Link href="/">
+          <button onClick={() => router.push('/')} className="btn btn-ghost p-0">
             <img
               src="/img/nooze.svg"
               alt="Nooze Logo"
               className="h-16 w-auto cursor-pointer"
             />
-          </Link>
+          </button>
         </div>
 
         <div className="navbar-end gap-2">
@@ -85,32 +127,32 @@ export default function MyNavbar(): JSX.Element {
                   </div>
                 </li>
                 <li>
-                  <button
-                    onClick={() => {
-                      setTheme('light');
-                      setMobileMenuOpen(false);
-                    }}
-                    className="flex items-center gap-2"
-                  >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
-                    Light Mode
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => {
-                      setTheme('dark');
-                      setMobileMenuOpen(false);
-                    }}
-                    className="flex items-center gap-2"
-                  >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                    </svg>
-                    Dark Mode
-                  </button>
+                  <div className="dropdown">
+                    <button tabIndex={0} className="flex items-center gap-2 w-full">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
+                      </svg>
+                      Theme: {theme}
+                    </button>
+                    <ul tabIndex={0} className="dropdown-content z-[1] p-2 shadow-2xl bg-base-100 rounded-box w-48 max-h-64 overflow-y-auto ml-4">
+                      {themes.map((themeName) => (
+                        <li key={themeName}>
+                          <button
+                            onClick={() => {
+                              setTheme(themeName);
+                              setMobileMenuOpen(false);
+                            }}
+                            className={`flex items-center gap-2 w-full text-left capitalize ${theme === themeName ? 'bg-primary text-primary-content' : ''}`}
+                          >
+                            <div className={`w-3 h-3 rounded-full border border-base-content ${theme === themeName ? 'ring-1 ring-primary' : ''}`}
+                              style={{ backgroundColor: themeColors[themeName] || '#666' }}>
+                            </div>
+                            {themeName}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </li>
                 <li>
                   <button
@@ -147,24 +189,28 @@ export default function MyNavbar(): JSX.Element {
                 <Search width={16} height={16} />
               </div>
             </div>
-            <button
-              onClick={() => setTheme('light')}
-              className="btn btn-ghost btn-circle btn-sm"
-              title="Light Mode"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            </button>
-            <button
-              onClick={() => setTheme('dark')}
-              className="btn btn-ghost btn-circle btn-sm"
-              title="Dark Mode"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-              </svg>
-            </button>
+            <div className="dropdown dropdown-end">
+              <button tabIndex={0} className="btn btn-ghost btn-circle btn-sm" title="Change Theme">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
+                </svg>
+              </button>
+              <ul tabIndex={0} className="dropdown-content z-[1] p-2 shadow-2xl bg-base-100 rounded-box w-52 max-h-64 overflow-y-auto">
+                {themes.map((themeName) => (
+                  <li key={themeName}>
+                    <button
+                      onClick={() => setTheme(themeName)}
+                      className={`flex items-center gap-2 w-full text-left capitalize ${theme === themeName ? 'bg-primary text-primary-content' : ''}`}
+                    >
+                      <div className={`w-4 h-4 rounded-full border-2 border-base-content ${theme === themeName ? 'ring-2 ring-primary' : ''}`}
+                        style={{ backgroundColor: themeColors[themeName] || '#666' }}>
+                      </div>
+                      {themeName}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <button
               onClick={modalHandler}
               className="btn btn-ghost btn-circle btn-sm"
