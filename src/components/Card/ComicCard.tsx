@@ -6,9 +6,6 @@ import Heart from '@components/SVG/Heart';
 import Bookmark from '@components/SVG/Bookmark';
 import Share from '@components/SVG/Share';
 import X from '@components/SVG/X';
-import { Badge } from '@components/ui/badge';
-import { Card, CardContent, CardFooter } from '@components/ui/card';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@components/ui/tooltip';
 import { useTheme } from 'next-themes';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { Headline } from '../../types';
@@ -194,11 +191,10 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
     articleLink;
 
   return (
-    <TooltipProvider>
-      <Card
+    <div
       itemScope
       itemType="https://schema.org/NewsArticle"
-      className="hover:shadow-lg transition-transform duration-300 hover:-translate-y-1"
+      className="card hover:shadow-lg transition-transform duration-300 hover:-translate-y-1"
       style={{
         backgroundImage: cardBackground,
         fontFamily: '"Arial", sans-serif',
@@ -216,7 +212,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
         }`,
       }}
     >
-      <CardContent style={{ padding: '2px 0', position: 'relative' }}>
+      <div style={{ padding: '2px 0', position: 'relative' }}>
         <Link
           itemProp="url"
           onClick={(_event) => trackClicks('link')}
@@ -296,16 +292,9 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   zIndex: 10,
                 }}
               >
-                <Tooltip>
-                  <TooltipTrigger>
-                    <time itemProp="datePublished" dateTime={DATE.toISOString()}>
-                      {diffDisplay(DATE)}
-                    </time>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    {DATE.toLocaleString()}
-                  </TooltipContent>
-                </Tooltip>
+                <time itemProp="datePublished" dateTime={DATE.toISOString()} title={DATE.toLocaleString()}>
+                  {diffDisplay(DATE)}
+                </time>
               </div>
             </div>
           ) : (
@@ -364,14 +353,9 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   zIndex: 10,
                 }}
               >
-                <Tooltip>
-                  <TooltipTrigger>
-                    {diffDisplay(DATE)}
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    {DATE.toLocaleString()}
-                  </TooltipContent>
-                </Tooltip>
+                <time title={DATE.toLocaleString()}>
+                  {diffDisplay(DATE)}
+                </time>
               </div>
             </div>
           )}
@@ -412,9 +396,9 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
         >
           <span itemProp="name">{sourceName}</span>
         </span>
-      </CardContent>
+      </div>
       <hr />
-      <CardFooter
+      <div
         style={{
           marginBottom: '-15px',
           padding: '16px',
@@ -450,9 +434,9 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
               e.currentTarget.style.transform = 'scale(1)';
             }}
           >
-            <Badge style={{ marginBottom: '4px', fontSize: '12px' }}>
+            <span className="badge" style={{ marginBottom: '4px', fontSize: '12px' }}>
               {likeLoading ? '...' : likeCount}
-            </Badge>
+            </span>
             <Heart someBool={liked} />
           </div>
 
@@ -509,23 +493,15 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 href={twShare}
                 target="_blank"
                 rel="noreferrer"
-                title="Share on X"
+                title="Browser share not supported. Defaulting to X."
               >
-                <Tooltip>
-                  <TooltipTrigger>
-                    <X />
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    Browser share not supported. Defaulting to X.
-                  </TooltipContent>
-                </Tooltip>
+                <X />
               </Link>
             )}
           </div>
         </div>
-      </CardFooter>
-    </Card>
-    </TooltipProvider>
+      </div>
+    </div>
   );
 };
 

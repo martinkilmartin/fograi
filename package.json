@@ -14,15 +14,10 @@
     "test-all": "yarn lint && yarn type-check && yarn test"
   },
   "dependencies": {
-    "@radix-ui/react-label": "^2.1.7",
-    "@radix-ui/react-slot": "^1.2.3",
-    "@radix-ui/react-tooltip": "^1.2.8",
     "@supabase/supabase-js": "2.27.0",
     "@tailwindcss/typography": "0.5.9",
     "@upstash/redis": "1.22.0",
     "@vercel/analytics": "1.4.1",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.0.0",
     "framer-motion": "12.4.1",
     "gsap": "3.12.2",
     "next": "13.4.12",
@@ -35,7 +30,6 @@
     "react-responsive": "9.0.2",
     "sendpulse-api": "1.1.6",
     "sharp": "0.32.4",
-    "tailwind-merge": "^3.3.1",
     "theme-change": "2.5.0",
     "tslib": "2.6.0"
   },

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Button } from '@components/ui/button';
 import { ADJACENTS } from '@constants/ADJACENTS';
 import { flags } from '@constants/FLAGS';
 import { LangsMap } from '@constants/LANGS';
@@ -51,9 +50,9 @@ const AnimatedButton = ({
   }, [action.icon, secondaryActions]);
 
   return (
-    <Button variant="ghost" onClick={onClick} aria-label={action.label}>
+    <button className="btn btn-ghost" onClick={onClick} aria-label={action.label}>
       {displayIcon}
-    </Button>
+    </button>
   );
 };
 
@@ -116,9 +115,9 @@ const ActionBar = ({ userCountry }: ActionBarProps) => {
         <div className="flex">
           {secondaryActions[selectedAction].map(
             (action: string, index: number) => (
-              <Button key={index} variant="ghost" aria-label={action}>
+              <button key={index} className="btn btn-ghost" aria-label={action}>
                 {action}
-              </Button>
+              </button>
             ),
           )}
         </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useTheme as useNextTheme } from 'next-themes';
 import Search from '@components/SVG/Search';
@@ -40,11 +41,13 @@ export default function MyNavbar(): JSX.Element {
         </div>
 
         <div className="navbar-center">
-          <img
-            src="/img/nooze.svg"
-            alt="Nooze Logo"
-            className="h-16 w-auto"
-          />
+          <Link href="/">
+            <img
+              src="/img/nooze.svg"
+              alt="Nooze Logo"
+              className="h-16 w-auto cursor-pointer"
+            />
+          </Link>
         </div>
 
         <div className="navbar-end gap-2">
