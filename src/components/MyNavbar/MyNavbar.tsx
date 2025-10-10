@@ -57,7 +57,10 @@ export default function MyNavbar(): JSX.Element {
     winter: '#e0f2fe',
     dim: '#2a2e37',
     nord: '#2e3440',
-    sunset: '#fef2f2'
+    sunset: '#fef2f2',
+    caramellatte: '#2c1810',
+    abyss: '#0f0f23',
+    silk: '#e9e9f8'
   };
 
   return (
