@@ -69,7 +69,7 @@ export default function MyNavbar(): JSX.Element {
         <div className="navbar-start">
           {/* Navigation menu button */}
           <div className="dropdown" style={{ zIndex: 50 }}>
-            <button tabIndex={0} className="btn btn-ghost btn-circle">
+            <button tabIndex={0} className="btn btn-outline btn-circle">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
               </svg>
@@ -101,7 +101,7 @@ export default function MyNavbar(): JSX.Element {
           <div className="dropdown dropdown-end lg:hidden" style={{ zIndex: 50 }}>
             <button
               tabIndex={0}
-              className="btn btn-ghost btn-circle"
+              className="btn btn-outline btn-circle"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -194,7 +194,7 @@ export default function MyNavbar(): JSX.Element {
               </div>
             </div>
             <div className="dropdown dropdown-end">
-              <button tabIndex={0} className="btn btn-ghost btn-circle btn-sm" title="Change Theme">
+              <button tabIndex={0} className="btn btn-outline btn-circle btn-sm" title="Change Theme">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
                 </svg>
@@ -217,7 +217,7 @@ export default function MyNavbar(): JSX.Element {
             </div>
             <button
               onClick={modalHandler}
-              className="btn btn-ghost btn-circle btn-sm"
+              className="btn btn-outline btn-circle btn-sm"
               title="Filters"
             >
               <Filter width={16} height={16} />

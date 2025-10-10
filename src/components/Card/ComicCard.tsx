@@ -41,15 +41,9 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
   const sourceName = AllNewsSources.get(headline.source)?.name;
 
   const cardBackgrounds = {
-    video: isDark
-      ? 'radial-gradient(circle, black, darkred)'
-      : 'radial-gradient(circle, white, red)',
-    audio: isDark
-      ? 'radial-gradient(circle, black, darkviolet)'
-      : 'radial-gradient(circle, white, purple)',
-    article: isDark
-      ? 'radial-gradient(circle, black, darkblue)'
-      : 'radial-gradient(circle, white, blue)',
+    video: 'radial-gradient(circle, hsl(var(--p)), hsl(var(--pf)))',
+    audio: 'radial-gradient(circle, hsl(var(--s)), hsl(var(--sf)))',
+    article: 'radial-gradient(circle, hsl(var(--a)), hsl(var(--af)))',
   };
 
   const cardBackground =
