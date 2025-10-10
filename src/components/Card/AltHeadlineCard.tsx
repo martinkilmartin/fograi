@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 // import {
 //   Badge,
 //   Card,
@@ -245,12 +245,15 @@ const HeadlineCard = ({ headline }: Props): JSX.Element => {
       {headline.img_src && (
         <Image
           src={leadImgErr ? '/img/broken.svg' : headline.img_src}
-          style={{ objectFit: 'cover' }}
           width={400}
           height={200}
           alt={headline.img_alt ?? ''}
           onError={() => setLeadImgErr(true)}
-        />
+          style={{
+            objectFit: 'cover',
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       )}
       <div
         style={{

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 import diffDisplay from '@lib/time-format';
 import Heart from '@components/SVG/Heart';
@@ -230,17 +230,18 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
               <Image
                 itemProp="image"
                 src={headline.img_src}
-                style={{
-                  padding: '8px',
-                  transition: 'all 0.2s ease-in-out',
-                }}
                 className="hover:shadow-[8px_8px_0px_rgba(0,0,0,0.8)] hover:scale-105 hover:rotate-[calc(var(--random-rotation))]"
-                objectFit="cover"
                 width={400}
                 height={300}
                 alt={headline.img_alt ?? ''}
                 onError={() => setLeadImgErr(true)}
-              />
+                style={{
+                  padding: '8px',
+                  transition: 'all 0.2s ease-in-out',
+                  maxWidth: "100%",
+                  height: "auto",
+                  objectFit: "cover"
+                }} />
               <div
                 style={{
                   position: 'absolute',
