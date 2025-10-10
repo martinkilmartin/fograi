@@ -400,8 +400,6 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
       <hr />
       <div
         style={{
-          marginBottom: '-15px',
-          padding: '16px',
           textAlign: 'center',
         }}
       >
