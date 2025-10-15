@@ -80,26 +80,21 @@ const LanguageOptions = (): JSX.Element => {
   };
 
   return (
-    <div style={{ display: 'grid', gap: '8px', justifyContent: 'space-evenly', padding: '0' }}>
+    <div className="space-y-2">
       {Array.from(LangsMap.entries()).map((lang, i) => {
         const isLiked = likedLanguages.has(lang[0] as LangTypes);
         return (
-          <div key={i} style={{ gridColumn: 'span 12' }}>
+          <label key={i} className="flex items-center gap-2">
             <input
               type="checkbox"
+              className="checkbox checkbox-sm"
               checked={isLiked}
               onChange={() => toggleLang(lang[0] as LangTypes)}
             />
-            <span
-              style={{
-                fontSize: '22px',
-                fontFamily: '"Georgia", "Times New Roman", Times, serif',
-              }}
-            >
-              &nbsp;{lang[1].icon}&nbsp;
-              <b>{lang[1].text}</b>
+            <span className="text-lg">
+              {lang[1].icon} <b>{lang[1].text}</b>
             </span>
-          </div>
+          </label>
         );
       })}
     </div>
