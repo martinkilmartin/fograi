@@ -3,10 +3,6 @@ import { SVG } from '../../types';
 const Share = ({
   width = 32,
   height = 32,
-  vBW = 24,
-  vBH = 24,
-  fillColors = ['#000', '#fff'],
-  someBool = false,
 }: SVG): JSX.Element | null => {
   return (
     <svg

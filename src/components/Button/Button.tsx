@@ -1,4 +1,6 @@
-import clsx from 'clsx'
+const cx = (
+  ...classes: Array<string | undefined | null | false>
+) => classes.filter(Boolean).join(' ')
 
 const SIZES = {
   no: '',
@@ -80,7 +82,7 @@ const Button = ({
 }: Props): JSX.Element => {
   return (
     <button
-      className={clsx(
+      className={cx(
         'btn',
         SIZES[size],
         SHAPES[shape],

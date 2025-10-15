@@ -1,4 +1,6 @@
-import clsx from 'clsx'
+const cx = (
+  ...classes: Array<string | undefined | null | false>
+) => classes.filter(Boolean).join(' ')
 
 const OUTLINE = {
   no: '',
@@ -40,7 +42,7 @@ const Badge = ({
 }: Props): JSX.Element => {
   return (
     <div
-      className={clsx(
+      className={cx(
         'self-center badge',
         OUTLINE[outline],
         COLORS[color],

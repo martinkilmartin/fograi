@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
-import { flags } from '@constants/FLAGS';
-import { Countries } from 'src/types/countries';
 
 type Props = {
   title: string;
@@ -10,7 +7,7 @@ type Props = {
 };
 
 const SourcesComponent = ({ title, subTitle }: Props): JSX.Element => {
-  const [likedSources, setLikedSources] = useState<Set<keyof typeof AllNewsSources>>(
+  const [likedSources] = useState<Set<keyof typeof AllNewsSources>>(
     () => {
       if (typeof window !== 'undefined') {
         const locallyLikedSources = localStorage.getItem('likedSources');
@@ -23,32 +20,6 @@ const SourcesComponent = ({ title, subTitle }: Props): JSX.Element => {
       return new Set<keyof typeof AllNewsSources>();
     },
   );
-
-  const toggleSource = (sourceKey: keyof typeof AllNewsSources, checked: boolean) => {
-    if (checked) {
-      setLikedSources((prevSet) => new Set([...prevSet, sourceKey]));
-      try {
-        fetch(`/api/fast/react?id=${sourceKey as string}&action=like&reaction=false`, {
-          method: 'POST',
-        });
-      } catch (_error) {
-        // do nothing
-      }
-    } else {
-      setLikedSources((prevSet) => {
-        const newSet = new Set(prevSet);
-        newSet.delete(sourceKey);
-        return newSet;
-      });
-      try {
-        fetch(`/api/fast/react?id=${sourceKey as string}&action=like&reaction=true`, {
-          method: 'POST',
-        });
-      } catch (_error) {
-        // do nothing
-      }
-    }
-  };
 
   useEffect(() => {
     if (typeof window !== 'undefined') {

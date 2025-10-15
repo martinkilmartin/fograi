@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
-import { flags } from '@constants/FLAGS';
-import { Countries } from 'src/types/countries';
 
 const Sources = (): JSX.Element => {
   const [likedSources, likSource] = useState<Set<string>>(

@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeadlineCard } from '@components/Card';
+import { ComicCard } from '@components/Card';
 import { Headline } from '../../types/Headline';
 import { Countries } from 'src/types/countries';
 
@@ -22,7 +22,7 @@ const BookMarkedHeadlineList: React.FC<BookMarkedHeadlineListProps> = ({
         <div style={{ display: 'grid', gap: '8px', justifyContent: 'center', padding: '0', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
           {headlines?.map((headline, idx) => (
             <div key={headline[0]}>
-              <HeadlineCard
+              <ComicCard
                 headline={headline[1]}
                 country={
                   headline[1].source.substring(0, 2).toLowerCase() as Countries

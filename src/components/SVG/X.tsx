@@ -5,7 +5,6 @@ const X = ({
   height = 32,
   vBW = 1200,
   vBH = 1227,
-  fillColors = ['#000', '#fff'],
 }: SVG): JSX.Element | null => {
   return (
     <svg

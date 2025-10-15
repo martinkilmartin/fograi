@@ -5,8 +5,6 @@ const Heart = ({
   height = 32,
   vBW = 512,
   vBH = 512,
-  fillColors = ['#000', '#fff'],
-  someBool = false,
 }: SVG): JSX.Element | null => {
   return (
     <svg
