@@ -169,12 +169,14 @@ export default function MyNavbar(): JSX.Element {
           {/* Mobile menu button - moved to right */}
           <div className={`dropdown dropdown-end lg:hidden ${mobileMenuOpen ? 'dropdown-open' : ''}`} style={{ zIndex: 1001 }}>
             <button
-              onClick={() => { setMobileMenuOpen(false); modalHandler(); }}
+              onClick={() => setMobileMenuOpen((o) => !o)}
               className="btn btn-outline btn-circle"
-              title="Filters"
-              aria-label="Open filters"
+              title="Menu"
+              aria-label="Open menu"
             >
-              <Filter width={16} height={16} />
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
             </button>
             <ul tabIndex={0} className={`menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-60 ${mobileMenuOpen ? 'block' : 'hidden'}`} style={{ zIndex: 1002 }}>
               <li className="mb-2">
