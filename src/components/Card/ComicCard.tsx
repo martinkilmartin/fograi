@@ -261,7 +261,6 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   target="_blank"
                   rel="noreferrer"
                   style={{
-                    color: `${isDark ? 'white' : 'black'}`,
                     textDecoration: 'none',
                   }}
                 >
@@ -361,7 +360,6 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
           )}
           <div
             style={{
-              backgroundColor: `${isDark ? 'black' : 'white'}`,
               border: `${isDark ? '2px solid white' : '2px solid black'}`,
               boxShadow: '4px 4px 0 black',
               padding: '5px',
