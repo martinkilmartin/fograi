@@ -26,7 +26,7 @@ const About = (): JSX.Element => (
         Stay informed.
       </p>
       <p className="mb-8">
-        Be the first to know what's happening everywhere—right now.
+        Be the first to know wha&apos;pening everywhere—right now.
       </p>
       <div className="mb-8">
         <Link

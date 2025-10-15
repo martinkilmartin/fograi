@@ -3,8 +3,7 @@ import { useQueryClient } from 'react-query';
 import { useRouter } from 'next/router';
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { Page } from '@layouts/Page';
-import { Button } from '../../components/ui/button';
-import { Input } from '../../components/ui/input';
+// Replaced custom UI imports with native elements styled via DaisyUI
 
 const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -43,18 +42,20 @@ const HomePage: React.FC = () => {
       </div>
       <div className="flex justify-center mt-8">
         <form onSubmit={(e) => { e.preventDefault(); handleSearch(); }} className="flex gap-4">
-          <Input
+          <input
             placeholder={searchTerm.length ? searchTerm : 'Search..'}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="min-w-[300px]"
+            className="input input-bordered min-w-[300px]"
+            value={searchTerm}
           />
-          <Button
+          <button
             type="submit"
             aria-label="search"
             disabled={loading}
+            className="btn btn-primary"
           >
             {loading ? '⏳' : '🔎'}
-          </Button>
+          </button>
         </form>
       </div>
     </Page>

@@ -1,6 +1,8 @@
 import { ReactNode } from 'react'
 
-import clsx from 'clsx'
+const cx = (
+  ...classes: Array<string | undefined | null | false>
+) => classes.filter(Boolean).join(' ')
 
 const ALIGN = {
   no: '',
@@ -37,7 +39,7 @@ const Dropdown = ({
 }: Props): JSX.Element => {
   return (
     <div
-      className={clsx(
+      className={cx(
         'dropdown',
         ALIGN[align],
         OPEN_FROM[openFrom],
