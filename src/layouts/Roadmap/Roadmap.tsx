@@ -22,96 +22,113 @@ const Roadmap = ({ title = true }: Props): JSX.Element => {
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Done */}
-        <div className="card bg-base-100 border-2 border-base-content">
-          <div className="card-body">
-            <h2 className="card-title flex items-center gap-2">
-              <span className="badge badge-success">Done</span>
-            </h2>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3">
-                <Search width={32} height={32} />
-                <div>
-                  <div className="font-semibold">Search</div>
-                  <div className="text-sm text-base-content/70">Query across many sources.</div>
-                </div>
-              </li>
-              <li className="flex items-center gap-3">
-                <Filter width={32} height={32} />
-                <div>
-                  <div className="font-semibold">Filters</div>
-                  <div className="text-sm text-base-content/70">Filter by country, language, and more.</div>
-                </div>
-              </li>
-            </ul>
+      <ul className="timeline timeline-vertical">
+        {/* Done: Search (right side box) */}
+        <li>
+          <div className="timeline-start text-success">Done</div>
+          <div className="timeline-middle text-success">
+            <Search width={24} height={24} />
           </div>
-        </div>
+          <div className="timeline-end timeline-box">
+            <h3 className="font-semibold">Search</h3>
+            <p className="text-sm text-base-content/70">Query across many sources.</p>
+          </div>
+          <hr className="bg-success" />
+        </li>
 
-        {/* In Progress */}
-        <div className="card bg-base-100 border-2 border-base-content">
-          <div className="card-body">
-            <h2 className="card-title flex items-center gap-2">
-              <span className="badge badge-warning">In Progress</span>
-            </h2>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3">
-                <Sources width={32} height={32} />
-                <div>
-                  <div className="font-semibold">Sources</div>
-                  <div className="text-sm text-base-content/70">Lots of sources available; continually adding more.</div>
-                </div>
-              </li>
-              <li className="flex items-center gap-3">
-                <Multimedia width={32} height={32} />
-                <div>
-                  <div className="font-semibold">Multimedia</div>
-                  <div className="text-sm text-base-content/70">Collecting podcasts and YouTube links.</div>
-                </div>
-              </li>
-            </ul>
+        {/* Done: Filters (left side box) */}
+        <li>
+          <hr className="bg-success" />
+          <div className="timeline-start timeline-box">
+            <h3 className="font-semibold">Filters</h3>
+            <p className="text-sm text-base-content/70">Filter by country, language, and more.</p>
           </div>
-        </div>
+          <div className="timeline-middle text-success">
+            <Filter width={24} height={24} />
+          </div>
+          <div className="timeline-end text-success">Done</div>
+          <hr className="bg-warning" />
+        </li>
 
-        {/* Planned */}
-        <div className="card bg-base-100 border-2 border-base-content">
-          <div className="card-body">
-            <h2 className="card-title flex items-center gap-2">
-              <span className="badge badge-outline">Planned</span>
-            </h2>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3">
-                <Topics width={32} height={32} />
-                <div>
-                  <div className="font-semibold">Topics</div>
-                  <div className="text-sm text-base-content/70">Curated topic hubs and curation tools.</div>
-                </div>
-              </li>
-              <li className="flex items-center gap-3">
-                <Sentiments width={32} height={32} />
-                <div>
-                  <div className="font-semibold">Sentiments</div>
-                  <div className="text-sm text-base-content/70">Sentiment and stance analysis.</div>
-                </div>
-              </li>
-              <li className="flex items-center gap-3">
-                <Trends width={32} height={32} />
-                <div>
-                  <div className="font-semibold">Trends</div>
-                  <div className="text-sm text-base-content/70">Trend lines and timelines across topics.</div>
-                </div>
-              </li>
-              <li className="flex items-center gap-3">
-                <CloudSync width={32} height={32} />
-                <div>
-                  <div className="font-semibold">Sync</div>
-                  <div className="text-sm text-base-content/70">Account sync and personalization.</div>
-                </div>
-              </li>
-            </ul>
+        {/* In Progress: Sources (right side box) */}
+        <li>
+          <div className="timeline-start text-warning">In Progress</div>
+          <div className="timeline-middle text-warning">
+            <Sources width={24} height={24} />
           </div>
-        </div>
-      </div>
+          <div className="timeline-end timeline-box">
+            <h3 className="font-semibold">Sources</h3>
+            <p className="text-sm text-base-content/70">Lots of sources available; continually adding more.</p>
+          </div>
+          <hr className="bg-warning" />
+        </li>
+
+        {/* In Progress: Multimedia (left side box) */}
+        <li>
+          <hr className="bg-warning" />
+          <div className="timeline-start timeline-box">
+            <h3 className="font-semibold">Multimedia</h3>
+            <p className="text-sm text-base-content/70">Collecting podcasts and YouTube links.</p>
+          </div>
+          <div className="timeline-middle text-warning">
+            <Multimedia width={24} height={24} />
+          </div>
+          <div className="timeline-end text-warning">In Progress</div>
+          <hr className="bg-info" />
+        </li>
+
+        {/* Planned: Topics (right side box) */}
+        <li>
+          <div className="timeline-start text-info">Planned</div>
+          <div className="timeline-middle text-info">
+            <Topics width={24} height={24} />
+          </div>
+          <div className="timeline-end timeline-box">
+            <h3 className="font-semibold">Topics</h3>
+            <p className="text-sm text-base-content/70">Curated topic hubs and curation tools.</p>
+          </div>
+          <hr className="bg-info" />
+        </li>
+
+        {/* Planned: Sentiments (left side box) */}
+        <li>
+          <hr className="bg-info" />
+          <div className="timeline-start timeline-box">
+            <h3 className="font-semibold">Sentiments</h3>
+            <p className="text-sm text-base-content/70">Sentiment and stance analysis.</p>
+          </div>
+          <div className="timeline-middle text-info">
+            <Sentiments width={24} height={24} />
+          </div>
+          <div className="timeline-end text-info">Planned</div>
+          <hr className="bg-info" />
+        </li>
+
+        {/* Planned: Trends (right side box) */}
+        <li>
+          <div className="timeline-start text-info">Planned</div>
+          <div className="timeline-middle text-info">
+            <Trends width={24} height={24} />
+          </div>
+          <div className="timeline-end timeline-box">
+            <h3 className="font-semibold">Trends</h3>
+            <p className="text-sm text-base-content/70">Trend lines and timelines across topics.</p>
+          </div>
+          <hr className="bg-info" />
+        </li>s
+
+        {/* Planned: Sync (left side box) */}
+        <li>
+          <div className="timeline-start timeline-box">
+            <h3 className="font-semibold">Sync</h3>
+            <p className="text-sm text-base-content/70">Account sync and personalization.</p>
+          </div>
+          <div className="timeline-middle text-info">
+            <CloudSync width={24} height={24} />
+          </div>
+          <div className="timeline-end text-info">Planned</div>
+        </li>
+      </ul>
     </div>
   );
 };

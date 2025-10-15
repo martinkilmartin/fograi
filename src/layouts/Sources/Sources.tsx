@@ -98,7 +98,7 @@ const SourcesComponent = ({ title, subTitle }: Props): JSX.Element => {
     langMap.get(e.language)!.push(e);
   }
 
-  const sortedCountries = Array.from(byCountry.keys()).sort((a, b) => a.localeCompare(b));
+  // (moved) sortedCountries will be computed after display name helpers
 
   // Formatters for human-friendly names
   const locale = typeof navigator !== 'undefined' ? navigator.language : 'en';
@@ -115,6 +115,62 @@ const SourcesComponent = ({ title, subTitle }: Props): JSX.Element => {
   const languageLabel = (code: string) => {
     try { return languageFormatter ? (languageFormatter as any).of(code) ?? code : code; } catch { return code; }
   };
+
+  const sortedCountries = Array.from(byCountry.keys()).sort((a, b) =>
+    countryLabel(a).localeCompare(countryLabel(b))
+  );
+
+  // Continent grouping helpers
+  const countryToContinent = (code: string): string => {
+    const cc = (code || '').toUpperCase();
+    const AUSET = new Set(['AU', 'NZ', 'FJ', 'PG', 'AS', 'CK', 'PF']);
+    const NASET = new Set(['US', 'CA', 'MX']);
+    const SASET = new Set(['BR', 'AR', 'CL', 'CO', 'PE', 'UY', 'PY', 'BO', 'VE', 'EC']);
+    const EUSET = new Set(['GB','UK','IE','FR','DE','ES','IT','PT','NL','BE','SE','NO','DK','FI','CH','AT','PL','CZ','HU','RO','UA','RU','GR','BG','HR','RS','SK','SI','EE','LV','LT','IS']);
+    const AFSET = new Set(['ZA','NG','KE','EG','MA','DZ','TN','GH','ET','CI','TZ','TO','ZW']);
+    const ASSET = new Set(['CN','JP','KR','IN','PK','BD','ID','TH','VN','PH','SG','MY','HK','TW','SA','AE','TR','IL','IR','LK']);
+    const ANSET = new Set(['AQ']);
+    if (AUSET.has(cc)) return 'Oceania';
+    if (NASET.has(cc)) return 'North America';
+    if (SASET.has(cc)) return 'South America';
+    if (EUSET.has(cc)) return 'Europe';
+    if (AFSET.has(cc)) return 'Africa';
+    if (ASSET.has(cc)) return 'Asia';
+    if (ANSET.has(cc)) return 'Antarctica';
+    return 'Other';
+  };
+
+  // Sub-region refinement for 'Other'
+  const countryToSubregion = (code: string): string | null => {
+    const cc = (code || '').toUpperCase();
+    const MIDDLE_EAST = new Set(['SA','AE','QA','KW','BH','OM','YE','JO','LB','SY','IQ','IR','IL','TR','PS']);
+    const CAC = new Set(['CR','PA','GT','HN','NI','SV','BZ','CU','DO','HT','JM','TT','BB','BS','AG','DM','LC','GD','KN','VC','PR']);
+    const CAUCASUS = new Set(['AM','AZ','GE']);
+    const BALKANS = new Set(['AL','BA','BG','HR','GR','MK','ME','RO','RS','SI','XK']);
+    const BALTIC = new Set(['EE','LV','LT']);
+    if (MIDDLE_EAST.has(cc)) return 'Middle East';
+    if (CAC.has(cc)) return 'Central America & Caribbean';
+    if (CAUCASUS.has(cc)) return 'Caucasus';
+    if (BALKANS.has(cc)) return 'Balkans';
+    if (BALTIC.has(cc)) return 'Baltic';
+    return null;
+  };
+
+  type ContinentMap = Map<string, Map<string, Map<string, SourceEntry[]>>>;
+  const byContinent: ContinentMap = new Map();
+  for (const e of normalized) {
+    const continentBase = countryToContinent(e.country);
+    const sub = countryToSubregion(e.country);
+    const continent = sub ?? (continentBase === 'Other' ? 'Other (Misc)' : continentBase);
+    if (!byContinent.has(continent)) byContinent.set(continent, new Map());
+    const cMap = byContinent.get(continent)!;
+    if (!cMap.has(e.country)) cMap.set(e.country, new Map());
+    const lMap = cMap.get(e.country)!;
+    if (!lMap.has(e.language)) lMap.set(e.language, []);
+    lMap.get(e.language)!.push(e);
+  }
+
+  const sortedContinents = Array.from(byContinent.keys()).sort((a,b)=> a.localeCompare(b));
 
   const toFlagEmoji = (code: string) => {
     try {
@@ -134,85 +190,95 @@ const SourcesComponent = ({ title, subTitle }: Props): JSX.Element => {
       </h1>
       <p className="text-lg text-center mb-8">{subTitle}</p>
 
-      {sortedCountries.map((country) => {
-        const langMap = byCountry.get(country)!;
-        const sortedLangs = Array.from(langMap.keys()).sort((a, b) => a.localeCompare(b));
-        const totalInCountry = Array.from(langMap.values()).reduce((acc, arr) => acc + arr.length, 0);
+      {sortedContinents.map((continent) => {
+        const countryMap = byContinent.get(continent)!;
+        const sortedCountryCodes = Array.from(countryMap.keys()).sort((a,b)=> countryLabel(a).localeCompare(countryLabel(b)));
+        const totalInContinent = Array.from(countryMap.values()).reduce((acc, langMap) => acc + Array.from(langMap.values()).reduce((s, arr) => s + arr.length, 0), 0);
         return (
-          <section key={country} className="mt-8">
-            <div className="flex items-baseline gap-3 mb-3">
-              <h2 className="text-2xl font-bold">
-                <span className="mr-2" aria-hidden>{toFlagEmoji(country)}</span>
-                {countryLabel(country)}
-              </h2>
-              <span className="badge badge-outline">{totalInCountry}</span>
-            </div>
-
-            {sortedLangs.map((lang) => {
-              const list = [...langMap.get(lang)!].sort((a, b) => {
-                const ay = a.year ?? Number.POSITIVE_INFINITY;
-                const by = b.year ?? Number.POSITIVE_INFINITY;
-                if (ay !== by) return ay - by;
-                return a.name.localeCompare(b.name);
-              });
-              return (
-                <div key={lang} className="mt-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-lg font-semibold">{languageLabel(lang)}</h3>
-                    <span className="badge badge-sm">{list.length}</span>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {list.map(({ key, slug, src, year, name, country }) => (
-                      <div key={key} className="card bg-base-100 border-2 border-base-content shadow">
-                        <div className="card-body p-4">
-                          <div className="flex items-start justify-between gap-2">
-                            <div>
-                              <Link href={`/source/${slug}`} className="card-title text-base-content no-underline">
-                                {name}
-                              </Link>
-                              {src?.description ? (
-                                <p className="text-sm text-base-content/70 mt-1 line-clamp-2">{src.description}</p>
-                              ) : null}
-                              <div className="mt-2 text-xs text-base-content/60">
-                                {year ? <span className="mr-2">Est. {year}</span> : null}
-                                <span title={countryLabel(country)}>{toFlagEmoji(country)}</span>
+          <div key={continent} className="mt-4">
+            <div className="collapse collapse-arrow bg-base-200">
+              <input type="checkbox" defaultChecked />
+              <div className="collapse-title text-xl font-medium">
+                {continent} <span className="badge badge-outline ml-2">{totalInContinent}</span>
+              </div>
+              <div className="collapse-content">
+                {sortedCountryCodes.map((country) => {
+                  const langMap = countryMap.get(country)!;
+                  const sortedLangs = Array.from(langMap.keys()).sort((a,b)=> languageLabel(a).localeCompare(languageLabel(b)));
+                  const totalInCountry = Array.from(langMap.values()).reduce((acc, arr) => acc + arr.length, 0);
+                  return (
+                    <div key={country} className="mt-3">
+                      <div className="collapse collapse-arrow bg-base-100 border border-base-300">
+                        <input type="checkbox" />
+                        <div className="collapse-title text-lg font-semibold">
+                          <span className="mr-2" aria-hidden>{toFlagEmoji(country)}</span>
+                          {countryLabel(country)} <span className="badge badge-sm ml-2">{totalInCountry}</span>
+                        </div>
+                        <div className="collapse-content">
+                          {sortedLangs.map((lang) => {
+                            const list = [...langMap.get(lang)!].sort((a, b) => {
+                              const ay = a.year ?? Number.POSITIVE_INFINITY;
+                              const by = b.year ?? Number.POSITIVE_INFINITY;
+                              if (ay !== by) return ay - by;
+                              return a.name.localeCompare(b.name);
+                            });
+                            return (
+                              <div key={lang} className="mt-2">
+                                <div className="collapse collapse-arrow bg-base-200">
+                                  <input type="checkbox" />
+                                  <div className="collapse-title font-medium">
+                                    {languageLabel(lang)} <span className="badge badge-xs ml-2">{list.length}</span>
+                                  </div>
+                                  <div className="collapse-content">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                      {list.map(({ key, slug, src, year, name, country }) => (
+                                        <div key={key} className="card bg-base-100 border-2 border-base-content shadow">
+                                          <div className="card-body p-4">
+                                            <div className="flex items-start justify-between gap-2">
+                                              <div>
+                                                <Link href={`/source/${slug}`} className="card-title text-base-content no-underline">
+                                                  {name}
+                                                </Link>
+                                                {src?.description ? (
+                                                  <p className="text-sm text-base-content/70 mt-1 line-clamp-2">{src.description}</p>
+                                                ) : null}
+                                                <div className="mt-2 text-xs text-base-content/60">
+                                                  {year ? <span className="mr-2">Est. {year}</span> : null}
+                                                  <span title={countryLabel(country)}>{toFlagEmoji(country)}</span>
+                                                </div>
+                                              </div>
+                                              <button
+                                                className={`btn btn-ghost btn-circle ${isLiked(slug) ? 'text-error' : ''}`}
+                                                aria-label={isLiked(slug) ? 'Unlike source' : 'Like source'}
+                                                title={isLiked(slug) ? 'Unlike' : 'Like'}
+                                                onClick={() => toggleLike(slug)}
+                                              >
+                                                <Heart someBool={isLiked(slug)} />
+                                              </button>
+                                            </div>
+                                            <div className="card-actions justify-between items-center mt-2">
+                                              <Link href={`/source/${slug}`} className="btn btn-sm btn-outline">View</Link>
+                                              {src?.url ? (
+                                                <a href={src.url} target="_blank" rel="noreferrer" className="link link-hover text-sm" title={src.url}>Visit site ↗</a>
+                                              ) : <span />}
+                                            </div>
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                            </div>
-
-                            <button
-                              className={`btn btn-ghost btn-circle ${isLiked(slug) ? 'text-error' : ''}`}
-                              aria-label={isLiked(slug) ? 'Unlike source' : 'Like source'}
-                              title={isLiked(slug) ? 'Unlike' : 'Like'}
-                              onClick={() => toggleLike(slug)}
-                            >
-                              <Heart someBool={isLiked(slug)} />
-                            </button>
-                          </div>
-
-                          <div className="card-actions justify-between items-center mt-2">
-                            <Link href={`/source/${slug}`} className="btn btn-sm btn-outline">
-                              View
-                            </Link>
-                            {src?.url ? (
-                              <a
-                                href={src.url}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="link link-hover text-sm"
-                                title={src.url}
-                              >
-                                Visit site ↗
-                              </a>
-                            ) : <span />}
-                          </div>
+                            );
+                          })}
                         </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </section>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         );
       })}
 
