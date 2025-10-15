@@ -303,13 +303,12 @@ export default function MyNavbar(): JSX.Element {
             className="modal-box max-w-6xl w-full mx-4 max-h-[90vh] overflow-hidden flex flex-col"
           >
             {/* Header */}
-            <div className="flex items-center justify-between mb-6 pb-4 border-b border-base-300">
+            <div className="flex items-center justify-between mb-6 pb-4 border-b border-base-300 gap-3">
               <div className="flex items-center gap-3">
                 <Filter width={24} height={24} />
-                <h3 className="font-bold text-xl">Filter News</h3>
               </div>
-              {/* Global actions */}
               <div className="hidden sm:flex items-center gap-2">
+                <h3 className="font-bold text-xl whitespace-nowrap">Filter News</h3>
                 <button
                   className="btn btn-xs btn-outline"
                   onClick={() => {
@@ -319,7 +318,7 @@ export default function MyNavbar(): JSX.Element {
                     selectAllLangs();
                   }}
                 >
-                  Select all (All)
+                  Select all
                 </button>
                 <button
                   className="btn btn-xs"
@@ -330,7 +329,7 @@ export default function MyNavbar(): JSX.Element {
                     clearAllLangs();
                   }}
                 >
-                  Clear all (All)
+                  Clear all
                 </button>
               </div>
               <button
@@ -377,9 +376,9 @@ export default function MyNavbar(): JSX.Element {
 
                 {/* Media Types Section */}
                 <div className="space-y-3">
-                  <div className="flex items-center justify-between pb-2 border-b border-base-300">
-                    <span className="text-lg font-semibold">📺 Media Types</span>
-                    <div className="flex items-center gap-2">
+                  <div className="flex items-center justify-between gap-2 flex-nowrap pb-2 border-b border-base-300">
+                    <span className="text-lg font-semibold whitespace-nowrap truncate max-w-[60%]">📺 Media</span>
+                    <div className="flex items-center gap-2 whitespace-nowrap shrink-0">
                       <button className="btn btn-xs btn-outline" onClick={selectAllMedia}>Select all</button>
                       <button className="btn btn-xs" onClick={clearAllMedia}>Clear all</button>
                     </div>
@@ -391,9 +390,9 @@ export default function MyNavbar(): JSX.Element {
 
                 {/* Languages Section */}
                 <div className="space-y-3">
-                  <div className="flex items-center justify-between pb-2 border-b border-base-300">
-                    <span className="text-lg font-semibold">💬 Languages</span>
-                    <div className="flex items-center gap-2">
+                  <div className="flex items-center justify-between gap-2 flex-nowrap pb-2 border-b border-base-300">
+                    <span className="text-lg font-semibold whitespace-nowrap truncate max-w-[60%]">💬 Langs</span>
+                    <div className="flex items-center gap-2 whitespace-nowrap shrink-0">
                       <button className="btn btn-xs btn-outline" onClick={selectAllLangs}>Select all</button>
                       <button className="btn btn-xs" onClick={clearAllLangs}>Clear all</button>
                     </div>
