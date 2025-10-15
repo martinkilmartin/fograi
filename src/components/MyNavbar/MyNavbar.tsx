@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
+import { useQueryClient } from 'react-query';
+import { COUNTRIES } from '@constants/COUNTRIES';
+import { AllNewsSources } from '@constants/NEWS_SOURCES';
+import { LangsMap } from '@constants/LANGS';
 import { useTheme as useNextTheme } from 'next-themes';
 import Search from '@components/SVG/Search';
 import Filter from '@components/SVG/Filter';
@@ -11,9 +15,46 @@ import Langs from '@components/Filters/Langs';
 export default function MyNavbar(): JSX.Element {
   const { setTheme, theme } = useNextTheme();
   const router = useRouter();
+  const queryClient = useQueryClient();
   const [searchTerm, setSearchTerm] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [countriesKey, setCountriesKey] = useState(0);
+  const [sourcesKey, setSourcesKey] = useState(0);
+  const [mediaKey, setMediaKey] = useState(0);
+  const [langsKey, setLangsKey] = useState(0);
+  const selectAllCountries = () => {
+    try { localStorage.setItem('likedCountries', JSON.stringify(Array.from(COUNTRIES.keys()))); } catch {}
+    setCountriesKey((k) => k + 1);
+  };
+  const clearAllCountries = () => {
+    try { localStorage.setItem('likedCountries', JSON.stringify([])); } catch {}
+    setCountriesKey((k) => k + 1);
+  };
+  const selectAllSources = () => {
+    try { localStorage.setItem('likedSources', JSON.stringify(Array.from(AllNewsSources.keys()))); } catch {}
+    setSourcesKey((k) => k + 1);
+  };
+  const clearAllSources = () => {
+    try { localStorage.setItem('likedSources', JSON.stringify([])); } catch {}
+    setSourcesKey((k) => k + 1);
+  };
+  const selectAllMedia = () => {
+    try { localStorage.setItem('likedMediaTypes', JSON.stringify(['article','video','audio'])); } catch {}
+    setMediaKey((k) => k + 1);
+  };
+  const clearAllMedia = () => {
+    try { localStorage.setItem('likedMediaTypes', JSON.stringify([])); } catch {}
+    setMediaKey((k) => k + 1);
+  };
+  const selectAllLangs = () => {
+    try { localStorage.setItem('likedLanguages', JSON.stringify(Array.from(LangsMap.keys()))); } catch {}
+    setLangsKey((k) => k + 1);
+  };
+  const clearAllLangs = () => {
+    try { localStorage.setItem('likedLanguages', JSON.stringify([])); } catch {}
+    setLangsKey((k) => k + 1);
+  };
   const modalRef = useRef<HTMLDivElement>(null);
   const modalHandler = () => setModalVisible(true);
 
@@ -267,6 +308,31 @@ export default function MyNavbar(): JSX.Element {
                 <Filter width={24} height={24} />
                 <h3 className="font-bold text-xl">Filter News</h3>
               </div>
+              {/* Global actions */}
+              <div className="hidden sm:flex items-center gap-2">
+                <button
+                  className="btn btn-xs btn-outline"
+                  onClick={() => {
+                    selectAllCountries();
+                    selectAllSources();
+                    selectAllMedia();
+                    selectAllLangs();
+                  }}
+                >
+                  Select all (All)
+                </button>
+                <button
+                  className="btn btn-xs"
+                  onClick={() => {
+                    clearAllCountries();
+                    clearAllSources();
+                    clearAllMedia();
+                    clearAllLangs();
+                  }}
+                >
+                  Clear all (All)
+                </button>
+              </div>
               <button
                 onClick={() => setModalVisible(false)}
                 className="btn btn-sm btn-ghost btn-circle"
@@ -283,45 +349,57 @@ export default function MyNavbar(): JSX.Element {
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
                 {/* Countries Section */}
                 <div className="space-y-3">
-                  <div className="flex items-center gap-2 pb-2 border-b border-base-300">
+                  <div className="flex items-center justify-between pb-2 border-b border-base-300">
                     <span className="text-lg font-semibold">🌍 Countries</span>
-                    <span className="badge badge-sm badge-primary">Essential</span>
+                    <div className="flex items-center gap-2">
+                      <button className="btn btn-xs btn-outline" onClick={selectAllCountries}>Select all</button>
+                      <button className="btn btn-xs" onClick={clearAllCountries}>Clear all</button>
+                    </div>
                   </div>
                   <div className="max-h-80 overflow-y-auto">
-                    <Countries />
+                    <Countries key={countriesKey} />
                   </div>
                 </div>
 
                 {/* Sources Section */}
                 <div className="space-y-3">
-                  <div className="flex items-center gap-2 pb-2 border-b border-base-300">
+                  <div className="flex items-center justify-between pb-2 border-b border-base-300">
                     <span className="text-lg font-semibold">📰 Sources</span>
-                    <span className="badge badge-sm badge-secondary">Quality</span>
+                    <div className="flex items-center gap-2">
+                      <button className="btn btn-xs btn-outline" onClick={selectAllSources}>Select all</button>
+                      <button className="btn btn-xs" onClick={clearAllSources}>Clear all</button>
+                    </div>
                   </div>
                   <div className="max-h-80 overflow-y-auto">
-                    <Sources />
+                    <Sources key={sourcesKey} />
                   </div>
                 </div>
 
                 {/* Media Types Section */}
                 <div className="space-y-3">
-                  <div className="flex items-center gap-2 pb-2 border-b border-base-300">
+                  <div className="flex items-center justify-between pb-2 border-b border-base-300">
                     <span className="text-lg font-semibold">📺 Media Types</span>
-                    <span className="badge badge-sm badge-accent">Format</span>
+                    <div className="flex items-center gap-2">
+                      <button className="btn btn-xs btn-outline" onClick={selectAllMedia}>Select all</button>
+                      <button className="btn btn-xs" onClick={clearAllMedia}>Clear all</button>
+                    </div>
                   </div>
                   <div className="max-h-80 overflow-y-auto">
-                    <MediaTypes />
+                    <MediaTypes key={mediaKey} />
                   </div>
                 </div>
 
                 {/* Languages Section */}
                 <div className="space-y-3">
-                  <div className="flex items-center gap-2 pb-2 border-b border-base-300">
+                  <div className="flex items-center justify-between pb-2 border-b border-base-300">
                     <span className="text-lg font-semibold">💬 Languages</span>
-                    <span className="badge badge-sm badge-neutral">Global</span>
+                    <div className="flex items-center gap-2">
+                      <button className="btn btn-xs btn-outline" onClick={selectAllLangs}>Select all</button>
+                      <button className="btn btn-xs" onClick={clearAllLangs}>Clear all</button>
+                    </div>
                   </div>
                   <div className="max-h-80 overflow-y-auto">
-                    <Langs />
+                    <Langs key={langsKey} />
                   </div>
                 </div>
               </div>
@@ -331,7 +409,12 @@ export default function MyNavbar(): JSX.Element {
             <div className="modal-action mt-6 pt-4 border-t border-base-300">
               <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
                 <button
-                  onClick={() => setModalVisible(false)}
+                  onClick={() => {
+                    setModalVisible(false);
+                    // Refresh headlines with updated filters
+                    queryClient.removeQueries('headlines');
+                    router.replace(router.asPath);
+                  }}
                   className="btn btn-primary flex-1 sm:flex-none"
                 >
                   Apply Filters
