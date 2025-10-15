@@ -346,7 +346,26 @@ export default function MyNavbar(): JSX.Element {
             <div className="flex-1 overflow-y-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
                 {/* Countries Section */}
-                <div className="space-y-3">
+                {/* Mobile: collapse */}
+                <div className="lg:hidden">
+                  <div className="collapse collapse-arrow border border-base-300 bg-base-100">
+                    <input type="checkbox" defaultChecked />
+                    <div className="collapse-title flex items-center justify-between">
+                      <span className="text-lg font-semibold">🌍 Countries</span>
+                      <div className="flex items-center gap-2">
+                        <button className="btn btn-xs btn-outline" onClick={selectAllCountries}>Select all</button>
+                        <button className="btn btn-xs" onClick={clearAllCountries}>Clear all</button>
+                      </div>
+                    </div>
+                    <div className="collapse-content">
+                      <div className="max-h-80 overflow-y-auto">
+                        <Countries key={countriesKey} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Desktop: expanded */}
+                <div className="hidden lg:block space-y-3">
                   <div className="flex items-center justify-between pb-2 border-b border-base-300">
                     <span className="text-lg font-semibold">🌍 Countries</span>
                     <div className="flex items-center gap-2">
@@ -360,7 +379,26 @@ export default function MyNavbar(): JSX.Element {
                 </div>
 
                 {/* Sources Section */}
-                <div className="space-y-3">
+                {/* Mobile: collapse */}
+                <div className="lg:hidden">
+                  <div className="collapse collapse-arrow border border-base-300 bg-base-100">
+                    <input type="checkbox" defaultChecked />
+                    <div className="collapse-title flex items-center justify-between">
+                      <span className="text-lg font-semibold">📰 Sources</span>
+                      <div className="flex items-center gap-2">
+                        <button className="btn btn-xs btn-outline" onClick={selectAllSources}>Select all</button>
+                        <button className="btn btn-xs" onClick={clearAllSources}>Clear all</button>
+                      </div>
+                    </div>
+                    <div className="collapse-content">
+                      <div className="max-h-80 overflow-y-auto">
+                        <Sources key={sourcesKey} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Desktop: expanded */}
+                <div className="hidden lg:block space-y-3">
                   <div className="flex items-center justify-between pb-2 border-b border-base-300">
                     <span className="text-lg font-semibold">📰 Sources</span>
                     <div className="flex items-center gap-2">
@@ -374,7 +412,26 @@ export default function MyNavbar(): JSX.Element {
                 </div>
 
                 {/* Media Types Section */}
-                <div className="space-y-3">
+                {/* Mobile: collapse */}
+                <div className="lg:hidden">
+                  <div className="collapse collapse-arrow border border-base-300 bg-base-100">
+                    <input type="checkbox" defaultChecked />
+                    <div className="collapse-title flex items-center justify-between">
+                      <span className="text-lg font-semibold">📺 Media</span>
+                      <div className="flex items-center gap-2">
+                        <button className="btn btn-xs btn-outline" onClick={selectAllMedia}>Select all</button>
+                        <button className="btn btn-xs" onClick={clearAllMedia}>Clear all</button>
+                      </div>
+                    </div>
+                    <div className="collapse-content">
+                      <div className="max-h-80 overflow-y-auto">
+                        <MediaTypes key={mediaKey} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Desktop: expanded */}
+                <div className="hidden lg:block space-y-3">
                   <div className="flex items-center justify-between gap-2 flex-nowrap pb-2 border-b border-base-300">
                     <span className="text-lg font-semibold whitespace-nowrap truncate max-w-[60%]">📺 Media</span>
                     <div className="flex items-center gap-2 whitespace-nowrap shrink-0">
@@ -388,7 +445,26 @@ export default function MyNavbar(): JSX.Element {
                 </div>
 
                 {/* Languages Section */}
-                <div className="space-y-3">
+                {/* Mobile: collapse */}
+                <div className="lg:hidden">
+                  <div className="collapse collapse-arrow border border-base-300 bg-base-100">
+                    <input type="checkbox" defaultChecked />
+                    <div className="collapse-title flex items-center justify-between">
+                      <span className="text-lg font-semibold">💬 Langs</span>
+                      <div className="flex items-center gap-2">
+                        <button className="btn btn-xs btn-outline" onClick={selectAllLangs}>Select all</button>
+                        <button className="btn btn-xs" onClick={clearAllLangs}>Clear all</button>
+                      </div>
+                    </div>
+                    <div className="collapse-content">
+                      <div className="max-h-80 overflow-y-auto">
+                        <Langs key={langsKey} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Desktop: expanded */}
+                <div className="hidden lg:block space-y-3">
                   <div className="flex items-center justify-between gap-2 flex-nowrap pb-2 border-b border-base-300">
                     <span className="text-lg font-semibold whitespace-nowrap truncate max-w-[60%]">💬 Langs</span>
                     <div className="flex items-center gap-2 whitespace-nowrap shrink-0">
