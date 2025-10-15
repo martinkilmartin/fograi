@@ -194,16 +194,9 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
         fontFamily: '"Arial", sans-serif',
         margin: '10px',
         padding: '4px',
-        border: '4px solid black',
+        border: '4px solid',
         borderRadius: '0',
-        outline: `${isDark ? '5px solid white' : '5px solid black'}`,
-        outlineOffset: '-5px',
         imageRendering: 'crisp-edges',
-        boxShadow: `${
-          isDark
-            ? '0 4px 8px rgba(0, 0, 0, 0.1)'
-            : '0 4px 8px rgba(0, 0, 0, 0.1)'
-        }`,
       }}
     >
       <div style={{ padding: '2px 0', position: 'relative' }}>
@@ -220,7 +213,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
               <Image
                 itemProp="image"
                 src={headline.img_src}
-                className="hover:shadow-[8px_8px_0px_rgba(0,0,0,0.8)] hover:scale-105 hover:rotate-[calc(var(--random-rotation))]"
+                className="hover:scale-105 hover:rotate-[calc(var(--random-rotation))]"
                 width={400}
                 height={300}
                 alt={headline.img_alt ?? ''}
@@ -228,26 +221,18 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 style={{
                   padding: '8px',
                   transition: 'all 0.2s ease-in-out',
-                  maxWidth: "100%",
-                  height: "auto",
-                  objectFit: "cover"
-                }} />
+                }}
+              />
               <div
+                className="bg-base-100/90 border-2 border-base-content shadow-[2px_2px_0_hsl(var(--bc))]"
                 style={{
                   position: 'absolute',
                   top: '0px',
                   left: '12px',
-                  backgroundColor: `${
-                    isDark ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)'
-                  }`,
-                  border: `${isDark ? '2px solid white' : '2px solid black'}`,
                   padding: '4px 8px',
                   fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
                   fontSize: '14px',
                   fontStyle: 'italic',
-                  boxShadow: `${
-                    isDark ? '2px 2px 0 white' : '2px 2px 0 black'
-                  }`,
                   transform: 'skewX(-8deg)',
                   zIndex: 10,
                 }}
@@ -260,30 +245,22 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   href={sourceURL}
                   target="_blank"
                   rel="noreferrer"
-                  style={{
-                    textDecoration: 'none',
-                  }}
+                  className="text-base-content no-underline"
                 >
                   {sourceName ?? ''}
                 </a>
               </div>
               <div
+                className="bg-base-100/90 border-2 border-base-content shadow-[2px_2px_0_hsl(var(--bc))]"
                 style={{
                   position: 'absolute',
                   top: '0px',
                   right: '12px',
-                  backgroundColor: `${
-                    isDark ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)'
-                  }`,
-                  border: `${isDark ? '2px solid white' : '2px solid black'}`,
                   padding: '4px 8px',
                   display: 'inline-block',
                   fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
                   fontSize: '14px',
                   fontStyle: 'italic',
-                  boxShadow: `${
-                    isDark ? '2px 2px 0 white' : '2px 2px 0 black'
-                  }`,
                   transform: 'skewX(-8deg)',
                   zIndex: 10,
                 }}
@@ -296,21 +273,15 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
           ) : (
             <div style={{ position: 'relative' }}>
               <div
+                className="bg-base-100/90 border-2 border-base-content shadow-[2px_2px_0_hsl(var(--bc))]"
                 style={{
                   position: 'absolute',
                   top: '0px',
                   left: '12px',
-                  backgroundColor: `${
-                    isDark ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)'
-                  }`,
-                  border: `${isDark ? '2px solid white' : '2px solid black'}`,
                   padding: '4px 8px',
                   fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
                   fontSize: '14px',
                   fontStyle: 'italic',
-                  boxShadow: `${
-                    isDark ? '2px 2px 0 white' : '2px 2px 0 black'
-                  }`,
                   transform: 'skewX(-8deg)',
                   zIndex: 10,
                 }}
@@ -323,31 +294,22 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   href={sourceURL}
                   target="_blank"
                   rel="noreferrer"
-                  style={{
-                    color: `${isDark ? 'white' : 'black'}`,
-                    textDecoration: 'none',
-                  }}
+                  className="text-base-content no-underline"
                 >
                   {sourceName ?? ''}
                 </a>
               </div>
               <div
+                className="bg-base-100/90 border-2 border-base-content shadow-[2px_2px_0_hsl(var(--bc))]"
                 style={{
                   position: 'absolute',
                   top: '0px',
                   right: '12px',
-                  backgroundColor: `${
-                    isDark ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)'
-                  }`,
-                  border: `${isDark ? '2px solid white' : '2px solid black'}`,
                   padding: '4px 8px',
                   display: 'inline-block',
                   fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
                   fontSize: '14px',
                   fontStyle: 'italic',
-                  boxShadow: `${
-                    isDark ? '2px 2px 0 white' : '2px 2px 0 black'
-                  }`,
                   transform: 'skewX(-8deg)',
                   zIndex: 10,
                 }}
@@ -360,16 +322,15 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
           )}
           <div
             style={{
-              border: `${isDark ? '2px solid white' : '2px solid black'}`,
-              boxShadow: '4px 4px 0 black',
+              border: '2px solid',
+              boxShadow: '4px 4px 0',
               padding: '5px',
               fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
               fontSize: '18px',
               textAlign: 'center',
               transform: 'skewX(-8deg)',
-              margin: `${
-                headline.img_src && !leadImgErr ? '0px' : '20px'
-              } 12px 6px 12px`,
+              margin: `${headline.img_src && !leadImgErr ? '0px' : '20px'
+                } 12px 6px 12px`,
             }}
           >
             <h2
