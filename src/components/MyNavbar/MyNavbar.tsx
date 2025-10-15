@@ -24,35 +24,35 @@ export default function MyNavbar(): JSX.Element {
   const [mediaKey, setMediaKey] = useState(0);
   const [langsKey, setLangsKey] = useState(0);
   const selectAllCountries = () => {
-    try { localStorage.setItem('likedCountries', JSON.stringify(Array.from(COUNTRIES.keys()))); } catch { }
+    try { localStorage.setItem('likedCountries', JSON.stringify(Array.from(COUNTRIES.keys()))); } catch (_e) { /* noop */ }
     setCountriesKey((k) => k + 1);
   };
   const clearAllCountries = () => {
-    try { localStorage.setItem('likedCountries', JSON.stringify([])); } catch { }
+    try { localStorage.setItem('likedCountries', JSON.stringify([])); } catch (_e) { /* noop */ }
     setCountriesKey((k) => k + 1);
   };
   const selectAllSources = () => {
-    try { localStorage.setItem('likedSources', JSON.stringify(Array.from(AllNewsSources.keys()))); } catch { }
+    try { localStorage.setItem('likedSources', JSON.stringify(Array.from(AllNewsSources.keys()))); } catch (_e) { /* noop */ }
     setSourcesKey((k) => k + 1);
   };
   const clearAllSources = () => {
-    try { localStorage.setItem('likedSources', JSON.stringify([])); } catch { }
+    try { localStorage.setItem('likedSources', JSON.stringify([])); } catch (_e) { /* noop */ }
     setSourcesKey((k) => k + 1);
   };
   const selectAllMedia = () => {
-    try { localStorage.setItem('likedMediaTypes', JSON.stringify(['article', 'video', 'audio'])); } catch { }
+    try { localStorage.setItem('likedMediaTypes', JSON.stringify(['article', 'video', 'audio'])); } catch (_e) { /* noop */ }
     setMediaKey((k) => k + 1);
   };
   const clearAllMedia = () => {
-    try { localStorage.setItem('likedMediaTypes', JSON.stringify([])); } catch { }
+    try { localStorage.setItem('likedMediaTypes', JSON.stringify([])); } catch (_e) { /* noop */ }
     setMediaKey((k) => k + 1);
   };
   const selectAllLangs = () => {
-    try { localStorage.setItem('likedLanguages', JSON.stringify(Array.from(LangsMap.keys()))); } catch { }
+    try { localStorage.setItem('likedLanguages', JSON.stringify(Array.from(LangsMap.keys()))); } catch (_e) { /* noop */ }
     setLangsKey((k) => k + 1);
   };
   const clearAllLangs = () => {
-    try { localStorage.setItem('likedLanguages', JSON.stringify([])); } catch { }
+    try { localStorage.setItem('likedLanguages', JSON.stringify([])); } catch (_e) { /* noop */ }
     setLangsKey((k) => k + 1);
   };
   const modalRef = useRef<HTMLDivElement>(null);
@@ -169,12 +169,14 @@ export default function MyNavbar(): JSX.Element {
           {/* Mobile menu button - moved to right */}
           <div className={`dropdown dropdown-end lg:hidden ${mobileMenuOpen ? 'dropdown-open' : ''}`} style={{ zIndex: 1001 }}>
             <button
-              onClick={() => { setMobileMenuOpen(false); modalHandler(); }}
+              onClick={() => setMobileMenuOpen((o) => !o)}
               className="btn btn-outline btn-circle"
-              title="Filters"
-              aria-label="Open filters"
+              title="Menu"
+              aria-label="Open menu"
             >
-              <Filter width={16} height={16} />
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
             </button>
             <ul tabIndex={0} className={`menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-60 ${mobileMenuOpen ? 'block' : 'hidden'}`} style={{ zIndex: 1002 }}>
               <li className="mb-2">

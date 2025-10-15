@@ -6,7 +6,6 @@ import Heart from '@components/SVG/Heart';
 import Bookmark from '@components/SVG/Bookmark';
 import Share from '@components/SVG/Share';
 import X from '@components/SVG/X';
-import { useTheme } from 'next-themes';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { Headline } from '../../types';
 import { Countries as CountriesType } from '../../types/countries';
@@ -22,8 +21,6 @@ type Props = {
 const ComicCard = ({ headline }: Props): JSX.Element => {
   const COLLECTION_KEY = 'nooze';
 
-  const { theme } = useTheme();
-  const isDark = theme === 'dark';
   const [leadImgErr, setLeadImgErr] = useState<boolean>(false);
   const [liked, setLiked] = useState<boolean>(false);
   const [likeCount, setLikeCount] = useState<number | '?'>('?');

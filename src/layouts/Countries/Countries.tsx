@@ -104,7 +104,7 @@ const CountriesComponent = ({ title, subTitle }: Props): JSX.Element => {
             </div>
             <div className="collapse-content">
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
-                {items.map(([key, name]) => {
+                {items.map(([key, _name]) => {
                   const iso2 = toISO2(key as string);
                   const flag = getFlag(iso2);
                   const isLiked = likedCountries.has(key);
