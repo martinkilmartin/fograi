@@ -16,7 +16,7 @@ const Roadmap = ({ title = true }: Props): JSX.Element => {
     <div className="container mx-auto px-4 py-8">
       {title && (
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold">
             Roadmap
           </h1>
         </div>
@@ -115,7 +115,7 @@ const Roadmap = ({ title = true }: Props): JSX.Element => {
             <p className="text-sm text-base-content/70">Trend lines and timelines across topics.</p>
           </div>
           <hr className="bg-info" />
-        </li>s
+        </li>
 
         {/* Planned: Sync (left side box) */}
         <li>
