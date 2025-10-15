@@ -403,100 +403,51 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
           textAlign: 'center',
         }}
       >
-        <div style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          width: '100%',
-          maxWidth: '240px',
-          margin: '0 auto'
-        }}>
-          <div
-            onClick={toggleLike}
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              cursor: 'pointer',
-              padding: '8px',
-              borderRadius: '8px',
-              transition: 'all 0.2s ease',
-              minWidth: '60px'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)';
-              e.currentTarget.style.transform = 'scale(1.05)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'transparent';
-              e.currentTarget.style.transform = 'scale(1)';
-            }}
-          >
-            <span className="badge" style={{ marginBottom: '4px', fontSize: '12px' }}>
+        <div className="flex w-full items-center justify-between px-4">
+          <div className="indicator">
+            <span className="indicator-item badge badge-sm">
               {likeLoading ? '...' : likeCount}
             </span>
-            <Heart someBool={liked} />
+            <button
+              className={`btn btn-ghost btn-circle ${liked ? 'text-error' : ''}`}
+              onClick={toggleLike}
+              aria-label="Like"
+              title={liked ? 'Unlike' : 'Like'}
+            >
+              <Heart someBool={liked} />
+            </button>
           </div>
 
-          <div
+          <button
+            className={`btn btn-ghost btn-circle ${saved ? 'text-warning' : ''}`}
             onClick={saveToOrRemoveFromCollection}
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              cursor: 'pointer',
-              padding: '8px',
-              borderRadius: '8px',
-              transition: 'all 0.2s ease',
-              minWidth: '60px'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)';
-              e.currentTarget.style.transform = 'scale(1.05)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'transparent';
-              e.currentTarget.style.transform = 'scale(1)';
-            }}
+            aria-label="Bookmark"
+            title={saved ? 'Remove bookmark' : 'Bookmark'}
           >
             <Bookmark someBool={saved} />
-          </div>
+          </button>
 
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              cursor: 'pointer',
-              padding: '8px',
-              borderRadius: '8px',
-              transition: 'all 0.2s ease',
-              minWidth: '60px'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)';
-              e.currentTarget.style.transform = 'scale(1.05)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'transparent';
-              e.currentTarget.style.transform = 'scale(1)';
-            }}
-          >
-            {canShare ? (
-              <div onClick={share}>
-                <Share someBool={false} />
-              </div>
-            ) : (
-              <Link
-                href={twShare}
-                target="_blank"
-                rel="noreferrer"
-                title="Browser share not supported. Defaulting to X."
-              >
-                <X />
-              </Link>
-            )}
-          </div>
+          {canShare ? (
+            <button
+              className="btn btn-ghost btn-circle"
+              onClick={share}
+              aria-label="Share"
+              title="Share"
+            >
+              <Share someBool={false} />
+            </button>
+          ) : (
+            <Link
+              href={twShare}
+              target="_blank"
+              rel="noreferrer"
+              title="Browser share not supported. Defaulting to X."
+              className="btn btn-ghost btn-circle"
+              aria-label="Share on X"
+            >
+              <X />
+            </Link>
+          )}
         </div>
       </div>
     </div>
