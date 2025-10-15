@@ -4,8 +4,7 @@ const TermsOfUse = [
     content: [
       `Welcome to ${process.env.NEXT_PUBLIC_WELCOME_NAME}!`,
       `Last updated: ${process.env.NEXT_PUBLIC_TOU_LAST_UPDATED}`,
-      `We are ${process.env.NEXT_PUBLIC_COMPANY_NAME} incorporated in ${process.env.NEXT_PUBLIC_COMPANY_COUNTRY} under company registration number ${process.env.NEXT_PUBLIC_COMPANY_NUMBER}.`,
-      `We are also ${process.env.NEXT_PUBLIC_COMPANY_NAME_ALT} incorporated in ${process.env.NEXT_PUBLIC_COMPANY_COUNTRY_ALT} as ${process.env.NEXT_PUBLIC_COMPANY_NUMBER_ALT}.`,
+      `We are ${process.env.NEXT_PUBLIC_COMPANY_NAME_ALT} incorporated in ${process.env.NEXT_PUBLIC_COMPANY_COUNTRY_ALT} under company registration number ${process.env.NEXT_PUBLIC_COMPANY_NUMBER_ALT}.`,
       'These Terms of Use apply to the use of this website, regardless of how you access it. Please read these Terms of Use carefully before you proceed.',
       'We may, at any time and without notice, terminate your access to or use of this website. If we do so, you do not have the right to bring any claim or claims against us.',
     ],
@@ -23,7 +22,7 @@ const TermsOfUse = [
       'Nothing in these terms limits our liability for death or personal injury caused by our negligence, fraud or fraudulent misrepresentation or for any matter that we cannot exclude or limit as a matter of law.',
       'We provide the website free of charge and on an “as is” basis.',
       'Therefore, to the extent permitted by law, (a) we disclaim any warranties, express or implied, and (b) other than as set out above, we are not liable for any loss or damage — direct or indirect and whether arising in contract, tort, or otherwise — even if we have been advised of the possibility of this loss or damage.',
-      'These limitations don’t affect your statutory rights under the Consumer Protection Act 2007, if applicable and any laws that replace it. If you want independent advice about your rights, you can speak to Citizens Information or the European Consumer Centre.',
+      'These limitations don’t affect your statutory rights under applicable consumer protection laws in your jurisdiction.',
     ],
   },
   {
@@ -84,9 +83,9 @@ const TermsOfUse = [
     ],
   },
   {
-    title: '🇮🇪 13. Applicable law',
+    title: '🇨🇦 13. Applicable law',
     content: [
-      'This Agreement shall be governed by the law of Ireland and courts of Ireland will have exclusive jurisdiction in relation to these Terms of Use.',
+      'These Terms of Use shall be governed by the laws of the Province of Québec and the federal laws of Canada applicable therein. The courts located in Québec shall have exclusive jurisdiction over any dispute arising out of or relating to these Terms of Use.',
     ],
   },
 ]

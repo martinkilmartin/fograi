@@ -19,8 +19,7 @@ const Robot = ({ title }: Props): JSX.Element => (
     </p>
     <h2 className="text-2xl font-semibold mb-4">Operator</h2>
     <p className="mb-6">
-      <strong>nooze-bot</strong> is operated by Sionnach Buí Teoranta (Éireann) and
-      Sionnach Solutions (Québec).
+      <strong>nooze-bot</strong> is operated by Sionnach Solutions (Québec), incorporated in Canada as <strong>9196692 Canada Inc.</strong>
     </p>
     <h2 className="text-2xl font-semibold mb-4">Behavior</h2>
     <p>
@@ -39,7 +38,7 @@ const Robot = ({ title }: Props): JSX.Element => (
       article.
     </p>
     <p className="mb-6">
-      <strong>nooze-bot</strong> is currently hosted in Dublin, Ireland under IPs{' '}
+      <strong>nooze-bot</strong> is currently hosted in Québec, Canada under IPs{' '}
       <code>63.35.201.225</code> and <code>54.155.128.69</code>.
     </p>
     <h2 className="text-2xl font-semibold mb-4">Rules</h2>
