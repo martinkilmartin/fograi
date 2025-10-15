@@ -24,35 +24,35 @@ export default function MyNavbar(): JSX.Element {
   const [mediaKey, setMediaKey] = useState(0);
   const [langsKey, setLangsKey] = useState(0);
   const selectAllCountries = () => {
-    try { localStorage.setItem('likedCountries', JSON.stringify(Array.from(COUNTRIES.keys()))); } catch {}
+    try { localStorage.setItem('likedCountries', JSON.stringify(Array.from(COUNTRIES.keys()))); } catch { }
     setCountriesKey((k) => k + 1);
   };
   const clearAllCountries = () => {
-    try { localStorage.setItem('likedCountries', JSON.stringify([])); } catch {}
+    try { localStorage.setItem('likedCountries', JSON.stringify([])); } catch { }
     setCountriesKey((k) => k + 1);
   };
   const selectAllSources = () => {
-    try { localStorage.setItem('likedSources', JSON.stringify(Array.from(AllNewsSources.keys()))); } catch {}
+    try { localStorage.setItem('likedSources', JSON.stringify(Array.from(AllNewsSources.keys()))); } catch { }
     setSourcesKey((k) => k + 1);
   };
   const clearAllSources = () => {
-    try { localStorage.setItem('likedSources', JSON.stringify([])); } catch {}
+    try { localStorage.setItem('likedSources', JSON.stringify([])); } catch { }
     setSourcesKey((k) => k + 1);
   };
   const selectAllMedia = () => {
-    try { localStorage.setItem('likedMediaTypes', JSON.stringify(['article','video','audio'])); } catch {}
+    try { localStorage.setItem('likedMediaTypes', JSON.stringify(['article', 'video', 'audio'])); } catch { }
     setMediaKey((k) => k + 1);
   };
   const clearAllMedia = () => {
-    try { localStorage.setItem('likedMediaTypes', JSON.stringify([])); } catch {}
+    try { localStorage.setItem('likedMediaTypes', JSON.stringify([])); } catch { }
     setMediaKey((k) => k + 1);
   };
   const selectAllLangs = () => {
-    try { localStorage.setItem('likedLanguages', JSON.stringify(Array.from(LangsMap.keys()))); } catch {}
+    try { localStorage.setItem('likedLanguages', JSON.stringify(Array.from(LangsMap.keys()))); } catch { }
     setLangsKey((k) => k + 1);
   };
   const clearAllLangs = () => {
-    try { localStorage.setItem('likedLanguages', JSON.stringify([])); } catch {}
+    try { localStorage.setItem('likedLanguages', JSON.stringify([])); } catch { }
     setLangsKey((k) => k + 1);
   };
   const modalRef = useRef<HTMLDivElement>(null);
@@ -167,80 +167,77 @@ export default function MyNavbar(): JSX.Element {
 
         <div className="navbar-end gap-2">
           {/* Mobile menu button - moved to right */}
-          <div className="dropdown dropdown-end lg:hidden" style={{ zIndex: 50 }}>
+          <div className={`dropdown dropdown-end lg:hidden ${mobileMenuOpen ? 'dropdown-open' : ''}`} style={{ zIndex: 1001 }}>
             <button
-              tabIndex={0}
+              onClick={() => { setMobileMenuOpen(false); modalHandler(); }}
               className="btn btn-outline btn-circle"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              title="Filters"
+              aria-label="Open filters"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              <Filter width={16} height={16} />
             </button>
-            {mobileMenuOpen && (
-              <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                <li className="mb-2">
-                  <div className="relative">
-                    <input
-                      type="text"
-                      placeholder="Search news..."
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' && searchTerm.trim()) {
-                          router.push(`/search/${encodeURIComponent(searchTerm.trim())}`);
-                          setMobileMenuOpen(false);
-                        }
-                      }}
-                      className="input input-bordered input-sm w-full pl-8 pr-4"
-                    />
-                    <div className="absolute inset-y-0 left-0 flex items-center pl-2">
-                      <Search width={16} height={16} />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="dropdown">
-                    <button tabIndex={0} className="flex items-center gap-2 w-full">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
-                      </svg>
-                      Theme: {theme}
-                    </button>
-                    <ul tabIndex={0} className="dropdown-content z-[1] p-2 shadow-2xl bg-base-100 rounded-box w-48 max-h-64 overflow-y-auto ml-4">
-                      {themes.map((themeName) => (
-                        <li key={themeName}>
-                          <button
-                            onClick={() => {
-                              setTheme(themeName);
-                              setMobileMenuOpen(false);
-                            }}
-                            className={`flex items-center gap-2 w-full text-left capitalize ${theme === themeName ? 'bg-primary text-primary-content' : ''}`}
-                          >
-                            <div className={`w-3 h-3 rounded-full border border-base-content ${theme === themeName ? 'ring-1 ring-primary' : ''}`}
-                              style={{ backgroundColor: themeColors[themeName] || '#666' }}>
-                            </div>
-                            {themeName}
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <button
-                    onClick={() => {
-                      modalHandler();
-                      setMobileMenuOpen(false);
+            <ul tabIndex={0} className={`menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-60 ${mobileMenuOpen ? 'block' : 'hidden'}`} style={{ zIndex: 1002 }}>
+              <li className="mb-2">
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Search news..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' && searchTerm.trim()) {
+                        router.push(`/search/${encodeURIComponent(searchTerm.trim())}`);
+                        setMobileMenuOpen(false);
+                      }
                     }}
-                    className="flex items-center gap-2"
-                  >
-                    <Filter width={16} height={16} />
-                    Filters
+                    className="input input-bordered input-sm w-full pl-8 pr-4"
+                  />
+                  <div className="absolute inset-y-0 left-0 flex items-center pl-2">
+                    <Search width={16} height={16} />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="dropdown">
+                  <button tabIndex={0} className="flex items-center gap-2 w-full">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
+                    </svg>
+                    Theme: {theme}
                   </button>
-                </li>
-              </ul>
-            )}
+                  <ul tabIndex={0} className="dropdown-content z-[1002] p-2 shadow-2xl bg-base-100 rounded-box w-48 max-h-64 overflow-y-auto ml-4">
+                    {themes.map((themeName) => (
+                      <li key={themeName}>
+                        <button
+                          onClick={() => {
+                            setTheme(themeName);
+                            setMobileMenuOpen(false);
+                          }}
+                          className={`flex items-center gap-2 w-full text-left capitalize ${theme === themeName ? 'bg-primary text-primary-content' : ''}`}
+                        >
+                          <div className={`w-3 h-3 rounded-full border border-base-content ${theme === themeName ? 'ring-1 ring-primary' : ''}`}
+                            style={{ backgroundColor: themeColors[themeName] || '#666' }}>
+                          </div>
+                          {themeName}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    modalHandler();
+                    setMobileMenuOpen(false);
+                  }}
+                  className="flex items-center gap-2"
+                >
+                  <Filter width={16} height={16} />
+                  Filters
+                </button>
+              </li>
+            </ul>
           </div>
 
           {/* Desktop search and buttons - hidden on mobile */}
@@ -295,12 +292,14 @@ export default function MyNavbar(): JSX.Element {
         </div>
       </nav>
 
+
+
       {/* Enhanced Filters Modal */}
       {modalVisible && (
-        <div className="modal modal-open" style={{ zIndex: 100 }}>
+        <div className="modal modal-open z-[1000]">
           <div
             ref={modalRef}
-            className="modal-box max-w-6xl w-full mx-4 max-h-[90vh] overflow-hidden flex flex-col"
+            className="modal-box max-w-6xl w-[calc(100vw-1.5rem)] sm:w-full mx-2 sm:mx-4 max-h-[90vh] flex flex-col"
           >
             {/* Header */}
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-base-300 gap-3">
