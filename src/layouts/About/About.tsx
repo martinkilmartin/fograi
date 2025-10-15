@@ -3,10 +3,10 @@ import Link from 'next/link';
 const About = (): JSX.Element => (
   <div className="container mx-auto px-4 py-8">
     <div className="text-center">
-      <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
+      <h1 className="text-6xl font-bold mb-4">
         Know Everything.
       </h1>
-      <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">
+      <h2 className="text-6xl font-bold mb-8">
         Now.
       </h2>
       <p className="text-xl mb-4 font-serif text-shadow">
@@ -33,7 +33,7 @@ const About = (): JSX.Element => (
           href="https://newsbrandsireland.ie/journalismmatters/"
           target="_blank"
           rel="noreferrer"
-          className="text-xl font-bold px-4 py-2 bg-blue-600 text-white rounded hover:bg-red-600 transition-colors"
+          className="text-xl font-bold px-4 py-2"
         >
           #journalismmatters&nbsp;↗
         </Link>

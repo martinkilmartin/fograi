@@ -68,26 +68,21 @@ const MediaTypes = (): JSX.Element => {
   }, [likedMediaTypes]);
 
   return (
-    <div style={{ display: 'grid', gap: '8px', justifyContent: 'space-evenly', padding: '0' }}>
+    <div className="space-y-2">
       {Array.from(MediaTypesObj.entries()).map((mediaType, i) => {
         const isLiked = likedMediaTypes.has(mediaType[0] as MediaTypes);
         return (
-          <div key={i} style={{ gridColumn: 'span 12' }}>
+          <label key={i} className="flex items-center gap-2">
             <input
               type="checkbox"
+              className="checkbox checkbox-sm"
               checked={isLiked}
               onChange={() => toggleMediaType(mediaType[0] as MediaTypes)}
             />
-            <span
-              style={{
-                fontSize: '22px',
-                fontFamily: '"Georgia", "Times New Roman", Times, serif',
-              }}
-            >
-              &nbsp;{mediaType[1].icon}&nbsp;
-              <b>{mediaType[1].text}</b>
+            <span className="text-lg">
+              {mediaType[1].icon} <b>{mediaType[1].text}</b>
             </span>
-          </div>
+          </label>
         );
       })}
     </div>
