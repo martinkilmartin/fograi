@@ -1,5 +1,4 @@
 import { useMemo, useState, useEffect } from 'react';
-import Link from 'next/link';
 import { COUNTRIES } from '@constants/COUNTRIES';
 import { Countries as CountriesType} from 'src/types/countries';
 import { countryToContinent, getFlag, countryLabel } from '@lib/geo';
@@ -93,7 +92,7 @@ const Countries = (): JSX.Element => {
           </div>
           <div className="collapse-content">
             <div className="grid gap-2">
-              {items.map(([code, name]) => {
+              {items.map(([code, _name]) => {
                 const iso2 = toISO2(code as string);
                 const cFlag = getFlag(iso2);
                 const isLiked = likedCountries.has(code as CountriesType);

@@ -116,9 +116,7 @@ const SourcesComponent = ({ title, subTitle }: Props): JSX.Element => {
     try { return languageFormatter ? (languageFormatter as any).of(code) ?? code : code; } catch { return code; }
   };
 
-  const sortedCountries = Array.from(byCountry.keys()).sort((a, b) =>
-    countryLabel(a).localeCompare(countryLabel(b))
-  );
+  // Note: country order is computed on the fly at render-time where needed
 
   // Continent grouping helpers
   const countryToContinent = (code: string): string => {

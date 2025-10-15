@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
     try {
       const raw = localStorage.getItem('recent_searches');
       if (raw) setRecent(JSON.parse(raw));
-    } catch {}
+    } catch (_e) { /* noop */ }
   }, []);
 
   const persistRecent = (q: string) => {
@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
       const next = [q, ...recent.filter((r) => r !== q)].slice(0, 8);
       setRecent(next);
       localStorage.setItem('recent_searches', JSON.stringify(next));
-    } catch {}
+    } catch (_e) { /* noop */ }
   };
 
   const handleSearch = () => {
