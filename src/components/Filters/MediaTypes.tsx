@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Grid, Switch, SwitchEvent, Text } from '@nextui-org/react';
 
 type MediaTypes = 'article' | 'video' | 'audio';
 
@@ -48,75 +47,50 @@ const MediaTypes = (): JSX.Element => {
     }
   };
 
-  const sourcy = (e: SwitchEvent, ns: MediaTypes) => {
-    if (e.target.checked) {
-      addItem(ns);
-      trackClicks('like', ns.toString());
+  const toggleMediaType = (mediaType: MediaTypes) => {
+    if (!likedMediaTypes.has(mediaType)) {
+      addItem(mediaType);
     } else {
-      removeItem(ns);
+      removeItem(mediaType);
     }
   };
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const saveLocally = () => {
-        localStorage.setItem('likedMediaTypes', JSON.stringify([...likedMediaTypes]));
+        localStorage.setItem(
+          'likedMediaTypes',
+          JSON.stringify([...likedMediaTypes]),
+        );
       };
       saveLocally();
     }
   }, [likedMediaTypes]);
 
-  const trackClicks = (
-    action:
-      | 'like'
-      | 'saved'
-      | 'shared'
-      | 'link'
-      | 'info'
-      | 'source'
-      | 'country',
-    ns: string,
-  ) => {
-    try {
-      fetch(`/api/fast/react?id=${ns}&action=${action}&reaction=false`, {
-        method: 'POST',
-      });
-    } catch (_error) {
-      // do nothing
-    }
-  };
-
   return (
-    <Grid.Container gap={2} justify="space-evenly" style={{ padding: '0' }}>
-      {Array.from(MediaTypesObj.entries())
-        .map((ns, i) => {
-          const isLiked = likedMediaTypes.has(
-            ns[0] as MediaTypes,
-          );
-          return (
-            <Grid xs={12} sm={6} md={6} lg={4} xl={3} key={i}>
-              <Switch
-                checked={isLiked}
-                onChange={(e) =>
-                  sourcy(e, ns[0] as MediaTypes)
-                }
-                size="xl"
-                color="success"
-                iconOn={ns[1].icon}
-                iconOff={ns[1].icon}
-              />
-              <Text
-                size={22}
-                style={{
-                  fontFamily: '"Georgia", "Times New Roman", Times, serif',
-                }}
-              >
-                <b>&nbsp;{ns[1].text}</b>
-              </Text>
-            </Grid>
-          );
-        })}
-    </Grid.Container>
+    <div style={{ display: 'grid', gap: '8px', justifyContent: 'space-evenly', padding: '0' }}>
+      {Array.from(MediaTypesObj.entries()).map((mediaType, i) => {
+        const isLiked = likedMediaTypes.has(mediaType[0] as MediaTypes);
+        return (
+          <div key={i} style={{ gridColumn: 'span 12' }}>
+            <input
+              type="checkbox"
+              checked={isLiked}
+              onChange={() => toggleMediaType(mediaType[0] as MediaTypes)}
+            />
+            <span
+              style={{
+                fontSize: '22px',
+                fontFamily: '"Georgia", "Times New Roman", Times, serif',
+              }}
+            >
+              &nbsp;{mediaType[1].icon}&nbsp;
+              <b>{mediaType[1].text}</b>
+            </span>
+          </div>
+        );
+      })}
+    </div>
   );
 };
 

@@ -1,12 +1,4 @@
 import { useState, FormEvent } from 'react';
-import {
-  Badge,
-  Button,
-  Card,
-  Input,
-  Textarea,
-  Spacer,
-} from '@nextui-org/react';
 import { CONTACT_SUCCESS, CONTACT_FAILURE } from '@constants/CONTENT';
 
 type Props = {
@@ -64,39 +56,53 @@ const Contact = ({
   }
   return (
     <div className="px-4">
-      <h1 style={{ textAlign: 'center' }}>Contact Us</h1>
-      <Card>
+      <h1 className="text-center text-3xl font-bold mb-6">Contact Us</h1>
+      <div className="card bg-base-100 shadow-xl max-w-2xl mx-auto">
         <form onSubmit={formSubmit}>
-          <Card.Header>
-            {result && <Badge color="success">{CONTACT_SUCCESS}</Badge>}
+          <div className="card-body">
+            {result && <div className="badge badge-success mb-4">{CONTACT_SUCCESS}</div>}
             {error ||
               (emptyForm && (
-                <Badge color="error">
+                <div className="badge badge-error mb-4">
                   {emptyForm ? 'Nothing to say?' : CONTACT_FAILURE}
-                </Badge>
+                </div>
               ))}
-          </Card.Header>
-          <Card.Body>
-            <Textarea
-              label={messageTitle}
-              placeholder={messagePlaceholder}
-              name="message"
-              id="message"
-            />
-            <Spacer />
-            <Input
-              label={contactTitle}
-              placeholder={contactPlaceholder}
-              type="email"
-              name="email"
-              id="email"
-            />
-          </Card.Body>
-          <Card.Footer>
-            <Button type="submit">{buttonText}</Button>
-          </Card.Footer>
+
+            <div className="form-control mb-4">
+              <label className="label">
+                <span className="label-text">{messageTitle}</span>
+              </label>
+              <textarea
+                className="textarea textarea-bordered h-24"
+                placeholder={messagePlaceholder}
+                name="message"
+                id="message"
+                required
+              />
+            </div>
+
+            <div className="form-control mb-6">
+              <label className="label">
+                <span className="label-text">{contactTitle}</span>
+              </label>
+              <input
+                className="input input-bordered"
+                placeholder={contactPlaceholder}
+                type="email"
+                name="email"
+                id="email"
+                required
+              />
+            </div>
+          </div>
+
+          <div className="card-actions justify-end p-6 pt-0">
+            <button className="btn btn-primary" type="submit">
+              {buttonText}
+            </button>
+          </div>
         </form>
-      </Card>
+      </div>
     </div>
   );
 };

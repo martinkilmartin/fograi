@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Grid, Link, Switch, SwitchEvent, Text } from '@nextui-org/react';
+import Link from 'next/link';
 import { COUNTRIES } from '@constants/COUNTRIES';
 import { flags } from '@constants/FLAGS';
 import { Countries as CountriesType} from 'src/types/countries';
@@ -45,11 +45,11 @@ const Countries = (): JSX.Element => {
     }
   };
 
-  const sourcy = (e: SwitchEvent, ns: keyof typeof COUNTRIES) => {
-    if (e.target.checked) {
-      addItem(ns);
+  const sourcy = (country: keyof typeof COUNTRIES) => {
+    if (!likedCountries.has(country)) {
+      addItem(country);
     } else {
-      removeItem(ns);
+      removeItem(country);
     }
   };
 
@@ -66,24 +66,21 @@ const Countries = (): JSX.Element => {
   }, [likedCountries]);
 
   return (
-    <Grid.Container gap={2} justify="space-evenly" style={{ padding: '0' }}>
+    <div style={{ display: 'grid', gap: '8px', justifyContent: 'space-evenly', padding: '0' }}>
       {Array.from(COUNTRIES).map((ns, i) => {
         const country = ns[0].substring(0, 2).toLowerCase();
         const cFlag = flags.get(country as CountriesType);
         const isLiked = likedCountries.has(ns[0] as keyof typeof COUNTRIES);
         return (
-          <Grid xs={12} sm={6} md={6} lg={4} xl={3} key={i}>
-            <Switch
+          <div key={i} style={{ gridColumn: 'span 12' }}>
+            <input
+              type="checkbox"
               checked={isLiked}
-              onChange={(e) => sourcy(e, ns[0] as keyof typeof COUNTRIES)}
-              size="xl"
-              color="success"
-              iconOn="❤️"
-              iconOff="◻️"
+              onChange={() => sourcy(ns[0] as keyof typeof COUNTRIES)}
             />
-            <Text
-              size={22}
+            <span
               style={{
+                fontSize: '22px',
                 fontFamily: '"Georgia", "Times New Roman", Times, serif',
               }}
             >
@@ -95,11 +92,11 @@ const Countries = (): JSX.Element => {
                   {ns[1]}
                 </Link>
               </b>
-            </Text>
-          </Grid>
+            </span>
+          </div>
         );
       })}
-    </Grid.Container>
+    </div>
   );
 };
 

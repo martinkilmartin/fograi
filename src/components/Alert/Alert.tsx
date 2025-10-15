@@ -1,5 +1,3 @@
-import clsx from 'clsx'
-
 const COLORS = {
   no: '',
   info: ' alert-info',
@@ -15,7 +13,7 @@ type Props = {
 
 const Alert = ({ text, color = 'no' }: Props): JSX.Element => {
   return (
-    <div className={clsx('alert my-3', COLORS[color])}>
+    <div className={`alert my-3${COLORS[color]}`}>
       <div className="flex-1">
         <label className="mx-auto">{text}</label>
       </div>

@@ -3,15 +3,8 @@ import { useQueryClient } from 'react-query';
 import { useRouter } from 'next/router';
 import { APP_TITLE, TAG_LINE } from '@constants/CONTENT';
 import { Page } from '@layouts/Page';
-import {
-  Button,
-  Grid,
-  Input,
-  Loading,
-  Row,
-  Spacer,
-  Text,
-} from '@nextui-org/react';
+import { Button } from '../../components/ui/button';
+import { Input } from '../../components/ui/input';
 
 const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -28,76 +21,42 @@ const HomePage: React.FC = () => {
 
   return (
     <Page title={APP_TITLE} heading={TAG_LINE}>
-      <Grid.Container justify="center">
-        <Text
-          h1
-          size={60}
-          css={{
-            textGradient: '45deg, $blue600 0%, $red600 50%',
-          }}
-          weight="bold"
-        >
+      <div className="flex justify-center">
+        <h1 className="text-6xl font-bold bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
           Search
-        </Text>
-      </Grid.Container>
-      <Grid.Container justify="center">
-        <Text
-          h1
-          size={60}
-          css={{
-            textGradient: '45deg, $red600 0%, $green600 50%',
-          }}
-          weight="bold"
-        >
+        </h1>
+      </div>
+      <div className="flex justify-center mt-4">
+        <h1 className="text-6xl font-bold bg-gradient-to-r from-red-600 to-green-600 bg-clip-text text-transparent">
           thousands of headlines
-        </Text>
-      </Grid.Container>
-      <Grid.Container justify="center">
-        <Text
-          h2
-          size={60}
-          css={{
-            textGradient: '45deg, $green600 0%, $yellow600 100%',
-          }}
-          weight="bold"
-        >
+        </h1>
+      </div>
+      <div className="flex justify-center mt-4">
+        <h2 className="text-6xl font-bold bg-gradient-to-r from-green-600 to-yellow-600 bg-clip-text text-transparent">
           from
-        </Text>
-      </Grid.Container>
-      <Grid.Container justify="center">
-        <Text
-          h2
-          size={60}
-          css={{
-            textGradient: '45deg, $yellow600 0%, $blue600 100%',
-          }}
-          weight="bold"
-        >
+        </h2>
+      </div>
+      <div className="flex justify-center mt-4">
+        <h2 className="text-6xl font-bold bg-gradient-to-r from-yellow-600 to-blue-600 bg-clip-text text-transparent">
           hundreds of global sources.
-        </Text>
-      </Grid.Container>
-      <Row justify="center">
-        <form onSubmit={() => handleSearch()}>
-          <Row>
-            <Input
-              clearable
-              bordered
-              color="primary"
-              placeholder={searchTerm.length ? searchTerm : 'Search..'}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <Spacer y={1} />
-            <Button
-              auto
-              bordered
-              onClick={() => handleSearch()}
-              aria-label="search"
-            >
-              {loading ? <Loading /> : '🔎'}
-            </Button>
-          </Row>
+        </h2>
+      </div>
+      <div className="flex justify-center mt-8">
+        <form onSubmit={(e) => { e.preventDefault(); handleSearch(); }} className="flex gap-4">
+          <Input
+            placeholder={searchTerm.length ? searchTerm : 'Search..'}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="min-w-[300px]"
+          />
+          <Button
+            type="submit"
+            aria-label="search"
+            disabled={loading}
+          >
+            {loading ? '⏳' : '🔎'}
+          </Button>
         </form>
-      </Row>
+      </div>
     </Page>
   );
 };

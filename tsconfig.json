@@ -17,6 +17,7 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
+      "@/*": ["./src/*"],
       "@hooks/*": ["src/hooks/*"],
       "@lib/*": ["src/lib/*"],
       "@layouts/*": ["src/layouts/*"],

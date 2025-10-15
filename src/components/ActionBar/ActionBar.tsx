@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Button } from '@nextui-org/react';
 import { ADJACENTS } from '@constants/ADJACENTS';
 import { flags } from '@constants/FLAGS';
 import { LangsMap } from '@constants/LANGS';
@@ -51,9 +50,9 @@ const AnimatedButton = ({
   }, [action.icon, secondaryActions]);
 
   return (
-    <Button auto light onClick={onClick} aria-label={action.label}>
+    <button className="btn btn-ghost" onClick={onClick} aria-label={action.label}>
       {displayIcon}
-    </Button>
+    </button>
   );
 };
 
@@ -113,19 +112,19 @@ const ActionBar = ({ userCountry }: ActionBarProps) => {
     >
       {/* Top Button.Group - Secondary Actions */}
       {selectedAction && (
-        <Button.Group color="gradient" ghost>
+        <div className="flex">
           {secondaryActions[selectedAction].map(
             (action: string, index: number) => (
-              <Button key={index} auto light aria-label={action}>
+              <button key={index} className="btn btn-ghost" aria-label={action}>
                 {action}
-              </Button>
+              </button>
             ),
           )}
-        </Button.Group>
+        </div>
       )}
 
       {/* Bottom Button.Group - Main Actions */}
-      <Button.Group color="gradient" ghost>
+      <div className="flex">
         {actions.map((action, index) => (
           <AnimatedButton
             key={index}
@@ -134,7 +133,7 @@ const ActionBar = ({ userCountry }: ActionBarProps) => {
             onClick={() => handleActionClick(action.label)}
           />
         ))}
-      </Button.Group>
+      </div>
     </div>
   );
 };

@@ -1,24 +1,15 @@
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import { Image as NextUIImage } from '@nextui-org/react';
-import {
-  Badge,
-  Card,
-  Grid,
-  Loading,
-  Text,
-  Tooltip,
-  useTheme,
-} from '@nextui-org/react';
+import Image from "next/image";
 import Link from 'next/link';
 import diffDisplay from '@lib/time-format';
-import Bookmark from '@components/SVG/Bookmark';
 import Heart from '@components/SVG/Heart';
+import Bookmark from '@components/SVG/Bookmark';
+import Share from '@components/SVG/Share';
 import X from '@components/SVG/X';
+import { useTheme } from 'next-themes';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { Headline } from '../../types';
 import { Countries as CountriesType } from '../../types/countries';
-import shareImg from '../../../public/img/ic/share.svg';
 
 type Props = {
   header?: boolean;
@@ -31,7 +22,8 @@ type Props = {
 const ComicCard = ({ headline }: Props): JSX.Element => {
   const COLLECTION_KEY = 'nooze';
 
-  const { isDark } = useTheme();
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [leadImgErr, setLeadImgErr] = useState<boolean>(false);
   const [liked, setLiked] = useState<boolean>(false);
   const [likeCount, setLikeCount] = useState<number | '?'>('?');
@@ -49,15 +41,9 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
   const sourceName = AllNewsSources.get(headline.source)?.name;
 
   const cardBackgrounds = {
-    video: isDark
-      ? 'radial-gradient(circle, black, darkred)'
-      : 'radial-gradient(circle, white, red)',
-    audio: isDark
-      ? 'radial-gradient(circle, black, darkviolet)'
-      : 'radial-gradient(circle, white, purple)',
-    article: isDark
-      ? 'radial-gradient(circle, black, darkblue)'
-      : 'radial-gradient(circle, white, blue)',
+    video: 'radial-gradient(circle, hsl(var(--p)), hsl(var(--pf)))',
+    audio: 'radial-gradient(circle, hsl(var(--s)), hsl(var(--sf)))',
+    article: 'radial-gradient(circle, hsl(var(--a)), hsl(var(--af)))',
   };
 
   const cardBackground =
@@ -199,16 +185,15 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
     articleLink;
 
   return (
-    <Card
+    <div
       itemScope
       itemType="https://schema.org/NewsArticle"
-      isHoverable
+      className="card hover:shadow-lg transition-transform duration-300 hover:-translate-y-1"
       style={{
         backgroundImage: cardBackground,
         fontFamily: '"Arial", sans-serif',
         margin: '10px',
         padding: '4px',
-        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
         border: '4px solid black',
         borderRadius: '0',
         outline: `${isDark ? '5px solid white' : '5px solid black'}`,
@@ -220,16 +205,8 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
             : '0 4px 8px rgba(0, 0, 0, 0.1)'
         }`,
       }}
-      onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => {
-        e.currentTarget.style.transform = 'translateY(-5px)';
-        e.currentTarget.style.boxShadow = '0 15px 25px rgba(0, 0, 0, 0.1)';
-      }}
-      onMouseLeave={(e: React.MouseEvent<HTMLDivElement>) => {
-        e.currentTarget.style.transform = 'translateY(0)';
-        e.currentTarget.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
-      }}
     >
-      <Card.Body style={{ padding: '2px 0', position: 'relative' }}>
+      <div style={{ padding: '2px 0', position: 'relative' }}>
         <Link
           itemProp="url"
           onClick={(_event) => trackClicks('link')}
@@ -240,28 +217,21 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
         >
           {headline.img_src && !leadImgErr ? (
             <div style={{ position: 'relative' }}>
-              <NextUIImage
+              <Image
                 itemProp="image"
                 src={headline.img_src}
-                css={{
-                  padding: '8px',
-                  filter:
-                    'contrast(2.7) brightness(1.3) saturate(2) drop-shadow(4px 4px 0 black)',
-
-                  transition: 'all 0.2s ease-in-out',
-                  '&:hover': {
-                    filter:
-                      'contrast(3) brightness(1.4) saturate(2.2) drop-shadow(6px 6px 0 black)',
-                    boxShadow: '8px 8px 0px rgba(0, 0, 0, 0.8)',
-                    transform: 'rotate(-2deg) scale(1.05)',
-                  },
-                }}
-                objectFit="cover"
-                width={'100%'}
+                className="hover:shadow-[8px_8px_0px_rgba(0,0,0,0.8)] hover:scale-105 hover:rotate-[calc(var(--random-rotation))]"
+                width={400}
+                height={300}
                 alt={headline.img_alt ?? ''}
                 onError={() => setLeadImgErr(true)}
-                showSkeleton
-              />
+                style={{
+                  padding: '8px',
+                  transition: 'all 0.2s ease-in-out',
+                  maxWidth: "100%",
+                  height: "auto",
+                  objectFit: "cover"
+                }} />
               <div
                 style={{
                   position: 'absolute',
@@ -282,8 +252,11 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   zIndex: 10,
                 }}
               >
-                <Link
-                  onClick={(_event) => trackClicks('source')}
+                <a
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    trackClicks('source');
+                  }}
                   href={sourceURL}
                   target="_blank"
                   rel="noreferrer"
@@ -293,7 +266,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   }}
                 >
                   {sourceName ?? ''}
-                </Link>
+                </a>
               </div>
               <div
                 style={{
@@ -316,11 +289,9 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   zIndex: 10,
                 }}
               >
-                <Tooltip content={DATE.toLocaleString()}>
-                  <time itemProp="datePublished" dateTime={DATE.toISOString()}>
-                    {diffDisplay(DATE)}
-                  </time>
-                </Tooltip>
+                <time itemProp="datePublished" dateTime={DATE.toISOString()} title={DATE.toLocaleString()}>
+                  {diffDisplay(DATE)}
+                </time>
               </div>
             </div>
           ) : (
@@ -345,8 +316,11 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   zIndex: 10,
                 }}
               >
-                <Link
-                  onClick={(_event) => trackClicks('source')}
+                <a
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    trackClicks('source');
+                  }}
                   href={sourceURL}
                   target="_blank"
                   rel="noreferrer"
@@ -356,7 +330,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   }}
                 >
                   {sourceName ?? ''}
-                </Link>
+                </a>
               </div>
               <div
                 style={{
@@ -379,9 +353,9 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   zIndex: 10,
                 }}
               >
-                <Tooltip content={DATE.toLocaleString()}>
+                <time title={DATE.toLocaleString()}>
                   {diffDisplay(DATE)}
-                </Tooltip>
+                </time>
               </div>
             </div>
           )}
@@ -400,10 +374,8 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
               } 12px 6px 12px`,
             }}
           >
-            <Text
+            <h2
               itemProp="headline"
-              h2
-              size={18}
               style={{
                 padding: '10px 15px',
                 fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
@@ -413,7 +385,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
               }}
             >
               {headline.headline}&nbsp;↗
-            </Text>
+            </h2>
           </div>
         </Link>
         <span
@@ -424,50 +396,61 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
         >
           <span itemProp="name">{sourceName}</span>
         </span>
-      </Card.Body>
+      </div>
       <hr />
-      <Card.Footer
+      <div
         style={{
-          marginBottom: '-15px',
-          paddingTop: '10px',
           textAlign: 'center',
         }}
       >
-        <Grid.Container justify="space-around">
-          <Grid onClick={toggleLike}>
-            <Badge
-              disableOutline
-              content={likeLoading ? <Loading size="xs" /> : likeCount}
-              size="md"
-              color={likeCount === '?' ? 'warning' : 'success'}
+        <div className="flex w-full items-center justify-between px-4">
+          <div className="indicator">
+            <span className="indicator-item badge badge-sm">
+              {likeLoading ? '...' : likeCount}
+            </span>
+            <button
+              className={`btn btn-ghost btn-circle ${liked ? 'text-error' : ''}`}
+              onClick={toggleLike}
+              aria-label="Like"
+              title={liked ? 'Unlike' : 'Like'}
             >
               <Heart someBool={liked} />
-            </Badge>
-          </Grid>
-          <Grid onClick={saveToOrRemoveFromCollection}>
+            </button>
+          </div>
+
+          <button
+            className={`btn btn-ghost btn-circle ${saved ? 'text-warning' : ''}`}
+            onClick={saveToOrRemoveFromCollection}
+            aria-label="Bookmark"
+            title={saved ? 'Remove bookmark' : 'Bookmark'}
+          >
             <Bookmark someBool={saved} />
-          </Grid>
-          <Grid>
-            {canShare ? (
-              <Image src={shareImg} alt="Share" height={32} onClick={share} />
-            ) : (
-              <Link
-                href={twShare}
-                target="_blank"
-                rel="noreferrer"
-                title="Share on X"
-              >
-                <Tooltip
-                  content={'Browser share not supported. Defaulting to X.'}
-                >
-                  <X />
-                </Tooltip>
-              </Link>
-            )}
-          </Grid>
-        </Grid.Container>
-      </Card.Footer>
-    </Card>
+          </button>
+
+          {canShare ? (
+            <button
+              className="btn btn-ghost btn-circle"
+              onClick={share}
+              aria-label="Share"
+              title="Share"
+            >
+              <Share someBool={false} />
+            </button>
+          ) : (
+            <Link
+              href={twShare}
+              target="_blank"
+              rel="noreferrer"
+              title="Browser share not supported. Defaulting to X."
+              className="btn btn-ghost btn-circle"
+              aria-label="Share on X"
+            >
+              <X />
+            </Link>
+          )}
+        </div>
+      </div>
+    </div>
   );
 };
 

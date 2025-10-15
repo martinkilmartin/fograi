@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Grid, Switch, SwitchEvent, Text } from '@nextui-org/react';
 import { LangsMap } from '@constants/LANGS';
 import { LangTypes } from 'src/types';
 
@@ -42,8 +41,8 @@ const LanguageOptions = (): JSX.Element => {
     }
   };
 
-  const toggleLang = (e: SwitchEvent, lang: LangTypes) => {
-    if (e.target.checked) {
+  const toggleLang = (lang: LangTypes) => {
+    if (!likedLanguages.has(lang)) {
       addItem(lang);
       trackClicks('like', lang.toString());
     } else {
@@ -81,36 +80,29 @@ const LanguageOptions = (): JSX.Element => {
   };
 
   return (
-    <Grid.Container gap={2} justify="space-evenly" style={{ padding: '0' }}>
-      {Array.from(LangsMap.entries())
-        .map((lang, i) => {
-          const isLiked = likedLanguages.has(
-            lang[0] as LangTypes,
-          );
-          return (
-            <Grid xs={12} sm={6} md={6} lg={4} xl={3} key={i}>
-              <Switch
-                checked={isLiked}
-                onChange={(e) =>
-                  toggleLang(e, lang[0] as LangTypes)
-                }
-                size="xl"
-                color="success"
-                iconOn={lang[1].icon}
-                iconOff={lang[1].icon}
-              />
-              <Text
-                size={22}
-                style={{
-                  fontFamily: '"Georgia", "Times New Roman", Times, serif',
-                }}
-              >
-                <b>&nbsp;{lang[1].text}</b>
-              </Text>
-            </Grid>
-          );
-        })}
-    </Grid.Container>
+    <div style={{ display: 'grid', gap: '8px', justifyContent: 'space-evenly', padding: '0' }}>
+      {Array.from(LangsMap.entries()).map((lang, i) => {
+        const isLiked = likedLanguages.has(lang[0] as LangTypes);
+        return (
+          <div key={i} style={{ gridColumn: 'span 12' }}>
+            <input
+              type="checkbox"
+              checked={isLiked}
+              onChange={() => toggleLang(lang[0] as LangTypes)}
+            />
+            <span
+              style={{
+                fontSize: '22px',
+                fontFamily: '"Georgia", "Times New Roman", Times, serif',
+              }}
+            >
+              &nbsp;{lang[1].icon}&nbsp;
+              <b>{lang[1].text}</b>
+            </span>
+          </div>
+        );
+      })}
+    </div>
   );
 };
 

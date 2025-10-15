@@ -1,4 +1,3 @@
-import { Card } from '@nextui-org/react';
 type Props = {
   title: string;
   subtitle: string;
@@ -6,13 +5,13 @@ type Props = {
 };
 
 const DescriptionCard = ({ title, subtitle, content }: Props): JSX.Element => (
-  <Card>
+  <div className="card bg-base-100 shadow-xl">
     <div className="card-body">
       <h2 className="card-title">{title}</h2>
       <h3 className="card-title">❱ {subtitle}</h3>
       <p>❓{content}</p>
     </div>
-  </Card>
+  </div>
 );
 
 export default DescriptionCard;
