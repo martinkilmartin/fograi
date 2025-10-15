@@ -81,7 +81,6 @@ const PrivacyPolicy = [
     title: '👩‍⚖️ 8. YOUR LEGAL RIGHTS',
     content: [
       'Under data protection laws you have rights in relation to your personal data that include the right to request access, correction, erasure, restriction, transfer, to object to processing, to portability of data and (where the lawful ground of processing is consent) to withdraw consent.',
-      '🇮🇪 If you are within in Ireland, you can see more about these rights at: https://www.dataprotection.ie/en/individuals/rights-individuals-under-general-data-protection-regulation/.',
       '🇪🇺 If you are elsewhere in the EU, you can see more about these rights at: https://edps.europa.eu/data-protection/our-work/subjects/rights-individual_en/.',
       '🇬🇧 If you are within the UK, you can see more about these rights at: https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/.',
       `If you wish to exercise any of the rights set out above, please email us at ${process.env.NEXT_PUBLIC_EMAIL_ADDRESS_PRIVACY}.`,
