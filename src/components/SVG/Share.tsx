@@ -15,76 +15,94 @@ const Share = ({
       {/* Central circle */}
       <circle
         cx="12"
-        cy="12"
-        r="3"
+        cy="20"
+        r="2"
         stroke={'currentColor'}
-        strokeWidth="2"
-        fill="none"
+        strokeWidth="0"
+        fill={'currentColor'}
       />
 
       {/* Arrows pointing outward */}
       {/* Top arrow */}
       <path
-        d="M12 2V6"
+        d="M12 20 C 10 17, 8 13, 7 8"
         stroke={'currentColor'}
         strokeWidth="2"
         strokeLinecap="round"
+        fill="none"
       />
       <path
-        d="M10 4L12 2L14 4"
+        d="M7 6 L5.5 7.5"
         stroke={'currentColor'}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        fill={'currentColor'}
+        fill="none"
+      />
+      <path
+        d="M7 6 L8.5 7.5"
+        stroke={'currentColor'}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
       />
 
       {/* Right arrow */}
       <path
-        d="M22 12H18"
+        d="M12 20 C 14 17, 16 13, 17 8"
         stroke={'currentColor'}
         strokeWidth="2"
         strokeLinecap="round"
+        fill="none"
       />
       <path
-        d="M20 10L22 12L20 14"
+        d="M17 6 L15.5 7.5"
         stroke={'currentColor'}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        fill={'currentColor'}
+        fill="none"
+      />
+      <path
+        d="M17 6 L18.5 7.5"
+        stroke={'currentColor'}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
       />
 
       {/* Bottom arrow */}
       <path
-        d="M12 22V18"
+        d="M0 0"
         stroke={'currentColor'}
-        strokeWidth="2"
+        strokeWidth="0"
         strokeLinecap="round"
       />
       <path
-        d="M14 20L12 22L10 20"
+        d="M0 0"
         stroke={'currentColor'}
-        strokeWidth="2"
+        strokeWidth="0"
         strokeLinecap="round"
         strokeLinejoin="round"
-        fill={'currentColor'}
+        fill="none"
       />
 
       {/* Left arrow */}
       <path
-        d="M2 12H6"
+        d="M0 0"
         stroke={'currentColor'}
-        strokeWidth="2"
+        strokeWidth="0"
         strokeLinecap="round"
       />
       <path
-        d="M4 14L2 12L4 10"
+        d="M0 0"
         stroke={'currentColor'}
-        strokeWidth="2"
+        strokeWidth="0"
         strokeLinecap="round"
         strokeLinejoin="round"
-        fill={'currentColor'}
+        fill="none"
       />
     </svg>
   );
