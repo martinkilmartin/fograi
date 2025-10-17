@@ -1,7 +1,6 @@
 .my-masonry-grid {
   display: flex;
-  width: 98vw;
-  margin-left: -16px; /* gutter size offset */
+  width: 100vw;
 }
 .my-masonry-grid_column {
   padding: 0 10px; /* gutter size */
