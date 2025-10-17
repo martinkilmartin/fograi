@@ -16,7 +16,7 @@ const Share = ({
       <circle
         cx="12"
         cy="20"
-        r="2"
+        r="2.5"
         stroke={'currentColor'}
         strokeWidth="0"
         fill={'currentColor'}
@@ -27,14 +27,14 @@ const Share = ({
       <path
         d="M12 20 C 10 17, 8 13, 7 8"
         stroke={'currentColor'}
-        strokeWidth="2"
+        strokeWidth="2.5"
         strokeLinecap="round"
         fill="none"
       />
       <path
         d="M7 6 L5.5 7.5"
         stroke={'currentColor'}
-        strokeWidth="2"
+        strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
@@ -42,7 +42,7 @@ const Share = ({
       <path
         d="M7 6 L8.5 7.5"
         stroke={'currentColor'}
-        strokeWidth="2"
+        strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
@@ -52,14 +52,14 @@ const Share = ({
       <path
         d="M12 20 C 14 17, 16 13, 17 8"
         stroke={'currentColor'}
-        strokeWidth="2"
+        strokeWidth="2.5"
         strokeLinecap="round"
         fill="none"
       />
       <path
         d="M17 6 L15.5 7.5"
         stroke={'currentColor'}
-        strokeWidth="2"
+        strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
@@ -67,7 +67,7 @@ const Share = ({
       <path
         d="M17 6 L18.5 7.5"
         stroke={'currentColor'}
-        strokeWidth="2"
+        strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
