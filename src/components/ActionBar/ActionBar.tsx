@@ -244,7 +244,7 @@ const ActionBar = ({ userCountry }: ActionBarProps) => {
           )}
           {selectedAction === 'Countries' && (
             <>
-              {(((userCountry && ADJACENTS.get(userCountry)?.countries) ?? ['ca','us','gb','in']) as CountryTypes[]).map((code) => {
+              {(((userCountry && ADJACENTS.get(userCountry)?.countries) ?? ['ca','us','uk','in']) as CountryTypes[]).map((code) => {
                 const active = likedCountries.has(code);
                 const flag = flags.get(code) ?? code.toUpperCase();
                 return (

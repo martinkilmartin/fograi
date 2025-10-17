@@ -1,7 +1,7 @@
 export const ALLOWED_COUNTRY = [
   'IE',
   'CA',
-  'GB',
+  'UK',
   'US',
   'AU',
   'NZ',

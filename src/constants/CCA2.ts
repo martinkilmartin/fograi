@@ -306,7 +306,7 @@ export const Countries = [
   },
   {
     name: 'United Kingdom',
-    cca2: 'GB',
+    cca2: 'UK',
     flag: '🇬🇧',
   },
   {
