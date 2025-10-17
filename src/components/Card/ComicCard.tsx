@@ -7,6 +7,7 @@ import Bookmark from '@components/SVG/Bookmark';
 import Share from '@components/SVG/Share';
 import X from '@components/SVG/X';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
+import { getFlag } from '@lib/geo';
 import { Headline } from '../../types';
 import { Countries as CountriesType } from '../../types/countries';
 
@@ -37,14 +38,14 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
     : `${headline.link}?${nooze_utm_tag}`;
   const sourceName = AllNewsSources.get(headline.source)?.name;
 
-  const cardBackgrounds = {
-    video: 'radial-gradient(circle, hsl(var(--p)), hsl(var(--pf)))',
-    audio: 'radial-gradient(circle, hsl(var(--s)), hsl(var(--sf)))',
-    article: 'radial-gradient(circle, hsl(var(--a)), hsl(var(--af)))',
-  };
+  const cardBgColors = {
+    video: 'hsl(var(--er) / 0.08)',
+    audio: 'hsl(var(--in) / 0.08)',
+    article: 'hsl(var(--b1))',
+  } as const;
 
-  const cardBackground =
-    cardBackgrounds[headline.media_type as keyof typeof cardBackgrounds];
+  const cardBgColor =
+    cardBgColors[headline.media_type as keyof typeof cardBgColors] ?? 'hsl(var(--b1))';
 
   const toggleLike = async () => {
     setLikeLoading(true);
@@ -181,13 +182,16 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
     '&url=' +
     articleLink;
 
+  const iso2 = (headline.country || '').slice(0, 2).toUpperCase();
+  const countryFlag = getFlag(iso2);
+
   return (
     <div
       itemScope
       itemType="https://schema.org/NewsArticle"
       className="card hover:shadow-lg transition-transform duration-300 hover:-translate-y-1"
       style={{
-        backgroundImage: cardBackground,
+        backgroundColor: cardBgColor,
         fontFamily: '"Arial", sans-serif',
         margin: '10px',
         padding: '4px',
@@ -197,6 +201,13 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
       }}
     >
       <div style={{ padding: '2px 0', position: 'relative' }}>
+        <span
+          aria-label={`Country: ${iso2}`}
+          title={iso2}
+          style={{ position: 'absolute', top: '-14px', right: '-8px', zIndex: 20, fontSize: '24px' }}
+        >
+          {countryFlag}
+        </span>
         <Link
           itemProp="url"
           onClick={(_event) => trackClicks('link')}
