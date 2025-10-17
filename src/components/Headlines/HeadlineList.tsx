@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { ComicCard as HeadlineCard } from '@components/Card';
-import { ActionBar } from '@components/ActionBar';
+// import { ActionBar } from '@components/ActionBar';
 import { Headline } from '../../types/Headline';
 import { Countries } from '../../types/countries';
 import Masonry from 'react-masonry-css';
@@ -48,7 +48,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
   userCountry,
   numberOfColumns,
 }) => {
-  const [bottomNav, showBottomNav] = useState(false);
+  // const [bottomNav, showBottomNav] = useState(false);
   const columns = useBreakpointColumns(numberOfColumns);
 
   const breakpointColumnsObj = {
@@ -89,13 +89,13 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
             )}
           </Masonry>
         </div>
-        <button
+        {/* <button
           aria-label="The number of headlines loaded"
           style={{ position: 'fixed', bottom: '20px', left: '10px', border: '1px solid', padding: '8px', borderRadius: '4px' }}
           onClick={() => showBottomNav(!bottomNav)}
         >
           {fetching ? '⏳' : headlines?.length}
-        </button>
+        </button> */}
         <button
           role="button"
           aria-label="Back to top"
@@ -112,7 +112,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
         >
           ⬆️
         </button>
-        {bottomNav && <ActionBar userCountry={userCountry} />}
+        {/* {bottomNav && <ActionBar userCountry={userCountry} />} */}
       </>
     );
   }
