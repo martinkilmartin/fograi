@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import { useQueryClient } from 'react-query';
 import { COUNTRIES } from '@constants/COUNTRIES';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { LangsMap } from '@constants/LANGS';
+import { getFlag } from '@lib/geo';
 import { useTheme as useNextTheme } from 'next-themes';
 import Search from '@components/SVG/Search';
 import Filter from '@components/SVG/Filter';
@@ -27,6 +28,46 @@ export default function MyNavbar(): JSX.Element {
     try { localStorage.setItem('likedCountries', JSON.stringify(Array.from(COUNTRIES.keys()))); } catch (_e) { /* noop */ }
     setCountriesKey((k) => k + 1);
   };
+
+  // Rotating icons for section headers
+  const mediaIcons = ['📰', '📹', '🔊'];
+  const langIcons = useMemo(
+    () => Array.from(LangsMap.values()).map((v) => v.icon).filter(Boolean),
+    []
+  );
+  const nationIcons = useMemo(
+    () => Array.from(COUNTRIES.keys()).map((code) => {
+      const iso2 = code === 'oz' ? 'AU' : String(code).toUpperCase();
+      return getFlag(iso2);
+    }).filter(Boolean),
+    []
+  );
+  const outletIcons = ['🗞️', '📰', '🧾'];
+
+  const [mediaIcon, setMediaIcon] = useState(mediaIcons[0]);
+  const [langIcon, setLangIcon] = useState(langIcons[0]);
+  const [nationIcon, setNationIcon] = useState(nationIcons[0]);
+  const [outletIcon, setOutletIcon] = useState(outletIcons[0]);
+
+  useEffect(() => {
+    const makeCycler = (arr: string[], setter: (s: string) => void, intervalMs: number, startIdx = 0) => {
+      let i = startIdx;
+      return setInterval(() => {
+        i = (i + 1) % arr.length;
+        setter(arr[i]);
+      }, intervalMs);
+    };
+    const t1 = makeCycler(mediaIcons, setMediaIcon, 1600);
+    const t2 = makeCycler(langIcons, setLangIcon, 1700, 1);
+    const t3 = makeCycler(nationIcons, setNationIcon, 1800, 2);
+    const t4 = makeCycler(outletIcons, setOutletIcon, 1900, 1);
+    return () => {
+      clearInterval(t1);
+      clearInterval(t2);
+      clearInterval(t3);
+      clearInterval(t4);
+    };
+  }, []);
   const clearAllCountries = () => {
     try { localStorage.setItem('likedCountries', JSON.stringify([])); } catch (_e) { /* noop */ }
     setCountriesKey((k) => k + 1);
@@ -353,11 +394,8 @@ export default function MyNavbar(): JSX.Element {
                   <div className="collapse collapse-arrow border border-base-300 bg-base-100">
                     <input type="checkbox" defaultChecked />
                     <div className="collapse-title flex items-center justify-between">
-                      <span className="text-lg font-semibold">📺 Media</span>
-                      <div className="flex items-center gap-2">
-                        <button className="btn btn-xs btn-outline" onClick={selectAllMedia}>Select all</button>
-                        <button className="btn btn-xs" onClick={clearAllMedia}>Clear all</button>
-                      </div>
+                      <span className="text-lg font-semibold">{mediaIcon} Media</span>
+                      <div className="hidden" />
                     </div>
                     <div className="collapse-content">
                       <div className="max-h-80 overflow-y-auto">
@@ -369,7 +407,7 @@ export default function MyNavbar(): JSX.Element {
                 {/* Desktop: expanded */}
                 <div className="hidden lg:block space-y-3">
                   <div className="flex items-center justify-between gap-2 flex-nowrap pb-2 border-b border-base-300">
-                    <span className="text-lg font-semibold whitespace-nowrap truncate max-w-[60%]">📺 Media</span>
+                    <span className="text-lg font-semibold whitespace-nowrap truncate max-w-[60%]">{mediaIcon} Media</span>
                     <div className="flex items-center gap-2 whitespace-nowrap shrink-0">
                       <button className="btn btn-xs btn-outline" onClick={selectAllMedia}>Select all</button>
                       <button className="btn btn-xs" onClick={clearAllMedia}>Clear all</button>
@@ -386,11 +424,8 @@ export default function MyNavbar(): JSX.Element {
                   <div className="collapse collapse-arrow border border-base-300 bg-base-100">
                     <input type="checkbox" defaultChecked />
                     <div className="collapse-title flex items-center justify-between">
-                      <span className="text-lg font-semibold">💬 Langs</span>
-                      <div className="flex items-center gap-2">
-                        <button className="btn btn-xs btn-outline" onClick={selectAllLangs}>Select all</button>
-                        <button className="btn btn-xs" onClick={clearAllLangs}>Clear all</button>
-                      </div>
+                      <span className="text-lg font-semibold">{langIcon} Langs</span>
+                      <div className="hidden" />
                     </div>
                     <div className="collapse-content">
                       <div className="max-h-80 overflow-y-auto">
@@ -402,7 +437,7 @@ export default function MyNavbar(): JSX.Element {
                 {/* Desktop: expanded */}
                 <div className="hidden lg:block space-y-3">
                   <div className="flex items-center justify-between gap-2 flex-nowrap pb-2 border-b border-base-300">
-                    <span className="text-lg font-semibold whitespace-nowrap truncate max-w-[60%]">💬 Langs</span>
+                    <span className="text-lg font-semibold whitespace-nowrap truncate max-w-[60%]">{langIcon} Langs</span>
                     <div className="flex items-center gap-2 whitespace-nowrap shrink-0">
                       <button className="btn btn-xs btn-outline" onClick={selectAllLangs}>Select all</button>
                       <button className="btn btn-xs" onClick={clearAllLangs}>Clear all</button>
@@ -419,11 +454,8 @@ export default function MyNavbar(): JSX.Element {
                   <div className="collapse collapse-arrow border border-base-300 bg-base-100">
                     <input type="checkbox" defaultChecked />
                     <div className="collapse-title flex items-center justify-between">
-                      <span className="text-lg font-semibold">🌍 Nations</span>
-                      <div className="flex items-center gap-2">
-                        <button className="btn btn-xs btn-outline" onClick={selectAllCountries}>Select all</button>
-                        <button className="btn btn-xs" onClick={clearAllCountries}>Clear all</button>
-                      </div>
+                      <span className="text-lg font-semibold">{nationIcon} Nations</span>
+                      <div className="hidden" />
                     </div>
                     <div className="collapse-content">
                       <div className="max-h-80 overflow-y-auto">
@@ -435,7 +467,7 @@ export default function MyNavbar(): JSX.Element {
                 {/* Desktop: expanded */}
                 <div className="hidden lg:block space-y-3">
                   <div className="flex items-center justify-between pb-2 border-b border-base-300">
-                    <span className="text-lg font-semibold">🌍 Countries</span>
+                    <span className="text-lg font-semibold">{nationIcon} Countries</span>
                     <div className="flex items-center gap-2">
                       <button className="btn btn-xs btn-outline" onClick={selectAllCountries}>Select all</button>
                       <button className="btn btn-xs" onClick={clearAllCountries}>Clear all</button>
@@ -452,11 +484,8 @@ export default function MyNavbar(): JSX.Element {
                   <div className="collapse collapse-arrow border border-base-300 bg-base-100">
                     <input type="checkbox" defaultChecked />
                     <div className="collapse-title flex items-center justify-between">
-                      <span className="text-lg font-semibold">📰 Outlets</span>
-                      <div className="flex items-center gap-2">
-                        <button className="btn btn-xs btn-outline" onClick={selectAllSources}>Select all</button>
-                        <button className="btn btn-xs" onClick={clearAllSources}>Clear all</button>
-                      </div>
+                      <span className="text-lg font-semibold">{outletIcon} Outlets</span>
+                      <div className="hidden" />
                     </div>
                     <div className="collapse-content">
                       <div className="max-h-80 overflow-y-auto">
@@ -468,7 +497,7 @@ export default function MyNavbar(): JSX.Element {
                 {/* Desktop: expanded */}
                 <div className="hidden lg:block space-y-3">
                   <div className="flex items-center justify-between pb-2 border-b border-base-300">
-                    <span className="text-lg font-semibold">📰 Sources</span>
+                    <span className="text-lg font-semibold">{outletIcon} Sources</span>
                     <div className="flex items-center gap-2">
                       <button className="btn btn-xs btn-outline" onClick={selectAllSources}>Select all</button>
                       <button className="btn btn-xs" onClick={clearAllSources}>Clear all</button>
