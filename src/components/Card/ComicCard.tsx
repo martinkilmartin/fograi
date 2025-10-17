@@ -218,6 +218,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 style={{
                   padding: '8px',
                   transition: 'all 0.2s ease-in-out',
+                  transform: 'skewX(2deg)',
                 }}
               />
               <div
@@ -225,7 +226,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 style={{
                   position: 'absolute',
                   top: '0px',
-                  left: '12px',
+                  left: '2px',
                   padding: '4px 8px',
                   fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
                   fontSize: '14px',
@@ -252,7 +253,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 style={{
                   position: 'absolute',
                   top: '0px',
-                  right: '12px',
+                  right: '2px',
                   padding: '4px 8px',
                   display: 'inline-block',
                   fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
