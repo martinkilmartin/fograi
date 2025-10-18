@@ -234,7 +234,6 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   fontSize: '14px',
                   fontStyle: 'italic',
                   transform: 'skewX(-8deg)',
-                  zIndex: 100,
                 }}
               >
                 <a
@@ -268,7 +267,6 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   fontSize: '14px',
                   fontStyle: 'italic',
                   transform: 'skewX(-8deg)',
-                  zIndex: 10,
                 }}
               >
                 <time itemProp="datePublished" dateTime={DATE.toISOString()} title={DATE.toLocaleString()} style={{ color: 'var(--bc)' }}>
@@ -289,7 +287,6 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   fontSize: '14px',
                   fontStyle: 'italic',
                   transform: 'skewX(-8deg)',
-                  zIndex: 10,
                 }}
               >
                 <a
@@ -323,7 +320,6 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   fontSize: '14px',
                   fontStyle: 'italic',
                   transform: 'skewX(-8deg)',
-                  zIndex: 10,
                 }}
               >
                 <time title={DATE.toLocaleString()}>
