@@ -47,6 +47,14 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
   const cardBgColor =
     cardBgColors[headline.media_type as keyof typeof cardBgColors] ?? 'hsl(var(--b1))';
 
+  const mediaEmojiMap = {
+    video: '🎬',
+    audio: '🎧',
+    article: '📰',
+  } as const;
+  const mediaEmoji =
+    mediaEmojiMap[headline.media_type as keyof typeof mediaEmojiMap] ?? '';
+
   const toggleLike = async () => {
     setLikeLoading(true);
     try {
@@ -256,7 +264,13 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   rel="noreferrer"
                   className="text-base-content no-underline"
                 >
-                  {sourceName ?? ''}
+                  {mediaEmoji ? (
+                    <>
+                      <span aria-hidden="true">{mediaEmoji}</span>&nbsp;{sourceName ?? ''}
+                    </>
+                  ) : (
+                    sourceName ?? ''
+                  )}
                 </a>
               </div>
               <div
@@ -286,7 +300,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 style={{
                   position: 'absolute',
                   top: '0px',
-                  left: '12px',
+                  left: '2px',
                   padding: '4px 8px',
                   fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
                   fontSize: '14px',
@@ -305,7 +319,13 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   rel="noreferrer"
                   className="text-base-content no-underline"
                 >
-                  {sourceName ?? ''}
+                  {mediaEmoji ? (
+                    <>
+                      <span aria-hidden="true">{mediaEmoji}</span>&nbsp;{sourceName ?? ''}
+                    </>
+                  ) : (
+                    sourceName ?? ''
+                  )}
                 </a>
               </div>
               <div
@@ -313,7 +333,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 style={{
                   position: 'absolute',
                   top: '0px',
-                  right: '12px',
+                  right: '2px',
                   padding: '4px 8px',
                   display: 'inline-block',
                   fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
@@ -334,6 +354,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
               border: '2px solid',
               boxShadow: '4px 4px 0',
               padding: '5px',
+              paddingTop: `${headline.img_src && !leadImgErr ? '0px' : '25px'}`,
               fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
               fontSize: '18px',
               textAlign: 'center',
