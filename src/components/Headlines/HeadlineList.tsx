@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
-import { ComicCard as HeadlineCard } from '@components/Card';
+import { ComicCard as HeadlineCard, RedditCard, TwitterCard, FacebookCard, PinterestCard, InstagramCard, TikTokCard } from '@components/Card';
 // import { ActionBar } from '@components/ActionBar';
 import { Headline } from '../../types/Headline';
 import { Countries } from '../../types/countries';
@@ -73,13 +73,63 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
           >
             {headlines?.map((headline, idx) => (
               <div key={headline.id} className="masonry-item">
-                <HeadlineCard
-                  headline={headline}
-                  country={
-                    headline.source.substring(0, 2).toLowerCase() as Countries
-                  }
-                  idx={idx + 1}
-                />
+                {idx % 7 === 6 ? (
+                  <TikTokCard
+                    headline={headline}
+                    country={
+                      headline.source.substring(0, 2).toLowerCase() as Countries
+                    }
+                    idx={idx + 1}
+                  />
+                ) : idx % 6 === 5 ? (
+                  <InstagramCard
+                    headline={headline}
+                    country={
+                      headline.source.substring(0, 2).toLowerCase() as Countries
+                    }
+                    idx={idx + 1}
+                  />
+                ) : idx % 5 === 4 ? (
+                  <PinterestCard
+                    headline={headline}
+                    country={
+                      headline.source.substring(0, 2).toLowerCase() as Countries
+                    }
+                    idx={idx + 1}
+                  />
+                ) : idx % 4 === 3 ? (
+                  <FacebookCard
+                    headline={headline}
+                    country={
+                      headline.source.substring(0, 2).toLowerCase() as Countries
+                    }
+                    idx={idx + 1}
+                  />
+                ) : idx % 3 === 2 ? (
+                  <TwitterCard
+                    headline={headline}
+                    country={
+                      headline.source.substring(0, 2).toLowerCase() as Countries
+                    }
+                    idx={idx + 1}
+                  />
+                ) : idx % 2 === 1 ? (
+                  <RedditCard
+                    headline={headline}
+                    country={
+                      headline.source.substring(0, 2).toLowerCase() as Countries
+                    }
+                    idx={idx + 1}
+                  />
+                ) : (
+                  <HeadlineCard
+                    headline={headline}
+                    country={
+                      headline.source.substring(0, 2).toLowerCase() as Countries
+                    }
+                    idx={idx + 1}
+                  />
+                )}
               </div>
             ))}
             {fetching && (
