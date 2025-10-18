@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
-import { ComicCard as HeadlineCard, RedditCard, TwitterCard, FacebookCard, PinterestCard, InstagramCard } from '@components/Card';
+import { ComicCard as HeadlineCard, RedditCard, TwitterCard, FacebookCard, PinterestCard, InstagramCard, TikTokCard } from '@components/Card';
 // import { ActionBar } from '@components/ActionBar';
 import { Headline } from '../../types/Headline';
 import { Countries } from '../../types/countries';
@@ -73,7 +73,15 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
           >
             {headlines?.map((headline, idx) => (
               <div key={headline.id} className="masonry-item">
-                {idx % 6 === 5 ? (
+                {idx % 7 === 6 ? (
+                  <TikTokCard
+                    headline={headline}
+                    country={
+                      headline.source.substring(0, 2).toLowerCase() as Countries
+                    }
+                    idx={idx + 1}
+                  />
+                ) : idx % 6 === 5 ? (
                   <InstagramCard
                     headline={headline}
                     country={

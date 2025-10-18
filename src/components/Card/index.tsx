@@ -4,3 +4,4 @@ export { default as TwitterCard } from './TwitterCard';
 export { default as FacebookCard } from './FacebookCard';
 export { default as PinterestCard } from './PinterestCard';
 export { default as InstagramCard } from './InstagramCard';
+export { default as TikTokCard } from './TikTokCard';
