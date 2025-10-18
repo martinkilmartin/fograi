@@ -308,18 +308,6 @@ export default function MyNavbar(): JSX.Element {
               <li>
                 <button
                   onClick={() => {
-                    modalHandler();
-                    setMobileMenuOpen(false);
-                  }}
-                  className="flex items-center gap-2"
-                >
-                  <Filter width={16} height={16} />
-                  Filters
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => {
                     openCardModal();
                     setMobileMenuOpen(false);
                   }}
@@ -327,6 +315,18 @@ export default function MyNavbar(): JSX.Element {
                 >
                   🃏
                   Card Styles
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    modalHandler();
+                    setMobileMenuOpen(false);
+                  }}
+                  className="flex items-center gap-2"
+                >
+                  <Filter width={16} height={16} />
+                  Filters
                 </button>
               </li>
             </ul>
