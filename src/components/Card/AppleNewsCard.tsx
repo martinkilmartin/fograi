@@ -63,18 +63,30 @@ const AppleNewsCard = ({ headline }: Props): JSX.Element => {
 
   return (
     <div className="rounded-xl overflow-hidden border border-base-300 bg-base-100" style={{ margin: '10px' }}>
-      <div className="relative">
-        {headline.img_src && !leadImgErr ? (
+      {headline.img_src && !leadImgErr && (
+        <div className="relative">
           <Image src={headline.img_src} alt={headline.img_alt ?? ''} width={1600} height={900} className="w-full h-auto object-cover" onError={() => setLeadImgErr(true)} />
-        ) : (
-          <div className="w-full aspect-[16/9] bg-base-200"></div>
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-        <div className="absolute bottom-3 left-3 right-3">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+          <div className="absolute bottom-3 left-3 right-3">
+            <Link href={articleLink} target="_blank" rel="noreferrer" className="no-underline">
+              <h3 className="text-white text-lg font-semibold drop-shadow">{headline.headline} ↗</h3>
+            </Link>
+            <div className="mt-1 text-xs text-white/90 flex items-center gap-2 drop-shadow">
+              <a className="hover:underline" href={sourceURL} target="_blank" rel="noreferrer" title={sourceName ?? ''}>{sourceName ?? ''}</a>
+              <span>•</span>
+              <time title={DATE.toLocaleString()}>{diffDisplay(DATE)}</time>
+              <span>•</span>
+              <span title={iso2}>{countryFlag}</span>
+            </div>
+          </div>
+        </div>
+      )}
+      {!headline.img_src || leadImgErr ? (
+        <div className="px-3 pt-3">
           <Link href={articleLink} target="_blank" rel="noreferrer" className="no-underline">
-            <h3 className="text-white text-lg font-semibold drop-shadow">{headline.headline} ↗</h3>
+            <h3 className="text-base-content text-lg font-semibold leading-snug hover:underline">{headline.headline} ↗</h3>
           </Link>
-          <div className="mt-1 text-xs text-white/90 flex items-center gap-2 drop-shadow">
+          <div className="mt-1 text-xs text-base-content/70 flex items-center gap-2">
             <a className="hover:underline" href={sourceURL} target="_blank" rel="noreferrer" title={sourceName ?? ''}>{sourceName ?? ''}</a>
             <span>•</span>
             <time title={DATE.toLocaleString()}>{diffDisplay(DATE)}</time>
@@ -82,7 +94,7 @@ const AppleNewsCard = ({ headline }: Props): JSX.Element => {
             <span title={iso2}>{countryFlag}</span>
           </div>
         </div>
-      </div>
+      ) : null}
       <div className="px-3 py-2 flex items-center justify-between">
         <div className="indicator">
           <span className="indicator-item badge badge-sm">{likeLoading ? '...' : likeCount}</span>
