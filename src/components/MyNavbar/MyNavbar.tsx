@@ -339,9 +339,6 @@ export default function MyNavbar(): JSX.Element {
           </div>
         </div>
       </nav>
-
-
-
       {/* Enhanced Filters Modal */}
       {modalVisible && (
         <div className="modal modal-open z-[1000]">
