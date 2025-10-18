@@ -5,3 +5,8 @@ export { default as FacebookCard } from './FacebookCard';
 export { default as PinterestCard } from './PinterestCard';
 export { default as InstagramCard } from './InstagramCard';
 export { default as TikTokCard } from './TikTokCard';
+export { default as LinkedInCard } from './LinkedInCard';
+export { default as MediumCard } from './MediumCard';
+export { default as YouTubeCard } from './YouTubeCard';
+export { default as AppleNewsCard } from './AppleNewsCard';
+export { default as HackerNewsCard } from './HackerNewsCard';

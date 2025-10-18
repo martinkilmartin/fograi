@@ -143,7 +143,7 @@ const TikTokCard = ({ headline }: Props): JSX.Element => {
         url: articleLink,
       });
     } catch (_e) {
-        setShareable(false);
+      setShareable(false);
     }
   };
 
@@ -157,7 +157,7 @@ const TikTokCard = ({ headline }: Props): JSX.Element => {
   const countryFlag = getFlag(iso2);
 
   return (
-    <div className="bg-base-100 border border-base-300 rounded-xl overflow-hidden" style={{ margin: '10px' }}>
+    <div className="bg-base-100 border border-base-300 rounded-xl overflow-hidden min-h-[200px]" style={{ margin: '10px' }}>
       {/* Header (compact) */}
       <div className="flex items-center justify-between p-2 text-sm text-base-content/80">
         <div className="flex items-center gap-2 min-w-0">
@@ -194,8 +194,12 @@ const TikTokCard = ({ headline }: Props): JSX.Element => {
               onError={() => setLeadImgErr(true)}
             />
           ) : (
-            <div className="w-full aspect-[9/16] bg-base-200 flex items-center justify-center text-4xl">
-              {mediaEmoji}
+            <div className="p-3">
+              <Link href={articleLink} target="_blank" rel="noreferrer" className="no-underline">
+                <p className="text-base-content leading-snug">
+                  {headline.headline} ↗
+                </p>
+              </Link>
             </div>
           )}
         </div>
@@ -248,14 +252,14 @@ const TikTokCard = ({ headline }: Props): JSX.Element => {
       </div>
 
       {/* Caption (below media) */}
-      <div className="p-3">
+      {headline.img_src && !leadImgErr && <div className="p-3">
         <Link href={articleLink} target="_blank" rel="noreferrer" className="no-underline">
           <p className="text-base-content leading-snug">
             {headline.headline} ↗
           </p>
         </Link>
-      </div>
-    </div>
+      </div>}
+    </div >
   );
 };
 

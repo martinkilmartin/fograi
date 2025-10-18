@@ -160,7 +160,7 @@ const PinterestCard = ({ headline }: Props): JSX.Element => {
     <div className="rounded-xl overflow-hidden border border-base-300 bg-base-100" style={{ margin: '10px' }}>
       {/* Image-focused tile */}
       <div className="relative">
-        {headline.img_src && !leadImgErr ? (
+        {headline.img_src && !leadImgErr && (
           <Image
             src={headline.img_src}
             alt={headline.img_alt ?? ''}
@@ -169,10 +169,6 @@ const PinterestCard = ({ headline }: Props): JSX.Element => {
             className="w-full h-auto object-cover"
             onError={() => setLeadImgErr(true)}
           />
-        ) : (
-          <div className="w-full aspect-[3/2] bg-base-200 flex items-center justify-center text-4xl">
-            {mediaEmoji}
-          </div>
         )}
         {/* Overlay actions top-right */}
         <div className="absolute top-2 right-2 flex gap-2">
@@ -201,7 +197,7 @@ const PinterestCard = ({ headline }: Props): JSX.Element => {
       </div>
 
       {/* Caption */}
-      <div className="p-3">
+      <div className="p-3 pt-12">
         <Link href={articleLink} target="_blank" rel="noreferrer" className="no-underline">
           <h3 className="text-base-content font-semibold leading-snug">
             {headline.headline} ↗
