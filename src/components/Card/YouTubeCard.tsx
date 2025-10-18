@@ -67,10 +67,8 @@ const YouTubeCard = ({ headline }: Props): JSX.Element => {
     <div className="rounded-lg border border-base-300 bg-base-100" style={{ margin: '10px' }}>
       {/* Thumbnail */}
       <div className="w-full overflow-hidden rounded-t-lg" style={{ position: 'relative' }}>
-        {headline.img_src && !leadImgErr ? (
+        {headline.img_src && !leadImgErr && (
           <Image src={headline.img_src} alt={headline.img_alt ?? ''} width={1280} height={720} className="w-full h-auto object-cover aspect-video" onError={() => setLeadImgErr(true)} />
-        ) : (
-          <div className="w-full aspect-video bg-base-200 flex items-center justify-center text-4xl">{mediaEmoji}</div>
         )}
       </div>
       {/* Title */}
