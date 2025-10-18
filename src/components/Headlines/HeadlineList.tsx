@@ -103,7 +103,10 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
               return;
             }
           }
-        } catch (_error) {}
+        } catch (_error) {
+          setCardSequence(DEFAULT_CARD_SEQUENCE);
+          return;
+        }
       }
       setCardSequence(DEFAULT_CARD_SEQUENCE);
     };
