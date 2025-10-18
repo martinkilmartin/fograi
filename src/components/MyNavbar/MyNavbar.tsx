@@ -22,13 +22,14 @@ export default function MyNavbar(): JSX.Element {
   const queryClient = useQueryClient();
   const [searchTerm, setSearchTerm] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
-  const [cardModalVisible, setCardModalVisible] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [countriesKey, setCountriesKey] = useState(0);
   const [sourcesKey, setSourcesKey] = useState(0);
   const [mediaKey, setMediaKey] = useState(0);
   const [cardKey, setCardKey] = useState(0);
   const [langsKey, setLangsKey] = useState(0);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const modalHandler = () => setModalVisible(true);
   const selectAllCountries = () => {
     try { localStorage.setItem('likedCountries', JSON.stringify(Array.from(COUNTRIES.keys()))); } catch (_e) { /* noop */ }
     setCountriesKey((k) => k + 1);
@@ -124,10 +125,6 @@ export default function MyNavbar(): JSX.Element {
     try { localStorage.setItem('likedLanguages', JSON.stringify([])); } catch (_e) { /* noop */ }
     setLangsKey((k) => k + 1);
   };
-  const modalRef = useRef<HTMLDivElement>(null);
-  const modalHandler = () => setModalVisible(true);
-  const cardModalRef = useRef<HTMLDivElement>(null);
-  const openCardModal = () => setCardModalVisible(true);
 
   // Handle modal close on outside click or escape key
   useEffect(() => {
@@ -135,19 +132,15 @@ export default function MyNavbar(): JSX.Element {
       if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
         setModalVisible(false);
       }
-      if (cardModalRef.current && !cardModalRef.current.contains(event.target as Node)) {
-        setCardModalVisible(false);
-      }
     };
 
     const handleEscapeKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setModalVisible(false);
-        setCardModalVisible(false);
       }
     };
 
-    if (modalVisible || cardModalVisible) {
+    if (modalVisible) {
       document.addEventListener('mousedown', handleClickOutside);
       document.addEventListener('keydown', handleEscapeKey);
       document.body.style.overflow = 'hidden'; // Prevent background scrolling
@@ -158,7 +151,7 @@ export default function MyNavbar(): JSX.Element {
       document.removeEventListener('keydown', handleEscapeKey);
       document.body.style.overflow = 'unset';
     };
-  }, [modalVisible, cardModalVisible]);
+  }, [modalVisible]);
 
   const themes = [
     "light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro",
@@ -306,16 +299,23 @@ export default function MyNavbar(): JSX.Element {
                 </div>
               </li>
               <li>
-                <button
-                  onClick={() => {
-                    openCardModal();
-                    setMobileMenuOpen(false);
-                  }}
-                  className="flex items-center gap-2"
-                >
-                  🃏
-                  Card Styles
-                </button>
+                <div className="dropdown">
+                  <button tabIndex={0} className="flex items-center gap-2 w-full">
+                    🃏 Card styles
+                  </button>
+                  <div tabIndex={0} className="dropdown-content z-[1002] mt-2 p-4 shadow-2xl bg-base-100 rounded-box w-60 max-h-72 overflow-y-auto ml-4">
+                    <div className="flex flex-col gap-2 pb-2 border-b border-base-300">
+                      <span className="font-semibold">Card styles</span>
+                      <div className="flex items-center justify-between gap-2">
+                        <button className="btn btn-xs btn-outline" onClick={selectAllCardTypes}>Select all</button>
+                        <button className="btn btn-xs" onClick={clearAllCardTypes}>Clear all</button>
+                      </div>
+                    </div>
+                    <div className="mt-3 space-y-2">
+                      <CardTypes key={cardKey} />
+                    </div>
+                  </div>
+                </div>
               </li>
               <li>
                 <button
@@ -373,13 +373,23 @@ export default function MyNavbar(): JSX.Element {
                 ))}
               </ul>
             </div>
-            <button
-              onClick={openCardModal}
-              className="btn btn-outline btn-circle btn-sm"
-              title="Choose card styles"
-            >
-              🃏
-            </button>
+            <div className="dropdown dropdown-end">
+              <button tabIndex={0} className="btn btn-outline btn-circle btn-sm" title="Choose card styles">
+                🃏
+              </button>
+              <div tabIndex={0} className="dropdown-content z-[1] p-4 shadow-2xl bg-base-100 rounded-box w-64 max-h-72 overflow-y-auto">
+                <div className="flex items-center justify-between gap-2 pb-2 border-b border-base-300">
+                  <span className="font-semibold">Card styles</span>
+                  <div className="flex items-center gap-2">
+                    <button className="btn btn-xs btn-outline" onClick={selectAllCardTypes}>Select all</button>
+                    <button className="btn btn-xs" onClick={clearAllCardTypes}>Clear all</button>
+                  </div>
+                </div>
+                <div className="mt-3 space-y-2">
+                  <CardTypes key={cardKey} />
+                </div>
+              </div>
+            </div>
             <button
               onClick={modalHandler}
               className="btn btn-outline btn-circle btn-sm"
@@ -582,49 +592,6 @@ export default function MyNavbar(): JSX.Element {
                   className="btn btn-ghost flex-1 sm:flex-none"
                 >
                   Cancel
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {cardModalVisible && (
-        <div className="modal modal-open z-[1000]">
-          <div
-            ref={cardModalRef}
-            className="modal-box max-w-3xl w-[calc(100vw-1.5rem)] sm:w-full mx-2 sm:mx-4 max-h-[90vh] flex flex-col"
-          >
-            <div className="flex items-center justify-between mb-6 pb-4 border-b border-base-300">
-              <h3 className="font-bold text-xl flex items-center gap-2">
-                <span>🃏</span>
-                <span>Headline Cards</span>
-              </h3>
-              <div className="flex items-center gap-2">
-                <button className="btn btn-xs btn-outline" onClick={selectAllCardTypes}>Select all</button>
-                <button className="btn btn-xs" onClick={clearAllCardTypes}>Reset</button>
-                <button
-                  onClick={() => setCardModalVisible(false)}
-                  className="btn btn-sm btn-ghost btn-circle"
-                  aria-label="Close card settings"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div className="flex-1 overflow-y-auto">
-              <div className="space-y-4">
-                <CardTypes key={cardKey} />
-              </div>
-            </div>
-            <div className="modal-action mt-6 pt-4 border-t border-base-300">
-              <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-                <button
-                  onClick={() => setCardModalVisible(false)}
-                  className="btn btn-primary flex-1 sm:flex-none"
-                >
-                  Done
                 </button>
               </div>
             </div>
