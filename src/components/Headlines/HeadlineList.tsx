@@ -1,10 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import LoadingSpinner from '@components/Loading/LoadingSpinner';
 import { ComicCard as HeadlineCard, RedditCard, TwitterCard, FacebookCard, PinterestCard, InstagramCard, TikTokCard, LinkedInCard, MediumCard, YouTubeCard, AppleNewsCard, HackerNewsCard } from '@components/Card';
+import { CardType, CARD_TYPE_KEYS } from '@components/Filters/CardTypes';
 // import { ActionBar } from '@components/ActionBar';
 import { Headline } from '../../types/Headline';
 import { Countries } from '../../types/countries';
 import Masonry from 'react-masonry-css';
+
+type CardComponentProps = {
+  headline: Headline;
+  country?: Countries;
+  idx?: number;
+};
+
+const CARD_COMPONENTS: Record<CardType, (props: CardComponentProps) => JSX.Element> = {
+  ComicCard: HeadlineCard,
+  RedditCard,
+  TwitterCard,
+  FacebookCard,
+  PinterestCard,
+  InstagramCard,
+  TikTokCard,
+  LinkedInCard,
+  MediumCard,
+  YouTubeCard,
+  AppleNewsCard,
+  HackerNewsCard,
+};
+
+const DEFAULT_CARD_SEQUENCE: CardType[] = [...CARD_TYPE_KEYS];
 
 interface HeadlineListProps {
   headlines: Headline[] | undefined;
@@ -50,6 +74,7 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
 }) => {
   // const [bottomNav, showBottomNav] = useState(false);
   const columns = useBreakpointColumns(numberOfColumns);
+  const [cardSequence, setCardSequence] = useState<CardType[]>(DEFAULT_CARD_SEQUENCE);
 
   const breakpointColumnsObj = {
     default: columns,
@@ -60,9 +85,41 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   };
 
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    const applySelection = () => {
+      const stored = window.localStorage.getItem('selectedCardTypes');
+      if (stored) {
+        try {
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed)) {
+            const filtered = parsed.filter((card): card is CardType =>
+              typeof card === 'string' && CARD_TYPE_KEYS.includes(card as CardType),
+            );
+            if (filtered.length) {
+              setCardSequence(filtered);
+              return;
+            }
+          }
+        } catch (_error) {}
+      }
+      setCardSequence(DEFAULT_CARD_SEQUENCE);
+    };
+
+    applySelection();
+    const handler = () => applySelection();
+    window.addEventListener('selectedCardTypesChange', handler);
+    return () => {
+      window.removeEventListener('selectedCardTypesChange', handler);
+    };
+  }, []);
+
   if (!headlines?.length) {
     return <LoadingSpinner />;
   } else {
+    const activeSequence = cardSequence.length ? cardSequence : DEFAULT_CARD_SEQUENCE;
     return (
       <>
         <div style={{ position: 'relative' }}>
@@ -73,79 +130,17 @@ const HeadlineList: React.FC<HeadlineListProps> = ({
           >
             {headlines?.map((headline, idx) => (
               <div key={headline.id} className="masonry-item">
-                {idx % 12 === 11 ? (
-                  <HackerNewsCard
-                    headline={headline}
-                    country={headline.source.substring(0, 2).toLowerCase() as Countries}
-                    idx={idx + 1}
-                  />
-                ) : idx % 12 === 10 ? (
-                  <AppleNewsCard
-                    headline={headline}
-                    country={headline.source.substring(0, 2).toLowerCase() as Countries}
-                    idx={idx + 1}
-                  />
-                ) : idx % 12 === 9 ? (
-                  <YouTubeCard
-                    headline={headline}
-                    country={headline.source.substring(0, 2).toLowerCase() as Countries}
-                    idx={idx + 1}
-                  />
-                ) : idx % 12 === 8 ? (
-                  <MediumCard
-                    headline={headline}
-                    country={headline.source.substring(0, 2).toLowerCase() as Countries}
-                    idx={idx + 1}
-                  />
-                ) : idx % 12 === 7 ? (
-                  <LinkedInCard
-                    headline={headline}
-                    country={headline.source.substring(0, 2).toLowerCase() as Countries}
-                    idx={idx + 1}
-                  />
-                ) : idx % 12 === 6 ? (
-                  <TikTokCard
-                    headline={headline}
-                    country={headline.source.substring(0, 2).toLowerCase() as Countries}
-                    idx={idx + 1}
-                  />
-                ) : idx % 12 === 5 ? (
-                  <InstagramCard
-                    headline={headline}
-                    country={headline.source.substring(0, 2).toLowerCase() as Countries}
-                    idx={idx + 1}
-                  />
-                ) : idx % 12 === 4 ? (
-                  <PinterestCard
-                    headline={headline}
-                    country={headline.source.substring(0, 2).toLowerCase() as Countries}
-                    idx={idx + 1}
-                  />
-                ) : idx % 12 === 3 ? (
-                  <FacebookCard
-                    headline={headline}
-                    country={headline.source.substring(0, 2).toLowerCase() as Countries}
-                    idx={idx + 1}
-                  />
-                ) : idx % 12 === 2 ? (
-                  <TwitterCard
-                    headline={headline}
-                    country={headline.source.substring(0, 2).toLowerCase() as Countries}
-                    idx={idx + 1}
-                  />
-                ) : idx % 12 === 1 ? (
-                  <RedditCard
-                    headline={headline}
-                    country={headline.source.substring(0, 2).toLowerCase() as Countries}
-                    idx={idx + 1}
-                  />
-                ) : (
-                  <HeadlineCard
-                    headline={headline}
-                    country={headline.source.substring(0, 2).toLowerCase() as Countries}
-                    idx={idx + 1}
-                  />
-                )}
+                {(() => {
+                  const cardType = activeSequence[idx % activeSequence.length];
+                  const CardComponent = CARD_COMPONENTS[cardType] ?? HeadlineCard;
+                  return (
+                    <CardComponent
+                      headline={headline}
+                      country={headline.source.substring(0, 2).toLowerCase() as Countries}
+                      idx={idx + 1}
+                    />
+                  );
+                })()}
               </div>
             ))}
             {fetching && (
