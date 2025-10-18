@@ -9902,6 +9902,19 @@ export const KRNewsSources = new Map<string, NewsSource>([
       langs: ['ko'],
     },
   ],
+  [
+    'KR_KBS',
+    {
+      name: 'Yonhap News Agency',
+      url: 'https://en.yna.co.kr',
+      est: 1980,
+      about:
+        'Yonhap News Agency is South Korea\'s leading news agency, providing comprehensive coverage of both domestic and international news.',
+      description: [],
+      emos: ['📰', '🇰🇷'],
+      langs: ['ko'],
+    },
+  ],
 ]);
 export const KRNewsSourcesLength = KRNewsSources.size;
 

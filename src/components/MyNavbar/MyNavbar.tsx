@@ -50,7 +50,12 @@ export default function MyNavbar(): JSX.Element {
   const [outletIcon, setOutletIcon] = useState(outletIcons[0]);
 
   useEffect(() => {
-    const makeCycler = (arr: string[], setter: (s: string) => void, intervalMs: number, startIdx = 0) => {
+    const makeCycler = <T,>(
+      arr: T[],
+      setter: React.Dispatch<React.SetStateAction<T>>,
+      intervalMs: number,
+      startIdx = 0
+    ) => {
       let i = startIdx;
       return setInterval(() => {
         i = (i + 1) % arr.length;

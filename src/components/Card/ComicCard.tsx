@@ -7,6 +7,7 @@ import Bookmark from '@components/SVG/Bookmark';
 import Share from '@components/SVG/Share';
 import X from '@components/SVG/X';
 import { AllNewsSources } from '@constants/NEWS_SOURCES';
+import { getFlag } from '@lib/geo';
 import { Headline } from '../../types';
 import { Countries as CountriesType } from '../../types/countries';
 
@@ -37,14 +38,13 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
     : `${headline.link}?${nooze_utm_tag}`;
   const sourceName = AllNewsSources.get(headline.source)?.name;
 
-  const cardBackgrounds = {
-    video: 'radial-gradient(circle, hsl(var(--p)), hsl(var(--pf)))',
-    audio: 'radial-gradient(circle, hsl(var(--s)), hsl(var(--sf)))',
-    article: 'radial-gradient(circle, hsl(var(--a)), hsl(var(--af)))',
-  };
-
-  const cardBackground =
-    cardBackgrounds[headline.media_type as keyof typeof cardBackgrounds];
+  const mediaEmojiMap = {
+    video: '🎬',
+    audio: '🎧',
+    article: '📰',
+  } as const;
+  const mediaEmoji =
+    mediaEmojiMap[headline.media_type as keyof typeof mediaEmojiMap] ?? '';
 
   const toggleLike = async () => {
     setLikeLoading(true);
@@ -181,13 +181,15 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
     '&url=' +
     articleLink;
 
+  const iso2 = (headline.country || '').slice(0, 2).toUpperCase();
+  const countryFlag = getFlag(iso2);
+
   return (
     <div
       itemScope
       itemType="https://schema.org/NewsArticle"
       className="card hover:shadow-lg transition-transform duration-300 hover:-translate-y-1"
       style={{
-        backgroundImage: cardBackground,
         fontFamily: '"Arial", sans-serif',
         margin: '10px',
         padding: '4px',
@@ -245,7 +247,13 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   rel="noreferrer"
                   className="text-base-content no-underline"
                 >
-                  {sourceName ?? ''}
+                  {mediaEmoji ? (
+                    <>
+                      <span aria-hidden="true">{mediaEmoji}</span>&nbsp;{sourceName ?? ''}
+                    </>
+                  ) : (
+                    sourceName ?? ''
+                  )}
                 </a>
               </div>
               <div
@@ -263,8 +271,8 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   zIndex: 10,
                 }}
               >
-                <time itemProp="datePublished" dateTime={DATE.toISOString()} title={DATE.toLocaleString()}>
-                  {diffDisplay(DATE)}
+                <time itemProp="datePublished" dateTime={DATE.toISOString()} title={DATE.toLocaleString()} style={{ color: 'var(--bc)' }}>
+                  {diffDisplay(DATE)}&nbsp;{countryFlag}
                 </time>
               </div>
             </div>
@@ -275,7 +283,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 style={{
                   position: 'absolute',
                   top: '0px',
-                  left: '12px',
+                  left: '2px',
                   padding: '4px 8px',
                   fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
                   fontSize: '14px',
@@ -294,7 +302,13 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   rel="noreferrer"
                   className="text-base-content no-underline"
                 >
-                  {sourceName ?? ''}
+                  {mediaEmoji ? (
+                    <>
+                      <span aria-hidden="true">{mediaEmoji}</span>&nbsp;{sourceName ?? ''}
+                    </>
+                  ) : (
+                    sourceName ?? ''
+                  )}
                 </a>
               </div>
               <div
@@ -302,7 +316,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 style={{
                   position: 'absolute',
                   top: '0px',
-                  right: '12px',
+                  right: '2px',
                   padding: '4px 8px',
                   display: 'inline-block',
                   fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
@@ -313,7 +327,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 }}
               >
                 <time title={DATE.toLocaleString()}>
-                  {diffDisplay(DATE)}
+                  {diffDisplay(DATE)}&nbsp;{countryFlag}
                 </time>
               </div>
             </div>
@@ -323,6 +337,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
               border: '2px solid',
               boxShadow: '4px 4px 0',
               padding: '5px',
+              paddingTop: `${headline.img_src && !leadImgErr ? '0px' : '25px'}`,
               fontFamily: "'Comic Sans MS', 'Arial Black', sans-serif",
               fontSize: '18px',
               textAlign: 'center',
