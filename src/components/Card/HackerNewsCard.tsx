@@ -9,6 +9,7 @@ import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { getFlag } from '@lib/geo';
 import { Headline } from '../../types';
 import { Countries as CountriesType } from '../../types/countries';
+import { loadHeadlineCollection, saveHeadlineCollection } from '@lib/collection-storage';
 
 type Props = { headline: Headline; country?: CountriesType; idx?: number };
 
@@ -30,6 +31,9 @@ const HackerNewsCard = ({ headline }: Props): JSX.Element => {
   const iso2 = (headline.country || '').slice(0, 2).toUpperCase();
   const countryFlag = getFlag(iso2);
 
+  const mediaEmojiMap = { video: '🎬', audio: '🎧', article: '📰' } as const;
+  const mediaEmoji = mediaEmojiMap[headline.media_type as keyof typeof mediaEmojiMap] ?? '📰';
+
   const toggleLike = async () => {
     setLikeLoading(true);
     try {
@@ -48,15 +52,23 @@ const HackerNewsCard = ({ headline }: Props): JSX.Element => {
     const likedPosts = JSON.parse(localStorage.getItem('likedPosts') || '[]'); setLiked(likedPosts.includes(headline.id));
   }, [headline.id]);
   const saveToOrRemoveFromCollection = async () => {
-    const c = retrieveCollection();
-    if (c) { if (saved && c.get(headline.id)) { c.delete(headline.id); } else { c.set(headline.id, headline); }
-      localStorage.setItem(COLLECTION_KEY, JSON.stringify(Array.from(c.entries()))); setSaved(!saved);
-    } else { const n = new Map<number, Headline>(); n.set(headline.id, headline);
-      localStorage.setItem(COLLECTION_KEY, JSON.stringify(Array.from(n.entries()))); setSaved(true); }
-    try { fetch(`/api/fast/react?id=${headline.id}&action=saved&reaction=${saved}`, { method: 'POST' }); } catch {}
+    const collection = loadHeadlineCollection<Headline>(COLLECTION_KEY) ?? new Map<number, Headline>();
+    const wasSaved = collection.has(headline.id);
+
+    if (wasSaved) {
+      collection.delete(headline.id);
+      setSaved(false);
+    } else {
+      collection.set(headline.id, headline);
+      setSaved(true);
+    }
+
+    saveHeadlineCollection(COLLECTION_KEY, collection);
+
+    try { fetch(`/api/fast/react?id=${headline.id}&action=saved&reaction=${wasSaved}`, { method: 'POST' }); } catch (_e) { void 0; }
   };
-  function retrieveCollection() { if (typeof window !== 'undefined') { const s = localStorage.getItem(COLLECTION_KEY); if (s) return new Map<number, Headline>(JSON.parse(s)); } return null; }
-  const share = async () => { try { fetch(`/api/fast/react?id=${headline.id}&action=shared&reaction=false`, { method: 'POST' }); } catch {} try { await navigator.share({ title: headline.headline, url: articleLink }); } catch { setShareable(false); } };
+  function retrieveCollection() { return loadHeadlineCollection<Headline>(COLLECTION_KEY); }
+  const share = async () => { try { fetch(`/api/fast/react?id=${headline.id}&action=shared&reaction=false`, { method: 'POST' }); } catch (_e) { void 0; } try { await navigator.share({ title: headline.headline, url: articleLink }); } catch { setShareable(false); } };
   const twShare = 'https://twitter.com/intent/tweet?text=' + headline.headline + '&url=' + articleLink;
 
   return (
@@ -69,6 +81,9 @@ const HackerNewsCard = ({ headline }: Props): JSX.Element => {
             </h3>
           </Link>
           <div className="mt-1 text-xs text-base-content/70 flex items-center gap-2">
+            <span className="inline-flex h-5 w-5 items-center justify-center rounded bg-base-300 text-[11px]">
+              {mediaEmoji}
+            </span>
             <a className="hover:underline" href={sourceURL} target="_blank" rel="noreferrer" title={sourceName ?? ''}>{sourceName ?? ''}</a>
             <span>•</span>
             <time title={DATE.toLocaleString()}>{diffDisplay(DATE)}</time>

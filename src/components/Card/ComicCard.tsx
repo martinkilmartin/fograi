@@ -10,6 +10,7 @@ import { AllNewsSources } from '@constants/NEWS_SOURCES';
 import { getFlag } from '@lib/geo';
 import { Headline } from '../../types';
 import { Countries as CountriesType } from '../../types/countries';
+import { loadHeadlineCollection, saveHeadlineCollection } from '@lib/collection-storage';
 
 type Props = {
   header?: boolean;
@@ -92,47 +93,30 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
   }, [headline.id]);
 
   const saveToOrRemoveFromCollection = async () => {
-    const currentCollection = retrieveCollection();
-    if (currentCollection) {
-      if (saved && currentCollection.get(headline.id)) {
-        currentCollection.delete(headline.id);
-        const mapAsArray = Array.from(currentCollection.entries());
-        localStorage.setItem(COLLECTION_KEY, JSON.stringify(mapAsArray));
-        setSaved(false);
-      } else {
-        currentCollection.set(headline.id, headline);
-        const mapAsArray = Array.from(currentCollection.entries());
-        localStorage.setItem(COLLECTION_KEY, JSON.stringify(mapAsArray));
-        setSaved(true);
-      }
+    const collection = loadHeadlineCollection<Headline>(COLLECTION_KEY) ?? new Map<number, Headline>();
+    const wasSaved = collection.has(headline.id);
+
+    if (wasSaved) {
+      collection.delete(headline.id);
+      setSaved(false);
     } else {
-      const newCollection = new Map<number, Headline>();
-      newCollection.set(headline.id, headline);
-      const mapAsArray = Array.from(newCollection.entries());
-      localStorage.setItem(COLLECTION_KEY, JSON.stringify(mapAsArray));
+      collection.set(headline.id, headline);
       setSaved(true);
     }
+
+    saveHeadlineCollection(COLLECTION_KEY, collection);
+
     try {
-      fetch(
-        `/api/fast/react?id=${headline.id}&action=saved&reaction=${saved}`,
-        {
-          method: 'POST',
-        },
-      );
+      fetch(`/api/fast/react?id=${headline.id}&action=saved&reaction=${wasSaved}`, {
+        method: 'POST',
+      });
     } catch (_error) {
       // do nothing
     }
   };
 
   function retrieveCollection() {
-    if (typeof window !== 'undefined') {
-      const mapAsArrayString = localStorage.getItem(COLLECTION_KEY);
-      if (mapAsArrayString) {
-        const mapAsArray = JSON.parse(mapAsArrayString);
-        return new Map<number, Headline>(mapAsArray);
-      }
-    }
-    return null;
+    return loadHeadlineCollection<Headline>(COLLECTION_KEY);
   }
 
   const share = async () => {
