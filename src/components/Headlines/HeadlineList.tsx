@@ -45,7 +45,7 @@ const useBreakpointColumns = (numberOfColumns?: number) => {
 const HeadlineList: React.FC<HeadlineListProps> = ({
   headlines,
   fetching,
-  userCountry,
+  // userCountry,
   numberOfColumns,
 }) => {
   // const [bottomNav, showBottomNav] = useState(false);
