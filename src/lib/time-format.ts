@@ -3,7 +3,7 @@ import {
   MINUTE,
   HOUR,
   DAY,
-  MONTH,
+  WEEK,
   YEAR,
 } from '@constants/MILLISECOND_TIME';
 
@@ -14,21 +14,17 @@ const diffDate = (date: Date): number => {
 
 const diffAmount = (
   diff: number,
-): [number, 's' | 'min' | 'mins' | 'hr' | 'days' | 'day' | 'mon' | 'yr'] => {
+): [number, 's' | 'm' | 'h' | 'd' | 'w' | 'y'] => {
   if (diff > YEAR) {
-    return [diff / YEAR, 'yr'];
-  } else if (diff > MONTH) {
-    return [diff / MONTH, 'mon'];
-  } else if (diff > DAY * 2) {
-    return [diff / DAY, 'days'];
+    return [diff / YEAR, 'y'];
+  } else if (diff > WEEK) {
+    return [diff / WEEK, 'w'];
   } else if (diff > DAY) {
-    return [diff / DAY, 'day'];
+    return [diff / DAY, 'd'];
   } else if (diff > HOUR) {
-    return [diff / HOUR, 'hr'];
-  } else if (diff > MINUTE * 2) {
-    return [diff / MINUTE, 'mins'];
+    return [diff / HOUR, 'h'];
   } else if (diff > MINUTE) {
-    return [diff / MINUTE, 'min'];
+    return [diff / MINUTE, 'm'];
   } else {
     return [diff / SECOND, 's'];
   }
@@ -37,7 +33,7 @@ const diffAmount = (
 const diffDisplay = (date: Date): string => {
   const DIFF = diffDate(date);
   const [value, period] = diffAmount(DIFF);
-  return `${Math.floor(value)} ${period}`;
+  return `${Math.floor(value)}${period}`;
 };
 
 export default diffDisplay;

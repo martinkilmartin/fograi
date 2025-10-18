@@ -224,7 +224,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 }}
               />
               <div
-                className="bg-base-100/90 border-2 border-base-content shadow-[2px_2px_0_hsl(var(--bc))]"
+                className="bg-base-100/90 border-2 border-base-content"
                 style={{
                   position: 'absolute',
                   top: '0px',
@@ -234,7 +234,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   fontSize: '14px',
                   fontStyle: 'italic',
                   transform: 'skewX(-8deg)',
-                  zIndex: 10,
+                  zIndex: 100,
                 }}
               >
                 <a
@@ -257,7 +257,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 </a>
               </div>
               <div
-                className="bg-base-100/90 border-2 border-base-content shadow-[2px_2px_0_hsl(var(--bc))]"
+                className="bg-base-100/90 border-2 border-base-content"
                 style={{
                   position: 'absolute',
                   top: '0px',
@@ -279,7 +279,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
           ) : (
             <div style={{ position: 'relative' }}>
               <div
-                className="bg-base-100/90 border-2 border-base-content shadow-[2px_2px_0_hsl(var(--bc))]"
+                className="bg-base-100/90 border-2 border-base-content"
                 style={{
                   position: 'absolute',
                   top: '0px',
@@ -312,7 +312,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 </a>
               </div>
               <div
-                className="bg-base-100/90 border-2 border-base-content shadow-[2px_2px_0_hsl(var(--bc))]"
+                className="bg-base-100/90 border-2 border-base-content"
                 style={{
                   position: 'absolute',
                   top: '0px',
