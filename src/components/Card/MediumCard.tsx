@@ -75,7 +75,7 @@ const MediumCard = ({ headline }: Props): JSX.Element => {
       localStorage.setItem(COLLECTION_KEY, JSON.stringify(Array.from(n.entries())));
       setSaved(true);
     }
-    try { fetch(`/api/fast/react?id=${headline.id}&action=saved&reaction=${saved}`, { method: 'POST' }); } catch {}
+    try { fetch(`/api/fast/react?id=${headline.id}&action=saved&reaction=${saved}`, { method: 'POST' }); } catch (_e) { void 0; }
   };
   function retrieveCollection() {
     if (typeof window !== 'undefined') {
@@ -85,7 +85,7 @@ const MediumCard = ({ headline }: Props): JSX.Element => {
     return null;
   }
   const share = async () => {
-    try { fetch(`/api/fast/react?id=${headline.id}&action=shared&reaction=false`, { method: 'POST' }); } catch {}
+    try { fetch(`/api/fast/react?id=${headline.id}&action=shared&reaction=false`, { method: 'POST' }); } catch (_e) { void 0; }
     try { await navigator.share({ title: headline.headline, url: articleLink }); }
     catch { setShareable(false); }
   };

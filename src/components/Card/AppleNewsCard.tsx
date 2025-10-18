@@ -58,10 +58,10 @@ const AppleNewsCard = ({ headline }: Props): JSX.Element => {
       localStorage.setItem(COLLECTION_KEY, JSON.stringify(Array.from(c.entries()))); setSaved(!saved);
     } else { const n = new Map<number, Headline>(); n.set(headline.id, headline);
       localStorage.setItem(COLLECTION_KEY, JSON.stringify(Array.from(n.entries()))); setSaved(true); }
-    try { fetch(`/api/fast/react?id=${headline.id}&action=saved&reaction=${saved}`, { method: 'POST' }); } catch {}
+    try { fetch(`/api/fast/react?id=${headline.id}&action=saved&reaction=${saved}`, { method: 'POST' }); } catch (_e) { void 0; }
   };
   function retrieveCollection() { if (typeof window !== 'undefined') { const s = localStorage.getItem(COLLECTION_KEY); if (s) return new Map<number, Headline>(JSON.parse(s)); } return null; }
-  const share = async () => { try { fetch(`/api/fast/react?id=${headline.id}&action=shared&reaction=false`, { method: 'POST' }); } catch {} try { await navigator.share({ title: headline.headline, url: articleLink }); } catch { setShareable(false); } };
+  const share = async () => { try { fetch(`/api/fast/react?id=${headline.id}&action=shared&reaction=false`, { method: 'POST' }); } catch (_e) { void 0; } try { await navigator.share({ title: headline.headline, url: articleLink }); } catch { setShareable(false); } };
   const twShare = 'https://twitter.com/intent/tweet?text=' + headline.headline + '&url=' + articleLink;
 
   return (

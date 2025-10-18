@@ -47,7 +47,7 @@ const RedditCard = ({ headline }: Props): JSX.Element => {
     audio: '🎧',
     article: '📰',
   } as const;
-  const mediaEmoji = mediaEmojiMap[headline.media_type as keyof typeof mediaEmojiMap] ?? '';
+  const mediaEmoji = mediaEmojiMap[headline.media_type as keyof typeof mediaEmojiMap] ?? '📰';
 
   const toggleLike = async () => {
     setLikeLoading(true);
