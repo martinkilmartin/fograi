@@ -38,15 +38,6 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
     : `${headline.link}?${nooze_utm_tag}`;
   const sourceName = AllNewsSources.get(headline.source)?.name;
 
-  const cardBgColors = {
-    video: 'hsl(var(--er) / 0.08)',
-    audio: 'hsl(var(--in) / 0.08)',
-    article: 'hsl(var(--b1))',
-  } as const;
-
-  const cardBgColor =
-    cardBgColors[headline.media_type as keyof typeof cardBgColors] ?? 'hsl(var(--b1))';
-
   const mediaEmojiMap = {
     video: '🎬',
     audio: '🎧',
@@ -199,7 +190,6 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
       itemType="https://schema.org/NewsArticle"
       className="card hover:shadow-lg transition-transform duration-300 hover:-translate-y-1"
       style={{
-        backgroundColor: cardBgColor,
         fontFamily: '"Arial", sans-serif',
         margin: '10px',
         padding: '4px',
@@ -209,13 +199,6 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
       }}
     >
       <div style={{ padding: '2px 0', position: 'relative' }}>
-        <span
-          aria-label={`Country: ${iso2}`}
-          title={iso2}
-          style={{ position: 'absolute', top: '-14px', right: '-8px', zIndex: 20, fontSize: '24px' }}
-        >
-          {countryFlag}
-        </span>
         <Link
           itemProp="url"
           onClick={(_event) => trackClicks('link')}
@@ -288,8 +271,8 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                   zIndex: 10,
                 }}
               >
-                <time itemProp="datePublished" dateTime={DATE.toISOString()} title={DATE.toLocaleString()}>
-                  {diffDisplay(DATE)}
+                <time itemProp="datePublished" dateTime={DATE.toISOString()} title={DATE.toLocaleString()} style={{ color: 'var(--bc)' }}>
+                  {diffDisplay(DATE)}&nbsp;{countryFlag}
                 </time>
               </div>
             </div>
@@ -344,7 +327,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 }}
               >
                 <time title={DATE.toLocaleString()}>
-                  {diffDisplay(DATE)}
+                  {diffDisplay(DATE)}&nbsp;{countryFlag}
                 </time>
               </div>
             </div>
