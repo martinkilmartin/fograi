@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useQueryClient } from 'react-query';
 import { COUNTRIES } from '@constants/COUNTRIES';
@@ -30,7 +32,7 @@ export default function MyNavbar(): JSX.Element {
   };
 
   // Rotating icons for section headers
-  const mediaIcons = ['📰', '📹', '🔊'];
+  const mediaIcons = useMemo(() => ['📰', '📹', '🔊'], []);
   const langIcons = useMemo(
     () => Array.from(LangsMap.values()).map((v) => v.icon).filter(Boolean),
     []
@@ -42,7 +44,7 @@ export default function MyNavbar(): JSX.Element {
     }).filter(Boolean),
     []
   );
-  const outletIcons = ['🗞️', '📰', '🧾'];
+  const outletIcons = useMemo(() => ['🗞️', '📰', '🧾'], []);
 
   const [mediaIcon, setMediaIcon] = useState(mediaIcons[0]);
   const [langIcon, setLangIcon] = useState(langIcons[0]);
@@ -72,7 +74,7 @@ export default function MyNavbar(): JSX.Element {
       clearInterval(t3);
       clearInterval(t4);
     };
-  }, []);
+  }, [langIcons, mediaIcons, nationIcons, outletIcons]);
   const clearAllCountries = () => {
     try { localStorage.setItem('likedCountries', JSON.stringify([])); } catch (_e) { /* noop */ }
     setCountriesKey((k) => k + 1);
@@ -190,23 +192,26 @@ export default function MyNavbar(): JSX.Element {
               </svg>
             </button>
             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a href="/" onClick={(e) => { e.preventDefault(); router.push('/'); }}>Home</a></li>
-              <li><a href="/about" onClick={(e) => { e.preventDefault(); router.push('/about'); }}>About</a></li>
-              <li><a href="/contact" onClick={(e) => { e.preventDefault(); router.push('/contact'); }}>Contact</a></li>
-              <li><a href="/bookmarks" onClick={(e) => { e.preventDefault(); router.push('/bookmarks'); }}>Bookmarks</a></li>
-              <li><a href="/countries" onClick={(e) => { e.preventDefault(); router.push('/countries'); }}>Countries</a></li>
-              <li><a href="/sources" onClick={(e) => { e.preventDefault(); router.push('/sources'); }}>Sources</a></li>
-              <li><a href="/roadmap" onClick={(e) => { e.preventDefault(); router.push('/roadmap'); }}>Roadmap</a></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/about">About</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
+              <li><Link href="/bookmarks">Bookmarks</Link></li>
+              <li><Link href="/countries">Countries</Link></li>
+              <li><Link href="/sources">Sources</Link></li>
+              <li><Link href="/roadmap">Roadmap</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="navbar-center">
           <button onClick={() => router.push('/')} className="btn btn-ghost p-0">
-            <img
+            <Image
               src="/img/nooze.svg"
               alt="Nooze Logo"
+              width={160}
+              height={64}
               className="h-16 w-auto cursor-pointer"
+              priority
             />
           </button>
         </div>
