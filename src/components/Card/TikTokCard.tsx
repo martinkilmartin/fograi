@@ -143,7 +143,7 @@ const TikTokCard = ({ headline }: Props): JSX.Element => {
         url: articleLink,
       });
     } catch (_e) {
-        setShareable(false);
+      setShareable(false);
     }
   };
 
@@ -157,7 +157,7 @@ const TikTokCard = ({ headline }: Props): JSX.Element => {
   const countryFlag = getFlag(iso2);
 
   return (
-    <div className="bg-base-100 border border-base-300 rounded-xl overflow-hidden" style={{ margin: '10px' }}>
+    <div className="bg-base-100 border border-base-300 rounded-xl overflow-hidden min-h-[200px]" style={{ margin: '10px' }}>
       {/* Header (compact) */}
       <div className="flex items-center justify-between p-2 text-sm text-base-content/80">
         <div className="flex items-center gap-2 min-w-0">
@@ -183,8 +183,8 @@ const TikTokCard = ({ headline }: Props): JSX.Element => {
 
       {/* Media area with right-side actions bar */}
       <div className="relative w-full">
-        <div className="w-full bg-base-200">
-          {headline.img_src && !leadImgErr ? (
+        <div className="w-full">
+          {headline.img_src && !leadImgErr && (
             <Image
               src={headline.img_src}
               alt={headline.img_alt ?? ''}
@@ -193,69 +193,67 @@ const TikTokCard = ({ headline }: Props): JSX.Element => {
               className="w-full h-auto object-cover aspect-[9/16]"
               onError={() => setLeadImgErr(true)}
             />
-          ) : (
-            <div className="w-full aspect-[9/16] bg-base-200 flex items-center justify-center text-4xl">
-              {mediaEmoji}
-            </div>
           )}
         </div>
 
-        {/* Vertical actions on the right */}
-        <div className="absolute right-2 bottom-2 flex flex-col items-center gap-3">
-          <div className="indicator">
-            <span className="indicator-item badge badge-xs">
-              {likeLoading ? '…' : likeCount}
-            </span>
+        {/* Vertical actions on the right (only when image is present) */}
+        {headline.img_src && !leadImgErr && (
+          <div className="absolute right-2 bottom-2 flex flex-col items-center gap-3">
+            <div className="indicator">
+              <span className="indicator-item badge badge-xs">
+                {likeLoading ? '…' : likeCount}
+              </span>
+              <button
+                className={`btn btn-sm btn-circle ${liked ? 'text-error' : ''}`}
+                onClick={toggleLike}
+                aria-label="Like"
+                title={liked ? 'Unlike' : 'Like'}
+              >
+                <Heart someBool={liked} />
+              </button>
+            </div>
             <button
-              className={`btn btn-sm btn-circle ${liked ? 'text-error' : ''}`}
-              onClick={toggleLike}
-              aria-label="Like"
-              title={liked ? 'Unlike' : 'Like'}
+              className={`btn btn-sm btn-circle ${saved ? 'text-warning' : ''}`}
+              onClick={saveToOrRemoveFromCollection}
+              aria-label="Bookmark"
+              title={saved ? 'Remove bookmark' : 'Bookmark'}
             >
-              <Heart someBool={liked} />
+              <Bookmark someBool={saved} />
             </button>
+            {canShare ? (
+              <button
+                className="btn btn-sm btn-circle"
+                onClick={share}
+                aria-label="Share"
+                title="Share"
+              >
+                <Share someBool={false} />
+              </button>
+            ) : (
+              <Link
+                href={twShare}
+                target="_blank"
+                rel="noreferrer"
+                title="Browser share not supported. Defaulting to X."
+                className="btn btn-sm btn-circle"
+                aria-label="Share on X"
+              >
+                <X />
+              </Link>
+            )}
           </div>
-          <button
-            className={`btn btn-sm btn-circle ${saved ? 'text-warning' : ''}`}
-            onClick={saveToOrRemoveFromCollection}
-            aria-label="Bookmark"
-            title={saved ? 'Remove bookmark' : 'Bookmark'}
-          >
-            <Bookmark someBool={saved} />
-          </button>
-          {canShare ? (
-            <button
-              className="btn btn-sm btn-circle"
-              onClick={share}
-              aria-label="Share"
-              title="Share"
-            >
-              <Share someBool={false} />
-            </button>
-          ) : (
-            <Link
-              href={twShare}
-              target="_blank"
-              rel="noreferrer"
-              title="Browser share not supported. Defaulting to X."
-              className="btn btn-sm btn-circle"
-              aria-label="Share on X"
-            >
-              <X />
-            </Link>
-          )}
-        </div>
+        )}
       </div>
 
       {/* Caption (below media) */}
-      <div className="p-3">
+      {headline.img_src && !leadImgErr && <div className="p-3">
         <Link href={articleLink} target="_blank" rel="noreferrer" className="no-underline">
           <p className="text-base-content leading-snug">
             {headline.headline} ↗
           </p>
         </Link>
-      </div>
-    </div>
+      </div>}
+    </div >
   );
 };
 

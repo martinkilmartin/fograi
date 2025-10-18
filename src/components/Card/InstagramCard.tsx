@@ -181,8 +181,8 @@ const InstagramCard = ({ headline }: Props): JSX.Element => {
                 </div>
             </div>
 
-            {/* Media */}
-            {headline.img_src && !leadImgErr ? (
+            {/* Media (only when image present) */}
+            {headline.img_src && !leadImgErr && (
                 <div className="w-full" style={{ position: 'relative' }}>
                     <Image
                         src={headline.img_src}
@@ -192,14 +192,6 @@ const InstagramCard = ({ headline }: Props): JSX.Element => {
                         className="w-full h-auto object-cover"
                         onError={() => setLeadImgErr(true)}
                     />
-                </div>
-            ) : (
-                <div className="px-3 pb-3 pt-1">
-                    <Link href={articleLink} target="_blank" rel="noreferrer" className="no-underline">
-                        <p className="text-base-content leading-snug">
-                            {headline.headline} ↗
-                        </p>
-                    </Link>
                 </div>
             )}
 
@@ -249,14 +241,14 @@ const InstagramCard = ({ headline }: Props): JSX.Element => {
                 )}
             </div>
 
-            {/* Caption */}
-            {headline.img_src && !leadImgErr && <div className="px-3 pb-3 pt-1">
+            {/* Caption: always show headline below, spacing adjusted */}
+            <div className="px-3 pb-3 pt-1">
                 <Link href={articleLink} target="_blank" rel="noreferrer" className="no-underline">
                     <p className="text-base-content leading-snug">
                         {headline.headline} ↗
                     </p>
                 </Link>
-            </div>}
+            </div>
         </div>
     );
 };
