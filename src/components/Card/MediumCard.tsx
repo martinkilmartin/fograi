@@ -31,6 +31,9 @@ const MediumCard = ({ headline }: Props): JSX.Element => {
   const iso2 = (headline.country || '').slice(0, 2).toUpperCase();
   const countryFlag = getFlag(iso2);
 
+  const mediaEmojiMap = { video: '🎬', audio: '🎧', article: '📰' } as const;
+  const mediaEmoji = mediaEmojiMap[headline.media_type as keyof typeof mediaEmojiMap] ?? '📰';
+
   const toggleLike = async () => {
     setLikeLoading(true);
     try {
@@ -94,6 +97,9 @@ const MediumCard = ({ headline }: Props): JSX.Element => {
         <h2 className="text-xl font-semibold text-base-content leading-tight hover:underline">{headline.headline} ↗</h2>
       </Link>
       <div className="mt-2 text-sm text-base-content/70 flex items-center gap-2">
+        <span className="inline-flex h-5 w-5 items-center justify-center rounded bg-base-300 text-[11px]">
+          {mediaEmoji}
+        </span>
         <a className="hover:underline" href={sourceURL} target="_blank" rel="noreferrer" title={sourceName ?? ''}>{sourceName ?? ''}</a>
         <span>•</span>
         <time title={DATE.toLocaleString()}>{diffDisplay(DATE)}</time>

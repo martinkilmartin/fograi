@@ -32,6 +32,9 @@ const AppleNewsCard = ({ headline }: Props): JSX.Element => {
   const iso2 = (headline.country || '').slice(0, 2).toUpperCase();
   const countryFlag = getFlag(iso2);
 
+  const mediaEmojiMap = { video: '🎬', audio: '🎧', article: '📰' } as const;
+  const mediaEmoji = mediaEmojiMap[headline.media_type as keyof typeof mediaEmojiMap] ?? '📰';
+
   const toggleLike = async () => {
     setLikeLoading(true);
     try {
@@ -72,6 +75,9 @@ const AppleNewsCard = ({ headline }: Props): JSX.Element => {
               <h3 className="text-white text-lg font-semibold drop-shadow">{headline.headline} ↗</h3>
             </Link>
             <div className="mt-1 text-xs text-white/90 flex items-center gap-2 drop-shadow">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded bg-white/20 text-[11px]">
+                {mediaEmoji}
+              </span>
               <a className="hover:underline" href={sourceURL} target="_blank" rel="noreferrer" title={sourceName ?? ''}>{sourceName ?? ''}</a>
               <span>•</span>
               <time title={DATE.toLocaleString()}>{diffDisplay(DATE)}</time>
@@ -87,6 +93,9 @@ const AppleNewsCard = ({ headline }: Props): JSX.Element => {
             <h3 className="text-base-content text-lg font-semibold leading-snug hover:underline">{headline.headline} ↗</h3>
           </Link>
           <div className="mt-1 text-xs text-base-content/70 flex items-center gap-2">
+            <span className="inline-flex h-5 w-5 items-center justify-center rounded bg-base-300 text-[11px]">
+              {mediaEmoji}
+            </span>
             <a className="hover:underline" href={sourceURL} target="_blank" rel="noreferrer" title={sourceName ?? ''}>{sourceName ?? ''}</a>
             <span>•</span>
             <time title={DATE.toLocaleString()}>{diffDisplay(DATE)}</time>

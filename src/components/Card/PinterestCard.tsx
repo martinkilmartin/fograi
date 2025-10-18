@@ -204,6 +204,9 @@ const PinterestCard = ({ headline }: Props): JSX.Element => {
           </h3>
         </Link>
         <div className="mt-2 flex items-center gap-2 text-xs text-base-content/70">
+          <span className="inline-flex h-5 w-5 items-center justify-center rounded bg-base-300 text-[11px]">
+            {mediaEmoji}
+          </span>
           <a className="hover:underline" href={sourceURL} target="_blank" rel="noreferrer" title={sourceName ?? ''}>
             {sourceName ?? ''}
           </a>

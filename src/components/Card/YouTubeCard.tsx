@@ -77,6 +77,9 @@ const YouTubeCard = ({ headline }: Props): JSX.Element => {
           <h3 className="font-semibold leading-snug hover:underline">{headline.headline} ↗</h3>
         </Link>
         <div className="mt-1 text-xs text-base-content/70 flex items-center gap-2">
+          <span className="inline-flex h-5 w-5 items-center justify-center rounded bg-base-300 text-[11px]">
+            {mediaEmoji}
+          </span>
           <a className="hover:underline" href={sourceURL} target="_blank" rel="noreferrer" title={sourceName ?? ''}>{sourceName ?? ''}</a>
           <span>•</span>
           <time title={DATE.toLocaleString()}>{diffDisplay(DATE)}</time>
