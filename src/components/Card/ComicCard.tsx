@@ -11,6 +11,7 @@ import { getFlag } from '@lib/geo';
 import { Headline } from '../../types';
 import { Countries as CountriesType } from '../../types/countries';
 import { loadHeadlineCollection, saveHeadlineCollection } from '@lib/collection-storage';
+import getMediaBadgeClass from '@lib/mediaBadge';
 
 type Props = {
   header?: boolean;
@@ -46,6 +47,7 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
   } as const;
   const mediaEmoji =
     mediaEmojiMap[headline.media_type as keyof typeof mediaEmojiMap] ?? '';
+  const mediaBadgeClass = getMediaBadgeClass(headline.media_type);
 
   const toggleLike = async () => {
     setLikeLoading(true);
@@ -232,7 +234,13 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 >
                   {mediaEmoji ? (
                     <>
-                      <span aria-hidden="true">{mediaEmoji}</span>&nbsp;{sourceName ?? ''}
+                      <span
+                        className={`inline-flex h-5 w-5 items-center justify-center rounded text-[11px] ${mediaBadgeClass}`}
+                        aria-hidden="true"
+                      >
+                        {mediaEmoji}
+                      </span>
+                      &nbsp;{sourceName ?? ''}
                     </>
                   ) : (
                     sourceName ?? ''
@@ -285,7 +293,13 @@ const ComicCard = ({ headline }: Props): JSX.Element => {
                 >
                   {mediaEmoji ? (
                     <>
-                      <span aria-hidden="true">{mediaEmoji}</span>&nbsp;{sourceName ?? ''}
+                      <span
+                        className={`inline-flex h-5 w-5 items-center justify-center rounded text-[11px] ${mediaBadgeClass}`}
+                        aria-hidden="true"
+                      >
+                        {mediaEmoji}
+                      </span>
+                      &nbsp;{sourceName ?? ''}
                     </>
                   ) : (
                     sourceName ?? ''

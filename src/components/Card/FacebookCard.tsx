@@ -11,6 +11,7 @@ import { getFlag } from '@lib/geo';
 import { Headline } from '../../types';
 import { Countries as CountriesType } from '../../types/countries';
 import { loadHeadlineCollection, saveHeadlineCollection } from '@lib/collection-storage';
+import getMediaBadgeClass from '@lib/mediaBadge';
 
 // Facebook-like card using the same UI items and interactions as ComicCard
 // Header (avatar + name + time + flag), media (image), text (headline), actions
@@ -45,6 +46,7 @@ const FacebookCard = ({ headline }: Props): JSX.Element => {
     article: '📰',
   } as const;
   const mediaEmoji = mediaEmojiMap[headline.media_type as keyof typeof mediaEmojiMap] ?? '📰';
+  const mediaBadgeClass = getMediaBadgeClass(headline.media_type);
 
   const toggleLike = async () => {
     setLikeLoading(true);
@@ -147,7 +149,7 @@ const FacebookCard = ({ headline }: Props): JSX.Element => {
     <div className="bg-base-100 border border-base-300 rounded-lg shadow-sm" style={{ margin: '10px' }}>
       {/* Header */}
       <div className="flex items-center gap-3 p-3">
-        <div className="h-10 w-10 rounded-full bg-base-300 flex items-center justify-center text-base-content/70 text-lg">
+        <div className={`h-10 w-10 rounded-full flex items-center justify-center text-lg ${mediaBadgeClass}`}>
           {mediaEmoji}
         </div>
         <div className="flex flex-col min-w-0">

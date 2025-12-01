@@ -11,6 +11,7 @@ import { getFlag } from '@lib/geo';
 import { Headline } from '../../types';
 import { Countries as CountriesType } from '../../types/countries';
 import { loadHeadlineCollection, saveHeadlineCollection } from '@lib/collection-storage';
+import getMediaBadgeClass from '@lib/mediaBadge';
 
 // A simplified Reddit-like card layout that uses the same UI items and actions as ComicCard
 // - Source name + media emoji
@@ -49,6 +50,7 @@ const RedditCard = ({ headline }: Props): JSX.Element => {
     article: '📰',
   } as const;
   const mediaEmoji = mediaEmojiMap[headline.media_type as keyof typeof mediaEmojiMap] ?? '📰';
+  const mediaBadgeClass = getMediaBadgeClass(headline.media_type);
 
   const toggleLike = async () => {
     setLikeLoading(true);
@@ -160,13 +162,10 @@ const RedditCard = ({ headline }: Props): JSX.Element => {
           target="_blank"
           rel="noreferrer"
         >
-          {mediaEmoji ? (
-            <>
-              <span aria-hidden="true">{mediaEmoji}</span>&nbsp;{sourceName ?? ''}
-            </>
-          ) : (
-            sourceName ?? ''
-          )}
+          <span className={`inline-flex h-5 w-5 items-center justify-center rounded text-[11px] badge badge-sm ${mediaBadgeClass}`}>
+            {mediaEmoji}
+          </span>
+          <span className="ml-1">{sourceName ?? ''}</span>
         </a>
         <span>•</span>
         <time title={DATE.toLocaleString()}>{diffDisplay(DATE)}</time>

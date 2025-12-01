@@ -11,6 +11,7 @@ import { getFlag } from '@lib/geo';
 import { Headline } from '../../types';
 import { Countries as CountriesType } from '../../types/countries';
 import { loadHeadlineCollection, saveHeadlineCollection } from '@lib/collection-storage';
+import getMediaBadgeClass from '@lib/mediaBadge';
 
 type Props = { headline: Headline; country?: CountriesType; idx?: number };
 
@@ -73,6 +74,8 @@ const AppleNewsCard = ({ headline }: Props): JSX.Element => {
   const share = async () => { try { fetch(`/api/fast/react?id=${headline.id}&action=shared&reaction=false`, { method: 'POST' }); } catch (_e) { void 0; } try { await navigator.share({ title: headline.headline, url: articleLink }); } catch { setShareable(false); } };
   const twShare = 'https://twitter.com/intent/tweet?text=' + headline.headline + '&url=' + articleLink;
 
+  const mediaBadgeClass = getMediaBadgeClass(headline.media_type);
+
   return (
     <div className="rounded-xl overflow-hidden border border-base-300 bg-base-100" style={{ margin: '10px' }}>
       {headline.img_src && !leadImgErr && (
@@ -84,9 +87,7 @@ const AppleNewsCard = ({ headline }: Props): JSX.Element => {
               <h3 className="text-white text-lg font-semibold drop-shadow">{headline.headline} ↗</h3>
             </Link>
             <div className="mt-1 text-xs text-white/90 flex items-center gap-2 drop-shadow">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded bg-white/20 text-[11px]">
-                {mediaEmoji}
-              </span>
+              <span className={`inline-flex h-5 w-5 items-center justify-center rounded text-[11px] ${mediaBadgeClass}`}>{mediaEmoji}</span>
               <a className="hover:underline" href={sourceURL} target="_blank" rel="noreferrer" title={sourceName ?? ''}>{sourceName ?? ''}</a>
               <span>•</span>
               <time title={DATE.toLocaleString()}>{diffDisplay(DATE)}</time>
@@ -102,7 +103,7 @@ const AppleNewsCard = ({ headline }: Props): JSX.Element => {
             <h3 className="text-base-content text-lg font-semibold leading-snug hover:underline">{headline.headline} ↗</h3>
           </Link>
           <div className="mt-1 text-xs text-base-content/70 flex items-center gap-2">
-            <span className="inline-flex h-5 w-5 items-center justify-center rounded bg-base-300 text-[11px]">
+            <span className={`inline-flex h-5 w-5 items-center justify-center rounded text-[11px] ${mediaBadgeClass}`}>
               {mediaEmoji}
             </span>
             <a className="hover:underline" href={sourceURL} target="_blank" rel="noreferrer" title={sourceName ?? ''}>{sourceName ?? ''}</a>
